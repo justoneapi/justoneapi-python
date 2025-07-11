@@ -1,0 +1,11 @@
+[project]
+name = "justoneapi"
+version = "1.0.0"
+description = "Official Python SDK for Just One API"
+authors = [{ name="Just One API", email="justoneapi@gmail.com" }]
+readme = "README.md"
+dependencies = ["requests"]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
