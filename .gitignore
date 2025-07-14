@@ -5,3 +5,5 @@ __pycache__/
 dist/
 build/
 .venv/
+.idea/
+.DS_Store
