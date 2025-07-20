@@ -15,6 +15,7 @@ class BilibiliAPI:
         }
         return request_util.get_request(url, params)
 
+    # todo next main version, change 'aid' to 'param'
     def get_user_video_list_v2(self, uid: str, aid: str = None):
         url = f"{config.BASE_URL}/api/bilibili/get-user-video-list/v2"
         params = {
