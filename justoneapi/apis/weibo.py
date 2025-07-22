@@ -55,3 +55,11 @@ class WeiboAPI:
         }
         return request_util.get_request(url, params)
 
+    def get_user_detail_v1(self, uid: str):
+        url = f"{config.BASE_URL}/api/weibo/get-user-detail/v1"
+        params = {
+            "token": self.token,
+            "uid": uid,
+        }
+        return request_util.get_request(url, params)
+
