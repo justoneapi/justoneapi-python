@@ -24,3 +24,8 @@ class TestWeiboAPI(TestCase):
         result, data, message = self.client.weibo.get_weibo_detail_v1(id="5062665714010525")
         if result:
             print(json.dumps(data, ensure_ascii=False))
+
+    def test_get_user_detail_v1(self):
+        result, data, message = self.client.weibo.get_user_detail_v1(uid="2387903701")
+        if result:
+            print(json.dumps(data, ensure_ascii=False))
