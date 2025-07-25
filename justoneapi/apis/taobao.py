@@ -134,7 +134,7 @@ class TaobaoAPI:
         }
         return request_util.get_request(url, params)
 
-    def search_item_list_v6(self, keyword: str, sort: str, page: int, tab: str = None):
+    def search_item_list_v6(self, keyword: str, sort: str, page: int, tab: str = None, start_price: str = None, end_price: str = None):
         url = f"{config.BASE_URL}/api/taobao/search-item-list/v6"
         params = {
             "token": self.token,
@@ -144,6 +144,10 @@ class TaobaoAPI:
         }
         if tab:
             params["tab"] = tab
+        if start_price:
+            params["startPrice"] = start_price
+        if end_price:
+            params["endPrice"] = end_price
 
         has_next_page = False
         result, data, message =  request_util.get_request_page(url, params)
