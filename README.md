@@ -21,7 +21,11 @@ pip install justoneapi
 ```python
 from justoneapi.client import JustOneAPIClient
 
+# By default, the client uses the "cn" (Mainland China) environment.
 client = JustOneAPIClient(token="your_token")
+# If you are located outside Mainland China and experience slow responses,
+# you can switch to the "global" environment for better performance:
+# client = JustOneAPIClient(token="your_token", env="global")
 
 # Example: Get Douyin Video detail
 result, data, message = client.douyin.get_video_detail_v2(video_id="7428906452091145483")
