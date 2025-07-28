@@ -1,1 +1,1 @@
-BASE_URL = "http://47.117.133.51:30015"
+BASE_URL = "https://api.justoneapi.com"
