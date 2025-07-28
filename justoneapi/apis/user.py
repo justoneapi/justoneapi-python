@@ -1,20 +1,20 @@
-from justoneapi import config
 from justoneapi.apis import request_util
 
 
 class UserAPI:
-    def __init__(self, token):
+    def __init__(self, token: str, base_url: str):
         self.token = token
+        self.base_url = base_url
 
     def get_balance(self):
-        url = f"{config.BASE_URL}/user/get-balance"
+        url = f"{self.base_url}/user/get-balance"
         params = {
             "token": self.token,
         }
         return request_util.get_request(url, params)
 
     def get_record(self, order_year: int, order_month: int):
-        url = f"{config.BASE_URL}/user/get-record"
+        url = f"{self.base_url}/user/get-record"
         params = {
             "token": self.token,
             "orderYear": order_year,

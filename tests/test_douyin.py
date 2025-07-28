@@ -6,7 +6,7 @@ from justoneapi.client import JustOneAPIClient
 
 
 class TestDouyinAPI(TestCase):
-    client = JustOneAPIClient(token=os.environ.get("JUSTONEAPI_TOKEN"))
+    client = JustOneAPIClient(token=os.environ.get("JUSTONEAPI_TOKEN"), env="global")
 
     def test_get_user_detail_v3(self):
         result, data, message = self.client.douyin.get_user_detail_v3(
