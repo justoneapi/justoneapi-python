@@ -1,14 +1,14 @@
-from justoneapi import config
 from justoneapi.apis import request_util
 from justoneapi.log import logger
 
 
 class BilibiliAPI:
-    def __init__(self, token):
+    def __init__(self, token: str, base_url: str):
         self.token = token
+        self.base_url = base_url
 
     def get_video_detail_v2(self, bvid: str):
-        url = f"{config.BASE_URL}/api/bilibili/get-video-detail/v2"
+        url = f"{self.base_url}/api/bilibili/get-video-detail/v2"
         params = {
             "token": self.token,
             "bvid": bvid,
@@ -17,7 +17,7 @@ class BilibiliAPI:
 
     # todo next main version, change 'aid' to 'param'
     def get_user_video_list_v2(self, uid: str, aid: str = None):
-        url = f"{config.BASE_URL}/api/bilibili/get-user-video-list/v2"
+        url = f"{self.base_url}/api/bilibili/get-user-video-list/v2"
         params = {
             "token": self.token,
             "uid": uid,
@@ -36,7 +36,7 @@ class BilibiliAPI:
         return result, data, message, has_next_page
 
     def get_user_detail_v2(self, uid: str):
-        url = f"{config.BASE_URL}/api/bilibili/get-user-detail/v2"
+        url = f"{self.base_url}/api/bilibili/get-user-detail/v2"
         params = {
             "token": self.token,
             "uid": uid,
@@ -44,7 +44,7 @@ class BilibiliAPI:
         return request_util.get_request(url, params)
 
     def get_video_comment_v2(self, aid: str, cursor: str = None):
-        url = f"{config.BASE_URL}/api/bilibili/get-video-comment/v2"
+        url = f"{self.base_url}/api/bilibili/get-video-comment/v2"
         params = {
             "token": self.token,
             "aid": aid,
@@ -63,7 +63,7 @@ class BilibiliAPI:
         return result, data, message, has_next_page
 
     def search_video_v2(self, keyword: str, page: int):
-        url = f"{config.BASE_URL}/api/bilibili/search-video/v2"
+        url = f"{self.base_url}/api/bilibili/search-video/v2"
         params = {
             "token": self.token,
             "keyword": keyword,
