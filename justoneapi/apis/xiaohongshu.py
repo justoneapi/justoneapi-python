@@ -51,7 +51,7 @@ class XiaohongshuAPI:
         }
         return request_util.get_request(url, params)
 
-    def get_note_comment_v2(self, note_id: str, last_cursor: str = None):
+    def get_note_comment_v2(self, note_id: str, last_cursor: str = None, sort: str = "latest"):
         url = f"{self.base_url}/api/xiaohongshu/get-note-comment/v2"
         params = {
             "token": self.token,
@@ -59,6 +59,8 @@ class XiaohongshuAPI:
         }
         if last_cursor:
             params["lastCursor"] = last_cursor
+        if sort:
+            params["sort"] = sort
 
         has_next_page = False
         result, data, message = request_util.get_request_page(url, params)
