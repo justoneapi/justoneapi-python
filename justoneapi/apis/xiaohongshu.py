@@ -35,6 +35,22 @@ class XiaohongshuAPI:
             logger.warning(f"Pagination parse error at {url}. Contact us to fix it.")
         return result, data, message, has_next_page
 
+    def get_note_detail_v1(self, note_id: str):
+        url = f"{self.base_url}/api/xiaohongshu/get-note-detail/v1"
+        params = {
+            "token": self.token,
+            "noteId": note_id,
+        }
+        return request_util.get_request(url, params)
+
+    def get_note_detail_v4(self, note_id: str):
+        url = f"{self.base_url}/api/xiaohongshu/get-note-detail/v4"
+        params = {
+            "token": self.token,
+            "noteId": note_id,
+        }
+        return request_util.get_request(url, params)
+
     def get_note_detail_v7(self, note_id: str):
         url = f"{self.base_url}/api/xiaohongshu/get-note-detail/v7"
         params = {
