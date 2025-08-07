@@ -85,8 +85,7 @@ Learn more about the project, data sources, and commercial integration opportuni
 
 If you have any questions, feedback, or partnership inquiries:
 
-- Email: **justoneapi@gmail.com**
-- Telegram: [@justoneapi](https://t.me/justoneapi)
+👉 [https://justoneapi.com/contact](https://justoneapi.com/contact)
 
 ---
 
