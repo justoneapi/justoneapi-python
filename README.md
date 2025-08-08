@@ -57,8 +57,7 @@ Each API method returns one or more of the following values:
 ## 🔐 Authentication
 
 All API requests require a valid API token.  
-You can obtain your token by contact us:  
-👉 [Contact](https://justoneapi.com/contact)
+👉 [Register](https://justoneapi.com/register)
 
 ---
 
