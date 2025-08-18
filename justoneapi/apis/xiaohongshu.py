@@ -67,6 +67,15 @@ class XiaohongshuAPI:
         }
         return request_util.get_request(url, params)
 
+    def get_note_detail_v9(self, note_id: str, xsec_token: str):
+        url = f"{self.base_url}/api/xiaohongshu/get-note-detail/v9"
+        params = {
+            "token": self.token,
+            "noteId": note_id,
+            "xsecToken": xsec_token,
+        }
+        return request_util.get_request(url, params)
+
     def get_note_comment_v2(self, note_id: str, last_cursor: str = None, sort: str = "latest"):
         url = f"{self.base_url}/api/xiaohongshu/get-note-comment/v2"
         params = {
