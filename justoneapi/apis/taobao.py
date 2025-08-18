@@ -105,6 +105,27 @@ class TaobaoAPI:
             logger.warning(f"Pagination parse error at {url}. Contact us to fix it.")
         return result, data, message, has_next_page
 
+    def get_shop_item_list_v1(self, user_id: str, shop_id: str, page: int, sort: str = None):
+        url = f"{self.base_url}/api/taobao/get-shop-item-list/v1"
+        params = {
+            "token": self.token,
+            "userId": user_id,
+            "shopId": shop_id,
+            "page": page,
+        }
+        if sort:
+            params["sort"] = sort
+
+        has_next_page = False
+        result, data, message =  request_util.get_request_page(url, params)
+        try:
+            if data:
+                if data.get("pageInitialProps", {}).get("httpData", {}).get("itemListModuleResponse", {}).get("page", {}).get("totalPages", 0) > page:
+                    has_next_page = True
+        except Exception as e:
+            logger.warning(f"Pagination parse error at {url}. Contact us to fix it.")
+        return result, data, message, has_next_page
+
     def get_shop_item_list_v9(self, user_id: str, shop_id: str, sort: str, page: int):
         url = f"{self.base_url}/api/taobao/get-shop-item-list/v9"
         params = {

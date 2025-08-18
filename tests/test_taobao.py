@@ -61,6 +61,12 @@ class TestTaobaoAPI(TestCase):
             print(json.dumps(data, ensure_ascii=False))
 
     def test_search_item_list_v6(self):
-        result, data, message, has_next_page = self.client.taobao.search_item_list_v6(keyword="deepseek", sort="_sale", page=1)
+        result, data, message, has_next_page = self.client.taobao.search_item_list_v6(keyword="deepseek", sort="_sale",
+                                                                                      page=1)
+        if result:
+            print(json.dumps(data, ensure_ascii=False))
+
+    def test_get_shop_item_list_v1(self):
+        result, data, message, has_next_page = self.client.taobao.get_shop_item_list_v1(user_id="2824260419", shop_id="151272028", page=1)
         if result:
             print(json.dumps(data, ensure_ascii=False))
