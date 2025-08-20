@@ -63,7 +63,7 @@ All API requests require a valid API token.
 
 ## 📚 Documentation
 
-👉 Full API docs: [https://justoneapi.com/docs](https://doc.justoneapi.com)
+👉 Full API docs: [API Document](https://doc.justoneapi.com)
 
 Includes:
 - Request parameters
@@ -74,7 +74,7 @@ Includes:
 
 ## 🏠 Official Website
 
-👉 [https://justoneapi.com](https://justoneapi.com)
+👉 [Home Page](https://justoneapi.com)
 
 Learn more about the project, data sources, and commercial integration opportunities.
 
@@ -84,7 +84,7 @@ Learn more about the project, data sources, and commercial integration opportuni
 
 If you have any questions, feedback, or partnership inquiries:
 
-👉 [https://justoneapi.com/contact](https://justoneapi.com/contact)
+👉 [Contact](https://justoneapi.com/contact)
 
 ---
 
