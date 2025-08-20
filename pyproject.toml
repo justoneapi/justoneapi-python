@@ -1,6 +1,6 @@
 [project]
 name = "justoneapi"
-version = "1.7.0"
+version = "1.8.0"
 description = "Official Python SDK for Just One API"
 authors = [{ name="Just One API", email="support@justoneapi.com" }]
 readme = "README.md"
