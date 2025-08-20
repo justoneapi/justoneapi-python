@@ -51,3 +51,9 @@ class TestXiaohongshuAPI(TestCase):
         result, data, message = self.client.xiaohongshu.get_note_feed_v1(oid="homefeed_recommend", page=1)
         if result:
             print(json.dumps(data, ensure_ascii=False))
+
+    def test_search_note_v1(self):
+        result, data, message, has_next_page = self.client.xiaohongshu.search_note_v1(keyword="deepseek", page=1,
+                                                                                      sort="general", note_type="_0")
+        if result:
+            print(json.dumps(data, ensure_ascii=False))

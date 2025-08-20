@@ -160,6 +160,28 @@ class XiaohongshuAPI:
             logger.warning(f"Pagination parse error at {url}. Contact us to fix it.")
         return result, data, message, has_next_page
 
+    def search_note_v1(self, keyword: str, page: int, sort: str, note_type: str, note_time: str = None):
+        url = f"{self.base_url}/api/xiaohongshu/search-note/v1"
+        params = {
+            "token": self.token,
+            "keyword": keyword,
+            "page": page,
+            "sort": sort,
+            "noteType": note_type,
+        }
+        if note_time:
+            params["noteTime"] = note_time
+
+        has_next_page = False
+        result, data, message = request_util.get_request_page(url, params)
+        try:
+            if data:
+                if data.get("items"):
+                    has_next_page = True
+        except Exception as e:
+            logger.warning(f"Pagination parse error at {url}. Contact us to fix it.")
+        return result, data, message, has_next_page
+
     def search_note_v2(self, keyword: str, page: int, sort: str, note_type: str, note_time: str = None):
         url = f"{self.base_url}/api/xiaohongshu/search-note/v2"
         params = {
