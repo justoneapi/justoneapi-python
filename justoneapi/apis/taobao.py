@@ -55,6 +55,14 @@ class TaobaoAPI:
         }
         return request_util.get_request(url, params)
 
+    def get_item_detail_v8(self, item_id: str):
+        url = f"{self.base_url}/api/taobao/get-item-detail/v8"
+        params = {
+            "token": self.token,
+            "itemId": item_id,
+        }
+        return request_util.get_request(url, params)
+
     def get_item_comment_v6(self, item_id: str, page: int, order_type: str = None):
         url = f"{self.base_url}/api/taobao/get-item-comment/v6"
         params = {
