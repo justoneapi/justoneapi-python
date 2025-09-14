@@ -43,6 +43,22 @@ class XiaohongshuAPI:
         }
         return request_util.get_request(url, params)
 
+    def get_note_detail_v2(self, note_id: str):
+        url = f"{self.base_url}/api/xiaohongshu/get-note-detail/v2"
+        params = {
+            "token": self.token,
+            "noteId": note_id,
+        }
+        return request_util.get_request(url, params)
+
+    def get_note_detail_v3(self, note_id: str):
+        url = f"{self.base_url}/api/xiaohongshu/get-note-detail/v3"
+        params = {
+            "token": self.token,
+            "noteId": note_id,
+        }
+        return request_util.get_request(url, params)
+
     def get_note_detail_v4(self, note_id: str):
         url = f"{self.base_url}/api/xiaohongshu/get-note-detail/v4"
         params = {
