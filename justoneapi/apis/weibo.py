@@ -63,3 +63,33 @@ class WeiboAPI:
         }
         return request_util.get_request(url, params)
 
+    def get_fans_v1(self, uid: str, page: int):
+        url = f"{self.base_url}/api/weibo/get-fans/v1"
+        params = {
+            "token": self.token,
+            "uid": uid,
+            "page": page,
+        }
+        return request_util.get_request(url, params)
+
+    def get_followers_v1(self, uid: str, page: int):
+        url = f"{self.base_url}/api/weibo/get-followers/v1"
+        params = {
+            "token": self.token,
+            "uid": uid,
+            "page": page,
+        }
+        return request_util.get_request(url, params)
+
+    def get_user_post_v1(self, uid: str, page: int, since_id: str = None):
+        url = f"{self.base_url}/api/weibo/get-user-post/v1"
+        params = {
+            "token": self.token,
+            "uid": uid,
+            "page": page,
+        }
+        if since_id:
+            params["sinceId"] = since_id
+
+        return request_util.get_request(url, params)
+
