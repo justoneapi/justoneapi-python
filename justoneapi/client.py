@@ -1,6 +1,7 @@
 from justoneapi import config
 from justoneapi.apis.bilibili import BilibiliAPI
 from justoneapi.apis.douyin import DouyinAPI
+from justoneapi.apis.jd import JdAPI
 from justoneapi.apis.kuaishou import KuaishouAPI
 from justoneapi.apis.search import SearchAPI
 from justoneapi.apis.taobao import TaobaoAPI
@@ -28,3 +29,4 @@ class JustOneAPIClient:
         self.weibo = WeiboAPI(self.token, self.base_url)
         self.bilibili = BilibiliAPI(self.token, self.base_url)
         self.search = SearchAPI(self.token, self.base_url)
+        self.jd = JdAPI(self.token, self.base_url)
