@@ -2,7 +2,7 @@
 
 # Just One API - Python SDK
 
-官方 Python SDK，用于访问 [Just One API](https://justoneapi.com) —— 一个统一的数据服务平台，提供来自小红书、淘宝、抖音、快手、哔哩哔哩、微博等社交、电商平台的结构化数据。
+官方 Python SDK，用于访问 [Just One API](https://justoneapi.com/zh/?source=github&detail=justoneapi/justoneapi-python) —— 一个统一的数据服务平台，提供来自小红书、淘宝、抖音、快手、哔哩哔哩、微博等社交、电商平台的结构化数据。
 
 该 SDK 简化了 API 调用与签名流程，让开发者能够以最少的配置快速获取各平台数据。
 
@@ -58,13 +58,13 @@ print(has_next_page)
 ## 🔐 身份认证
 
 所有 API 请求均需携带有效的 API Token。  
-👉 [注册获取 Token](https://justoneapi.com/register)
+👉 [注册获取 Token](https://justoneapi.com/zh/register?source=github&detail=justoneapi/justoneapi-python)
 
 ---
 
 ## 📚 文档中心
 
-👉 完整 API 文档：[接口文档](https://doc.justoneapi.com)
+👉 完整 API 文档：[接口文档](https://doc.justoneapi.com?source=github&detail=justoneapi/justoneapi-python)
 
 内容包括：
 - 请求参数
@@ -75,7 +75,7 @@ print(has_next_page)
 
 ## 🏠 官方网站
 
-👉 [官方网站](https://justoneapi.com)
+👉 [官方网站](https://justoneapi.com/zh/?source=github&detail=justoneapi/justoneapi-python)
 
 了解更多项目介绍、数据来源及商业集成方案。
 
@@ -84,7 +84,7 @@ print(has_next_page)
 ## 📬 联系我们
 
 如有任何问题、反馈或合作意向，欢迎联系：  
-👉 [联系我们](https://justoneapi.com/contact)
+👉 [联系我们](https://justoneapi.com/zh/contact?source=github&detail=justoneapi/justoneapi-python)
 
 ---
 
