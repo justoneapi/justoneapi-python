@@ -58,7 +58,7 @@ Each API method returns one or more of the following values:
 ## 🔐 Authentication
 
 All API requests require a valid API token.  
-👉 [Register](https://justoneapi.com/register?source=github&detail=justoneapi/justoneapi-python)
+👉 [Register](https://user.justoneapi.com/sign-in?source=github&detail=justoneapi/justoneapi-python)
 
 ---
 
