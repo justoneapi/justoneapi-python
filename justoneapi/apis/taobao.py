@@ -129,12 +129,11 @@ class TaobaoAPI:
             logger.warning(f"Pagination parse error at {url}. Contact us to fix it.")
         return result, data, message, has_next_page
 
-    def get_shop_item_list_v1(self, user_id: str, shop_id: str, page: int, sort: str = None):
+    def get_shop_item_list_v1(self, user_id: str, shop_id: str = None, page: int = 1, sort: str = None):
         url = f"{self.base_url}/api/taobao/get-shop-item-list/v1"
         params = {
             "token": self.token,
             "userId": user_id,
-            "shopId": shop_id,
             "page": page,
         }
         if sort:
