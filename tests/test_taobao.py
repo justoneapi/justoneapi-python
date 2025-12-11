@@ -78,3 +78,7 @@ class TestTaobaoAPI(TestCase):
         if result:
             print(json.dumps(data, ensure_ascii=False))
 
+    def test_get_item_comment_v1(self):
+        result, data, message, has_next_page = self.client.taobao.get_item_comment_v1(item_id="988779079569")
+        if result:
+            print(json.dumps(data, ensure_ascii=False))

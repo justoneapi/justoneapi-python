@@ -71,6 +71,25 @@ class TaobaoAPI:
         }
         return request_util.get_request(url, params)
 
+    def get_item_comment_v1(self, item_id: str, page: int = 1, order_type: str = "feedbackdate"):
+        url = f"{self.base_url}/api/taobao/get-item-comment/v1"
+        params = {
+            "token": self.token,
+            "itemId": item_id,
+            "page": page,
+            "orderType": order_type,
+        }
+
+        has_next_page = False
+        result, data, message =  request_util.get_request_page(url, params)
+        try:
+            if data:
+                if data.get("hasNext") == "true":
+                    has_next_page = True
+        except Exception as e:
+            logger.warning(f"Pagination parse error at {url}. Contact us to fix it.")
+        return result, data, message, has_next_page
+
     def get_item_comment_v6(self, item_id: str, page: int, order_type: str = None):
         url = f"{self.base_url}/api/taobao/get-item-comment/v6"
         params = {
