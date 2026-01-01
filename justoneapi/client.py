@@ -6,6 +6,7 @@ from justoneapi.apis.kuaishou import KuaishouAPI
 from justoneapi.apis.search import SearchAPI
 from justoneapi.apis.taobao import TaobaoAPI
 from justoneapi.apis.tiktok import TikTokAPI
+from justoneapi.apis.toutiao import ToutiaoAPI
 from justoneapi.apis.user import UserAPI
 from justoneapi.apis.weibo import WeiboAPI
 from justoneapi.apis.xiaohongshu import XiaohongshuAPI
@@ -32,3 +33,4 @@ class JustOneAPIClient:
         self.search = SearchAPI(self.token, self.base_url)
         self.jd = JdAPI(self.token, self.base_url)
         self.tiktok = TikTokAPI(self.token, self.base_url)
+        self.toutiao = ToutiaoAPI(self.token, self.base_url)
