@@ -1,3 +1,6 @@
+![PyPI version](https://img.shields.io/pypi/v/justoneapi.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 # Just One API - Python SDK

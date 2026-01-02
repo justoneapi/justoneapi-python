@@ -1,4 +1,8 @@
+![PyPI version](https://img.shields.io/pypi/v/justoneapi.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 [English](README.md) | [简体中文](README.zh-CN.md)
+
 # Just One API - Python SDK
 
 Official Python SDK for accessing [Just One API](https://justoneapi.com) — a unified data service platform offering structured data from Social, E-commerce platforms such as Xiaohongshu, Taobao, Douyin, Kuaishou, Bilibili, and Weibo.
