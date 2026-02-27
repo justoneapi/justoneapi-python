@@ -11,6 +11,15 @@
 
 ---
 
+## 🧧 推荐项目（外部独立服务）
+
+### [Just Serp API](https://justserpapi.com/)
+> **注意：** 这是一个与 Just One API 相互独立的另一个项目，不属于本项目 SDK。
+
+如果您需要搜索引擎数据，请访问 Just Serp API — 高性能的 SERP API，提供来自 Google、Bing 等搜索引擎的结构化数据。
+
+---
+
 ## 🚀 安装
 
 通过 PyPI 安装：
@@ -81,13 +90,6 @@ print(has_next_page)
 👉 [官方网站](https://justoneapi.com/zh/)
 
 了解更多项目介绍、数据来源及商业集成方案。
-
----
-
-## 🔍 相关项目
-
-### Just Serp API
-如果您需要搜索引擎数据，请访问 [Just Serp API](https://justserpapi.com/) — 高性能的 SERP API，提供来自 Google、Bing 等搜索引擎的结构化数据。
 
 ---
 

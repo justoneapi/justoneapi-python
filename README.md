@@ -11,6 +11,15 @@ This SDK simplifies API integration and request signing, allowing developers to 
 
 ---
 
+## 🧧 Featured Project (Separate Service)
+
+### [Just Serp API](https://justserpapi.com/)
+> **Note:** This is an independent project and not part of the Just One API Python SDK.
+
+Need search engine data? Check out Just Serp API — a high-performance SERP API providing structured data from Google, Bing, and other search engines.
+
+---
+
 ## 🚀 Installation
 
 Install via PyPI:
@@ -82,13 +91,6 @@ Includes:
 👉 [Home Page](https://justoneapi.com)
 
 Learn more about the project, data sources, and commercial integration opportunities.
-
----
-
-## 🔍 Related Projects
-
-### Just Serp API
-Need search engine data? Check out [Just Serp API](https://justserpapi.com/) — a high-performance SERP API providing structured data from Google, Bing, and other search engines.
 
 ---
 
