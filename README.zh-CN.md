@@ -84,6 +84,13 @@ print(has_next_page)
 
 ---
 
+## 🔍 相关项目
+
+### Just Serp API
+如果您需要搜索引擎数据，请访问 [Just Serp API](https://justserpapi.com/) — 高性能的 SERP API，提供来自 Google、Bing 等搜索引擎的结构化数据。
+
+---
+
 ## 📬 联系我们
 
 如有任何问题、反馈或合作意向，欢迎联系：  

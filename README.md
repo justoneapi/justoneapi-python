@@ -85,6 +85,13 @@ Learn more about the project, data sources, and commercial integration opportuni
 
 ---
 
+## 🔍 Related Projects
+
+### Just Serp API
+Need search engine data? Check out [Just Serp API](https://justserpapi.com/) — a high-performance SERP API providing structured data from Google, Bing, and other search engines.
+
+---
+
 ## 📬 Contact Us
 
 If you have any questions, feedback, or partnership inquiries:
