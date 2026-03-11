@@ -76,7 +76,7 @@ print(has_next_page)
 
 ## 📚 文档中心
 
-👉 完整 API 文档：[接口文档](https://doc.justoneapi.com)
+👉 完整 API 文档：[接口文档](https://docs.justoneapi.com/zh)
 
 内容包括：
 - 请求参数
