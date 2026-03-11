@@ -77,7 +77,7 @@ All API requests require a valid API token.
 
 ## 📚 Documentation
 
-👉 Full API docs: [API Document](https://doc.justoneapi.com)
+👉 Full API docs: [API Document](https://docs.justoneapi.com/en)
 
 Includes:
 - Request parameters
