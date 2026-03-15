@@ -70,7 +70,7 @@ print(has_next_page)
 ## 🔐 身份认证
 
 所有 API 请求均需携带有效的 API Token。  
-👉 [注册获取 Token](https://user.justoneapi.com/zh/sign-up)
+👉 [注册获取 Token](https://dashboard.justoneapi.com/zh/register)
 
 ---
 
