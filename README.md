@@ -71,7 +71,7 @@ Each API method returns one or more of the following values:
 ## 🔐 Authentication
 
 All API requests require a valid API token.  
-👉 [Register](https://user.justoneapi.com/sign-up)
+👉 [Register](https://dashboard.justoneapi.com/en/register)
 
 ---
 
