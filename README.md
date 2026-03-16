@@ -98,7 +98,7 @@ Learn more about the project, data sources, and commercial integration opportuni
 
 If you have any questions, feedback, or partnership inquiries:
 
-👉 [Contact](https://justoneapi.com/contact)
+👉 [Contact](https://justoneapi.com/en/contact)
 
 ---
 
