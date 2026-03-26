@@ -35,10 +35,7 @@ pip install justoneapi
 ```python
 from justoneapi.client import JustOneAPIClient
 
-# 默认使用 “cn”（中国大陆）环境
 client = JustOneAPIClient(token="your_token")
-# 若您位于中国大陆以外地区，访问速度较慢，可切换至 “global” 环境以获得更佳性能：
-# client = JustOneAPIClient(token="your_token", env="global")
 
 # 示例：获取抖音视频详情
 result, data, message = client.douyin.get_video_detail_v2(video_id="7428906452091145483")
