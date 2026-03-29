@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: python -m pip install -e '.[dev]'
+
+      - name: Normalize OpenAPI
+        run: python scripts/normalize_openapi.py
+
+      - name: Generate SDK
+        run: python scripts/generate_sdk.py
+
+      - name: Ensure generated artifacts are committed
+        run: git diff --exit-code -- openapi/public-api.normalized.json justoneapi/generated
+
+      - name: Run tests
+        run: python -m pytest

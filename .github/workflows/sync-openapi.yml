@@ -1,0 +1,54 @@
+name: sync-openapi
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *'
+
+jobs:
+  sync:
+    if: github.repository == 'justoneapi/justoneapi-python'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: python -m pip install -e '.[dev]'
+
+      - name: Backup current spec
+        run: cp openapi/public-api.json "$RUNNER_TEMP/public-api.previous.json"
+
+      - name: Fetch OpenAPI
+        env:
+          OPENAPI_BASIC_AUTH_USERNAME: ${{ secrets.OPENAPI_BASIC_AUTH_USERNAME }}
+          OPENAPI_BASIC_AUTH_PASSWORD: ${{ secrets.OPENAPI_BASIC_AUTH_PASSWORD }}
+        run: python scripts/fetch_openapi.py
+
+      - name: Normalize OpenAPI
+        run: python scripts/normalize_openapi.py
+
+      - name: Generate SDK
+        run: python scripts/generate_sdk.py
+
+      - name: Run tests
+        run: python -m pytest
+
+      - name: Build sync summary
+        run: python scripts/diff_openapi.py "$RUNNER_TEMP/public-api.previous.json" openapi/public-api.json --output "$RUNNER_TEMP/openapi-sync-summary.md"
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: codex/openapi-sync
+          delete-branch: true
+          title: 'chore: sync OpenAPI spec and generated SDK'
+          commit-message: 'chore: sync OpenAPI spec and generated SDK'
+          body-path: ${{ runner.temp }}/openapi-sync-summary.md

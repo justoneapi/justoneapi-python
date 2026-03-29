@@ -1,0 +1,6 @@
+hidden_query_parameters:
+  - token
+resource_names:
+  douyin-xingtu: douyin_xingtu
+  tiktok-shop: tiktok_shop
+  xiaohongshu-pgy: xiaohongshu_pgy

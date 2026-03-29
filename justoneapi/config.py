@@ -1,1 +1,1 @@
-BASE_URL_GLOBAL = "https://api.justoneapi.com"
+DEFAULT_BASE_URL = "https://api.justoneapi.com"
