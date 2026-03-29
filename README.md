@@ -5,9 +5,9 @@
 
 # Just One API - Python SDK
 
-Official Python SDK for accessing [Just One API](https://justoneapi.com).
+Official Python SDK for accessing [Just One API](https://justoneapi.com) - a unified data service platform that provides structured data from social media, e-commerce, and content platforms.
 
-Version 2 is generated from the public OpenAPI document and covers the full `public-api` surface. The SDK now returns typed response objects instead of tuples.
+Supported platforms include Taobao & Tmall, Xiaohongshu, Xiaohongshu Pugongying, Douyin, Douyin Xingtu, Kuaishou, Weibo, Bilibili, JD, WeChat, Douban, TikTok, TikTok Shop, Youku, Instagram, YouTube, Reddit, Toutiao, Zhihu, Amazon, Facebook, X (Twitter), Beike, IMDb, and more. To explore the full API catalog, visit the [official website](https://justoneapi.com).
 
 ## Installation
 
@@ -21,12 +21,14 @@ pip install justoneapi
 from justoneapi import JustOneAPIClient
 
 client = JustOneAPIClient(token="your_token")
-response = client.douyin.get_video_detail_v2(video_id="7428906452091145483")
 
-print(response.success)
-print(response.code)
-print(response.message)
-print(response.data)
+# Example: Douyin video search
+response = client.douyin.search_video_v4(keyword="deepseek")
+
+print(response.success)  # True only when code == 0
+print(response.code)     # Business code returned by the API
+print(response.message)  # Server message
+print(response.data)     # Actual payload
 ```
 
 ## Response Shape
@@ -41,18 +43,58 @@ Every API method returns an `ApiResponse` instance with these fields:
 | `data` | `Any` | Response payload from the API. |
 | `raw_json` | `dict` | Full response payload before SDK normalization. |
 
+## Error Handling
+
+By default, business failures do not raise exceptions. You can check `response.success`, `response.code`, and `response.message`.
+
+If you prefer exceptions for non-zero business codes:
+
+```python
+from justoneapi import JustOneAPIClient, BusinessError
+
+client = JustOneAPIClient(
+    token="your_token",
+    raise_on_business_error=True,
+)
+
+try:
+    response = client.douyin.search_video_v4(keyword="deepseek")
+except BusinessError as exc:
+    print(exc.response.code)
+    print(exc.response.message)
+```
+
 ## Authentication
 
 All API requests require a valid API token.
 
-## OpenAPI Sync
+Register here:
 
-The repository ships scripts for the generation pipeline:
+- [Get API Token](https://dashboard.justoneapi.com/en/register)
 
-```bash
-python3.11 scripts/fetch_openapi.py
-python3.11 scripts/normalize_openapi.py
-python3.11 scripts/generate_sdk.py
-```
+## Documentation
 
-`fetch_openapi.py` reads credentials from `OPENAPI_BASIC_AUTH_USERNAME` and `OPENAPI_BASIC_AUTH_PASSWORD` by default.
+Full API documentation:
+
+- [API Documentation](https://docs.justoneapi.com/en)
+
+The documentation includes:
+
+- Request parameters
+- Response fields
+- Error codes
+- Platform-specific examples
+
+## Official Website
+
+- [Home Page](https://justoneapi.com)
+
+## Contact
+
+If you have questions, feedback, or partnership inquiries:
+
+- [Contact Us](https://justoneapi.com/en/contact)
+
+## License
+
+This project is licensed under the MIT License.
