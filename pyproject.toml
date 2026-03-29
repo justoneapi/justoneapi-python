@@ -21,6 +21,9 @@ dev = [
 requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools.packages.find]
+include = ["justoneapi*"]
+
 [tool.pytest.ini_options]
 addopts = "-ra"
 testpaths = ["tests"]
