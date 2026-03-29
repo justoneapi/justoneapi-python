@@ -3,7 +3,6 @@ from justoneapi._exceptions import (
     JustOneAPIError,
     ProtocolError,
     TransportError,
-    VersionDeprecatedError,
 )
 from justoneapi._response import ApiResponse
 from justoneapi._version import __version__
@@ -16,5 +15,4 @@ __all__ = [
     "JustOneAPIError",
     "ProtocolError",
     "TransportError",
-    "VersionDeprecatedError",
 ]

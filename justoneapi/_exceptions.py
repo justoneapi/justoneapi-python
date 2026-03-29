@@ -17,10 +17,6 @@ class ProtocolError(JustOneAPIError):
     """Raised when the server response cannot be interpreted."""
 
 
-class VersionDeprecatedError(JustOneAPIError):
-    """Raised when the server marks the SDK version as deprecated."""
-
-
 class BusinessError(JustOneAPIError):
     """Raised when the API returns a non-zero business code and error raising is enabled."""
 
