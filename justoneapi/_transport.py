@@ -53,11 +53,6 @@ class Transport:
                 f"JustOneAPI Python SDK version {__version__} is deprecated. Please update to the latest version."
             )
 
-        if response.status_code >= 400:
-            raise TransportError(
-                f"Server returned HTTP {response.status_code} for GET {path}"
-            )
-
         try:
             payload = response.json()
         except ValueError as exc:
@@ -84,7 +79,7 @@ class Transport:
 
     @staticmethod
     def _is_success_code(code: Any) -> bool:
-        return code == 0 or code == "0"
+        return code == 0
 
     @staticmethod
     def _clean_params(params: dict[str, Any]) -> dict[str, Any]:

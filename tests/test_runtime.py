@@ -61,6 +61,21 @@ def test_non_zero_code_is_failure(make_client):
     assert response.message == "not ok"
 
 
+def test_http_error_with_json_payload_returns_api_response(make_client):
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            401,
+            json={"code": 100, "message": "invalid token", "data": None},
+        )
+
+    client = make_client(handler)
+    response = client.search.search_v1(keyword="deepseek")
+
+    assert response.success is False
+    assert response.code == 100
+    assert response.message == "invalid token"
+
+
 def test_raise_on_business_error(make_client):
     def handler(request: httpx.Request) -> httpx.Response:
         return httpx.Response(
@@ -85,6 +100,17 @@ def test_non_json_response_raises_protocol_error(make_client):
 
     with pytest.raises(ProtocolError):
         client.search.search_v1(keyword="deepseek")
+
+
+def test_string_zero_is_not_treated_as_success(make_client):
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json={"code": "0", "message": "ok", "data": {}})
+
+    client = make_client(handler)
+    response = client.search.search_v1(keyword="deepseek")
+
+    assert response.success is False
+    assert response.code == "0"
 
 
 def test_optional_none_is_omitted_and_bool_is_lowercase(make_client):
