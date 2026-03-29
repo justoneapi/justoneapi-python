@@ -1,6 +1,6 @@
 [project]
 name = "justoneapi"
-version = "2.0.0"
+dynamic = ["version"]
 description = "OpenAPI-driven Python SDK for Just One API"
 authors = [{ name = "Just One API", email = "support@justoneapi.com" }]
 readme = "README.md"
@@ -23,6 +23,9 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 include = ["justoneapi*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "justoneapi._version.__version__" }
 
 [tool.pytest.ini_options]
 addopts = "-ra"

@@ -1,0 +1,95 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Clean build artifacts
+        run: rm -rf dist build ./*.egg-info
+
+      - name: Install dependencies
+        run: python -m pip install -e '.[dev]' build twine 'packaging>=24.2'
+
+      - name: Verify tag matches package version
+        env:
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          tag = os.environ["GITHUB_REF_NAME"]
+          if not tag.startswith("v"):
+              raise SystemExit(f"Release tags must start with 'v': {tag}")
+
+          namespace: dict[str, str] = {}
+          exec(Path("justoneapi/_version.py").read_text(), namespace)
+          package_version = namespace["__version__"]
+          tag_version = tag.removeprefix("v")
+
+          if tag_version != package_version:
+              raise SystemExit(
+                  f"Tag version {tag_version} does not match package version {package_version}"
+              )
+
+          print(f"Validated release tag {tag} for package version {package_version}")
+          PY
+
+      - name: Normalize OpenAPI
+        run: python scripts/normalize_openapi.py
+
+      - name: Generate SDK
+        run: python scripts/generate_sdk.py
+
+      - name: Ensure generated artifacts are committed
+        run: git diff --exit-code -- openapi/public-api.normalized.json justoneapi/generated
+
+      - name: Run tests
+        run: python -m pytest
+
+      - name: Build distributions
+        run: python -m build
+
+      - name: Check distributions
+        run: python -m twine check dist/*
+
+      - name: Upload distributions
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-dist
+          path: dist/*
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: python-dist
+          path: dist
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --generate-notes --title "$GITHUB_REF_NAME"
