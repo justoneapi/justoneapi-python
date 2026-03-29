@@ -8,7 +8,6 @@ from justoneapi._exceptions import (
     BusinessError,
     ProtocolError,
     TransportError,
-    VersionDeprecatedError,
 )
 from justoneapi._response import ApiResponse
 from justoneapi._version import __version__
@@ -47,11 +46,6 @@ class Transport:
         log_message = response.headers.get("JUSTONEAPI_PYTHON_SDK_LOG_MESSAGE")
         if log_message:
             logger.warning(log_message)
-
-        if response.headers.get("JUSTONEAPI_PYTHON_SDK_VERSION_DEPRECATED"):
-            raise VersionDeprecatedError(
-                f"JustOneAPI Python SDK version {__version__} is deprecated. Please update to the latest version."
-            )
 
         try:
             payload = response.json()
