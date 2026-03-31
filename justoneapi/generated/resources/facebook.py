@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class FacebookResource(BaseResource):
-    """Generated resource for Facebook APIs."""
+    """Generated resource for Facebook."""
 
     def search_v1(
         self,

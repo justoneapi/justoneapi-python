@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class TaobaoResource(BaseResource):
-    """Generated resource for Taobao & Tmall APIs."""
+    """Generated resource for Taobao & Tmall."""
 
     def get_item_detail_v1(
         self,

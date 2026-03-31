@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class TiktokShopResource(BaseResource):
-    """Generated resource for TikTok Shop APIs."""
+    """Generated resource for TikTok Shop."""
 
     def search_products_v1(
         self,

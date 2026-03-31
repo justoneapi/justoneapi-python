@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class XiaohongshuPgyResource(BaseResource):
-    """Generated resource for Xiaohongshu Pgy APIs."""
+    """Generated resource for Xiaohongshu Pgy."""
 
     def api_solar_cooperator_user_blogger_user_id_v1(
         self,

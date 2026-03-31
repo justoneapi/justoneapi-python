@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class DouyinResource(BaseResource):
-    """Generated resource for Douyin APIs."""
+    """Generated resource for Douyin."""
 
     def get_user_detail_v3(
         self,

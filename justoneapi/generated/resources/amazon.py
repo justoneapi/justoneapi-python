@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class AmazonResource(BaseResource):
-    """Generated resource for Amazon APIs."""
+    """Generated resource for Amazon."""
 
     def get_product_detail_v1(
         self,

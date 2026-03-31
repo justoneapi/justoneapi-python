@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class DoubanResource(BaseResource):
-    """Generated resource for Douban APIs."""
+    """Generated resource for Douban."""
 
     def get_movie_reviews_v1(
         self,

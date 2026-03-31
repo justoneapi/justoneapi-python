@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class WeiboResource(BaseResource):
-    """Generated resource for Weibo APIs."""
+    """Generated resource for Weibo."""
 
     def search_all_v2(
         self,

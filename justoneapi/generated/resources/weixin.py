@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class WeixinResource(BaseResource):
-    """Generated resource for Weixin APIs."""
+    """Generated resource for Weixin."""
 
     def get_user_post(
         self,

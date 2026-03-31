@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class BeikeResource(BaseResource):
-    """Generated resource for Beike APIs."""
+    """Generated resource for Beike."""
 
     def ershoufang_detail_v1(
         self,

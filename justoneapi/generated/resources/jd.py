@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class JdResource(BaseResource):
-    """Generated resource for JD APIs."""
+    """Generated resource for JD."""
 
     def get_item_detail_v1(
         self,
