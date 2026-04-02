@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class YoukuResource(BaseResource):
-    """Generated resource for Youku APIs."""
+    """Generated resource for Youku."""
 
     def search_video_v1(
         self,

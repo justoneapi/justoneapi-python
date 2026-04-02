@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class DouyinXingtuResource(BaseResource):
-    """Generated resource for Douyin Xingtu APIs."""
+    """Generated resource for Douyin Xingtu."""
 
     def gw_api_author_get_author_base_info_v1(
         self,

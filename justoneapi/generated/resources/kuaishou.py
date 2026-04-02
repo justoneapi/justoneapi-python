@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class KuaishouResource(BaseResource):
-    """Generated resource for Kuaishou APIs."""
+    """Generated resource for Kuaishou."""
 
     def search_user_v2(
         self,

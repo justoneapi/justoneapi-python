@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class ZhihuResource(BaseResource):
-    """Generated resource for Zhihu APIs."""
+    """Generated resource for Zhihu."""
 
     def get_column_article_detail_v1(
         self,

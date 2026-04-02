@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class BilibiliResource(BaseResource):
-    """Generated resource for Bilibili APIs."""
+    """Generated resource for Bilibili."""
 
     def get_video_detail_v2(
         self,

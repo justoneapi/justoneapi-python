@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class RedditResource(BaseResource):
-    """Generated resource for Reddit APIs."""
+    """Generated resource for Reddit."""
 
     def get_post_detail_v1(
         self,

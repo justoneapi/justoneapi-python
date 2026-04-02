@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class ImdbResource(BaseResource):
-    """Generated resource for IMDb APIs."""
+    """Generated resource for IMDb."""
 
     def title_release_expectation_query(
         self,

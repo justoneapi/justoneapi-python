@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class YoutubeResource(BaseResource):
-    """Generated resource for YouTube APIs."""
+    """Generated resource for YouTube."""
 
     def get_video_detail_v1(
         self,

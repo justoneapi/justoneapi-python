@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class ToutiaoResource(BaseResource):
-    """Generated resource for Toutiao APIs."""
+    """Generated resource for Toutiao."""
 
     def get_article_detail_v1(
         self,

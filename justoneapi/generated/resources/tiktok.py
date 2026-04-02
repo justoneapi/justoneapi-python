@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class TiktokResource(BaseResource):
-    """Generated resource for TikTok APIs."""
+    """Generated resource for TikTok."""
 
     def get_user_post_v1(
         self,

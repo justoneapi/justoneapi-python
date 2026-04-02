@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class InstagramResource(BaseResource):
-    """Generated resource for Instagram APIs."""
+    """Generated resource for Instagram."""
 
     def get_user_detail_v1(
         self,

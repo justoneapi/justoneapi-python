@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class TwitterResource(BaseResource):
-    """Generated resource for X(Twitter) APIs."""
+    """Generated resource for X(Twitter)."""
 
     def get_user_detail_v1(
         self,

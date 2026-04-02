@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class SearchResource(BaseResource):
-    """Generated resource for Search APIs."""
+    """Generated resource for Search."""
 
     def search_v1(
         self,

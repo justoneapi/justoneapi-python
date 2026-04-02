@@ -689,7 +689,7 @@
         ],
         "summary": "Best Sellers (V1)",
         "tags": [
-          "Amazon APIs"
+          "Amazon"
         ],
         "x-order": "29001200",
         "x-sdk-class-name": "AmazonResource",
@@ -798,7 +798,7 @@
         ],
         "summary": "Products By Category (V1)",
         "tags": [
-          "Amazon APIs"
+          "Amazon"
         ],
         "x-order": "29001300",
         "x-sdk-class-name": "AmazonResource",
@@ -1246,7 +1246,7 @@
         ],
         "summary": "Product Details (V1)",
         "tags": [
-          "Amazon APIs"
+          "Amazon"
         ],
         "x-order": "29001000",
         "x-sdk-class-name": "AmazonResource",
@@ -1472,7 +1472,7 @@
         ],
         "summary": "Product Top Reviews (V1)",
         "tags": [
-          "Amazon APIs"
+          "Amazon"
         ],
         "x-order": "29001100",
         "x-sdk-class-name": "AmazonResource",
@@ -2046,7 +2046,7 @@
         ],
         "summary": "Community List (V1)",
         "tags": [
-          "Beike APIs"
+          "Beike"
         ],
         "x-order": "32001200",
         "x-sdk-class-name": "BeikeResource",
@@ -2340,7 +2340,7 @@
         ],
         "summary": "Resale Housing Details (V1)",
         "tags": [
-          "Beike APIs"
+          "Beike"
         ],
         "x-order": "32001000",
         "x-sdk-class-name": "BeikeResource",
@@ -2643,7 +2643,7 @@
         ],
         "summary": "Resale Housing List (V1)",
         "tags": [
-          "Beike APIs"
+          "Beike"
         ],
         "x-order": "32001100",
         "x-sdk-class-name": "BeikeResource",
@@ -3231,7 +3231,7 @@
         ],
         "summary": "User Profile (V2)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001200,
         "x-sdk-class-name": "BilibiliResource",
@@ -3288,7 +3288,7 @@
         ],
         "summary": "User Relation Stats (V1)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001700,
         "x-sdk-class-name": "BilibiliResource",
@@ -3419,7 +3419,7 @@
         ],
         "summary": "User Published Videos (V2)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001100,
         "x-sdk-class-name": "BilibiliResource",
@@ -3491,7 +3491,7 @@
         ],
         "summary": "Video Captions (V2)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001800,
         "x-sdk-class-name": "BilibiliResource",
@@ -4440,7 +4440,7 @@
         ],
         "summary": "Video Comments (V2)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001400,
         "x-sdk-class-name": "BilibiliResource",
@@ -4504,7 +4504,7 @@
         ],
         "summary": "Video Danmaku (V2)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001300,
         "x-sdk-class-name": "BilibiliResource",
@@ -5649,7 +5649,7 @@
         ],
         "summary": "Video Details (V2)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001000,
         "x-sdk-class-name": "BilibiliResource",
@@ -7200,7 +7200,7 @@
         ],
         "summary": "Video Search (V2)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001500,
         "x-sdk-class-name": "BilibiliResource",
@@ -7246,7 +7246,7 @@
         ],
         "summary": "Share Link Resolution (V1)",
         "tags": [
-          "Bilibili APIs"
+          "Bilibili"
         ],
         "x-order": 18001600,
         "x-sdk-class-name": "BilibiliResource",
@@ -7320,7 +7320,7 @@
         ],
         "summary": "Movie Comments (V1)",
         "tags": [
-          "Douban APIs"
+          "Douban"
         ],
         "x-order": "21001200",
         "x-sdk-class-name": "DoubanResource",
@@ -7372,7 +7372,7 @@
         ],
         "summary": "Movie Review Details (V1)",
         "tags": [
-          "Douban APIs"
+          "Douban"
         ],
         "x-order": "21001100",
         "x-sdk-class-name": "DoubanResource",
@@ -7707,7 +7707,7 @@
         ],
         "summary": "Movie Reviews (V1)",
         "tags": [
-          "Douban APIs"
+          "Douban"
         ],
         "x-order": "21001000",
         "x-sdk-class-name": "DoubanResource",
@@ -8319,7 +8319,7 @@
         ],
         "summary": "Recent Hot Movie (V1)",
         "tags": [
-          "Douban APIs"
+          "Douban"
         ],
         "x-order": "21001300",
         "x-sdk-class-name": "DoubanResource",
@@ -8867,7 +8867,7 @@
         ],
         "summary": "Recent Hot Tv (V1)",
         "tags": [
-          "Douban APIs"
+          "Douban"
         ],
         "x-order": "21001400",
         "x-sdk-class-name": "DoubanResource",
@@ -8928,7 +8928,7 @@
         ],
         "summary": "Subject Details (V1)",
         "tags": [
-          "Douban APIs"
+          "Douban"
         ],
         "x-order": "21001200",
         "x-sdk-class-name": "DoubanResource",
@@ -9010,7 +9010,7 @@
         ],
         "summary": "Author Commerce Seeding Base Info (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15005100",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -9086,7 +9086,7 @@
         ],
         "summary": "Author Commerce Spread Info (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15005000",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -9159,7 +9159,7 @@
         ],
         "summary": "KOL Content Keyword Analysis (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004900",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -9261,7 +9261,7 @@
         ],
         "summary": "KOL Comment Keyword Analysis (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004800",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -9733,7 +9733,7 @@
         ],
         "summary": "KOL Audience Profile (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003200",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -9816,7 +9816,7 @@
         ],
         "summary": "KOL Conversion Analysis (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003800",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -9910,7 +9910,7 @@
         ],
         "summary": "KOL Conversion Video Display (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004100",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -9987,7 +9987,7 @@
         ],
         "summary": "KOL Cost-Effectiveness Analysis (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004400",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -10322,7 +10322,7 @@
         ],
         "summary": "KOL Follower Trend (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004700",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -10811,7 +10811,7 @@
         ],
         "summary": "KOL Follower Profile (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003300",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -10966,7 +10966,7 @@
         ],
         "summary": "KOL Profile (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003100",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -11080,7 +11080,7 @@
         ],
         "summary": "KOL Xingtu Index (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004000",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -11169,7 +11169,7 @@
         ],
         "summary": "KOL Link Struct (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004200",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -11420,7 +11420,7 @@
         ],
         "summary": "KOL Service Pricing (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003400",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -11770,7 +11770,7 @@
         ],
         "summary": "KOL Content Performance (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004500",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -12279,7 +12279,7 @@
         ],
         "summary": "KOL Video Performance (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003900",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -12443,7 +12443,7 @@
         ],
         "summary": "KOL Data Overview (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003500",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -12610,7 +12610,7 @@
         ],
         "summary": "KOL Connected User Sources (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004300",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -12671,7 +12671,7 @@
         ],
         "summary": "Video Details (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15005200",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -12737,7 +12737,7 @@
         ],
         "summary": "Author Order Experience (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001400",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -12882,7 +12882,7 @@
         ],
         "summary": "Author Base Info (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001000",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -13123,7 +13123,7 @@
         ],
         "summary": "Author Marketing Info (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001800",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -13191,7 +13191,7 @@
         ],
         "summary": "Author Platform Channel Info (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001300",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -13722,7 +13722,7 @@
         ],
         "summary": "Author Show Items (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002100",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -14219,7 +14219,7 @@
         ],
         "summary": "Author Audience Distribution (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001700",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -14302,7 +14302,7 @@
         ],
         "summary": "Author CP Info (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002300",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -14397,7 +14397,7 @@
         ],
         "summary": "Author Link Struct (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001100",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -14753,7 +14753,7 @@
         ],
         "summary": "Author Recommended Videos (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002500",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -14926,7 +14926,7 @@
         ],
         "summary": "Author Touch Distribution (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002400",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -15010,7 +15010,7 @@
         ],
         "summary": "Author Video Distribution (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001600",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -15081,7 +15081,7 @@
         ],
         "summary": "Check Author Display (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001200",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -15170,7 +15170,7 @@
         ],
         "summary": "Author Convert Ability (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002000",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -15336,7 +15336,7 @@
         ],
         "summary": "Author Convert Videos or Products (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002200",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -15812,7 +15812,7 @@
         ],
         "summary": "Author Fans Distribution (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002600",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -15969,7 +15969,7 @@
         ],
         "summary": "Author Link Info (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001500",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -16144,7 +16144,7 @@
         ],
         "summary": "Author Spread Info (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15001900",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -16249,7 +16249,7 @@
         ],
         "summary": "Item Report Details (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002900",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -16468,7 +16468,7 @@
         ],
         "summary": "Item Report Analysis (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003000",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -17739,7 +17739,7 @@
         ],
         "summary": "Item Report Trend (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002800",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -18016,7 +18016,7 @@
         ],
         "summary": "Author Search (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15002700",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -18071,7 +18071,7 @@
         ],
         "summary": "Douyin KOL Search (V1) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003600",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -18138,7 +18138,7 @@
         ],
         "summary": "Creator List Search (V3) [Deprecated]",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15004600",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -18376,7 +18376,7 @@
         ],
         "summary": "KOL Keyword Search (V1)",
         "tags": [
-          "Douyin Xingtu APIs"
+          "Douyin Xingtu"
         ],
         "x-order": "15003700",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -18879,7 +18879,7 @@
         ],
         "summary": "User Profile (V3)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001000",
         "x-sdk-class-name": "DouyinResource",
@@ -19731,7 +19731,7 @@
         ],
         "summary": "User Published Videos (V1)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001100",
         "x-sdk-class-name": "DouyinResource",
@@ -20615,7 +20615,7 @@
         ],
         "summary": "User Published Videos (V3)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001200",
         "x-sdk-class-name": "DouyinResource",
@@ -20972,7 +20972,7 @@
         ],
         "summary": "Video Comments (V1)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001600",
         "x-sdk-class-name": "DouyinResource",
@@ -22215,7 +22215,7 @@
         ],
         "summary": "Video Details (V2)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001300",
         "x-sdk-class-name": "DouyinResource",
@@ -22559,7 +22559,7 @@
         ],
         "summary": "Comment Replies (V1)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001700",
         "x-sdk-class-name": "DouyinResource",
@@ -22763,7 +22763,7 @@
         ],
         "summary": "User Search (V2)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001500",
         "x-sdk-class-name": "DouyinResource",
@@ -24161,7 +24161,7 @@
         ],
         "summary": "Video Search (V4)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001400",
         "x-sdk-class-name": "DouyinResource",
@@ -24207,7 +24207,7 @@
         ],
         "summary": "Share Link Resolution (V1)",
         "tags": [
-          "Douyin APIs"
+          "Douyin"
         ],
         "x-order": "14001800",
         "x-sdk-class-name": "DouyinResource",
@@ -24502,7 +24502,7 @@
         ],
         "summary": "Search Posts (V1)",
         "tags": [
-          "Facebook APIs"
+          "Facebook"
         ],
         "x-order": "30001000",
         "x-sdk-class-name": "FacebookResource",
@@ -27420,7 +27420,7 @@
         ],
         "summary": "Main Search (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002400,
         "x-sdk-class-name": "ImdbResource",
@@ -27536,7 +27536,7 @@
         ],
         "summary": "News by Category (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002600,
         "x-sdk-class-name": "ImdbResource",
@@ -27778,7 +27778,7 @@
         ],
         "summary": "Streaming Picks (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002500,
         "x-sdk-class-name": "ImdbResource",
@@ -27864,7 +27864,7 @@
         ],
         "summary": "Title Awards Summary (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001700,
         "x-sdk-class-name": "ImdbResource",
@@ -27991,7 +27991,7 @@
         ],
         "summary": "Title Base Info (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001300,
         "x-sdk-class-name": "ImdbResource",
@@ -28116,7 +28116,7 @@
         ],
         "summary": "Title Box Office Summary (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002200,
         "x-sdk-class-name": "ImdbResource",
@@ -28268,7 +28268,7 @@
         ],
         "summary": "Title Chart Rankings (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002700,
         "x-sdk-class-name": "ImdbResource",
@@ -28396,7 +28396,7 @@
         ],
         "summary": "Title Contribution Questions (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002000,
         "x-sdk-class-name": "ImdbResource",
@@ -28481,7 +28481,7 @@
         ],
         "summary": "Title Countries of Origin (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002800,
         "x-sdk-class-name": "ImdbResource",
@@ -28732,7 +28732,7 @@
         ],
         "summary": "Title Critics Review Summary (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001600,
         "x-sdk-class-name": "ImdbResource",
@@ -29007,7 +29007,7 @@
         ],
         "summary": "Title Details (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002100,
         "x-sdk-class-name": "ImdbResource",
@@ -29207,7 +29207,7 @@
         ],
         "summary": "Title 'Did You Know' Insights (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001500,
         "x-sdk-class-name": "ImdbResource",
@@ -29410,7 +29410,7 @@
         ],
         "summary": "Title Extended Details (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001100,
         "x-sdk-class-name": "ImdbResource",
@@ -29575,7 +29575,7 @@
         ],
         "summary": "Title Recommendations (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34002300,
         "x-sdk-class-name": "ImdbResource",
@@ -29673,7 +29673,7 @@
         ],
         "summary": "Title Plot Summary (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001900,
         "x-sdk-class-name": "ImdbResource",
@@ -31491,7 +31491,7 @@
         ],
         "summary": "Title Redux Overview (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001400,
         "x-sdk-class-name": "ImdbResource",
@@ -32670,7 +32670,7 @@
         ],
         "summary": "Title Release Expectation (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001000,
         "x-sdk-class-name": "ImdbResource",
@@ -33260,7 +33260,7 @@
         ],
         "summary": "Title Top Cast and Crew (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001200,
         "x-sdk-class-name": "ImdbResource",
@@ -33497,7 +33497,7 @@
         ],
         "summary": "Title User Reviews Summary (V1)",
         "tags": [
-          "IMDb APIs"
+          "IMDb"
         ],
         "x-order": 34001800,
         "x-sdk-class-name": "ImdbResource",
@@ -34014,7 +34014,7 @@
         ],
         "summary": "Post Details (V1)",
         "tags": [
-          "Instagram APIs"
+          "Instagram"
         ],
         "x-order": "24001100",
         "x-sdk-class-name": "InstagramResource",
@@ -34413,7 +34413,7 @@
         ],
         "summary": "User Details (V1)",
         "tags": [
-          "Instagram APIs"
+          "Instagram"
         ],
         "x-order": "24001000",
         "x-sdk-class-name": "InstagramResource",
@@ -34752,7 +34752,7 @@
         ],
         "summary": "User Published Posts (V1)",
         "tags": [
-          "Instagram APIs"
+          "Instagram"
         ],
         "x-order": "24001200",
         "x-sdk-class-name": "InstagramResource",
@@ -34929,7 +34929,7 @@
         ],
         "summary": "Hashtag Posts Search (V1)",
         "tags": [
-          "Instagram APIs"
+          "Instagram"
         ],
         "x-order": "24001400",
         "x-sdk-class-name": "InstagramResource",
@@ -35410,7 +35410,7 @@
         ],
         "summary": "Reels Search (V1)",
         "tags": [
-          "Instagram APIs"
+          "Instagram"
         ],
         "x-order": "24001300",
         "x-sdk-class-name": "InstagramResource",
@@ -35710,7 +35710,7 @@
         ],
         "summary": "Product Comments (V1)",
         "tags": [
-          "JD APIs"
+          "JD"
         ],
         "x-order": "19001100",
         "x-sdk-class-name": "JdResource",
@@ -36835,7 +36835,7 @@
         ],
         "summary": "Product Details (V1)",
         "tags": [
-          "JD APIs"
+          "JD"
         ],
         "x-order": "19001000",
         "x-sdk-class-name": "JdResource",
@@ -36884,7 +36884,7 @@
         ],
         "summary": "Shop Product List (V1)",
         "tags": [
-          "JD APIs"
+          "JD"
         ],
         "x-order": "19001200",
         "x-sdk-class-name": "JdResource",
@@ -37047,7 +37047,7 @@
         ],
         "summary": "User Profile (V1)",
         "tags": [
-          "Kuaishou APIs"
+          "Kuaishou"
         ],
         "x-order": "16001400",
         "x-sdk-class-name": "KuaishouResource",
@@ -37331,7 +37331,7 @@
         ],
         "summary": "User Published Videos (V2)",
         "tags": [
-          "Kuaishou APIs"
+          "Kuaishou"
         ],
         "x-order": "16001100",
         "x-sdk-class-name": "KuaishouResource",
@@ -39215,7 +39215,7 @@
         ],
         "summary": "Video Comments (V1)",
         "tags": [
-          "Kuaishou APIs"
+          "Kuaishou"
         ],
         "x-order": "16001600",
         "x-sdk-class-name": "KuaishouResource",
@@ -39633,7 +39633,7 @@
         ],
         "summary": "Video Details (V2)",
         "tags": [
-          "Kuaishou APIs"
+          "Kuaishou"
         ],
         "x-order": "16001200",
         "x-sdk-class-name": "KuaishouResource",
@@ -40782,7 +40782,7 @@
         ],
         "summary": "User Search (V2)",
         "tags": [
-          "Kuaishou APIs"
+          "Kuaishou"
         ],
         "x-order": "16001000",
         "x-sdk-class-name": "KuaishouResource",
@@ -41088,7 +41088,7 @@
         ],
         "summary": "Video Search (V2)",
         "tags": [
-          "Kuaishou APIs"
+          "Kuaishou"
         ],
         "x-order": "16001300",
         "x-sdk-class-name": "KuaishouResource",
@@ -41134,7 +41134,7 @@
         ],
         "summary": "Share Link Resolution (V1)",
         "tags": [
-          "Kuaishou APIs"
+          "Kuaishou"
         ],
         "x-order": "16001500",
         "x-sdk-class-name": "KuaishouResource",
@@ -41861,7 +41861,7 @@
         ],
         "summary": "Post Comments (V1)",
         "tags": [
-          "Reddit APIs"
+          "Reddit"
         ],
         "x-order": "26001100",
         "x-sdk-class-name": "RedditResource",
@@ -42100,7 +42100,7 @@
         ],
         "summary": "Post Details (V1)",
         "tags": [
-          "Reddit APIs"
+          "Reddit"
         ],
         "x-order": "26001000",
         "x-sdk-class-name": "RedditResource",
@@ -42763,7 +42763,7 @@
         ],
         "summary": "Search (V1)",
         "tags": [
-          "Reddit APIs"
+          "Reddit"
         ],
         "x-order": "26001200",
         "x-sdk-class-name": "RedditResource",
@@ -43110,7 +43110,7 @@
         ],
         "summary": "Unified Search (V1)",
         "tags": [
-          "Search APIs"
+          "Search"
         ],
         "x-order": "10001000",
         "x-sdk-class-name": "SearchResource",
@@ -44465,7 +44465,7 @@
         ],
         "summary": "Product Reviews (V3)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001500",
         "x-sdk-class-name": "TaobaoResource",
@@ -45688,7 +45688,7 @@
         ],
         "summary": "Product Details (V1)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001000",
         "x-sdk-class-name": "TaobaoResource",
@@ -45994,7 +45994,7 @@
         ],
         "summary": "Product Details (V3)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001100",
         "x-sdk-class-name": "TaobaoResource",
@@ -46081,7 +46081,7 @@
         ],
         "summary": "Product Details (V4)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001200",
         "x-sdk-class-name": "TaobaoResource",
@@ -46849,7 +46849,7 @@
         ],
         "summary": "Product Details (V5)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001300",
         "x-sdk-class-name": "TaobaoResource",
@@ -47635,7 +47635,7 @@
         ],
         "summary": "Product Details (V9)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001400",
         "x-sdk-class-name": "TaobaoResource",
@@ -47709,7 +47709,7 @@
         ],
         "summary": "Shop Product List (V1)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001600",
         "x-sdk-class-name": "TaobaoResource",
@@ -49406,7 +49406,7 @@
         ],
         "summary": "Shop Product List (V2)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001700",
         "x-sdk-class-name": "TaobaoResource",
@@ -49566,7 +49566,7 @@
         ],
         "summary": "Shop Product List (V3)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001800",
         "x-sdk-class-name": "TaobaoResource",
@@ -49773,7 +49773,7 @@
         ],
         "summary": "Product Search (V1)",
         "tags": [
-          "Taobao & Tmall APIs"
+          "Taobao & Tmall"
         ],
         "x-order": "11001900",
         "x-sdk-class-name": "TaobaoResource",
@@ -49838,7 +49838,7 @@
         ],
         "summary": "Product Detail (V1)",
         "tags": [
-          "TikTok Shop APIs"
+          "TikTok Shop"
         ],
         "x-order": "22501100",
         "x-sdk-class-name": "TiktokShopResource",
@@ -49925,7 +49925,7 @@
         ],
         "summary": "Search Products (V1)",
         "tags": [
-          "TikTok Shop APIs"
+          "TikTok Shop"
         ],
         "x-order": "22501000",
         "x-sdk-class-name": "TiktokShopResource",
@@ -50083,7 +50083,7 @@
         ],
         "summary": "Post Comments (V1)",
         "tags": [
-          "TikTok APIs"
+          "TikTok"
         ],
         "x-order": 22001300,
         "x-sdk-class-name": "TiktokResource",
@@ -50521,7 +50521,7 @@
         ],
         "summary": "Post Details (V1)",
         "tags": [
-          "TikTok APIs"
+          "TikTok"
         ],
         "x-order": 22001100,
         "x-sdk-class-name": "TiktokResource",
@@ -50759,7 +50759,7 @@
         ],
         "summary": "Comment Replies (V1)",
         "tags": [
-          "TikTok APIs"
+          "TikTok"
         ],
         "x-order": 22001400,
         "x-sdk-class-name": "TiktokResource",
@@ -50943,7 +50943,7 @@
         ],
         "summary": "User Profile (V1)",
         "tags": [
-          "TikTok APIs"
+          "TikTok"
         ],
         "x-order": 22001200,
         "x-sdk-class-name": "TiktokResource",
@@ -51272,7 +51272,7 @@
         ],
         "summary": "User Published Posts (V1)",
         "tags": [
-          "TikTok APIs"
+          "TikTok"
         ],
         "x-order": 22001000,
         "x-sdk-class-name": "TiktokResource",
@@ -52697,7 +52697,7 @@
         ],
         "summary": "Post Search (V1)",
         "tags": [
-          "TikTok APIs"
+          "TikTok"
         ],
         "x-order": 22001600,
         "x-sdk-class-name": "TiktokResource",
@@ -53378,7 +53378,7 @@
         ],
         "summary": "User Search (V1)",
         "tags": [
-          "TikTok APIs"
+          "TikTok"
         ],
         "x-order": 22001500,
         "x-sdk-class-name": "TiktokResource",
@@ -53895,7 +53895,7 @@
         ],
         "summary": "Article Details (V1)",
         "tags": [
-          "Toutiao APIs"
+          "Toutiao"
         ],
         "x-order": "27001000",
         "x-sdk-class-name": "ToutiaoResource",
@@ -53986,7 +53986,7 @@
         ],
         "summary": "User Profile (V1)",
         "tags": [
-          "Toutiao APIs"
+          "Toutiao"
         ],
         "x-order": "27001100",
         "x-sdk-class-name": "ToutiaoResource",
@@ -54438,7 +54438,7 @@
         ],
         "summary": "Search (V1)",
         "tags": [
-          "Toutiao APIs"
+          "Toutiao"
         ],
         "x-order": "27001200",
         "x-sdk-class-name": "ToutiaoResource",
@@ -54477,7 +54477,7 @@
         ],
         "summary": "Search (V2)",
         "tags": [
-          "Toutiao APIs"
+          "Toutiao"
         ],
         "x-order": "27001300",
         "x-sdk-class-name": "ToutiaoResource",
@@ -54557,7 +54557,7 @@
         ],
         "summary": "User Details (V1)",
         "tags": [
-          "X(Twitter) APIs"
+          "X(Twitter)"
         ],
         "x-order": 31001000,
         "x-sdk-class-name": "TwitterResource",
@@ -56846,7 +56846,7 @@
         ],
         "summary": "User Published Posts (V1)",
         "tags": [
-          "X(Twitter) APIs"
+          "X(Twitter)"
         ],
         "x-order": 31001100,
         "x-sdk-class-name": "TwitterResource",
@@ -57053,7 +57053,7 @@
         ],
         "summary": "User Fans (V1)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001300",
         "x-sdk-class-name": "WeiboResource",
@@ -57260,7 +57260,7 @@
         ],
         "summary": "User Followers (V1)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001400",
         "x-sdk-class-name": "WeiboResource",
@@ -57325,7 +57325,7 @@
         ],
         "summary": "Post Comments (V1)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001800",
         "x-sdk-class-name": "WeiboResource",
@@ -57452,7 +57452,7 @@
         ],
         "summary": "User Profile (V3)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001200",
         "x-sdk-class-name": "WeiboResource",
@@ -58223,7 +58223,7 @@
         ],
         "summary": "User Published Posts (V1)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001500",
         "x-sdk-class-name": "WeiboResource",
@@ -58471,7 +58471,7 @@
         ],
         "summary": "Post Details (V1)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001100",
         "x-sdk-class-name": "WeiboResource",
@@ -59351,7 +59351,7 @@
         ],
         "summary": "Hot Search (V1)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001700",
         "x-sdk-class-name": "WeiboResource",
@@ -59463,7 +59463,7 @@
         ],
         "summary": "Keyword Search (V2)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001000",
         "x-sdk-class-name": "WeiboResource",
@@ -59544,7 +59544,7 @@
         ],
         "summary": "Search User Published Posts (V1)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001900",
         "x-sdk-class-name": "WeiboResource",
@@ -59818,7 +59818,7 @@
         ],
         "summary": "TV Video Details (V1)",
         "tags": [
-          "Weibo APIs"
+          "Weibo"
         ],
         "x-order": "17001600",
         "x-sdk-class-name": "WeiboResource",
@@ -59862,7 +59862,7 @@
         ],
         "summary": "Article Comments (V1)",
         "tags": [
-          "Weixin APIs"
+          "Weixin"
         ],
         "x-order": 20001200,
         "x-sdk-class-name": "WeixinResource",
@@ -59914,7 +59914,7 @@
         ],
         "summary": "Article Details (V1)",
         "tags": [
-          "Weixin APIs"
+          "Weixin"
         ],
         "x-order": 20001400,
         "x-sdk-class-name": "WeixinResource",
@@ -59965,7 +59965,7 @@
         ],
         "summary": "Article Engagement Metrics (V1)",
         "tags": [
-          "Weixin APIs"
+          "Weixin"
         ],
         "x-order": 20001100,
         "x-sdk-class-name": "WeixinResource",
@@ -60122,7 +60122,7 @@
         ],
         "summary": "User Published Posts (V1)",
         "tags": [
-          "Weixin APIs"
+          "Weixin"
         ],
         "x-order": 20001000,
         "x-sdk-class-name": "WeixinResource",
@@ -60277,7 +60277,7 @@
         ],
         "summary": "Search (V1)",
         "tags": [
-          "Weixin APIs"
+          "Weixin"
         ],
         "x-order": 20001300,
         "x-sdk-class-name": "WeixinResource",
@@ -60386,7 +60386,7 @@
         ],
         "summary": "KOL Data Core (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002300",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -60727,7 +60727,7 @@
         ],
         "summary": "KOL Search (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002200",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -60939,7 +60939,7 @@
         ],
         "summary": "User Blogger (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001000",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -61140,7 +61140,7 @@
         ],
         "summary": "Fans Overall New History (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001200",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -61530,7 +61530,7 @@
         ],
         "summary": "Fans Profile (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001900",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -61590,7 +61590,7 @@
         ],
         "summary": "Cost Effective (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002000",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -61634,7 +61634,7 @@
         ],
         "summary": "KOL Content Tags (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001600",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -61678,7 +61678,7 @@
         ],
         "summary": "KOL Feature Tags (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001500",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -61909,7 +61909,7 @@
         ],
         "summary": "User Published Notes List (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001800",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -61991,7 +61991,7 @@
         ],
         "summary": "Data Summary (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001100",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -62051,7 +62051,7 @@
         ],
         "summary": "Fans Summary (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001300",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -62533,7 +62533,7 @@
         ],
         "summary": "Notes Rate (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001700",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -62596,7 +62596,7 @@
         ],
         "summary": "Similar KOL (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13001400",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -62739,7 +62739,7 @@
         ],
         "summary": "Note Details (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002100",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -62860,7 +62860,7 @@
         ],
         "summary": "KOL Data Core (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13003400",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -62916,7 +62916,7 @@
         ],
         "summary": "KOL Cost-Effectiveness (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13003200",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -63009,7 +63009,7 @@
         ],
         "summary": "KOL Data Overview (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13003000",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -63102,7 +63102,7 @@
         ],
         "summary": "KOL Data Overview (V2) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13003100",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -63504,7 +63504,7 @@
         ],
         "summary": "KOL Follower Profile (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002600",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -63576,7 +63576,7 @@
         ],
         "summary": "KOL Follower Analysis (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002700",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -63787,7 +63787,7 @@
         ],
         "summary": "KOL Follower Trend (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002800",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -63990,7 +63990,7 @@
         ],
         "summary": "KOL Profile (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002400",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -64109,7 +64109,7 @@
         ],
         "summary": "KOL Note List (V1)",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002900",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -64295,7 +64295,7 @@
         ],
         "summary": "KOL Note Rate (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13002500",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -64422,7 +64422,7 @@
         ],
         "summary": "Note Details (V1) [Deprecated]",
         "tags": [
-          "Xiaohongshu Pgy APIs"
+          "Xiaohongshu Pgy"
         ],
         "x-order": "13003300",
         "x-sdk-class-name": "XiaohongshuPgyResource",
@@ -65377,7 +65377,7 @@
         ],
         "summary": "Note Comments (V2)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001700",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -65865,7 +65865,7 @@
         ],
         "summary": "Note Comments (V4)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001800",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -66277,7 +66277,7 @@
         ],
         "summary": "Note Details (V1)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001400",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -66731,7 +66731,7 @@
         ],
         "summary": "Note Details (V3)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001500",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -67211,7 +67211,7 @@
         ],
         "summary": "Note Details (V7)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001600",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -67550,7 +67550,7 @@
         ],
         "summary": "Comment Replies (V2)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001900",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -67609,7 +67609,7 @@
         ],
         "summary": "User Published Notes (V2)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001200",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -67732,7 +67732,7 @@
         ],
         "summary": "User Published Notes (V4)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001300",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -67938,7 +67938,7 @@
         ],
         "summary": "User Profile (V3)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001000",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -68185,7 +68185,7 @@
         ],
         "summary": "User Profile (V4)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12001100",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -68404,7 +68404,7 @@
         ],
         "summary": "Note Search (V2)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12002000",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -68495,7 +68495,7 @@
         ],
         "summary": "Note Search (V3)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12002100",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -68798,7 +68798,7 @@
         ],
         "summary": "Search Keyword Suggestions (V1)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12002500",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -69299,7 +69299,7 @@
         ],
         "summary": "User Search (V2)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12002200",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -69345,7 +69345,7 @@
         ],
         "summary": "Share Link Convert (V3)",
         "tags": [
-          "Xiaohongshu APIs"
+          "Xiaohongshu"
         ],
         "x-order": "12002400",
         "x-sdk-class-name": "XiaohongshuResource",
@@ -69609,7 +69609,7 @@
         ],
         "summary": "User Profile (V1)",
         "tags": [
-          "Youku APIs"
+          "Youku"
         ],
         "x-order": "23001200",
         "x-sdk-class-name": "YoukuResource",
@@ -69827,7 +69827,7 @@
         ],
         "summary": "Video Details (V1)",
         "tags": [
-          "Youku APIs"
+          "Youku"
         ],
         "x-order": "23001100",
         "x-sdk-class-name": "YoukuResource",
@@ -70205,7 +70205,7 @@
         ],
         "summary": "Video Search (V1)",
         "tags": [
-          "Youku APIs"
+          "Youku"
         ],
         "x-order": "23001000",
         "x-sdk-class-name": "YoukuResource",
@@ -70276,7 +70276,7 @@
         ],
         "summary": "Video Details (V1)",
         "tags": [
-          "YouTube APIs"
+          "YouTube"
         ],
         "x-order": "25001000",
         "x-sdk-class-name": "YoutubeResource",
@@ -70613,7 +70613,7 @@
         ],
         "summary": "Answer List (V1)",
         "tags": [
-          "Zhihu APIs"
+          "Zhihu"
         ],
         "x-order": "28001100",
         "x-sdk-class-name": "ZhihuResource",
@@ -70914,7 +70914,7 @@
         ],
         "summary": "Column Article Details (V1)",
         "tags": [
-          "Zhihu APIs"
+          "Zhihu"
         ],
         "x-order": "28001000",
         "x-sdk-class-name": "ZhihuResource",
@@ -71048,7 +71048,7 @@
         ],
         "summary": "Column Article List (V1)",
         "tags": [
-          "Zhihu APIs"
+          "Zhihu"
         ],
         "x-order": "28001300",
         "x-sdk-class-name": "ZhihuResource",
@@ -71236,7 +71236,7 @@
         ],
         "summary": "Search (V1)",
         "tags": [
-          "Zhihu APIs"
+          "Zhihu"
         ],
         "x-order": "28001200",
         "x-sdk-class-name": "ZhihuResource",
@@ -71258,104 +71258,104 @@
   ],
   "tags": [
     {
-      "description": "APIs for retrieving video content, creator, and engagement data from Kuaishou.\n\nMain endpoints\n- User Profile: retrieve profile information for a specific Kuaishou user (nickname, avatar, follower count, etc.).\n- User Published Videos: list videos published by a specific user with pagination.\n- Video Details: get comprehensive metadata for a single video, including play URL, statistics, and author info.\n- Video Search: search videos by keyword.\n- User Search: search Kuaishou creators/users by keyword.\n- Video Comments: fetch comments for a video with pagination.\n- Share Link Resolution: convert Kuaishou share URLs to structured data.\n\nTypical use cases\n- Content research and trend analysis\n- Creator/KOL monitoring\n- Brand reputation monitoring\n- Building datasets for analytics\n",
-      "name": "Kuaishou APIs"
-    },
-    {
-      "description": "Weixin Official Account (WeChat) API\n\nMain endpoints:\n- User Published Posts: Retrieves posts from a specific official account.\n- Article Engagement Metrics: Retrieves read counts, likes, etc., for an article.\n- Article Comments: Retrieves user comments from an article.\n- Search: Keywords search for accounts and articles.\n- Article Details: Retrieves core metadata for an article.\n\nTypical use cases:\n- Monitoring account-level content and engagement.\n- Analyzing article-level performance metrics.\n- Collecting public community feedback and discussions.\n",
-      "name": "Weixin APIs"
-    },
-    {
-      "description": "Unified APIs for retrieving metadata and content details from YouTube.\n\nTypical use cases\n- Video monitoring: track view counts, engagement, and metadata changes for specific videos.\n- Content analysis: extract video titles, descriptions, and tags for trend research or content classification.\n- Marketing intelligence: monitor competitor channels or specific promotional content.\n- Media tracking: verify video status, availability, and basic metadata for platform monitoring.\n",
-      "name": "YouTube APIs"
-    },
-    {
-      "description": "Unified APIs for product data on JD.com.\n\nIncluded endpoints\n- Product Details: retrieve product core information such as title, images, price, SKU/variants, shop info, and status.\n- Product Comments: fetch user reviews/comments with paging, useful for sentiment and public-opinion monitoring.\n\nTypical use cases\n- E-commerce analytics: product/brand/category analysis, trend tracking, and report generation.\n- Price monitoring: scheduled checks for price changes and availability status.\n- Review & sentiment monitoring: track comment volume, rating shifts, and negative/positive feedback signals.\n- Competitor intelligence: monitor competing products and compare pricing and review signals over time.\n",
-      "name": "JD APIs"
-    },
-    {
-      "description": "Zhihu data services.\n\nMain endpoints:\n- Search: Retrieve content based on keywords.\n- Column: Access detailed information and article lists from specific columns.\n- Question/Answer: Fetch answer lists and engagement metrics for specific questions.\n\nTypical use cases:\n- Market research and consumer sentiment analysis.\n- Tracking expert opinions and professional knowledge trends.\n- Monitoring brand or product discussions on a leading knowledge-sharing platform.\n",
-      "name": "Zhihu APIs"
-    },
-    {
-      "description": "APIs for retrieving video content, creator, and engagement data from Douyin (TikTok China).\n\nMain endpoints\n- User Profile: retrieve profile information for a specific Douyin user (nickname, avatar, follower count, etc.).\n- User Published Videos: list videos published by a specific user with pagination, useful for creator monitoring.\n- Video Details: get comprehensive metadata for a single video, including play URL, statistics, and author info.\n- Video Search: search videos by keyword and optional filters (sort, publish time, duration).\n- User Search: search Douyin creators/users by keyword.\n- Video Comments: fetch top-level comments for a video with pagination.\n- Comment Replies: fetch nested replies for a specific top-level comment with paging.\n- Share Link Resolution: convert Douyin short share URLs to structured data.\n\nTypical use cases\n- Content research and trend analysis (keywords/topics/hashtags)\n- Creator/KOL monitoring and competitive intelligence\n- Brand reputation and sentiment monitoring based on videos and comments\n- Building datasets for analytics, reporting, and downstream automation\n",
-      "name": "Douyin APIs"
-    },
-    {
-      "description": "Facebook Data Services.\n\nMain endpoints:\n- Search Posts: Search for public posts using keywords and date ranges.\n\nTypical use cases:\n- Monitoring social media sentiment or trends related to specific topics.\n- Researching public discourse and engagement on Facebook.\n",
-      "name": "Facebook APIs"
+      "description": "IMDb Data Services\n\nMain endpoints:\n- Movie and TV title details (metadata, ratings, cast, plot, awards, box office, etc.)\n- Search functionality (titles, people, etc.)\n- News and charts (top 250, streaming picks, news by category)\n\nTypical use cases:\n- Retrieve comprehensive metadata for specific movies or TV shows using IMDb IDs (tt-prefixed).\n- Search for titles and celebrities with customizable filters.\n- Track trending movies and top-rated content via chart rankings.\n",
+      "name": "IMDb"
     },
     {
       "description": "APIs for retrieving content, creator, and engagement data from Xiaohongshu.\n\nMain endpoints\n- Note Details: retrieve a single note/post with text (plain/rich when available), media (images/video),\n  publish time, author info, and engagement metrics (when available).\n- User Published Notes: list notes published by a specific user with pagination, useful for creator monitoring\n  and building content timelines.\n- Note Search: search notes by keyword and optional filters, returning paginated results for discovery and analysis.\n- User Search: search creators/users by keyword, returning basic profile signals for identification and tracking.\n- Note Comments: retrieve comments for a note with pagination, useful for sentiment and community feedback analysis.\n\nTypical use cases\n- Content research and trend analysis (keywords/topics/hashtags)\n- Creator/KOL monitoring and competitive intelligence\n- Brand reputation and sentiment monitoring based on notes and comments\n- Building datasets for analytics, reporting, and downstream automation\n",
-      "name": "Xiaohongshu APIs"
+      "name": "Xiaohongshu"
     },
     {
-      "description": "Youku API for video search, video details, and user profile information.\n\nMain endpoints:\n- Search for videos by keyword.\n- Retrieve detailed metadata for specific videos.\n- Fetch comprehensive profile details for creators and users.\n\nTypical use cases:\n- Content monitoring and keyword-based trend analysis.\n- Data collection for video engagement metrics (play counts, likes).\n- Social media listening and creator influence assessment.\n",
-      "name": "Youku APIs"
-    },
-    {
-      "description": "Unified APIs for retrieving data from Instagram, including user profiles, post details, published content, and reels/hashtag searches.\n\nMain endpoints\n- User Profile: Retrieves public profile information of an Instagram user, including follower count, following count, and post count.\n- Post Details: Retrieves detailed information of a public Instagram post by post code, including media content (images/videos) and engagement metrics.\n- User Published Posts: Retrieves a list of public posts published by an Instagram user, with pagination support.\n- Reels & Hashtag Search: Search public Instagram Reels or hashtag-specific posts by keywords or hashtag.\n\nTypical use cases\n- Tracking influencer performance and audience growth.\n- Monitoring trending content through keyword and hashtag searches.\n- Analyzing post engagement metrics for specific accounts or topics.\n",
-      "name": "Instagram APIs"
-    },
-    {
-      "description": "X (formerly Twitter) Data Services.\n\nMain endpoints:\n- User Details: Retrieve basic profile information and statistics of X users.\n- User Published Posts: Access a user's tweet timeline with pagination support.\n\nTypical use cases:\n- Monitoring user account growth and engagement metrics.\n- Analyzing public tweet history for market research or brand sentiment.\n\nNotes:\n- Only public data is accessible via these endpoints.\n- User Rest ID is required for identifying the target account.\n",
-      "name": "X(Twitter) APIs"
-    },
-    {
-      "description": "APIs for retrieving data from Reddit, including post details, comments, and search results.\n\nReddit is a network of communities where people can dive into their interests, hobbies and passions.\nThese APIs allow for systematic extraction of public discussions and content.\n\nIncluded endpoints\n- Post Details: Retrieve comprehensive information about a specific post, including its content and engagement metrics.\n- Post Comments: Fetch the discussion thread for a given post with pagination support.\n- Search: Search for posts across Reddit based on keywords and filters.\n\nTypical use cases\n- Public opinion analysis: Track discussions around specific brands, products, or topics.\n- Market research: Understand community sentiment and emerging trends within specific subreddits.\n- Content aggregation: Collect high-quality community-driven content for research or archival purposes.\n",
-      "name": "Reddit APIs"
-    },
-    {
-      "description": "TikTok Global Data (Overseas Version).\n\nMain endpoints:\n- User Profiles and published posts (V1).\n- Post details and metadata including engagement metrics (V1).\n- Keyword search for users and posts (V1).\n- Interactive data such as comments and sub-comments (V1).\n\nTypical use cases:\n- Global market analysis and influencer discovery.\n- Content performance tracking on TikTok.\n- Brand sentiment analysis via comment retrieval.\n- Cross-region trend monitoring.\n",
-      "name": "TikTok APIs"
-    },
-    {
-      "description": "IMDb Data Services\n\nMain endpoints:\n- Movie and TV title details (metadata, ratings, cast, plot, awards, box office, etc.)\n- Search functionality (titles, people, etc.)\n- News and charts (top 250, streaming picks, news by category)\n\nTypical use cases:\n- Retrieve comprehensive metadata for specific movies or TV shows using IMDb IDs (tt-prefixed).\n- Search for titles and celebrities with customizable filters.\n- Track trending movies and top-rated content via chart rankings.\n",
-      "name": "IMDb APIs"
-    },
-    {
-      "description": "Unified APIs for product data on Taobao and Tmall.\n\nAlthough Taobao and Tmall are separate marketplaces in Alibaba's ecosystem, on this API platform they share the same\nendpoint set and response model. No platform parameter is required — the APIs work in a unified manner across both.\n\nIncluded endpoints\n- Product Details: retrieve product core information such as title, images, price, SKU/variants (if available), shop info, and status.\n- Shop Product List: list products under a shop with pagination/sorting, useful for store monitoring and catalog building.\n- Product Search: search products by keyword/filters, useful for discovery, analysis, and building watchlists.\n- Product Comments: fetch user reviews/comments with paging, useful for sentiment and public-opinion monitoring.\n\nTypical use cases\n- E-commerce analytics: product/brand/category analysis, trend tracking, and report generation.\n- Price monitoring: scheduled checks for price changes, promotions, and availability status.\n- Review & sentiment monitoring: track comment volume, rating shifts, and negative/positive feedback signals.\n- Content enrichment: obtain product media (images) and basic metadata for catalogs or internal systems.\n- Competitor intelligence: monitor competing shops/products and compare pricing and review signals over time.\n",
-      "name": "Taobao & Tmall APIs"
-    },
-    {
-      "description": "APIs for Douban movie metadata, reviews, and comments.\n\nMain endpoints:\n- Movie Reviews: Retrieve long-form user reviews for movies.\n- Movie Review Details: Get detailed content of a specific movie review.\n- Movie Comments: Retrieve short user comments for movies.\n\nTypical use cases:\n- Sentiment analysis for film and media content.\n- Academic and market research on audience reception.\n",
-      "name": "Douban APIs"
-    },
-    {
-      "description": "APIs for retrieving posts, user profiles, engagement metrics, and trending topics from Weibo.\n\nMain endpoints\n- Keyword Search: search Weibo posts by keywords and time range, returning content and metrics.\n- User Profile: retrieve detailed information for a specified Weibo user.\n- Post Details: get comprehensive metadata for a single Weibo post.\n- User Published Posts: list posts published by a specific user with pagination.\n- User Fans/Followers: retrieve the follower and following lists for a user.\n- TV Video Details: get metadata and media URLs for Weibo TV components.\n- Hot Search: fetch current trending topics on Weibo.\n\nTypical use cases\n- Social media monitoring and brand sentiment analysis\n- Public opinion research and trend tracking\n- Creator and influencer identification and monitoring\n- Gathering public data for research or business intelligence\n",
-      "name": "Weibo APIs"
-    },
-    {
-      "description": "Ke Holdings / Beike (Lianjia) Data API.\n\nMain endpoints:\n- Resale Housing Details: Comprehensive data for second-hand property listings.\n- Resale Housing List: Filterable list of available second-hand properties.\n- Community List: Details and statistics for residential communities (Xiaoqu).\n\nTypical use cases:\n- Property market analysis and valuation.\n- Tracking housing trends and availability in specific regions.\n- Community-level demographic and price research.\n",
-      "name": "Beike APIs"
-    },
-    {
-      "description": "Toutiao (Jinri Toutiao) Data Services.\n\nMain endpoints:\n- Article Details: Retrieve comprehensive metadata and engagement metrics for Toutiao articles.\n- User Profile: Access detailed creator information, including verification status and performance stats.\n- Search: Perform keyword-based content discovery across the Toutiao ecosystem.\n\nTypical use cases:\n- Media monitoring and trend analysis.\n- Creator performance tracking and influencer profiling.\n- Content aggregation and keyword intelligence.\n",
-      "name": "Toutiao APIs"
-    },
-    {
-      "description": "Douyin Xingtu data services.",
-      "name": "Douyin Xingtu APIs"
-    },
-    {
-      "description": "Bilibili API endpoints\n\nMain endpoints:\n- Video Details: Get video metadata, stats, and uploader info.\n- User Profile: Get user profile, videos, and stats.\n- Search: Keyword-based video search.\n- Interactions: Comments, replies, danmaku.\n\nTypical use cases:\n- Tracking video performance and engagement metrics.\n- Analyzing user/creator content and growth.\n- Gathering community feedback and trends.\n",
-      "name": "Bilibili APIs"
+      "description": "APIs for retrieving video content, creator, and engagement data from Douyin (TikTok China).\n\nMain endpoints\n- User Profile: retrieve profile information for a specific Douyin user (nickname, avatar, follower count, etc.).\n- User Published Videos: list videos published by a specific user with pagination, useful for creator monitoring.\n- Video Details: get comprehensive metadata for a single video, including play URL, statistics, and author info.\n- Video Search: search videos by keyword and optional filters (sort, publish time, duration).\n- User Search: search Douyin creators/users by keyword.\n- Video Comments: fetch top-level comments for a video with pagination.\n- Comment Replies: fetch nested replies for a specific top-level comment with paging.\n- Share Link Resolution: convert Douyin short share URLs to structured data.\n\nTypical use cases\n- Content research and trend analysis (keywords/topics/hashtags)\n- Creator/KOL monitoring and competitive intelligence\n- Brand reputation and sentiment monitoring based on videos and comments\n- Building datasets for analytics, reporting, and downstream automation\n",
+      "name": "Douyin"
     },
     {
       "description": "TikTok Shop Data Services.\n\nMain endpoints\n- Search Products: search for products on TikTok Shop based on keywords and region.\n- Product Detail: retrieve detailed information for a specific product on TikTok Shop.\n",
-      "name": "TikTok Shop APIs"
+      "name": "TikTok Shop"
     },
     {
-      "description": "Amazon Data Services.\n\nMain endpoints\n- Product Details: retrieve comprehensive product information from Amazon based on the provided ASIN, including basic metadata (title, brand, category), media assets (images), availability, and pricing.\n- Product Top Reviews: retrieve top (most relevant or most helpful) public reviews for an Amazon product, including ratings, content, and Helpful vote counts.\n- Best Sellers: explore top-performing products across various categories on Amazon, including sales rank and popularity indicators.\n\nTypical use cases\n- E-commerce analytics: product/brand/category analysis, trend tracking, and report generation.\n- Price monitoring and availability tracking: scheduled checks for price changes and availability status on Amazon.\n- Review & sentiment monitoring: track consumer feedback and ratings to analyze product performance and customer satisfaction.\n- Competitor intelligence: monitor competing products on Amazon and compare pricing and review signals over time.\n",
-      "name": "Amazon APIs"
-    },
-    {
-      "description": "Unified search APIs across multiple social media platforms.\n\nIncluded endpoints\n- Unified Search: retrieve social media data from multiple sources (Weibo, Weixin, Douyin, etc.) in a single request.\n\nTypical use cases\n- Multi-platform trend analysis: search for specific keywords across different social media ecosystems.\n- Public opinion monitoring: track hot topics and sentiment shifts on a cross-platform scale.\n",
-      "name": "Search APIs"
+      "description": "Facebook Data Services.\n\nMain endpoints:\n- Search Posts: Search for public posts using keywords and date ranges.\n\nTypical use cases:\n- Monitoring social media sentiment or trends related to specific topics.\n- Researching public discourse and engagement on Facebook.\n",
+      "name": "Facebook"
     },
     {
       "description": "Xiaohongshu Pgy (Pugongying) data services.",
-      "name": "Xiaohongshu Pgy APIs"
+      "name": "Xiaohongshu Pgy"
+    },
+    {
+      "description": "Unified APIs for product data on JD.com.\n\nIncluded endpoints\n- Product Details: retrieve product core information such as title, images, price, SKU/variants, shop info, and status.\n- Product Comments: fetch user reviews/comments with paging, useful for sentiment and public-opinion monitoring.\n\nTypical use cases\n- E-commerce analytics: product/brand/category analysis, trend tracking, and report generation.\n- Price monitoring: scheduled checks for price changes and availability status.\n- Review & sentiment monitoring: track comment volume, rating shifts, and negative/positive feedback signals.\n- Competitor intelligence: monitor competing products and compare pricing and review signals over time.\n",
+      "name": "JD"
+    },
+    {
+      "description": "Bilibili API endpoints\n\nMain endpoints:\n- Video Details: Get video metadata, stats, and uploader info.\n- User Profile: Get user profile, videos, and stats.\n- Search: Keyword-based video search.\n- Interactions: Comments, replies, danmaku.\n\nTypical use cases:\n- Tracking video performance and engagement metrics.\n- Analyzing user/creator content and growth.\n- Gathering community feedback and trends.\n",
+      "name": "Bilibili"
+    },
+    {
+      "description": "Weixin Official Account (WeChat) API\n\nMain endpoints:\n- User Published Posts: Retrieves posts from a specific official account.\n- Article Engagement Metrics: Retrieves read counts, likes, etc., for an article.\n- Article Comments: Retrieves user comments from an article.\n- Search: Keywords search for accounts and articles.\n- Article Details: Retrieves core metadata for an article.\n\nTypical use cases:\n- Monitoring account-level content and engagement.\n- Analyzing article-level performance metrics.\n- Collecting public community feedback and discussions.\n",
+      "name": "Weixin"
+    },
+    {
+      "description": "Youku API for video search, video details, and user profile information.\n\nMain endpoints:\n- Search for videos by keyword.\n- Retrieve detailed metadata for specific videos.\n- Fetch comprehensive profile details for creators and users.\n\nTypical use cases:\n- Content monitoring and keyword-based trend analysis.\n- Data collection for video engagement metrics (play counts, likes).\n- Social media listening and creator influence assessment.\n",
+      "name": "Youku"
+    },
+    {
+      "description": "Unified APIs for retrieving metadata and content details from YouTube.\n\nTypical use cases\n- Video monitoring: track view counts, engagement, and metadata changes for specific videos.\n- Content analysis: extract video titles, descriptions, and tags for trend research or content classification.\n- Marketing intelligence: monitor competitor channels or specific promotional content.\n- Media tracking: verify video status, availability, and basic metadata for platform monitoring.\n",
+      "name": "YouTube"
+    },
+    {
+      "description": "Zhihu data services.\n\nMain endpoints:\n- Search: Retrieve content based on keywords.\n- Column: Access detailed information and article lists from specific columns.\n- Question/Answer: Fetch answer lists and engagement metrics for specific questions.\n\nTypical use cases:\n- Market research and consumer sentiment analysis.\n- Tracking expert opinions and professional knowledge trends.\n- Monitoring brand or product discussions on a leading knowledge-sharing platform.\n",
+      "name": "Zhihu"
+    },
+    {
+      "description": "Douyin Xingtu data services.",
+      "name": "Douyin Xingtu"
+    },
+    {
+      "description": "Unified APIs for retrieving data from Instagram, including user profiles, post details, published content, and reels/hashtag searches.\n\nMain endpoints\n- User Profile: Retrieves public profile information of an Instagram user, including follower count, following count, and post count.\n- Post Details: Retrieves detailed information of a public Instagram post by post code, including media content (images/videos) and engagement metrics.\n- User Published Posts: Retrieves a list of public posts published by an Instagram user, with pagination support.\n- Reels & Hashtag Search: Search public Instagram Reels or hashtag-specific posts by keywords or hashtag.\n\nTypical use cases\n- Tracking influencer performance and audience growth.\n- Monitoring trending content through keyword and hashtag searches.\n- Analyzing post engagement metrics for specific accounts or topics.\n",
+      "name": "Instagram"
+    },
+    {
+      "description": "Amazon Data Services.\n\nMain endpoints\n- Product Details: retrieve comprehensive product information from Amazon based on the provided ASIN, including basic metadata (title, brand, category), media assets (images), availability, and pricing.\n- Product Top Reviews: retrieve top (most relevant or most helpful) public reviews for an Amazon product, including ratings, content, and Helpful vote counts.\n- Best Sellers: explore top-performing products across various categories on Amazon, including sales rank and popularity indicators.\n\nTypical use cases\n- E-commerce analytics: product/brand/category analysis, trend tracking, and report generation.\n- Price monitoring and availability tracking: scheduled checks for price changes and availability status on Amazon.\n- Review & sentiment monitoring: track consumer feedback and ratings to analyze product performance and customer satisfaction.\n- Competitor intelligence: monitor competing products on Amazon and compare pricing and review signals over time.\n",
+      "name": "Amazon"
+    },
+    {
+      "description": "APIs for retrieving video content, creator, and engagement data from Kuaishou.\n\nMain endpoints\n- User Profile: retrieve profile information for a specific Kuaishou user (nickname, avatar, follower count, etc.).\n- User Published Videos: list videos published by a specific user with pagination.\n- Video Details: get comprehensive metadata for a single video, including play URL, statistics, and author info.\n- Video Search: search videos by keyword.\n- User Search: search Kuaishou creators/users by keyword.\n- Video Comments: fetch comments for a video with pagination.\n- Share Link Resolution: convert Kuaishou share URLs to structured data.\n\nTypical use cases\n- Content research and trend analysis\n- Creator/KOL monitoring\n- Brand reputation monitoring\n- Building datasets for analytics\n",
+      "name": "Kuaishou"
+    },
+    {
+      "description": "Unified APIs for product data on Taobao and Tmall.\n\nAlthough Taobao and Tmall are separate marketplaces in Alibaba's ecosystem, on this API platform they share the same\nendpoint set and response model. No platform parameter is required — the APIs work in a unified manner across both.\n\nIncluded endpoints\n- Product Details: retrieve product core information such as title, images, price, SKU/variants (if available), shop info, and status.\n- Shop Product List: list products under a shop with pagination/sorting, useful for store monitoring and catalog building.\n- Product Search: search products by keyword/filters, useful for discovery, analysis, and building watchlists.\n- Product Comments: fetch user reviews/comments with paging, useful for sentiment and public-opinion monitoring.\n\nTypical use cases\n- E-commerce analytics: product/brand/category analysis, trend tracking, and report generation.\n- Price monitoring: scheduled checks for price changes, promotions, and availability status.\n- Review & sentiment monitoring: track comment volume, rating shifts, and negative/positive feedback signals.\n- Content enrichment: obtain product media (images) and basic metadata for catalogs or internal systems.\n- Competitor intelligence: monitor competing shops/products and compare pricing and review signals over time.\n",
+      "name": "Taobao & Tmall"
+    },
+    {
+      "description": "APIs for Douban movie metadata, reviews, and comments.\n\nMain endpoints:\n- Movie Reviews: Retrieve long-form user reviews for movies.\n- Movie Review Details: Get detailed content of a specific movie review.\n- Movie Comments: Retrieve short user comments for movies.\n\nTypical use cases:\n- Sentiment analysis for film and media content.\n- Academic and market research on audience reception.\n",
+      "name": "Douban"
+    },
+    {
+      "description": "APIs for retrieving posts, user profiles, engagement metrics, and trending topics from Weibo.\n\nMain endpoints\n- Keyword Search: search Weibo posts by keywords and time range, returning content and metrics.\n- User Profile: retrieve detailed information for a specified Weibo user.\n- Post Details: get comprehensive metadata for a single Weibo post.\n- User Published Posts: list posts published by a specific user with pagination.\n- User Fans/Followers: retrieve the follower and following lists for a user.\n- TV Video Details: get metadata and media URLs for Weibo TV components.\n- Hot Search: fetch current trending topics on Weibo.\n\nTypical use cases\n- Social media monitoring and brand sentiment analysis\n- Public opinion research and trend tracking\n- Creator and influencer identification and monitoring\n- Gathering public data for research or business intelligence\n",
+      "name": "Weibo"
+    },
+    {
+      "description": "Unified search APIs across multiple social media platforms.\n\nIncluded endpoints\n- Unified Search: retrieve social media data from multiple sources (Weibo, Weixin, Douyin, etc.) in a single request.\n\nTypical use cases\n- Multi-platform trend analysis: search for specific keywords across different social media ecosystems.\n- Public opinion monitoring: track hot topics and sentiment shifts on a cross-platform scale.\n",
+      "name": "Search"
+    },
+    {
+      "description": "Ke Holdings / Beike (Lianjia) Data API.\n\nMain endpoints:\n- Resale Housing Details: Comprehensive data for second-hand property listings.\n- Resale Housing List: Filterable list of available second-hand properties.\n- Community List: Details and statistics for residential communities (Xiaoqu).\n\nTypical use cases:\n- Property market analysis and valuation.\n- Tracking housing trends and availability in specific regions.\n- Community-level demographic and price research.\n",
+      "name": "Beike"
+    },
+    {
+      "description": "TikTok Global Data (Overseas Version).\n\nMain endpoints:\n- User Profiles and published posts (V1).\n- Post details and metadata including engagement metrics (V1).\n- Keyword search for users and posts (V1).\n- Interactive data such as comments and sub-comments (V1).\n\nTypical use cases:\n- Global market analysis and influencer discovery.\n- Content performance tracking on TikTok.\n- Brand sentiment analysis via comment retrieval.\n- Cross-region trend monitoring.\n",
+      "name": "TikTok"
+    },
+    {
+      "description": "X (formerly Twitter) Data Services.\n\nMain endpoints:\n- User Details: Retrieve basic profile information and statistics of X users.\n- User Published Posts: Access a user's tweet timeline with pagination support.\n\nTypical use cases:\n- Monitoring user account growth and engagement metrics.\n- Analyzing public tweet history for market research or brand sentiment.\n\nNotes:\n- Only public data is accessible via these endpoints.\n- User Rest ID is required for identifying the target account.\n",
+      "name": "X(Twitter)"
+    },
+    {
+      "description": "APIs for retrieving data from Reddit, including post details, comments, and search results.\n\nReddit is a network of communities where people can dive into their interests, hobbies and passions.\nThese APIs allow for systematic extraction of public discussions and content.\n\nIncluded endpoints\n- Post Details: Retrieve comprehensive information about a specific post, including its content and engagement metrics.\n- Post Comments: Fetch the discussion thread for a given post with pagination support.\n- Search: Search for posts across Reddit based on keywords and filters.\n\nTypical use cases\n- Public opinion analysis: Track discussions around specific brands, products, or topics.\n- Market research: Understand community sentiment and emerging trends within specific subreddits.\n- Content aggregation: Collect high-quality community-driven content for research or archival purposes.\n",
+      "name": "Reddit"
+    },
+    {
+      "description": "Toutiao (Jinri Toutiao) Data Services.\n\nMain endpoints:\n- Article Details: Retrieve comprehensive metadata and engagement metrics for Toutiao articles.\n- User Profile: Access detailed creator information, including verification status and performance stats.\n- Search: Perform keyword-based content discovery across the Toutiao ecosystem.\n\nTypical use cases:\n- Media monitoring and trend analysis.\n- Creator performance tracking and influencer profiling.\n- Content aggregation and keyword intelligence.\n",
+      "name": "Toutiao"
     }
   ]
 }
