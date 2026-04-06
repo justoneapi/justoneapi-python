@@ -17,12 +17,9 @@ class ImdbResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Title Release Expectation (V1)
+        Release Expectation
 
-        Retrieve release expectation data for a specific title.
-
-        Typical use cases:
-        - Analyze audience anticipation for upcoming movie or TV show releases.
+        Get IMDb title Release Expectation data, including production status, release dates, and anticipation signals, for release monitoring and title research.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -45,12 +42,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Extended Details (V1)
+        Extended Details
 
-        Retrieve comprehensive extended details for a specific title.
-
-        Typical use cases:
-        - Get in-depth metadata including production details, alternate titles, and more.
+        Get IMDb title Extended Details data, including title info, images, and genres, for title enrichment and catalog research.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -71,12 +65,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Top Cast and Crew (V1)
+        Top Cast and Crew
 
-        Retrieve information about the top cast and crew members of a title.
-
-        Typical use cases:
-        - List directors, writers, and main actors for a movie or TV show.
+        Get IMDb title Top Cast and Crew data, including names, roles, and profile references, for talent research and title enrichment.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -97,12 +88,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Base Info (V1)
+        Base Info
 
-        Retrieve basic metadata for a specific title.
-
-        Typical use cases:
-        - Get essential information like title, year, and genre.
+        Get IMDb title Base Info data, including title text, release year, and type, for catalog enrichment and title lookup workflows.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -123,12 +111,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Redux Overview (V1)
+        Redux Overview
 
-        Retrieve a redux overview of a specific title.
-
-        Typical use cases:
-        - Get a concise summary and overview of a movie or TV show's key attributes.
+        Get IMDb title Redux Overview data, including key summary fields and linked metadata, for get a concise summary and overview of a movie or TV show's key attributes.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -149,12 +134,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title 'Did You Know' Insights (V1)
+        'Did You Know' Insights
 
-        Retrieve interesting 'Did You Know' facts and trivia for a title.
-
-        Typical use cases:
-        - Enhance user engagement with fun facts and behind-the-scenes trivia.
+        Get IMDb title 'Did You Know' Insights data, including trivia, for editorial research and title insight enrichment.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -175,12 +157,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Critics Review Summary (V1)
+        Critics Review Summary
 
-        Retrieve a summary of critical reviews for a specific title.
-
-        Typical use cases:
-        - Display Metacritic scores and a compilation of professional critic feedback.
+        Get IMDb title Critics Review Summary data, including review highlights, for review analysis and title comparison.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -201,12 +180,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Awards Summary (V1)
+        Awards Summary
 
-        Retrieve a summary of awards and nominations for a specific title.
-
-        Typical use cases:
-        - List Oscar wins, Golden Globe nominations, and other accolades.
+        Get IMDb title Awards Summary data, including nominations, for title benchmarking and awards research.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -227,12 +203,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title User Reviews Summary (V1)
+        User Reviews Summary
 
-        Retrieve a summary of user-submitted reviews for a specific title.
-
-        Typical use cases:
-        - Get average user ratings and a snapshot of audience sentiment.
+        Get IMDb title User Reviews Summary data, including aggregated review content and counts, for audience sentiment analysis.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -253,12 +226,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Plot Summary (V1)
+        Plot Summary
 
-        Retrieve the plot summary for a specific title.
-
-        Typical use cases:
-        - Display a detailed description of the storyline for a movie or TV show.
+        Get IMDb title Plot Summary data, including core metrics, trend signals, and performance indicators, for displaying a detailed description of the storyline for a movie or TV show.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -279,12 +249,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Contribution Questions (V1)
+        Contribution Questions
 
-        Retrieve contribution questions for a specific title.
-
-        Typical use cases:
-        - Facilitate user contributions by providing relevant metadata questions for a movie or TV show.
+        Get IMDb title Contribution Questions data, including specific IMDb title, for data maintenance workflows and title metadata review.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -305,12 +272,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Details (V1)
+        Details
 
-        Retrieve comprehensive details for a specific title.
-
-        Typical use cases:
-        - Get all standard information for a movie or TV show including summary, ratings, and more.
+        Get IMDb title Details data, including metadata, release info, and cast, for deep title research and catalog enrichment.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -331,12 +295,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Box Office Summary (V1)
+        Box Office Summary
 
-        Retrieve box office summary for a specific title.
-
-        Typical use cases:
-        - Analyze financial performance including budget, opening weekend, and worldwide gross.
+        Get IMDb title Box Office Summary data, including grosses and related performance indicators, for revenue tracking and title comparison.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -357,12 +318,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Recommendations (V1)
+        Recommendations
 
-        Retrieve title recommendations (More Like This) for a specific title.
-
-        Typical use cases:
-        - Provide users with similar content recommendations based on their interest in a specific title.
+        Get IMDb title Recommendations data, including related titles and suggestion metadata, for content discovery and recommendation analysis.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
@@ -385,12 +343,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Main Search (V1)
+        Keyword Search
 
-        Perform a general search on IMDb for titles, people, and more.
-
-        Typical use cases:
-        - Search for a movie by name or find a celebrity's profile.
+        Get IMDb keyword Search data, including matched results, metadata, and ranking signals, for entity discovery and entertainment research.
 
         Args:
             search_term: The term to search for (e.g., 'fire').
@@ -414,12 +369,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Streaming Picks (V1)
+        Streaming Picks
 
-        Retrieve streaming recommendations curated by IMDb.
-
-        Typical use cases:
-        - Browse popular and recommended content available on streaming services.
+        Get IMDb streaming Picks data, including curated titles available across streaming surfaces, for content discovery and watchlist research.
 
         Args:
             language_country: Language and country preferences.  Available Values: - `en_US`: English (US) - `fr_CA`: French (Canada) - `fr_FR`: French (France) - `de_DE`: German (Germany) - `hi_IN`: Hindi (India) - `it_IT`: Italian (Italy) - `pt_BR`: Portuguese (Brazil) - `es_ES`: Spanish (Spain) - `es_US`: Spanish (US) - `es_MX`: Spanish (Mexico)
@@ -438,12 +390,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        News by Category (V1)
+        News by Category
 
-        Retrieve entertainment news articles filtered by category.
-
-        Typical use cases:
-        - Stay updated on movie, TV, or celebrity news.
+        Get IMDb news by Category data, including headlines, summaries, and source metadata, for media monitoring and news research.
 
         Args:
             category: News category to filter by.  Available Values: - `TOP`: Top News - `MOVIE`: Movie News - `TV`: TV News - `CELEBRITY`: Celebrity News
@@ -464,12 +413,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Chart Rankings (V1)
+        Chart Rankings
 
-        Retrieve title rankings from IMDb charts (e.g., Top 250).
-
-        Typical use cases:
-        - View the highest-rated movies and TV shows of all time.
+        Get IMDb title Chart Rankings data, including positions in lists such as Top 250 and related charts, for ranking monitoring and title benchmarking.
 
         Args:
             rankings_chart_type: Type of rankings chart to retrieve.  Available Values: - `TOP_250`: Top 250 Movies - `TOP_250_TV`: Top 250 TV Shows
@@ -490,12 +436,9 @@ class ImdbResource(BaseResource):
         language_country: str | None = "en_US",
     ) -> ApiResponse[Any]:
         """
-        Title Countries of Origin (V1)
+        Countries of Origin
 
-        Retrieve the countries of origin for a specific title.
-
-        Typical use cases:
-        - Identify the production locations and international roots of a movie or TV show.
+        Get IMDb title Countries of Origin data, including country names and regional metadata, for catalog enrichment and regional content analysis.
 
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).

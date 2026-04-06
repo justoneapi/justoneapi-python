@@ -16,14 +16,9 @@ class KuaishouResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        User Search (V2)
+        User Search
 
-        Enhanced user search for Kuaishou, returning detailed user profiles with nickname,
-        avatar, follower count, and bio.
-
-        Typical use cases:
-        - Creator discovery and influencer analytics
-        - Market research on specific content domains
+        Get Kuaishou user Search data, including profile names, avatars, and follower counts, for creator discovery and account research.
 
         Args:
             keyword: The search keyword to find users.
@@ -44,14 +39,9 @@ class KuaishouResource(BaseResource):
         pcursor: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        User Published Videos (V2)
+        User Published Videos
 
-        Retrieves a list of videos posted by a specific Kuaishou user, including video ID,
-        cover image, publish time, and engagement metrics.
-
-        Typical use cases:
-        - Content analysis for specific creators
-        - Monitoring video performance and engagement trends
+        Get Kuaishou user Published Videos data, including covers, publish times, and engagement metrics, for creator monitoring and content performance analysis.
 
         Args:
             user_id: The unique user ID on Kuaishou.
@@ -71,17 +61,12 @@ class KuaishouResource(BaseResource):
         video_id: str,
     ) -> ApiResponse[Any]:
         """
-        Video Details (V2)
+        Video Details
 
-        Provides detailed information about a specific Kuaishou video, including video URL,
-        caption, author info, publish time, and engagement metrics (likes, comments, shares).
-
-        Typical use cases:
-        - In-depth content performance analysis
-        - Building databases of viral videos
+        Get Kuaishou video Details data, including video URL, caption, and author info, for in-depth content performance analysis and building databases of viral videos.
 
         Args:
-            video_id: The unique ID of the Kuaishou video.
+            video_id: The unique ID of the Kuaishou video, e.g. `3xg9avuebhtfcku`
         """
         return self._get(
             "/api/kuaishou/get-video-detail/v2",
@@ -97,14 +82,9 @@ class KuaishouResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Video Search (V2)
+        Video Search
 
-        Enables searching for Kuaishou videos by keyword, returning matched results with video ID,
-        cover image, description, author info, publish time, and engagement metrics.
-
-        Typical use cases:
-        - Competitive analysis and market trends
-        - Keywords monitoring and brand tracking
+        Get Kuaishou video Search data, including video ID, cover image, and description, for competitive analysis and market trends and keywords monitoring and brand tracking.
 
         Args:
             keyword: The search keyword to find videos.
@@ -124,14 +104,9 @@ class KuaishouResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        User Profile (V1)
+        User Profile
 
-        Retrieves detailed profile information of a Kuaishou user, including nickname,
-        avatar, follower count, verification status, and bio.
-
-        Typical use cases:
-        - Creator research and building creator profiles
-        - Monitoring audience growth and account status
+        Get Kuaishou user Profile data, including account metadata, audience metrics, and verification-related fields, for creator research and building creator profiles and monitoring audience growth and account status.
 
         Args:
             user_id: The unique user ID on Kuaishou.
@@ -149,12 +124,9 @@ class KuaishouResource(BaseResource):
         share_url: str,
     ) -> ApiResponse[Any]:
         """
-        Share Link Resolution (V1)
+        Share Link Resolution
 
-        Converts Kuaishou short share URLs to structured data.
-
-        Typical use cases:
-        - Resolving shared links for automated content processing
+        Get Kuaishou share Link Resolution data, including resolved content identifier and target object data, for resolving shared links for automated content processing.
 
         Args:
             share_url: Kuaishou share URL (must start with 'https://v.kuaishou.com/').
@@ -169,11 +141,11 @@ class KuaishouResource(BaseResource):
     def get_video_comments_v1(
         self,
         *,
-        photo_id: str,
+        video_id: str,
         pcursor: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Video Comments (V1)
+        Video Comments
 
         Retrieves public comments of a Kuaishou video, including comment content,
         author info, like count, and reply count.
@@ -183,13 +155,13 @@ class KuaishouResource(BaseResource):
         - Gathering engagement data for specific videos
 
         Args:
-            photo_id: The unique numeric photo ID of the video.
+            video_id: The unique ID of the Kuaishou video, e.g. `3xbknvct79h46h9`
             pcursor: Pagination cursor for subsequent pages.
         """
         return self._get(
             "/api/kuaishou/get-video-comment/v1",
             {
-                "photoId": photo_id,
+                "videoId": video_id,
                 "pcursor": pcursor,
             },
         )

@@ -17,16 +17,9 @@ class TiktokResource(BaseResource):
         sort: str | None = "_0",
     ) -> ApiResponse[Any]:
         """
-        User Published Posts (V1)
+        User Published Posts
 
-        Retrieve a list of posts published by a specific TikTok user.
-        The API returns detailed information about each post, including video ID, description, publish time,
-        statistics (likes, comments, shares, views), and video download URL if available.
-
-        Typical use cases:
-        - User activity analysis and posting frequency tracking.
-        - Influencer performance evaluation.
-        - Content trend monitoring for specific creators.
+        Get TikTok user Published Posts data, including video ID, description, and publish time, for user activity analysis and posting frequency tracking, influencer performance evaluation, and content trend monitoring for specific creators.
 
         Args:
             sec_uid: The unique security ID of the TikTok user (e.g., MS4wLjABAAAAonP2...).
@@ -48,16 +41,9 @@ class TiktokResource(BaseResource):
         post_id: str,
     ) -> ApiResponse[Any]:
         """
-        Post Details (V1)
+        Post Details
 
-        Retrieve detailed information for a specific TikTok post by its post ID.
-        The API returns complete metadata including video ID, author information, description text, publish time,
-        engagement metrics (likes, comments, shares, views), and available download URLs for both the video and cover image.
-
-        Typical use cases:
-        - Content performance analysis and metadata extraction.
-        - Influencer evaluation via specific post metrics.
-        - Verifying post authenticity and downloading media for offline analysis.
+        Get TikTok post Details data, including video ID, author information, and description text, for content performance analysis and metadata extraction and influencer evaluation via specific post metrics.
 
         Args:
             post_id: The unique ID of the TikTok post.
@@ -76,19 +62,9 @@ class TiktokResource(BaseResource):
         sec_uid: str | None = "",
     ) -> ApiResponse[Any]:
         """
-        User Profile (V1)
+        User Profile
 
-        Retrieve detailed profile information for a specific TikTok user by user ID.
-        The API returns comprehensive data including nickname, unique ID, avatar, bio, follower/following counts,
-        total likes, and other engagement indicators.
-
-        Typical use cases:
-        - Influencer profiling and audience analysis.
-        - Account performance tracking and growth monitoring.
-        - Identifying verified status and official accounts.
-
-        Notes:
-        - You must provide either 'uniqueId' or 'secUid'.
+        Get TikTok user Profile data, including nickname, unique ID, and avatar, for influencer profiling and audience analysis, account performance tracking and growth monitoring, and identifying verified status and official accounts.
 
         Args:
             unique_id: The unique handle/username of the user (e.g., 'tiktok').
@@ -109,16 +85,9 @@ class TiktokResource(BaseResource):
         cursor: str | None = "0",
     ) -> ApiResponse[Any]:
         """
-        Post Comments (V1)
+        Post Comments
 
-        Retrieve a list of comments under a specific TikTok post by post ID.
-        The API returns detailed information for each comment, including comment ID, user information,
-        text content, like count, reply count, and publish time.
-
-        Typical use cases:
-        - Sentiment analysis of the audience's reaction to specific content.
-        - Engagement measurement via comment volume and quality.
-        - Community interaction research and feedback collection.
+        Get TikTok post Comments data, including comment ID, user information, and text content, for sentiment analysis of the audience's reaction to specific content and engagement measurement via comment volume and quality.
 
         Args:
             aweme_id: The unique ID of the TikTok post (awemeId).
@@ -140,16 +109,9 @@ class TiktokResource(BaseResource):
         cursor: str | None = "0",
     ) -> ApiResponse[Any]:
         """
-        Comment Replies (V1)
+        Comment Replies
 
-        Retrieve a list of replies under a specific TikTok comment by comment ID.
-        The API returns detailed information for each reply, including reply ID, user information,
-        text content, like count, and publish time.
-
-        Typical use cases:
-        - Understanding detailed user interactions and threaded discussions.
-        - Identifying influencers or active participants within a comment section.
-        - Tracking sentiment propagation within comment threads.
+        Get TikTok comment Replies data, including reply ID, user information, and text content, for understanding detailed user interactions and threaded discussions and identifying influencers or active participants within a comment section.
 
         Args:
             aweme_id: The unique ID of the TikTok post.
@@ -173,16 +135,9 @@ class TiktokResource(BaseResource):
         search_id: str | None = "",
     ) -> ApiResponse[Any]:
         """
-        User Search (V1)
+        User Search
 
-        Search for TikTok users by keyword.
-        The API returns a list of matching users along with basic profile information such as user ID,
-        nickname, unique handle, avatar, bio, follower count, and verification status.
-
-        Typical use cases:
-        - Discovering influencers in specific niches via keywords.
-        - Identifying target audiences and conducting competitor research.
-        - Finding official brand accounts.
+        Get TikTok user Search data, including basic profile information such as user ID, nickname, and unique handle, for discovering influencers in specific niches via keywords and identifying target audiences and conducting competitor research.
 
         Args:
             keyword: Search keywords (e.g., 'deepseek').
@@ -208,16 +163,9 @@ class TiktokResource(BaseResource):
         region: str | None = "US",
     ) -> ApiResponse[Any]:
         """
-        Post Search (V1)
+        Post Search
 
-        Search for TikTok posts by keyword.
-        The API returns a list of matching posts with key details such as video ID, description,
-        author information, publish time, and engagement metrics (likes, comments, shares, views).
-
-        Typical use cases:
-        - Trend monitoring and content discovery.
-        - Keyword-based market analysis and sentiment tracking.
-        - Identifying viral content related to specific topics.
+        Get TikTok post Search data, including key details such as video ID, description, and author information, for trend monitoring and content discovery and keyword-based market analysis and sentiment tracking.
 
         Args:
             keyword: Search keywords (e.g., 'deepseek').

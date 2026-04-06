@@ -16,16 +16,9 @@ class AmazonResource(BaseResource):
         country: str | None = "US",
     ) -> ApiResponse[Any]:
         """
-        Product Details (V1)
+        Product Details
 
-        Retrieves detailed product information from Amazon based on the provided ASIN.
-        It returns core product data such as title, brand, price, availability, rating,
-        review count, product images, category information, and other publicly available details.
-
-        Typical use cases:
-        - Building product catalogs and enriching item content (e.g., images)
-        - Price monitoring and availability tracking
-        - E-commerce analytics and competitor tracking
+        Get Amazon product Details data, including title, brand, and price, for building product catalogs and enriching item content (e.g., images), price monitoring and availability tracking, and e-commerce analytics and competitor tracking.
 
         Args:
             asin: ASIN (Amazon Standard Identification Number).
@@ -46,16 +39,9 @@ class AmazonResource(BaseResource):
         country: str | None = "US",
     ) -> ApiResponse[Any]:
         """
-        Product Top Reviews (V1)
+        Product Top Reviews
 
-        Retrieves top (most relevant or most helpful) public reviews for an Amazon product based on the provided ASIN.
-        It returns review details such as review ID, reviewer name, rating score,
-        review title, review content, publish time, and helpful vote count (if available).
-
-        Typical use cases:
-        - Sentiment analysis and consumer feedback tracking
-        - Product research and quality assessment
-        - Monitoring competitor customer experience
+        Get Amazon product Top Reviews data, including most helpful) public reviews, for sentiment analysis and consumer feedback tracking, product research and quality assessment, and monitoring competitor customer experience.
 
         Args:
             asin: ASIN (Amazon Standard Identification Number).
@@ -77,15 +63,9 @@ class AmazonResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Best Sellers (V1)
+        Best Sellers
 
-        Retrieves top performing products for a given category on Amazon.
-        Supports top level best sellers categories (e.g. software). In addition, subcategories / category path can be specified.
-
-        Typical use cases:
-        - Identifying trending products in specific categories
-        - Market share analysis and category research
-        - Tracking sales rank and popularity over time
+        Get Amazon best Sellers data, including rank positions, product metadata, and pricing, for identifying trending products in specific categories, market share analysis and category research, and tracking sales rank and popularity over time.
 
         Args:
             category: Best sellers category to return products for (e.g. 'software' or 'software/229535').
@@ -110,15 +90,9 @@ class AmazonResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Products By Category (V1)
+        Products By Category
 
-        Retrieves products under a specified Amazon category.
-            Supports category-based product discovery and returns product information such as title, price, rating, review count, and other available marketplace fields.
-
-            Typical use cases:
-            - Discovering products within a specific category
-            - Category research and competitor analysis
-            - Monitoring product assortment, pricing, and popularity trends
+        Get Amazon products By Category data, including title, price, and rating, for category-based product discovery and returns product information such as title, price, and rating.
 
         Args:
             category_id: For example: https://amazon.com/s?node=172282 - the Amazon Category ID is 172282

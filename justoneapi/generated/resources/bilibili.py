@@ -15,13 +15,9 @@ class BilibiliResource(BaseResource):
         bvid: str,
     ) -> ApiResponse[Any]:
         """
-        Video Details (V2)
+        Video Details
 
-        Retrieve comprehensive details about a specific Bilibili video, including metadata (title, tags, publishing time), statistics (views, likes, danmaku count), and uploader profile information.
-
-        Typical use cases:
-        - Tracking video performance and engagement metrics.
-        - Analyzing content metadata and uploader information.
+        Get Bilibili video Details data, including metadata (title, tags, and publishing time), for tracking video performance and engagement metrics and analyzing content metadata and uploader information.
 
         Args:
             bvid: Bilibili Video ID (BVID).
@@ -40,13 +36,9 @@ class BilibiliResource(BaseResource):
         param: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        User Published Videos (V2)
+        User Published Videos
 
-        Retrieve a list of videos published by a specific Bilibili user, including video metadata, cover images, and engagement metrics.
-
-        Typical use cases:
-        - Monitoring creator's content updates and publishing patterns.
-        - Building user-specific video catalogs for analysis.
+        Get Bilibili user Published Videos data, including titles, covers, and publish times, for creator monitoring and content performance analysis.
 
         Args:
             uid: Bilibili User ID (UID).
@@ -66,13 +58,9 @@ class BilibiliResource(BaseResource):
         uid: str,
     ) -> ApiResponse[Any]:
         """
-        User Profile (V2)
+        User Profile
 
-        Retrieve detailed profile information of a specific Bilibili user, including username, avatar, level, and verification status.
-
-        Typical use cases:
-        - Analyzing creator's profile, level, and verification status.
-        - Verifying user identity and social presence on Bilibili.
+        Get Bilibili user Profile data, including account metadata, audience metrics, and verification-related fields, for analyzing creator's profile, level, and verification status and verifying user identity and social presence on bilibili.
 
         Args:
             uid: Bilibili User ID (UID).
@@ -92,13 +80,9 @@ class BilibiliResource(BaseResource):
         page: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Video Danmaku (V2)
+        Video Danmaku
 
-        Retrieve danmaku (rolling comments) for a specific Bilibili video.
-
-        Typical use cases:
-        - Analyzing real-time viewer reactions and community trends.
-        - Sentiment analysis based on rolling comments.
+        Get Bilibili video Danmaku data, including timeline positions and comment text, for audience reaction analysis and subtitle-style comment review.
 
         Args:
             aid: Bilibili Archive ID (AID).
@@ -121,13 +105,9 @@ class BilibiliResource(BaseResource):
         cursor: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Video Comments (V2)
+        Video Comments
 
-        Retrieve top-level comments for a specific Bilibili video, including commenter info, text, likes, and timestamps.
-
-        Typical use cases:
-        - Gathering detailed viewer feedback and community discussions.
-        - Sentiment analysis and public opinion monitoring.
+        Get Bilibili video Comments data, including commenter profiles, text, and likes, for sentiment analysis and comment moderation workflows.
 
         Args:
             aid: Bilibili Archive ID (AID).
@@ -149,13 +129,9 @@ class BilibiliResource(BaseResource):
         order: str | None = "general",
     ) -> ApiResponse[Any]:
         """
-        Video Search (V2)
+        Video Search
 
-        Search for Bilibili videos based on keywords, returning matched videos with metadata, author information, and engagement stats.
-
-        Typical use cases:
-        - Discovering trending videos or creators by specific keywords.
-        - Competitive analysis and market research on Bilibili.
+        Get Bilibili video Search data, including matched videos, creators, and engagement metrics, for topic research and content discovery.
 
         Args:
             keyword: Search keyword.
@@ -177,16 +153,9 @@ class BilibiliResource(BaseResource):
         share_url: str,
     ) -> ApiResponse[Any]:
         """
-        Share Link Resolution (V1)
+        Share Link Resolution
 
-        Resolve Bilibili share URLs (e.g., https://b23.tv/...) to get the original content metadata.
-
-        Typical use cases:
-        - Converting shortened mobile share links to standard BVID/metadata.
-        - Automating content extraction from shared social media links.
-
-        Highlights
-        - Only supports share URLs starting with 'https://b23.tv/'.
+        Get Bilibili share Link Resolution data, including resolved video and page identifier, for converting shortened mobile share links to standard bvid/metadata and automating content extraction from shared social media links.
 
         Args:
             share_url: Bilibili share URL (must start with https://b23.tv/).
@@ -204,13 +173,9 @@ class BilibiliResource(BaseResource):
         wmid: str,
     ) -> ApiResponse[Any]:
         """
-        User Relation Stats (V1)
+        User Relation Stats
 
-        Retrieve follower count and following count for a specific Bilibili user.
-
-        Typical use cases:
-        - Tracking creator's follower growth and audience reach.
-        - Analyzing social influence and account popularity.
+        Get Bilibili user Relation Stats data, including following counts, for creator benchmarking and audience growth tracking.
 
         Args:
             wmid: Bilibili User ID (WMID).
@@ -230,13 +195,9 @@ class BilibiliResource(BaseResource):
         cid: str,
     ) -> ApiResponse[Any]:
         """
-        Video Captions (V2)
+        Video Captions
 
-        Retrieve subtitle/caption information for a specific Bilibili video.
-
-        Typical use cases:
-        - Extracting textual content from video subtitles for indexing or analysis.
-        - Multi-language content processing and accessibility analysis.
+        Get Bilibili video Captions data, including caption data, for transcript extraction and multilingual content analysis.
 
         Args:
             bvid: Bilibili Video ID (BVID).

@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class DouyinResource(BaseResource):
-    """Generated resource for Douyin."""
+    """Generated resource for Douyin (TikTok China)."""
 
     def get_user_detail_v3(
         self,
@@ -15,15 +15,9 @@ class DouyinResource(BaseResource):
         sec_uid: str,
     ) -> ApiResponse[Any]:
         """
-        User Profile (V3)
+        User Profile
 
-        Retrieves detailed profile information of a Douyin user, including nickname, avatar,
-        follower count, verification status, bio, and other user statistics.
-
-        Typical use cases:
-        - Identifying creators and building creator lists
-        - Enriching user records for analytics and reporting
-        - Monitoring profile changes and audience growth
+        Get Douyin (TikTok China) user Profile data, including follower counts, verification status, and bio details, for creator research and account analysis.
 
         Args:
             sec_uid: The unique user ID (sec_uid) on Douyin.
@@ -42,17 +36,9 @@ class DouyinResource(BaseResource):
         max_cursor: int | None = 0,
     ) -> ApiResponse[Any]:
         """
-        User Published Videos (V1)
+        User Published Videos
 
-        Retrieves a list of videos published by a specific Douyin user, including video ID,
-        cover image, title/caption, publish time, and engagement metrics.
-
-        Highlights:
-        - Capable of retrieving the latest published videos.
-
-        Typical use cases:
-        - Creator monitoring and content tracking
-        - Building content timelines for specific accounts
+        Get Douyin (TikTok China) user Published Videos data, including captions, covers, and publish times, for account monitoring.
 
         Args:
             sec_uid: The unique user ID (sec_uid) on Douyin.
@@ -73,17 +59,9 @@ class DouyinResource(BaseResource):
         max_cursor: int | None = 0,
     ) -> ApiResponse[Any]:
         """
-        User Published Videos (V3)
+        User Published Videos
 
-        Retrieves a list of videos published by a specific Douyin user. This version may offer
-        different data structure or coverage compared to V1.
-
-        Highlights:
-        - Not capable of retrieving the latest published videos.
-
-        Typical use cases:
-        - Creator monitoring and content tracking
-        - Building content timelines for specific accounts
+        Get Douyin (TikTok China) user Published Videos data, including captions, covers, and publish times, for account monitoring.
 
         Args:
             sec_uid: The unique user ID (sec_uid) on Douyin.
@@ -103,14 +81,9 @@ class DouyinResource(BaseResource):
         video_id: str,
     ) -> ApiResponse[Any]:
         """
-        Video Details (V2)
+        Video Details
 
-        Provides detailed information about a specific Douyin video, including video URL,
-        description, author info, publish time, and engagement metrics (likes, comments, shares).
-
-        Typical use cases:
-        - Content analysis and performance tracking
-        - Retrieving high-quality video assets and metadata
+        Get Douyin (TikTok China) video Details data, including author details, publish time, and engagement counts, for video research, archiving, and performance analysis.
 
         Args:
             video_id: The unique video identifier (aweme_id or model_id).
@@ -133,14 +106,9 @@ class DouyinResource(BaseResource):
         search_id: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Video Search (V4)
+        Video Search
 
-        Allows searching for Douyin videos based on keywords, returning matched results with
-        video metadata and engagement metrics. Supports filtering by sort type, publish time, and duration.
-
-        Typical use cases:
-        - Trend analysis and keyword monitoring
-        - Discovery of relevant content for specific topics
+        Get Douyin (TikTok China) video Search data, including metadata and engagement signals, for content discovery, trend research, and competitive monitoring.
 
         Args:
             keyword: The search keyword.
@@ -170,14 +138,9 @@ class DouyinResource(BaseResource):
         user_type: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        User Search (V2)
+        User Search
 
-        Enables searching for Douyin users by keyword, returning profiles with nickname,
-        avatar, follower count, and other metadata.
-
-        Typical use cases:
-        - Identifying creators and influencers
-        - Competitive analysis and creator discovery
+        Get Douyin (TikTok China) user Search data, including profile metadata and follower signals, for creator discovery and account research.
 
         Args:
             keyword: The search keyword.
@@ -200,14 +163,9 @@ class DouyinResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Video Comments (V1)
+        Video Comments
 
-        Retrieves the comment list of a Douyin video by awemeId.
-        Returns comment content, author info, like count, reply count, and publish time.
-
-        Typical use cases:
-        - Sentiment analysis and community feedback monitoring
-        - Gathering user engagement data for specific videos
+        Get Douyin (TikTok China) video Comments data, including authors, text, and likes, for sentiment analysis and engagement review.
 
         Args:
             aweme_id: The unique video identifier (aweme_id).
@@ -228,14 +186,9 @@ class DouyinResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Comment Replies (V1)
+        Comment Replies
 
-        Retrieves replies to a specific top-level comment under a Douyin video,
-        including reply content, user information, timestamp, and like count.
-
-        Typical use cases:
-        - Deep-dive into specific discussion threads
-        - Detailed community feedback analysis
+        Get Douyin (TikTok China) comment Replies data, including text, authors, and timestamps, for thread analysis and feedback research.
 
         Args:
             comment_id: The unique identifier of the top-level comment.
@@ -255,13 +208,9 @@ class DouyinResource(BaseResource):
         share_url: str,
     ) -> ApiResponse[Any]:
         """
-        Share Link Resolution (V1)
+        Share Link Resolution
 
-        Converts a Douyin short share URL (e.g., https://v.douyin.com/...) into structured video data.
-
-        Typical use cases:
-        - Resolving shared links from users or social media posts
-        - Automating content ingestion from shared URLs
+        Get Douyin (TikTok China) share Link Resolution data, including helping extract canonical IDs, for downstream video and comment workflows.
 
         Args:
             share_url: The Douyin short share URL.

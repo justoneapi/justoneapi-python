@@ -16,19 +16,9 @@ class BeikeResource(BaseResource):
         house_code: str,
     ) -> ApiResponse[Any]:
         """
-        Resale Housing Details (V1)
+        Resale Housing Details
 
-        Retrieves comprehensive information for a specific second-hand property listing on Beike (Lianjia).
-
-        The data includes:
-        - Pricing (total and unit price).
-        - Physical attributes (area, layout, floor, orientation).
-        - Listing metadata (tags, listing date).
-        - Agent contact information.
-
-        Typical use cases:
-        - Displaying a full property profile to users.
-        - Detailed price comparison between specific listings.
+        Get Beike resale Housing Details data, including - Pricing (total and unit price), Physical attributes (area, and layout, for displaying a full property profile to users and detailed price comparison between specific listings.
 
         Args:
             city_id: The ID of the city (e.g., '110000' for Beijing).
@@ -50,18 +40,9 @@ class BeikeResource(BaseResource):
         offset: int | None = 0,
     ) -> ApiResponse[Any]:
         """
-        Resale Housing List (V1)
+        Resale Housing List
 
-        Fetches a list of second-hand property listings from Beike (Lianjia) based on specified filters.
-
-        Key features:
-        - Supports filtering by city/region, price range, layout, and area.
-        - Returns core listing details such as title, total price, unit price, and community info.
-        - Provides house codes for fetching full details via the detail API.
-
-        Typical use cases:
-        - Building search result pages for property portals.
-        - Aggregating market data for regional housing trends.
+        Get Beike resale Housing List data, including - Supports filtering by city/region, price range, and layout, for building search result pages for property portals and aggregating market data for regional housing trends.
 
         Args:
             city_id: The ID of the city (e.g., '110000' for Beijing).
@@ -85,20 +66,9 @@ class BeikeResource(BaseResource):
         limit_offset: int | None = 0,
     ) -> ApiResponse[Any]:
         """
-        Community List (V1)
+        Community List
 
-        Retrieves a list of residential communities (Xiaoqu) from Beike (Lianjia) within a specified city.
-
-        The data includes:
-        - Community name and unique ID.
-        - Average listing price and historical price trends.
-        - Build year and architectural details.
-        - Geographical coordinates and location information.
-
-        Typical use cases:
-        - Identifying popular residential areas in a city.
-        - Comparing average housing prices across different communities.
-        - Spatial analysis of property development patterns.
+        Get Beike community List data, including - Community name and unique ID and Average listing price and historical price trends, for identifying popular residential areas in a city and comparing average housing prices across different communities.
 
         Args:
             city_id: The ID of the city (e.g., '110000' for Beijing).

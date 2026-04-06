@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class YoukuResource(BaseResource):
-    """Generated resource for Youku."""
+    """Generated resource for YOUKU."""
 
     def search_video_v1(
         self,
@@ -16,15 +16,9 @@ class YoukuResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Video Search (V1)
+        Video Search
 
-        This API performs a keyword-based search on Youku, returning a list of videos that match the search term.
-        Returned fields include video ID, title, cover image, duration, play count, publish time, and the video's detail page URL.
-
-        Typical use cases:
-        - Keyword-based video discovery.
-        - Monitoring specific topics or trends on Youku.
-        - Analyzing search results for market research.
+        Get YOUKU video Search data, including video ID, title, and cover image, for keyword-based video discovery, monitoring specific topics or trends on youku, and analyzing search results for market research.
 
         Args:
             keyword: Keyword to search for.
@@ -44,14 +38,9 @@ class YoukuResource(BaseResource):
         video_id: str,
     ) -> ApiResponse[Any]:
         """
-        Video Details (V1)
+        Video Details
 
-        This API retrieves detailed information of a specific Youku video, including video ID, title, description, cover image, duration, tags, play count, like count, publish time, and the video's detail page URL.
-
-        Typical use cases:
-        - Fetching comprehensive metadata for a single video.
-        - Tracking engagement metrics like play counts and likes.
-        - Integrating detailed video info into third-party dashboards.
+        Get YOUKU video Details data, including video ID, title, and description, for fetching comprehensive metadata for a single video, tracking engagement metrics like play counts and likes, and integrating detailed video info into third-party dashboards.
 
         Args:
             video_id: The unique identifier for the video.
@@ -69,14 +58,9 @@ class YoukuResource(BaseResource):
         uid: str,
     ) -> ApiResponse[Any]:
         """
-        User Profile (V1)
+        User Profile
 
-        This API retrieves detailed profile information of a specific Youku creator/user, including user ID, username, avatar, signature/description, follower count, following count, total videos, and verification status.
-
-        Typical use cases:
-        - Analyzing creator influence and audience size.
-        - Monitoring account growth and verification status.
-        - Fetching basic user info for social CRM.
+        Get YOUKU user Profile data, including user ID, username, and avatar, for analyzing creator influence and audience size, monitoring account growth and verification status, and fetching basic user info for social crm.
 
         Args:
             uid: The unique identifier for the user.

@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class WeixinResource(BaseResource):
-    """Generated resource for Weixin."""
+    """Generated resource for WeChat Official Accounts."""
 
     def get_user_post(
         self,
@@ -15,13 +15,9 @@ class WeixinResource(BaseResource):
         wxid: str,
     ) -> ApiResponse[Any]:
         """
-        User Published Posts (V1)
+        User Published Posts
 
-        Retrieves posts published by a specific Weixin Official Account, including title, author, publish time, content summary, and engagement metrics such as reads, likes, and shares.
-
-        Typical use cases:
-        - Monitoring recent activity of a specific account.
-        - Analyzing publishing frequency and content types.
+        Get WeChat Official Accounts user Published Posts data, including titles, publish times, and summaries, for account monitoring.
 
         Args:
             wxid: The ID of the Weixin Official Account (e.g., 'rmrbwx').
@@ -39,13 +35,9 @@ class WeixinResource(BaseResource):
         article_url: str,
     ) -> ApiResponse[Any]:
         """
-        Article Engagement Metrics (V1)
+        Article Engagement Metrics
 
-        Retrieves engagement metrics for a specific Weixin Official Account article, including read count, like count, share count, and comment count.
-
-        Typical use cases:
-        - Tracking performance of a specific post.
-        - Comparing engagement levels across different articles.
+        Get WeChat Official Accounts article Engagement Metrics data, including like, share, and comment metrics, for article performance tracking and benchmarking.
 
         Args:
             article_url: The URL of the Weixin article.
@@ -63,13 +55,9 @@ class WeixinResource(BaseResource):
         article_url: str,
     ) -> ApiResponse[Any]:
         """
-        Article Comments (V1)
+        Article Comments
 
-        Retrieves user comments from a specific Weixin Official Account article, including commenter name, comment content, like count, and timestamp.
-
-        Typical use cases:
-        - Analyzing community sentiment and feedback.
-        - Identifying popular discussion points.
+        Get WeChat Official Accounts article Comments data, including commenter details, comment text, and timestamps, for feedback analysis.
 
         Args:
             article_url: The URL of the Weixin article.
@@ -90,13 +78,9 @@ class WeixinResource(BaseResource):
         sort_type: str | None = "_0",
     ) -> ApiResponse[Any]:
         """
-        Search (V1)
+        Keyword Search
 
-        Supports keyword-based search for both Weixin Official Accounts and their published articles. It returns matched accounts or posts with details such as account name, article title, publish time, and summary.
-
-        Typical use cases:
-        - Discovering new accounts related to specific topics.
-        - Finding historical articles using keywords.
+        Get WeChat Official Accounts keyword Search data, including account names, titles, and publish times, for content discovery.
 
         Args:
             keyword: The search keyword.
@@ -120,13 +104,9 @@ class WeixinResource(BaseResource):
         article_url: str,
     ) -> ApiResponse[Any]:
         """
-        Article Details (V1)
+        Article Details
 
-        Retrieves core metadata and content details for a specific Weixin Official Account article.
-
-        Typical use cases:
-        - Scraping detailed content for archival or analysis.
-        - Verifying article metadata from a URL.
+        Get WeChat Official Accounts article Details data, including body content, for article archiving, research, and content analysis.
 
         Args:
             article_url: The URL of the Weixin article.

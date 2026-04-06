@@ -18,6 +18,7 @@ from justoneapi.generated.resources.tiktok import TiktokResource
 from justoneapi.generated.resources.tiktok_shop import TiktokShopResource
 from justoneapi.generated.resources.toutiao import ToutiaoResource
 from justoneapi.generated.resources.twitter import TwitterResource
+from justoneapi.generated.resources.web import WebResource
 from justoneapi.generated.resources.weibo import WeiboResource
 from justoneapi.generated.resources.weixin import WeixinResource
 from justoneapi.generated.resources.xiaohongshu import XiaohongshuResource
@@ -45,6 +46,7 @@ RESOURCE_CLASSES = {
     "tiktok_shop": TiktokShopResource,
     "toutiao": ToutiaoResource,
     "twitter": TwitterResource,
+    "web": WebResource,
     "weibo": WeiboResource,
     "weixin": WeixinResource,
     "xiaohongshu": XiaohongshuResource,
@@ -73,6 +75,7 @@ __all__ = [
     "TiktokShopResource",
     "ToutiaoResource",
     "TwitterResource",
+    "WebResource",
     "WeiboResource",
     "WeixinResource",
     "XiaohongshuResource",
