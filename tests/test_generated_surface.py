@@ -1,16 +1,30 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 from justoneapi import JustOneAPIClient
 from justoneapi.generated.models import Result
 from justoneapi.generated.resources import RESOURCE_CLASSES
+from tools.sdk_codegen import load_json
+
+NORMALIZED_SPEC_PATH = Path("openapi/public-api.normalized.json")
+
+
+def expected_resource_namespaces() -> set[str]:
+    spec = load_json(NORMALIZED_SPEC_PATH)
+    return {
+        operation["x-sdk-resource"]
+        for path_item in spec.get("paths", {}).values()
+        for method, operation in path_item.items()
+        if not method.startswith("x-")
+    }
 
 
 def test_generated_resource_registry_matches_public_api_surface():
-    assert len(RESOURCE_CLASSES) == 25
-    assert "douyin" in RESOURCE_CLASSES
-    assert "douyin_xingtu" in RESOURCE_CLASSES
-    assert "xiaohongshu_pgy" in RESOURCE_CLASSES
-    assert "twitter" in RESOURCE_CLASSES
+    assert set(RESOURCE_CLASSES) == expected_resource_namespaces()
+    assert {"douyin", "douyin_xingtu", "xiaohongshu_pgy", "twitter"}.issubset(
+        RESOURCE_CLASSES
+    )
 
 
 def test_client_exposes_generated_resources():

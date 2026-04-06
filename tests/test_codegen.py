@@ -14,6 +14,24 @@ RAW_SPEC_PATH = Path("openapi/public-api.json")
 OVERRIDES_PATH = Path("openapi/sdk_overrides.yaml")
 
 
+def count_operations(spec: dict) -> int:
+    return sum(
+        1
+        for path_item in spec.get("paths", {}).values()
+        for method in path_item
+        if not method.startswith("x-")
+    )
+
+
+def collect_resource_namespaces(spec: dict) -> set[str]:
+    return {
+        operation["x-sdk-resource"]
+        for path_item in spec.get("paths", {}).values()
+        for method, operation in path_item.items()
+        if not method.startswith("x-")
+    }
+
+
 def test_normalize_spec_removes_token_and_adds_security_scheme():
     normalized = normalize_spec(
         load_json(RAW_SPEC_PATH), load_overrides(OVERRIDES_PATH)
@@ -33,10 +51,14 @@ def test_collect_resources_matches_expected_counts():
         load_json(RAW_SPEC_PATH), load_overrides(OVERRIDES_PATH)
     )
     resources = collect_resources(normalized)
+    expected_namespaces = collect_resource_namespaces(normalized)
 
-    assert len(resources) == 25
-    assert sum(len(resource.operations) for resource in resources) == 201
     namespace_set = {resource.namespace for resource in resources}
+    assert len(resources) == len(expected_namespaces)
+    assert sum(len(resource.operations) for resource in resources) == count_operations(
+        normalized
+    )
+    assert namespace_set == expected_namespaces
     assert {"douyin", "douyin_xingtu", "tiktok_shop", "xiaohongshu_pgy"}.issubset(
         namespace_set
     )
