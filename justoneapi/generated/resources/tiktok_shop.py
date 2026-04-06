@@ -18,15 +18,9 @@ class TiktokShopResource(BaseResource):
         page_token: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Search Products (V1)
+        Product Search
 
-        Searches for products on TikTok Shop based on the provided keyword and region.
-        It returns a list of products including title, price, sales, and other metadata.
-
-        Typical use cases:
-        - Market research and trend analysis
-        - Competitor product discovery
-        - Monitoring product popularity in specific regions
+        Get TikTok Shop product Search data, including title, price, and sales, for market research and trend analysis, competitor product discovery, and monitoring product popularity in specific regions.
 
         Args:
             keyword: Search keyword.
@@ -51,15 +45,9 @@ class TiktokShopResource(BaseResource):
         region: str | None = "US",
     ) -> ApiResponse[Any]:
         """
-        Product Detail (V1)
+        Product Details
 
-        Retrieves detailed information for a specific product on TikTok Shop based on the provided product ID and region.
-        It returns comprehensive product data including title, description, price, stock, and media.
-
-        Typical use cases:
-        - Building product catalogs
-        - Price and stock monitoring
-        - In-depth product analysis
+        Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.
 
         Args:
             product_id: TikTok Shop Product ID.

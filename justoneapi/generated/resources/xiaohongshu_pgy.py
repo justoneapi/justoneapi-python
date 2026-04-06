@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class XiaohongshuPgyResource(BaseResource):
-    """Generated resource for Xiaohongshu Pgy."""
+    """Generated resource for Xiaohongshu Creator Marketplace (Pugongying)."""
 
     def api_solar_cooperator_user_blogger_user_id_v1(
         self,
@@ -15,9 +15,9 @@ class XiaohongshuPgyResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        User Blogger (V1)
+        Creator Profile
 
-        Retrieve blogger profile information.
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.
 
         Args:
             user_id: Blogger's user ID.
@@ -36,9 +36,9 @@ class XiaohongshuPgyResource(BaseResource):
         business: str | None = "DAILY_NOTE",
     ) -> ApiResponse[Any]:
         """
-        Data Summary (V1)
+        Data Summary
 
-        Get summary data for a specific KOL.
+        Get Xiaohongshu Creator Marketplace (Pugongying) Summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             user_id: KOL's user ID.
@@ -60,9 +60,9 @@ class XiaohongshuPgyResource(BaseResource):
         increase_type: str | None = "FANS_TOTAL",
     ) -> ApiResponse[Any]:
         """
-        Fans Overall New History (V1)
+        Follower Growth History
 
-        Retrieve historical fans growth data.
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower Growth History data, including historical points, trend signals, and growth metrics, for trend tracking, audience analysis, and creator performance monitoring.
 
         Args:
             user_id: KOL's user ID.
@@ -84,9 +84,9 @@ class XiaohongshuPgyResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        Fans Summary (V1)
+        Follower Summary
 
-        Get summary of fans demographics and stats.
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower Summary data, including growth and engagement metrics, for audience analysis and creator benchmarking.
 
         Args:
             user_id: KOL's user ID.
@@ -105,9 +105,9 @@ class XiaohongshuPgyResource(BaseResource):
         page_num: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Similar KOL (V1)
+        Similar Creators
 
-        Find similar KOLs based on a given user ID.
+        Get Xiaohongshu Creator Marketplace (Pugongying) similar Creators data, including audience signals, for creator discovery, benchmarking, and shortlist building.
 
         Args:
             user_id: KOL's user ID.
@@ -127,9 +127,9 @@ class XiaohongshuPgyResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        KOL Feature Tags (V1)
+        Creator Feature Tags
 
-        Get feature tags assigned to a KOL.
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Feature Tags data, including platform tags, category labels, and classification signals, for segmentation, discovery, and creator classification.
 
         Args:
             user_id: KOL's user ID.
@@ -147,9 +147,9 @@ class XiaohongshuPgyResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        KOL Content Tags (V1)
+        Creator Content Tags
 
-        Get content-related tags for a KOL.
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Content Tags data, including topic labels that describe publishing themes and content focus, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             user_id: KOL's user ID.
@@ -171,9 +171,9 @@ class XiaohongshuPgyResource(BaseResource):
         advertise_switch: str | None = "ALL",
     ) -> ApiResponse[Any]:
         """
-        Notes Rate (V1)
+        Note Performance Rates
 
-        Get performance rates for notes.
+        Get Xiaohongshu Creator Marketplace (Pugongying) note Performance Rates data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.
 
         Args:
             user_id: KOL's user ID.
@@ -204,18 +204,9 @@ class XiaohongshuPgyResource(BaseResource):
         page_number: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        User Published Notes List (V1)
+        User Published Notes
 
-        Retrieves the list of notes published by a specific Xiaohongshu user.
-        It returns note items posted by the target account, typically including note IDs, titles/covers (if available), publish-related metadata, and paging information.
-
-        Typical use cases:
-        - Creator content monitoring: track a user's recently published notes.
-        - Content collection: build datasets of notes under a specific account.
-        - Account activity analysis: review posting frequency and content output.
-
-        Highlights
-        - Some users may not return note data through this endpoint. In general, users enrolled in Pugongying or users with relatively large follower bases are more likely to be supported.
+        Get Xiaohongshu Creator Marketplace (Pugongying) user Published Notes data, including note metadata and engagement signals, for creator monitoring and campaign research.
 
         Args:
             user_id: KOL's user ID.
@@ -243,9 +234,9 @@ class XiaohongshuPgyResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        Fans Profile (V1)
+        Follower Profile
 
-        Get detailed fans profile for a specific KOL.
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower Profile data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             user_id: KOL's user ID.
@@ -263,9 +254,9 @@ class XiaohongshuPgyResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        Cost Effective (V1)
+        Cost Effectiveness Analysis
 
-        Analyze cost-effectiveness of a specific KOL.
+        Get Xiaohongshu Creator Marketplace (Pugongying) cost Effectiveness Analysis data, including pricing, reach, and engagement efficiency indicators, for campaign evaluation.
 
         Args:
             user_id: KOL's user ID.
@@ -283,9 +274,9 @@ class XiaohongshuPgyResource(BaseResource):
         note_id: str,
     ) -> ApiResponse[Any]:
         """
-        Note Details (V1)
+        Note Details
 
-        Retrieve details for a specific note.
+        Get Xiaohongshu Creator Marketplace (Pugongying) note Details data, including media and engagement signals, for content analysis, archiving, and campaign review.
 
         Args:
             note_id: Note's unique ID.
@@ -311,9 +302,9 @@ class XiaohongshuPgyResource(BaseResource):
         content_tag: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        KOL Search (V1)
+        Creator Search
 
-        Search for KOLs using various filters.
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Search data, including filters, returning profile, and audience, for discovery, comparison, and shortlist building.
 
         Args:
             search_type: Search criteria type.  Available Values: - `NICKNAME`: Search by nickname - `NOTE`: Search by note content
@@ -351,9 +342,9 @@ class XiaohongshuPgyResource(BaseResource):
         advertise_switch: str | None = "ALL",
     ) -> ApiResponse[Any]:
         """
-        KOL Data Core (V1)
+        Creator Core Metrics
 
-        Retrieve core performance data for a KOL.
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Core Metrics data, including engagement and content metrics, for benchmarking, vetting, and campaign planning.
 
         Args:
             user_id: KOL's user ID.
@@ -380,9 +371,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Profile (V1) [Deprecated]
+        Creator Profile
 
-        Retrieve KOL profile information (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.
 
         Args:
             kol_id: KOL ID.
@@ -407,9 +398,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Note Rate (V1) [Deprecated]
+        Note Performance Rates
 
-        Get note performance rate (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) note Performance Rates data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.
 
         Args:
             kol_id: KOL ID.
@@ -438,9 +429,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Follower Profile (V1) [Deprecated]
+        Follower Profile
 
-        Get fans portrait (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower Profile data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             kol_id: KOL ID.
@@ -461,9 +452,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Follower Analysis (V1) [Deprecated]
+        Follower Analysis
 
-        Get fans summary (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower Analysis data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             kol_id: KOL ID.
@@ -486,9 +477,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Follower Trend (V1) [Deprecated]
+        Follower Growth Trend
 
-        Get fans growth trend (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             kol_id: KOL ID.
@@ -517,9 +508,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Note List (V1)
+        Creator Note List
 
-        Retrieve list of notes for a specific KOL.
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Note List data, including content metadata, publish time, and engagement indicators, for content analysis.
 
         Args:
             kol_id: KOL ID.
@@ -549,9 +540,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Data Overview (V1) [Deprecated]
+        Creator Performance Overview
 
-        Get data overview (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Performance Overview data, including audience, content performance, and commercial indicators, for quick evaluation.
 
         Args:
             kol_id: KOL ID.
@@ -575,9 +566,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Data Overview (V2) [Deprecated]
+        Creator Performance Overview
 
-        Get data overview (Legacy V2).
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Performance Overview data, including audience, content performance, and commercial indicators, for quick evaluation.
 
         Args:
             kol_id: KOL ID.
@@ -600,9 +591,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Cost-Effectiveness (V1) [Deprecated]
+        Cost Effectiveness Analysis
 
-        Get cost-effectiveness data (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) cost Effectiveness Analysis data, including pricing, reach, and engagement efficiency indicators, for campaign evaluation.
 
         Args:
             kol_id: KOL ID.
@@ -623,9 +614,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Note Details (V1) [Deprecated]
+        Note Details
 
-        Get note details (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) note Details data, including media and engagement signals, for content analysis, archiving, and campaign review.
 
         Args:
             note_id: Note ID.
@@ -650,9 +641,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Data Core (V1) [Deprecated]
+        Creator Core Metrics
 
-        Retrieve core performance data (Legacy).
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Core Metrics data, including engagement and content metrics, for benchmarking, vetting, and campaign planning.
 
         Args:
             kol_id: KOL ID.

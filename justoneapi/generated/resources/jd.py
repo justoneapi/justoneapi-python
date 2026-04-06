@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class JdResource(BaseResource):
-    """Generated resource for JD."""
+    """Generated resource for JD.com."""
 
     def get_item_detail_v1(
         self,
@@ -15,18 +15,9 @@ class JdResource(BaseResource):
         item_id: str,
     ) -> ApiResponse[Any]:
         """
-        Product Details (V1)
+        Product Details
 
-        Retrieves product detail data for JD.com items, including basic metadata (title, item ID),
-        media assets (images), shop information, item status, and pricing.
-
-        Typical use cases:
-        - Building product catalogs and enriching item content
-        - E-commerce analytics and competitor tracking
-        - General product lookup and verification
-
-        Highlights
-        - Price accuracy: The after-coupon (coupon-discounted) price is not accurate(Non-login version).
+        Get JD.com product Details data, including pricing, images, and shop information, for catalog analysis, product monitoring, and ecommerce research.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
@@ -45,17 +36,9 @@ class JdResource(BaseResource):
         page: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Product Comments (V1)
+        Product Comments
 
-        Retrieves customer reviews (comments) for a specific JD.com (China) product by item ID.
-        It returns review content, rating/score, review time, user/display info (if available), and paging data.
-
-        Typical use cases:
-        - Review & sentiment monitoring: track comment volume and rating shifts.
-        - Public opinion analysis: analyze negative/positive feedback signals.
-
-        Highlights
-        - Page limit: The maximum page number supported is 8.
+        Get JD.com product Comments data, including ratings, timestamps, and reviewer signals, for customer feedback analysis and product research.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
@@ -76,14 +59,9 @@ class JdResource(BaseResource):
         page: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Shop Product List (V1)
+        Shop Product List
 
-        Retrieves the product list for a specific JD.com (China) shop.
-            It returns items available in the shop, typically including basic product information such as item ID, title, price, sales-related data, image, and paging data.
-
-            Typical use cases:
-            - Shop catalog monitoring: track product assortments and newly listed items for a target shop.
-            - Competitive analysis: analyze a shop’s product lineup, pricing, and listing changes over time.
+        Get JD.com shop Product List data, including item titles, prices, and images, for catalog tracking and seller research.
 
         Args:
             shop_id: A unique shop identifier on JD.com (Shop ID).

@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class XiaohongshuResource(BaseResource):
-    """Generated resource for Xiaohongshu."""
+    """Generated resource for Xiaohongshu (RedNote)."""
 
     def get_user_v3(
         self,
@@ -15,15 +15,9 @@ class XiaohongshuResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        User Profile (V3)
+        User Profile
 
-        Retrieves Xiaohongshu user profile data, including user identifiers and profile metadata
-        (e.g., nickname, avatar, bio), as well as public counters such as follower count and like count (when available).
-
-        Typical use cases:
-        - Identifying creators/KOLs and building creator lists
-        - Enriching user records for analytics and reporting
-        - Creator monitoring (profile and counter changes over time)
+        Get Xiaohongshu (RedNote) user Profile data, including follower counts and bio details, for creator research, account analysis, and competitor monitoring.
 
         Args:
             user_id: Unique user identifier on Xiaohongshu.
@@ -41,15 +35,9 @@ class XiaohongshuResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        User Profile (V4)
+        User Profile
 
-        Retrieves Xiaohongshu user profile data, including user identifiers and profile metadata
-        (e.g., nickname, avatar, bio), as well as public counters such as follower count and like count (when available).
-
-        Typical use cases:
-        - Identifying creators/KOLs and building creator lists
-        - Enriching user records for analytics and reporting
-        - Creator monitoring (profile and counter changes over time)
+        Get Xiaohongshu (RedNote) user Profile data, including follower counts and bio details, for creator research, account analysis, and competitor monitoring.
 
         Args:
             user_id: Unique user identifier on Xiaohongshu.
@@ -68,16 +56,9 @@ class XiaohongshuResource(BaseResource):
         last_cursor: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        User Published Notes (V2)
+        User Published Notes
 
-        Retrieves a paginated list of notes published by a specific Xiaohongshu user.
-        Each page returns basic note data (e.g., note ID, title/text snippet, publish time, cover/media info when available)
-        and may include engagement counters depending on availability.
-
-        Typical use cases:
-        - Building a creator's content timeline and monitoring new posts
-        - Batch collection for analytics, reporting, and dataset building
-        - Creator/KOL and competitor monitoring
+        Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.
 
         Args:
             user_id: Unique user identifier on Xiaohongshu.
@@ -98,16 +79,9 @@ class XiaohongshuResource(BaseResource):
         last_cursor: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        User Published Notes (V4)
+        User Published Notes
 
-        Retrieves a paginated list of notes published by a specific Xiaohongshu user.
-        Each page returns basic note data (e.g., note ID, title/text snippet, publish time, cover/media info when available)
-        and may include engagement counters depending on availability.
-
-        Typical use cases:
-        - Building a creator's content timeline and monitoring new posts
-        - Batch collection for analytics, reporting, and dataset building
-        - Creator/KOL and competitor monitoring
+        Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.
 
         Args:
             user_id: Unique user identifier on Xiaohongshu.
@@ -127,18 +101,9 @@ class XiaohongshuResource(BaseResource):
         note_id: str,
     ) -> ApiResponse[Any]:
         """
-        Note Details (V1)
+        Note Details
 
-        Retrieves detailed note data from Xiaohongshu, including the full note description,
-        engagement metrics (likes, comments, collects, shares), and media information.
-
-        The response includes media download URLs for images and videos.
-
-        Typical use cases:
-        - Content analysis and review using full note text
-        - Engagement tracking for creators, campaigns, and competitors
-        - Collecting media assets (images/videos) for downstream processing or archiving
-        - Building datasets for analytics, reporting, and automation
+        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
@@ -156,18 +121,9 @@ class XiaohongshuResource(BaseResource):
         note_id: str,
     ) -> ApiResponse[Any]:
         """
-        Note Details (V3)
+        Note Details
 
-        Retrieves detailed note data from Xiaohongshu, including the full note description,
-        engagement metrics (likes, comments, collects, shares), and media information.
-
-        The response includes media download URLs for images and videos.
-
-        Typical use cases:
-        - Content analysis and review using full note text
-        - Engagement tracking for creators, campaigns, and competitors
-        - Collecting media assets (images/videos) for downstream processing or archiving
-        - Building datasets for analytics, reporting, and automation
+        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
@@ -185,18 +141,9 @@ class XiaohongshuResource(BaseResource):
         note_id: str,
     ) -> ApiResponse[Any]:
         """
-        Note Details (V7)
+        Note Details
 
-        Retrieves detailed note data from Xiaohongshu, including the full note description,
-        engagement metrics (likes, comments, collects, shares), and media information.
-
-        The response includes media download URLs for images and videos.
-
-        Typical use cases:
-        - Content analysis and review using full note text
-        - Engagement tracking for creators, campaigns, and competitors
-        - Collecting media assets (images/videos) for downstream processing or archiving
-        - Building datasets for analytics, reporting, and automation
+        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
@@ -216,16 +163,9 @@ class XiaohongshuResource(BaseResource):
         sort: str | None = "latest",
     ) -> ApiResponse[Any]:
         """
-        Note Comments (V2)
+        Note Comments
 
-        Retrieves comments for a Xiaohongshu note with pagination.
-        The response includes comment text, publish time, commenter information (when available),
-        and other comment metadata.
-
-        Typical use cases:
-        - Sentiment and public-opinion monitoring based on comment content
-        - Tracking comment volume and feedback trends over time
-        - Collecting discussions for analytics, reporting, and dataset building
+        Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
@@ -247,17 +187,9 @@ class XiaohongshuResource(BaseResource):
         note_id: str,
     ) -> ApiResponse[Any]:
         """
-        Note Comments (V4)
+        Note Comments
 
-        Retrieves comments for a Xiaohongshu note.
-
-        Typical use cases:
-        - Quick lookup of the latest/top comments for a note
-        - Comment snapshot for lightweight monitoring
-
-        Highlights
-        - This version only returns the first page of comments; subsequent pages are not available.
-        - If you need to fetch more pages, use the Note Comments (V2) endpoint.
+        Get Xiaohongshu (RedNote) note Comments data, including comment text, author profiles, and interaction data, for sentiment analysis and community monitoring.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
@@ -277,16 +209,9 @@ class XiaohongshuResource(BaseResource):
         last_cursor: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Comment Replies (V2)
+        Comment Replies
 
-        Retrieves replies under a specific Xiaohongshu comment (also known as second-level comments),
-        with pagination when supported. The response includes reply text, publish time, replier information
-        (when available), and other metadata.
-
-        Typical use cases:
-        - Deep sentiment analysis by including comment threads
-        - Monitoring discussions under key comments
-        - Collecting reply threads for analytics, reporting, and dataset building
+        Get Xiaohongshu (RedNote) comment Replies data, including text, authors, and timestamps, for thread analysis and feedback research.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
@@ -312,16 +237,9 @@ class XiaohongshuResource(BaseResource):
         note_time: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Note Search (V2)
+        Note Search
 
-        Searches Xiaohongshu notes by keyword and optional filters, returning a paginated result set.
-        Each result typically includes basic note information (e.g., note ID, title/text snippet, cover/media info),
-        author signals (when available), and engagement counters (when available).
-
-        Typical use cases:
-        - Topic/keyword research and trend analysis
-        - Discovering notes for monitoring, analytics, and dataset building
-        - Campaign and competitor content discovery
+        Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.
 
         Args:
             keyword: Search keyword.
@@ -350,16 +268,9 @@ class XiaohongshuResource(BaseResource):
         note_type: str | None = "_0",
     ) -> ApiResponse[Any]:
         """
-        Note Search (V3)
+        Note Search
 
-        Searches Xiaohongshu notes by keyword and optional filters, returning a paginated result set.
-        Each result typically includes basic note information (e.g., note ID, title/text snippet, cover/media info),
-        author signals (when available), and engagement counters (when available).
-
-        Typical use cases:
-        - Topic/keyword research and trend analysis
-        - Discovering notes for monitoring, analytics, and dataset building
-        - Campaign and competitor content discovery
+        Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.
 
         Args:
             keyword: Search keyword.
@@ -384,16 +295,9 @@ class XiaohongshuResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        User Search (V2)
+        User Search
 
-        Searches Xiaohongshu users by keyword, returning a paginated result set with basic profile
-        information (e.g., user ID, nickname, avatar, bio when available) and public counters/signals
-        (when available).
-
-        Typical use cases:
-        - Finding creators/KOLs by niche, brand, or topic keywords
-        - Building creator lists for monitoring and analytics
-        - Discovering competitor accounts and related profiles
+        Get Xiaohongshu (RedNote) user Search data, including profile metadata and public signals, for creator discovery and account research.
 
         Args:
             keyword: Search keyword.
@@ -413,16 +317,9 @@ class XiaohongshuResource(BaseResource):
         share_url: str,
     ) -> ApiResponse[Any]:
         """
-        Share Link Convert (V3)
+        Share Link Resolution
 
-        Converts a shared RedNote note short link into a normal (resolved) note URL.
-        This is typically used to extract the note ID from a share link for downstream APIs
-        (e.g., Note Details or Note Comments).
-
-        Typical use cases:
-        - Turning user-provided share links into structured identifiers (note ID)
-        - Normalizing links before fetching note details, media, or comments
-        - Automating workflows that start from share links
+        Get Xiaohongshu (RedNote) share Link Resolution data, including helping extract note IDs, for downstream note and comment workflows.
 
         Args:
             share_url: RedNote share link URL to be resolved (short link or shared URL).
@@ -440,16 +337,9 @@ class XiaohongshuResource(BaseResource):
         keyword: str,
     ) -> ApiResponse[Any]:
         """
-        Search Keyword Suggestions (V1)
+        Keyword Suggestions
 
-        Retrieves keyword suggestions for Xiaohongshu search.
-        Given an input keyword prefix, this endpoint returns a list of recommended/related search terms
-        that can be used to refine queries.
-
-        Typical use cases:
-        - Expanding keyword sets for content research and SEO/pSEO workflows
-        - Improving search coverage by using platform-recommended terms
-        - Building autocomplete experiences and discovery tools
+        Get Xiaohongshu (RedNote) keyword Suggestions data, including suggested queries, keyword variants, and query metadata, for expanding keyword sets for content research and seo/pseo workflows and improving search coverage by using platform-recommended terms.
 
         Args:
             keyword: Search keyword.

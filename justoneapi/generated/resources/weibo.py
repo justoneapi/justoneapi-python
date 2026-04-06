@@ -21,14 +21,9 @@ class WeiboResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Keyword Search (V2)
+        Keyword Search
 
-        Enables advanced keyword-based search on Weibo posts, supporting filters such as time range.
-        Returns matching posts with content, author info, publish time, and engagement metrics (likes, reposts, comments).
-
-        Typical use cases:
-        - Tracking discussions around specific brands or events
-        - Gathering public opinion data for a specific time period
+        Get Weibo keyword Search data, including authors, publish times, and engagement signals, for trend monitoring.
 
         Args:
             q: Search Keywords.
@@ -58,14 +53,9 @@ class WeiboResource(BaseResource):
         id_: str,
     ) -> ApiResponse[Any]:
         """
-        Post Details (V1)
+        Post Details
 
-        Retrieves detailed information about a specific Weibo post, including full text content,
-        media assets (images/videos), author information, publish time, and engagement metrics (likes, comments, and reposts).
-
-        Typical use cases:
-        - Detailed analysis of specific social media posts
-        - Content archival and monitoring
+        Get Weibo post Details data, including media, author metadata, and engagement counts, for post analysis, archiving, and campaign monitoring.
 
         Args:
             id_: Weibo post ID.
@@ -83,14 +73,9 @@ class WeiboResource(BaseResource):
         uid: str,
     ) -> ApiResponse[Any]:
         """
-        User Profile (V3)
+        User Profile
 
-        Retrieves detailed profile information for a specified Weibo user, including nickname, avatar,
-        user ID, follower/following counts, bio, and verification status.
-
-        Typical use cases:
-        - Creator/KOL identification and monitoring
-        - Enriching user records for analytics and reporting
+        Get Weibo user Profile data, including follower counts, verification status, and bio details, for creator research and account analysis.
 
         Args:
             uid: Weibo User ID (UID).
@@ -109,14 +94,9 @@ class WeiboResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        User Fans (V1)
+        User Fans
 
-        Retrieves the follower list (fans) of a specified Weibo user with pagination.
-        Includes user IDs, nicknames, avatars, and verification status of followers.
-
-        Typical use cases:
-        - Audience analysis and demographic research
-        - Monitoring follower growth and community engagement
+        Get Weibo user Fans data, including profile metadata and verification signals, for audience analysis and influencer research.
 
         Args:
             uid: Weibo User ID (UID).
@@ -137,14 +117,9 @@ class WeiboResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        User Followers (V1)
+        User Followers
 
-        Retrieves the list of accounts that a specified Weibo user is following.
-        Includes user IDs, nicknames, avatars, and verification status of the followed accounts.
-
-        Typical use cases:
-        - Relationship mapping and network analysis
-        - Identifying interests and associations of specific users
+        Get Weibo user Followers data, including profile metadata and verification signals, for network analysis and creator research.
 
         Args:
             uid: Weibo User ID (UID).
@@ -166,14 +141,9 @@ class WeiboResource(BaseResource):
         since_id: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        User Published Posts (V1)
+        User Published Posts
 
-        Retrieves the post list of a specified Weibo user with pagination.
-        Each entry includes status ID, text, media assets, publish time, and engagement metrics.
-
-        Typical use cases:
-        - Creator monitoring and content tracking
-        - Building content timelines for specific accounts
+        Get Weibo user Published Posts data, including text, media, and publish times, for account monitoring.
 
         Args:
             uid: Weibo User ID (UID).
@@ -195,14 +165,9 @@ class WeiboResource(BaseResource):
         oid: str,
     ) -> ApiResponse[Any]:
         """
-        TV Video Details (V1)
+        TV Video Details
 
-        Retrieves detailed information of a single Weibo TV video by its object ID.
-        Includes video metadata, media URLs, cover images, author info, and engagement metrics.
-
-        Typical use cases:
-        - Video content analysis and archival
-        - Monitoring performance of Weibo TV videos
+        Get Weibo tV Video Details data, including media URLs, author details, and engagement counts, for video research, archiving, and performance analysis.
 
         Args:
             oid: Weibo video/object ID.
@@ -218,13 +183,9 @@ class WeiboResource(BaseResource):
         self,
     ) -> ApiResponse[Any]:
         """
-        Hot Search (V1)
+        Hot Search
 
-        Retrieves the current hot search (trending) topics from Weibo.
-
-        Typical use cases:
-        - Real-time trend monitoring
-        - Identifying viral topics and news
+        Get Weibo hot Search data, including ranking data, for trend monitoring, newsroom workflows, and topic discovery.
         """
         return self._get(
             "/api/weibo/hot-search/v1",
@@ -239,15 +200,9 @@ class WeiboResource(BaseResource):
         max_id: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Post Comments (V1)
+        Post Comments
 
-        Retrieves comments for a specified Weibo post with pagination.
-          Returns comment content, comment ID, author information, publish time, and related engagement data when available.
-
-          Typical use cases:
-          - Collecting comment threads for a specific post
-          - Sentiment analysis and audience feedback research
-          - Monitoring engagement and discussion around a post
+        Get Weibo post Comments data, including text, authors, and timestamps, for feedback analysis.
 
         Args:
             mid: Weibo post mid.
@@ -273,9 +228,9 @@ class WeiboResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Search User Published Posts (V1)
+        Search User Published Posts
 
-        Search Weibo posts published by a specific user by keywords and time range.
+        Get Weibo search User Published Posts data, including matched results, metadata, and ranking signals, for author research and historical content discovery.
 
         Args:
             uid: Weibo User ID (UID).

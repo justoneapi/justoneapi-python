@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class DoubanResource(BaseResource):
-    """Generated resource for Douban."""
+    """Generated resource for Douban Movie."""
 
     def get_movie_reviews_v1(
         self,
@@ -17,13 +17,9 @@ class DoubanResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Movie Reviews (V1)
+        Movie Reviews
 
-        Retrieves long-form user reviews for a specific movie subject (identified by subjectId).
-
-        Typical use cases:
-        - Analyzing detailed audience feedback for movies.
-        - Long-term trend analysis of viewer sentiment.
+        Get Douban movie Reviews data, including review titles, ratings, and snippets, for audience sentiment analysis and review research.
 
         Args:
             subject_id: The unique ID for a movie or TV subject on Douban.
@@ -45,13 +41,9 @@ class DoubanResource(BaseResource):
         review_id: str,
     ) -> ApiResponse[Any]:
         """
-        Movie Review Details (V1)
+        Review Details
 
-        Retrieves the full content and metadata of a specific movie review (identified by reviewId).
-
-        Typical use cases:
-        - Fetching the complete text of a single long review.
-        - Analyzing the structured data and user engagement (likes, replies) of a specific review.
+        Get Douban movie Review Details data, including metadata, content fields, and engagement signals, for review archiving and detailed opinion analysis.
 
         Args:
             review_id: The unique ID for a specific review on Douban.
@@ -71,13 +63,9 @@ class DoubanResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Movie Comments (V1)
+        Comments
 
-        Retrieves short user comments (short reviews) for a specific movie subject (identified by subjectId).
-
-        Typical use cases:
-        - Fast-paced sentiment analysis using quick viewer comments.
-        - Monitoring initial audience reaction upon movie release.
+        Get Douban movie Comments data, including ratings, snippets, and interaction counts, for quick sentiment sampling and review monitoring.
 
         Args:
             subject_id: The unique ID for a movie or TV subject on Douban.
@@ -99,13 +87,9 @@ class DoubanResource(BaseResource):
         subject_id: str,
     ) -> ApiResponse[Any]:
         """
-        Subject Details (V1)
+        Subject Details
 
-        Retrieves detailed information for a specific subject identified by subjectId.
-
-        Typical use cases:
-        - Displaying complete subject metadata in applications or websites.
-        - Supporting content analysis, cataloging, or detail page rendering.
+        Get Douban subject Details data, including title, rating, and cast, for title enrichment and catalog research.
 
         Args:
             subject_id: The unique ID for a movie or TV subject on Douban.
@@ -123,13 +107,9 @@ class DoubanResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Recent Hot Movie (V1)
+        Recent Hot Movie
 
-        Retrieves the latest hot movies currently trending on the platform.
-
-        Typical use cases:
-        - Discovering recently popular movies.
-        - Tracking current movie trends for content analysis or recommendation.
+        Get Douban recent Hot Movie data, including ratings, posters, and subject metadata, for movie discovery and trend monitoring.
 
         Args:
             page: Page number for pagination.
@@ -147,13 +127,9 @@ class DoubanResource(BaseResource):
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
-        Recent Hot Tv (V1)
+        Recent Hot Tv
 
-        Retrieves the latest hot TV shows currently trending on the platform.
-
-        Typical use cases:
-        - Discovering recently popular TV shows.
-        - Tracking current TV trends for content analysis or recommendation.
+        Get Douban recent Hot Tv data, including ratings, posters, and subject metadata, for series discovery and trend monitoring.
 
         Args:
             page: Page number for pagination.

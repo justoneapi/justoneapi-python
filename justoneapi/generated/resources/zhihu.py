@@ -15,13 +15,9 @@ class ZhihuResource(BaseResource):
         id_: str,
     ) -> ApiResponse[Any]:
         """
-        Column Article Details (V1)
+        Column Article Details
 
-        Retrieve detailed information for a specific Zhihu Column article by its article ID.
-
-        Typical use cases:
-        - In-depth content analysis of professional articles.
-        - Creator performance evaluation and topic trend monitoring.
+        Get Zhihu column Article Details data, including title, author, and content, for article archiving and content research.
 
         Args:
             id_: Article ID
@@ -43,13 +39,9 @@ class ZhihuResource(BaseResource):
         session_id: str | None = "",
     ) -> ApiResponse[Any]:
         """
-        Answer List (V1)
+        Answer List
 
-        Retrieve the list of answers under a specific Zhihu question by its question ID.
-
-        Typical use cases:
-        - Analyzing user opinions and extracting high-quality responses.
-        - Studying community engagement and topic discussions.
+        Get Zhihu answer List data, including answer content, author profiles, and interaction metrics, for question analysis and answer research.
 
         Args:
             question_id: Question ID
@@ -76,13 +68,9 @@ class ZhihuResource(BaseResource):
         offset: int | None = 0,
     ) -> ApiResponse[Any]:
         """
-        Search (V1)
+        Keyword Search
 
-        Search for Zhihu content (including questions, answers, and articles) by keyword.
-
-        Typical use cases:
-        - Topic discovery and competitive brand monitoring.
-        - Identifying trending discussions and high-value creators.
+        Get Zhihu keyword Search data, including matched results, metadata, and ranking signals, for topic discovery and content research.
 
         Args:
             keyword: Search keywords.
@@ -103,13 +91,9 @@ class ZhihuResource(BaseResource):
         offset: int | None = 0,
     ) -> ApiResponse[Any]:
         """
-        Column Article List (V1)
+        Column Article List
 
-        Retrieve the list of articles published under a specific Zhihu Column by its column ID.
-
-        Typical use cases:
-        - Tracking creator output and analyzing column performance.
-        - Knowledge aggregation based on specific topics.
+        Get Zhihu column Article List data, including article metadata and list ordering, for column monitoring and content collection.
 
         Args:
             column_id: Column ID

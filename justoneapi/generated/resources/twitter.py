@@ -7,7 +7,7 @@ from justoneapi._response import ApiResponse
 
 
 class TwitterResource(BaseResource):
-    """Generated resource for X(Twitter)."""
+    """Generated resource for Twitter."""
 
     def get_user_detail_v1(
         self,
@@ -15,14 +15,9 @@ class TwitterResource(BaseResource):
         rest_id: str,
     ) -> ApiResponse[Any]:
         """
-        User Details (V1)
+        User Profile
 
-        Retrieves basic public information for a specific X (Twitter) user using their Rest ID.
-
-        Typical use cases:
-        - Accessing user profile metadata (e.g., description, location, verification status).
-        - Collecting follower and following counts.
-        - Verifying account details for identity confirmation.
+        Get Twitter user Profile data, including account metadata, audience metrics, and verification-related fields, for accessing user profile metadata (e.g., description, location, verification status) and collecting follower and following counts.
 
         Args:
             rest_id: The unique numeric identifier (Rest ID) for the X user.
@@ -41,17 +36,9 @@ class TwitterResource(BaseResource):
         cursor: str | None = "",
     ) -> ApiResponse[Any]:
         """
-        User Published Posts (V1)
+        User Published Posts
 
-        Retrieves the public tweet timeline (posts) for a specific X (Twitter) user.
-
-        Typical use cases:
-        - Monitoring recent activity of influential accounts.
-        - Collecting tweets for archival or content analysis.
-        - Tracking engagement on specific user-generated content.
-
-        Highlights:
-        - Supports pagination via cursor for large datasets.
+        Get Twitter user Published Posts data, including post content, timestamps, and engagement data, for account monitoring and content analysis.
 
         Args:
             rest_id: The unique numeric identifier (Rest ID) for the X user.

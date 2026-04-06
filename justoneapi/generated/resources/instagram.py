@@ -15,14 +15,9 @@ class InstagramResource(BaseResource):
         username: str,
     ) -> ApiResponse[Any]:
         """
-        User Details (V1)
+        User Profile
 
-        Retrieves public profile information of an Instagram user, including follower count, following count, post count, and basic profile details.
-
-        Typical use cases:
-        - Obtaining basic account metadata for influencer vetting
-        - Tracking follower growth and audience reach over time
-        - Mapping user handles to specific profile stats
+        Get Instagram user Profile data, including follower count, following count, and post count, for obtaining basic account metadata for influencer vetting, tracking follower growth and audience reach over time, and mapping user handles to specific profile stats.
 
         Args:
             username: The Instagram username whose profile details are to be retrieved.
@@ -40,14 +35,9 @@ class InstagramResource(BaseResource):
         code: str,
     ) -> ApiResponse[Any]:
         """
-        Post Details (V1)
+        Post Details
 
-        Retrieves detailed information of a public Instagram post by post code, including post caption, media content (images/videos), publish time, and engagement metrics such as likes and comments.
-
-        Typical use cases:
-        - Analyzing engagement metrics (likes/comments) for a specific post
-        - Archiving post content and media assets for content analysis
-        - Verifying post details via the unique shortcode
+        Get Instagram post Details data, including post caption, media content (images/videos), and publish time, for analyzing engagement metrics (likes/comments) for a specific post and archiving post content and media assets for content analysis.
 
         Args:
             code: The unique shortcode (slug) for the Instagram post (e.g., 'DRhvwVLAHAG').
@@ -66,14 +56,9 @@ class InstagramResource(BaseResource):
         pagination_token: str | None = "",
     ) -> ApiResponse[Any]:
         """
-        User Published Posts (V1)
+        User Published Posts
 
-        Retrieves a list of public posts published by an Instagram user, including post code, caption, media type, publish time, and basic engagement metrics.
-
-        Typical use cases:
-        - Monitoring recent publishing activity of a specific user
-        - Building a historical record of content for auditing or analysis
-        - Collecting post identifiers for deeper engagement analysis
+        Get Instagram user Published Posts data, including post code, caption, and media type, for monitoring recent publishing activity of a specific user and building a historical record of content for auditing or analysis.
 
         Args:
             username: The Instagram username whose published posts are to be retrieved.
@@ -94,14 +79,9 @@ class InstagramResource(BaseResource):
         pagination_token: str | None = "",
     ) -> ApiResponse[Any]:
         """
-        Reels Search (V1)
+        Reels Search
 
-        Allows you to search public Instagram Reels by keyword or hashtag. It returns detailed information for each matched post, including post ID, caption, author profile, publish time, and engagement metrics.
-
-        Typical use cases:
-        - Tracking trends and viral content via specific keywords or hashtags
-        - Discovering high-engagement Reels within a particular niche
-        - Monitoring brand mentions and campaign hashtags
+        Get Instagram reels Search data, including post ID, caption, and author profile, for tracking trends and viral content via specific keywords or hashtags and discovering high-engagement reels within a particular niche.
 
         Args:
             keyword: The search keyword or hashtag to filter Reels.
@@ -122,14 +102,9 @@ class InstagramResource(BaseResource):
         end_cursor: str | None = "",
     ) -> ApiResponse[Any]:
         """
-        Hashtag Posts Search (V1)
+        Hashtag Posts Search
 
-        Searches public Instagram posts by keyword or hashtag. It returns a list of matched posts with metadata including caption, author profile, publish time, and media links.
-
-        Typical use cases:
-        - Competitive analysis of trending topics and hashtags
-        - Monitoring community discussions and public opinion on specific tags
-        - Aggregating user-generated content for specific campaigns
+        Get Instagram hashtag Posts Search data, including caption, author profile, and publish time, for competitive analysis of trending topics and hashtags and monitoring community discussions and public opinion on specific tags.
 
         Args:
             hashtag: The hashtag or keyword to search for.

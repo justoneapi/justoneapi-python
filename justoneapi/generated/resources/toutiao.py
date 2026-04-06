@@ -15,15 +15,9 @@ class ToutiaoResource(BaseResource):
         id_: str,
     ) -> ApiResponse[Any]:
         """
-        Article Details (V1)
+        Article Details
 
-        Retrieve detailed information for a specific Toutiao (Jinri Toutiao) article by its article ID.
-
-        The API returns complete metadata including article ID, title, author information, publish time, content text or summary, engagement metrics (views, comments, likes, shares), and the article URL.
-
-        Typical use cases:
-        - Content performance analysis and media monitoring.
-        - Verifying article authenticity and metadata retrieval.
+        Get Toutiao article Details data, including article ID, title, and author information, for content performance analysis and media monitoring and verifying article authenticity and metadata retrieval.
 
         Args:
             id_: The unique identifier of the Toutiao article.
@@ -41,15 +35,9 @@ class ToutiaoResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        User Profile (V1)
+        User Profile
 
-        Retrieve detailed information for a specific Toutiao (Jinri Toutiao) user by their user ID.
-
-        The API returns comprehensive profile metadata including user ID, nickname, avatar, bio/description, verification status, follower and following counts, total likes, and total published articles or videos.
-
-        Typical use cases:
-        - Influencer profiling and audience analysis.
-        - Monitoring creator performance and growth.
+        Get Toutiao user Profile data, including user ID, nickname, and avatar, for influencer profiling and audience analysis and monitoring creator performance and growth.
 
         Args:
             user_id: The unique identifier of the Toutiao user.
@@ -69,15 +57,9 @@ class ToutiaoResource(BaseResource):
         search_id: str | None = "",
     ) -> ApiResponse[Any]:
         """
-        Search (V1)
+        App Keyword Search
 
-        Perform a keyword-based search on Toutiao (Jinri Toutiao) App to retrieve a list of matching articles, videos, and other content.
-
-        The API returns detailed search results including title, summary, author, publish time, and engagement metrics such as likes, comments, and shares.
-
-        Typical use cases:
-        - Content aggregation and trend analysis.
-        - Media monitoring and keyword intelligence.
+        Get Toutiao app Keyword Search data, including matching articles, videos, and authors, for topic discovery and monitoring.
 
         Args:
             keyword: Search keyword or query.
@@ -99,18 +81,9 @@ class ToutiaoResource(BaseResource):
         keyword: str,
     ) -> ApiResponse[Any]:
         """
-        Search (V2)
+        Web Keyword Search
 
-        Perform a keyword-based search on Toutiao (Jinri Toutiao) PC version to retrieve a list of matching articles, videos, and other content.
-
-        The API returns detailed search results including title, summary, author, publish time, and engagement metrics such as likes, comments, and shares.
-
-        Typical use cases:
-        - Content aggregation and trend analysis.
-        - Media monitoring and keyword intelligence.
-
-        Highlights
-        - This is the PC version of the search API. Note that it currently only supports retrieving the first page of results.
+        Get Toutiao web Keyword Search data, including this is the PC version of the search API. Note that it currently only supports retrieving the first page of results, for first-page discovery of articles, videos, and authors for trend research and monitoring.
 
         Args:
             keyword: Search keyword or query.
