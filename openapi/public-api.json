@@ -8,6 +8,7 @@
               "0",
               "100",
               "101",
+              "202",
               "300",
               "301",
               "302",
@@ -8903,6 +8904,45 @@
           "Douban Movie"
         ],
         "x-order": "21001200"
+      }
+    },
+    "/api/douyin-ec/get-item-detail/v1": {
+      "get": {
+        "description": "Get Douyin E-commerce item details, including price, title, and stock, for product monitoring and competitive analysis.",
+        "operationId": "getItemDetailV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "default response"
+          }
+        },
+        "summary": "Item Details",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-order": "14502000"
       }
     },
     "/api/douyin-xingtu/get-author-commerce-seed-base-info/v1": {
@@ -37293,7 +37333,7 @@
             }
           },
           {
-            "description": "The unique ID of the Kuaishou video, e.g. `3xbknvct79h46h9`",
+            "description": "The unique ID of the Kuaishou video, e.g. `3xbknvct79h46h9` or refer_photo_id `177012131237`",
             "in": "query",
             "name": "videoId",
             "required": true,
@@ -57944,6 +57984,54 @@
         "x-order": "17001500"
       }
     },
+    "/api/weibo/get-user-video-list/v1": {
+      "get": {
+        "description": "Get Weibo user Video list data (waterfall), including pagination cursor for next page.",
+        "operationId": "getUserVideoListV1",
+        "parameters": [
+          {
+            "description": "API access token.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Weibo User ID (UID).",
+            "in": "query",
+            "name": "uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination cursor returned by the previous response.",
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "default response"
+          }
+        },
+        "summary": "User Video List",
+        "tags": [
+          "Weibo"
+        ],
+        "x-order": "17001510"
+      }
+    },
     "/api/weibo/get-weibo-detail/v1": {
       "get": {
         "description": "Get Weibo post Details data, including media, author metadata, and engagement counts, for post analysis, archiving, and campaign monitoring.",
@@ -59143,6 +59231,24 @@
             "schema": {
               "default": false,
               "type": "boolean"
+            }
+          },
+          {
+            "description": "Contains filter for the result set.\n\nAvailable Values:\n- `ALL`: All\n- `PICTURE`: Has Picture\n- `VIDEO`: Has Video\n- `MUSIC`: Has Music\n- `LINK`: Has Link",
+            "in": "query",
+            "name": "contains",
+            "required": false,
+            "schema": {
+              "default": "ALL",
+              "description": "Contains",
+              "enum": [
+                "ALL",
+                "PICTURE",
+                "VIDEO",
+                "MUSIC",
+                "LINK"
+              ],
+              "type": "string"
             }
           },
           {
@@ -68054,7 +68160,6 @@
     },
     "/api/xiaohongshu/search-note/v3": {
       "get": {
-        "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.",
         "operationId": "getSearchNoteV3",
         "parameters": [
@@ -68123,12 +68228,7 @@
         "responses": {
           "default": {
             "content": {
-              "application/json": {
-                "example": {
-                  "code": 0,
-                  "data": {}
-                }
-              }
+              "application/json": {}
             },
             "description": "default response"
           }

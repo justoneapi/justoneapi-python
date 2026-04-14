@@ -13,6 +13,7 @@ class Code(Enum):
     field_0 = "0"
     field_100 = "100"
     field_101 = "101"
+    field_202 = "202"
     field_300 = "300"
     field_301 = "301"
     field_302 = "302"

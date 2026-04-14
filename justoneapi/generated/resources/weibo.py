@@ -18,6 +18,7 @@ class WeiboResource(BaseResource):
         end_day: str,
         end_hour: int,
         hot_sort: bool | None = False,
+        contains: str | None = "ALL",
         page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
@@ -32,6 +33,7 @@ class WeiboResource(BaseResource):
             end_day: End Day (yyyy-MM-dd).
             end_hour: End Hour (0-23).
             hot_sort: Hot sort, true for hot sort, false for time sort. Default is false.
+            contains: Contains filter for the result set.  Available Values: - `ALL`: All - `PICTURE`: Has Picture - `VIDEO`: Has Video - `MUSIC`: Has Music - `LINK`: Has Link
             page: Page number, starting with 1.
         """
         return self._get(
@@ -43,6 +45,7 @@ class WeiboResource(BaseResource):
                 "endDay": end_day,
                 "endHour": end_hour,
                 "hotSort": hot_sort,
+                "contains": contains,
                 "page": page,
             },
         )
@@ -156,6 +159,29 @@ class WeiboResource(BaseResource):
                 "uid": uid,
                 "page": page,
                 "sinceId": since_id,
+            },
+        )
+
+    def get_user_video_list_v1(
+        self,
+        *,
+        uid: str,
+        cursor: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        User Video List
+
+        Get Weibo user Video list data (waterfall), including pagination cursor for next page.
+
+        Args:
+            uid: Weibo User ID (UID).
+            cursor: Pagination cursor returned by the previous response.
+        """
+        return self._get(
+            "/api/weibo/get-user-video-list/v1",
+            {
+                "uid": uid,
+                "cursor": cursor,
             },
         )
 
