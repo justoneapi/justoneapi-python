@@ -155,7 +155,7 @@ class KuaishouResource(BaseResource):
         - Gathering engagement data for specific videos
 
         Args:
-            video_id: The unique ID of the Kuaishou video, e.g. `3xbknvct79h46h9`
+            video_id: The unique ID of the Kuaishou video, e.g. `3xbknvct79h46h9` or refer_photo_id `177012131237`
             pcursor: Pagination cursor for subsequent pages.
         """
         return self._get(

@@ -5,6 +5,7 @@ from justoneapi.generated.resources.beike import BeikeResource
 from justoneapi.generated.resources.bilibili import BilibiliResource
 from justoneapi.generated.resources.douban import DoubanResource
 from justoneapi.generated.resources.douyin import DouyinResource
+from justoneapi.generated.resources.douyin_ec import DouyinEcResource
 from justoneapi.generated.resources.douyin_xingtu import DouyinXingtuResource
 from justoneapi.generated.resources.facebook import FacebookResource
 from justoneapi.generated.resources.imdb import ImdbResource
@@ -33,6 +34,7 @@ RESOURCE_CLASSES = {
     "bilibili": BilibiliResource,
     "douban": DoubanResource,
     "douyin": DouyinResource,
+    "douyin_ec": DouyinEcResource,
     "douyin_xingtu": DouyinXingtuResource,
     "facebook": FacebookResource,
     "imdb": ImdbResource,
@@ -62,6 +64,7 @@ __all__ = [
     "BilibiliResource",
     "DoubanResource",
     "DouyinResource",
+    "DouyinEcResource",
     "DouyinXingtuResource",
     "FacebookResource",
     "ImdbResource",
