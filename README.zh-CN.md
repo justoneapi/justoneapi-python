@@ -5,11 +5,11 @@
 
 # Just One API - Python SDK
 
-官方 Python SDK，用于访问 [Just One API](https://justoneapi.com/zh/)。
+官方 Python SDK，用于访问 [Just One API](https://justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)。
 
 Just One API 是一个统一的数据服务平台，提供来自社交媒体、电商和内容平台的结构化数据。
 
-支持的平台包括淘宝、天猫、小红书、小红书蒲公英、抖音、抖音星图、快手、微博、哔哩哔哩、京东、微信、豆瓣、TikTok、TikTok Shop、优酷、Instagram、YouTube、Reddit、头条、知乎、亚马逊、Facebook、X(Twitter)、贝壳、IMDb 等接口。想了解更多，可以访问[官网](https://justoneapi.com/zh/)。
+支持的平台包括淘宝、天猫、小红书、小红书蒲公英、抖音、抖音星图、快手、微博、哔哩哔哩、京东、微信、豆瓣、TikTok、TikTok Shop、优酷、Instagram、YouTube、Reddit、头条、知乎、亚马逊、Facebook、X(Twitter)、贝壳、IMDb 等接口。想了解更多，可以访问[官网](https://justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)。
 
 ## 安装
 
@@ -72,13 +72,13 @@ except BusinessError as exc:
 
 注册链接：
 
-- [注册获取 Token](https://dashboard.justoneapi.com/zh/register)
+- [注册获取 Token](https://dashboard.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
 
 ## 文档中心
 
 完整接口文档：
 
-- [API 文档](https://docs.justoneapi.com/zh)
+- [API 文档](https://docs.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
 
 文档中包含：
 
@@ -89,13 +89,13 @@ except BusinessError as exc:
 
 ## 官方网站
 
-- [官方网站](https://justoneapi.com/zh/)
+- [官方网站](https://justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
 
 ## 联系我们
 
 如果你有任何问题、反馈或合作需求：
 
-- [联系我们](https://justoneapi.com/zh/contact)
+- [联系我们](https://justoneapi.com/zh/contact?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
 
 ## 许可证
 
