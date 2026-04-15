@@ -5,9 +5,9 @@
 
 # Just One API - Python SDK
 
-Official Python SDK for accessing [Just One API](https://justoneapi.com/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme) - a unified data service platform that provides structured data from social media, e-commerce, and content platforms.
+Official Python SDK for accessing [Just One API](https://justoneapi.com/en?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme) - a unified data service platform that provides structured data from social media, e-commerce, and content platforms.
 
-Supported platforms include Taobao & Tmall, Xiaohongshu, Xiaohongshu Pugongying, Douyin, Douyin Xingtu, Kuaishou, Weibo, Bilibili, JD, WeChat, Douban, TikTok, TikTok Shop, Youku, Instagram, YouTube, Reddit, Toutiao, Zhihu, Amazon, Facebook, X (Twitter), Beike, IMDb, and more. To explore the full API catalog, visit the [official website]([https://justoneapi.com](https://justoneapi.com/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)).
+Supported platforms include Taobao & Tmall, Xiaohongshu, Xiaohongshu Pugongying, Douyin, Douyin Xingtu, Kuaishou, Weibo, Bilibili, JD, WeChat, Douban, TikTok, TikTok Shop, Youku, Instagram, YouTube, Reddit, Toutiao, Zhihu, Amazon, Facebook, X (Twitter), Beike, IMDb, and more. To explore the full API catalog, visit the [official website]([https://justoneapi.com](https://justoneapi.com/en?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)).
 
 ## Installation
 
@@ -70,7 +70,7 @@ All API requests require a valid API token.
 
 Register here:
 
-- [Get API Token](https://dashboard.justoneapi.com/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
+- [Get API Token](https://dashboard.justoneapi.com/en?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
 
 ## Documentation
 
@@ -87,7 +87,7 @@ The documentation includes:
 
 ## Official Website
 
-- [Home Page](https://justoneapi.com/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
+- [Home Page](https://justoneapi.com/en?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
 
 ## Contact
 
