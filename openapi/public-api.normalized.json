@@ -68497,7 +68497,245 @@
         "responses": {
           "default": {
             "content": {
-              "application/json": {}
+              "application/json": {
+                "example": {
+                  "code": 0,
+                  "data": {
+                    "ai_mode_enable": false,
+                    "can_cut": false,
+                    "cur_cut_number": 0,
+                    "dqa_authorized_user_by_shared": false,
+                    "dqa_instant_sid": "klFXygDEVT",
+                    "is_broad_query": true,
+                    "items": [
+                      {
+                        "model_type": "note",
+                        "note": {
+                          "advanced_widgets_groups": {
+                            "groups": [
+                              {
+                                "fetch_types": [
+                                  "guos_test",
+                                  "note_next_step",
+                                  "second_jump_bar",
+                                  "cooperate_binds",
+                                  "note_collection",
+                                  "rec_next_infos",
+                                  "image_stickers",
+                                  "image_filters",
+                                  "product_review",
+                                  "related_search",
+                                  "cooperate_comment_component",
+                                  "image_goods_cards",
+                                  "ads_goods_cards",
+                                  "ads_comment_component",
+                                  "goods_card_v2",
+                                  "image_template",
+                                  "buyable_goods_card_v2",
+                                  "ads_engage_bar",
+                                  "challenge_card",
+                                  "cooperate_engage_bar",
+                                  "guide_post",
+                                  "pgy_comment_component",
+                                  "pgy_engage_bar",
+                                  "bar_below_image",
+                                  "aigc_collection",
+                                  "co_produce",
+                                  "widgets_ndb",
+                                  "next_note_guide",
+                                  "pgy_bbc_exp",
+                                  "async_group",
+                                  "super_activity",
+                                  "widgets_enhance",
+                                  "music_player",
+                                  "soundtrack_player"
+                                ],
+                                "mode": 1
+                              },
+                              {
+                                "fetch_types": [
+                                  "guos_test",
+                                  "vote_stickers",
+                                  "bullet_comment_lead",
+                                  "note_search_box",
+                                  "interact_pk",
+                                  "interact_vote",
+                                  "guide_heuristic",
+                                  "share_to_msg",
+                                  "follow_guide",
+                                  "note_share_prompt_v1",
+                                  "sync_group",
+                                  "group_share",
+                                  "share_guide_bubble",
+                                  "widgets_share",
+                                  "guide_navigator"
+                                ],
+                                "mode": 0
+                              }
+                            ]
+                          },
+                          "collected": false,
+                          "collected_count": 44,
+                          "comments_count": 312,
+                          "corner_tag_info": [
+                            {
+                              "icon": "",
+                              "location": -1,
+                              "style": 0,
+                              "text": "RAAKQk+pQeIQ73N8eGiaaM6ZaBtPxiliANL8ptmd+RqQ7UaksoI8Y4z90/DTLBnLKsn6yn9XiXP63mUGGtLHO2kqOkJquGLZ4H",
+                              "text_en": "",
+                              "type": "ubt_sig_token"
+                            },
+                            {
+                              "icon": "http://picasso-static.xiaohongshu.com/fe-platform/e9b67af62f67d9d6cfac936f96ad10a85fdb868e.png",
+                              "location": 5,
+                              "style": 0,
+                              "text": "昨天 18:15",
+                              "text_en": "Yesterday 18:15",
+                              "type": "publish_time"
+                            }
+                          ],
+                          "cover_image_index": 0,
+                          "debug_info_str": "",
+                          "desc": "邵氏澳門一天遊！如果不只是工作，公司請我們全部人去旅行就太好了",
+                          "extract_text_enabled": 0,
+                          "geo_info": {
+                            "distance": ""
+                          },
+                          "has_music": false,
+                          "id": "69dcc256000000001a0263cf",
+                          "images_list": [
+                            {
+                              "fileid": "notes_pre_post/1040g3k831ut8tahc2i705o8hv61087m0a0h03n8",
+                              "height": 7008,
+                              "need_load_original_image": false,
+                              "original": "",
+                              "trace_id": "notes_pre_post/1040g3k831ut8tahc2i705o8hv61087m0a0h03n8",
+                              "url": "https://sns-na-i11.xhscdn.com/notes_pre_post/1040g3k831ut8tahc2i705o8hv61087m0a0h03n8?imageView2/2/w/578/format/heif/q/58|imageMogr2/strip&redImage/frame/0/enhance/4&ap=5&sc=SRH_PRV&sign=aa818726d05d85236b984b5ec9709239&t=69de03ac&origin=1",
+                              "url_size_large": "https://sns-na-i11.xhscdn.com/notes_pre_post/1040g3k831ut8tahc2i705o8hv61087m0a0h03n8?imageView2/2/w/1440/format/heif/q/45&redImage/frame/0&ap=5&sc=SRH_DTL&sign=aa818726d05d85236b984b5ec9709239&t=69de03ac&origin=1",
+                              "width": 4672
+                            },
+                            {
+                              "fileid": "notes_pre_post/1040g3k831ut8tahc2i7g5o8hv61087m01kj7eh8",
+                              "height": 7008,
+                              "need_load_original_image": false,
+                              "original": "",
+                              "trace_id": "notes_pre_post/1040g3k831ut8tahc2i7g5o8hv61087m01kj7eh8",
+                              "url": "",
+                              "url_size_large": "https://sns-na-i11.xhscdn.com/notes_pre_post/1040g3k831ut8tahc2i7g5o8hv61087m01kj7eh8?imageView2/2/w/1440/format/heif/q/45&redImage/frame/0&ap=5&sc=SRH_DTL&sign=b5694f8f89561d423fbc831849077180&t=69de03ac&origin=1",
+                              "width": 4672
+                            },
+                            {
+                              "fileid": "notes_pre_post/1040g3k831ut8tahc2i805o8hv61087m0teb7s1o",
+                              "height": 7008,
+                              "need_load_original_image": false,
+                              "original": "",
+                              "trace_id": "notes_pre_post/1040g3k831ut8tahc2i805o8hv61087m0teb7s1o",
+                              "url": "",
+                              "url_size_large": "https://sns-na-i11.xhscdn.com/notes_pre_post/1040g3k831ut8tahc2i805o8hv61087m0teb7s1o?imageView2/2/w/1440/format/heif/q/45&redImage/frame/0&ap=5&sc=SRH_DTL&sign=26600b720ac098dbc32bdd24828d18d1&t=69de03ac&origin=1",
+                              "width": 4672
+                            },
+                            {
+                              "fileid": "notes_pre_post/1040g3k831ut8tahc2i8g5o8hv61087m0mi97dio",
+                              "height": 7033,
+                              "need_load_original_image": false,
+                              "original": "",
+                              "trace_id": "notes_pre_post/1040g3k831ut8tahc2i8g5o8hv61087m0mi97dio",
+                              "url": "",
+                              "url_size_large": "https://sns-na-i11.xhscdn.com/notes_pre_post/1040g3k831ut8tahc2i8g5o8hv61087m0mi97dio?imageView2/2/w/1440/format/heif/q/45&redImage/frame/0&ap=5&sc=SRH_DTL&sign=1bcf5fbe89dd74d6c771fc80d5bb686c&t=69de03ac&origin=1",
+                              "width": 4672
+                            },
+                            {
+                              "fileid": "notes_pre_post/1040g3k831ut8tahc2i905o8hv61087m0esjrvd8",
+                              "height": 3944,
+                              "need_load_original_image": false,
+                              "original": "",
+                              "trace_id": "notes_pre_post/1040g3k831ut8tahc2i905o8hv61087m0esjrvd8",
+                              "url": "",
+                              "url_size_large": "https://sns-na-i11.xhscdn.com/notes_pre_post/1040g3k831ut8tahc2i905o8hv61087m0esjrvd8?imageView2/2/w/1440/format/heif/q/45&redImage/frame/0&ap=5&sc=SRH_DTL&sign=89ef5ffff80b6ccd0c931c86a56b6aeb&t=69de03ac&origin=1",
+                              "width": 7008
+                            },
+                            {
+                              "fileid": "notes_pre_post/1040g3k831ut8tahc2i9g5o8hv61087m06brhato",
+                              "height": 3944,
+                              "need_load_original_image": false,
+                              "original": "",
+                              "trace_id": "notes_pre_post/1040g3k831ut8tahc2i9g5o8hv61087m06brhato",
+                              "url": "",
+                              "url_size_large": "https://sns-na-i11.xhscdn.com/notes_pre_post/1040g3k831ut8tahc2i9g5o8hv61087m06brhato?imageView2/2/w/1440/format/heif/q/45&redImage/frame/0&ap=5&sc=SRH_DTL&sign=b5745fa1aed45d172373dcfc6a201620&t=69de03ac&origin=1",
+                              "width": 7008
+                            },
+                            {
+                              "fileid": "notes_pre_post/1040g3k831ut8tahc2ia05o8hv61087m07j92emg",
+                              "height": 3944,
+                              "need_load_original_image": false,
+                              "original": "",
+                              "trace_id": "notes_pre_post/1040g3k831ut8tahc2ia05o8hv61087m07j92emg",
+                              "url": "",
+                              "url_size_large": "https://sns-na-i11.xhscdn.com/notes_pre_post/1040g3k831ut8tahc2ia05o8hv61087m07j92emg?imageView2/2/w/1440/format/heif/q/45&redImage/frame/0&ap=5&sc=SRH_DTL&sign=0afb9077df5b69992dba5df4507c2bde&t=69de03ac&origin=1",
+                              "width": 7008
+                            }
+                          ],
+                          "interaction_area": {
+                            "status": false,
+                            "text": "1370",
+                            "type": 1
+                          },
+                          "last_update_time": 0,
+                          "liked": false,
+                          "liked_count": 1370,
+                          "nice_count": 0,
+                          "niced": false,
+                          "note_attributes": [],
+                          "result_from": "",
+                          "shared_count": 37,
+                          "tag_info": {
+                            "title": "",
+                            "type": ""
+                          },
+                          "timestamp": 1776075350,
+                          "title": "許願池 🙏",
+                          "type": "normal",
+                          "update_time": 1776075396000,
+                          "user": {
+                            "followed": false,
+                            "images": "https://sns-avatar-qc.xhscdn.com/avatar/65a514fc3b5b7c3e3f9e5f14.jpg?imageView2/2/w/80/format/jpg",
+                            "nickname": "黃宗澤Bosco",
+                            "red_id": "Bosco_Wong",
+                            "red_official_verified": false,
+                            "red_official_verify_type": 0,
+                            "show_red_official_verify_icon": false,
+                            "track_duration": 0,
+                            "userid": "6111f9820000000001001ec0"
+                          },
+                          "widgets_context": "{\"flags\":{},\"author_id\":\"6111f9820000000001001ec0\",\"author_name\":\"黃宗澤Bosco\"}",
+                          "xsec_token": "YBOYKH8yM0QOtx7SeBSuPPxOVMj_SsU_SIvtC2OdGeky0="
+                        }
+                      }
+                    ],
+                    "query_debug_info": {
+                      "is_forbidden": false
+                    },
+                    "query_intent": {
+                      "goodsIntent": 0,
+                      "low_supply_intent": false,
+                      "search_ask_intent": false
+                    },
+                    "query_type": 0,
+                    "request_dqa": 0,
+                    "request_dqa_instant": true,
+                    "search_dqa_new_page_exp": 1,
+                    "search_pull_down_opt_exp": 1,
+                    "search_request_id": "479005745075325f",
+                    "service_status": "{\"filter\":\"not_required\",\"note\":\"success\",\"onebox\":\"not_required\",\"cost\":{\"all\":562,\"zone\":\"rcsh1\"}}",
+                    "show_single_col": false,
+                    "strategy_info": {
+                      "query_average_impression_count": 19,
+                      "query_can_guide_to_feed": true
+                    }
+                  }
+                }
+              }
             },
             "description": "default response"
           }
