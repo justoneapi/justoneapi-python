@@ -72,7 +72,7 @@ except BusinessError as exc:
 
 注册链接：
 
-- [注册获取 Token](https://dashboard.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
+- [注册获取 Token](https://dashboard.justoneapi.com/zh/login?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
 
 ## 文档中心
 
