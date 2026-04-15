@@ -70,7 +70,7 @@ All API requests require a valid API token.
 
 Register here:
 
-- [Get API Token](https://dashboard.justoneapi.com/en?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
+- [Get API Token](https://dashboard.justoneapi.com/en/login?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme)
 
 ## Documentation
 
