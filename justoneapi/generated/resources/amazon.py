@@ -81,7 +81,7 @@ class AmazonResource(BaseResource):
             },
         )
 
-    def get_products_by_category_v1(
+    def get_category_products_v1(
         self,
         *,
         category_id: str,

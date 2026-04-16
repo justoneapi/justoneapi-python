@@ -803,7 +803,7 @@
         ],
         "x-order": "29001300",
         "x-sdk-class-name": "AmazonResource",
-        "x-sdk-method-name": "get_products_by_category_v1",
+        "x-sdk-method-name": "get_category_products_v1",
         "x-sdk-resource": "amazon"
       }
     },
@@ -3293,7 +3293,7 @@
         ],
         "x-order": 18001700,
         "x-sdk-class-name": "BilibiliResource",
-        "x-sdk-method-name": "get_user_relation_stat",
+        "x-sdk-method-name": "get_user_relation_stat_v1",
         "x-sdk-resource": "bilibili"
       }
     },
@@ -3496,7 +3496,7 @@
         ],
         "x-order": 18001800,
         "x-sdk-class-name": "BilibiliResource",
-        "x-sdk-method-name": "get_video_caption_v1",
+        "x-sdk-method-name": "get_video_caption_v2",
         "x-sdk-resource": "bilibili"
       }
     },
@@ -7377,7 +7377,7 @@
         ],
         "x-order": "21001100",
         "x-sdk-class-name": "DoubanResource",
-        "x-sdk-method-name": "get_movie_review_details_v1",
+        "x-sdk-method-name": "get_movie_review_detail_v1",
         "x-sdk-resource": "douban"
       }
     },
@@ -9055,7 +9055,7 @@
         ],
         "x-order": "15005100",
         "x-sdk-class-name": "DouyinXingtuResource",
-        "x-sdk-method-name": "get_author_commerce_seeding_base_info_v1",
+        "x-sdk-method-name": "get_author_commerce_seed_base_info_v1",
         "x-sdk-resource": "douyin_xingtu"
       }
     },
@@ -24993,7 +24993,7 @@
         ],
         "x-order": "30001000",
         "x-sdk-class-name": "FacebookResource",
-        "x-sdk-method-name": "search_v1",
+        "x-sdk-method-name": "search_post_v1",
         "x-sdk-resource": "facebook"
       }
     },
@@ -27911,7 +27911,7 @@
         ],
         "x-order": 34002400,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "main_search_query",
+        "x-sdk-method-name": "main_search_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -28027,7 +28027,7 @@
         ],
         "x-order": 34002600,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "news_by_category_query",
+        "x-sdk-method-name": "news_by_category_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -28269,7 +28269,7 @@
         ],
         "x-order": 34002500,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "streaming_picks_query",
+        "x-sdk-method-name": "streaming_picks_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -28355,7 +28355,7 @@
         ],
         "x-order": 34001700,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_awards_summary_query",
+        "x-sdk-method-name": "title_awards_summary_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -28482,7 +28482,7 @@
         ],
         "x-order": 34001300,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_base_query",
+        "x-sdk-method-name": "title_base_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -28607,7 +28607,7 @@
         ],
         "x-order": 34002200,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_box_office_summary",
+        "x-sdk-method-name": "title_box_office_summary_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -28759,7 +28759,7 @@
         ],
         "x-order": 34002700,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_chart_rankings",
+        "x-sdk-method-name": "title_chart_rankings_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -28887,7 +28887,7 @@
         ],
         "x-order": 34002000,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_contribution_questions",
+        "x-sdk-method-name": "title_contribution_questions_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -28972,7 +28972,7 @@
         ],
         "x-order": 34002800,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_countries_of_origin",
+        "x-sdk-method-name": "title_countries_of_origin_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -29223,7 +29223,7 @@
         ],
         "x-order": 34001600,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_critics_review_summary_query",
+        "x-sdk-method-name": "title_critics_review_summary_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -29498,7 +29498,7 @@
         ],
         "x-order": 34002100,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_details_query",
+        "x-sdk-method-name": "title_details_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -29698,7 +29698,7 @@
         ],
         "x-order": 34001500,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_did_you_know_query",
+        "x-sdk-method-name": "title_did_you_know_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -29901,7 +29901,7 @@
         ],
         "x-order": 34001100,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_extended_details_query",
+        "x-sdk-method-name": "title_extended_details_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -30066,7 +30066,7 @@
         ],
         "x-order": 34002300,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_more_like_this_query",
+        "x-sdk-method-name": "title_more_like_this_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -30164,7 +30164,7 @@
         ],
         "x-order": 34001900,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_plot_query",
+        "x-sdk-method-name": "title_plot_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -31982,7 +31982,7 @@
         ],
         "x-order": 34001400,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_redux_overview_query",
+        "x-sdk-method-name": "title_redux_overview_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -33161,7 +33161,7 @@
         ],
         "x-order": 34001000,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_release_expectation_query",
+        "x-sdk-method-name": "title_release_expectation_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -33751,7 +33751,7 @@
         ],
         "x-order": 34001200,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_top_cast_and_crew",
+        "x-sdk-method-name": "title_top_cast_and_crew_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -33988,7 +33988,7 @@
         ],
         "x-order": 34001800,
         "x-sdk-class-name": "ImdbResource",
-        "x-sdk-method-name": "title_user_reviews_summary_query",
+        "x-sdk-method-name": "title_user_reviews_summary_query_v1",
         "x-sdk-resource": "imdb"
       }
     },
@@ -37538,7 +37538,7 @@
         ],
         "x-order": "16001400",
         "x-sdk-class-name": "KuaishouResource",
-        "x-sdk-method-name": "get_user_profile_v1",
+        "x-sdk-method-name": "get_user_detail_v1",
         "x-sdk-resource": "kuaishou"
       }
     },
@@ -39706,7 +39706,7 @@
         ],
         "x-order": "16001600",
         "x-sdk-class-name": "KuaishouResource",
-        "x-sdk-method-name": "get_video_comments_v1",
+        "x-sdk-method-name": "get_video_comment_v1",
         "x-sdk-resource": "kuaishou"
       }
     },
@@ -40124,7 +40124,7 @@
         ],
         "x-order": "16001200",
         "x-sdk-class-name": "KuaishouResource",
-        "x-sdk-method-name": "get_video_details_v2",
+        "x-sdk-method-name": "get_video_detail_v2",
         "x-sdk-resource": "kuaishou"
       }
     },
@@ -41625,7 +41625,7 @@
         ],
         "x-order": "16001500",
         "x-sdk-class-name": "KuaishouResource",
-        "x-sdk-method-name": "share_link_resolution_v1",
+        "x-sdk-method-name": "share_url_transfer_v1",
         "x-sdk-resource": "kuaishou"
       }
     },
@@ -57766,7 +57766,7 @@
         ],
         "x-order": "17001200",
         "x-sdk-class-name": "WeiboResource",
-        "x-sdk-method-name": "get_user_profile_v3",
+        "x-sdk-method-name": "get_user_detail_v3",
         "x-sdk-resource": "weibo"
       }
     },
@@ -58537,7 +58537,7 @@
         ],
         "x-order": "17001500",
         "x-sdk-class-name": "WeiboResource",
-        "x-sdk-method-name": "get_user_published_posts_v1",
+        "x-sdk-method-name": "get_user_post_v1",
         "x-sdk-resource": "weibo"
       }
     },
@@ -58834,7 +58834,7 @@
         ],
         "x-order": "17001100",
         "x-sdk-class-name": "WeiboResource",
-        "x-sdk-method-name": "get_weibo_details_v1",
+        "x-sdk-method-name": "get_weibo_detail_v1",
         "x-sdk-resource": "weibo"
       }
     },
@@ -60244,7 +60244,7 @@
         ],
         "x-order": 20001200,
         "x-sdk-class-name": "WeixinResource",
-        "x-sdk-method-name": "get_article_comment",
+        "x-sdk-method-name": "get_article_comment_v1",
         "x-sdk-resource": "weixin"
       }
     },
@@ -60347,7 +60347,7 @@
         ],
         "x-order": 20001100,
         "x-sdk-class-name": "WeixinResource",
-        "x-sdk-method-name": "get_article_feedback",
+        "x-sdk-method-name": "get_article_feedback_v1",
         "x-sdk-resource": "weixin"
       }
     },
@@ -60504,7 +60504,7 @@
         ],
         "x-order": 20001000,
         "x-sdk-class-name": "WeixinResource",
-        "x-sdk-method-name": "get_user_post",
+        "x-sdk-method-name": "get_user_post_v1",
         "x-sdk-resource": "weixin"
       }
     },
@@ -63242,7 +63242,7 @@
         ],
         "x-order": "13003400",
         "x-sdk-class-name": "XiaohongshuPgyResource",
-        "x-sdk-method-name": "get_kol_data_core_v1",
+        "x-sdk-method-name": "get_kol_core_data_v1",
         "x-sdk-resource": "xiaohongshu_pgy"
       }
     },
@@ -68675,7 +68675,7 @@
         ],
         "x-order": "12002000",
         "x-sdk-class-name": "XiaohongshuResource",
-        "x-sdk-method-name": "get_search_note_v2",
+        "x-sdk-method-name": "search_note_v2",
         "x-sdk-resource": "xiaohongshu"
       }
     },
@@ -68998,7 +68998,7 @@
         ],
         "x-order": "12002100",
         "x-sdk-class-name": "XiaohongshuResource",
-        "x-sdk-method-name": "get_search_note_v3",
+        "x-sdk-method-name": "search_note_v3",
         "x-sdk-resource": "xiaohongshu"
       }
     },
@@ -69802,7 +69802,7 @@
         ],
         "x-order": "12002200",
         "x-sdk-class-name": "XiaohongshuResource",
-        "x-sdk-method-name": "get_search_user_v2",
+        "x-sdk-method-name": "search_user_v2",
         "x-sdk-resource": "xiaohongshu"
       }
     },

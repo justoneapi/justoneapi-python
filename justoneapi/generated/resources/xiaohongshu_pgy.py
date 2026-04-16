@@ -630,7 +630,7 @@ class XiaohongshuPgyResource(BaseResource):
             },
         )
 
-    def get_kol_data_core_v1(
+    def get_kol_core_data_v1(
         self,
         *,
         kol_id: str,

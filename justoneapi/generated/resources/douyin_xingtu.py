@@ -1160,7 +1160,7 @@ class DouyinXingtuResource(BaseResource):
             },
         )
 
-    def get_author_commerce_seeding_base_info_v1(
+    def get_author_commerce_seed_base_info_v1(
         self,
         *,
         kol_id: str,

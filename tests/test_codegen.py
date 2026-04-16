@@ -90,3 +90,36 @@ def test_diff_summary_reports_operation_changes():
     assert "demoV2 [GET /api/demo/v2]" in summary
     assert "demoV1 [GET /api/demo/v1]" in summary
     assert "Changed operationId count: 1" in summary
+
+
+def test_normalize_spec_derives_method_name_from_path():
+    spec = {
+        "paths": {
+            "/api/demo/v1": {"get": {"operationId": "stillWrong"}},
+            "/api/demo/path-derived/v1": {"get": {"operationId": "totallyWrongMethod"}},
+            "/api/demo/nested/child/v2": {"get": {"operationId": "anotherBadNameV9"}},
+            "/api/demo/get-kol-show-items-v2/v1": {
+                "get": {"operationId": "irrelevantOperationId"}
+            },
+        }
+    }
+
+    normalized = normalize_spec(spec, {})
+
+    assert (
+        normalized["paths"]["/api/demo/v1"]["get"]["x-sdk-method-name"] == "demo_v1"
+    )
+    assert (
+        normalized["paths"]["/api/demo/path-derived/v1"]["get"]["x-sdk-method-name"]
+        == "path_derived_v1"
+    )
+    assert (
+        normalized["paths"]["/api/demo/nested/child/v2"]["get"]["x-sdk-method-name"]
+        == "nested_child_v2"
+    )
+    assert (
+        normalized["paths"]["/api/demo/get-kol-show-items-v2/v1"]["get"][
+            "x-sdk-method-name"
+        ]
+        == "get_kol_show_items_v2_v1"
+    )

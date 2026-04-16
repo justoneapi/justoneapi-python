@@ -9,7 +9,7 @@ from justoneapi._response import ApiResponse
 class WeixinResource(BaseResource):
     """Generated resource for WeChat Official Accounts."""
 
-    def get_user_post(
+    def get_user_post_v1(
         self,
         *,
         wxid: str,
@@ -29,7 +29,7 @@ class WeixinResource(BaseResource):
             },
         )
 
-    def get_article_feedback(
+    def get_article_feedback_v1(
         self,
         *,
         article_url: str,
@@ -49,7 +49,7 @@ class WeixinResource(BaseResource):
             },
         )
 
-    def get_article_comment(
+    def get_article_comment_v1(
         self,
         *,
         article_url: str,

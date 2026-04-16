@@ -84,6 +84,7 @@ def fetch_openapi(url: str, username: str, password: str) -> dict[str, Any]:
 _CAMEL_BOUNDARY_1 = re.compile(r"(.)([A-Z][a-z]+)")
 _CAMEL_BOUNDARY_2 = re.compile(r"([a-z0-9])([A-Z])")
 _NON_IDENTIFIER = re.compile(r"[^0-9a-zA-Z_]")
+_VERSION_SEGMENT = re.compile(r"v\d+$")
 
 
 def camel_to_snake(value: str) -> str:
@@ -146,6 +147,14 @@ def namespace_from_path(path: str, overrides: dict[str, Any]) -> str:
     return to_python_identifier(resource_names.get(prefix, prefix.replace("-", "_")))
 
 
+def method_name_from_path(path: str) -> str:
+    parts = [part for part in path.split("/") if part]
+    method_parts = parts[2:]
+    if len(method_parts) == 1 and _VERSION_SEGMENT.fullmatch(method_parts[0]):
+        method_parts = [parts[1], method_parts[0]]
+    return to_python_identifier("_".join(method_parts))
+
+
 def operation_order(operation: dict[str, Any]) -> int:
     raw_order = operation.get("x-order")
     if raw_order is None:
@@ -179,7 +188,7 @@ def normalize_spec(spec: dict[str, Any], overrides: dict[str, Any]) -> dict[str,
                 raise ValueError(f"Missing operationId for {method.upper()} {path}")
 
             namespace = namespace_from_path(path, overrides)
-            method_name = to_python_identifier(operation_id)
+            method_name = method_name_from_path(path)
             resource_method = (namespace, method_name)
             if resource_method in seen_resource_methods:
                 raise ValueError(

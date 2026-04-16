@@ -34,6 +34,11 @@ def test_client_exposes_generated_resources():
         assert type(client.douyin_xingtu).__name__ == "DouyinXingtuResource"
         assert type(client.xiaohongshu_pgy).__name__ == "XiaohongshuPgyResource"
         assert hasattr(client.search, "search_v1")
+        assert hasattr(client.weixin, "get_article_comment_v1")
+        assert hasattr(client.weixin, "get_article_feedback_v1")
+        assert hasattr(client.weixin, "get_user_post_v1")
+        assert hasattr(client.bilibili, "get_user_relation_stat_v1")
+        assert hasattr(client.bilibili, "get_video_caption_v2")
         assert hasattr(client.douyin, "get_video_detail_v2")
         assert hasattr(client.twitter, "get_user_posts_v1")
     finally:

@@ -55,7 +55,7 @@ class KuaishouResource(BaseResource):
             },
         )
 
-    def get_video_details_v2(
+    def get_video_detail_v2(
         self,
         *,
         video_id: str,
@@ -98,7 +98,7 @@ class KuaishouResource(BaseResource):
             },
         )
 
-    def get_user_profile_v1(
+    def get_user_detail_v1(
         self,
         *,
         user_id: str,
@@ -118,7 +118,7 @@ class KuaishouResource(BaseResource):
             },
         )
 
-    def share_link_resolution_v1(
+    def share_url_transfer_v1(
         self,
         *,
         share_url: str,
@@ -138,7 +138,7 @@ class KuaishouResource(BaseResource):
             },
         )
 
-    def get_video_comments_v1(
+    def get_video_comment_v1(
         self,
         *,
         video_id: str,

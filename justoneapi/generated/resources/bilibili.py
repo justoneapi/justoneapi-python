@@ -167,7 +167,7 @@ class BilibiliResource(BaseResource):
             },
         )
 
-    def get_user_relation_stat(
+    def get_user_relation_stat_v1(
         self,
         *,
         wmid: str,
@@ -187,7 +187,7 @@ class BilibiliResource(BaseResource):
             },
         )
 
-    def get_video_caption_v1(
+    def get_video_caption_v2(
         self,
         *,
         bvid: str,

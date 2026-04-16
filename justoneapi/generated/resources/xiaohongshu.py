@@ -227,7 +227,7 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
-    def get_search_note_v2(
+    def search_note_v2(
         self,
         *,
         keyword: str,
@@ -259,7 +259,7 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
-    def get_search_note_v3(
+    def search_note_v3(
         self,
         *,
         keyword: str,
@@ -288,7 +288,7 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
-    def get_search_user_v2(
+    def search_user_v2(
         self,
         *,
         keyword: str,

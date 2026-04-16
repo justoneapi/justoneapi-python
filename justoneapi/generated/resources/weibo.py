@@ -50,7 +50,7 @@ class WeiboResource(BaseResource):
             },
         )
 
-    def get_weibo_details_v1(
+    def get_weibo_detail_v1(
         self,
         *,
         id_: str,
@@ -70,7 +70,7 @@ class WeiboResource(BaseResource):
             },
         )
 
-    def get_user_profile_v3(
+    def get_user_detail_v3(
         self,
         *,
         uid: str,
@@ -136,7 +136,7 @@ class WeiboResource(BaseResource):
             },
         )
 
-    def get_user_published_posts_v1(
+    def get_user_post_v1(
         self,
         *,
         uid: str,

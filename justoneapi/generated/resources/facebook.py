@@ -9,7 +9,7 @@ from justoneapi._response import ApiResponse
 class FacebookResource(BaseResource):
     """Generated resource for Facebook."""
 
-    def search_v1(
+    def search_post_v1(
         self,
         *,
         keyword: str,

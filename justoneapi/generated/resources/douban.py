@@ -35,7 +35,7 @@ class DoubanResource(BaseResource):
             },
         )
 
-    def get_movie_review_details_v1(
+    def get_movie_review_detail_v1(
         self,
         *,
         review_id: str,

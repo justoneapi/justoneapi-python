@@ -9,7 +9,7 @@ from justoneapi._response import ApiResponse
 class ImdbResource(BaseResource):
     """Generated resource for IMDb."""
 
-    def title_release_expectation_query(
+    def title_release_expectation_query_v1(
         self,
         *,
         id_: str,
@@ -35,7 +35,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_extended_details_query(
+    def title_extended_details_query_v1(
         self,
         *,
         id_: str,
@@ -58,7 +58,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_top_cast_and_crew(
+    def title_top_cast_and_crew_v1(
         self,
         *,
         id_: str,
@@ -81,7 +81,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_base_query(
+    def title_base_query_v1(
         self,
         *,
         id_: str,
@@ -104,7 +104,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_redux_overview_query(
+    def title_redux_overview_query_v1(
         self,
         *,
         id_: str,
@@ -127,7 +127,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_did_you_know_query(
+    def title_did_you_know_query_v1(
         self,
         *,
         id_: str,
@@ -150,7 +150,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_critics_review_summary_query(
+    def title_critics_review_summary_query_v1(
         self,
         *,
         id_: str,
@@ -173,7 +173,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_awards_summary_query(
+    def title_awards_summary_query_v1(
         self,
         *,
         id_: str,
@@ -196,7 +196,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_user_reviews_summary_query(
+    def title_user_reviews_summary_query_v1(
         self,
         *,
         id_: str,
@@ -219,7 +219,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_plot_query(
+    def title_plot_query_v1(
         self,
         *,
         id_: str,
@@ -242,7 +242,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_contribution_questions(
+    def title_contribution_questions_v1(
         self,
         *,
         id_: str,
@@ -265,7 +265,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_details_query(
+    def title_details_query_v1(
         self,
         *,
         id_: str,
@@ -288,7 +288,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_box_office_summary(
+    def title_box_office_summary_v1(
         self,
         *,
         id_: str,
@@ -311,7 +311,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_more_like_this_query(
+    def title_more_like_this_query_v1(
         self,
         *,
         id_: str,
@@ -334,7 +334,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def main_search_query(
+    def main_search_query_v1(
         self,
         *,
         search_term: str,
@@ -363,7 +363,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def streaming_picks_query(
+    def streaming_picks_query_v1(
         self,
         *,
         language_country: str | None = "en_US",
@@ -383,7 +383,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def news_by_category_query(
+    def news_by_category_query_v1(
         self,
         *,
         category: str,
@@ -406,7 +406,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_chart_rankings(
+    def title_chart_rankings_v1(
         self,
         *,
         rankings_chart_type: str,
@@ -429,7 +429,7 @@ class ImdbResource(BaseResource):
             },
         )
 
-    def title_countries_of_origin(
+    def title_countries_of_origin_v1(
         self,
         *,
         id_: str,
