@@ -171,9 +171,9 @@ class XiaohongshuPgyResource(BaseResource):
         advertise_switch: str | None = "ALL",
     ) -> ApiResponse[Any]:
         """
-        Note Performance Rates
+        Note Performance Metrics
 
-        Get Xiaohongshu Creator Marketplace (Pugongying) note Performance Rates data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.
+        Get Xiaohongshu Creator Marketplace (Pugongying) note performance metrics data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.
 
         Args:
             user_id: KOL's user ID.
@@ -234,9 +234,9 @@ class XiaohongshuPgyResource(BaseResource):
         user_id: str,
     ) -> ApiResponse[Any]:
         """
-        Follower Profile
+        Follower Distribution
 
-        Get Xiaohongshu Creator Marketplace (Pugongying) follower Profile data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             user_id: KOL's user ID.
@@ -398,9 +398,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Note Performance Rates
+        Note Performance Metrics
 
-        Get Xiaohongshu Creator Marketplace (Pugongying) note Performance Rates data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.
+        Get Xiaohongshu Creator Marketplace (Pugongying) note performance metrics data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.
 
         Args:
             kol_id: KOL ID.
@@ -429,9 +429,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Follower Profile
+        Follower Distribution
 
-        Get Xiaohongshu Creator Marketplace (Pugongying) follower Profile data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             kol_id: KOL ID.
@@ -452,9 +452,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Follower Analysis
+        Follower Summary
 
-        Get Xiaohongshu Creator Marketplace (Pugongying) follower Analysis data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and creator benchmarking.
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower summary data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             kol_id: KOL ID.
@@ -477,9 +477,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Follower Growth Trend
+        Follower Growth History
 
-        Get Xiaohongshu Creator Marketplace (Pugongying) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and creator benchmarking.
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower growth history data, including historical audience changes over time, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             kol_id: KOL ID.
@@ -540,9 +540,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Creator Performance Overview
+        Data Summary
 
-        Get Xiaohongshu Creator Marketplace (Pugongying) creator Performance Overview data, including audience, content performance, and commercial indicators, for quick evaluation.
+        Get Xiaohongshu Creator Marketplace (Pugongying) summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             kol_id: KOL ID.
@@ -566,9 +566,9 @@ class XiaohongshuPgyResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Creator Performance Overview
+        Data Summary
 
-        Get Xiaohongshu Creator Marketplace (Pugongying) creator Performance Overview data, including audience, content performance, and commercial indicators, for quick evaluation.
+        Get Xiaohongshu Creator Marketplace (Pugongying) summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.
 
         Args:
             kol_id: KOL ID.
