@@ -8978,6 +8978,7 @@
     },
     "/api/douyin-xingtu/get-author-commerce-seed-base-info/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.",
         "operationId": "getAuthorCommerceSeedingBaseInfoV1",
         "parameters": [
@@ -9060,6 +9061,7 @@
     },
     "/api/douyin-xingtu/get-author-commerce-spread-info/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.",
         "operationId": "getAuthorCommerceSpreadInfoV1",
         "parameters": [
@@ -9136,6 +9138,7 @@
     },
     "/api/douyin-xingtu/get-author-content-hot-keywords/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.",
         "operationId": "getAuthorContentHotKeywordsV1",
         "parameters": [
@@ -9209,6 +9212,7 @@
     },
     "/api/douyin-xingtu/get-author-hot-comment-tokens/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.",
         "operationId": "getAuthorHotCommentTokensV1",
         "parameters": [
@@ -10037,6 +10041,7 @@
     },
     "/api/douyin-xingtu/get-kol-daily-fans/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and marketplace research.",
         "operationId": "getKolDailyFansV1",
         "parameters": [
@@ -10373,7 +10378,7 @@
     "/api/douyin-xingtu/get-kol-fans-distribution/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Douyin Creator Marketplace (Xingtu) follower Profile data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and marketplace research.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and marketplace research.",
         "operationId": "getKolFansDistributionV1",
         "parameters": [
           {
@@ -10849,7 +10854,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Follower Profile",
+        "summary": "Follower Distribution",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -11220,7 +11225,7 @@
     "/api/douyin-xingtu/get-kol-marketing-info/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Douyin Creator Marketplace (Xingtu) marketing Rates data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) marketing metrics data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.",
         "operationId": "getKolMarketingInfoV1",
         "parameters": [
           {
@@ -11458,7 +11463,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Marketing Rates",
+        "summary": "Marketing Metrics",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -11471,7 +11476,7 @@
     "/api/douyin-xingtu/get-kol-rec-videos/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Douyin Creator Marketplace (Xingtu) kOL Content Performance data, including video performance metrics, for creator evaluation, campaign planning, and marketplace research.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) recommended videos data, including video performance metrics, for creator evaluation, campaign planning, and marketplace research.",
         "operationId": "getKolRecVideosV1",
         "parameters": [
           {
@@ -11808,7 +11813,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "KOL Content Performance",
+        "summary": "Recommended Videos",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -11821,7 +11826,7 @@
     "/api/douyin-xingtu/get-kol-show-items-v2/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Douyin Creator Marketplace (Xingtu) video Performance data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and marketplace research.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) showcase items data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and marketplace research.",
         "operationId": "getKolShowItemsV2V1",
         "parameters": [
           {
@@ -12317,7 +12322,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Video Performance",
+        "summary": "Showcase Items",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -12330,7 +12335,7 @@
     "/api/douyin-xingtu/get-kol-spread-info/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Douyin Creator Marketplace (Xingtu) creator Performance Overview data, including audience, content performance, and commercial indicators, for quick evaluation.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) spread metrics data, including audience, content performance, and commercial indicators, for quick evaluation.",
         "operationId": "getKolSpreadInfoV1",
         "parameters": [
           {
@@ -12481,7 +12486,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Creator Performance Overview",
+        "summary": "Spread Metrics",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -12494,7 +12499,7 @@
     "/api/douyin-xingtu/get-kol-touch-distribution/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Douyin Creator Marketplace (Xingtu) audience Source Distribution data, including segment breakdowns, audience composition, and distribution signals, for traffic analysis and existing integration compatibility.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) audience touchpoint distribution data, including segment breakdowns, audience composition, and distribution signals, for traffic analysis and existing integration compatibility.",
         "operationId": "getKolTouchDistributionV1",
         "parameters": [
           {
@@ -12648,7 +12653,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Audience Source Distribution",
+        "summary": "Audience Touchpoint Distribution",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -12716,6 +12721,148 @@
         "x-order": "15005200",
         "x-sdk-class-name": "DouyinXingtuResource",
         "x-sdk-method-name": "get_video_detail_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_seed_base_info/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.",
+        "operationId": "gwApiAggregatorGetAuthorCommerceSeedBaseInfoV1",
+        "parameters": [
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "o_author_id"
+          },
+          {
+            "description": "Time range.\n\nAvailable Values:\n- `DAY_30`: Last 30 days\n- `DAY_90`: Last 90 days",
+            "in": "query",
+            "name": "range",
+            "required": false,
+            "schema": {
+              "default": "DAY_90",
+              "description": "Time period",
+              "enum": [
+                "DAY_30",
+                "DAY_90"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "range"
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 0,
+                  "data": {
+                    "avg_a3_incr_cnt": "2,000 - 20,000",
+                    "avg_a3_incr_cnt_rank_percent": "0.5",
+                    "avg_search_after_view_cnt": "100 - 1,000",
+                    "avg_search_after_view_cnt_rank_percent": "0.5",
+                    "avg_search_after_view_rate": "<0.02%",
+                    "avg_search_after_view_rate_rank_percent": "0.25",
+                    "base_resp": {
+                      "status_code": 0,
+                      "status_message": ""
+                    },
+                    "modify_time": "1773061115",
+                    "personal_avg_search_after_view_cnt": "10 - 100",
+                    "personal_avg_search_after_view_cnt_rank_percent": "0.9",
+                    "personal_avg_search_after_view_rate": "<0.02%",
+                    "personal_search_word_ctr": "1%",
+                    "search_word_ctr": "1%"
+                  }
+                }
+              }
+            },
+            "description": "default response"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Author Commerce Seeding Base Info",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-order": "15003090",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "gw_api_aggregator_get_author_commerce_seed_base_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_spread_info/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.",
+        "operationId": "gwApiAggregatorGetAuthorCommerceSpreadInfoV1",
+        "parameters": [
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "o_author_id"
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 0,
+                  "data": {
+                    "base_resp": {
+                      "status_code": 0,
+                      "status_message": ""
+                    },
+                    "cpe_1_20": "1.0721",
+                    "cpe_20_60": "1.3908",
+                    "cpe_60": "1.5646",
+                    "cpm_1_20": "62.1926",
+                    "cpm_20_60": "80.6823",
+                    "cpm_20_60_rank_percent": "0.02210461512446066",
+                    "cpm_60": "90.7676",
+                    "modify_time": "1773059274",
+                    "sn_cpe_1_20": "2.0244",
+                    "sn_cpe_20_60": "2.6263",
+                    "sn_cpe_60": "2.9545",
+                    "sn_cpm_1_20": "94.435",
+                    "sn_cpm_20_60": "122.5102",
+                    "sn_cpm_60": "137.824",
+                    "sn_vv": "391804",
+                    "vv": "594926"
+                  }
+                }
+              }
+            },
+            "description": "default response"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Author Commerce Spread Info",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-order": "15003080",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "gw_api_aggregator_get_author_commerce_spread_info_v1",
         "x-sdk-resource": "douyin_xingtu"
       }
     },
@@ -12932,7 +13079,7 @@
     },
     "/api/douyin-xingtu/gw/api/author/get_author_marketing_info/v1": {
       "get": {
-        "description": "Get Douyin Creator Marketplace (Xingtu) marketing Rates data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) marketing metrics data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.",
         "operationId": "gwApiAuthorGetAuthorMarketingInfoV1",
         "parameters": [
           {
@@ -13161,7 +13308,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Marketing Rates",
+        "summary": "Marketing Metrics",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -13767,6 +13914,97 @@
         "x-order": "15002100",
         "x-sdk-class-name": "DouyinXingtuResource",
         "x-sdk-method-name": "gw_api_author_get_author_show_items_v2_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/data/get_author_hot_comment_tokens/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.",
+        "operationId": "gwApiDataGetAuthorHotCommentTokensV1",
+        "parameters": [
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "o_author_id"
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 0,
+                  "data": {
+                    "base_resp": {
+                      "status_code": 0,
+                      "status_message": "Success"
+                    },
+                    "hot_comment_tokens": [
+                      {
+                        "comment_token": "老板",
+                        "hot_rate": 934
+                      },
+                      {
+                        "comment_token": "员工",
+                        "hot_rate": 623
+                      },
+                      {
+                        "comment_token": "公司",
+                        "hot_rate": 617
+                      },
+                      {
+                        "comment_token": "笑总",
+                        "hot_rate": 294
+                      },
+                      {
+                        "comment_token": "视频",
+                        "hot_rate": 281
+                      },
+                      {
+                        "comment_token": "变态",
+                        "hot_rate": 236
+                      },
+                      {
+                        "comment_token": "资本家",
+                        "hot_rate": 195
+                      },
+                      {
+                        "comment_token": "阿尔法",
+                        "hot_rate": 183
+                      },
+                      {
+                        "comment_token": "广告",
+                        "hot_rate": 174
+                      },
+                      {
+                        "comment_token": "资本",
+                        "hot_rate": 148
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "description": "default response"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "KOL Comment Keyword Analysis",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-order": "15003050",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "gw_api_data_get_author_hot_comment_tokens_v1",
         "x-sdk-resource": "douyin_xingtu"
       }
     },
@@ -15384,6 +15622,75 @@
         "x-sdk-resource": "douyin_xingtu"
       }
     },
+    "/api/douyin-xingtu/gw/api/data_sp/get_author_daily_fans/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "gwApiDataSpGetAuthorDailyFansV1",
+        "parameters": [
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "o_author_id"
+          },
+          {
+            "description": "Start Date (yyyy-MM-dd).",
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "start_date"
+          },
+          {
+            "description": "End Date (yyyy-MM-dd).",
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "end_date"
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 0,
+                  "data": {
+                    "base_resp": {
+                      "status_code": 0,
+                      "status_message": ""
+                    }
+                  }
+                }
+              }
+            },
+            "description": "default response"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Follower Growth Trend",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-order": "15003060",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "gw_api_data_sp_get_author_daily_fans_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
     "/api/douyin-xingtu/gw/api/data_sp/get_author_fans_distribution/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) follower Distribution data, including audience segmentation and location and demographic breakdowns, for creator evaluation, campaign planning, and marketplace research.",
@@ -16019,7 +16326,7 @@
     },
     "/api/douyin-xingtu/gw/api/data_sp/get_author_spread_info/v1": {
       "get": {
-        "description": "Get Douyin Creator Marketplace (Xingtu) distribution Metrics data, including exposure, spread, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) spread metrics data, including exposure, spread, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.",
         "operationId": "gwApiDataSpGetAuthorSpreadInfoV1",
         "parameters": [
           {
@@ -16182,7 +16489,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Distribution Metrics",
+        "summary": "Spread Metrics",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -17777,13 +18084,64 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Item Report Trend",
+        "summary": "Item Report Trends",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-order": "15002800",
         "x-sdk-class-name": "DouyinXingtuResource",
         "x-sdk-method-name": "gw_api_data_sp_item_report_trend_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/gauthor/get_author_content_hot_keywords/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.",
+        "operationId": "gwApiGauthorGetAuthorContentHotKeywordsV1",
+        "parameters": [
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "o_author_id"
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 0,
+                  "data": {
+                    "base_resp": {
+                      "status_code": 0,
+                      "status_message": ""
+                    },
+                    "keyword_item_distribution": {},
+                    "keyword_map": {}
+                  }
+                }
+              }
+            },
+            "description": "default response"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "KOL Content Keyword Analysis",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-order": "15003070",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "gw_api_gauthor_get_author_content_hot_keywords_v1",
         "x-sdk-resource": "douyin_xingtu"
       }
     },
@@ -61170,7 +61528,7 @@
     },
     "/api/xiaohongshu-pgy/api/solar/kol/data/userId/fans_profile/v1": {
       "get": {
-        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower Profile data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.",
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.",
         "operationId": "apiSolarKolDataUserIdFansProfileV1",
         "parameters": [
           {
@@ -61548,7 +61906,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Follower Profile",
+        "summary": "Follower Distribution",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
@@ -62081,7 +62439,7 @@
     },
     "/api/xiaohongshu-pgy/api/solar/kol/dataV3/notesRate/v1": {
       "get": {
-        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note Performance Rates data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.",
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note performance metrics data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.",
         "operationId": "apiSolarKolDataV3NotesRateV1",
         "parameters": [
           {
@@ -62551,7 +62909,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Note Performance Rates",
+        "summary": "Note Performance Metrics",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
@@ -62947,7 +63305,7 @@
     "/api/xiaohongshu-pgy/get-kol-data-summary/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Performance Overview data, including audience, content performance, and commercial indicators, for quick evaluation.",
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.",
         "operationId": "getKolDataSummaryV1",
         "parameters": [
           {
@@ -63027,7 +63385,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Creator Performance Overview",
+        "summary": "Data Summary",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
@@ -63040,7 +63398,7 @@
     "/api/xiaohongshu-pgy/get-kol-data-summary/v2": {
       "get": {
         "deprecated": true,
-        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Performance Overview data, including audience, content performance, and commercial indicators, for quick evaluation.",
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.",
         "operationId": "getKolDataSummaryV2",
         "parameters": [
           {
@@ -63120,7 +63478,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Creator Performance Overview",
+        "summary": "Data Summary",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
@@ -63133,7 +63491,7 @@
     "/api/xiaohongshu-pgy/get-kol-fans-portrait/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower Profile data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.",
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.",
         "operationId": "getKolFansPortraitV1",
         "parameters": [
           {
@@ -63165,351 +63523,240 @@
                 "example": {
                   "code": 0,
                   "data": {
-                    "ages": [
-                      {
-                        "group": "<18",
-                        "percent": 0.020388213936601035
-                      },
-                      {
-                        "group": "18-24",
-                        "percent": 0.03546990643764837
-                      },
-                      {
-                        "group": "25-34",
-                        "percent": 0.27370478983382207
-                      },
-                      {
-                        "group": "35-44",
-                        "percent": 0.5362379555927943
-                      },
-                      {
-                        "group": ">44",
-                        "percent": 0.1341991341991342
-                      }
-                    ],
-                    "cities": [
-                      {
-                        "name": "北京",
-                        "percent": 0.05146438471736772
-                      },
-                      {
-                        "name": "上海",
-                        "percent": 0.03350608653730264
-                      },
-                      {
-                        "name": "深圳",
-                        "percent": 0.029046643365071713
-                      },
-                      {
-                        "name": "广州",
-                        "percent": 0.02579245510425455
-                      },
-                      {
-                        "name": "成都",
-                        "percent": 0.020971435458599495
-                      },
-                      {
-                        "name": "重庆",
-                        "percent": 0.018922502109196094
-                      },
-                      {
-                        "name": "武汉",
-                        "percent": 0.018560925635771965
-                      },
-                      {
-                        "name": "天津",
-                        "percent": 0.017355670724358202
-                      },
-                      {
-                        "name": "苏州",
-                        "percent": 0.017355670724358202
-                      }
-                    ],
-                    "dateKey": "2026-03-08",
-                    "devices": [
-                      {
-                        "desc": "苹果",
-                        "name": "apple inc.",
-                        "percent": 0.4340122936000964
-                      },
-                      {
-                        "desc": "华为",
-                        "name": "huawei",
-                        "percent": 0.2189948174038809
-                      },
-                      {
-                        "desc": "honor",
-                        "name": "honor",
-                        "percent": 0.07810051825961191
-                      },
-                      {
-                        "desc": "小米",
-                        "name": "xiaomi",
-                        "percent": 0.0776184162950464
-                      },
-                      {
-                        "desc": "vivo",
-                        "name": "vivo",
-                        "percent": 0.07725683982162228
-                      },
-                      {
-                        "desc": "oppo",
-                        "name": "oppo",
-                        "percent": 0.07159214173797758
-                      },
-                      {
-                        "desc": "三星",
-                        "name": "samsung",
-                        "percent": 0.013016753043268652
-                      },
-                      {
-                        "desc": "oneplus",
-                        "name": "oneplus",
-                        "percent": 0.011208870676148005
-                      },
-                      {
-                        "desc": "realme",
-                        "name": "realme",
-                        "percent": 0.006508376521634326
-                      },
-                      {
-                        "desc": "ptac",
-                        "name": "ptac",
-                        "percent": 0.0019284078582620225
-                      }
-                    ],
-                    "gender": {
-                      "female": 0.6712749615975423,
-                      "male": 0.3287250384024577
-                    },
-                    "interests": [
-                      {
-                        "name": "美食",
-                        "percent": 0.08425858389388659
-                      },
-                      {
-                        "name": "生活记录",
-                        "percent": 0.07380392792500742
-                      },
-                      {
-                        "name": "娱乐",
-                        "percent": 0.0682659318691412
-                      },
-                      {
-                        "name": "时尚",
-                        "percent": 0.06513223653996812
-                      },
-                      {
-                        "name": "家居家装",
-                        "percent": 0.050436286030742634
-                      },
-                      {
-                        "name": "影视",
-                        "percent": 0.05032822757111598
-                      },
-                      {
-                        "name": "情感",
-                        "percent": 0.04546559688791636
-                      },
-                      {
-                        "name": "旅游",
-                        "percent": 0.037847475484236975
-                      },
-                      {
-                        "name": "美妆",
-                        "percent": 0.03765837317989032
-                      },
-                      {
-                        "name": "社科",
-                        "percent": 0.03565929167679715
-                      },
-                      {
-                        "name": "教育",
-                        "percent": 0.03525407245319718
-                      },
-                      {
-                        "name": "母婴",
-                        "percent": 0.033444093254450656
-                      },
-                      {
-                        "name": "健康",
-                        "percent": 0.03198530404949077
-                      },
-                      {
-                        "name": "兴趣爱好",
-                        "percent": 0.029310857173730987
-                      },
-                      {
-                        "name": "汽车",
-                        "percent": 0.02669043952778453
-                      },
-                      {
-                        "name": "宠物",
-                        "percent": 0.024151065726558067
-                      },
-                      {
-                        "name": "职场",
-                        "percent": 0.023961963422211418
-                      },
-                      {
-                        "name": "健身减肥",
-                        "percent": 0.02242213037253154
-                      },
-                      {
-                        "name": "素材",
-                        "percent": 0.022287057297998215
-                      },
-                      {
-                        "name": "人文",
-                        "percent": 0.01931544965826512
-                      }
-                    ],
-                    "provinces": [
-                      {
-                        "name": "广东",
-                        "percent": 0.1189586597565385
-                      },
-                      {
-                        "name": "江苏",
-                        "percent": 0.0689405809328673
-                      },
-                      {
-                        "name": "山东",
-                        "percent": 0.06845847896830179
-                      },
-                      {
-                        "name": "海外",
-                        "percent": 0.06074484753525371
-                      },
-                      {
-                        "name": "北京",
-                        "percent": 0.05146438471736772
-                      },
-                      {
-                        "name": "浙江",
-                        "percent": 0.05134385922622635
-                      },
-                      {
-                        "name": "河南",
-                        "percent": 0.046402314089429915
-                      },
-                      {
-                        "name": "河北",
-                        "percent": 0.04061709051464385
-                      },
-                      {
-                        "name": "湖北",
-                        "percent": 0.039050259129805955
-                      },
-                      {
-                        "name": "四川",
-                        "percent": 0.036037121851271545
-                      },
-                      {
-                        "name": "辽宁",
-                        "percent": 0.03579607086898879
-                      },
-                      {
-                        "name": "上海",
-                        "percent": 0.03350608653730264
-                      },
-                      {
-                        "name": "福建",
-                        "percent": 0.030372423767626854
-                      },
-                      {
-                        "name": "湖南",
-                        "percent": 0.0301313727853441
-                      },
-                      {
-                        "name": "陕西",
-                        "percent": 0.028926117873930336
-                      },
-                      {
-                        "name": "安徽",
-                        "percent": 0.02711823550680969
-                      },
-                      {
-                        "name": "广西",
-                        "percent": 0.023864047245992528
-                      },
-                      {
-                        "name": "云南",
-                        "percent": 0.022899843316861516
-                      },
-                      {
-                        "name": "山西",
-                        "percent": 0.02048933349403399
-                      },
-                      {
-                        "name": "重庆",
-                        "percent": 0.018922502109196094
-                      },
-                      {
-                        "name": "天津",
-                        "percent": 0.017355670724358202
-                      },
-                      {
-                        "name": "江西",
-                        "percent": 0.017114619742075447
-                      },
-                      {
-                        "name": "内蒙古",
-                        "percent": 0.01373990599011691
-                      },
-                      {
-                        "name": "新疆",
-                        "percent": 0.013137278534410027
-                      },
-                      {
-                        "name": "吉林",
-                        "percent": 0.012655176569844523
-                      },
-                      {
-                        "name": "黑龙江",
-                        "percent": 0.01205254911413764
-                      },
-                      {
-                        "name": "台湾",
-                        "percent": 0.01108834518500663
-                      },
-                      {
-                        "name": "香港",
-                        "percent": 0.010726768711582499
-                      },
-                      {
-                        "name": "贵州",
-                        "percent": 0.009762564782451489
-                      },
-                      {
-                        "name": "甘肃",
-                        "percent": 0.009521513800168736
-                      },
-                      {
-                        "name": "海南",
-                        "percent": 0.008677835362179101
-                      },
-                      {
-                        "name": "宁夏",
-                        "percent": 0.0034952392430999154
-                      },
-                      {
-                        "name": "澳门",
-                        "percent": 0.002651560805110281
-                      },
-                      {
-                        "name": "青海",
-                        "percent": 0.0020489333494033988
-                      },
-                      {
-                        "name": "中国",
-                        "percent": 0.001205254911413764
-                      },
-                      {
-                        "name": "西藏",
-                        "percent": 0.0007231529468482585
-                      }
-                    ]
+                    "fansPortrait": {
+                      "ageDistribution": [
+                        {
+                          "distribution_data": {
+                            "cnt": 154,
+                            "name": "<18"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 8191,
+                            "name": "18-24"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 34008,
+                            "name": "25-34"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 35355,
+                            "name": "35-44"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 25974,
+                            "name": ">44"
+                          }
+                        }
+                      ],
+                      "cityDistribution": [
+                        {
+                          "distribution_data": {
+                            "cnt": 11094,
+                            "name": "上海"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 9124,
+                            "name": "北京"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 5600,
+                            "name": "广州"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 3836,
+                            "name": "深圳"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 3317,
+                            "name": "杭州"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 2799,
+                            "name": "成都"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 2073,
+                            "name": "南京"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 1970,
+                            "name": "苏州"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 1762,
+                            "name": "武汉"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 1347,
+                            "name": "天津"
+                          }
+                        }
+                      ],
+                      "genderDistribution": [
+                        {
+                          "distribution_data": {
+                            "cnt": 88442,
+                            "name": "female"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 15241,
+                            "name": "male"
+                          }
+                        }
+                      ],
+                      "interestDistribution": [
+                        {
+                          "distribution_data": {
+                            "cnt": 32660,
+                            "name": "美食"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 29446,
+                            "name": "家居家装"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 21980,
+                            "name": "娱乐"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 20633,
+                            "name": "旅行"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 16796,
+                            "name": "护肤"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 12131,
+                            "name": "母婴"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 10886,
+                            "name": "彩妆"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 9435,
+                            "name": "教育"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 8916,
+                            "name": "生活记录"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 6428,
+                            "name": "健身"
+                          }
+                        }
+                      ],
+                      "provinceDistribution": [
+                        {
+                          "distribution_data": {
+                            "cnt": 11094,
+                            "name": "上海"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 10679,
+                            "name": "广东"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 9124,
+                            "name": "北京"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 8398,
+                            "name": "江苏"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 6117,
+                            "name": "浙江"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 3317,
+                            "name": "山东"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 3006,
+                            "name": "四川"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 2281,
+                            "name": "湖北"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 2281,
+                            "name": "福建"
+                          }
+                        },
+                        {
+                          "distribution_data": {
+                            "cnt": 1866,
+                            "name": "河南"
+                          }
+                        }
+                      ]
+                    }
                   }
                 }
               }
@@ -63522,7 +63769,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Follower Profile",
+        "summary": "Follower Distribution",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
@@ -63535,7 +63782,7 @@
     "/api/xiaohongshu-pgy/get-kol-fans-summary/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower Analysis data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and creator benchmarking.",
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower summary data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and creator benchmarking.",
         "operationId": "getKolFansSummaryV1",
         "parameters": [
           {
@@ -63594,7 +63841,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Follower Analysis",
+        "summary": "Follower Summary",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
@@ -63607,7 +63854,7 @@
     "/api/xiaohongshu-pgy/get-kol-fans-trend/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and creator benchmarking.",
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower growth history data, including historical audience changes over time, for creator evaluation, campaign planning, and creator benchmarking.",
         "operationId": "getKolFansTrendV1",
         "parameters": [
           {
@@ -63805,7 +64052,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Follower Growth Trend",
+        "summary": "Follower Growth History",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
@@ -64140,7 +64387,7 @@
     "/api/xiaohongshu-pgy/get-kol-note-rate/v1": {
       "get": {
         "deprecated": true,
-        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note Performance Rates data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.",
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note performance metrics data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.",
         "operationId": "getKolNoteRateV1",
         "parameters": [
           {
@@ -64313,7 +64560,7 @@
             "tokenAuth": []
           }
         ],
-        "summary": "Note Performance Rates",
+        "summary": "Note Performance Metrics",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],

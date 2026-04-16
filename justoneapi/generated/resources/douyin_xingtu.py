@@ -206,9 +206,9 @@ class DouyinXingtuResource(BaseResource):
         platform: str | None = "SHORT_VIDEO",
     ) -> ApiResponse[Any]:
         """
-        Marketing Rates
+        Marketing Metrics
 
-        Get Douyin Creator Marketplace (Xingtu) marketing Rates data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.
+        Get Douyin Creator Marketplace (Xingtu) marketing metrics data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.
 
         Args:
             o_author_id: Author's unique ID.
@@ -233,9 +233,9 @@ class DouyinXingtuResource(BaseResource):
         flow_type: str | None = "EXCLUDE",
     ) -> ApiResponse[Any]:
         """
-        Distribution Metrics
+        Spread Metrics
 
-        Get Douyin Creator Marketplace (Xingtu) distribution Metrics data, including exposure, spread, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.
+        Get Douyin Creator Marketplace (Xingtu) spread metrics data, including exposure, spread, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.
 
         Args:
             o_author_id: Author's unique ID.
@@ -483,7 +483,7 @@ class DouyinXingtuResource(BaseResource):
         item_id: str,
     ) -> ApiResponse[Any]:
         """
-        Item Report Trend
+        Item Report Trends
 
         Get Douyin Creator Marketplace (Xingtu) item Report Trend data, including time-based changes in item performance metrics, for creator evaluation, campaign planning, and marketplace research.
 
@@ -534,6 +534,115 @@ class DouyinXingtuResource(BaseResource):
             "/api/douyin-xingtu/gw/api/data_sp/item_report_th_analysis/v1",
             {
                 "itemId": item_id,
+            },
+        )
+
+    def gw_api_data_get_author_hot_comment_tokens_v1(
+        self,
+        *,
+        o_author_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        KOL Comment Keyword Analysis
+
+        Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.
+
+        Args:
+            o_author_id: Author's unique ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/data/get_author_hot_comment_tokens/v1",
+            {
+                "oAuthorId": o_author_id,
+            },
+        )
+
+    def gw_api_data_sp_get_author_daily_fans_v1(
+        self,
+        *,
+        o_author_id: str,
+        start_date: str,
+        end_date: str,
+    ) -> ApiResponse[Any]:
+        """
+        Follower Growth Trend
+
+        Get Douyin Creator Marketplace (Xingtu) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            o_author_id: Author's unique ID.
+            start_date: Start Date (yyyy-MM-dd).
+            end_date: End Date (yyyy-MM-dd).
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/data_sp/get_author_daily_fans/v1",
+            {
+                "oAuthorId": o_author_id,
+                "startDate": start_date,
+                "endDate": end_date,
+            },
+        )
+
+    def gw_api_gauthor_get_author_content_hot_keywords_v1(
+        self,
+        *,
+        o_author_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        KOL Content Keyword Analysis
+
+        Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.
+
+        Args:
+            o_author_id: Author's unique ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/gauthor/get_author_content_hot_keywords/v1",
+            {
+                "oAuthorId": o_author_id,
+            },
+        )
+
+    def gw_api_aggregator_get_author_commerce_spread_info_v1(
+        self,
+        *,
+        o_author_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Author Commerce Spread Info
+
+        Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.
+
+        Args:
+            o_author_id: Author's unique ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_spread_info/v1",
+            {
+                "oAuthorId": o_author_id,
+            },
+        )
+
+    def gw_api_aggregator_get_author_commerce_seed_base_info_v1(
+        self,
+        *,
+        o_author_id: str,
+        range: str | None = "DAY_90",
+    ) -> ApiResponse[Any]:
+        """
+        Author Commerce Seeding Base Info
+
+        Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.
+
+        Args:
+            o_author_id: Author's unique ID.
+            range: Time range.  Available Values: - `DAY_30`: Last 30 days - `DAY_90`: Last 90 days
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_seed_base_info/v1",
+            {
+                "oAuthorId": o_author_id,
+                "range": range,
             },
         )
 
@@ -594,9 +703,9 @@ class DouyinXingtuResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Follower Profile
+        Follower Distribution
 
-        Get Douyin Creator Marketplace (Xingtu) follower Profile data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and marketplace research.
+        Get Douyin Creator Marketplace (Xingtu) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and marketplace research.
 
         Args:
             kol_id: KOL ID.
@@ -620,9 +729,9 @@ class DouyinXingtuResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Marketing Rates
+        Marketing Metrics
 
-        Get Douyin Creator Marketplace (Xingtu) marketing Rates data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.
+        Get Douyin Creator Marketplace (Xingtu) marketing metrics data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.
 
         Args:
             kol_id: KOL ID.
@@ -649,9 +758,9 @@ class DouyinXingtuResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Creator Performance Overview
+        Spread Metrics
 
-        Get Douyin Creator Marketplace (Xingtu) creator Performance Overview data, including audience, content performance, and commercial indicators, for quick evaluation.
+        Get Douyin Creator Marketplace (Xingtu) spread metrics data, including audience, content performance, and commercial indicators, for quick evaluation.
 
         Args:
             kol_id: KOL ID.
@@ -759,9 +868,9 @@ class DouyinXingtuResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Video Performance
+        Showcase Items
 
-        Get Douyin Creator Marketplace (Xingtu) video Performance data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and marketplace research.
+        Get Douyin Creator Marketplace (Xingtu) showcase items data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and marketplace research.
 
         Args:
             kol_id: KOL ID.
@@ -862,9 +971,9 @@ class DouyinXingtuResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        Audience Source Distribution
+        Audience Touchpoint Distribution
 
-        Get Douyin Creator Marketplace (Xingtu) audience Source Distribution data, including segment breakdowns, audience composition, and distribution signals, for traffic analysis and existing integration compatibility.
+        Get Douyin Creator Marketplace (Xingtu) audience touchpoint distribution data, including segment breakdowns, audience composition, and distribution signals, for traffic analysis and existing integration compatibility.
 
         Args:
             kol_id: KOL ID.
@@ -908,9 +1017,9 @@ class DouyinXingtuResource(BaseResource):
         accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
-        KOL Content Performance
+        Recommended Videos
 
-        Get Douyin Creator Marketplace (Xingtu) kOL Content Performance data, including video performance metrics, for creator evaluation, campaign planning, and marketplace research.
+        Get Douyin Creator Marketplace (Xingtu) recommended videos data, including video performance metrics, for creator evaluation, campaign planning, and marketplace research.
 
         Args:
             kol_id: KOL ID.
