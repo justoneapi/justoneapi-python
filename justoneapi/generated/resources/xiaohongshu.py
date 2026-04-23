@@ -246,7 +246,7 @@ class XiaohongshuResource(BaseResource):
             page: Page number for pagination.
             sort: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
             note_type: Note type filter.  Available Values: - `_0`: General - `_1`: Video - `_2`: Normal
-            note_time: Note publish time filter.  Available Values: - `一天内`: Within one day - `一周内`: Within a week - `半年内`: Within half a year
+            note_time: Note publish time filter. This parameter is for reference only and does not have much effect.  Available Values: - `一天内`: Within one day - `一周内`: Within a week - `半年内`: Within half a year
         """
         return self._get(
             "/api/xiaohongshu/search-note/v2",
