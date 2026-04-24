@@ -19,11 +19,11 @@ Supported platforms include Taobao & Tmall, Xiaohongshu, Xiaohongshu Pugongying,
 
 The documentation center helps you browse endpoint health, versioned API paths, request parameters, and platform-specific usage notes.
 
-![Just One API documentation overview](docs/images/readme/api-docs-en.jpg)
+[![Just One API documentation overview](docs/images/readme/api-docs-en.jpg)](https://docs.justoneapi.com/en/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_docs_image)
 
 The console provides API token management, balance visibility, request logs, usage trends, and spending analytics.
 
-![Just One API console overview](docs/images/readme/console-en.jpg)
+[![Just One API console overview](docs/images/readme/console-en.jpg)](https://dashboard.justoneapi.com/en?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_dashboard_image)
 
 ## Installation
 
