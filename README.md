@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://justoneapi.com/logo/logo_text.png" alt="JustSerpAPI Logo" width="200">
+  <a href="https://justoneapi.com/en?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_logo">
+    <img src="https://justoneapi.com/logo/logo_text.png" alt="Just One API Logo" width="200">
+  </a>
 </p>
 
 ![PyPI version](https://img.shields.io/pypi/v/justoneapi.svg)
