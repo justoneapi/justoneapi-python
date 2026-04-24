@@ -7944,8 +7944,8 @@
         "x-api-version": "v2",
         "x-highlights": [
           {
-            "content": "This endpoint may return a pending task status. Retry later with the same itemId to fetch completed data.",
-            "type": "tip"
+            "content": "This endpoint is task-based and does not return real-time data. It combines task submission and result retrieval in one interface. Please review its mechanism in the dashboard and consult the administrator before use to avoid unintended charges.",
+            "type": "danger"
           }
         ],
         "x-order": "11001100",
@@ -12483,7 +12483,7 @@
         "x-api-version": "v1",
         "x-highlights": [
           {
-            "content": "If this endpoint does not return a video download URL, use `/api/xiaohongshu-pgy/api/solar/note/noteId/detail/v1`.",
+            "content": "If video download fails, use `/api/xiaohongshu-pgy/api/solar/note/noteId/detail/v1`.",
             "type": "tip"
           },
           {
