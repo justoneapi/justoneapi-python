@@ -1,9 +1,9 @@
-![PyPI version](https://img.shields.io/pypi/v/justoneapi.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 <p align="center">
   <img src="https://justoneapi.com/logo/logo_text.png" alt="JustSerpAPI Logo" width="200">
 </p>
+
+![PyPI version](https://img.shields.io/pypi/v/justoneapi.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
