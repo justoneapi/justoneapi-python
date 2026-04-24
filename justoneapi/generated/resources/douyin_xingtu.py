@@ -782,29 +782,6 @@ class DouyinXingtuResource(BaseResource):
             },
         )
 
-    def search_douyin_kol_v1(
-        self,
-        *,
-        body: str,
-        accept_cache: bool | None = False,
-    ) -> ApiResponse[Any]:
-        """
-        Legacy KOL Search
-
-        Get Douyin Creator Marketplace (Xingtu) legacy KOL Search data, including preserving the request format, for creator evaluation, campaign planning, and marketplace research.
-
-        Args:
-            body: JSON request body.
-            accept_cache: Enable cache.
-        """
-        return self._get(
-            "/api/douyin-xingtu/search-douyin-kol/v1",
-            {
-                "body": body,
-                "acceptCache": accept_cache,
-            },
-        )
-
     def search_kol_simple_v1(
         self,
         *,
@@ -1030,32 +1007,6 @@ class DouyinXingtuResource(BaseResource):
             {
                 "kolId": kol_id,
                 "acceptCache": accept_cache,
-            },
-        )
-
-    def search_for_author_square_v3(
-        self,
-        *,
-        page: int,
-        fans_low: int,
-        fans_high: int,
-    ) -> ApiResponse[Any]:
-        """
-        Creator Search
-
-        Get Douyin Creator Marketplace (Xingtu) creator Search data, including filters, returning profile, and audience, for discovery, comparison, and shortlist building.
-
-        Args:
-            page: Page number.
-            fans_low: Minimum fans count.
-            fans_high: Maximum fans count.
-        """
-        return self._get(
-            "/api/douyin-xingtu/search-for-author-square/v3",
-            {
-                "page": page,
-                "fansLow": fans_low,
-                "fansHigh": fans_high,
             },
         )
 

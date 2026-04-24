@@ -29,6 +29,26 @@ class TaobaoResource(BaseResource):
             },
         )
 
+    def get_item_detail_v2(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Product Details
+
+        Get Taobao and Tmall product Details data through the task-backed v2 flow. If data is not ready within a short wait, the response returns a pending task status.
+
+        Args:
+            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+        """
+        return self._get(
+            "/api/taobao/get-item-detail/v2",
+            {
+                "itemId": item_id,
+            },
+        )
+
     def get_item_detail_v4(
         self,
         *,

@@ -532,32 +532,6 @@ class XiaohongshuPgyResource(BaseResource):
             },
         )
 
-    def get_kol_data_summary_v1(
-        self,
-        *,
-        kol_id: str,
-        business: str,
-        accept_cache: bool | None = False,
-    ) -> ApiResponse[Any]:
-        """
-        Data Summary
-
-        Get Xiaohongshu Creator Marketplace (Pugongying) summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.
-
-        Args:
-            kol_id: KOL ID.
-            business: Business type.  Available Values: - `_0`: Normal notes - `_1`: Cooperation notes
-            accept_cache: Enable cache.
-        """
-        return self._get(
-            "/api/xiaohongshu-pgy/get-kol-data-summary/v1",
-            {
-                "kolId": kol_id,
-                "business": business,
-                "acceptCache": accept_cache,
-            },
-        )
-
     def get_kol_data_summary_v2(
         self,
         *,

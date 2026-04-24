@@ -29,29 +29,6 @@ class DouyinResource(BaseResource):
             },
         )
 
-    def get_user_video_list_v1(
-        self,
-        *,
-        sec_uid: str,
-        max_cursor: int | None = 0,
-    ) -> ApiResponse[Any]:
-        """
-        User Published Videos
-
-        Get Douyin (TikTok China) user Published Videos data, including captions, covers, and publish times, for account monitoring.
-
-        Args:
-            sec_uid: The unique user ID (sec_uid) on Douyin.
-            max_cursor: Pagination cursor; use 0 for the first page, and the `max_cursor` from the previous response for subsequent pages.
-        """
-        return self._get(
-            "/api/douyin/get-user-video-list/v1",
-            {
-                "secUid": sec_uid,
-                "maxCursor": max_cursor,
-            },
-        )
-
     def get_user_video_list_v3(
         self,
         *,
