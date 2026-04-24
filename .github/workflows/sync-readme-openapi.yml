@@ -30,7 +30,7 @@ jobs:
 
       - name: Update English README API list
         env:
-          README_FILE: README.md
+          README_FILE: README.en.md
           README_LANG: en
           OPENAPI_BASIC_AUTH_USER: ${{ secrets.OPENAPI_BASIC_AUTH_USER }}
           OPENAPI_BASIC_AUTH_PASS: ${{ secrets.OPENAPI_BASIC_AUTH_PASS }}
@@ -40,7 +40,7 @@ jobs:
 
       - name: Update Chinese README API list
         env:
-          README_FILE: README.zh-CN.md
+          README_FILE: README.md
           README_LANG: zh
           OPENAPI_BASIC_AUTH_USER: ${{ secrets.OPENAPI_BASIC_AUTH_USER }}
           OPENAPI_BASIC_AUTH_PASS: ${{ secrets.OPENAPI_BASIC_AUTH_PASS }}
@@ -55,7 +55,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md README.zh-CN.md i18n-cache.json
+          git add README.md README.en.md README.zh-CN.md i18n-cache.json
           git diff --cached --quiet && exit 0
           git commit -m "chore: sync README API list"
           git pull --rebase origin main
