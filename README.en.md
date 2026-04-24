@@ -193,6 +193,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 ### Douyin E-commerce
 
 - [Item Details (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/item-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Comments (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/item-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Douyin Creator Marketplace (Xingtu)
 
@@ -297,8 +298,8 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 - [Movie Reviews (V1)](https://docs.justoneapi.com/en/api/douban-movie/movie-reviews-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Review Details (V1)](https://docs.justoneapi.com/en/api/douban-movie/review-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Comments (V1)](https://docs.justoneapi.com/en/api/douban-movie/comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Subject Details (V1)](https://docs.justoneapi.com/en/api/douban-movie/subject-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Comments (V1)](https://docs.justoneapi.com/en/api/douban-movie/comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Recent Hot Movie (V1)](https://docs.justoneapi.com/en/api/douban-movie/recent-hot-movie-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Recent Hot Tv (V1)](https://docs.justoneapi.com/en/api/douban-movie/recent-hot-tv-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 

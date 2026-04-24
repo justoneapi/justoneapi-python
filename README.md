@@ -195,6 +195,7 @@ except BusinessError as exc:
 ### 抖音电商
 
 - [商品详情 (V1)](https://docs.justoneapi.com/zh/api/douyin-e-commerce/item-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [商品评论 (V1)](https://docs.justoneapi.com/zh/api/douyin-e-commerce/item-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### 抖音巨量星图
 
@@ -299,8 +300,8 @@ except BusinessError as exc:
 
 - [影评 (V1)](https://docs.justoneapi.com/zh/api/douban-movie/movie-reviews-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [评价详情 (V1)](https://docs.justoneapi.com/zh/api/douban-movie/review-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [评论 (V1)](https://docs.justoneapi.com/zh/api/douban-movie/comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [条目详情 (V1)](https://docs.justoneapi.com/zh/api/douban-movie/subject-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [评论 (V1)](https://docs.justoneapi.com/zh/api/douban-movie/comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [近期热门电影 (V1)](https://docs.justoneapi.com/zh/api/douban-movie/recent-hot-movie-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [近期热门电视剧 (V1)](https://docs.justoneapi.com/zh/api/douban-movie/recent-hot-tv-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
