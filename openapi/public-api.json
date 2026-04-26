@@ -1408,6 +1408,60 @@
         "x-order": "21001200"
       }
     },
+    "/api/douyin-ec/get-item-comments/v1": {
+      "get": {
+        "description": "Get Douyin E-commerce item comments, including ratings, review content, and reviewer signals, for customer feedback analysis and product research.",
+        "operationId": "getDouyinEcItemCommentsV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for paginated comments.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Item Comments",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "14502100"
+      }
+    },
     "/api/douyin-ec/get-item-detail/v1": {
       "get": {
         "description": "Get Douyin E-commerce item details, including price, title, and stock, for product monitoring and competitive analysis.",

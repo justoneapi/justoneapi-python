@@ -28,3 +28,26 @@ class DouyinEcResource(BaseResource):
                 "itemId": item_id,
             },
         )
+
+    def get_item_comments_v1(
+        self,
+        *,
+        item_id: str,
+        page: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Item Comments
+
+        Get Douyin E-commerce item comments, including ratings, review content, and reviewer signals, for customer feedback analysis and product research.
+
+        Args:
+            item_id: The unique ID of the item on Douyin E-commerce.
+            page: Page number for paginated comments.
+        """
+        return self._get(
+            "/api/douyin-ec/get-item-comments/v1",
+            {
+                "itemId": item_id,
+                "page": page,
+            },
+        )
