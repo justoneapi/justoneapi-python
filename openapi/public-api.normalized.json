@@ -1439,6 +1439,61 @@
         "x-sdk-resource": "douban"
       }
     },
+    "/api/douyin-ec/get-item-comments/v1": {
+      "get": {
+        "description": "Get Douyin E-commerce item comments, including ratings, review content, and reviewer signals, for customer feedback analysis and product research.",
+        "operationId": "getDouyinEcItemCommentsV1",
+        "parameters": [
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          },
+          {
+            "description": "Page number for paginated comments.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Comments",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "14502100",
+        "x-sdk-class-name": "DouyinEcResource",
+        "x-sdk-method-name": "get_item_comments_v1",
+        "x-sdk-resource": "douyin_ec"
+      }
+    },
     "/api/douyin-ec/get-item-detail/v1": {
       "get": {
         "description": "Get Douyin E-commerce item details, including price, title, and stock, for product monitoring and competitive analysis.",
