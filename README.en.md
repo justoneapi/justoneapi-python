@@ -254,6 +254,11 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Share Link Resolution (V1)](https://docs.justoneapi.com/en/api/kuaishou/share-link-resolution-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Comments (V1)](https://docs.justoneapi.com/en/api/kuaishou/video-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
+### 1688
+
+- [Product Details (V1)](https://docs.justoneapi.com/en/api/1688/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Product Search (V1)](https://docs.justoneapi.com/en/api/1688/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+
 ### Weibo
 
 - [Keyword Search (V2)](https://docs.justoneapi.com/en/api/weibo/keyword-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)

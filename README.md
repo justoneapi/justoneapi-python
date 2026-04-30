@@ -256,6 +256,11 @@ except BusinessError as exc:
 - [分享链接解析 (V1)](https://docs.justoneapi.com/zh/api/kuaishou/share-link-resolution-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [视频评论 (V1)](https://docs.justoneapi.com/zh/api/kuaishou/video-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
+### 1688
+
+- [商品详情 (V1)](https://docs.justoneapi.com/zh/api/1688/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [商品搜索 (V1)](https://docs.justoneapi.com/zh/api/1688/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+
 ### 微博
 
 - [关键词搜索 (V2)](https://docs.justoneapi.com/zh/api/weibo/keyword-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
