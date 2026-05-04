@@ -117,3 +117,55 @@ class InstagramResource(BaseResource):
                 "endCursor": end_cursor,
             },
         )
+
+    def get_post_comments_v1(
+        self,
+        *,
+        code: str,
+        min_id: str | None = "",
+        sort_order: str | None = "newest",
+    ) -> ApiResponse[Any]:
+        """
+        Post Comment List
+
+        Get post comments, commenter profiles, text, like counts, reply counts, and pagination cursors for sentiment review and engagement analysis.
+
+        Args:
+            code: The unique shortcode for the Instagram post.
+            min_id: Pagination cursor returned as next_min_id from the previous response.
+            sort_order: Sort order for the comments.  Available Values: - `popular`: Popular - `newest`: Newest
+        """
+        return self._get(
+            "/api/instagram/get-post-comments/v1",
+            {
+                "code": code,
+                "minId": min_id,
+                "sortOrder": sort_order,
+            },
+        )
+
+    def get_comment_replies_v1(
+        self,
+        *,
+        media_id: str,
+        comment_id: str,
+        min_id: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Comment Reply List
+
+        Get replies under a parent comment, including reply text, author details, like counts, IDs, and pagination cursors for threaded discussion analysis.
+
+        Args:
+            media_id: The numeric media ID of the Instagram post.
+            comment_id: The parent comment ID whose replies are to be retrieved.
+            min_id: Pagination cursor returned as next_min_child_cursor from the previous response.
+        """
+        return self._get(
+            "/api/instagram/get-comment-replies/v1",
+            {
+                "mediaId": media_id,
+                "commentId": comment_id,
+                "minId": min_id,
+            },
+        )

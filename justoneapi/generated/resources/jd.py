@@ -29,6 +29,49 @@ class JdResource(BaseResource):
             },
         )
 
+    def get_item_price_v1(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Product Price
+
+        Get JD.com product Price data for price monitoring, catalog checks, repricing workflows, and ecommerce research.
+
+        Args:
+            item_id: A unique product identifier on JD.com (item ID).
+        """
+        return self._get(
+            "/api/jd/get-item-price/v1",
+            {
+                "itemId": item_id,
+            },
+        )
+
+    def search_item_list_v1(
+        self,
+        *,
+        keyword: str,
+        page: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Product Search
+
+        Get JD.com product Search data, including matched items and product metadata, for product discovery, catalog research, and market monitoring.
+
+        Args:
+            keyword: Search keyword.
+            page: Page number for pagination.
+        """
+        return self._get(
+            "/api/jd/search-item-list/v1",
+            {
+                "keyword": keyword,
+                "page": page,
+            },
+        )
+
     def get_item_comments_v1(
         self,
         *,

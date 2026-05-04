@@ -29,6 +29,32 @@ class DouyinEcResource(BaseResource):
             },
         )
 
+    def search_item_list_v1(
+        self,
+        *,
+        keyword: str,
+        page: str | None = None,
+        search_id: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Product Search
+
+        Get Douyin E-commerce product Search data, including matched items and product metadata, for product discovery, catalog research, and market monitoring.
+
+        Args:
+            keyword: Search keyword.
+            page: Page number for pagination.
+            search_id: Search ID; use the search_id value returned by the last response for subsequent pages.
+        """
+        return self._get(
+            "/api/douyin-ec/search-item-list/v1",
+            {
+                "keyword": keyword,
+                "page": page,
+                "searchId": search_id,
+            },
+        )
+
     def get_item_comments_v1(
         self,
         *,

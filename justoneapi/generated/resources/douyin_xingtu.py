@@ -14,6 +14,7 @@ class DouyinXingtuResource(BaseResource):
         *,
         o_author_id: str,
         platform: str | None = "SHORT_VIDEO",
+        auto: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Creator Profile
@@ -23,12 +24,14 @@ class DouyinXingtuResource(BaseResource):
         Args:
             o_author_id: Author's unique ID.
             platform: Platform type.  Available Values: - `SHORT_VIDEO`: Short video - `LIVE_STREAMING`: Live streaming - `PICTURE_TEXT`: Picture and text - `SHORT_DRAMA`: Short drama
+            auto: Do not use unless confirmed by admin.
         """
         return self._get(
             "/api/douyin-xingtu/gw/api/author/get_author_base_info/v1",
             {
                 "oAuthorId": o_author_id,
                 "platform": platform,
+                "auto": auto,
             },
         )
 
@@ -651,7 +654,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         kol_id: str,
         platform_channel: str | None = "_1",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Creator Profile
@@ -661,14 +663,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             kol_id: KOL ID.
             platform_channel: Platform channel.  Available Values: - `_1`: Short Video - `_10`: Live Streaming
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-info/v1",
             {
                 "kolId": kol_id,
                 "platformChannel": platform_channel,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -676,7 +676,6 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Audience Distribution
@@ -685,13 +684,11 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-audience-distribution/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -700,7 +697,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         kol_id: str,
         fans_type: str | None = "_1",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Follower Distribution
@@ -710,14 +706,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             kol_id: KOL ID.
             fans_type: Fans type.  Available Values: - `_1`: Fans Portrait - `_2`: Fans Group Portrait - `_5`: Iron Fans Portrait
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-fans-distribution/v1",
             {
                 "kolId": kol_id,
                 "fansType": fans_type,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -726,7 +720,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         kol_id: str,
         platform_channel: str | None = "_1",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Marketing Metrics
@@ -736,14 +729,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             kol_id: KOL ID.
             platform_channel: Platform channel.  Available Values: - `_1`: Short Video - `_10`: Live Streaming
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-marketing-info/v1",
             {
                 "kolId": kol_id,
                 "platformChannel": platform_channel,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -755,7 +746,6 @@ class DouyinXingtuResource(BaseResource):
         range: str | None = "_2",
         flow_type: str | None = "1",
         only_assign: bool | None = False,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Spread Metrics
@@ -768,7 +758,6 @@ class DouyinXingtuResource(BaseResource):
             range: Time range.  Available Values: - `_2`: Last 30 days - `_3`: Last 90 days
             flow_type: Flow type.
             only_assign: Only assigned notes.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-spread-info/v1",
@@ -778,7 +767,6 @@ class DouyinXingtuResource(BaseResource):
                 "range": range,
                 "flowType": flow_type,
                 "onlyAssign": only_assign,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -788,7 +776,6 @@ class DouyinXingtuResource(BaseResource):
         keyword: str,
         platform_source: str,
         page: int,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         KOL Keyword Search
@@ -799,7 +786,6 @@ class DouyinXingtuResource(BaseResource):
             keyword: Search keywords.
             platform_source: Platform source.  Available Values: - `_1`: Douyin - `_2`: Toutiao - `_3`: Xigua
             page: Page number.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/search-kol-simple/v1",
@@ -807,7 +793,6 @@ class DouyinXingtuResource(BaseResource):
                 "keyword": keyword,
                 "platformSource": platform_source,
                 "page": page,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -816,7 +801,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         kol_id: str,
         range: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Conversion Analysis
@@ -826,14 +810,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             kol_id: KOL ID.
             range: Time range.  Available Values: - `_1`: Last 7 days - `_2`: Last 30 days - `_3`: Last 90 days
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-convert-ability/v1",
             {
                 "kolId": kol_id,
                 "range": range,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -842,7 +824,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         kol_id: str,
         only_assign: bool | None = False,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Showcase Items
@@ -852,14 +833,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             kol_id: KOL ID.
             only_assign: Whether true is Xingtu video, false is personal video.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-show-items-v2/v1",
             {
                 "kolId": kol_id,
                 "onlyAssign": only_assign,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -868,7 +847,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         kol_id: str,
         industry_tag: str | None = "",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Creator Link Metrics
@@ -878,14 +856,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             kol_id: KOL ID.
             industry_tag: Industry Tag.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-link-info/v1",
             {
                 "kolId": kol_id,
                 "industryTag": industry_tag,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -895,7 +871,6 @@ class DouyinXingtuResource(BaseResource):
         kol_id: str,
         detail_type: str,
         page: int,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Conversion Resources
@@ -906,7 +881,6 @@ class DouyinXingtuResource(BaseResource):
             kol_id: KOL ID.
             detail_type: Resource type.  Available Values: - `_1`: Video Data - `_2`: Product Data
             page: Page number.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-convert-videos-or-products/v1",
@@ -914,7 +888,6 @@ class DouyinXingtuResource(BaseResource):
                 "kolId": kol_id,
                 "detailType": detail_type,
                 "page": page,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -922,7 +895,6 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Creator Link Structure
@@ -931,13 +903,11 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-link-struct/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -945,7 +915,6 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Audience Touchpoint Distribution
@@ -954,13 +923,11 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-touch-distribution/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -968,7 +935,6 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Cost Performance Analysis
@@ -977,13 +943,11 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-cp-info/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -991,7 +955,6 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Recommended Videos
@@ -1000,13 +963,11 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-rec-videos/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -1016,7 +977,6 @@ class DouyinXingtuResource(BaseResource):
         kol_id: str,
         start_date: str,
         end_date: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Follower Growth Trend
@@ -1027,7 +987,6 @@ class DouyinXingtuResource(BaseResource):
             kol_id: KOL ID.
             start_date: Start Date (yyyy-MM-dd).
             end_date: End Date (yyyy-MM-dd).
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-daily-fans/v1",
@@ -1035,7 +994,6 @@ class DouyinXingtuResource(BaseResource):
                 "kolId": kol_id,
                 "startDate": start_date,
                 "endDate": end_date,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -1043,7 +1001,6 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         KOL Comment Keyword Analysis
@@ -1052,13 +1009,11 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-author-hot-comment-tokens/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -1067,7 +1022,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         kol_id: str,
         keyword_type: str | None = "0",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         KOL Content Keyword Analysis
@@ -1077,14 +1031,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             kol_id: KOL ID.
             keyword_type: Type of keywords.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-author-content-hot-keywords/v1",
             {
                 "kolId": kol_id,
                 "keywordType": keyword_type,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -1092,7 +1044,6 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Author Commerce Spread Info
@@ -1101,13 +1052,11 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-author-commerce-spread-info/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -1116,7 +1065,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         kol_id: str,
         range: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Author Commerce Seeding Base Info
@@ -1126,14 +1074,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             kol_id: KOL ID.
             range: Time range.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-author-commerce-seed-base-info/v1",
             {
                 "kolId": kol_id,
                 "range": range,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -1141,7 +1087,6 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         detail_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Video Details
@@ -1150,12 +1095,10 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             detail_id: Video detail ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/douyin-xingtu/get-video-detail/v1",
             {
                 "detailId": detail_id,
-                "acceptCache": accept_cache,
             },
         )

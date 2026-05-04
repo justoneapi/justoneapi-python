@@ -14,7 +14,6 @@ class ImdbResource(BaseResource):
         *,
         id_: str,
         language_country: str | None = "en_US",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Release Expectation
@@ -24,14 +23,12 @@ class ImdbResource(BaseResource):
         Args:
             id_: The unique IMDb ID of the title (e.g., tt12037194).
             language_country: Language and country preferences.  Available Values: - `en_US`: English (US) - `fr_CA`: French (Canada) - `fr_FR`: French (France) - `de_DE`: German (Germany) - `hi_IN`: Hindi (India) - `it_IT`: Italian (Italy) - `pt_BR`: Portuguese (Brazil) - `es_ES`: Spanish (Spain) - `es_US`: Spanish (US) - `es_MX`: Spanish (Mexico)
-            accept_cache: Whether to accept cached data.
         """
         return self._get(
             "/api/imdb/title-release-expectation-query/v1",
             {
                 "id": id_,
                 "languageCountry": language_country,
-                "acceptCache": accept_cache,
             },
         )
 
