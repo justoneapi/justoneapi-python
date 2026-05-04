@@ -368,7 +368,6 @@ class XiaohongshuPgyResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Creator Profile
@@ -377,13 +376,11 @@ class XiaohongshuPgyResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-info/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -395,7 +392,6 @@ class XiaohongshuPgyResource(BaseResource):
         note_type: str | None = "_3",
         ad_switch: str | None = "_1",
         business: str | None = "_0",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Note Performance Metrics
@@ -408,7 +404,6 @@ class XiaohongshuPgyResource(BaseResource):
             note_type: Note type.  Available Values: - `_1`: Photo and Text - `_2`: Video - `_3`: Photo and Video
             ad_switch: Ad filter.  Available Values: - `_1`: Full traffic (All notes) - `_0`: Natural traffic (Organic notes)
             business: Business type.  Available Values: - `_0`: Normal notes - `_1`: Cooperation notes
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-note-rate/v1",
@@ -418,7 +413,6 @@ class XiaohongshuPgyResource(BaseResource):
                 "noteType": note_type,
                 "adSwitch": ad_switch,
                 "business": business,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -426,7 +420,6 @@ class XiaohongshuPgyResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Follower Distribution
@@ -435,13 +428,11 @@ class XiaohongshuPgyResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-fans-portrait/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -449,7 +440,6 @@ class XiaohongshuPgyResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Follower Summary
@@ -458,13 +448,11 @@ class XiaohongshuPgyResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-fans-summary/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -474,7 +462,6 @@ class XiaohongshuPgyResource(BaseResource):
         kol_id: str,
         date_type: str,
         increase_type: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Follower Growth History
@@ -485,7 +472,6 @@ class XiaohongshuPgyResource(BaseResource):
             kol_id: KOL ID.
             date_type: Date type.  Available Values: - `_1`: Last 30 days - `_2`: Last 60 days
             increase_type: Increase type.  Available Values: - `_1`: Total fans - `_2`: New fans increase
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-fans-trend/v1",
@@ -493,7 +479,6 @@ class XiaohongshuPgyResource(BaseResource):
                 "kolId": kol_id,
                 "dateType": date_type,
                 "increaseType": increase_type,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -505,7 +490,6 @@ class XiaohongshuPgyResource(BaseResource):
         order_type: str,
         page: int | None = 1,
         note_type: str | None = "_4",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Creator Note List
@@ -518,7 +502,6 @@ class XiaohongshuPgyResource(BaseResource):
             order_type: Sorting order.  Available Values: - `_1`: Latest - `_2`: Most read - `_3`: Most interactions
             page: Page number.
             note_type: Note type.  Available Values: - `_1`: Photo and Text notes - `_2`: Video notes - `_3`: Cooperation notes - `_4`: All types
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-note-list/v1",
@@ -528,7 +511,6 @@ class XiaohongshuPgyResource(BaseResource):
                 "orderType": order_type,
                 "page": page,
                 "noteType": note_type,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -537,7 +519,6 @@ class XiaohongshuPgyResource(BaseResource):
         *,
         kol_id: str,
         business: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Data Summary
@@ -547,14 +528,12 @@ class XiaohongshuPgyResource(BaseResource):
         Args:
             kol_id: KOL ID.
             business: Business type.  Available Values: - `_0`: Normal notes - `_1`: Cooperation notes
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-data-summary/v2",
             {
                 "kolId": kol_id,
                 "business": business,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -562,7 +541,6 @@ class XiaohongshuPgyResource(BaseResource):
         self,
         *,
         kol_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Cost Effectiveness Analysis
@@ -571,13 +549,11 @@ class XiaohongshuPgyResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-cost-effective/v1",
             {
                 "kolId": kol_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -585,7 +561,6 @@ class XiaohongshuPgyResource(BaseResource):
         self,
         *,
         note_id: str,
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Note Details
@@ -594,13 +569,11 @@ class XiaohongshuPgyResource(BaseResource):
 
         Args:
             note_id: Note ID.
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-note-detail/v1",
             {
                 "noteId": note_id,
-                "acceptCache": accept_cache,
             },
         )
 
@@ -612,7 +585,6 @@ class XiaohongshuPgyResource(BaseResource):
         note_type: str | None = "_3",
         date_type: str | None = "_1",
         ad_switch: str | None = "_1",
-        accept_cache: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Creator Core Metrics
@@ -625,7 +597,6 @@ class XiaohongshuPgyResource(BaseResource):
             note_type: Note type.  Available Values: - `_1`: Photo and Text - `_2`: Video - `_3`: Photo and Video
             date_type: Date type.  Available Values: - `_1`: Last 30 days - `_2`: Last 90 days
             ad_switch: Ad filter.  Available Values: - `_1`: Full traffic (All notes) - `_0`: Natural traffic (Organic notes)
-            accept_cache: Enable cache.
         """
         return self._get(
             "/api/xiaohongshu-pgy/get-kol-core-data/v1",
@@ -635,6 +606,5 @@ class XiaohongshuPgyResource(BaseResource):
                 "noteType": note_type,
                 "dateType": date_type,
                 "adSwitch": ad_switch,
-                "acceptCache": accept_cache,
             },
         )

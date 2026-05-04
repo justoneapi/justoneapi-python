@@ -48,6 +48,96 @@
   },
   "openapi": "3.1.0",
   "paths": {
+    "/api/1688/get-item-detail/v1": {
+      "get": {
+        "description": "Get 1688 product details, including product metadata and offer information, for sourcing research and catalog analysis.",
+        "operationId": "getItemDetailV1",
+        "parameters": [
+          {
+            "description": "A unique product identifier on 1688.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Details",
+        "tags": [
+          "1688"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16001000",
+        "x-sdk-class-name": "Field1688Resource",
+        "x-sdk-method-name": "get_item_detail_v1",
+        "x-sdk-resource": "field_1688"
+      }
+    },
+    "/api/1688/search-item-list/v1": {
+      "get": {
+        "description": "Get 1688 product search results by keyword for sourcing discovery, supplier research, and market monitoring.",
+        "operationId": "searchItemListV1",
+        "parameters": [
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Search",
+        "tags": [
+          "1688"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16001100",
+        "x-sdk-class-name": "Field1688Resource",
+        "x-sdk-method-name": "search_item_list_v1",
+        "x-sdk-resource": "field_1688"
+      }
+    },
     "/api/amazon/get-best-sellers/v1": {
       "get": {
         "description": "Get Amazon best Sellers data, including rank positions, product metadata, and pricing, for identifying trending products in specific categories, market share analysis and category research, and tracking sales rank and popularity over time.",
@@ -1539,6 +1629,72 @@
         "x-sdk-resource": "douyin_ec"
       }
     },
+    "/api/douyin-ec/search-item-list/v1": {
+      "get": {
+        "description": "Get Douyin E-commerce product Search data, including matched items and product metadata, for product discovery, catalog research, and market monitoring.",
+        "operationId": "searchDouyinEcItemListV1",
+        "parameters": [
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "page"
+          },
+          {
+            "description": "Search ID; use the search_id value returned by the last response for subsequent pages.",
+            "in": "query",
+            "name": "searchId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "search_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Search",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "14502050",
+        "x-sdk-class-name": "DouyinEcResource",
+        "x-sdk-method-name": "search_item_list_v1",
+        "x-sdk-resource": "douyin_ec"
+      }
+    },
     "/api/douyin-xingtu/get-author-commerce-seed-base-info/v1": {
       "get": {
         "deprecated": true,
@@ -1564,17 +1720,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "range"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -1621,17 +1766,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -1689,17 +1823,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "keyword_type"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -1746,17 +1869,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -1803,17 +1915,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -1876,17 +1977,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "range"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -1959,17 +2049,6 @@
               "type": "integer"
             },
             "x-sdk-python-name": "page"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2016,17 +2095,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2093,17 +2161,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "end_date"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2167,17 +2224,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "fans_type"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2240,17 +2286,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "platform_channel"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2308,17 +2343,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "industry_tag"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2365,17 +2389,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2438,17 +2451,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "platform_channel"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2495,17 +2497,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2563,17 +2554,6 @@
               "type": "boolean"
             },
             "x-sdk-python-name": "only_assign"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2674,17 +2654,6 @@
               "type": "boolean"
             },
             "x-sdk-python-name": "only_assign"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2731,17 +2700,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -2788,17 +2746,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "detail_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -3029,6 +2976,17 @@
               "type": "string"
             },
             "x-sdk-python-name": "platform"
+          },
+          {
+            "description": "Do not use unless confirmed by admin.",
+            "in": "query",
+            "name": "auto",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            },
+            "x-sdk-python-name": "auto"
           }
         ],
         "responses": {
@@ -4725,17 +4683,6 @@
               "type": "integer"
             },
             "x-sdk-python-name": "page"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -6626,17 +6573,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "language_country"
-          },
-          {
-            "description": "Whether to accept cached data.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -6804,6 +6740,144 @@
         "x-sdk-class-name": "ImdbResource",
         "x-sdk-method-name": "title_user_reviews_summary_query_v1",
         "x-sdk-resource": "imdb"
+      }
+    },
+    "/api/instagram/get-comment-replies/v1": {
+      "get": {
+        "description": "Get replies under a parent comment, including reply text, author details, like counts, IDs, and pagination cursors for threaded discussion analysis.",
+        "operationId": "getInstagramCommentRepliesV1",
+        "parameters": [
+          {
+            "description": "The numeric media ID of the Instagram post.",
+            "in": "query",
+            "name": "mediaId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "media_id"
+          },
+          {
+            "description": "The parent comment ID whose replies are to be retrieved.",
+            "in": "query",
+            "name": "commentId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "comment_id"
+          },
+          {
+            "description": "Pagination cursor returned as next_min_child_cursor from the previous response.",
+            "in": "query",
+            "name": "minId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "min_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Comment Reply List",
+        "tags": [
+          "Instagram"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "24001600",
+        "x-sdk-class-name": "InstagramResource",
+        "x-sdk-method-name": "get_comment_replies_v1",
+        "x-sdk-resource": "instagram"
+      }
+    },
+    "/api/instagram/get-post-comments/v1": {
+      "get": {
+        "description": "Get post comments, commenter profiles, text, like counts, reply counts, and pagination cursors for sentiment review and engagement analysis.",
+        "operationId": "getInstagramPostCommentsV1",
+        "parameters": [
+          {
+            "description": "The unique shortcode for the Instagram post.",
+            "in": "query",
+            "name": "code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "code"
+          },
+          {
+            "description": "Pagination cursor returned as next_min_id from the previous response.",
+            "in": "query",
+            "name": "minId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "min_id"
+          },
+          {
+            "description": "Sort order for the comments.\n\nAvailable Values:\n- `popular`: Popular\n- `newest`: Newest",
+            "in": "query",
+            "name": "sortOrder",
+            "required": false,
+            "schema": {
+              "default": "newest",
+              "description": "Instagram Comment Sort Order",
+              "enum": [
+                "popular",
+                "newest"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort_order"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Post Comment List",
+        "tags": [
+          "Instagram"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "24001500",
+        "x-sdk-class-name": "InstagramResource",
+        "x-sdk-method-name": "get_post_comments_v1",
+        "x-sdk-resource": "instagram"
       }
     },
     "/api/instagram/get-post-detail/v1": {
@@ -7169,6 +7243,51 @@
         "x-sdk-resource": "jd"
       }
     },
+    "/api/jd/get-item-price/v1": {
+      "get": {
+        "description": "Get JD.com product Price data for price monitoring, catalog checks, repricing workflows, and ecommerce research.",
+        "operationId": "getJdItemPriceV1",
+        "parameters": [
+          {
+            "description": "A unique product identifier on JD.com (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Price",
+        "tags": [
+          "JD.com"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "19001050",
+        "x-sdk-class-name": "JdResource",
+        "x-sdk-method-name": "get_item_price_v1",
+        "x-sdk-resource": "jd"
+      }
+    },
     "/api/jd/get-shop-item-list/v1": {
       "get": {
         "description": "Get JD.com shop Product List data, including item titles, prices, and images, for catalog tracking and seller research.",
@@ -7221,6 +7340,61 @@
         "x-order": "19001200",
         "x-sdk-class-name": "JdResource",
         "x-sdk-method-name": "get_shop_item_list_v1",
+        "x-sdk-resource": "jd"
+      }
+    },
+    "/api/jd/search-item-list/v1": {
+      "get": {
+        "description": "Get JD.com product Search data, including matched items and product metadata, for product discovery, catalog research, and market monitoring.",
+        "operationId": "searchItemListV1",
+        "parameters": [
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Search",
+        "tags": [
+          "JD.com"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "19001075",
+        "x-sdk-class-name": "JdResource",
+        "x-sdk-method-name": "search_item_list_v1",
         "x-sdk-resource": "jd"
       }
     },
@@ -11659,17 +11833,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "ad_switch"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -11716,17 +11879,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -11788,17 +11940,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "business"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -11845,17 +11986,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -11902,17 +12032,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -11989,17 +12108,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "increase_type"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -12046,17 +12154,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "kol_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -12163,17 +12260,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "note_type"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -12285,17 +12371,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "business"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -12342,17 +12417,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "note_id"
-          },
-          {
-            "description": "Enable cache.",
-            "in": "query",
-            "name": "acceptCache",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "accept_cache"
           }
         ],
         "responses": {
@@ -12512,6 +12576,17 @@
               "type": "string"
             },
             "x-sdk-python-name": "note_id"
+          },
+          {
+            "description": "Do not use unless confirmed by admin.",
+            "in": "query",
+            "name": "format",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            },
+            "x-sdk-python-name": "format"
           }
         ],
         "responses": {
@@ -13452,6 +13527,100 @@
         "x-sdk-resource": "youtube"
       }
     },
+    "/api/youtube/get-video-comment/v1": {
+      "get": {
+        "description": "Get first-level video comments, author profiles, like counts, reply counts, and reply cursors for audience feedback and engagement analysis.",
+        "operationId": "getVideoCommentV1",
+        "parameters": [
+          {
+            "description": "The unique identifier for a YouTube video.",
+            "in": "query",
+            "name": "videoId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "video_id"
+          },
+          {
+            "description": "Pagination cursor returned by the previous response.",
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "cursor"
+          },
+          {
+            "description": "Language preference for response data.",
+            "in": "query",
+            "name": "languageCode",
+            "required": false,
+            "schema": {
+              "default": "zh-CN",
+              "type": "string"
+            },
+            "x-sdk-python-name": "language_code"
+          },
+          {
+            "description": "Region code for response data.",
+            "in": "query",
+            "name": "countryCode",
+            "required": false,
+            "schema": {
+              "default": "US",
+              "type": "string"
+            },
+            "x-sdk-python-name": "country_code"
+          },
+          {
+            "description": "Sort order for the comment list.\n\nAvailable Values:\n- `top`: Top comments\n- `newest`: Newest comments",
+            "in": "query",
+            "name": "sortBy",
+            "required": false,
+            "schema": {
+              "default": "newest",
+              "description": "YouTube Comment Sort",
+              "enum": [
+                "top",
+                "newest"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort_by"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Video Comment List",
+        "tags": [
+          "YouTube"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "25001100",
+        "x-sdk-class-name": "YoutubeResource",
+        "x-sdk-method-name": "get_video_comment_v1",
+        "x-sdk-resource": "youtube"
+      }
+    },
     "/api/youtube/get-video-detail/v1": {
       "get": {
         "description": "Get YouTube video Details data, including its title, description, and view counts, for tracking video engagement and statistics, extracting video metadata for content analysis, and verifying video availability and status.",
@@ -13494,6 +13663,73 @@
         "x-order": "25001000",
         "x-sdk-class-name": "YoutubeResource",
         "x-sdk-method-name": "get_video_detail_v1",
+        "x-sdk-resource": "youtube"
+      }
+    },
+    "/api/youtube/get-video-sub-comment/v1": {
+      "get": {
+        "description": "Get second-level video comment replies, reply authors, like counts, and pagination cursors for threaded discussion analysis.",
+        "operationId": "getVideoSubCommentV1",
+        "parameters": [
+          {
+            "description": "Reply cursor from a first-level comment response.",
+            "in": "query",
+            "name": "cursor",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "cursor"
+          },
+          {
+            "description": "Language preference for response data.",
+            "in": "query",
+            "name": "languageCode",
+            "required": false,
+            "schema": {
+              "default": "zh-CN",
+              "type": "string"
+            },
+            "x-sdk-python-name": "language_code"
+          },
+          {
+            "description": "Region code for response data.",
+            "in": "query",
+            "name": "countryCode",
+            "required": false,
+            "schema": {
+              "default": "US",
+              "type": "string"
+            },
+            "x-sdk-python-name": "country_code"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Video Sub Comment List",
+        "tags": [
+          "YouTube"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "25001200",
+        "x-sdk-class-name": "YoutubeResource",
+        "x-sdk-method-name": "get_video_sub_comment_v1",
         "x-sdk-resource": "youtube"
       }
     },
