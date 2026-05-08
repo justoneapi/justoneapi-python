@@ -292,6 +292,7 @@ except BusinessError as exc:
 ### 京东
 
 - [商品详情 (V1)](https://docs.justoneapi.com/zh/api/jdcom/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [商品详情 (V2)](https://docs.justoneapi.com/zh/api/jdcom/product-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品价格 (V1)](https://docs.justoneapi.com/zh/api/jdcom/product-price-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品搜索 (V1)](https://docs.justoneapi.com/zh/api/jdcom/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品评论 (V1)](https://docs.justoneapi.com/zh/api/jdcom/product-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
