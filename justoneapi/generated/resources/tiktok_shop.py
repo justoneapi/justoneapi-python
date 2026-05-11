@@ -24,7 +24,7 @@ class TiktokShopResource(BaseResource):
 
         Args:
             keyword: Search keyword.
-            region: Target region for product search.  Available Values: - `US`: United States - `GB`: United Kingdom - `SG`: Singapore - `MY`: Malaysia - `PH`: Philippines - `TH`: Thailand - `VN`: Vietnam - `ID`: Indonesia
+            region: Target region for product search.  Available Values: - `US`: United States - `GB`: United Kingdom - `FR`: France - `SG`: Singapore - `MY`: Malaysia - `PH`: Philippines - `TH`: Thailand - `VN`: Vietnam - `ID`: Indonesia
             offset: Search result offset.
             page_token: Pagination token for the next page.
         """
@@ -51,10 +51,33 @@ class TiktokShopResource(BaseResource):
 
         Args:
             product_id: TikTok Shop Product ID.
-            region: Target region for product detail.  Available Values: - `US`: United States - `GB`: United Kingdom - `SG`: Singapore - `MY`: Malaysia - `PH`: Philippines - `TH`: Thailand - `VN`: Vietnam - `ID`: Indonesia
+            region: Target region for product detail.  Available Values: - `US`: United States - `GB`: United Kingdom - `FR`: France - `SG`: Singapore - `MY`: Malaysia - `PH`: Philippines - `TH`: Thailand - `VN`: Vietnam - `ID`: Indonesia
         """
         return self._get(
             "/api/tiktok-shop/get-product-detail/v1",
+            {
+                "productId": product_id,
+                "region": region,
+            },
+        )
+
+    def get_product_detail_v2(
+        self,
+        *,
+        product_id: str,
+        region: str | None = "FR",
+    ) -> ApiResponse[Any]:
+        """
+        Product Details
+
+        Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.
+
+        Args:
+            product_id: TikTok Shop Product ID.
+            region: Target region for product detail.  Available Values: - `FR`: France
+        """
+        return self._get(
+            "/api/tiktok-shop/get-product-detail/v2",
             {
                 "productId": product_id,
                 "region": region,

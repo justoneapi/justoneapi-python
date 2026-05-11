@@ -118,6 +118,26 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
+    def get_note_detail_v2(
+        self,
+        *,
+        note_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Note Details
+
+        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
+
+        Args:
+            note_id: Unique note identifier on Xiaohongshu.
+        """
+        return self._get(
+            "/api/xiaohongshu/get-note-detail/v2",
+            {
+                "noteId": note_id,
+            },
+        )
+
     def get_note_detail_v3(
         self,
         *,
@@ -133,6 +153,46 @@ class XiaohongshuResource(BaseResource):
         """
         return self._get(
             "/api/xiaohongshu/get-note-detail/v3",
+            {
+                "noteId": note_id,
+            },
+        )
+
+    def get_note_detail_v4(
+        self,
+        *,
+        note_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Note Details
+
+        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
+
+        Args:
+            note_id: Unique note identifier on Xiaohongshu.
+        """
+        return self._get(
+            "/api/xiaohongshu/get-note-detail/v4",
+            {
+                "noteId": note_id,
+            },
+        )
+
+    def get_note_detail_v5(
+        self,
+        *,
+        note_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Note Details
+
+        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
+
+        Args:
+            note_id: Unique note identifier on Xiaohongshu.
+        """
+        return self._get(
+            "/api/xiaohongshu/get-note-detail/v5",
             {
                 "noteId": note_id,
             },
@@ -288,6 +348,32 @@ class XiaohongshuResource(BaseResource):
                 "page": page,
                 "sort": sort,
                 "noteType": note_type,
+            },
+        )
+
+    def get_topic_note_list_v1(
+        self,
+        *,
+        topic_id: str,
+        sort: str | None = "hot",
+        cursor: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Topic Note List
+
+        Get Xiaohongshu (RedNote) topic Note List data, including notes under a topic, for topic monitoring and content discovery.
+
+        Args:
+            topic_id: Unique topic identifier on Xiaohongshu.
+            sort: Sort order for the result set.  Available Values: - `time`: Latest - `hot`: Hot
+            cursor: Pagination cursor from the previous page.
+        """
+        return self._get(
+            "/api/xiaohongshu/get-topic-note-list/v1",
+            {
+                "topicId": topic_id,
+                "sort": sort,
+                "cursor": cursor,
             },
         )
 

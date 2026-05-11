@@ -29,6 +29,26 @@ class JdResource(BaseResource):
             },
         )
 
+    def get_item_detail_v2(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Product Details
+
+        Get JD.com product Details data through the task-backed v2 flow. If data is not ready within a short wait, the response returns a pending task status.
+
+        Args:
+            item_id: A unique product identifier on JD.com (item ID).
+        """
+        return self._get(
+            "/api/jd/get-item-detail/v2",
+            {
+                "itemId": item_id,
+            },
+        )
+
     def get_item_price_v1(
         self,
         *,
