@@ -44,7 +44,7 @@
     "/api/1688/get-item-detail/v1": {
       "get": {
         "description": "Get 1688 product details, including product metadata and offer information, for sourcing research and catalog analysis.",
-        "operationId": "getItemDetailV1",
+        "operationId": "getApi1688GetItemDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -89,7 +89,7 @@
     "/api/1688/search-item-list/v1": {
       "get": {
         "description": "Get 1688 product search results by keyword for sourcing discovery, supplier research, and market monitoring.",
-        "operationId": "searchItemListV1",
+        "operationId": "getApi1688SearchItemListV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -134,7 +134,7 @@
     "/api/amazon/get-best-sellers/v1": {
       "get": {
         "description": "Get Amazon best Sellers data, including rank positions, product metadata, and pricing, for identifying trending products in specific categories, market share analysis and category research, and tracking sales rank and popularity over time.",
-        "operationId": "getBestSellersV1",
+        "operationId": "getApiAmazonGetBestSellersV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -227,7 +227,7 @@
     "/api/amazon/get-category-products/v1": {
       "get": {
         "description": "Get Amazon products By Category data, including title, price, and rating, for category-based product discovery and returns product information such as title, price, and rating.",
-        "operationId": "getProductsByCategoryV1",
+        "operationId": "getApiAmazonGetCategoryProductsV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -339,7 +339,7 @@
     "/api/amazon/get-product-detail/v1": {
       "get": {
         "description": "Get Amazon product Details data, including title, brand, and price, for building product catalogs and enriching item content (e.g., images), price monitoring and availability tracking, and e-commerce analytics and competitor tracking.",
-        "operationId": "getAmazonProductDetailV1",
+        "operationId": "getApiAmazonGetProductDetailV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -421,7 +421,7 @@
     "/api/amazon/get-product-top-reviews/v1": {
       "get": {
         "description": "Get Amazon product Top Reviews data, including most helpful) public reviews, for sentiment analysis and consumer feedback tracking, product research and quality assessment, and monitoring competitor customer experience.",
-        "operationId": "getProductTopReviewsV1",
+        "operationId": "getApiAmazonGetProductTopReviewsV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -503,7 +503,7 @@
     "/api/beike/community/list/v1": {
       "get": {
         "description": "Get Beike community List data, including - Community name and unique ID and Average listing price and historical price trends, for identifying popular residential areas in a city and comparing average housing prices across different communities.",
-        "operationId": "communityListV1",
+        "operationId": "getApiBeikeCommunityListV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -569,7 +569,7 @@
     "/api/beike/ershoufang/detail/v1": {
       "get": {
         "description": "Get Beike resale Housing Details data, including - Pricing (total and unit price), Physical attributes (area, and layout, for displaying a full property profile to users and detailed price comparison between specific listings.",
-        "operationId": "ershoufangDetailV1",
+        "operationId": "getApiBeikeErshoufangDetailV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -623,7 +623,7 @@
     "/api/beike/get-ershoufang-list/v1": {
       "get": {
         "description": "Get Beike resale Housing List data, including - Supports filtering by city/region, price range, and layout, for building search result pages for property portals and aggregating market data for regional housing trends.",
-        "operationId": "getErshoufangListV1",
+        "operationId": "getApiBeikeGetErshoufangListV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -689,7 +689,7 @@
     "/api/bilibili/get-user-detail/v2": {
       "get": {
         "description": "Get Bilibili user Profile data, including account metadata, audience metrics, and verification-related fields, for analyzing creator's profile, level, and verification status and verifying user identity and social presence on bilibili.",
-        "operationId": "getUserDetailV2",
+        "operationId": "getApiBilibiliGetUserDetailV2",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -734,7 +734,7 @@
     "/api/bilibili/get-user-relation-stat/v1": {
       "get": {
         "description": "Get Bilibili user Relation Stats data, including following counts, for creator benchmarking and audience growth tracking.",
-        "operationId": "getUserRelationStat",
+        "operationId": "getApiBilibiliGetUserRelationStatV1",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -779,7 +779,7 @@
     "/api/bilibili/get-user-video-list/v2": {
       "get": {
         "description": "Get Bilibili user Published Videos data, including titles, covers, and publish times, for creator monitoring and content performance analysis.",
-        "operationId": "getBilibiliUserVideoListV2",
+        "operationId": "getApiBilibiliGetUserVideoListV2",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -833,7 +833,7 @@
     "/api/bilibili/get-video-caption/v2": {
       "get": {
         "description": "Get Bilibili video Captions data, including caption data, for transcript extraction and multilingual content analysis.",
-        "operationId": "getVideoCaptionV1",
+        "operationId": "getApiBilibiliGetVideoCaptionV2",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -896,7 +896,7 @@
     "/api/bilibili/get-video-comment/v2": {
       "get": {
         "description": "Get Bilibili video Comments data, including commenter profiles, text, and likes, for sentiment analysis and comment moderation workflows.",
-        "operationId": "getVideoCommentV2",
+        "operationId": "getApiBilibiliGetVideoCommentV2",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -950,7 +950,7 @@
     "/api/bilibili/get-video-danmu/v2": {
       "get": {
         "description": "Get Bilibili video Danmaku data, including timeline positions and comment text, for audience reaction analysis and subtitle-style comment review.",
-        "operationId": "getVideoDanmuV2",
+        "operationId": "getApiBilibiliGetVideoDanmuV2",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -1013,7 +1013,7 @@
     "/api/bilibili/get-video-detail/v2": {
       "get": {
         "description": "Get Bilibili video Details data, including metadata (title, tags, and publishing time), for tracking video performance and engagement metrics and analyzing content metadata and uploader information.",
-        "operationId": "getBilibiliVideoDetailV2",
+        "operationId": "getApiBilibiliGetVideoDetailV2",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -1058,7 +1058,7 @@
     "/api/bilibili/search-video/v2": {
       "get": {
         "description": "Get Bilibili video Search data, including matched videos, creators, and engagement metrics, for topic research and content discovery.",
-        "operationId": "searchBilibiliVideoV2",
+        "operationId": "getApiBilibiliSearchVideoV2",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -1130,7 +1130,7 @@
     "/api/bilibili/share-url-transfer/v1": {
       "get": {
         "description": "Get Bilibili share Link Resolution data, including resolved video and page identifier, for converting shortened mobile share links to standard bvid/metadata and automating content extraction from shared social media links.",
-        "operationId": "shareBilibiliUrlTransferV1",
+        "operationId": "getApiBilibiliShareUrlTransferV1",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -1175,7 +1175,7 @@
     "/api/douban/get-movie-comments/v1": {
       "get": {
         "description": "Get Douban movie Comments data, including ratings, snippets, and interaction counts, for quick sentiment sampling and review monitoring.",
-        "operationId": "getMovieCommentsV1",
+        "operationId": "getApiDoubanGetMovieCommentsV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1246,7 +1246,7 @@
     "/api/douban/get-movie-review-detail/v1": {
       "get": {
         "description": "Get Douban movie Review Details data, including metadata, content fields, and engagement signals, for review archiving and detailed opinion analysis.",
-        "operationId": "getMovieReviewDetailsV1",
+        "operationId": "getApiDoubanGetMovieReviewDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1291,7 +1291,7 @@
     "/api/douban/get-movie-reviews/v1": {
       "get": {
         "description": "Get Douban movie Reviews data, including review titles, ratings, and snippets, for audience sentiment analysis and review research.",
-        "operationId": "getMovieReviewsV1",
+        "operationId": "getApiDoubanGetMovieReviewsV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1362,7 +1362,7 @@
     "/api/douban/get-recent-hot-movie/v1": {
       "get": {
         "description": "Get Douban recent Hot Movie data, including ratings, posters, and subject metadata, for movie discovery and trend monitoring.",
-        "operationId": "getRecentHotMovieV1",
+        "operationId": "getApiDoubanGetRecentHotMovieV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1409,7 +1409,7 @@
     "/api/douban/get-recent-hot-tv/v1": {
       "get": {
         "description": "Get Douban recent Hot Tv data, including ratings, posters, and subject metadata, for series discovery and trend monitoring.",
-        "operationId": "getRecentHotTvV1",
+        "operationId": "getApiDoubanGetRecentHotTvV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1456,7 +1456,7 @@
     "/api/douban/get-subject-detail/v1": {
       "get": {
         "description": "Get Douban subject Details data, including title, rating, and cast, for title enrichment and catalog research.",
-        "operationId": "getSubjectDetailV1",
+        "operationId": "getApiDoubanGetSubjectDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1501,7 +1501,7 @@
     "/api/douyin-ec/get-item-comments/v1": {
       "get": {
         "description": "Get Douyin E-commerce item comments, including ratings, review content, and reviewer signals, for customer feedback analysis and product research.",
-        "operationId": "getDouyinEcItemCommentsV1",
+        "operationId": "getApiDouyinEcGetItemCommentsV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1555,7 +1555,7 @@
     "/api/douyin-ec/get-item-detail/v1": {
       "get": {
         "description": "Get Douyin E-commerce item details, including price, title, and stock, for product monitoring and competitive analysis.",
-        "operationId": "getDouyinEcItemDetailV1",
+        "operationId": "getApiDouyinEcGetItemDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1600,7 +1600,7 @@
     "/api/douyin-ec/search-item-list/v1": {
       "get": {
         "description": "Get Douyin E-commerce product Search data, including matched items and product metadata, for product discovery, catalog research, and market monitoring.",
-        "operationId": "searchDouyinEcItemListV1",
+        "operationId": "getApiDouyinEcSearchItemListV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -1665,7 +1665,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.",
-        "operationId": "getAuthorCommerceSeedingBaseInfoV1",
+        "operationId": "getApiDouyinXingtuGetAuthorCommerceSeedBaseInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -1720,7 +1720,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.",
-        "operationId": "getAuthorCommerceSpreadInfoV1",
+        "operationId": "getApiDouyinXingtuGetAuthorCommerceSpreadInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -1766,7 +1766,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.",
-        "operationId": "getAuthorContentHotKeywordsV1",
+        "operationId": "getApiDouyinXingtuGetAuthorContentHotKeywordsV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -1822,7 +1822,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.",
-        "operationId": "getAuthorHotCommentTokensV1",
+        "operationId": "getApiDouyinXingtuGetAuthorHotCommentTokensV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -1868,7 +1868,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) audience Distribution data, including demographic and interest-based audience segmentation, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolAudienceDistributionV1",
+        "operationId": "getApiDouyinXingtuGetKolAudienceDistributionV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -1914,7 +1914,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) conversion Analysis data, including conversion efficiency and commercial performance indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolConvertAbilityV1",
+        "operationId": "getApiDouyinXingtuGetKolConvertAbilityV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -1975,7 +1975,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) conversion Resources data, including products tied to a Douyin Xingtu creator's conversion activity, for commerce analysis and campaign optimization.",
-        "operationId": "getKolConvertVideosOrProductsV1",
+        "operationId": "getApiDouyinXingtuGetKolConvertVideosOrProductsV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2045,7 +2045,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) cost Performance Analysis data, including pricing, exposure, and engagement efficiency indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolCpInfoV1",
+        "operationId": "getApiDouyinXingtuGetKolCpInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2091,7 +2091,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolDailyFansV1",
+        "operationId": "getApiDouyinXingtuGetKolDailyFansV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2155,7 +2155,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolFansDistributionV1",
+        "operationId": "getApiDouyinXingtuGetKolFansDistributionV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2217,7 +2217,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.",
-        "operationId": "getDouyinXingtuKolInfoV1",
+        "operationId": "getApiDouyinXingtuGetKolInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2278,7 +2278,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Link Metrics data, including creator ranking, traffic structure, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolLinkInfoV1",
+        "operationId": "getApiDouyinXingtuGetKolLinkInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2334,7 +2334,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Link Structure data, including engagement and conversion metrics, for creator performance analysis.",
-        "operationId": "getKolLinkStructV1",
+        "operationId": "getApiDouyinXingtuGetKolLinkStructV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2380,7 +2380,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) marketing metrics data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolMarketingInfoV1",
+        "operationId": "getApiDouyinXingtuGetKolMarketingInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2441,7 +2441,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) recommended videos data, including video performance metrics, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolRecVideosV1",
+        "operationId": "getApiDouyinXingtuGetKolRecVideosV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2487,7 +2487,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) showcase items data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "getKolShowItemsV2V1",
+        "operationId": "getApiDouyinXingtuGetKolShowItemsV2V1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2543,7 +2543,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) spread metrics data, including audience, content performance, and commercial indicators, for quick evaluation.",
-        "operationId": "getKolSpreadInfoV1",
+        "operationId": "getApiDouyinXingtuGetKolSpreadInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2639,7 +2639,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) audience touchpoint distribution data, including segment breakdowns, audience composition, and distribution signals, for traffic analysis and existing integration compatibility.",
-        "operationId": "getKolTouchDistributionV1",
+        "operationId": "getApiDouyinXingtuGetKolTouchDistributionV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2685,7 +2685,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) video Details data, including performance fields from the legacy Douyin Xingtu endpoint, for content review and integration compatibility.",
-        "operationId": "getDouyinXingtuVideoDetailV1",
+        "operationId": "getApiDouyinXingtuGetVideoDetailV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2730,7 +2730,7 @@
     "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_seed_base_info/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.",
-        "operationId": "gwApiAggregatorGetAuthorCommerceSeedBaseInfoV1",
+        "operationId": "getApiDouyinXingtuGwApiAggregatorGetAuthorCommerceSeedBaseInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2790,7 +2790,7 @@
     "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_spread_info/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.",
-        "operationId": "gwApiAggregatorGetAuthorCommerceSpreadInfoV1",
+        "operationId": "getApiDouyinXingtuGwApiAggregatorGetAuthorCommerceSpreadInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2835,7 +2835,7 @@
     "/api/douyin-xingtu/gw/api/aggregator/get_author_order_experience/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Order Experience data, including commercial history and transaction-related indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiAggregatorGetAuthorOrderExperienceV1",
+        "operationId": "getApiDouyinXingtuGwApiAggregatorGetAuthorOrderExperienceV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2895,7 +2895,7 @@
     "/api/douyin-xingtu/gw/api/author/get_author_base_info/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.",
-        "operationId": "gwApiAuthorGetAuthorBaseInfoV1",
+        "operationId": "getApiDouyinXingtuGwApiAuthorGetAuthorBaseInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -2967,7 +2967,7 @@
     "/api/douyin-xingtu/gw/api/author/get_author_marketing_info/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) marketing metrics data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiAuthorGetAuthorMarketingInfoV1",
+        "operationId": "getApiDouyinXingtuGwApiAuthorGetAuthorMarketingInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3029,7 +3029,7 @@
     "/api/douyin-xingtu/gw/api/author/get_author_platform_channel_info_v2/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Channel Metrics data, including platform distribution and channel performance data used, for creator evaluation.",
-        "operationId": "gwApiAuthorGetAuthorPlatformChannelInfoV2V1",
+        "operationId": "getApiDouyinXingtuGwApiAuthorGetAuthorPlatformChannelInfoV2V1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3091,7 +3091,7 @@
     "/api/douyin-xingtu/gw/api/author/get_author_show_items_v2/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) showcase Items data, including products and videos associated with the account, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiAuthorGetAuthorShowItemsV2V1",
+        "operationId": "getApiDouyinXingtuGwApiAuthorGetAuthorShowItemsV2V1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3178,7 +3178,7 @@
     "/api/douyin-xingtu/gw/api/data/get_author_hot_comment_tokens/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.",
-        "operationId": "gwApiDataGetAuthorHotCommentTokensV1",
+        "operationId": "getApiDouyinXingtuGwApiDataGetAuthorHotCommentTokensV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3223,7 +3223,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/author_audience_distribution/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) audience Distribution data, including demographic and interest-based audience segmentation, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpAuthorAudienceDistributionV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpAuthorAudienceDistributionV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3303,7 +3303,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/author_cp_info/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) cost Performance Analysis data, including pricing, exposure, and engagement efficiency indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpAuthorCpInfoV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpAuthorCpInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3365,7 +3365,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/author_link_struct/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Link Structure data, including engagement and conversion metrics, for creator performance analysis.",
-        "operationId": "gwApiDataSpAuthorLinkStructV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpAuthorLinkStructV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3427,7 +3427,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/author_rec_videos_v2/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) recommended Videos data, including content references used, for creator evaluation.",
-        "operationId": "gwApiDataSpAuthorRecVideosV2V1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpAuthorRecVideosV2V1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3489,7 +3489,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/author_touch_distribution/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) audience Touchpoint Distribution data, including segment breakdowns, audience composition, and distribution signals, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpAuthorTouchDistributionV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpAuthorTouchDistributionV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3551,7 +3551,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/author_video_distribution/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) video Distribution data, including content performance breakdowns across published videos, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpAuthorVideoDistributionV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpAuthorVideoDistributionV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3613,7 +3613,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/check_author_display/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Visibility Status data, including availability status, discovery eligibility, and campaign display signals, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpCheckAuthorDisplayV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpCheckAuthorDisplayV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3675,7 +3675,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/get_author_convert_ability/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) conversion Analysis data, including conversion efficiency and commercial performance indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpGetAuthorConvertAbilityV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpGetAuthorConvertAbilityV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3752,7 +3752,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/get_author_convert_videos_or_products/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) conversion Resources data, including products tied to a Douyin Xingtu creator's conversion activity, for commerce analysis and campaign optimization.",
-        "operationId": "gwApiDataSpGetAuthorConvertVideosOrProductsV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpGetAuthorConvertVideosOrProductsV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3902,7 +3902,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/get_author_daily_fans/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpGetAuthorDailyFansV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpGetAuthorDailyFansV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -3965,7 +3965,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/get_author_fans_distribution/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) follower Distribution data, including audience segmentation and location and demographic breakdowns, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpGetAuthorFansDistributionV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpGetAuthorFansDistributionV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4025,7 +4025,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/get_author_link_info/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Link Metrics data, including creator ranking, traffic structure, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpGetAuthorLinkInfoV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpGetAuthorLinkInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4134,7 +4134,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/get_author_spread_info/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) spread metrics data, including exposure, spread, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpGetAuthorSpreadInfoV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpGetAuthorSpreadInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4251,7 +4251,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/item_report_detail/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) item Report Details data, including key metrics and report fields used, for item performance analysis.",
-        "operationId": "gwApiDataSpItemReportDetailV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpItemReportDetailV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4296,7 +4296,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/item_report_th_analysis/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) item Report Analysis data, including performance interpretation, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpItemReportThAnalysisV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpItemReportThAnalysisV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4341,7 +4341,7 @@
     "/api/douyin-xingtu/gw/api/data_sp/item_report_trend/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) item Report Trend data, including time-based changes in item performance metrics, for creator evaluation, campaign planning, and marketplace research.",
-        "operationId": "gwApiDataSpItemReportTrendV1",
+        "operationId": "getApiDouyinXingtuGwApiDataSpItemReportTrendV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4386,7 +4386,7 @@
     "/api/douyin-xingtu/gw/api/gauthor/get_author_content_hot_keywords/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.",
-        "operationId": "gwApiGauthorGetAuthorContentHotKeywordsV1",
+        "operationId": "getApiDouyinXingtuGwApiGauthorGetAuthorContentHotKeywordsV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4431,7 +4431,7 @@
     "/api/douyin-xingtu/gw/api/gsearch/search_for_author_square/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Search data, including filters, returning profile, and audience, for discovery, comparison, and shortlist building.",
-        "operationId": "gwApiGsearchSearchForAuthorSquareV1",
+        "operationId": "getApiDouyinXingtuGwApiGsearchSearchForAuthorSquareV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4555,7 +4555,7 @@
     "/api/douyin-xingtu/search-kol-simple/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Keyword Search data, including matching creators and discovery data, for creator sourcing and shortlist building.",
-        "operationId": "searchKolSimpleV1",
+        "operationId": "getApiDouyinXingtuSearchKolSimpleV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -4625,7 +4625,7 @@
     "/api/douyin/get-user-detail/v3": {
       "get": {
         "description": "Get Douyin (TikTok China) user Profile data, including follower counts, verification status, and bio details, for creator research and account analysis.",
-        "operationId": "getUserDetailV3",
+        "operationId": "getApiDouyinGetUserDetailV3",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -4670,7 +4670,7 @@
     "/api/douyin/get-user-video-list/v3": {
       "get": {
         "description": "Get Douyin (TikTok China) user Published Videos data, including captions, covers, and publish times, for account monitoring.",
-        "operationId": "getUserVideoListV3",
+        "operationId": "getApiDouyinGetUserVideoListV3",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -4731,7 +4731,7 @@
     "/api/douyin/get-video-comment/v1": {
       "get": {
         "description": "Get Douyin (TikTok China) video Comments data, including authors, text, and likes, for sentiment analysis and engagement review.",
-        "operationId": "getVideoCommentV1",
+        "operationId": "getApiDouyinGetVideoCommentV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -4787,7 +4787,7 @@
     "/api/douyin/get-video-detail/v2": {
       "get": {
         "description": "Get Douyin (TikTok China) video Details data, including author details, publish time, and engagement counts, for video research, archiving, and performance analysis.",
-        "operationId": "getDouyinVideoDetailV2",
+        "operationId": "getApiDouyinGetVideoDetailV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -4832,7 +4832,7 @@
     "/api/douyin/get-video-sub-comment/v1": {
       "get": {
         "description": "Get Douyin (TikTok China) comment Replies data, including text, authors, and timestamps, for thread analysis and feedback research.",
-        "operationId": "getVideoSubCommentV1",
+        "operationId": "getApiDouyinGetVideoSubCommentV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -4888,7 +4888,7 @@
     "/api/douyin/search-user/v2": {
       "get": {
         "description": "Get Douyin (TikTok China) user Search data, including profile metadata and follower signals, for creator discovery and account research.",
-        "operationId": "searchDouyinUserV2",
+        "operationId": "getApiDouyinSearchUserV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -4959,7 +4959,7 @@
     "/api/douyin/search-video/v4": {
       "get": {
         "description": "Get Douyin (TikTok China) video Search data, including metadata and engagement signals, for content discovery, trend research, and competitive monitoring.",
-        "operationId": "searchVideoV4",
+        "operationId": "getApiDouyinSearchVideoV4",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -5074,7 +5074,7 @@
     "/api/douyin/share-url-transfer/v1": {
       "get": {
         "description": "Get Douyin (TikTok China) share Link Resolution data, including helping extract canonical IDs, for downstream video and comment workflows.",
-        "operationId": "shareDouyinUrlTransferV1",
+        "operationId": "getApiDouyinShareUrlTransferV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -5117,7 +5117,7 @@
     "/api/facebook/get-profile-id/v1": {
       "get": {
         "description": "Retrieve the unique Facebook profile ID from a given profile URL.",
-        "operationId": "getProfileIdV1",
+        "operationId": "getApiFacebookGetProfileIdV1",
         "parameters": [
           {
             "description": "User security token for API access authentication.",
@@ -5162,7 +5162,7 @@
     "/api/facebook/get-profile-posts/v1": {
       "get": {
         "description": "Get public posts from a specific Facebook profile using its profile ID.",
-        "operationId": "getProfilePostsV1",
+        "operationId": "getApiFacebookGetProfilePostsV1",
         "parameters": [
           {
             "description": "User security token for API access authentication.",
@@ -5217,7 +5217,7 @@
     "/api/facebook/search-post/v1": {
       "get": {
         "description": "Get Facebook post Search data, including matched results, metadata, and ranking signals, for discovering relevant public posts for specific keywords and analyzing engagement and reach of public content on facebook.",
-        "operationId": "searchFacebookPostsV1",
+        "operationId": "getApiFacebookSearchPostV1",
         "parameters": [
           {
             "description": "User security token for API access authentication.",
@@ -5292,7 +5292,7 @@
     "/api/imdb/main-search-query/v1": {
       "get": {
         "description": "Get IMDb keyword Search data, including matched results, metadata, and ranking signals, for entity discovery and entertainment research.",
-        "operationId": "mainSearchQuery",
+        "operationId": "getApiImdbMainSearchQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5392,7 +5392,7 @@
     "/api/imdb/news-by-category-query/v1": {
       "get": {
         "description": "Get IMDb news by Category data, including headlines, summaries, and source metadata, for media monitoring and news research.",
-        "operationId": "newsByCategoryQuery",
+        "operationId": "getApiImdbNewsByCategoryQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5467,7 +5467,7 @@
     "/api/imdb/streaming-picks-query/v1": {
       "get": {
         "description": "Get IMDb streaming Picks data, including curated titles available across streaming surfaces, for content discovery and watchlist research.",
-        "operationId": "streamingPicksQuery",
+        "operationId": "getApiImdbStreamingPicksQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5526,7 +5526,7 @@
     "/api/imdb/title-awards-summary-query/v1": {
       "get": {
         "description": "Get IMDb title Awards Summary data, including nominations, for title benchmarking and awards research.",
-        "operationId": "titleAwardsSummaryQuery",
+        "operationId": "getApiImdbTitleAwardsSummaryQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5594,7 +5594,7 @@
     "/api/imdb/title-base-query/v1": {
       "get": {
         "description": "Get IMDb title Base Info data, including title text, release year, and type, for catalog enrichment and title lookup workflows.",
-        "operationId": "titleBaseQuery",
+        "operationId": "getApiImdbTitleBaseQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5662,7 +5662,7 @@
     "/api/imdb/title-box-office-summary/v1": {
       "get": {
         "description": "Get IMDb title Box Office Summary data, including grosses and related performance indicators, for revenue tracking and title comparison.",
-        "operationId": "titleBoxOfficeSummary",
+        "operationId": "getApiImdbTitleBoxOfficeSummaryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5730,7 +5730,7 @@
     "/api/imdb/title-chart-rankings/v1": {
       "get": {
         "description": "Get IMDb title Chart Rankings data, including positions in lists such as Top 250 and related charts, for ranking monitoring and title benchmarking.",
-        "operationId": "titleChartRankings",
+        "operationId": "getApiImdbTitleChartRankingsV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5803,7 +5803,7 @@
     "/api/imdb/title-contribution-questions/v1": {
       "get": {
         "description": "Get IMDb title Contribution Questions data, including specific IMDb title, for data maintenance workflows and title metadata review.",
-        "operationId": "titleContributionQuestions",
+        "operationId": "getApiImdbTitleContributionQuestionsV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5871,7 +5871,7 @@
     "/api/imdb/title-countries-of-origin/v1": {
       "get": {
         "description": "Get IMDb title Countries of Origin data, including country names and regional metadata, for catalog enrichment and regional content analysis.",
-        "operationId": "titleCountriesOfOrigin",
+        "operationId": "getApiImdbTitleCountriesOfOriginV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -5939,7 +5939,7 @@
     "/api/imdb/title-critics-review-summary-query/v1": {
       "get": {
         "description": "Get IMDb title Critics Review Summary data, including review highlights, for review analysis and title comparison.",
-        "operationId": "titleCriticsReviewSummaryQuery",
+        "operationId": "getApiImdbTitleCriticsReviewSummaryQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6007,7 +6007,7 @@
     "/api/imdb/title-details-query/v1": {
       "get": {
         "description": "Get IMDb title Details data, including metadata, release info, and cast, for deep title research and catalog enrichment.",
-        "operationId": "titleDetailsQuery",
+        "operationId": "getApiImdbTitleDetailsQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6075,7 +6075,7 @@
     "/api/imdb/title-did-you-know-query/v1": {
       "get": {
         "description": "Get IMDb title 'Did You Know' Insights data, including trivia, for editorial research and title insight enrichment.",
-        "operationId": "titleDidYouKnowQuery",
+        "operationId": "getApiImdbTitleDidYouKnowQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6143,7 +6143,7 @@
     "/api/imdb/title-extended-details-query/v1": {
       "get": {
         "description": "Get IMDb title Extended Details data, including title info, images, and genres, for title enrichment and catalog research.",
-        "operationId": "titleExtendedDetailsQuery",
+        "operationId": "getApiImdbTitleExtendedDetailsQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6211,7 +6211,7 @@
     "/api/imdb/title-more-like-this-query/v1": {
       "get": {
         "description": "Get IMDb title Recommendations data, including related titles and suggestion metadata, for content discovery and recommendation analysis.",
-        "operationId": "titleMoreLikeThisQuery",
+        "operationId": "getApiImdbTitleMoreLikeThisQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6279,7 +6279,7 @@
     "/api/imdb/title-plot-query/v1": {
       "get": {
         "description": "Get IMDb title Plot Summary data, including core metrics, trend signals, and performance indicators, for displaying a detailed description of the storyline for a movie or TV show.",
-        "operationId": "titlePlotQuery",
+        "operationId": "getApiImdbTitlePlotQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6347,7 +6347,7 @@
     "/api/imdb/title-redux-overview-query/v1": {
       "get": {
         "description": "Get IMDb title Redux Overview data, including key summary fields and linked metadata, for get a concise summary and overview of a movie or TV show's key attributes.",
-        "operationId": "titleReduxOverviewQuery",
+        "operationId": "getApiImdbTitleReduxOverviewQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6415,7 +6415,7 @@
     "/api/imdb/title-release-expectation-query/v1": {
       "get": {
         "description": "Get IMDb title Release Expectation data, including production status, release dates, and anticipation signals, for release monitoring and title research.",
-        "operationId": "titleReleaseExpectationQuery",
+        "operationId": "getApiImdbTitleReleaseExpectationQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6483,7 +6483,7 @@
     "/api/imdb/title-top-cast-and-crew/v1": {
       "get": {
         "description": "Get IMDb title Top Cast and Crew data, including names, roles, and profile references, for talent research and title enrichment.",
-        "operationId": "titleTopCastAndCrew",
+        "operationId": "getApiImdbTitleTopCastAndCrewV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6551,7 +6551,7 @@
     "/api/imdb/title-user-reviews-summary-query/v1": {
       "get": {
         "description": "Get IMDb title User Reviews Summary data, including aggregated review content and counts, for audience sentiment analysis.",
-        "operationId": "titleUserReviewsSummaryQuery",
+        "operationId": "getApiImdbTitleUserReviewsSummaryQueryV1",
         "parameters": [
           {
             "description": "User's authentication token.",
@@ -6619,7 +6619,7 @@
     "/api/instagram/get-comment-replies/v1": {
       "get": {
         "description": "Get replies under a parent comment, including reply text, author details, like counts, IDs, and pagination cursors for threaded discussion analysis.",
-        "operationId": "getInstagramCommentRepliesV1",
+        "operationId": "getApiInstagramGetCommentRepliesV1",
         "parameters": [
           {
             "description": "Access token for the API service.",
@@ -6683,7 +6683,7 @@
     "/api/instagram/get-post-comments/v1": {
       "get": {
         "description": "Get post comments, commenter profiles, text, like counts, reply counts, and pagination cursors for sentiment review and engagement analysis.",
-        "operationId": "getInstagramPostCommentsV1",
+        "operationId": "getApiInstagramGetPostCommentsV1",
         "parameters": [
           {
             "description": "Access token for the API service.",
@@ -6753,7 +6753,7 @@
     "/api/instagram/get-post-detail/v1": {
       "get": {
         "description": "Get Instagram post Details data, including post caption, media content (images/videos), and publish time, for analyzing engagement metrics (likes/comments) for a specific post and archiving post content and media assets for content analysis.",
-        "operationId": "getInstagramPostDetailV1",
+        "operationId": "getApiInstagramGetPostDetailV1",
         "parameters": [
           {
             "description": "Access token for the API service.",
@@ -6798,7 +6798,7 @@
     "/api/instagram/get-user-detail/v1": {
       "get": {
         "description": "Get Instagram user Profile data, including follower count, following count, and post count, for obtaining basic account metadata for influencer vetting, tracking follower growth and audience reach over time, and mapping user handles to specific profile stats.",
-        "operationId": "getInstagramUserDetailV1",
+        "operationId": "getApiInstagramGetUserDetailV1",
         "parameters": [
           {
             "description": "Access token for the API service.",
@@ -6843,7 +6843,7 @@
     "/api/instagram/get-user-posts/v1": {
       "get": {
         "description": "Get Instagram user Published Posts data, including post code, caption, and media type, for monitoring recent publishing activity of a specific user and building a historical record of content for auditing or analysis.",
-        "operationId": "getInstagramUserPostsV1",
+        "operationId": "getApiInstagramGetUserPostsV1",
         "parameters": [
           {
             "description": "Access token for the API service.",
@@ -6898,7 +6898,7 @@
     "/api/instagram/search-hashtag-posts/v1": {
       "get": {
         "description": "Get Instagram hashtag Posts Search data, including caption, author profile, and publish time, for competitive analysis of trending topics and hashtags and monitoring community discussions and public opinion on specific tags.",
-        "operationId": "searchHashtagPostsV1",
+        "operationId": "getApiInstagramSearchHashtagPostsV1",
         "parameters": [
           {
             "description": "Access token for the API service.",
@@ -6953,7 +6953,7 @@
     "/api/instagram/search-reels/v1": {
       "get": {
         "description": "Get Instagram reels Search data, including post ID, caption, and author profile, for tracking trends and viral content via specific keywords or hashtags and discovering high-engagement reels within a particular niche.",
-        "operationId": "searchReelsV1",
+        "operationId": "getApiInstagramSearchReelsV1",
         "parameters": [
           {
             "description": "Access token for the API service.",
@@ -7008,7 +7008,7 @@
     "/api/jd/get-item-comments/v1": {
       "get": {
         "description": "Get JD.com product Comments data, including ratings, timestamps, and reviewer signals, for customer feedback analysis and product research.",
-        "operationId": "getItemCommentsV1",
+        "operationId": "getApiJdGetItemCommentsV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7067,7 +7067,7 @@
     "/api/jd/get-item-detail/v1": {
       "get": {
         "description": "Get JD.com product Details data, including pricing, images, and shop information, for catalog analysis, product monitoring, and ecommerce research.",
-        "operationId": "getJdItemDetailV1",
+        "operationId": "getApiJdGetItemDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7109,10 +7109,60 @@
         "x-order": "19001000"
       }
     },
+    "/api/jd/get-item-detail/v2": {
+      "get": {
+        "description": "Get JD.com product Details data through the task-backed v2 flow. If data is not ready within a short wait, the response returns a pending task status.",
+        "operationId": "getApiJdGetItemDetailV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "A unique product identifier on JD.com (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Details",
+        "tags": [
+          "JD.com"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [
+          {
+            "content": "This endpoint is task-based and does not return real-time data. It combines task submission and result retrieval in one interface. Please review its mechanism in the dashboard and consult the administrator before use to avoid unintended charges.",
+            "type": "danger"
+          }
+        ],
+        "x-order": "19001025"
+      }
+    },
     "/api/jd/get-item-price/v1": {
       "get": {
         "description": "Get JD.com product Price data for price monitoring, catalog checks, repricing workflows, and ecommerce research.",
-        "operationId": "getJdItemPriceV1",
+        "operationId": "getApiJdGetItemPriceV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7157,7 +7207,7 @@
     "/api/jd/get-shop-item-list/v1": {
       "get": {
         "description": "Get JD.com shop Product List data, including item titles, prices, and images, for catalog tracking and seller research.",
-        "operationId": "getJdShopItemListV1",
+        "operationId": "getApiJdGetShopItemListV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7211,7 +7261,7 @@
     "/api/jd/search-item-list/v1": {
       "get": {
         "description": "Get JD.com product Search data, including matched items and product metadata, for product discovery, catalog research, and market monitoring.",
-        "operationId": "searchItemListV1",
+        "operationId": "getApiJdSearchItemListV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7265,7 +7315,7 @@
     "/api/kuaishou/get-user-detail/v1": {
       "get": {
         "description": "Get Kuaishou user Profile data, including account metadata, audience metrics, and verification-related fields, for creator research and building creator profiles and monitoring audience growth and account status.",
-        "operationId": "getUserProfileV1",
+        "operationId": "getApiKuaishouGetUserDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7310,7 +7360,7 @@
     "/api/kuaishou/get-user-video-list/v2": {
       "get": {
         "description": "Get Kuaishou user Published Videos data, including covers, publish times, and engagement metrics, for creator monitoring and content performance analysis.",
-        "operationId": "getKuaishouUserVideoListV2",
+        "operationId": "getApiKuaishouGetUserVideoListV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7364,7 +7414,7 @@
     "/api/kuaishou/get-video-comment/v1": {
       "get": {
         "description": "Retrieves public comments of a Kuaishou video, including comment content,\nauthor info, like count, and reply count.\n\nTypical use cases:\n- Sentiment analysis and community feedback monitoring\n- Gathering engagement data for specific videos\n",
-        "operationId": "getVideoCommentsV1",
+        "operationId": "getApiKuaishouGetVideoCommentV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7416,7 +7466,7 @@
     "/api/kuaishou/get-video-detail/v2": {
       "get": {
         "description": "Get Kuaishou video Details data, including video URL, caption, and author info, for in-depth content performance analysis and building databases of viral videos.",
-        "operationId": "getVideoDetailsV2",
+        "operationId": "getApiKuaishouGetVideoDetailV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7454,14 +7504,19 @@
           "Kuaishou"
         ],
         "x-api-version": "v2",
-        "x-highlights": [],
+        "x-highlights": [
+          {
+            "content": "For video data returned by the Video Search API, the `videoId` can be extracted from the `clientCacheKey` parameter in the `main_url` field. For example, in `&clientCacheKey=3xnc9vqcitacnna.jpg&`, the value `3xnc9vqcitacnna` is the `videoId` (excluding the `.jpg` suffix).",
+            "type": "tip"
+          }
+        ],
         "x-order": "16001200"
       }
     },
     "/api/kuaishou/search-user/v2": {
       "get": {
         "description": "Get Kuaishou user Search data, including profile names, avatars, and follower counts, for creator discovery and account research.",
-        "operationId": "searchKuaishouUserV2",
+        "operationId": "getApiKuaishouSearchUserV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7517,7 +7572,7 @@
     "/api/kuaishou/search-video/v2": {
       "get": {
         "description": "Get Kuaishou video Search data, including video ID, cover image, and description, for competitive analysis and market trends and keywords monitoring and brand tracking.",
-        "operationId": "searchKuaishouVideoV2",
+        "operationId": "getApiKuaishouSearchVideoV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7573,7 +7628,7 @@
     "/api/kuaishou/share-url-transfer/v1": {
       "get": {
         "description": "Get Kuaishou share Link Resolution data, including resolved content identifier and target object data, for resolving shared links for automated content processing.",
-        "operationId": "shareLinkResolutionV1",
+        "operationId": "getApiKuaishouShareUrlTransferV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7618,7 +7673,7 @@
     "/api/reddit/get-post-comments/v1": {
       "get": {
         "description": "Get Reddit post Comments data, including text, authors, and timestamps, for discussion analysis and moderation research.",
-        "operationId": "getRedditPostCommentsV1",
+        "operationId": "getApiRedditGetPostCommentsV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7673,7 +7728,7 @@
     "/api/reddit/get-post-detail/v1": {
       "get": {
         "description": "Get Reddit post Details data, including author details, subreddit info, and engagement counts, for content analysis, moderation research, and monitoring.",
-        "operationId": "getRedditPostDetailV1",
+        "operationId": "getApiRedditGetPostDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7718,7 +7773,7 @@
     "/api/reddit/search/v1": {
       "get": {
         "description": "Get Reddit keyword Search data, including titles, authors, and subreddit context, for topic discovery and monitoring.",
-        "operationId": "searchRedditV1",
+        "operationId": "getApiRedditSearchV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7773,7 +7828,7 @@
     "/api/search/v1": {
       "get": {
         "description": "Get cross-platform social media search data, including Xiaohongshu, Douyin, Kuaishou, WeChat, Bilibili, Weibo and Zhihu results, for trend research and monitoring.",
-        "operationId": "searchCrossPlatformV1",
+        "operationId": "getApiSearchV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7867,7 +7922,7 @@
     "/api/taobao/get-item-comment/v3": {
       "get": {
         "description": "Get Taobao and Tmall product Reviews data, including ratings, timestamps, and reviewer signals, for feedback analysis and product research.",
-        "operationId": "getItemCommentV3",
+        "operationId": "getApiTaobaoGetItemCommentV3",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7938,7 +7993,7 @@
     "/api/taobao/get-item-detail/v1": {
       "get": {
         "description": "Get Taobao and Tmall product Details data, including pricing, images, and shop details, for product research, catalog monitoring, and ecommerce analysis.",
-        "operationId": "getTaobaoItemDetailV1",
+        "operationId": "getApiTaobaoGetItemDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -7988,7 +8043,7 @@
     "/api/taobao/get-item-detail/v2": {
       "get": {
         "description": "Get Taobao and Tmall product Details data through the task-backed v2 flow. If data is not ready within a short wait, the response returns a pending task status.",
-        "operationId": "getItemDetailV2",
+        "operationId": "getApiTaobaoGetItemDetailV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -8038,7 +8093,7 @@
     "/api/taobao/get-item-detail/v4": {
       "get": {
         "description": "Get Taobao and Tmall product Details data, including pricing, images, and shop details, for product research, catalog monitoring, and ecommerce analysis.",
-        "operationId": "getItemDetailV4",
+        "operationId": "getApiTaobaoGetItemDetailV4",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -8092,7 +8147,7 @@
     "/api/taobao/get-item-detail/v5": {
       "get": {
         "description": "Get Taobao and Tmall product Details data, including pricing, images, and shop details, for product research, catalog monitoring, and ecommerce analysis.",
-        "operationId": "getItemDetailV5",
+        "operationId": "getApiTaobaoGetItemDetailV5",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -8142,7 +8197,7 @@
     "/api/taobao/get-item-detail/v9": {
       "get": {
         "description": "Get Taobao and Tmall product Details data, including pricing, images, and shop details, for product research, catalog monitoring, and ecommerce analysis.",
-        "operationId": "getItemDetailV9",
+        "operationId": "getApiTaobaoGetItemDetailV9",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -8192,7 +8247,7 @@
     "/api/taobao/get-shop-item-list/v1": {
       "get": {
         "description": "Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.",
-        "operationId": "getTaobaoShopItemListV1",
+        "operationId": "getApiTaobaoGetShopItemListV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -8268,7 +8323,7 @@
     "/api/taobao/get-shop-item-list/v2": {
       "get": {
         "description": "Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.",
-        "operationId": "getShopItemListV2",
+        "operationId": "getApiTaobaoGetShopItemListV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -8356,7 +8411,7 @@
     "/api/taobao/get-shop-item-list/v3": {
       "get": {
         "description": "Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.",
-        "operationId": "getShopItemListV3",
+        "operationId": "getApiTaobaoGetShopItemListV3",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -8439,7 +8494,7 @@
     "/api/taobao/search-item-list/v1": {
       "get": {
         "description": "Get Taobao and Tmall product Search data, including titles, prices, and images, for product discovery.",
-        "operationId": "searchItemListV1",
+        "operationId": "getApiTaobaoSearchItemListV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -8540,7 +8595,7 @@
     "/api/tiktok-shop/get-product-detail/v1": {
       "get": {
         "description": "Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.",
-        "operationId": "getTiktokShopProductDetailV1",
+        "operationId": "getApiTiktokShopGetProductDetailV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -8561,7 +8616,7 @@
             }
           },
           {
-            "description": "Target region for product detail.\n\nAvailable Values:\n- `US`: United States\n- `GB`: United Kingdom\n- `SG`: Singapore\n- `MY`: Malaysia\n- `PH`: Philippines\n- `TH`: Thailand\n- `VN`: Vietnam\n- `ID`: Indonesia",
+            "description": "Target region for product detail.\n\nAvailable Values:\n- `US`: United States\n- `GB`: United Kingdom\n- `FR`: France\n- `SG`: Singapore\n- `MY`: Malaysia\n- `PH`: Philippines\n- `TH`: Thailand\n- `VN`: Vietnam\n- `ID`: Indonesia",
             "in": "query",
             "name": "region",
             "required": false,
@@ -8571,6 +8626,7 @@
               "enum": [
                 "US",
                 "GB",
+                "FR",
                 "SG",
                 "MY",
                 "PH",
@@ -8603,10 +8659,69 @@
         "x-order": "22501100"
       }
     },
+    "/api/tiktok-shop/get-product-detail/v2": {
+      "get": {
+        "description": "Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.",
+        "operationId": "getApiTiktokShopGetProductDetailV2",
+        "parameters": [
+          {
+            "description": "Authentication token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "TikTok Shop Product ID.",
+            "in": "query",
+            "name": "productId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Target region for product detail.\n\nAvailable Values:\n- `FR`: France",
+            "in": "query",
+            "name": "region",
+            "required": false,
+            "schema": {
+              "default": "FR",
+              "description": "TikTok Shop Enum",
+              "enum": [
+                "FR"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Details",
+        "tags": [
+          "TikTok Shop"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "22501150"
+      }
+    },
     "/api/tiktok-shop/search-products/v1": {
       "get": {
         "description": "Get TikTok Shop product Search data, including title, price, and sales, for market research and trend analysis, competitor product discovery, and monitoring product popularity in specific regions.",
-        "operationId": "searchProductsV1",
+        "operationId": "getApiTiktokShopSearchProductsV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -8627,7 +8742,7 @@
             }
           },
           {
-            "description": "Target region for product search.\n\nAvailable Values:\n- `US`: United States\n- `GB`: United Kingdom\n- `SG`: Singapore\n- `MY`: Malaysia\n- `PH`: Philippines\n- `TH`: Thailand\n- `VN`: Vietnam\n- `ID`: Indonesia",
+            "description": "Target region for product search.\n\nAvailable Values:\n- `US`: United States\n- `GB`: United Kingdom\n- `FR`: France\n- `SG`: Singapore\n- `MY`: Malaysia\n- `PH`: Philippines\n- `TH`: Thailand\n- `VN`: Vietnam\n- `ID`: Indonesia",
             "in": "query",
             "name": "region",
             "required": false,
@@ -8637,6 +8752,7 @@
               "enum": [
                 "US",
                 "GB",
+                "FR",
                 "SG",
                 "MY",
                 "PH",
@@ -8692,7 +8808,7 @@
     "/api/tiktok/get-post-comment/v1": {
       "get": {
         "description": "Get TikTok post Comments data, including comment ID, user information, and text content, for sentiment analysis of the audience's reaction to specific content and engagement measurement via comment volume and quality.",
-        "operationId": "getPostCommentV1",
+        "operationId": "getApiTiktokGetPostCommentV1",
         "parameters": [
           {
             "description": "Security token for API access.",
@@ -8747,7 +8863,7 @@
     "/api/tiktok/get-post-detail/v1": {
       "get": {
         "description": "Get TikTok post Details data, including video ID, author information, and description text, for content performance analysis and metadata extraction and influencer evaluation via specific post metrics.",
-        "operationId": "getTiktokPostDetailV1",
+        "operationId": "getApiTiktokGetPostDetailV1",
         "parameters": [
           {
             "description": "Security token for API access.",
@@ -8792,7 +8908,7 @@
     "/api/tiktok/get-post-sub-comment/v1": {
       "get": {
         "description": "Get TikTok comment Replies data, including reply ID, user information, and text content, for understanding detailed user interactions and threaded discussions and identifying influencers or active participants within a comment section.",
-        "operationId": "getPostSubCommentV1",
+        "operationId": "getApiTiktokGetPostSubCommentV1",
         "parameters": [
           {
             "description": "Security token for API access.",
@@ -8856,7 +8972,7 @@
     "/api/tiktok/get-user-detail/v1": {
       "get": {
         "description": "Get TikTok user Profile data, including nickname, unique ID, and avatar, for influencer profiling and audience analysis, account performance tracking and growth monitoring, and identifying verified status and official accounts.",
-        "operationId": "getTiktokUserDetailV1",
+        "operationId": "getApiTiktokGetUserDetailV1",
         "parameters": [
           {
             "description": "Security token for API access.",
@@ -8912,7 +9028,7 @@
     "/api/tiktok/get-user-post/v1": {
       "get": {
         "description": "Get TikTok user Published Posts data, including video ID, description, and publish time, for user activity analysis and posting frequency tracking, influencer performance evaluation, and content trend monitoring for specific creators.",
-        "operationId": "getUserPostV1",
+        "operationId": "getApiTiktokGetUserPostV1",
         "parameters": [
           {
             "description": "Security token for API access.",
@@ -8983,7 +9099,7 @@
     "/api/tiktok/search-post/v1": {
       "get": {
         "description": "Get TikTok post Search data, including key details such as video ID, description, and author information, for trend monitoring and content discovery and keyword-based market analysis and sentiment tracking.",
-        "operationId": "searchPostV1",
+        "operationId": "getApiTiktokSearchPostV1",
         "parameters": [
           {
             "description": "Security token for API access.",
@@ -9083,7 +9199,7 @@
     "/api/tiktok/search-user/v1": {
       "get": {
         "description": "Get TikTok user Search data, including basic profile information such as user ID, nickname, and unique handle, for discovering influencers in specific niches via keywords and identifying target audiences and conducting competitor research.",
-        "operationId": "searchUserV1",
+        "operationId": "getApiTiktokSearchUserV1",
         "parameters": [
           {
             "description": "Security token for API access.",
@@ -9148,7 +9264,7 @@
     "/api/toutiao/get-article-detail/v1": {
       "get": {
         "description": "Get Toutiao article Details data, including article ID, title, and author information, for content performance analysis and media monitoring and verifying article authenticity and metadata retrieval.",
-        "operationId": "getToutiaoArticleDetailV1",
+        "operationId": "getApiToutiaoGetArticleDetailV1",
         "parameters": [
           {
             "description": "Authentication token required to access the API.",
@@ -9193,7 +9309,7 @@
     "/api/toutiao/get-user-detail/v1": {
       "get": {
         "description": "Get Toutiao user Profile data, including user ID, nickname, and avatar, for influencer profiling and audience analysis and monitoring creator performance and growth.",
-        "operationId": "getToutiaoUserDetailV1",
+        "operationId": "getApiToutiaoGetUserDetailV1",
         "parameters": [
           {
             "description": "Authentication token required to access the API.",
@@ -9239,7 +9355,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Toutiao app Keyword Search data, including matching articles, videos, and authors, for topic discovery and monitoring.",
-        "operationId": "searchToutiaoV1",
+        "operationId": "getApiToutiaoSearchV1",
         "parameters": [
           {
             "description": "Authentication token required to access the API.",
@@ -9305,7 +9421,7 @@
     "/api/toutiao/search/v2": {
       "get": {
         "description": "Get Toutiao web Keyword Search data, including this is the PC version of the search API. Note that it currently only supports retrieving the first page of results, for first-page discovery of articles, videos, and authors for trend research and monitoring.",
-        "operationId": "searchV2",
+        "operationId": "getApiToutiaoSearchV2",
         "parameters": [
           {
             "description": "Authentication token required to access the API.",
@@ -9350,7 +9466,7 @@
     "/api/twitter/get-user-detail/v1": {
       "get": {
         "description": "Get Twitter user Profile data, including account metadata, audience metrics, and verification-related fields, for accessing user profile metadata (e.g., description, location, verification status) and collecting follower and following counts.",
-        "operationId": "getTwitterUserDetailV1",
+        "operationId": "getApiTwitterGetUserDetailV1",
         "parameters": [
           {
             "description": "Authentication token required for API access.",
@@ -9395,7 +9511,7 @@
     "/api/twitter/get-user-posts/v1": {
       "get": {
         "description": "Get Twitter user Published Posts data, including post content, timestamps, and engagement data, for account monitoring and content analysis.",
-        "operationId": "getTwitterUserPostsV1",
+        "operationId": "getApiTwitterGetUserPostsV1",
         "parameters": [
           {
             "description": "Authentication token required for API access.",
@@ -9450,7 +9566,7 @@
     "/api/web/html/v1": {
       "get": {
         "description": "Get the HTML content of a web page.",
-        "operationId": "htmlV1",
+        "operationId": "getApiWebHtmlV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -9495,7 +9611,7 @@
     "/api/web/markdown/v1": {
       "get": {
         "description": "Get the Markdown content of a web page.",
-        "operationId": "markdownV1",
+        "operationId": "getApiWebMarkdownV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -9540,7 +9656,7 @@
     "/api/web/rendered-html/v1": {
       "get": {
         "description": "Get the Rendered HTML content of a web page.",
-        "operationId": "renderedHtmlV1",
+        "operationId": "getApiWebRenderedHtmlV1",
         "parameters": [
           {
             "description": "Authentication token for this API service.",
@@ -9585,7 +9701,7 @@
     "/api/weibo/get-fans/v1": {
       "get": {
         "description": "Get Weibo user Fans data, including profile metadata and verification signals, for audience analysis and influencer research.",
-        "operationId": "getFansV1",
+        "operationId": "getApiWeiboGetFansV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -9641,7 +9757,7 @@
     "/api/weibo/get-followers/v1": {
       "get": {
         "description": "Get Weibo user Followers data, including profile metadata and verification signals, for network analysis and creator research.",
-        "operationId": "getFollowersV1",
+        "operationId": "getApiWeiboGetFollowersV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -9697,7 +9813,7 @@
     "/api/weibo/get-post-comments/v1": {
       "get": {
         "description": "Get Weibo post Comments data, including text, authors, and timestamps, for feedback analysis.",
-        "operationId": "getWeiboPostCommentsV1",
+        "operationId": "getApiWeiboGetPostCommentsV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -9766,7 +9882,7 @@
     "/api/weibo/get-user-detail/v3": {
       "get": {
         "description": "Get Weibo user Profile data, including follower counts, verification status, and bio details, for creator research and account analysis.",
-        "operationId": "getUserProfileV3",
+        "operationId": "getApiWeiboGetUserDetailV3",
         "parameters": [
           {
             "description": "API access token.",
@@ -9811,7 +9927,7 @@
     "/api/weibo/get-user-post/v1": {
       "get": {
         "description": "Get Weibo user Published Posts data, including text, media, and publish times, for account monitoring.",
-        "operationId": "getUserPublishedPostsV1",
+        "operationId": "getApiWeiboGetUserPostV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -9876,7 +9992,7 @@
     "/api/weibo/get-user-video-list/v1": {
       "get": {
         "description": "Get Weibo user Video list data (waterfall), including pagination cursor for next page.",
-        "operationId": "getWeiboUserVideoListV1",
+        "operationId": "getApiWeiboGetUserVideoListV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -9930,7 +10046,7 @@
     "/api/weibo/get-weibo-detail/v1": {
       "get": {
         "description": "Get Weibo post Details data, including media, author metadata, and engagement counts, for post analysis, archiving, and campaign monitoring.",
-        "operationId": "getWeiboDetailsV1",
+        "operationId": "getApiWeiboGetWeiboDetailV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -9975,7 +10091,7 @@
     "/api/weibo/hot-search/v1": {
       "get": {
         "description": "Get Weibo hot Search data, including ranking data, for trend monitoring, newsroom workflows, and topic discovery.",
-        "operationId": "hotSearchV1",
+        "operationId": "getApiWeiboHotSearchV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -10011,7 +10127,7 @@
     "/api/weibo/search-all/v2": {
       "get": {
         "description": "Get Weibo keyword Search data, including authors, publish times, and engagement signals, for trend monitoring.",
-        "operationId": "searchAllV2",
+        "operationId": "getApiWeiboSearchAllV2",
         "parameters": [
           {
             "description": "API access token.",
@@ -10133,7 +10249,7 @@
     "/api/weibo/search-profile/v1": {
       "get": {
         "description": "Get Weibo search User Published Posts data, including matched results, metadata, and ranking signals, for author research and historical content discovery.",
-        "operationId": "searchProfileV1",
+        "operationId": "getApiWeiboSearchProfileV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -10216,7 +10332,7 @@
     "/api/weibo/tv-component/v1": {
       "get": {
         "description": "Get Weibo tV Video Details data, including media URLs, author details, and engagement counts, for video research, archiving, and performance analysis.",
-        "operationId": "tvComponentV1",
+        "operationId": "getApiWeiboTvComponentV1",
         "parameters": [
           {
             "description": "API access token.",
@@ -10261,7 +10377,7 @@
     "/api/weixin/get-article-comment/v1": {
       "get": {
         "description": "Get WeChat Official Accounts article Comments data, including commenter details, comment text, and timestamps, for feedback analysis.",
-        "operationId": "getArticleComment",
+        "operationId": "getApiWeixinGetArticleCommentV1",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -10306,7 +10422,7 @@
     "/api/weixin/get-article-detail/v1": {
       "get": {
         "description": "Get WeChat Official Accounts article Details data, including body content, for article archiving, research, and content analysis.",
-        "operationId": "getWeixinArticleDetailV1",
+        "operationId": "getApiWeixinGetArticleDetailV1",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -10351,7 +10467,7 @@
     "/api/weixin/get-article-feedback/v1": {
       "get": {
         "description": "Get WeChat Official Accounts article Engagement Metrics data, including like, share, and comment metrics, for article performance tracking and benchmarking.",
-        "operationId": "getArticleFeedback",
+        "operationId": "getApiWeixinGetArticleFeedbackV1",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -10396,7 +10512,7 @@
     "/api/weixin/get-user-post/v1": {
       "get": {
         "description": "Get WeChat Official Accounts user Published Posts data, including titles, publish times, and summaries, for account monitoring.",
-        "operationId": "getUserPost",
+        "operationId": "getApiWeixinGetUserPostV1",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -10441,7 +10557,7 @@
     "/api/weixin/search/v1": {
       "get": {
         "description": "Get WeChat Official Accounts keyword Search data, including account names, titles, and publish times, for content discovery.",
-        "operationId": "searchWeixinV1",
+        "operationId": "getApiWeixinSearchV1",
         "parameters": [
           {
             "description": "Access token for the API.",
@@ -10539,7 +10655,7 @@
     "/api/xiaohongshu-pgy/api/pgy/kol/data/core_data/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Core Metrics data, including engagement and content metrics, for benchmarking, vetting, and campaign planning.",
-        "operationId": "apiPgyKolDataCoreDataV1",
+        "operationId": "getApiXiaohongshuPgyApiPgyKolDataCoreDataV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -10645,7 +10761,7 @@
     "/api/xiaohongshu-pgy/api/solar/cooperator/blogger/v2/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Search data, including filters, returning profile, and audience, for discovery, comparison, and shortlist building.",
-        "operationId": "apiSolarCooperatorBloggerV2V1",
+        "operationId": "getApiXiaohongshuPgyApiSolarCooperatorBloggerV2V1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -10796,7 +10912,7 @@
     "/api/xiaohongshu-pgy/api/solar/cooperator/user/blogger/userId/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.",
-        "operationId": "apiSolarCooperatorUserBloggerUserIdV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarCooperatorUserBloggerUserIdV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -10841,7 +10957,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/data/userId/fans_overall_new_history/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower Growth History data, including historical points, trend signals, and growth metrics, for trend tracking, audience analysis, and creator performance monitoring.",
-        "operationId": "apiSolarKolDataUserIdFansOverallNewHistoryV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataUserIdFansOverallNewHistoryV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -10916,7 +11032,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/data/userId/fans_profile/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.",
-        "operationId": "apiSolarKolDataUserIdFansProfileV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataUserIdFansProfileV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -10961,7 +11077,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/dataV2/costEffective/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) cost Effectiveness Analysis data, including pricing, reach, and engagement efficiency indicators, for campaign evaluation.",
-        "operationId": "apiSolarKolDataV2CostEffectiveV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataV2CostEffectiveV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11006,7 +11122,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/dataV2/kolContentTags/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Content Tags data, including topic labels that describe publishing themes and content focus, for creator evaluation, campaign planning, and creator benchmarking.",
-        "operationId": "apiSolarKolDataV2KolContentTagsV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataV2KolContentTagsV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11051,7 +11167,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/dataV2/kolFeatureTags/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Feature Tags data, including platform tags, category labels, and classification signals, for segmentation, discovery, and creator classification.",
-        "operationId": "apiSolarKolDataV2KolFeatureTagsV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataV2KolFeatureTagsV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11096,7 +11212,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/dataV2/notesDetail/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) user Published Notes data, including note metadata and engagement signals, for creator monitoring and campaign research.",
-        "operationId": "apiSolarKolDataV2NotesDetailV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataV2NotesDetailV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11215,7 +11331,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/dataV3/dataSummary/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) Summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.",
-        "operationId": "apiSolarKolDataV3DataSummaryV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataV3DataSummaryV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11275,7 +11391,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/dataV3/fansSummary/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower Summary data, including growth and engagement metrics, for audience analysis and creator benchmarking.",
-        "operationId": "apiSolarKolDataV3FansSummaryV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataV3FansSummaryV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11320,7 +11436,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/dataV3/notesRate/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note performance metrics data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.",
-        "operationId": "apiSolarKolDataV3NotesRateV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolDataV3NotesRateV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11426,7 +11542,7 @@
     "/api/xiaohongshu-pgy/api/solar/kol/get_similar_kol/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) similar Creators data, including audience signals, for creator discovery, benchmarking, and shortlist building.",
-        "operationId": "apiSolarKolGetSimilarKolV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarKolGetSimilarKolV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11482,7 +11598,7 @@
     "/api/xiaohongshu-pgy/api/solar/note/noteId/detail/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note Details data, including media and engagement signals, for content analysis, archiving, and campaign review.",
-        "operationId": "apiSolarNoteNoteIdDetailV1",
+        "operationId": "getApiXiaohongshuPgyApiSolarNoteNoteIdDetailV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11533,7 +11649,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Core Metrics data, including engagement and content metrics, for benchmarking, vetting, and campaign planning.",
-        "operationId": "getKolDataCoreV1",
+        "operationId": "getApiXiaohongshuPgyGetKolCoreDataV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11640,7 +11756,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) cost Effectiveness Analysis data, including pricing, reach, and engagement efficiency indicators, for campaign evaluation.",
-        "operationId": "getKolCostEffectiveV1",
+        "operationId": "getApiXiaohongshuPgyGetKolCostEffectiveV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11686,7 +11802,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.",
-        "operationId": "getKolDataSummaryV2",
+        "operationId": "getApiXiaohongshuPgyGetKolDataSummaryV2",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11746,7 +11862,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.",
-        "operationId": "getKolFansPortraitV1",
+        "operationId": "getApiXiaohongshuPgyGetKolFansPortraitV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11792,7 +11908,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower summary data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and creator benchmarking.",
-        "operationId": "getKolFansSummaryV1",
+        "operationId": "getApiXiaohongshuPgyGetKolFansSummaryV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11838,7 +11954,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower growth history data, including historical audience changes over time, for creator evaluation, campaign planning, and creator benchmarking.",
-        "operationId": "getKolFansTrendV1",
+        "operationId": "getApiXiaohongshuPgyGetKolFansTrendV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11912,7 +12028,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.",
-        "operationId": "getXiaohongshuPgyKolInfoV1",
+        "operationId": "getApiXiaohongshuPgyGetKolInfoV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -11957,7 +12073,7 @@
     "/api/xiaohongshu-pgy/get-kol-note-list/v1": {
       "get": {
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Note List data, including content metadata, publish time, and engagement indicators, for content analysis.",
-        "operationId": "getKolNoteListV1",
+        "operationId": "getApiXiaohongshuPgyGetKolNoteListV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -12060,7 +12176,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note performance metrics data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.",
-        "operationId": "getKolNoteRateV1",
+        "operationId": "getApiXiaohongshuPgyGetKolNoteRateV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -12167,7 +12283,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note Details data, including media and engagement signals, for content analysis, archiving, and campaign review.",
-        "operationId": "getXiaohongshuPgyNoteDetailV1",
+        "operationId": "getApiXiaohongshuPgyGetNoteDetailV1",
         "parameters": [
           {
             "description": "User authentication token.",
@@ -12212,7 +12328,7 @@
     "/api/xiaohongshu/get-note-comment/v2": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.",
-        "operationId": "getNoteCommentV2",
+        "operationId": "getApiXiaohongshuGetNoteCommentV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12279,7 +12395,7 @@
     "/api/xiaohongshu/get-note-comment/v4": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) note Comments data, including comment text, author profiles, and interaction data, for sentiment analysis and community monitoring.",
-        "operationId": "getNoteCommentV4",
+        "operationId": "getApiXiaohongshuGetNoteCommentV4",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12324,7 +12440,7 @@
     "/api/xiaohongshu/get-note-detail/v1": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
-        "operationId": "getXiaohongshuNoteDetailV1",
+        "operationId": "getApiXiaohongshuGetNoteDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12374,22 +12490,72 @@
         "x-api-version": "v1",
         "x-highlights": [
           {
-            "content": "If video download fails, use `/api/xiaohongshu-pgy/api/solar/note/noteId/detail/v1`.",
+            "content": "If you download videos, use `v5`.",
             "type": "tip"
           },
           {
-            "content": "If engagement metrics are not required and this endpoint is unstable, you can switch to `/api/xiaohongshu-pgy/api/solar/note/noteId/detail/v1`.",
+            "content": "If this version is unstable, try other versions with lower traffic and better success rates.",
             "type": "tip"
           }
         ],
         "x-order": "12001400"
       }
     },
+    "/api/xiaohongshu/get-note-detail/v2": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
+        "operationId": "getApiXiaohongshuGetNoteDetailV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [
+          {
+            "content": "If you download videos, use `v5`.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "12001450"
+      }
+    },
     "/api/xiaohongshu/get-note-detail/v3": {
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
-        "operationId": "getNoteDetailV3",
+        "operationId": "getApiXiaohongshuGetNoteDetailV3",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12431,11 +12597,111 @@
         "x-order": "12001500"
       }
     },
+    "/api/xiaohongshu/get-note-detail/v4": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
+        "operationId": "getApiXiaohongshuGetNoteDetailV4",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v4",
+        "x-highlights": [
+          {
+            "content": "If you download videos, use `v5`.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "12001540"
+      }
+    },
+    "/api/xiaohongshu/get-note-detail/v5": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
+        "operationId": "getApiXiaohongshuGetNoteDetailV5",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v5",
+        "x-highlights": [
+          {
+            "content": "This version does not include engagement metrics. Please switch to another version if you need them.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "12001550"
+      }
+    },
     "/api/xiaohongshu/get-note-detail/v7": {
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
-        "operationId": "getNoteDetailV7",
+        "operationId": "getApiXiaohongshuGetNoteDetailV7",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12478,7 +12744,7 @@
     "/api/xiaohongshu/get-note-sub-comment/v2": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) comment Replies data, including text, authors, and timestamps, for thread analysis and feedback research.",
-        "operationId": "getNoteSubCommentV2",
+        "operationId": "getApiXiaohongshuGetNoteSubCommentV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12538,11 +12804,80 @@
         "x-order": "12001900"
       }
     },
+    "/api/xiaohongshu/get-topic-note-list/v1": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) topic Note List data, including notes under a topic, for topic monitoring and content discovery.",
+        "operationId": "getApiXiaohongshuGetTopicNoteListV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique topic identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "topicId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sort order for the result set.\n\nAvailable Values:\n- `time`: Latest\n- `hot`: Hot",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "hot",
+              "description": "Xiaohongshu Topic Sort",
+              "enum": [
+                "time",
+                "hot"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination cursor from the previous page.",
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Topic Note List",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "12002150"
+      }
+    },
     "/api/xiaohongshu/get-user-note-list/v2": {
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.",
-        "operationId": "getUserNoteListV2",
+        "operationId": "getApiXiaohongshuGetUserNoteListV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12594,7 +12929,7 @@
     "/api/xiaohongshu/get-user-note-list/v4": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.",
-        "operationId": "getUserNoteListV4",
+        "operationId": "getApiXiaohongshuGetUserNoteListV4",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12646,7 +12981,7 @@
     "/api/xiaohongshu/get-user/v3": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) user Profile data, including follower counts and bio details, for creator research, account analysis, and competitor monitoring.",
-        "operationId": "getUserV3",
+        "operationId": "getApiXiaohongshuGetUserV3",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12692,7 +13027,7 @@
       "get": {
         "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) user Profile data, including follower counts and bio details, for creator research, account analysis, and competitor monitoring.",
-        "operationId": "getUserV4",
+        "operationId": "getApiXiaohongshuGetUserV4",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12737,7 +13072,7 @@
     "/api/xiaohongshu/search-note/v2": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.",
-        "operationId": "getSearchNoteV2",
+        "operationId": "getApiXiaohongshuSearchNoteV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12842,7 +13177,7 @@
     "/api/xiaohongshu/search-note/v3": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.",
-        "operationId": "getSearchNoteV3",
+        "operationId": "getApiXiaohongshuSearchNoteV3",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12930,7 +13265,7 @@
     "/api/xiaohongshu/search-recommend/v1": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) keyword Suggestions data, including suggested queries, keyword variants, and query metadata, for expanding keyword sets for content research and seo/pseo workflows and improving search coverage by using platform-recommended terms.",
-        "operationId": "searchRecommendV1",
+        "operationId": "getApiXiaohongshuSearchRecommendV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -12975,7 +13310,7 @@
     "/api/xiaohongshu/search-user/v2": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) user Search data, including profile metadata and public signals, for creator discovery and account research.",
-        "operationId": "getSearchUserV2",
+        "operationId": "getApiXiaohongshuSearchUserV2",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -13029,7 +13364,7 @@
     "/api/xiaohongshu/share-url-transfer/v1": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) share Link Resolution data, including helping extract note IDs, for downstream note and comment workflows.",
-        "operationId": "shareXiaohongshuUrlTransferV1",
+        "operationId": "getApiXiaohongshuShareUrlTransferV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -13074,7 +13409,7 @@
     "/api/youku/get-user-detail/v1": {
       "get": {
         "description": "Get YOUKU user Profile data, including user ID, username, and avatar, for analyzing creator influence and audience size, monitoring account growth and verification status, and fetching basic user info for social crm.",
-        "operationId": "getYoukuUserDetailV1",
+        "operationId": "getApiYoukuGetUserDetailV1",
         "parameters": [
           {
             "description": "TOKEN",
@@ -13119,7 +13454,7 @@
     "/api/youku/get-video-detail/v1": {
       "get": {
         "description": "Get YOUKU video Details data, including video ID, title, and description, for fetching comprehensive metadata for a single video, tracking engagement metrics like play counts and likes, and integrating detailed video info into third-party dashboards.",
-        "operationId": "getYoukuVideoDetailV1",
+        "operationId": "getApiYoukuGetVideoDetailV1",
         "parameters": [
           {
             "description": "TOKEN",
@@ -13164,7 +13499,7 @@
     "/api/youku/search-video/v1": {
       "get": {
         "description": "Get YOUKU video Search data, including video ID, title, and cover image, for keyword-based video discovery, monitoring specific topics or trends on youku, and analyzing search results for market research.",
-        "operationId": "searchVideoV1",
+        "operationId": "getApiYoukuSearchVideoV1",
         "parameters": [
           {
             "description": "TOKEN",
@@ -13220,7 +13555,7 @@
     "/api/youtube/get-channel-videos/v1": {
       "get": {
         "description": "Retrieve a list of videos from a specific YouTube channel, providing detailed insights into content performance and upload history.",
-        "operationId": "getChannelVideosV1",
+        "operationId": "getApiYoutubeGetChannelVideosV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -13274,7 +13609,7 @@
     "/api/youtube/get-video-comment/v1": {
       "get": {
         "description": "Get first-level video comments, author profiles, like counts, reply counts, and reply cursors for audience feedback and engagement analysis.",
-        "operationId": "getVideoCommentV1",
+        "operationId": "getApiYoutubeGetVideoCommentV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -13364,7 +13699,7 @@
     "/api/youtube/get-video-detail/v1": {
       "get": {
         "description": "Get YouTube video Details data, including its title, description, and view counts, for tracking video engagement and statistics, extracting video metadata for content analysis, and verifying video availability and status.",
-        "operationId": "getYoutubeVideoDetailV1",
+        "operationId": "getApiYoutubeGetVideoDetailV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -13409,7 +13744,7 @@
     "/api/youtube/get-video-sub-comment/v1": {
       "get": {
         "description": "Get second-level video comment replies, reply authors, like counts, and pagination cursors for threaded discussion analysis.",
-        "operationId": "getVideoSubCommentV1",
+        "operationId": "getApiYoutubeGetVideoSubCommentV1",
         "parameters": [
           {
             "description": "Access token for this API service.",
@@ -13474,7 +13809,7 @@
     "/api/zhihu/get-answer-list/v1": {
       "get": {
         "description": "Get Zhihu answer List data, including answer content, author profiles, and interaction metrics, for question analysis and answer research.",
-        "operationId": "getAnswerListV1",
+        "operationId": "getApiZhihuGetAnswerListV1",
         "parameters": [
           {
             "description": "TOKEN",
@@ -13565,7 +13900,7 @@
     "/api/zhihu/get-column-article-detail/v1": {
       "get": {
         "description": "Get Zhihu column Article Details data, including title, author, and content, for article archiving and content research.",
-        "operationId": "getColumnArticleDetailV1",
+        "operationId": "getApiZhihuGetColumnArticleDetailV1",
         "parameters": [
           {
             "description": "TOKEN",
@@ -13610,7 +13945,7 @@
     "/api/zhihu/get-column-article-list/v1": {
       "get": {
         "description": "Get Zhihu column Article List data, including article metadata and list ordering, for column monitoring and content collection.",
-        "operationId": "getColumnArticleListV1",
+        "operationId": "getApiZhihuGetColumnArticleListV1",
         "parameters": [
           {
             "description": "TOKEN",
@@ -13666,7 +14001,7 @@
     "/api/zhihu/search/v1": {
       "get": {
         "description": "Get Zhihu keyword Search data, including matched results, metadata, and ranking signals, for topic discovery and content research.",
-        "operationId": "searchZhihuV1",
+        "operationId": "getApiZhihuSearchV1",
         "parameters": [
           {
             "description": "TOKEN",
