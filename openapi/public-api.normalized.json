@@ -4467,6 +4467,51 @@
         "x-sdk-resource": "douyin_xingtu"
       }
     },
+    "/api/douyin-xingtu/gw/api/gauthor/author_get_business_card_info/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) creator Business Card data, including business-card profile fields, for creator lookup, vetting, and campaign qualification.",
+        "operationId": "getApiDouyinXingtuGwApiGauthorAuthorGetBusinessCardInfoV1",
+        "parameters": [
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "o_author_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Business Card",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15003075",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "gw_api_gauthor_author_get_business_card_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
     "/api/douyin-xingtu/gw/api/gauthor/get_author_content_hot_keywords/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.",
