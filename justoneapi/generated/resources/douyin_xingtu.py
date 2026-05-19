@@ -606,6 +606,26 @@ class DouyinXingtuResource(BaseResource):
             },
         )
 
+    def gw_api_gauthor_author_get_business_card_info_v1(
+        self,
+        *,
+        o_author_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Creator Business Card
+
+        Get Douyin Creator Marketplace (Xingtu) creator Business Card data, including business-card profile fields, for creator lookup, vetting, and campaign qualification.
+
+        Args:
+            o_author_id: Author's unique ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/gauthor/author_get_business_card_info/v1",
+            {
+                "oAuthorId": o_author_id,
+            },
+        )
+
     def gw_api_aggregator_get_author_commerce_spread_info_v1(
         self,
         *,

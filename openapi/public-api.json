@@ -4383,6 +4383,51 @@
         "x-order": "15002800"
       }
     },
+    "/api/douyin-xingtu/gw/api/gauthor/author_get_business_card_info/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) creator Business Card data, including business-card profile fields, for creator lookup, vetting, and campaign qualification.",
+        "operationId": "getApiDouyinXingtuGwApiGauthorAuthorGetBusinessCardInfoV1",
+        "parameters": [
+          {
+            "description": "User authentication token.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Creator Business Card",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15003075"
+      }
+    },
     "/api/douyin-xingtu/gw/api/gauthor/get_author_content_hot_keywords/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.",
