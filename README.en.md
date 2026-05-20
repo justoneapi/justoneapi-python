@@ -132,6 +132,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Shop Product List (V1)](https://docs.justoneapi.com/en/api/taobao-and-tmall/shop-product-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Shop Product List (V2)](https://docs.justoneapi.com/en/api/taobao-and-tmall/shop-product-list-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Shop Product List (V3)](https://docs.justoneapi.com/en/api/taobao-and-tmall/shop-product-list-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Product Sales (V1)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-sales-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Search (V1)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Xiaohongshu (RedNote)
@@ -196,9 +197,12 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 ### Douyin E-commerce
 
-- [Item Details (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/item-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Details (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-e-commerce/item-details-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
+- [Item Details (V2)](https://docs.justoneapi.com/en/api/douyin-e-commerce/item-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Product SKU Info (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/product-sku-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Search (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Item Comments (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/item-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Shop Product List (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/shop-product-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Douyin Creator Marketplace (Xingtu)
 
