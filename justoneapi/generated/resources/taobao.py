@@ -219,6 +219,26 @@ class TaobaoResource(BaseResource):
             },
         )
 
+    def get_item_sale_v1(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Product Sales
+
+        Get Taobao and Tmall product sales data for sales tracking, product research, and ecommerce monitoring.
+
+        Args:
+            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+        """
+        return self._get(
+            "/api/taobao/get-item-sale/v1",
+            {
+                "itemId": item_id,
+            },
+        )
+
     def search_item_list_v1(
         self,
         *,

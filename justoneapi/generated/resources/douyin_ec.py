@@ -29,6 +29,46 @@ class DouyinEcResource(BaseResource):
             },
         )
 
+    def get_item_detail_v2(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Item Details
+
+        Get Douyin E-commerce item details with sales data for product monitoring, competitive analysis, and ecommerce research.
+
+        Args:
+            item_id: The unique ID of the item on Douyin E-commerce.
+        """
+        return self._get(
+            "/api/douyin-ec/get-item-detail/v2",
+            {
+                "itemId": item_id,
+            },
+        )
+
+    def get_item_sku_info_v1(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Product SKU Info
+
+        Get Douyin E-commerce product SKU data, including SKU options, price, and stock signals, for catalog checks and product monitoring.
+
+        Args:
+            item_id: The unique ID of the item on Douyin E-commerce.
+        """
+        return self._get(
+            "/api/douyin-ec/get-item-sku-info/v1",
+            {
+                "itemId": item_id,
+            },
+        )
+
     def search_item_list_v1(
         self,
         *,
@@ -74,6 +114,29 @@ class DouyinEcResource(BaseResource):
             "/api/douyin-ec/get-item-comments/v1",
             {
                 "itemId": item_id,
+                "page": page,
+            },
+        )
+
+    def get_shop_item_list_v1(
+        self,
+        *,
+        shop_id: str,
+        page: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Shop Product List
+
+        Get Douyin E-commerce shop product list data, including products and pagination signals, for seller research and catalog tracking.
+
+        Args:
+            shop_id: The unique ID of the shop on Douyin E-commerce.
+            page: Page number for pagination.
+        """
+        return self._get(
+            "/api/douyin-ec/get-shop-item-list/v1",
+            {
+                "shopId": shop_id,
                 "page": page,
             },
         )

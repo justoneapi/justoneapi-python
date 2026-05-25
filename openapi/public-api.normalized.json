@@ -1586,6 +1586,7 @@
     },
     "/api/douyin-ec/get-item-detail/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Douyin E-commerce item details, including price, title, and stock, for product monitoring and competitive analysis.",
         "operationId": "getApiDouyinEcGetItemDetailV1",
         "parameters": [
@@ -1626,6 +1627,156 @@
         "x-order": "14502000",
         "x-sdk-class-name": "DouyinEcResource",
         "x-sdk-method-name": "get_item_detail_v1",
+        "x-sdk-resource": "douyin_ec"
+      }
+    },
+    "/api/douyin-ec/get-item-detail/v2": {
+      "get": {
+        "description": "Get Douyin E-commerce item details with sales data for product monitoring, competitive analysis, and ecommerce research.",
+        "operationId": "getApiDouyinEcGetItemDetailV2",
+        "parameters": [
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Details",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [
+          {
+            "content": "This endpoint includes product sales data.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "14502025",
+        "x-sdk-class-name": "DouyinEcResource",
+        "x-sdk-method-name": "get_item_detail_v2",
+        "x-sdk-resource": "douyin_ec"
+      }
+    },
+    "/api/douyin-ec/get-item-sku-info/v1": {
+      "get": {
+        "description": "Get Douyin E-commerce product SKU data, including SKU options, price, and stock signals, for catalog checks and product monitoring.",
+        "operationId": "getApiDouyinEcGetItemSkuInfoV1",
+        "parameters": [
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product SKU Info",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "14502035",
+        "x-sdk-class-name": "DouyinEcResource",
+        "x-sdk-method-name": "get_item_sku_info_v1",
+        "x-sdk-resource": "douyin_ec"
+      }
+    },
+    "/api/douyin-ec/get-shop-item-list/v1": {
+      "get": {
+        "description": "Get Douyin E-commerce shop product list data, including products and pagination signals, for seller research and catalog tracking.",
+        "operationId": "getApiDouyinEcGetShopItemListV1",
+        "parameters": [
+          {
+            "description": "The unique ID of the shop on Douyin E-commerce.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Shop Product List",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "14502150",
+        "x-sdk-class-name": "DouyinEcResource",
+        "x-sdk-method-name": "get_shop_item_list_v1",
         "x-sdk-resource": "douyin_ec"
       }
     },
@@ -4464,6 +4615,51 @@
         "x-order": "15002800",
         "x-sdk-class-name": "DouyinXingtuResource",
         "x-sdk-method-name": "gw_api_data_sp_item_report_trend_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/gauthor/author_get_business_card_info/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) creator Business Card data, including business-card profile fields, for creator lookup, vetting, and campaign qualification.",
+        "operationId": "getApiDouyinXingtuGwApiGauthorAuthorGetBusinessCardInfoV1",
+        "parameters": [
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "o_author_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Business Card",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15003075",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "gw_api_gauthor_author_get_business_card_info_v1",
         "x-sdk-resource": "douyin_xingtu"
       }
     },
@@ -8389,6 +8585,51 @@
         "x-order": "11001400",
         "x-sdk-class-name": "TaobaoResource",
         "x-sdk-method-name": "get_item_detail_v9",
+        "x-sdk-resource": "taobao"
+      }
+    },
+    "/api/taobao/get-item-sale/v1": {
+      "get": {
+        "description": "Get Taobao and Tmall product sales data for sales tracking, product research, and ecommerce monitoring.",
+        "operationId": "getApiTaobaoGetItemSaleV1",
+        "parameters": [
+          {
+            "description": "AUnique product identifier on Taobao/Tmall (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Sales",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "11001850",
+        "x-sdk-class-name": "TaobaoResource",
+        "x-sdk-method-name": "get_item_sale_v1",
         "x-sdk-resource": "taobao"
       }
     },
