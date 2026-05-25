@@ -1554,6 +1554,7 @@
     },
     "/api/douyin-ec/get-item-detail/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Douyin E-commerce item details, including price, title, and stock, for product monitoring and competitive analysis.",
         "operationId": "getApiDouyinEcGetItemDetailV1",
         "parameters": [
@@ -1595,6 +1596,155 @@
         "x-api-version": "v1",
         "x-highlights": [],
         "x-order": "14502000"
+      }
+    },
+    "/api/douyin-ec/get-item-detail/v2": {
+      "get": {
+        "description": "Get Douyin E-commerce item details with sales data for product monitoring, competitive analysis, and ecommerce research.",
+        "operationId": "getApiDouyinEcGetItemDetailV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Item Details",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [
+          {
+            "content": "This endpoint includes product sales data.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "14502025"
+      }
+    },
+    "/api/douyin-ec/get-item-sku-info/v1": {
+      "get": {
+        "description": "Get Douyin E-commerce product SKU data, including SKU options, price, and stock signals, for catalog checks and product monitoring.",
+        "operationId": "getApiDouyinEcGetItemSkuInfoV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product SKU Info",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "14502035"
+      }
+    },
+    "/api/douyin-ec/get-shop-item-list/v1": {
+      "get": {
+        "description": "Get Douyin E-commerce shop product list data, including products and pagination signals, for seller research and catalog tracking.",
+        "operationId": "getApiDouyinEcGetShopItemListV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique ID of the shop on Douyin E-commerce.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Shop Product List",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "14502150"
       }
     },
     "/api/douyin-ec/search-item-list/v1": {
@@ -4381,6 +4531,51 @@
         "x-api-version": "v1",
         "x-highlights": [],
         "x-order": "15002800"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/gauthor/author_get_business_card_info/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) creator Business Card data, including business-card profile fields, for creator lookup, vetting, and campaign qualification.",
+        "operationId": "getApiDouyinXingtuGwApiGauthorAuthorGetBusinessCardInfoV1",
+        "parameters": [
+          {
+            "description": "User authentication token.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Creator Business Card",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15003075"
       }
     },
     "/api/douyin-xingtu/gw/api/gauthor/get_author_content_hot_keywords/v1": {
@@ -8242,6 +8437,51 @@
           }
         ],
         "x-order": "11001400"
+      }
+    },
+    "/api/taobao/get-item-sale/v1": {
+      "get": {
+        "description": "Get Taobao and Tmall product sales data for sales tracking, product research, and ecommerce monitoring.",
+        "operationId": "getApiTaobaoGetItemSaleV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "AUnique product identifier on Taobao/Tmall (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Sales",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "11001850"
       }
     },
     "/api/taobao/get-shop-item-list/v1": {
