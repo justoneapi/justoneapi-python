@@ -137,6 +137,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 ### Xiaohongshu (RedNote)
 
+- [Hot Search (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/hot-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Profile (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-profile-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Profile (V4) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-profile-v4-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [User Published Notes (V2) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-published-notes-v2-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
