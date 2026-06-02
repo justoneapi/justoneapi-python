@@ -312,7 +312,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Article Engagement Metrics (V1) (Deprecated)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-engagement-metrics-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Article Comments (V1) (Deprecated)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-comments-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Keyword Search (V1) (Deprecated)](https://docs.justoneapi.com/en/api/wechat-official-accounts/keyword-search-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Article Details (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Article Details (V1) (Deprecated)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-details-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 
 ### Douban Movie
 
