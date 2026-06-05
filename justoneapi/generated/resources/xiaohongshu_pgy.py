@@ -300,6 +300,13 @@ class XiaohongshuPgyResource(BaseResource):
         fans_gender: str | None = "ALL",
         gender: str | None = "ALL",
         content_tag: str | None = None,
+        personal_tags: str | None = None,
+        top20_crowds_label: str | None = None,
+        industry_specific_crowds_motor_dom: str | None = None,
+        feature_tags: str | None = None,
+        content_theme_label: str | None = None,
+        exclude_low_active: bool | None = None,
+        fans_num_up: bool | None = None,
     ) -> ApiResponse[Any]:
         """
         Creator Search
@@ -315,7 +322,14 @@ class XiaohongshuPgyResource(BaseResource):
             fans_age: Target fans age group.  Available Values: - `ALL`: All ages - `LT_18`: Under 18 - `AGE_18_24`: 18 to 24 - `AGE_25_34`: 25 to 34 - `AGE_35_44`: 35 to 44 - `GT_44`: Above 44
             fans_gender: Target fans gender.  Available Values: - `ALL`: All genders - `MALE_HIGH`: Mainly Male - `FE_MALE_HIGH`: Mainly Female
             gender: KOL's gender.  Available Values: - `ALL`: All genders - `MALE`: Male - `FEMALE`: Female
-            content_tag: Content categories, separated by commas.
+            content_tag: Content category filter. Pass first-level or second-level category labels from Pugongying, separated by commas.
+            personal_tags: Blogger persona tag filter covering family identity, profession identity, and special background labels. Pass label values separated by commas.
+            top20_crowds_label: Top-20 audience filter. Pass top-level or child audience labels separated by commas; child labels are converted to Pugongying request values.
+            industry_specific_crowds_motor_dom: Industry-specific portrait filter. Pass Pugongying portrait value IDs or label values separated by commas.
+            feature_tags: Good-at content tag filter. Pass label values separated by commas.
+            content_theme_label: Content theme filter. Pass Pugongying value IDs or label values separated by commas; labels are converted to value IDs.
+            exclude_low_active: Whether to exclude low-activity bloggers.
+            fans_num_up: Whether to exclude bloggers whose fan count is dropping.
         """
         return self._get(
             "/api/xiaohongshu-pgy/api/solar/cooperator/blogger/v2/v1",
@@ -329,6 +343,13 @@ class XiaohongshuPgyResource(BaseResource):
                 "fansGender": fans_gender,
                 "gender": gender,
                 "contentTag": content_tag,
+                "personalTags": personal_tags,
+                "top20CrowdsLabel": top20_crowds_label,
+                "industrySpecificCrowdsMotorDom": industry_specific_crowds_motor_dom,
+                "featureTags": feature_tags,
+                "contentThemeLabel": content_theme_label,
+                "excludeLowActive": exclude_low_active,
+                "fansNumUp": fans_num_up,
             },
         )
 
@@ -361,6 +382,38 @@ class XiaohongshuPgyResource(BaseResource):
                 "noteType": note_type,
                 "dateType": date_type,
                 "advertiseSwitch": advertise_switch,
+            },
+        )
+
+    def api_pgy_content_square_search_note_v2_v1(
+        self,
+        *,
+        search_word: str | None = "",
+        page_num: int | None = 1,
+        biz_type: str | None = "XIAOHONGSHU_HOT",
+        order_by: str | None = "premium_imp_num",
+        nd: str | None = "DAY_7",
+    ) -> ApiResponse[Any]:
+        """
+        Content Square Notes
+
+        Search Xiaohongshu Creator Marketplace (Pugongying) content square notes by business type, ranking metric, time range, and keyword.
+
+        Args:
+            search_word: Keyword for note search. Empty string searches all notes.
+            page_num: Page number for results.
+            biz_type: Business category.  Available Values: - `XIAOHONGSHU_HOT`: Xiaohongshu hot - `PRODUCT_SEEDING`: Product seeding - `ECOMMERCE_PROMOTION`: E-commerce promotion - `PUGONGYING_COOPERATION`: Pugongying cooperation - `LEAD_COLLECTION`: Lead collection - `ECOMMERCE_HOT`: E-commerce hot - `SEEDING_DIRECT`: Seeding direct - `APP_PROMOTION`: App promotion
+            order_by: Ranking metric.  Available Values: - `premium_imp_num`: Exposure - `premium_good_read_rate`: Read rate - `premium_read_num`: Read count - `premium_engage_num`: Engagement count - `premium_engage_rate`: Engagement rate - `premium_like_num`: Like count - `premium_fav_num`: Favorite count - `premium_cmt_num`: Comment count
+            nd: Time range in days.  Available Values: - `DAY_3`: Last 3 days - `DAY_7`: Last 7 days - `DAY_14`: Last 14 days - `DAY_30`: Last 30 days
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/api/pgy/content_square/search_note_v2/v1",
+            {
+                "searchWord": search_word,
+                "pageNum": page_num,
+                "bizType": biz_type,
+                "orderBy": order_by,
+                "nd": nd,
             },
         )
 

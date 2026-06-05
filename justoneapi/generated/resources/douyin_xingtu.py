@@ -465,7 +465,7 @@ class DouyinXingtuResource(BaseResource):
             follower_range: Follower range (e.g., 10-100).
             kol_price_type: KOL price type.  Available Values: - `视频1_20s`: Video 1-20s - `视频21_60s`: Video 21-60s - `视频60s以上`: Video > 60s - `定制短剧单集`: Mini-drama episode - `千次自然播放量`: CPM naturally - `短直种草视频`: Short-live seeding video - `短直预热视频`: Short-live warm-up video - `短直明星种草`: Celebrity short-live seeding - `短直明星预热`: Celebrity short-live warm-up - `明星视频`: Celebrity video - `合集视频`: Collection video - `抖音短视频共创_主投稿达人`: Douyin short video co-creation - main creator - `抖音短视频共创_参与达人`: Douyin short video co-creation - participant
             kol_price_range: KOL price range (e.g., 10000-50000).
-            content_tag: Content tag filter.
+            content_tag: Creator category filter. Pass category labels from the Xingtu page separated by commas. First-level labels map to tag, second-level labels map to tag_level_two. The old tag-1 and tag_level_two-7 ID formats are deprecated.
         """
         return self._get(
             "/api/douyin-xingtu/gw/api/gsearch/search_for_author_square/v1",
@@ -641,6 +641,26 @@ class DouyinXingtuResource(BaseResource):
         """
         return self._get(
             "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_spread_info/v1",
+            {
+                "oAuthorId": o_author_id,
+            },
+        )
+
+    def gw_api_aggregator_get_author_side_base_info_v1(
+        self,
+        *,
+        o_author_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Author Side Base Info
+
+        Get Douyin Creator Marketplace (Xingtu) author Side Base Info data, including the 30-day follower growth rate displayed on the creator homepage side card.
+
+        Args:
+            o_author_id: Author's unique ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/aggregator/get_author_side_base_info/v1",
             {
                 "oAuthorId": o_author_id,
             },
