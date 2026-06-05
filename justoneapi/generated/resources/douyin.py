@@ -9,69 +9,6 @@ from justoneapi._response import ApiResponse
 class DouyinResource(BaseResource):
     """Generated resource for Douyin (TikTok China)."""
 
-    def get_user_detail_v3(
-        self,
-        *,
-        sec_uid: str,
-    ) -> ApiResponse[Any]:
-        """
-        User Profile
-
-        Get Douyin (TikTok China) user Profile data, including follower counts, verification status, and bio details, for creator research and account analysis.
-
-        Args:
-            sec_uid: The unique user ID (sec_uid) on Douyin.
-        """
-        return self._get(
-            "/api/douyin/get-user-detail/v3",
-            {
-                "secUid": sec_uid,
-            },
-        )
-
-    def get_user_video_list_v3(
-        self,
-        *,
-        sec_uid: str,
-        max_cursor: int | None = 0,
-    ) -> ApiResponse[Any]:
-        """
-        User Published Videos
-
-        Get Douyin (TikTok China) user Published Videos data, including captions, covers, and publish times, for account monitoring.
-
-        Args:
-            sec_uid: The unique user ID (sec_uid) on Douyin.
-            max_cursor: Pagination cursor; use 0 for the first page, and the `max_cursor` from the previous response for subsequent pages.
-        """
-        return self._get(
-            "/api/douyin/get-user-video-list/v3",
-            {
-                "secUid": sec_uid,
-                "maxCursor": max_cursor,
-            },
-        )
-
-    def get_video_detail_v2(
-        self,
-        *,
-        video_id: str,
-    ) -> ApiResponse[Any]:
-        """
-        Video Details
-
-        Get Douyin (TikTok China) video Details data, including author details, publish time, and engagement counts, for video research, archiving, and performance analysis.
-
-        Args:
-            video_id: The unique video identifier (aweme_id or model_id).
-        """
-        return self._get(
-            "/api/douyin/get-video-detail/v2",
-            {
-                "videoId": video_id,
-            },
-        )
-
     def search_video_v4(
         self,
         *,
@@ -133,6 +70,49 @@ class DouyinResource(BaseResource):
             },
         )
 
+    def get_user_video_list_v3(
+        self,
+        *,
+        sec_uid: str,
+        max_cursor: int | None = 0,
+    ) -> ApiResponse[Any]:
+        """
+        User Published Videos
+
+        Get Douyin (TikTok China) user Published Videos data, including captions, covers, and publish times, for account monitoring.
+
+        Args:
+            sec_uid: The unique user ID (sec_uid) on Douyin.
+            max_cursor: Pagination cursor; use 0 for the first page, and the `max_cursor` from the previous response for subsequent pages.
+        """
+        return self._get(
+            "/api/douyin/get-user-video-list/v3",
+            {
+                "secUid": sec_uid,
+                "maxCursor": max_cursor,
+            },
+        )
+
+    def get_video_detail_v2(
+        self,
+        *,
+        video_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Video Details
+
+        Get Douyin (TikTok China) video Details data, including author details, publish time, and engagement counts, for video research, archiving, and performance analysis.
+
+        Args:
+            video_id: The unique video identifier (aweme_id or model_id).
+        """
+        return self._get(
+            "/api/douyin/get-video-detail/v2",
+            {
+                "videoId": video_id,
+            },
+        )
+
     def get_video_comment_v1(
         self,
         *,
@@ -176,6 +156,26 @@ class DouyinResource(BaseResource):
             {
                 "commentId": comment_id,
                 "page": page,
+            },
+        )
+
+    def get_user_detail_v3(
+        self,
+        *,
+        sec_uid: str,
+    ) -> ApiResponse[Any]:
+        """
+        User Profile
+
+        Get Douyin (TikTok China) user Profile data, including follower counts, verification status, and bio details, for creator research and account analysis.
+
+        Args:
+            sec_uid: The unique user ID (sec_uid) on Douyin.
+        """
+        return self._get(
+            "/api/douyin/get-user-detail/v3",
+            {
+                "secUid": sec_uid,
             },
         )
 

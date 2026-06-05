@@ -3042,6 +3042,51 @@
         "x-order": "15001400"
       }
     },
+    "/api/douyin-xingtu/gw/api/aggregator/get_author_side_base_info/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) author Side Base Info data, including the 30-day follower growth rate displayed on the creator homepage side card.",
+        "operationId": "getApiDouyinXingtuGwApiAggregatorGetAuthorSideBaseInfoV1",
+        "parameters": [
+          {
+            "description": "User authentication token.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Author Side Base Info",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15003085"
+      }
+    },
     "/api/douyin-xingtu/gw/api/author/get_author_base_info/v1": {
       "get": {
         "description": "Get Douyin Creator Marketplace (Xingtu) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.",
@@ -4717,11 +4762,12 @@
             }
           },
           {
-            "description": "Content tag filter.",
+            "description": "Creator category filter. Pass category labels from the Xingtu page separated by commas. First-level labels map to tag, second-level labels map to tag_level_two. The old tag-1 and tag_level_two-7 ID formats are deprecated.",
             "in": "query",
             "name": "contentTag",
             "required": false,
             "schema": {
+              "example": "美妆,穿搭,剧情搞笑",
               "type": "string"
             }
           }
@@ -4859,7 +4905,7 @@
         ],
         "x-api-version": "v3",
         "x-highlights": [],
-        "x-order": "14001000"
+        "x-order": "14001600"
       }
     },
     "/api/douyin/get-user-video-list/v3": {
@@ -4976,7 +5022,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "14001600"
+        "x-order": "14001400"
       }
     },
     "/api/douyin/get-video-detail/v2": {
@@ -5077,7 +5123,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "14001700"
+        "x-order": "14001500"
       }
     },
     "/api/douyin/search-user/v2": {
@@ -5148,7 +5194,7 @@
         ],
         "x-api-version": "v2",
         "x-highlights": [],
-        "x-order": "14001500"
+        "x-order": "14001100"
       }
     },
     "/api/douyin/search-video/v4": {
@@ -5263,7 +5309,7 @@
         ],
         "x-api-version": "v4",
         "x-highlights": [],
-        "x-order": "14001400"
+        "x-order": "14001000"
       }
     },
     "/api/douyin/share-url-transfer/v1": {
@@ -5306,7 +5352,7 @@
         "tags": [
           "Douyin (TikTok China)"
         ],
-        "x-order": "14001800"
+        "x-order": "14001700"
       }
     },
     "/api/facebook/get-profile-id/v1": {
@@ -7250,12 +7296,7 @@
           "JD.com"
         ],
         "x-api-version": "v1",
-        "x-highlights": [
-          {
-            "content": "Page limit: The maximum page number supported is 20.",
-            "type": "tip"
-          }
-        ],
+        "x-highlights": [],
         "x-order": "19001100"
       }
     },
@@ -7549,7 +7590,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "16001400"
+        "x-order": "16001500"
       }
     },
     "/api/kuaishou/get-user-video-list/v2": {
@@ -7603,7 +7644,7 @@
         ],
         "x-api-version": "v2",
         "x-highlights": [],
-        "x-order": "16001100"
+        "x-order": "16001200"
       }
     },
     "/api/kuaishou/get-video-comment/v1": {
@@ -7655,7 +7696,7 @@
         "tags": [
           "Kuaishou"
         ],
-        "x-order": "16001600"
+        "x-order": "16001400"
       }
     },
     "/api/kuaishou/get-video-detail/v2": {
@@ -7705,7 +7746,7 @@
             "type": "tip"
           }
         ],
-        "x-order": "16001200"
+        "x-order": "16001300"
       }
     },
     "/api/kuaishou/search-user/v2": {
@@ -7761,7 +7802,7 @@
         ],
         "x-api-version": "v2",
         "x-highlights": [],
-        "x-order": "16001000"
+        "x-order": "16001100"
       }
     },
     "/api/kuaishou/search-video/v2": {
@@ -7817,7 +7858,7 @@
         ],
         "x-api-version": "v2",
         "x-highlights": [],
-        "x-order": "16001300"
+        "x-order": "16001000"
       }
     },
     "/api/kuaishou/share-url-transfer/v1": {
@@ -7862,7 +7903,52 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "16001500"
+        "x-order": "16001600"
+      }
+    },
+    "/api/llm/doubao-answer/v1": {
+      "get": {
+        "description": "Get a Doubao web answer for a keyword or question, including extracted references when available.",
+        "operationId": "getApiLlmDoubaoAnswerV1",
+        "parameters": [
+          {
+            "description": "Authentication token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Keyword or question to ask Doubao.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Doubao Answer",
+        "tags": [
+          "LLM"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "36001000"
       }
     },
     "/api/reddit/get-post-comments/v1": {
@@ -10616,6 +10702,7 @@
     },
     "/api/weixin/get-article-comment/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get WeChat Official Accounts article Comments data, including commenter details, comment text, and timestamps, for feedback analysis.",
         "operationId": "getApiWeixinGetArticleCommentV1",
         "parameters": [
@@ -10661,6 +10748,7 @@
     },
     "/api/weixin/get-article-detail/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get WeChat Official Accounts article Details data, including body content, for article archiving, research, and content analysis.",
         "operationId": "getApiWeixinGetArticleDetailV1",
         "parameters": [
@@ -10701,11 +10789,12 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": 20001400
+        "x-order": 34501400
       }
     },
     "/api/weixin/get-article-feedback/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get WeChat Official Accounts article Engagement Metrics data, including like, share, and comment metrics, for article performance tracking and benchmarking.",
         "operationId": "getApiWeixinGetArticleFeedbackV1",
         "parameters": [
@@ -10751,6 +10840,7 @@
     },
     "/api/weixin/get-user-post/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get WeChat Official Accounts user Published Posts data, including titles, publish times, and summaries, for account monitoring.",
         "operationId": "getApiWeixinGetUserPostV1",
         "parameters": [
@@ -10796,6 +10886,7 @@
     },
     "/api/weixin/search/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get WeChat Official Accounts keyword Search data, including account names, titles, and publish times, for content discovery.",
         "operationId": "getApiWeixinSearchV1",
         "parameters": [
@@ -10890,6 +10981,122 @@
         "x-api-version": "v1",
         "x-highlights": [],
         "x-order": 20001300
+      }
+    },
+    "/api/xiaohongshu-pgy/api/pgy/content_square/search_note_v2/v1": {
+      "get": {
+        "description": "Search Xiaohongshu Creator Marketplace (Pugongying) content square notes by business type, ranking metric, time range, and keyword.",
+        "operationId": "getApiXiaohongshuPgyApiPgyContentSquareSearchNoteV2V1",
+        "parameters": [
+          {
+            "description": "User authentication token.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Keyword for note search. Empty string searches all notes.",
+            "in": "query",
+            "name": "searchWord",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for results.",
+            "in": "query",
+            "name": "pageNum",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Business category.\n\nAvailable Values:\n- `XIAOHONGSHU_HOT`: Xiaohongshu hot\n- `PRODUCT_SEEDING`: Product seeding\n- `ECOMMERCE_PROMOTION`: E-commerce promotion\n- `PUGONGYING_COOPERATION`: Pugongying cooperation\n- `LEAD_COLLECTION`: Lead collection\n- `ECOMMERCE_HOT`: E-commerce hot\n- `SEEDING_DIRECT`: Seeding direct\n- `APP_PROMOTION`: App promotion",
+            "in": "query",
+            "name": "bizType",
+            "required": false,
+            "schema": {
+              "default": "XIAOHONGSHU_HOT",
+              "description": "Content square business category",
+              "enum": [
+                "XIAOHONGSHU_HOT",
+                "PRODUCT_SEEDING",
+                "ECOMMERCE_PROMOTION",
+                "PUGONGYING_COOPERATION",
+                "LEAD_COLLECTION",
+                "ECOMMERCE_HOT",
+                "SEEDING_DIRECT",
+                "APP_PROMOTION"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Ranking metric.\n\nAvailable Values:\n- `premium_imp_num`: Exposure\n- `premium_good_read_rate`: Read rate\n- `premium_read_num`: Read count\n- `premium_engage_num`: Engagement count\n- `premium_engage_rate`: Engagement rate\n- `premium_like_num`: Like count\n- `premium_fav_num`: Favorite count\n- `premium_cmt_num`: Comment count",
+            "in": "query",
+            "name": "orderBy",
+            "required": false,
+            "schema": {
+              "default": "premium_imp_num",
+              "description": "Content square ranking metric",
+              "enum": [
+                "premium_imp_num",
+                "premium_good_read_rate",
+                "premium_read_num",
+                "premium_engage_num",
+                "premium_engage_rate",
+                "premium_like_num",
+                "premium_fav_num",
+                "premium_cmt_num"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Time range in days.\n\nAvailable Values:\n- `DAY_3`: Last 3 days\n- `DAY_7`: Last 7 days\n- `DAY_14`: Last 14 days\n- `DAY_30`: Last 30 days",
+            "in": "query",
+            "name": "nd",
+            "required": false,
+            "schema": {
+              "default": "DAY_7",
+              "description": "Content square time range",
+              "enum": [
+                "DAY_3",
+                "DAY_7",
+                "DAY_14",
+                "DAY_30"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Content Square Notes",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "13002350"
       }
     },
     "/api/xiaohongshu-pgy/api/pgy/kol/data/core_data/v1": {
@@ -11119,12 +11326,83 @@
             }
           },
           {
-            "description": "Content categories, separated by commas.",
+            "description": "Content category filter. Pass first-level or second-level category labels from Pugongying, separated by commas.",
             "in": "query",
             "name": "contentTag",
             "required": false,
             "schema": {
+              "example": "美妆,护肤,美食教程",
               "type": "string"
+            }
+          },
+          {
+            "description": "Blogger persona tag filter covering family identity, profession identity, and special background labels. Pass label values separated by commas.",
+            "in": "query",
+            "name": "personalTags",
+            "required": false,
+            "schema": {
+              "example": "妈妈,工程师,留学背景",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Top-20 audience filter. Pass top-level or child audience labels separated by commas; child labels are converted to Pugongying request values.",
+            "in": "query",
+            "name": "top20CrowdsLabel",
+            "required": false,
+            "schema": {
+              "example": "自在户外,挑战极限者",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Industry-specific portrait filter. Pass Pugongying portrait value IDs or label values separated by commas.",
+            "in": "query",
+            "name": "industrySpecificCrowdsMotorDom",
+            "required": false,
+            "schema": {
+              "example": "科技爱好者人群,14247197",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Good-at content tag filter. Pass label values separated by commas.",
+            "in": "query",
+            "name": "featureTags",
+            "required": false,
+            "schema": {
+              "example": "vlog,探店",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Content theme filter. Pass Pugongying value IDs or label values separated by commas; labels are converted to value IDs.",
+            "in": "query",
+            "name": "contentThemeLabel",
+            "required": false,
+            "schema": {
+              "example": "沉浸式开车,汽车美图",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Whether to exclude low-activity bloggers.",
+            "in": "query",
+            "name": "excludeLowActive",
+            "required": false,
+            "schema": {
+              "example": true,
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "Whether to exclude bloggers whose fan count is dropping.",
+            "in": "query",
+            "name": "fansNumUp",
+            "required": false,
+            "schema": {
+              "example": true,
+              "type": "boolean"
             }
           }
         ],
@@ -12629,7 +12907,84 @@
         "tags": [
           "Xiaohongshu (RedNote)"
         ],
-        "x-order": "12001700"
+        "x-api-version": "v2",
+        "x-highlights": [
+          {
+            "content": "We recommend using the `latest` sort by default. If comments cannot be retrieved for some notes with `latest`, try again using `normal`.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "12001500"
+      }
+    },
+    "/api/xiaohongshu/get-note-comment/v3": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.",
+        "operationId": "getApiXiaohongshuGetNoteCommentV3",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination cursor from the previous page.",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sort strategy for the result set.\n\nAvailable Values:\n- `normal`: Normal\n- `latest`: Latest\n- `like_count`: Like Count",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "latest",
+              "description": "Xiaohongshu Comment Sort V3",
+              "enum": [
+                "normal",
+                "latest",
+                "like_count"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Note Comments",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v3",
+        "x-highlights": [],
+        "x-order": "12001505"
       }
     },
     "/api/xiaohongshu/get-note-comment/v4": {
@@ -12674,7 +13029,7 @@
         ],
         "x-api-version": "v4",
         "x-highlights": [],
-        "x-order": "12001800"
+        "x-order": "12001510"
       }
     },
     "/api/xiaohongshu/get-note-detail/v1": {
@@ -12738,7 +13093,8 @@
             "type": "tip"
           }
         ],
-        "x-order": "12001400"
+        "x-order": "12001400",
+        "x-recommended": true
       }
     },
     "/api/xiaohongshu/get-note-detail/v2": {
@@ -12788,7 +13144,7 @@
             "type": "tip"
           }
         ],
-        "x-order": "12001450"
+        "x-order": "12001410"
       }
     },
     "/api/xiaohongshu/get-note-detail/v3": {
@@ -12834,7 +13190,7 @@
         ],
         "x-api-version": "v3",
         "x-highlights": [],
-        "x-order": "12001500"
+        "x-order": "12001420"
       }
     },
     "/api/xiaohongshu/get-note-detail/v4": {
@@ -12884,7 +13240,7 @@
             "type": "tip"
           }
         ],
-        "x-order": "12001540"
+        "x-order": "12001430"
       }
     },
     "/api/xiaohongshu/get-note-detail/v5": {
@@ -12934,7 +13290,7 @@
             "type": "tip"
           }
         ],
-        "x-order": "12001550"
+        "x-order": "12001440"
       }
     },
     "/api/xiaohongshu/get-note-detail/v7": {
@@ -12978,7 +13334,7 @@
         "tags": [
           "Xiaohongshu (RedNote)"
         ],
-        "x-order": "12001600"
+        "x-order": "12001450"
       }
     },
     "/api/xiaohongshu/get-note-sub-comment/v2": {
@@ -13041,7 +13397,7 @@
         ],
         "x-api-version": "v2",
         "x-highlights": [],
-        "x-order": "12001900"
+        "x-order": "12001600"
       }
     },
     "/api/xiaohongshu/get-topic-note-list/v1": {
@@ -13110,12 +13466,11 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "12002150"
+        "x-order": "12001900"
       }
     },
     "/api/xiaohongshu/get-user-note-list/v2": {
       "get": {
-        "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.",
         "operationId": "getApiXiaohongshuGetUserNoteListV2",
         "parameters": [
@@ -13163,7 +13518,7 @@
         "tags": [
           "Xiaohongshu (RedNote)"
         ],
-        "x-order": "12001200"
+        "x-order": "12001300"
       }
     },
     "/api/xiaohongshu/get-user-note-list/v4": {
@@ -13215,7 +13570,7 @@
         "tags": [
           "Xiaohongshu (RedNote)"
         ],
-        "x-order": "12001300"
+        "x-order": "12001310"
       }
     },
     "/api/xiaohongshu/get-user/v3": {
@@ -13260,12 +13615,11 @@
         ],
         "x-api-version": "v3",
         "x-highlights": [],
-        "x-order": "12001000"
+        "x-order": "12001700"
       }
     },
     "/api/xiaohongshu/get-user/v4": {
       "get": {
-        "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) user Profile data, including follower counts and bio details, for creator research, account analysis, and competitor monitoring.",
         "operationId": "getApiXiaohongshuGetUserV4",
         "parameters": [
@@ -13306,7 +13660,102 @@
         ],
         "x-api-version": "v4",
         "x-highlights": [],
-        "x-order": "12001100"
+        "x-order": "12001710"
+      }
+    },
+    "/api/xiaohongshu/hot-search/v1": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) hot Search data, including popular notes and engagement metrics, for content trend discovery.",
+        "operationId": "getApiXiaohongshuHotSearchV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "searchWord",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "pageNum",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sort metric for the result set.\n\nAvailable Values:\n- `premium_imp_num`: Exposure\n- `premium_good_read_rate`: Read rate\n- `premium_read_num`: Read count\n- `premium_engage_num`: Engagement count\n- `premium_engage_rate`: Engagement rate\n- `premium_like_num`: Like count\n- `premium_fav_num`: Favorite count\n- `premium_cmt_num`: Comment count",
+            "in": "query",
+            "name": "orderBy",
+            "required": false,
+            "schema": {
+              "default": "premium_imp_num",
+              "description": "Content square ranking metric",
+              "enum": [
+                "premium_imp_num",
+                "premium_good_read_rate",
+                "premium_read_num",
+                "premium_engage_num",
+                "premium_engage_rate",
+                "premium_like_num",
+                "premium_fav_num",
+                "premium_cmt_num"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Time range in days.\n\nAvailable Values:\n- `DAY_3`: Last 3 days\n- `DAY_7`: Last 7 days\n- `DAY_14`: Last 14 days\n- `DAY_30`: Last 30 days",
+            "in": "query",
+            "name": "nd",
+            "required": false,
+            "schema": {
+              "default": "DAY_7",
+              "description": "Content square time range",
+              "enum": [
+                "DAY_3",
+                "DAY_7",
+                "DAY_14",
+                "DAY_30"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Hot Search",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "12001000"
       }
     },
     "/api/xiaohongshu/search-note/v2": {
@@ -13411,7 +13860,7 @@
         ],
         "x-api-version": "v2",
         "x-highlights": [],
-        "x-order": "12002000"
+        "x-order": "12001100"
       }
     },
     "/api/xiaohongshu/search-note/v3": {
@@ -13499,7 +13948,140 @@
         ],
         "x-api-version": "v3",
         "x-highlights": [],
-        "x-order": "12002100"
+        "x-order": "12001110"
+      }
+    },
+    "/api/xiaohongshu/search-note/v4": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.",
+        "operationId": "getApiXiaohongshuSearchNoteV4",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Search session ID from the previous response data.api_info.search_id.",
+            "in": "query",
+            "name": "searchId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Session ID from the previous response data.api_info.session_id.",
+            "in": "query",
+            "name": "sessionId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sort order for the result set.\n\nAvailable Values:\n- `general`: General\n- `popularity_descending`: Popularity Descending\n- `time_descending`: Time Descending\n- `comment_descending`: Comment Descending\n- `collect_descending`: Collect Descending",
+            "in": "query",
+            "name": "sortType",
+            "required": false,
+            "schema": {
+              "default": "general",
+              "description": "Xiaohongshu Search Note Sort",
+              "enum": [
+                "general",
+                "popularity_descending",
+                "time_descending",
+                "comment_descending",
+                "collect_descending"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Note type filter.\n\nAvailable Values:\n- `不限`: No Limit\n- `视频笔记`: Video Note\n- `普通笔记`: Normal Note",
+            "in": "query",
+            "name": "noteType",
+            "required": false,
+            "schema": {
+              "default": "不限",
+              "description": "Xiaohongshu KANG Search Note Type",
+              "enum": [
+                "不限",
+                "视频笔记",
+                "普通笔记"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Publish time filter.\n\nAvailable Values:\n- `不限`: No Limit\n- `一天内`: Within one day\n- `一周内`: Within one week\n- `半年内`: Within half a year",
+            "in": "query",
+            "name": "timeFilter",
+            "required": false,
+            "schema": {
+              "default": "不限",
+              "description": "Xiaohongshu KANG Search Note Time Filter",
+              "enum": [
+                "不限",
+                "一天内",
+                "一周内",
+                "半年内"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Note Search",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v4",
+        "x-highlights": [
+          {
+            "content": "This is a mobile app version endpoint. Search results are more accurate.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "12001120",
+        "x-recommended": true
       }
     },
     "/api/xiaohongshu/search-recommend/v1": {
@@ -13544,7 +14126,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "12002500"
+        "x-order": "12001800"
       }
     },
     "/api/xiaohongshu/search-user/v2": {
@@ -13598,7 +14180,7 @@
         "tags": [
           "Xiaohongshu (RedNote)"
         ],
-        "x-order": "12002200"
+        "x-order": "12001200"
       }
     },
     "/api/xiaohongshu/share-url-transfer/v1": {
@@ -13643,7 +14225,7 @@
         ],
         "x-api-version": "v3",
         "x-highlights": [],
-        "x-order": "12002400"
+        "x-order": "12002000"
       }
     },
     "/api/youku/get-user-detail/v1": {
@@ -14270,6 +14852,68 @@
               "default": 0,
               "format": "int32",
               "type": "integer"
+            }
+          },
+          {
+            "description": "Whether to show all topics.\n\nAvailable Values:\n- `FALSE`: Do not show topics.\n- `TRUE`: Show all topics.",
+            "in": "query",
+            "name": "showAllTopics",
+            "required": false,
+            "schema": {
+              "default": "FALSE",
+              "description": "Zhihu search topic display switch.",
+              "enum": [
+                "FALSE",
+                "TRUE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Result type filter.\n\nAvailable Values:\n- `answer`: Answers only.\n- `article`: Articles only.\n- `zvideo`: Videos only.",
+            "in": "query",
+            "name": "vertical",
+            "required": false,
+            "schema": {
+              "description": "Zhihu search result type.",
+              "enum": [
+                "answer",
+                "article",
+                "zvideo"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sorting criteria.\n\nAvailable Values:\n- `upvoted_count`: Most upvoted.\n- `created_time`: Latest published.",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "description": "Zhihu search sorting criteria.",
+              "enum": [
+                "upvoted_count",
+                "created_time"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Publish time interval filter.\n\nAvailable Values:\n- `a_day`: Within one day.\n- `a_week`: Within one week.\n- `a_month`: Within one month.\n- `three_months`: Within three months.\n- `half_a_year`: Within half a year.\n- `a_year`: Within one year.",
+            "in": "query",
+            "name": "timeInterval",
+            "required": false,
+            "schema": {
+              "description": "Zhihu search publish time interval.",
+              "enum": [
+                "a_day",
+                "a_week",
+                "a_month",
+                "three_months",
+                "half_a_year",
+                "a_year"
+              ],
+              "type": "string"
             }
           }
         ],

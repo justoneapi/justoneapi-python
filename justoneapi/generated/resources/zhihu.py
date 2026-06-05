@@ -66,6 +66,10 @@ class ZhihuResource(BaseResource):
         *,
         keyword: str,
         offset: int | None = 0,
+        show_all_topics: str | None = "FALSE",
+        vertical: str | None = None,
+        sort: str | None = None,
+        time_interval: str | None = None,
     ) -> ApiResponse[Any]:
         """
         Keyword Search
@@ -75,12 +79,20 @@ class ZhihuResource(BaseResource):
         Args:
             keyword: Search keywords.
             offset: Start offset, begins with 0.
+            show_all_topics: Whether to show all topics.  Available Values: - `FALSE`: Do not show topics. - `TRUE`: Show all topics.
+            vertical: Result type filter.  Available Values: - `answer`: Answers only. - `article`: Articles only. - `zvideo`: Videos only.
+            sort: Sorting criteria.  Available Values: - `upvoted_count`: Most upvoted. - `created_time`: Latest published.
+            time_interval: Publish time interval filter.  Available Values: - `a_day`: Within one day. - `a_week`: Within one week. - `a_month`: Within one month. - `three_months`: Within three months. - `half_a_year`: Within half a year. - `a_year`: Within one year.
         """
         return self._get(
             "/api/zhihu/search/v1",
             {
                 "keyword": keyword,
                 "offset": offset,
+                "showAllTopics": show_all_topics,
+                "vertical": vertical,
+                "sort": sort,
+                "timeInterval": time_interval,
             },
         )
 
