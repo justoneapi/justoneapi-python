@@ -271,10 +271,39 @@ except BusinessError as exc:
 - [用户资料 (V1)](https://docs.justoneapi.com/zh/api/kuaishou/user-profile-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [分享链接解析 (V1)](https://docs.justoneapi.com/zh/api/kuaishou/share-link-resolution-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
-### 1688
+### 微信公众号
 
-- [商品详情 (V1)](https://docs.justoneapi.com/zh/api/1688/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [商品搜索 (V1)](https://docs.justoneapi.com/zh/api/1688/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号今日文章 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-today-articles-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号历史文章 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-historical-articles-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号历史文章 (V2)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-historical-articles-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章指标 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-metrics-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章指标 (V2)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-metrics-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章详情 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章详情 (V2)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章详情 (V3)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-details-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章HTML (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-html-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章信息 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章评论 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章评论回复 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-comment-replies-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章搜索 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章搜索 (V2)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [热门文章搜索 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/hot-article-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章搜索 (V3)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-search-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章搜索 (V4)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-search-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [小程序搜索 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/mini-program-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [微信指数搜索 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/wechat-index-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [搜索建议 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/search-suggestions-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号搜索 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号搜索 (V2)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号原创文章数 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-original-article-count-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号主体信息 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-principal-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号基本信息 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-basic-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号统计 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-stats-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号所有者搜索 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-owner-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [账号排名 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/account-rank-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [文章链接转换 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-link-conversion-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [搜狗链接转换 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/sougou-link-conversion-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [搜狗搜索链接转换 (V1)](https://docs.justoneapi.com/zh/api/wechat-official-accounts/sougou-search-link-conversion-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### 微博
 
@@ -311,13 +340,10 @@ except BusinessError as exc:
 - [商品评论 (V1)](https://docs.justoneapi.com/zh/api/jdcom/product-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [店铺商品列表 (V1)](https://docs.justoneapi.com/zh/api/jdcom/shop-product-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
-### 微信公众号
+### 1688
 
-- [用户发布帖子 (V1)（已弃用）](https://docs.justoneapi.com/zh/api/wechat-official-accounts/user-published-posts-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [文章互动指标 (V1)（已弃用）](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-engagement-metrics-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [文章评论 (V1)（已弃用）](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-comments-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [关键词搜索 (V1)（已弃用）](https://docs.justoneapi.com/zh/api/wechat-official-accounts/keyword-search-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [文章详情 (V1)（已弃用）](https://docs.justoneapi.com/zh/api/wechat-official-accounts/article-details-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
+- [商品详情 (V1)](https://docs.justoneapi.com/zh/api/1688/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [商品搜索 (V1)](https://docs.justoneapi.com/zh/api/1688/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### 豆瓣电影
 
