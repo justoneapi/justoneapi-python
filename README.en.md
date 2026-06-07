@@ -294,11 +294,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Account Original Article Count (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-original-article-count-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Account Principal Info (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-principal-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Account Basic Info (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-basic-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Account Stats (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-stats-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Account Rank (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-rank-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Article Link Conversion (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-link-conversion-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Sougou Link Conversion (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/sougou-link-conversion-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Sougou Search Link Conversion (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/sougou-search-link-conversion-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Weibo
 
