@@ -296,6 +296,24 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Account Basic Info (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-basic-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Article Link Conversion (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-link-conversion-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
+### WeChat Channels
+
+- [Video Search (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Search (V2)](https://docs.justoneapi.com/en/api/wechat-channels/video-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Account Search (V1)](https://docs.justoneapi.com/en/api/wechat-channels/account-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Account Search (V2)](https://docs.justoneapi.com/en/api/wechat-channels/account-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Account Search (V3)](https://docs.justoneapi.com/en/api/wechat-channels/account-search-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Account Videos (V1)](https://docs.justoneapi.com/en/api/wechat-channels/account-videos-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Account Live Replays (V1)](https://docs.justoneapi.com/en/api/wechat-channels/account-live-replays-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Bound Channel (V1)](https://docs.justoneapi.com/en/api/wechat-channels/bound-channel-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Basic Info (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-basic-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Title (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-title-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Export Id Conversion (V1)](https://docs.justoneapi.com/en/api/wechat-channels/export-id-conversion-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Download URL (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-download-url-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Metrics (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-metrics-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Comments (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Sub Comments (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-sub-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+
 ### Weibo
 
 - [Keyword Search (V2)](https://docs.justoneapi.com/en/api/weibo/keyword-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
