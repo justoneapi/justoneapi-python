@@ -138,10 +138,12 @@ The API list below is generated from OpenAPI and shows the current public API ca
 ### Xiaohongshu (RedNote)
 
 - [Hot Search (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/hot-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Note Search (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Search (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Search (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Search (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Search (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [User Published Notes (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-published-notes-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Published Notes (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-published-notes-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Published Notes (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-published-notes-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Details (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
