@@ -406,6 +406,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 ### Amazon
 
+- [Product Search (V1)](https://docs.justoneapi.com/en/api/amazon/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Details (V1)](https://docs.justoneapi.com/en/api/amazon/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Top Reviews (V1)](https://docs.justoneapi.com/en/api/amazon/product-top-reviews-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Best Sellers (V1)](https://docs.justoneapi.com/en/api/amazon/best-sellers-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
