@@ -20,27 +20,43 @@ def expected_resource_namespaces() -> set[str]:
     }
 
 
+def expected_resource_surface() -> dict[str, dict[str, object]]:
+    spec = load_json(NORMALIZED_SPEC_PATH)
+    resources: dict[str, dict[str, object]] = {}
+    for path_item in spec.get("paths", {}).values():
+        for method, operation in path_item.items():
+            if method.startswith("x-"):
+                continue
+
+            namespace = operation["x-sdk-resource"]
+            resource = resources.setdefault(
+                namespace,
+                {
+                    "class_name": operation["x-sdk-class-name"],
+                    "method_names": set(),
+                },
+            )
+            resource["method_names"].add(operation["x-sdk-method-name"])
+    return resources
+
+
 def test_generated_resource_registry_matches_public_api_surface():
-    assert set(RESOURCE_CLASSES) == expected_resource_namespaces()
-    assert {"douyin", "douyin_xingtu", "xiaohongshu_pgy", "twitter"}.issubset(
-        RESOURCE_CLASSES
-    )
+    expected_namespaces = expected_resource_namespaces()
+
+    assert expected_namespaces
+    assert set(RESOURCE_CLASSES) == expected_namespaces
 
 
 def test_client_exposes_generated_resources():
     client = JustOneAPIClient(token="test-token")
     try:
-        assert type(client.douyin).__name__ == "DouyinResource"
-        assert type(client.douyin_xingtu).__name__ == "DouyinXingtuResource"
-        assert type(client.xiaohongshu_pgy).__name__ == "XiaohongshuPgyResource"
-        assert hasattr(client.search, "search_v1")
-        assert hasattr(client.weixin, "get_article_comment_v1")
-        assert hasattr(client.weixin, "get_article_feedback_v1")
-        assert hasattr(client.weixin, "get_user_post_v1")
-        assert hasattr(client.bilibili, "get_user_relation_stat_v1")
-        assert hasattr(client.bilibili, "get_video_caption_v2")
-        assert hasattr(client.douyin, "get_video_detail_v2")
-        assert hasattr(client.twitter, "get_user_posts_v1")
+        for namespace, expected in expected_resource_surface().items():
+            assert hasattr(client, namespace)
+
+            resource = getattr(client, namespace)
+            assert type(resource).__name__ == expected["class_name"]
+            for method_name in expected["method_names"]:
+                assert hasattr(resource, method_name)
     finally:
         client.close()
 
