@@ -4,6 +4,17 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to publish, for example v3.0.6'
+        required: true
+  repository_dispatch:
+    types:
+      - openapi-sdk-release
+
+env:
+  RELEASE_TAG: ${{ github.event.inputs.tag || github.event.client_payload.tag || github.ref_name }}
 
 jobs:
   build:
@@ -11,6 +22,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.event.client_payload.tag || github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:
@@ -24,13 +37,13 @@ jobs:
 
       - name: Verify tag matches package version
         env:
-          GITHUB_REF_NAME: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ env.RELEASE_TAG }}
         run: |
           python - <<'PY'
           import os
           from pathlib import Path
 
-          tag = os.environ["GITHUB_REF_NAME"]
+          tag = os.environ["RELEASE_TAG"]
           if not tag.startswith("v"):
               raise SystemExit(f"Release tags must start with 'v': {tag}")
 
@@ -93,7 +106,7 @@ jobs:
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref_name }}
-          name: ${{ github.ref_name }}
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: ${{ env.RELEASE_TAG }}
           files: dist/*
           generate_release_notes: true
