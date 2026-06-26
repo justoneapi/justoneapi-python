@@ -37,7 +37,7 @@ class TaobaoResource(BaseResource):
         """
         Product Details
 
-        Get Taobao and Tmall product Details data through the task-backed v2 flow. If data is not ready within a short wait, the response returns a pending task status.
+        Taobao and Tmall product Details v2 is available through the Just One API dashboard Task Management page. Direct API calls return an instruction message instead of fetching product data. Use the dashboard to submit product detail tasks, wait for completion, and download results.
 
         Args:
             item_id: AUnique product identifier on Taobao/Tmall (item ID).
@@ -135,6 +135,29 @@ class TaobaoResource(BaseResource):
             },
         )
 
+    def get_social_feed_v1(
+        self,
+        *,
+        item_id: str,
+        page: int | None = 1,
+    ) -> ApiResponse[Any]:
+        """
+        Product Questions
+
+        Get Taobao and Tmall product question feed data, including buyer questions and related social content, for product research, customer concern analysis, and ecommerce monitoring.
+
+        Args:
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
+            page: Page number for pagination.
+        """
+        return self._get(
+            "/api/taobao/get-social-feed/v1",
+            {
+                "itemId": item_id,
+                "page": page,
+            },
+        )
+
     def get_shop_item_list_v1(
         self,
         *,
@@ -215,6 +238,29 @@ class TaobaoResource(BaseResource):
                 "userId": user_id,
                 "shopId": shop_id,
                 "sort": sort,
+                "page": page,
+            },
+        )
+
+    def get_shop_item_list_v4(
+        self,
+        *,
+        seller_id: str,
+        page: int | None = 1,
+    ) -> ApiResponse[Any]:
+        """
+        Shop Product List
+
+        Get Taobao and Tmall shop Product List data from a seller ID, including product titles, prices, images, pagination data, and shop item attributes, for seller catalog monitoring, product research, assortment tracking, and ecommerce analysis.
+
+        Args:
+            seller_id: Seller identifier on Taobao/Tmall. This value is sent to the supplier as `userId`.
+            page: Page number for pagination.
+        """
+        return self._get(
+            "/api/taobao/get-shop-item-list/v4",
+            {
+                "sellerId": seller_id,
                 "page": page,
             },
         )

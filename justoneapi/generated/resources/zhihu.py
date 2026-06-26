@@ -118,3 +118,210 @@ class ZhihuResource(BaseResource):
                 "offset": offset,
             },
         )
+
+    def get_user_info_v1(
+        self,
+        *,
+        user_url_token: str,
+    ) -> ApiResponse[Any]:
+        """
+        User Info
+
+        Get Zhihu user Info data, including profile identifiers, names, avatar information, headline details, follower signals, and account metadata for creator profiling, audience research, and account verification workflows.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+        """
+        return self._get(
+            "/api/zhihu/get-user-info/v1",
+            {
+                "userUrlToken": user_url_token,
+            },
+        )
+
+    def get_user_followees_v1(
+        self,
+        *,
+        user_url_token: str,
+        offset: int | None = 0,
+    ) -> ApiResponse[Any]:
+        """
+        User Followees
+
+        Get Zhihu user Followees data, including followed account profiles, identifiers, headlines, avatar fields, and pagination metadata for network mapping, creator discovery, and relationship analysis.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+            offset: Start offset, begins with 0.
+        """
+        return self._get(
+            "/api/zhihu/get-user-followees/v1",
+            {
+                "userUrlToken": user_url_token,
+                "offset": offset,
+            },
+        )
+
+    def get_user_followers_v1(
+        self,
+        *,
+        user_url_token: str,
+        offset: int | None = 0,
+    ) -> ApiResponse[Any]:
+        """
+        User Followers
+
+        Get Zhihu user Followers data, including follower account profiles, identifiers, headlines, avatar fields, and pagination metadata for audience analysis, creator evaluation, and relationship mapping.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+            offset: Start offset, begins with 0.
+        """
+        return self._get(
+            "/api/zhihu/get-user-followers/v1",
+            {
+                "userUrlToken": user_url_token,
+                "offset": offset,
+            },
+        )
+
+    def get_user_articles_v1(
+        self,
+        *,
+        user_url_token: str,
+        offset: int | None = 0,
+        sort_type: str | None = "created",
+    ) -> ApiResponse[Any]:
+        """
+        User Articles
+
+        Get Zhihu user Articles data, including article identifiers, titles, author context, engagement signals, publish metadata, and pagination fields for creator research and content monitoring.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+            offset: Start offset, begins with 0.
+            sort_type: Sorting criteria for user articles.  Available Values: - `created`: Sort by publish time. - `voteups`: Sort by upvote count.
+        """
+        return self._get(
+            "/api/zhihu/get-user-articles/v1",
+            {
+                "userUrlToken": user_url_token,
+                "offset": offset,
+                "sortType": sort_type,
+            },
+        )
+
+    def get_user_included_articles_v1(
+        self,
+        *,
+        user_url_token: str,
+        offset: int | None = 0,
+    ) -> ApiResponse[Any]:
+        """
+        User Included Articles
+
+        Get Zhihu user Included Articles data, including collected article identifiers, titles, author context, engagement signals, publish metadata, and pagination fields for content research and archive tracking.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+            offset: Start offset, begins with 0.
+        """
+        return self._get(
+            "/api/zhihu/get-user-included-articles/v1",
+            {
+                "userUrlToken": user_url_token,
+                "offset": offset,
+            },
+        )
+
+    def get_user_follow_columns_v1(
+        self,
+        *,
+        user_url_token: str,
+        offset: int | None = 0,
+    ) -> ApiResponse[Any]:
+        """
+        User Follow Columns
+
+        Get Zhihu user Follow Columns data, including subscribed column identifiers, names, descriptions, creator context, follower signals, and pagination fields for creator research and topic monitoring.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+            offset: Start offset, begins with 0.
+        """
+        return self._get(
+            "/api/zhihu/get-user-follow-columns/v1",
+            {
+                "userUrlToken": user_url_token,
+                "offset": offset,
+            },
+        )
+
+    def get_user_follow_questions_v1(
+        self,
+        *,
+        user_url_token: str,
+        offset: int | None = 0,
+    ) -> ApiResponse[Any]:
+        """
+        User Follow Questions
+
+        Get Zhihu user Follow Questions data, including followed question identifiers, titles, answer counts, follower signals, update metadata, and pagination fields for topic tracking and research workflows.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+            offset: Start offset, begins with 0.
+        """
+        return self._get(
+            "/api/zhihu/get-user-follow-questions/v1",
+            {
+                "userUrlToken": user_url_token,
+                "offset": offset,
+            },
+        )
+
+    def get_user_follow_collections_v1(
+        self,
+        *,
+        user_url_token: str,
+        offset: int | None = 0,
+    ) -> ApiResponse[Any]:
+        """
+        User Follow Collections
+
+        Get Zhihu user Follow Collections data, including followed collection identifiers, titles, creator context, item counts, follower signals, and pagination fields for collection tracking and content research.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+            offset: Start offset, begins with 0.
+        """
+        return self._get(
+            "/api/zhihu/get-user-follow-collections/v1",
+            {
+                "userUrlToken": user_url_token,
+                "offset": offset,
+            },
+        )
+
+    def get_user_follow_topics_v1(
+        self,
+        *,
+        user_url_token: str,
+        offset: int | None = 0,
+    ) -> ApiResponse[Any]:
+        """
+        User Follow Topics
+
+        Get Zhihu user Follow Topics data, including followed topic identifiers, names, descriptions, follower signals, content counts, and pagination fields for topic monitoring and audience research.
+
+        Args:
+            user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
+            offset: Start offset, begins with 0.
+        """
+        return self._get(
+            "/api/zhihu/get-user-follow-topics/v1",
+            {
+                "userUrlToken": user_url_token,
+                "offset": offset,
+            },
+        )

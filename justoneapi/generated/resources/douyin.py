@@ -44,6 +44,68 @@ class DouyinResource(BaseResource):
             },
         )
 
+    def hot_search_v1(
+        self,
+        *,
+        keyword: str | None = None,
+        content_type: str | None = "ALL",
+        video_type: str | None = "ALL",
+        sort_type: str | None = "COMPREHENSIVE",
+        page: int | None = 1,
+        like_count_min: int | None = None,
+        like_count_max: int | None = None,
+        comment_count_min: int | None = None,
+        comment_count_max: int | None = None,
+        share_count_min: int | None = None,
+        share_count_max: int | None = None,
+        interaction_count_min: int | None = None,
+        interaction_count_max: int | None = None,
+        follower_count_min: int | None = None,
+        follower_count_max: int | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Hot Search
+
+        Get Douyin (TikTok China) hot content Search data, including ranked content items, creator signals, engagement metrics, enriched video metadata, and pagination, for trend discovery, content research, and campaign planning.
+
+        Args:
+            keyword: Optional search keyword.
+            content_type: Top-level content type. Only one content type can be selected.  Available Values: - `ALL`: All content types. - `FASHION`: Fashion. - `TECHNOLOGY`: Technology. - `SCIENCE`: Science. - `PHOTOGRAPHY`: Photography and videography. - `FOOD`: Food. - `MOTHER_BABY`: Mother and baby. - `PARENTING`: Parenting. - `DRAMA`: Drama. - `GAME`: Game. - `AUTOMOTIVE`: Automotive. - `ANIMAL`: Animal. - `TRAVEL`: Travel. - `DANCE`: Dance. - `TRADITIONAL_CULTURE`: Traditional culture. - `ART`: Art. - `SPORTS`: Sports. - `MUSIC`: Music. - `LIFE_RECORD`: Life records. - `HOME_LIVING`: Home and living. - `LEISURE_ENTERTAINMENT`: Leisure entertainment. - `WORKPLACE`: Workplace. - `AGRICULTURE`: Agriculture. - `CASUAL`: Casual videos. - `ACG`: Animation, comics, and games. - `MOVIE`: Movie. - `TV_SERIES`: TV series. - `VARIETY_SHOW`: Variety show. - `CELEBRITY`: Celebrity. - `HUMANITIES_SOCIAL_SCIENCE`: Humanities and social science. - `EDUCATION_CAMPUS`: Education and campus. - `EMOTION`: Emotion. - `FINANCE`: Finance. - `PUBLIC_WELFARE`: Public welfare.
+            video_type: Video type filter.  Available Values: - `ALL`: All video types. - `XINGTU_VIDEO`: Xingtu commercial videos. - `NATURAL_VIDEO`: Natural videos.
+            sort_type: Sorting criteria for hot content results.  Available Values: - `COMPREHENSIVE`: Comprehensive ranking. - `HIGH_INTERACTION`: Highest interaction count. - `HIGH_LIKE`: Highest like count. - `HIGH_COMMENT`: Highest comment count. - `HIGH_SHARE`: Highest share count.
+            page: Page number (starting from 1). Page size is fixed at 10.
+            like_count_min: Minimum raw like count.
+            like_count_max: Maximum raw like count.
+            comment_count_min: Minimum raw comment count.
+            comment_count_max: Maximum raw comment count.
+            share_count_min: Minimum raw share count.
+            share_count_max: Maximum raw share count.
+            interaction_count_min: Minimum raw interaction count.
+            interaction_count_max: Maximum raw interaction count.
+            follower_count_min: Minimum raw creator follower count.
+            follower_count_max: Maximum raw creator follower count.
+        """
+        return self._get(
+            "/api/douyin/hot-search/v1",
+            {
+                "keyword": keyword,
+                "contentType": content_type,
+                "videoType": video_type,
+                "sortType": sort_type,
+                "page": page,
+                "likeCountMin": like_count_min,
+                "likeCountMax": like_count_max,
+                "commentCountMin": comment_count_min,
+                "commentCountMax": comment_count_max,
+                "shareCountMin": share_count_min,
+                "shareCountMax": share_count_max,
+                "interactionCountMin": interaction_count_min,
+                "interactionCountMax": interaction_count_max,
+                "followerCountMin": follower_count_min,
+                "followerCountMax": follower_count_max,
+            },
+        )
+
     def search_user_v2(
         self,
         *,

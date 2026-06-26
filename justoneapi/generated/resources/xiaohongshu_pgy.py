@@ -193,41 +193,6 @@ class XiaohongshuPgyResource(BaseResource):
             },
         )
 
-    def api_solar_kol_data_v2_notes_detail_v1(
-        self,
-        *,
-        user_id: str,
-        advertise_switch: str | None = "ALL",
-        order_type: str | None = "LATEST",
-        note_type: str | None = "ALL",
-        is_third_platform: str | None = "NO",
-        page_number: int | None = 1,
-    ) -> ApiResponse[Any]:
-        """
-        User Published Notes
-
-        Get Xiaohongshu Creator Marketplace (Pugongying) user Published Notes data, including note metadata and engagement signals, for creator monitoring and campaign research.
-
-        Args:
-            user_id: KOL's user ID.
-            advertise_switch: Advertisement filter.  Available Values: - `ALL`: All notes - `ORGANIC_ONLY`: Organic notes only
-            order_type: Sorting order.  Available Values: - `LATEST`: Latest - `MOST_READ`: Most read - `MOST_INTERACT`: Most interactions
-            note_type: Type of note.  Available Values: - `ALL`: All types - `COOPERATION`: Cooperation notes - `PHOTO_TEXT`: Photo and Text - `VIDEO`: Video only
-            is_third_platform: Whether from third-party platform.  Available Values: - `NO`: No - `YES`: Yes
-            page_number: Page number.
-        """
-        return self._get(
-            "/api/xiaohongshu-pgy/api/solar/kol/dataV2/notesDetail/v1",
-            {
-                "userId": user_id,
-                "advertiseSwitch": advertise_switch,
-                "orderType": order_type,
-                "noteType": note_type,
-                "isThirdPlatform": is_third_platform,
-                "pageNumber": page_number,
-            },
-        )
-
     def api_solar_kol_data_user_id_fans_profile_v1(
         self,
         *,
@@ -307,6 +272,8 @@ class XiaohongshuPgyResource(BaseResource):
         content_theme_label: str | None = None,
         exclude_low_active: bool | None = None,
         fans_num_up: bool | None = None,
+        note_type: str | None = "ALL",
+        industry: str | None = None,
     ) -> ApiResponse[Any]:
         """
         Creator Search
@@ -323,13 +290,15 @@ class XiaohongshuPgyResource(BaseResource):
             fans_gender: Target fans gender.  Available Values: - `ALL`: All genders - `MALE_HIGH`: Mainly Male - `FE_MALE_HIGH`: Mainly Female
             gender: KOL's gender.  Available Values: - `ALL`: All genders - `MALE`: Male - `FEMALE`: Female
             content_tag: Content category filter. Pass first-level or second-level category labels from Pugongying, separated by commas.
-            personal_tags: Blogger persona tag filter covering family identity, profession identity, and special background labels. Pass label values separated by commas.
+            personal_tags: Blogger persona tag filter covering family identity, profession identity, and special background labels. Pass Chinese label values separated by English or Chinese commas. Family identity values: 妈妈, 萌娃, 爸爸, 奶奶, 情侣, 夫妻, 家庭, 闺蜜, 兄弟, 备孕中, 孕期中, 0-6个月, 6-12个月, 1-3岁, 3-6岁, 6-12岁, 12岁以上. Profession identity values: 传统行业, 互联网, 教育科研, 金融法律, 企业创业, 时尚美妆, 食品饮料, 文化传媒, 医疗健康, 艺术设计, 影视娱乐, 运动健身, 专业服务, 工程师, 销售, HR, 教练, 运动员, 舞蹈老师. Special background values: 生活背景, 备考经验, 兴趣爱好, 留学背景, 海外华人, 铲屎官, 孕妈, 独居人群, 外国人, 混血儿.
             top20_crowds_label: Top-20 audience filter. Pass top-level or child audience labels separated by commas; child labels are converted to Pugongying request values.
             industry_specific_crowds_motor_dom: Industry-specific portrait filter. Pass Pugongying portrait value IDs or label values separated by commas.
             feature_tags: Good-at content tag filter. Pass label values separated by commas.
             content_theme_label: Content theme filter. Pass Pugongying value IDs or label values separated by commas; labels are converted to value IDs.
             exclude_low_active: Whether to exclude low-activity bloggers.
             fans_num_up: Whether to exclude bloggers whose fan count is dropping.
+            note_type: Note type filter. Values: ALL=all note types, PHOTO_TEXT=mainly photo-text notes, VIDEO=mainly video notes.  Available Values: - `ALL`: All note types - `PHOTO_TEXT`: Mainly photo-text notes - `VIDEO`: Mainly video notes
+            industry: Pugongying industry preset for industry assistant style creator recommendations.  Available Values: - `BEAUTY_PERSONAL_CARE_BEAUTY`: Beauty and personal care - beauty - `BEAUTY_PERSONAL_CARE_SKINCARE`: Beauty and personal care - skincare - `BEAUTY_PERSONAL_CARE_PERSONAL_CARE`: Beauty and personal care - personal care - `BEAUTY_PERSONAL_CARE_FRAGRANCE`: Beauty and personal care - fragrance - `FOOD_BEVERAGE_SNACKS`: Food and beverage - snacks - `FOOD_BEVERAGE_DRINKS`: Food and beverage - drinks - `FOOD_BEVERAGE_HEALTH_FOOD`: Food and beverage - health food - `FOOD_BEVERAGE_DAIRY`: Food and beverage - dairy - `FOOD_BEVERAGE_ALCOHOL`: Food and beverage - alcohol - `FOOD_BEVERAGE_GRAINS_OIL`: Food and beverage - grains and oil - `FOOD_BEVERAGE_CROSS_BORDER_FOOD`: Food and beverage - cross-border food - `FOOD_BEVERAGE_FRESH_FOOD`: Food and beverage - fresh food - `FOOD_BEVERAGE_MEAL_REPLACEMENT`: Food and beverage - meal replacement - `FOOD_BEVERAGE_TRADITIONAL_NOURISHMENT`: Food and beverage - traditional nourishment - `MOTHER_BABY_SUPPLIES`: Mother and baby - baby supplies - `MOTHER_BABY_FORMULA_FOOD`: Mother and baby - formula and baby food - `DIGITAL_APPLIANCES_HOME_APPLIANCES`: Digital and appliances - home appliances - `DIGITAL_APPLIANCES_DIGITAL_PRODUCTS`: Digital and appliances - digital products - `DAILY_GOODS_HOUSEHOLD_DAILY_USE`: Daily goods - household daily use - `DAILY_GOODS_PET_SUPPLIES_FOOD`: Daily goods - pet supplies and food - `DAILY_GOODS_OFFICE_SUPPLIES`: Daily goods - office supplies - `APPAREL_ACCESSORIES_CLOTHING_SHOES_HATS`: Apparel and accessories - clothing, shoes, and hats - `APPAREL_ACCESSORIES_JEWELRY`: Apparel and accessories - jewelry - `APPAREL_ACCESSORIES_BAGS_GLASSES`: Apparel and accessories - bags and glasses - `APPAREL_ACCESSORIES_SPORTS_OUTDOOR`: Apparel and accessories - sports and outdoor - `APPAREL_ACCESSORIES_WATCHES`: Apparel and accessories - watches - `APPAREL_ACCESSORIES_SECOND_HAND_LUXURY`: Apparel and accessories - second-hand luxury - `HOME_BUILDING_MATERIALS_HOME_DECOR`: Home and building materials - home decor - `HOME_BUILDING_MATERIALS_FURNITURE`: Home and building materials - furniture - `HOME_BUILDING_MATERIALS_MAIN_MATERIALS`: Home and building materials - main building materials - `AUTOMOTIVE`: Automotive - `INTERNET_ECOMMERCE`: Internet - e-commerce - `INTERNET_SOFTWARE_TOOLS`: Internet - software tools - `HEALTHCARE_MEDICAL_DEVICES`: Healthcare - medical devices - `HEALTHCARE_MEDICAL_BEAUTY`: Healthcare - medical beauty - `CULTURE_SPORTS_ENTERTAINMENT_SPORTS_GOODS`: Culture, sports, and entertainment - sports goods - `CULTURE_SPORTS_ENTERTAINMENT_STATIONERY_TOYS_GIFTS`: Culture, sports, and entertainment - stationery, toys, and gifts - `CULTURE_SPORTS_ENTERTAINMENT_OUTDOOR_PRODUCTS`: Culture, sports, and entertainment - outdoor products - `CULTURE_SPORTS_ENTERTAINMENT_ART_COLLECTIBLES`: Culture, sports, and entertainment - art collectibles - `LIFE_SERVICES_OFFLINE_RETAIL`: Life services - offline retail - `LIFE_SERVICES_BEAUTY_HAIR`: Life services - beauty and hair - `CATERING_RESTAURANTS`: Catering - restaurants - `CATERING_DRINKS_DESSERTS`: Catering - drinks and desserts - `BUSINESS_SERVICES`: Business services - `EDUCATION_TRAINING_LANGUAGE_STUDY_ABROAD`: Education and training - language and study abroad - `EDUCATION_TRAINING_VOCATIONAL_EDUCATION`: Education and training - vocational education - `EDUCATION_TRAINING_INTEREST_TRAINING`: Education and training - interest training - `EDUCATION_TRAINING_K12_EDUCATION`: Education and training - K-12 education - `EDUCATION_TRAINING_DEGREE_EDUCATION`: Education and training - degree education - `EDUCATION_TRAINING_CORPORATE_DEVELOPMENT`: Education and training - corporate and team development - `EDUCATION_TRAINING_OTHER`: Education and training - other - `GAMES`: Games - `TRAVEL_TOURISM`: Travel and tourism
         """
         return self._get(
             "/api/xiaohongshu-pgy/api/solar/cooperator/blogger/v2/v1",
@@ -350,6 +319,8 @@ class XiaohongshuPgyResource(BaseResource):
                 "contentThemeLabel": content_theme_label,
                 "excludeLowActive": exclude_low_active,
                 "fansNumUp": fans_num_up,
+                "noteType": note_type,
+                "industry": industry,
             },
         )
 
@@ -535,6 +506,41 @@ class XiaohongshuPgyResource(BaseResource):
             },
         )
 
+    def api_solar_kol_data_v2_notes_detail_v1(
+        self,
+        *,
+        user_id: str,
+        advertise_switch: str | None = "ALL",
+        order_type: str | None = "LATEST",
+        note_type: str | None = "ALL",
+        is_third_platform: str | None = "NO",
+        page_number: int | None = 1,
+    ) -> ApiResponse[Any]:
+        """
+        Creator Note List
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) user Published Notes data, including note metadata and engagement signals, for creator monitoring and campaign research.
+
+        Args:
+            user_id: KOL's user ID.
+            advertise_switch: Advertisement filter.  Available Values: - `ALL`: All notes - `ORGANIC_ONLY`: Organic notes only
+            order_type: Sorting order.  Available Values: - `LATEST`: Latest - `MOST_READ`: Most read - `MOST_INTERACT`: Most interactions
+            note_type: Type of note.  Available Values: - `ALL`: All types - `COOPERATION`: Cooperation notes - `PHOTO_TEXT`: Photo and Text - `VIDEO`: Video only
+            is_third_platform: Whether from third-party platform.  Available Values: - `NO`: No - `YES`: Yes
+            page_number: Page number.
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/api/solar/kol/dataV2/notesDetail/v1",
+            {
+                "userId": user_id,
+                "advertiseSwitch": advertise_switch,
+                "orderType": order_type,
+                "noteType": note_type,
+                "isThirdPlatform": is_third_platform,
+                "pageNumber": page_number,
+            },
+        )
+
     def get_kol_note_list_v1(
         self,
         *,
@@ -545,7 +551,7 @@ class XiaohongshuPgyResource(BaseResource):
         note_type: str | None = "_4",
     ) -> ApiResponse[Any]:
         """
-        Creator Note List
+        Creator Note List Pro
 
         Get Xiaohongshu Creator Marketplace (Pugongying) creator Note List data, including content metadata, publish time, and engagement indicators, for content analysis.
 

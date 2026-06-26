@@ -14,9 +14,11 @@
               "302",
               "303",
               "400",
+              "404",
               "500",
               "600",
-              "601"
+              "601",
+              "602"
             ],
             "type": "string"
           },
@@ -28,6 +30,9 @@
           },
           "recordTime": {
             "format": "date-time",
+            "type": "string"
+          },
+          "requestId": {
             "type": "string"
           }
         },
@@ -83,7 +88,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "16001000"
+        "x-order": "19101000"
       }
     },
     "/api/1688/search-item-list/v1": {
@@ -128,7 +133,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "16001100"
+        "x-order": "19101100"
       }
     },
     "/api/amazon/get-best-sellers/v1": {
@@ -146,7 +151,7 @@
             }
           },
           {
-            "description": "Best sellers category to return products for (e.g. 'baby-products' or 'baby-products/166777011'). The value is derived from the URL path of the Amazon Best Sellers page, such as: https://www.amazon.com/Best-Sellers-Baby-Baby-Toddler-Feeding-Supplies/zgbs/baby-products/166777011",
+            "description": "Best sellers category path, for example 'baby-products' or 'baby-products/166777011', from an Amazon Best Sellers URL.",
             "in": "query",
             "name": "category",
             "required": true,
@@ -500,8 +505,165 @@
         "x-order": "29001100"
       }
     },
+    "/api/amazon/search-products/v1": {
+      "get": {
+        "description": "Search Amazon product listings by keyword or ASIN, including title, price, rating, Prime signals, product photos, delivery details, and pagination metadata for discovery, catalog enrichment, market research, price monitoring, and competitor analysis.",
+        "operationId": "getApiAmazonSearchProductsV1",
+        "parameters": [
+          {
+            "description": "Authentication token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword or ASIN to find Amazon products.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Country code for the Amazon marketplace.\n\nAvailable Values:\n- `US`: United States\n- `AU`: Australia\n- `BR`: Brazil\n- `CA`: Canada\n- `CN`: China\n- `FR`: France\n- `DE`: Germany\n- `IN`: India\n- `IT`: Italy\n- `MX`: Mexico\n- `NL`: Netherlands\n- `SG`: Singapore\n- `ES`: Spain\n- `TR`: Turkey\n- `AE`: United Arab Emirates\n- `GB`: United Kingdom\n- `JP`: Japan\n- `SA`: Saudi Arabia\n- `PL`: Poland\n- `SE`: Sweden\n- `BE`: Belgium\n- `EG`: Egypt\n- `ZA`: South Africa\n- `IE`: Ireland",
+            "in": "query",
+            "name": "country",
+            "required": false,
+            "schema": {
+              "default": "US",
+              "description": "Amazon Country",
+              "enum": [
+                "US",
+                "AU",
+                "BR",
+                "CA",
+                "CN",
+                "FR",
+                "DE",
+                "IN",
+                "IT",
+                "MX",
+                "NL",
+                "SG",
+                "ES",
+                "TR",
+                "AE",
+                "GB",
+                "JP",
+                "SA",
+                "PL",
+                "SE",
+                "BE",
+                "EG",
+                "ZA",
+                "IE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sort order for Amazon product search results.\n\nAvailable Values:\n- `RELEVANCE`: Relevance\n- `LOWEST_PRICE`: Lowest Price\n- `HIGHEST_PRICE`: Highest Price\n- `REVIEWS`: Reviews\n- `NEWEST`: Newest\n- `BEST_SELLERS`: Best Sellers",
+            "in": "query",
+            "name": "sortBy",
+            "required": false,
+            "schema": {
+              "default": "RELEVANCE",
+              "description": "Amazon Sort By",
+              "enum": [
+                "RELEVANCE",
+                "LOWEST_PRICE",
+                "HIGHEST_PRICE",
+                "REVIEWS",
+                "NEWEST",
+                "BEST_SELLERS"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Product condition filter for Amazon search results.\n\nAvailable Values:\n- `ALL`: All product conditions\n- `NEW`: New products\n- `USED`: Used products\n- `RENEWED`: Renewed products\n- `COLLECTIBLE`: Collectible products",
+            "in": "query",
+            "name": "productCondition",
+            "required": false,
+            "schema": {
+              "default": "ALL",
+              "description": "Amazon Product Condition",
+              "enum": [
+                "ALL",
+                "NEW",
+                "USED",
+                "RENEWED",
+                "COLLECTIBLE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Whether to return only Prime-eligible products.",
+            "in": "query",
+            "name": "isPrime",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "Deals and discounts filter for Amazon search results.\n\nAvailable Values:\n- `NONE`: Do not filter by deals or discounts\n- `ALL_DISCOUNTS`: Return discounted products\n- `TODAYS_DEALS`: Return today's deals",
+            "in": "query",
+            "name": "dealsAndDiscounts",
+            "required": false,
+            "schema": {
+              "default": "NONE",
+              "description": "Amazon Deals And Discounts",
+              "enum": [
+                "NONE",
+                "ALL_DISCOUNTS",
+                "TODAYS_DEALS"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Search",
+        "tags": [
+          "Amazon"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "29000900"
+      }
+    },
     "/api/beike/community/list/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Beike community List data, including - Community name and unique ID and Average listing price and historical price trends, for identifying popular residential areas in a city and comparing average housing prices across different communities.",
         "operationId": "getApiBeikeCommunityListV1",
         "parameters": [
@@ -568,6 +730,7 @@
     },
     "/api/beike/ershoufang/detail/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Beike resale Housing Details data, including - Pricing (total and unit price), Physical attributes (area, and layout, for displaying a full property profile to users and detailed price comparison between specific listings.",
         "operationId": "getApiBeikeErshoufangDetailV1",
         "parameters": [
@@ -622,6 +785,7 @@
     },
     "/api/beike/get-ershoufang-list/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Beike resale Housing List data, including - Supports filtering by city/region, price range, and layout, for building search result pages for property portals and aggregating market data for regional housing trends.",
         "operationId": "getApiBeikeGetErshoufangListV1",
         "parameters": [
@@ -1172,6 +1336,60 @@
         "x-order": 18001600
       }
     },
+    "/api/dewu/search-item-list/v1": {
+      "get": {
+        "description": "Get Dewu (Poizon) product search results by keyword, including matched product data and pagination results, for product discovery, catalog research, price monitoring, and ecommerce market analysis.",
+        "operationId": "getApiDewuSearchItemListV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination. The first page is 1.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Search",
+        "tags": [
+          "Dewu (Poizon)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "18951000"
+      }
+    },
     "/api/douban/get-movie-comments/v1": {
       "get": {
         "description": "Get Douban movie Comments data, including ratings, snippets, and interaction counts, for quick sentiment sampling and review monitoring.",
@@ -1594,6 +1812,7 @@
           "Douyin E-commerce"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "14502000"
       }
@@ -1857,11 +2076,12 @@
             "description": "OK"
           }
         },
-        "summary": "Author Commerce Seeding Base Info",
+        "summary": "Commerce Seeding Base Info",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15005100"
       }
@@ -1903,11 +2123,12 @@
             "description": "OK"
           }
         },
-        "summary": "Author Commerce Spread Info",
+        "summary": "Creator Commerce Spread Info",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15005000"
       }
@@ -1935,16 +2156,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "description": "Type of keywords.",
-            "in": "query",
-            "name": "keywordType",
-            "required": false,
-            "schema": {
-              "default": "0",
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -1959,11 +2170,12 @@
             "description": "OK"
           }
         },
-        "summary": "KOL Content Keyword Analysis",
+        "summary": "Content Keyword Analysis",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004900"
       }
@@ -2005,11 +2217,12 @@
             "description": "OK"
           }
         },
-        "summary": "KOL Comment Keyword Analysis",
+        "summary": "Comment Keyword Analysis",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004800"
       }
@@ -2056,6 +2269,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15003200"
       }
@@ -2085,14 +2299,13 @@
             }
           },
           {
-            "description": "Time range.\n\nAvailable Values:\n- `_1`: Last 7 days\n- `_2`: Last 30 days\n- `_3`: Last 90 days",
+            "description": "Time range.\n\nAvailable Values:\n- `_2`: Last 30 days\n- `_3`: Last 90 days",
             "in": "query",
             "name": "range",
             "required": true,
             "schema": {
               "description": "KOL convert ability time range",
               "enum": [
-                "_1",
                 "_2",
                 "_3"
               ],
@@ -2117,6 +2330,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15003800"
       }
@@ -2187,6 +2401,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004100"
       }
@@ -2233,6 +2448,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004400"
       }
@@ -2297,6 +2513,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004700"
       }
@@ -2326,7 +2543,7 @@
             }
           },
           {
-            "description": "Fans type.\n\nAvailable Values:\n- `_1`: Fans Portrait\n- `_2`: Fans Group Portrait\n- `_5`: Iron Fans Portrait",
+            "description": "Fans type.\n\nAvailable Values:\n- `_1`: Fans Portrait\n- `_5`: Iron Fans Portrait",
             "in": "query",
             "name": "fansType",
             "required": false,
@@ -2335,7 +2552,6 @@
               "description": "KOL fans relationship type",
               "enum": [
                 "_1",
-                "_2",
                 "_5"
               ],
               "type": "string"
@@ -2359,6 +2575,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15003300"
       }
@@ -2420,6 +2637,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15003100"
       }
@@ -2476,6 +2694,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004000"
       }
@@ -2522,6 +2741,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004200"
       }
@@ -2583,6 +2803,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15003400"
       }
@@ -2629,6 +2850,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004500"
       }
@@ -2685,6 +2907,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15003900"
       }
@@ -2781,6 +3004,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15003500"
       }
@@ -2827,6 +3051,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15004300"
       }
@@ -2873,6 +3098,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15005200"
       }
@@ -2928,7 +3154,7 @@
             "description": "OK"
           }
         },
-        "summary": "Author Commerce Seeding Base Info",
+        "summary": "Commerce Seeding Base Info",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -2973,13 +3199,251 @@
             "description": "OK"
           }
         },
-        "summary": "Author Commerce Spread Info",
+        "summary": "Creator Commerce Spread Info",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
         "x-highlights": [],
         "x-order": "15003080"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/aggregator/get_author_contract_base_info": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) author Contract Base Info data, including contract-related baseline metrics and recent cooperation signals for creator vetting, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGwApiAggregatorGetAuthorContractBaseInfo",
+        "parameters": [
+          {
+            "description": "User authentication token.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Time range.\n\nAvailable Values:\n- `DAY_30`: Last 30 days\n- `DAY_90`: Last 90 days",
+            "in": "query",
+            "name": "range",
+            "required": false,
+            "schema": {
+              "default": "90",
+              "description": "Contract base information time range",
+              "enum": [
+                "DAY_30",
+                "DAY_90"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Creator Contract Base Info",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-highlights": [],
+        "x-order": "15003095"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/aggregator/get_author_live_statistics/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) live homepage Statistics data, including recent live room counts, average viewers, ACU, PCU, watch duration, fan watch rate, interaction rate, e-commerce ranges, and conversion indicators for live creator evaluation and campaign planning.",
+        "operationId": "getApiDouyinXingtuGwApiAggregatorGetAuthorLiveStatisticsV1",
+        "parameters": [
+          {
+            "description": "User authentication token.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Live room type filter.\n\nAvailable Values:\n- `ALL`: All live rooms\n- `GAME`: Game live rooms\n- `ECOMMERCE`: E-commerce live rooms\n- `OTHER`: Other live rooms",
+            "in": "query",
+            "name": "liveType",
+            "required": false,
+            "schema": {
+              "default": "1",
+              "description": "Live room type",
+              "enum": [
+                "ALL",
+                "GAME",
+                "ECOMMERCE",
+                "OTHER"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Live data time period.\n\nAvailable Values:\n- `DAY_30`: Last 30 days\n- `DAY_90`: Last 90 days",
+            "in": "query",
+            "name": "period",
+            "required": false,
+            "schema": {
+              "default": "30",
+              "description": "Live data time period",
+              "enum": [
+                "DAY_30",
+                "DAY_90"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Whether to include only Xingtu marketplace orders.",
+            "in": "query",
+            "name": "onlyStarOrder",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "Flow type filter.\n\nAvailable Values:\n- `EXCLUDE`: Exclude\n- `INCLUDE`: Include",
+            "in": "query",
+            "name": "flowType",
+            "required": false,
+            "schema": {
+              "default": "0",
+              "description": "Flow filter type",
+              "enum": [
+                "EXCLUDE",
+                "INCLUDE"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Live Statistics",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15003086"
+      }
+    },
+    "/api/douyin-xingtu/gw/api/aggregator/get_author_live_watch_distribution/v1": {
+      "get": {
+        "description": "Get Douyin Creator Marketplace (Xingtu) live homepage Watch Distribution data, including follower or viewer profile breakdowns such as gender, age, city tier, province, device brand, interest tags, and crowd summaries for live audience analysis.",
+        "operationId": "getApiDouyinXingtuGwApiAggregatorGetAuthorLiveWatchDistributionV1",
+        "parameters": [
+          {
+            "description": "User authentication token.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Author's unique ID.",
+            "in": "query",
+            "name": "oAuthorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Live audience profile type.\n\nAvailable Values:\n- `AUDIENCE`: Viewer profile\n- `FANS`: Follower profile",
+            "in": "query",
+            "name": "liveCrowdType",
+            "required": false,
+            "schema": {
+              "default": "2",
+              "description": "Live audience profile type",
+              "enum": [
+                "AUDIENCE",
+                "FANS"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Live room type filter.\n\nAvailable Values:\n- `ALL`: All live rooms\n- `GAME`: Game live rooms\n- `ECOMMERCE`: E-commerce live rooms\n- `OTHER`: Other live rooms",
+            "in": "query",
+            "name": "liveType",
+            "required": false,
+            "schema": {
+              "default": "1",
+              "description": "Live room type",
+              "enum": [
+                "ALL",
+                "GAME",
+                "ECOMMERCE",
+                "OTHER"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Live Watch Distribution",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15003087"
       }
     },
     "/api/douyin-xingtu/gw/api/aggregator/get_author_order_experience/v1": {
@@ -3078,7 +3542,7 @@
             "description": "OK"
           }
         },
-        "summary": "Author Side Base Info",
+        "summary": "Creator Side Base Info",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -3125,16 +3589,6 @@
                 "SHORT_DRAMA"
               ],
               "type": "string"
-            }
-          },
-          {
-            "description": "Do not use unless confirmed by admin.",
-            "in": "query",
-            "name": "auto",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
             }
           }
         ],
@@ -3406,7 +3860,7 @@
             "description": "OK"
           }
         },
-        "summary": "KOL Comment Keyword Analysis",
+        "summary": "Comment Keyword Analysis",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -4479,7 +4933,7 @@
             "description": "OK"
           }
         },
-        "summary": "Item Report Details",
+        "summary": "Video Details",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -4659,7 +5113,7 @@
             "description": "OK"
           }
         },
-        "summary": "KOL Content Keyword Analysis",
+        "summary": "Content Keyword Analysis",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
@@ -4728,26 +5182,26 @@
             }
           },
           {
-            "description": "KOL price type.\n\nAvailable Values:\n- `视频1_20s`: Video 1-20s\n- `视频21_60s`: Video 21-60s\n- `视频60s以上`: Video > 60s\n- `定制短剧单集`: Mini-drama episode\n- `千次自然播放量`: CPM naturally\n- `短直种草视频`: Short-live seeding video\n- `短直预热视频`: Short-live warm-up video\n- `短直明星种草`: Celebrity short-live seeding\n- `短直明星预热`: Celebrity short-live warm-up\n- `明星视频`: Celebrity video\n- `合集视频`: Collection video\n- `抖音短视频共创_主投稿达人`: Douyin short video co-creation - main creator\n- `抖音短视频共创_参与达人`: Douyin short video co-creation - participant",
+            "description": "KOL price type.\n\nAvailable Values:\n- `VIDEO_1_20S`: Video 1-20s\n- `VIDEO_21_60S`: Video 21-60s\n- `VIDEO_OVER_60S`: Video > 60s\n- `CUSTOM_SHORT_DRAMA_EPISODE`: Mini-drama episode\n- `NATURAL_PLAY_CPM`: CPM naturally\n- `SHORT_LIVE_SEEDING_VIDEO`: Short-live seeding video\n- `SHORT_LIVE_WARMUP_VIDEO`: Short-live warm-up video\n- `CELEBRITY_SHORT_LIVE_SEEDING`: Celebrity short-live seeding\n- `CELEBRITY_SHORT_LIVE_WARMUP`: Celebrity short-live warm-up\n- `CELEBRITY_VIDEO`: Celebrity video\n- `COLLECTION_VIDEO`: Collection video\n- `DOUYIN_SHORT_VIDEO_CO_CREATION_MAIN_CREATOR`: Douyin short video co-creation - main creator\n- `DOUYIN_SHORT_VIDEO_CO_CREATION_PARTICIPANT`: Douyin short video co-creation - participant",
             "in": "query",
             "name": "kolPriceType",
             "required": false,
             "schema": {
               "description": "KOL price category",
               "enum": [
-                "视频1_20s",
-                "视频21_60s",
-                "视频60s以上",
-                "定制短剧单集",
-                "千次自然播放量",
-                "短直种草视频",
-                "短直预热视频",
-                "短直明星种草",
-                "短直明星预热",
-                "明星视频",
-                "合集视频",
-                "抖音短视频共创_主投稿达人",
-                "抖音短视频共创_参与达人"
+                "VIDEO_1_20S",
+                "VIDEO_21_60S",
+                "VIDEO_OVER_60S",
+                "CUSTOM_SHORT_DRAMA_EPISODE",
+                "NATURAL_PLAY_CPM",
+                "SHORT_LIVE_SEEDING_VIDEO",
+                "SHORT_LIVE_WARMUP_VIDEO",
+                "CELEBRITY_SHORT_LIVE_SEEDING",
+                "CELEBRITY_SHORT_LIVE_WARMUP",
+                "CELEBRITY_VIDEO",
+                "COLLECTION_VIDEO",
+                "DOUYIN_SHORT_VIDEO_CO_CREATION_MAIN_CREATOR",
+                "DOUYIN_SHORT_VIDEO_CO_CREATION_PARTICIPANT"
               ],
               "type": "string"
             }
@@ -4854,13 +5308,13 @@
             "description": "OK"
           }
         },
-        "summary": "KOL Keyword Search",
+        "summary": "Creator Search Light",
         "tags": [
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "15003700"
+        "x-order": "15002750"
       }
     },
     "/api/douyin/get-user-detail/v3": {
@@ -5124,6 +5578,243 @@
         "x-api-version": "v1",
         "x-highlights": [],
         "x-order": "14001500"
+      }
+    },
+    "/api/douyin/hot-search/v1": {
+      "get": {
+        "description": "Get Douyin (TikTok China) hot content Search data, including ranked content items, creator signals, engagement metrics, enriched video metadata, and pagination, for trend discovery, content research, and campaign planning.",
+        "operationId": "getApiDouyinHotSearchV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Optional search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Top-level content type. Only one content type can be selected.\n\nAvailable Values:\n- `ALL`: All content types.\n- `FASHION`: Fashion.\n- `TECHNOLOGY`: Technology.\n- `SCIENCE`: Science.\n- `PHOTOGRAPHY`: Photography and videography.\n- `FOOD`: Food.\n- `MOTHER_BABY`: Mother and baby.\n- `PARENTING`: Parenting.\n- `DRAMA`: Drama.\n- `GAME`: Game.\n- `AUTOMOTIVE`: Automotive.\n- `ANIMAL`: Animal.\n- `TRAVEL`: Travel.\n- `DANCE`: Dance.\n- `TRADITIONAL_CULTURE`: Traditional culture.\n- `ART`: Art.\n- `SPORTS`: Sports.\n- `MUSIC`: Music.\n- `LIFE_RECORD`: Life records.\n- `HOME_LIVING`: Home and living.\n- `LEISURE_ENTERTAINMENT`: Leisure entertainment.\n- `WORKPLACE`: Workplace.\n- `AGRICULTURE`: Agriculture.\n- `CASUAL`: Casual videos.\n- `ACG`: Animation, comics, and games.\n- `MOVIE`: Movie.\n- `TV_SERIES`: TV series.\n- `VARIETY_SHOW`: Variety show.\n- `CELEBRITY`: Celebrity.\n- `HUMANITIES_SOCIAL_SCIENCE`: Humanities and social science.\n- `EDUCATION_CAMPUS`: Education and campus.\n- `EMOTION`: Emotion.\n- `FINANCE`: Finance.\n- `PUBLIC_WELFARE`: Public welfare.",
+            "in": "query",
+            "name": "contentType",
+            "required": false,
+            "schema": {
+              "default": "ALL",
+              "description": "Douyin Hot Search content type.",
+              "enum": [
+                "ALL",
+                "FASHION",
+                "TECHNOLOGY",
+                "SCIENCE",
+                "PHOTOGRAPHY",
+                "FOOD",
+                "MOTHER_BABY",
+                "PARENTING",
+                "DRAMA",
+                "GAME",
+                "AUTOMOTIVE",
+                "ANIMAL",
+                "TRAVEL",
+                "DANCE",
+                "TRADITIONAL_CULTURE",
+                "ART",
+                "SPORTS",
+                "MUSIC",
+                "LIFE_RECORD",
+                "HOME_LIVING",
+                "LEISURE_ENTERTAINMENT",
+                "WORKPLACE",
+                "AGRICULTURE",
+                "CASUAL",
+                "ACG",
+                "MOVIE",
+                "TV_SERIES",
+                "VARIETY_SHOW",
+                "CELEBRITY",
+                "HUMANITIES_SOCIAL_SCIENCE",
+                "EDUCATION_CAMPUS",
+                "EMOTION",
+                "FINANCE",
+                "PUBLIC_WELFARE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Video type filter.\n\nAvailable Values:\n- `ALL`: All video types.\n- `XINGTU_VIDEO`: Xingtu commercial videos.\n- `NATURAL_VIDEO`: Natural videos.",
+            "in": "query",
+            "name": "videoType",
+            "required": false,
+            "schema": {
+              "default": "ALL",
+              "description": "Douyin Hot Search video type.",
+              "enum": [
+                "ALL",
+                "XINGTU_VIDEO",
+                "NATURAL_VIDEO"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sorting criteria for hot content results.\n\nAvailable Values:\n- `COMPREHENSIVE`: Comprehensive ranking.\n- `HIGH_INTERACTION`: Highest interaction count.\n- `HIGH_LIKE`: Highest like count.\n- `HIGH_COMMENT`: Highest comment count.\n- `HIGH_SHARE`: Highest share count.",
+            "in": "query",
+            "name": "sortType",
+            "required": false,
+            "schema": {
+              "default": "COMPREHENSIVE",
+              "description": "Douyin Hot Search sort type.",
+              "enum": [
+                "COMPREHENSIVE",
+                "HIGH_INTERACTION",
+                "HIGH_LIKE",
+                "HIGH_COMMENT",
+                "HIGH_SHARE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number (starting from 1). Page size is fixed at 10.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Minimum raw like count.",
+            "in": "query",
+            "name": "likeCountMin",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Maximum raw like count.",
+            "in": "query",
+            "name": "likeCountMax",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Minimum raw comment count.",
+            "in": "query",
+            "name": "commentCountMin",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Maximum raw comment count.",
+            "in": "query",
+            "name": "commentCountMax",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Minimum raw share count.",
+            "in": "query",
+            "name": "shareCountMin",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Maximum raw share count.",
+            "in": "query",
+            "name": "shareCountMax",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Minimum raw interaction count.",
+            "in": "query",
+            "name": "interactionCountMin",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Maximum raw interaction count.",
+            "in": "query",
+            "name": "interactionCountMax",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Minimum raw creator follower count.",
+            "in": "query",
+            "name": "followerCountMin",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Maximum raw creator follower count.",
+            "in": "query",
+            "name": "followerCountMax",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Hot Search",
+        "tags": [
+          "Douyin (TikTok China)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "14001050"
       }
     },
     "/api/douyin/search-user/v2": {
@@ -7300,6 +7991,75 @@
         "x-order": "19001100"
       }
     },
+    "/api/jd/get-item-comments/v2": {
+      "get": {
+        "description": "Get JD.com product Comments data, including comment text, ratings, timestamps, images, and SKU or SPU comment scope, for customer feedback analysis and product research.",
+        "operationId": "getApiJdGetItemCommentsV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "A unique product identifier on JD.com (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for paginated comments.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Comment scope. Use 1 for SKU-level comments and 0 for SPU-level comments.\n\nAvailable Values:\n- `SKU_LEVEL`: Return SKU-level comments\n- `SPU_LEVEL`: Return SPU-level comments",
+            "in": "query",
+            "name": "isSku",
+            "required": false,
+            "schema": {
+              "default": "1",
+              "description": "Comment scope",
+              "enum": [
+                "SKU_LEVEL",
+                "SPU_LEVEL"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Comments",
+        "tags": [
+          "JD.com"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "19001125"
+      }
+    },
     "/api/jd/get-item-detail/v1": {
       "get": {
         "description": "Get JD.com product Details data, including pricing, images, and shop information, for catalog analysis, product monitoring, and ecommerce research.",
@@ -7347,7 +8107,7 @@
     },
     "/api/jd/get-item-detail/v2": {
       "get": {
-        "description": "Get JD.com product Details data through the task-backed v2 flow. If data is not ready within a short wait, the response returns a pending task status.",
+        "description": "JD.com product Details v2 is available through the Just One API dashboard Task Management page. Direct API calls return an instruction message instead of fetching product data. Use the dashboard to submit product detail tasks, wait for completion, and download results.",
         "operationId": "getApiJdGetItemDetailV2",
         "parameters": [
           {
@@ -7388,11 +8148,65 @@
         "x-api-version": "v2",
         "x-highlights": [
           {
-            "content": "This endpoint is task-based and does not return real-time data. It combines task submission and result retrieval in one interface. Please review its mechanism in the dashboard and consult the administrator before use to avoid unintended charges.",
+            "content": "Direct calls to this endpoint do not fetch product data. Please use the Just One API dashboard Task Management page to submit tasks, wait for completion, and download results: https://dashboard.justoneapi.com/en/dashboard/task-records or https://dashboard.justoneapi.com/zh/dashboard/task-records.",
             "type": "danger"
           }
         ],
         "x-order": "19001025"
+      }
+    },
+    "/api/jd/get-item-detail/v3": {
+      "get": {
+        "description": "Get JD.com product Details data, including product metadata, current price, available coupon and promotion information, and the price after applying coupons, for catalog analysis, price monitoring, deal tracking, and ecommerce research.",
+        "operationId": "getApiJdGetItemDetailV3",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "A unique product identifier on JD.com (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Details",
+        "tags": [
+          "JD.com"
+        ],
+        "x-api-version": "v3",
+        "x-highlights": [
+          {
+            "content": "This endpoint can retrieve available coupons and the price after applying coupons.",
+            "type": "tip"
+          },
+          {
+            "content": "This endpoint does not support some products.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "19001030"
       }
     },
     "/api/jd/get-item-price/v1": {
@@ -7546,6 +8360,60 @@
         "x-api-version": "v1",
         "x-highlights": [],
         "x-order": "19001075"
+      }
+    },
+    "/api/jd/search-item-list/v2": {
+      "get": {
+        "description": "Get JD.com product Search data sorted by sales volume, including matched items and product metadata, for product discovery, catalog research, and market monitoring.",
+        "operationId": "getApiJdSearchItemListV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Search",
+        "tags": [
+          "JD.com"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "19001085"
       }
     },
     "/api/kuaishou/get-user-detail/v1": {
@@ -8323,7 +9191,7 @@
     },
     "/api/taobao/get-item-detail/v2": {
       "get": {
-        "description": "Get Taobao and Tmall product Details data through the task-backed v2 flow. If data is not ready within a short wait, the response returns a pending task status.",
+        "description": "Taobao and Tmall product Details v2 is available through the Just One API dashboard Task Management page. Direct API calls return an instruction message instead of fetching product data. Use the dashboard to submit product detail tasks, wait for completion, and download results.",
         "operationId": "getApiTaobaoGetItemDetailV2",
         "parameters": [
           {
@@ -8364,7 +9232,7 @@
         "x-api-version": "v2",
         "x-highlights": [
           {
-            "content": "This endpoint is task-based and does not return real-time data. It combines task submission and result retrieval in one interface. Please review its mechanism in the dashboard and consult the administrator before use to avoid unintended charges.",
+            "content": "Direct calls to this endpoint do not fetch product data. Please use the Just One API dashboard Task Management page to submit tasks, wait for completion, and download results: https://dashboard.justoneapi.com/en/dashboard/task-records or https://dashboard.justoneapi.com/zh/dashboard/task-records.",
             "type": "danger"
           }
         ],
@@ -8815,6 +9683,124 @@
         "x-api-version": "v3",
         "x-highlights": [],
         "x-order": "11001800"
+      }
+    },
+    "/api/taobao/get-shop-item-list/v4": {
+      "get": {
+        "description": "Get Taobao and Tmall shop Product List data from a seller ID, including product titles, prices, images, pagination data, and shop item attributes, for seller catalog monitoring, product research, assortment tracking, and ecommerce analysis.",
+        "operationId": "getApiTaobaoGetShopItemListV4",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Seller identifier on Taobao/Tmall. This value is sent to the supplier as `userId`.",
+            "in": "query",
+            "name": "sellerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Shop Product List",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v4",
+        "x-highlights": [
+          {
+            "content": "Use `sellerId` to pass the Taobao/Tmall seller user ID. The supplier maps this value to `userId` internally.",
+            "type": "tip"
+          }
+        ],
+        "x-order": "11001825",
+        "x-recommended": true
+      }
+    },
+    "/api/taobao/get-social-feed/v1": {
+      "get": {
+        "description": "Get Taobao and Tmall product question feed data, including buyer questions and related social content, for product research, customer concern analysis, and ecommerce monitoring.",
+        "operationId": "getApiTaobaoGetSocialFeedV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique product identifier on Taobao/Tmall (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Questions",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "11001550"
       }
     },
     "/api/taobao/search-item-list/v1": {
@@ -9740,6 +10726,7 @@
           "Toutiao"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "27001200"
       }
@@ -9887,6 +10874,79 @@
         "x-api-version": "v1",
         "x-highlights": [],
         "x-order": 31001100
+      }
+    },
+    "/api/twitter/search/v1": {
+      "get": {
+        "description": "Search Twitter timeline data through TIKHUB, including top, latest, media, people, and list results with cursor pagination for social listening, topic tracking, and account discovery.",
+        "operationId": "getApiTwitterSearchV1",
+        "parameters": [
+          {
+            "description": "Authentication token required for API access.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search result type.\n\nAvailable Values:\n- `TOP`: Top search results\n- `LATEST`: Latest search results\n- `MEDIA`: Media search results\n- `PEOPLE`: People search results\n- `LISTS`: List search results",
+            "in": "query",
+            "name": "searchType",
+            "required": false,
+            "schema": {
+              "default": "Top",
+              "description": "Twitter search type",
+              "enum": [
+                "TOP",
+                "LATEST",
+                "MEDIA",
+                "PEOPLE",
+                "LISTS"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination cursor returned by the previous response.",
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Search Timeline",
+        "tags": [
+          "Twitter"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": 31000900
       }
     },
     "/api/web/html/v1": {
@@ -10700,14 +11760,13 @@
         "x-order": "17001600"
       }
     },
-    "/api/weixin/get-article-comment/v1": {
+    "/api/weixin-channels/convert-export-id/v1": {
       "get": {
-        "deprecated": true,
-        "description": "Get WeChat Official Accounts article Comments data, including commenter details, comment text, and timestamps, for feedback analysis.",
-        "operationId": "getApiWeixinGetArticleCommentV1",
+        "description": "Converts an encrypted WeChat Channels exportId from search results into the video object id and account identity fields. Use it before calling video detail, metrics, or comment endpoints that require objectId.",
+        "operationId": "getApiWeixinChannelsConvertExportIdV1",
         "parameters": [
           {
-            "description": "Access token for the API.",
+            "description": "Access token for this API service.",
             "in": "query",
             "name": "token",
             "required": true,
@@ -10716,9 +11775,9 @@
             }
           },
           {
-            "description": "The URL of the Weixin article.",
+            "description": "Encrypted WeChat Channels exportId returned by video search results.",
             "in": "query",
-            "name": "articleUrl",
+            "name": "exportId",
             "required": true,
             "schema": {
               "type": "string"
@@ -10737,23 +11796,75 @@
             "description": "OK"
           }
         },
-        "summary": "Article Comments",
+        "summary": "Export Id Conversion",
         "tags": [
-          "WeChat Official Accounts"
+          "WeChat Channels"
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": 20001200
+        "x-order": "16201420"
       }
     },
-    "/api/weixin/get-article-detail/v1": {
+    "/api/weixin-channels/get-account-videos/v1": {
+      "post": {
+        "description": "Returns a paginated real-time list of videos, images, and live entries from a WeChat Channels account by v2Name. The response keeps last_buffer and continue_flag fields for paging through the account feed.",
+        "operationId": "postApiWeixinChannelsGetAccountVideosV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "last_buffer": {
+                    "default": "",
+                    "description": "Pagination buffer returned by the previous WeChat Channels account videos response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  },
+                  "v2Name": {
+                    "description": "WeChat Channels account unique id, usually ending with @finder.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "token",
+                  "v2Name"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Videos",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201200"
+      }
+    },
+    "/api/weixin-channels/get-bound-channel/v1": {
       "get": {
-        "deprecated": true,
-        "description": "Get WeChat Official Accounts article Details data, including body content, for article archiving, research, and content analysis.",
-        "operationId": "getApiWeixinGetArticleDetailV1",
+        "description": "Returns the WeChat Channels account bound to a WeChat Official Account by ghid or article URL. It is useful for connecting Official Account publishing data with its related Channels creator identity.",
+        "operationId": "getApiWeixinChannelsGetBoundChannelV1",
         "parameters": [
           {
-            "description": "Access token for the API.",
+            "description": "Access token for this API service.",
             "in": "query",
             "name": "token",
             "required": true,
@@ -10762,7 +11873,1224 @@
             }
           },
           {
-            "description": "The URL of the Weixin article.",
+            "description": "WeChat Official Account original id used to find the bound WeChat Channels account. Use either ghid or url.",
+            "in": "query",
+            "name": "ghid",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to find the bound WeChat Channels account. Use either ghid or url.",
+            "in": "query",
+            "name": "url",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Get Bound Channel",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201300"
+      }
+    },
+    "/api/weixin-channels/get-video-basic-info/v1": {
+      "get": {
+        "description": "Resolves a copied WeChat Channels video link or short feed id into basic video and account fields. The response includes object id, object nonce id, title, cover, account v2Name, and interaction counts when available.",
+        "operationId": "getApiWeixinChannelsGetVideoBasicInfoV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Channels copied video link, finder-preview URL, or short feed id.",
+            "in": "query",
+            "name": "feedInfo",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Basic Info",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201400"
+      }
+    },
+    "/api/weixin-channels/get-video-comment/v1": {
+      "post": {
+        "description": "Returns first-level comments for a WeChat Channels video by object id. The response includes comment ids, author fields, like counts, reply signals, last_buffer, and continuation status for comment pagination.",
+        "operationId": "postApiWeixinChannelsGetVideoCommentV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "last_buffer": {
+                    "default": "",
+                    "description": "Pagination buffer returned by the previous first-level WeChat Channels comment response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "objectId": {
+                    "description": "WeChat Channels video object id used to fetch first-level comments.",
+                    "type": "string"
+                  },
+                  "objectNonceId": {
+                    "default": "",
+                    "description": "Optional WeChat Channels object nonce id.",
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "objectId",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Comments",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201600"
+      }
+    },
+    "/api/weixin-channels/get-video-download-url/v1": {
+      "get": {
+        "description": "Returns downloadable and playable media links for a WeChat Channels video by object id. The endpoint also keeps video metadata such as counts, cover image, publish time, media type, and account fields when available.",
+        "operationId": "getApiWeixinChannelsGetVideoDownloadUrlV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Channels video object id used to fetch downloadable media links.",
+            "in": "query",
+            "name": "objectId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Optional WeChat Channels object nonce id. Supplying it can improve media lookup accuracy.",
+            "in": "query",
+            "name": "objectNonceId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Download URL",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201430"
+      }
+    },
+    "/api/weixin-channels/get-video-metrics/v1": {
+      "post": {
+        "description": "Returns WeChat Channels video interaction metrics by object id, including comment, forward, like, and favorite counts. It also preserves last_buffer and continuation flags returned by the upstream metrics flow.",
+        "operationId": "postApiWeixinChannelsGetVideoMetricsV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "last_buffer": {
+                    "default": "",
+                    "description": "Pagination buffer returned by the previous WeChat Channels metrics response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "objectId": {
+                    "description": "WeChat Channels video object id used to fetch interaction metrics.",
+                    "type": "string"
+                  },
+                  "objectNonceId": {
+                    "default": "",
+                    "description": "Optional WeChat Channels object nonce id.",
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "objectId",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Metrics",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201500"
+      }
+    },
+    "/api/weixin-channels/get-video-sub-comment/v1": {
+      "post": {
+        "description": "Returns second-level replies under a WeChat Channels video comment. Provide the video object id and root comment id from the first-level comments endpoint, and keep last_buffer for reply pagination.",
+        "operationId": "postApiWeixinChannelsGetVideoSubCommentV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "last_buffer": {
+                    "default": "",
+                    "description": "Pagination buffer for WeChat Channels second-level comment replies. Use the first-level comment's last_buffer for the first reply page when present. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "objectId": {
+                    "description": "WeChat Channels video object id used to fetch second-level comment replies.",
+                    "type": "string"
+                  },
+                  "rootCommentId": {
+                    "description": "Root first-level comment id returned by the WeChat Channels video comments endpoint.",
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "objectId",
+                  "rootCommentId",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Sub Comments",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201610"
+      }
+    },
+    "/api/weixin-channels/get-video-title/v1": {
+      "get": {
+        "description": "Returns lightweight WeChat Channels video title and account fields by object id. It is suitable when only the title, media type, and account identity are needed without requesting downloadable media links.",
+        "operationId": "getApiWeixinChannelsGetVideoTitleV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Channels video object id.",
+            "in": "query",
+            "name": "objectId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Optional WeChat Channels object nonce id. Supplying it can improve lookup accuracy.",
+            "in": "query",
+            "name": "objectNonceId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Title",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201410"
+      }
+    },
+    "/api/weixin-channels/search-account/v1": {
+      "post": {
+        "description": "Searches WeChat Channels accounts through the categorized WeChat web search flow. Version 1 returns account-oriented search cards and pagination metadata, which helps discover Channel creators by keyword.",
+        "operationId": "postApiWeixinChannelsSearchAccountV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "cookies_buffer": {
+                    "default": "",
+                    "description": "Cookie pagination state returned by the previous WeChat Channels account search response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "currentPage": {
+                    "default": 1,
+                    "description": "Current page number starting from 1 for WeChat Channels web search pagination.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "keyword": {
+                    "description": "Search keyword for WeChat Channels account web search.",
+                    "type": "string"
+                  },
+                  "offset": {
+                    "default": 0,
+                    "description": "Search result offset returned by the previous WeChat Channels account search response. Use 0 for the first page.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "keyword",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Search",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201100"
+      }
+    },
+    "/api/weixin-channels/search-account/v2": {
+      "post": {
+        "description": "Searches WeChat Channels accounts and related encrypted video objects through the wxvideo keyword endpoint. Version 2 is useful when a broader account and video object result set is needed from one keyword.",
+        "operationId": "postApiWeixinChannelsSearchAccountV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword used to find WeChat Channels accounts and related video objects.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Search",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "16201110"
+      }
+    },
+    "/api/weixin-channels/search-account/v3": {
+      "post": {
+        "description": "Searches for a specific WeChat Channels account id by keyword through the wxvideo account lookup endpoint. Version 3 is optimized for resolving a creator name into a v2Name identifier and account profile fields.",
+        "operationId": "postApiWeixinChannelsSearchAccountV3",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword used to resolve a WeChat Channels account id.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Search",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v3",
+        "x-highlights": [],
+        "x-order": "16201120"
+      }
+    },
+    "/api/weixin-channels/search-video/v1": {
+      "post": {
+        "description": "Searches WeChat Channels videos through the real-time WeChat web search flow. Version 1 supports publish time filtering, sort order, offset, and cookies_buffer pagination for finding recent or high-engagement Channel videos.",
+        "operationId": "postApiWeixinChannelsSearchVideoV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "cookies_buffer": {
+                    "default": "",
+                    "description": "Cookie pagination state returned by the previous WeChat Channels web search response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "currentPage": {
+                    "default": 1,
+                    "description": "Current page number starting from 1 for WeChat Channels web search pagination.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "keyword": {
+                    "description": "Search keyword for WeChat Channels video results.",
+                    "type": "string"
+                  },
+                  "offset": {
+                    "default": 0,
+                    "description": "Search result offset returned by the previous WeChat Channels search response. Use 0 for the first page.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "publishTimeType": {
+                    "default": "ALL",
+                    "description": "WeChat Channels video search publish time filter",
+                    "enum": [
+                      "ALL",
+                      "ONE_DAY",
+                      "SEVEN_DAYS",
+                      "HALF_YEAR"
+                    ],
+                    "type": "string"
+                  },
+                  "sortType": {
+                    "default": "COMPREHENSIVE",
+                    "description": "WeChat Channels video search sort type",
+                    "enum": [
+                      "COMPREHENSIVE",
+                      "LATEST",
+                      "HOT"
+                    ],
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "keyword",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Search",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16201000"
+      }
+    },
+    "/api/weixin-channels/search-video/v2": {
+      "post": {
+        "description": "Searches WeChat Channels videos through the categorized WeChat web search flow. Version 2 focuses on the Channels video category and keeps offset plus cookies_buffer state for continuous result collection.",
+        "operationId": "postApiWeixinChannelsSearchVideoV2",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "cookies_buffer": {
+                    "default": "",
+                    "description": "Cookie pagination state returned by the previous WeChat Channels web search response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "currentPage": {
+                    "default": 1,
+                    "description": "Current page number starting from 1 for WeChat Channels web search pagination.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "keyword": {
+                    "description": "Search keyword for categorized WeChat Channels video results.",
+                    "type": "string"
+                  },
+                  "offset": {
+                    "default": 0,
+                    "description": "Search result offset returned by the previous WeChat Channels search response. Use 0 for the first page.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "keyword",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Search",
+        "tags": [
+          "WeChat Channels"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "16201010"
+      }
+    },
+    "/api/weixin/convert-article-link/v1": {
+      "get": {
+        "description": "Converts a WeChat Official Account article link into a normalized destination URL. It is useful for resolving short links or intermediate links before article collection.",
+        "operationId": "getApiWeixinConvertArticleLinkV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article short link or intermediate link to convert.",
+            "in": "query",
+            "name": "link",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Link Conversion",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101700"
+      }
+    },
+    "/api/weixin/get-account-basic-info/v1": {
+      "get": {
+        "description": "Returns basic profile information for a WeChat Official Account by account name, including fields such as avatar and account type when available. Use it for quick account profile enrichment.",
+        "operationId": "getApiWeixinGetAccountBasicInfoV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account name used to fetch basic profile information.",
+            "in": "query",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Basic Info",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101620"
+      }
+    },
+    "/api/weixin/get-account-history-articles/v1": {
+      "post": {
+        "description": "Returns paginated historical articles for a WeChat Official Account identified by biz id, article URL, account name, or wxid. This version uses page-number pagination for browsing an account's article archive.",
+        "operationId": "postApiWeixinGetAccountHistoryArticlesV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account biz id. You can read it from the __biz query parameter in an article URL. Use one of biz, url, or name.",
+            "in": "query",
+            "name": "biz",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to identify the account. Use one of biz, url, or name.",
+            "in": "query",
+            "name": "url",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account name or wxid, for example People's Daily. Use one of biz, url, or name.",
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number starting from 1 for paginated WeChat Official Account historical articles.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Historical Articles",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101010"
+      }
+    },
+    "/api/weixin/get-account-history-articles/v2": {
+      "post": {
+        "description": "Returns historical articles for a WeChat Official Account identified by ghid or article URL. This version uses the PagingInfo.Offset string cursor returned by the upstream response, which is better for stable continuous pagination.",
+        "operationId": "postApiWeixinGetAccountHistoryArticlesV2",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "ghid": {
+                    "default": "",
+                    "description": "WeChat Official Account original id, for example gh_363b924965e9. Use either ghid or url.",
+                    "type": "string"
+                  },
+                  "offset": {
+                    "default": "",
+                    "description": "PagingInfo.Offset cursor returned by the previous response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  },
+                  "url": {
+                    "default": "",
+                    "description": "WeChat Official Account article URL used to identify the account and fetch historical articles. Use either ghid or url.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Historical Articles",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "16101020"
+      }
+    },
+    "/api/weixin/get-account-original-count/v1": {
+      "get": {
+        "description": "Returns the original article count for a WeChat Official Account identified by ghid or article URL. Use it to evaluate account originality and long-term content quality.",
+        "operationId": "getApiWeixinGetAccountOriginalCountV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account original id, for example gh_363b924965e9. Use either ghid or url.",
+            "in": "query",
+            "name": "ghid",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to identify the account. Use either ghid or url.",
+            "in": "query",
+            "name": "url",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Original Article Count",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101600"
+      }
+    },
+    "/api/weixin/get-account-principal-info/v1": {
+      "get": {
+        "description": "Returns principal and registration information for a WeChat Official Account. The account can be identified by biz id, article URL, or wxid, which helps verify ownership and operating entity details.",
+        "operationId": "getApiWeixinGetAccountPrincipalInfoV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account biz id. Use one of biz, url, or wxid.",
+            "in": "query",
+            "name": "biz",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to identify the account. Use one of biz, url, or wxid.",
+            "in": "query",
+            "name": "url",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account wxid used to identify the account. Use one of biz, url, or wxid.",
+            "in": "query",
+            "name": "wxid",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Principal Info",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101610"
+      }
+    },
+    "/api/weixin/get-account-today-articles/v1": {
+      "get": {
+        "description": "Returns articles published today by a WeChat Official Account. The account can be identified by biz id, article URL, account name, or wxid, making this endpoint useful for monitoring same-day account publishing activity.",
+        "operationId": "getApiWeixinGetAccountTodayArticlesV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account biz id. You can read it from the __biz query parameter in an article URL. Use one of biz, url, or name.",
+            "in": "query",
+            "name": "biz",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to identify the account. Use one of biz, url, or name.",
+            "in": "query",
+            "name": "url",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account name or wxid, for example People's Daily. Use one of biz, url, or name.",
+            "in": "query",
+            "name": "name",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Today Articles",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101000"
+      }
+    },
+    "/api/weixin/get-article-comment/v1": {
+      "post": {
+        "description": "Returns top-level comments for a WeChat Official Account article by article URL. The response keeps comment data, total count, and buffer pagination fields for continuous comment collection.",
+        "operationId": "postApiWeixinGetArticleCommentV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "articleUrl": {
+                    "description": "WeChat Official Account article URL used to fetch top-level article comments.",
+                    "type": "string"
+                  },
+                  "buffer": {
+                    "default": "",
+                    "description": "Comment pagination buffer returned by the previous response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "articleUrl",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Comments",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101300"
+      }
+    },
+    "/api/weixin/get-article-detail/v1": {
+      "get": {
+        "description": "Returns WeChat Official Account article details by article URL. Version 1 supports the mode enum to choose plain text or rich text content when supported, and is suitable for collecting article body content with basic metadata.",
+        "operationId": "getApiWeixinGetArticleDetailV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to fetch article detail content and metadata.",
+            "in": "query",
+            "name": "articleUrl",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Article body format. TEXT returns plain text, and RICH_TEXT returns rich text when supported.\n\nAvailable Values:\n- `TEXT`: Plain text article detail\n- `RICH_TEXT`: Rich text article detail",
+            "in": "query",
+            "name": "mode",
+            "required": false,
+            "schema": {
+              "default": "TEXT",
+              "description": "Weixin article detail mode",
+              "enum": [
+                "TEXT",
+                "RICH_TEXT"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Details",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101200"
+      }
+    },
+    "/api/weixin/get-article-detail/v2": {
+      "get": {
+        "description": "Returns structured WeChat Official Account article details by article URL. Version 2 focuses on fields such as title, cover image, author, publish time, original link, and content HTML fragment for parsing and storage.",
+        "operationId": "getApiWeixinGetArticleDetailV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to fetch structured article detail fields and an HTML content fragment.",
             "in": "query",
             "name": "articleUrl",
             "required": true,
@@ -10787,19 +13115,18 @@
         "tags": [
           "WeChat Official Accounts"
         ],
-        "x-api-version": "v1",
+        "x-api-version": "v2",
         "x-highlights": [],
-        "x-order": 34501400
+        "x-order": "16101210"
       }
     },
-    "/api/weixin/get-article-feedback/v1": {
+    "/api/weixin/get-article-detail/v3": {
       "get": {
-        "deprecated": true,
-        "description": "Get WeChat Official Accounts article Engagement Metrics data, including like, share, and comment metrics, for article performance tracking and benchmarking.",
-        "operationId": "getApiWeixinGetArticleFeedbackV1",
+        "description": "Returns WeChat Official Account article details with additional video-related fields when available. Version 3 is useful for articles that contain video material or Channel-related media references.",
+        "operationId": "getApiWeixinGetArticleDetailV3",
         "parameters": [
           {
-            "description": "Access token for the API.",
+            "description": "Access token for this API service.",
             "in": "query",
             "name": "token",
             "required": true,
@@ -10808,7 +13135,67 @@
             }
           },
           {
-            "description": "The URL of the Weixin article.",
+            "description": "WeChat Official Account article URL used to fetch article details with video-related fields when available.",
+            "in": "query",
+            "name": "articleUrl",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Article body format. TEXT returns plain text, and RICH_TEXT returns rich text when supported.\n\nAvailable Values:\n- `TEXT`: Plain text article detail\n- `RICH_TEXT`: Rich text article detail",
+            "in": "query",
+            "name": "mode",
+            "required": false,
+            "schema": {
+              "default": "TEXT",
+              "description": "Weixin article detail mode",
+              "enum": [
+                "TEXT",
+                "RICH_TEXT"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Details",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v3",
+        "x-highlights": [],
+        "x-order": "16101220"
+      }
+    },
+    "/api/weixin/get-article-detail/v4": {
+      "get": {
+        "description": "Returns a full HTML document for a WeChat Official Account article, including html, head, body, and article styles. Version 4 is suitable for rendering previews, archival storage, or page-level preservation.",
+        "operationId": "getApiWeixinGetArticleDetailV4",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to fetch a full HTML document for rendering or archiving.",
             "in": "query",
             "name": "articleUrl",
             "required": true,
@@ -10829,23 +13216,22 @@
             "description": "OK"
           }
         },
-        "summary": "Article Engagement Metrics",
+        "summary": "Article Details",
         "tags": [
           "WeChat Official Accounts"
         ],
-        "x-api-version": "v1",
+        "x-api-version": "v4",
         "x-highlights": [],
-        "x-order": 20001100
+        "x-order": "16101230"
       }
     },
-    "/api/weixin/get-user-post/v1": {
+    "/api/weixin/get-article-detail/v5": {
       "get": {
-        "deprecated": true,
-        "description": "Get WeChat Official Accounts user Published Posts data, including titles, publish times, and summaries, for account monitoring.",
-        "operationId": "getApiWeixinGetUserPostV1",
+        "description": "Returns lightweight WeChat Official Account article information by article URL. Version 5 focuses on base metadata and status fields such as title, cover image, publish time, and account information.",
+        "operationId": "getApiWeixinGetArticleDetailV5",
         "parameters": [
           {
-            "description": "Access token for the API.",
+            "description": "Access token for this API service.",
             "in": "query",
             "name": "token",
             "required": true,
@@ -10854,9 +13240,9 @@
             }
           },
           {
-            "description": "The ID of the Weixin Official Account (e.g., 'rmrbwx').",
+            "description": "WeChat Official Account article URL used to fetch lightweight article metadata and status information.",
             "in": "query",
-            "name": "wxid",
+            "name": "articleUrl",
             "required": true,
             "schema": {
               "type": "string"
@@ -10875,23 +13261,22 @@
             "description": "OK"
           }
         },
-        "summary": "User Published Posts",
+        "summary": "Article Details",
         "tags": [
           "WeChat Official Accounts"
         ],
-        "x-api-version": "v1",
+        "x-api-version": "v5",
         "x-highlights": [],
-        "x-order": 20001000
+        "x-order": "16101240"
       }
     },
-    "/api/weixin/search/v1": {
+    "/api/weixin/get-article-metrics/v1": {
       "get": {
-        "deprecated": true,
-        "description": "Get WeChat Official Accounts keyword Search data, including account names, titles, and publish times, for content discovery.",
-        "operationId": "getApiWeixinSearchV1",
+        "description": "Returns basic interaction metrics for a WeChat Official Account article by article URL, including core signals such as reads and likes. Use it for lightweight article popularity checks.",
+        "operationId": "getApiWeixinGetArticleMetricsV1",
         "parameters": [
           {
-            "description": "Access token for the API.",
+            "description": "Access token for this API service.",
             "in": "query",
             "name": "token",
             "required": true,
@@ -10900,7 +13285,151 @@
             }
           },
           {
-            "description": "The search keyword.",
+            "description": "WeChat Official Account article URL used to fetch basic interaction metrics such as reads and likes. It must end with #rd or #wechat_redirect.",
+            "in": "query",
+            "name": "articleUrl",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Metrics",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101100"
+      }
+    },
+    "/api/weixin/get-article-metrics/v2": {
+      "get": {
+        "description": "Returns extended interaction metrics for a WeChat Official Account article by article URL, covering a richer set of read, like, and related engagement fields for article performance analysis.",
+        "operationId": "getApiWeixinGetArticleMetricsV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to fetch extended interaction and article performance metrics.",
+            "in": "query",
+            "name": "articleUrl",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Metrics",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "16101110"
+      }
+    },
+    "/api/weixin/get-article-sub-comment/v1": {
+      "get": {
+        "description": "Returns nested replies for a WeChat Official Account article comment. Use the article URL and top-level contentId to collect reply threads and complete the article comment conversation chain.",
+        "operationId": "getApiWeixinGetArticleSubCommentV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat Official Account article URL used to fetch replies under a top-level comment.",
+            "in": "query",
+            "name": "articleUrl",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Top-level comment content id used to fetch nested comment replies.",
+            "in": "query",
+            "name": "contentId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Comment Replies",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101310"
+      }
+    },
+    "/api/weixin/search-account/v1": {
+      "post": {
+        "description": "Searches WeChat Official Account profiles by keyword. Version 1 returns one account result per page with server-side fixed page size, which is useful for discovering accounts by name and basic identity signals.",
+        "operationId": "postApiWeixinSearchAccountV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword for WeChat Official Account profiles.",
             "in": "query",
             "name": "keyword",
             "required": true,
@@ -10909,54 +13438,514 @@
             }
           },
           {
-            "description": "Pagination offset (starts with 0, increment by 20).",
+            "description": "Page number starting from 1 for WeChat Official Account profile search.",
             "in": "query",
-            "name": "offset",
+            "name": "page",
             "required": false,
             "schema": {
-              "default": 0,
+              "default": 1,
               "format": "int32",
               "type": "integer"
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Search",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101500"
+      }
+    },
+    "/api/weixin/search-account/v2": {
+      "post": {
+        "description": "Searches WeChat Official Account profiles through the WeChat web search flow. Version 2 keeps offset and cookies_buffer pagination state for continuously retrieving broader account result sets.",
+        "operationId": "postApiWeixinSearchAccountV2",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "cookies_buffer": {
+                    "default": "",
+                    "description": "Cookie pagination state returned by the previous WeChat web search response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "currentPage": {
+                    "default": 1,
+                    "description": "Current page number starting from 1 for WeChat web search pagination.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "keyword": {
+                    "description": "Search keyword for WeChat Official Account web search.",
+                    "type": "string"
+                  },
+                  "offset": {
+                    "default": 0,
+                    "description": "Search result offset returned by the previous response. Use 0 for the first page.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "keyword",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Account Search",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "16101510"
+      }
+    },
+    "/api/weixin/search-article-hot/v1": {
+      "get": {
+        "description": "Searches hot and viral WeChat Official Account articles within a date range. It supports keyword, publish type, category, and page parameters for discovering high-performing account content.",
+        "operationId": "getApiWeixinSearchArticleHotV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "description": "Type of search results (accounts, articles, etc.).\n\nAvailable Values:\n- `_0`: All\n- `_1`: WeChat Official Account\n- `_2`: Article\n- `_7`: WeChat Channel\n- `_262208`: Wechat Mini Program\n- `_384`: Emoji\n- `_16777728`: Encyclopedia\n- `_9`: Live\n- `_1024`: Book\n- `_512`: Music\n- `_16384`: News\n- `_8192`: Wechat Index\n- `_8`: Moments",
+            "description": "Optional keyword used to filter hot WeChat Official Account articles.",
             "in": "query",
-            "name": "searchType",
+            "name": "keyword",
             "required": false,
             "schema": {
-              "default": "_0",
-              "description": "Weixin Search Type",
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Publish type filter for hot WeChat Official Account article results.\n\nAvailable Values:\n- `IMAGE_TEXT`: Image and text article\n- `VIDEO`: Pure video article\n- `AUDIO`: Pure audio or music article\n- `IMAGE`: Pure image article\n- `TEXT`: Pure text article\n- `REPRINT`: Reprinted article",
+            "in": "query",
+            "name": "publishType",
+            "required": false,
+            "schema": {
+              "default": "IMAGE_TEXT",
+              "description": "Weixin hot article publish type",
               "enum": [
-                "_0",
-                "_1",
-                "_2",
-                "_7",
-                "_262208",
-                "_384",
-                "_16777728",
-                "_9",
-                "_1024",
-                "_512",
-                "_16384",
-                "_8192",
-                "_8"
+                "IMAGE_TEXT",
+                "VIDEO",
+                "AUDIO",
+                "IMAGE",
+                "TEXT",
+                "REPRINT"
               ],
               "type": "string"
             }
           },
           {
-            "description": "Sorting criteria for search results.\n\nAvailable Values:\n- `_0`: Default\n- `_2`: Latest\n- `_4`: Hot",
+            "description": "Category filter for hot WeChat Official Account article results.\n\nAvailable Values:\n- `ALL`: All categories\n- `INTERNATIONAL`: International\n- `SPORTS`: Sports\n- `ENTERTAINMENT`: Entertainment\n- `SOCIETY`: Society\n- `FINANCE`: Finance\n- `CURRENT_AFFAIRS`: Current affairs\n- `TECHNOLOGY`: Technology\n- `EMOTION`: Emotion\n- `AUTOMOTIVE`: Automotive\n- `EDUCATION`: Education\n- `FASHION`: Fashion\n- `GAMES`: Games\n- `MILITARY`: Military\n- `TRAVEL`: Travel\n- `FOOD`: Food\n- `CULTURE`: Culture\n- `HEALTH`: Health\n- `HUMOR`: Humor\n- `HOME`: Home\n- `ANIMATION`: Animation\n- `PETS`: Pets\n- `PARENTING`: Parenting\n- `ASTROLOGY`: Astrology\n- `HISTORY`: History\n- `MUSIC`: Music\n- `UNCATEGORIZED`: Uncategorized\n- `COMPREHENSIVE`: Comprehensive\n- `WORKPLACE`: Workplace\n- `AGRICULTURE`: Agriculture\n- `ELDERLY_CARE`: Elderly care",
             "in": "query",
-            "name": "sortType",
+            "name": "category",
             "required": false,
             "schema": {
-              "default": "_0",
-              "description": "Weixin Search Sort Type",
+              "default": "ALL",
+              "description": "Weixin hot article category",
               "enum": [
-                "_0",
-                "_2",
-                "_4"
+                "ALL",
+                "INTERNATIONAL",
+                "SPORTS",
+                "ENTERTAINMENT",
+                "SOCIETY",
+                "FINANCE",
+                "CURRENT_AFFAIRS",
+                "TECHNOLOGY",
+                "EMOTION",
+                "AUTOMOTIVE",
+                "EDUCATION",
+                "FASHION",
+                "GAMES",
+                "MILITARY",
+                "TRAVEL",
+                "FOOD",
+                "CULTURE",
+                "HEALTH",
+                "HUMOR",
+                "HOME",
+                "ANIMATION",
+                "PETS",
+                "PARENTING",
+                "ASTROLOGY",
+                "HISTORY",
+                "MUSIC",
+                "UNCATEGORIZED",
+                "COMPREHENSIVE",
+                "WORKPLACE",
+                "AGRICULTURE",
+                "ELDERLY_CARE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number starting from 1 for hot WeChat Official Account article results.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Start date for hot article search in yyyy-MM-dd format.",
+            "in": "query",
+            "name": "startDay",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "End date for hot article search in yyyy-MM-dd format.",
+            "in": "query",
+            "name": "endDay",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Hot Article Search",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101420"
+      }
+    },
+    "/api/weixin/search-article/v1": {
+      "post": {
+        "description": "Searches WeChat Official Account articles through the WeChat web search flow. Version 1 supports publish time filtering, sort type, offset, and cookies_buffer pagination for retrieving fresh web-side article results.",
+        "operationId": "postApiWeixinSearchArticleV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "cookies_buffer": {
+                    "default": "",
+                    "description": "Cookie pagination state returned by the previous WeChat web search response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "currentPage": {
+                    "default": 1,
+                    "description": "Current page number starting from 1 for WeChat web search pagination.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "keyword": {
+                    "description": "Search keyword for WeChat Official Account articles.",
+                    "type": "string"
+                  },
+                  "offset": {
+                    "default": 0,
+                    "description": "Search result offset returned by the previous response. Use 0 for the first page.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "publishTimeType": {
+                    "default": "ALL",
+                    "description": "Weixin web article search publish time filter",
+                    "enum": [
+                      "ALL",
+                      "ONE_DAY",
+                      "SEVEN_DAYS",
+                      "HALF_YEAR"
+                    ],
+                    "type": "string"
+                  },
+                  "sortType": {
+                    "default": "COMPREHENSIVE",
+                    "description": "Weixin web article search sort type",
+                    "enum": [
+                      "COMPREHENSIVE",
+                      "LATEST",
+                      "HOT"
+                    ],
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "keyword",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Search",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101430"
+      }
+    },
+    "/api/weixin/search-article/v2": {
+      "post": {
+        "description": "Searches WeChat Official Account articles through the categorized WeChat web search flow. Version 2 uses subSearchType for focused result categories and keeps offset and cookies_buffer for continuous pagination.",
+        "operationId": "postApiWeixinSearchArticleV2",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "cookies_buffer": {
+                    "default": "",
+                    "description": "Cookie pagination state returned by the previous WeChat web search response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "currentPage": {
+                    "default": 1,
+                    "description": "Current page number starting from 1 for WeChat web search pagination.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "keyword": {
+                    "description": "Search keyword for categorized WeChat Official Account article web search.",
+                    "type": "string"
+                  },
+                  "offset": {
+                    "default": 0,
+                    "description": "Search result offset returned by the previous response. Use 0 for the first page.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "subSearchType": {
+                    "default": "ALL",
+                    "description": "Weixin article category search subtype",
+                    "enum": [
+                      "ALL",
+                      "FOLLOWED",
+                      "LATEST",
+                      "RECENT_READ",
+                      "HOT"
+                    ],
+                    "type": "string"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "keyword",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Article Search",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v2",
+        "x-highlights": [],
+        "x-order": "16101440"
+      }
+    },
+    "/api/weixin/search-miniprogram/v1": {
+      "post": {
+        "description": "Searches WeChat mini programs through the WeChat web search flow. It complements WeChat Official Account analysis by finding mini program entry points and related brand ecosystem signals.",
+        "operationId": "postApiWeixinSearchMiniprogramV1",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "cookies_buffer": {
+                    "default": "",
+                    "description": "Cookie pagination state returned by the previous WeChat web search response. Leave it empty for the first page. For this POST endpoint, send it in an application/x-www-form-urlencoded form body.",
+                    "type": "string"
+                  },
+                  "currentPage": {
+                    "default": 1,
+                    "description": "Current page number starting from 1 for WeChat web search pagination.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "keyword": {
+                    "description": "Search keyword for WeChat mini program web search.",
+                    "type": "string"
+                  },
+                  "offset": {
+                    "default": 0,
+                    "description": "Search result offset returned by the previous response. Use 0 for the first page.",
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "token": {
+                    "description": "Access token for this API service.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "keyword",
+                  "token"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Mini Program Search",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101450"
+      }
+    },
+    "/api/weixin/search-suggestions/v1": {
+      "get": {
+        "description": "Returns WeChat search suggestions for a keyword. It is useful for autocomplete and query expansion in WeChat Official Account article search, account search, and content discovery workflows.",
+        "operationId": "getApiWeixinSearchSuggestionsV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Keyword used to fetch WeChat search suggestions.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "WeChat search business type used to scope suggestion results.\n\nAvailable Values:\n- `ALL`: All\n- `ACCOUNT`: Official accounts\n- `ARTICLE`: Articles\n- `CHANNEL`: Channels\n- `MOMENTS`: Moments\n- `LIVE`: Live\n- `EMOJI`: Emoji\n- `AUDIO`: Audio\n- `BOOK`: Books\n- `WECHAT_INDEX`: WeChat index\n- `NEWS`: News\n- `MINI_PROGRAM`: Mini programs\n- `ENCYCLOPEDIA`: Encyclopedia",
+            "in": "query",
+            "name": "businessType",
+            "required": false,
+            "schema": {
+              "default": "ALL",
+              "description": "Weixin search business type",
+              "enum": [
+                "ALL",
+                "ACCOUNT",
+                "ARTICLE",
+                "CHANNEL",
+                "MOMENTS",
+                "LIVE",
+                "EMOJI",
+                "AUDIO",
+                "BOOK",
+                "WECHAT_INDEX",
+                "NEWS",
+                "MINI_PROGRAM",
+                "ENCYCLOPEDIA"
               ],
               "type": "string"
             }
@@ -10974,13 +13963,177 @@
             "description": "OK"
           }
         },
-        "summary": "Keyword Search",
+        "summary": "Search Suggestions",
         "tags": [
           "WeChat Official Accounts"
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": 20001300
+        "x-order": "16101470"
+      }
+    },
+    "/api/weixin/search-wechat-index/v1": {
+      "get": {
+        "description": "Returns WeChat Index keyword search results. Use it with WeChat Official Account article and account analysis to observe keyword trend signals inside the WeChat ecosystem.",
+        "operationId": "getApiWeixinSearchWechatIndexV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Keyword used to query WeChat Index trend signals.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "WeChat Index Search",
+        "tags": [
+          "WeChat Official Accounts"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "16101460"
+      }
+    },
+    "/api/xianyu/get-item-detail/v1": {
+      "get": {
+        "description": "Get Xianyu (GooFish) product Details data by item ID, including listing metadata, seller information, images, item status, pricing, and marketplace flow data, for second-hand item inspection, resale tracking, and ecommerce research.",
+        "operationId": "getApiXianyuGetItemDetailV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "A unique product identifier on Xianyu.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Details",
+        "tags": [
+          "Xianyu (GooFish)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "19051100"
+      }
+    },
+    "/api/xianyu/search-item-list/v1": {
+      "get": {
+        "description": "Get Xianyu (GooFish) product Search data by keyword, including matched second-hand marketplace listings, seller signals, prices, images, filters, and pagination metadata, for resale-market discovery, catalog research, pricing analysis, and item monitoring.",
+        "operationId": "getApiXianyuSearchItemListV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination. The first page is 1.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sort order for Xianyu search results.\n\nAvailable Values:\n- `active`: Active listings first.\n- `recent`: Recent nearby or position-based results first.\n- `credit`: Seller credit first.\n- `price_asc`: Lowest price first.\n- `price_desc`: Highest price first.\n- `price_drop`: Reduced-price listings first.\n- `newest`: Newly listed items first.",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "active",
+              "description": "Xianyu product search sort type.",
+              "enum": [
+                "active",
+                "recent",
+                "credit",
+                "price_asc",
+                "price_desc",
+                "price_drop",
+                "newest"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Product Search",
+        "tags": [
+          "Xianyu (GooFish)"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "19051000"
       }
     },
     "/api/xiaohongshu-pgy/api/pgy/content_square/search_note_v2/v1": {
@@ -11336,12 +14489,12 @@
             }
           },
           {
-            "description": "Blogger persona tag filter covering family identity, profession identity, and special background labels. Pass label values separated by commas.",
+            "description": "Blogger persona tag filter covering family identity, profession identity, and special background labels. Pass Chinese label values separated by English or Chinese commas. Family identity values: 妈妈, 萌娃, 爸爸, 奶奶, 情侣, 夫妻, 家庭, 闺蜜, 兄弟, 备孕中, 孕期中, 0-6个月, 6-12个月, 1-3岁, 3-6岁, 6-12岁, 12岁以上. Profession identity values: 传统行业, 互联网, 教育科研, 金融法律, 企业创业, 时尚美妆, 食品饮料, 文化传媒, 医疗健康, 艺术设计, 影视娱乐, 运动健身, 专业服务, 工程师, 销售, HR, 教练, 运动员, 舞蹈老师. Special background values: 生活背景, 备考经验, 兴趣爱好, 留学背景, 海外华人, 铲屎官, 孕妈, 独居人群, 外国人, 混血儿.",
             "in": "query",
             "name": "personalTags",
             "required": false,
             "schema": {
-              "example": "妈妈,工程师,留学背景",
+              "example": "妈妈,教练,运动员,舞蹈老师,留学背景",
               "type": "string"
             }
           },
@@ -11403,6 +14556,87 @@
             "schema": {
               "example": true,
               "type": "boolean"
+            }
+          },
+          {
+            "description": "Note type filter. Values: ALL=all note types, PHOTO_TEXT=mainly photo-text notes, VIDEO=mainly video notes.\n\nAvailable Values:\n- `ALL`: All note types\n- `PHOTO_TEXT`: Mainly photo-text notes\n- `VIDEO`: Mainly video notes",
+            "in": "query",
+            "name": "noteType",
+            "required": false,
+            "schema": {
+              "default": "ALL",
+              "description": "Creator search note type preference",
+              "enum": [
+                "ALL",
+                "PHOTO_TEXT",
+                "VIDEO"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pugongying industry preset for industry assistant style creator recommendations.\n\nAvailable Values:\n- `BEAUTY_PERSONAL_CARE_BEAUTY`: Beauty and personal care - beauty\n- `BEAUTY_PERSONAL_CARE_SKINCARE`: Beauty and personal care - skincare\n- `BEAUTY_PERSONAL_CARE_PERSONAL_CARE`: Beauty and personal care - personal care\n- `BEAUTY_PERSONAL_CARE_FRAGRANCE`: Beauty and personal care - fragrance\n- `FOOD_BEVERAGE_SNACKS`: Food and beverage - snacks\n- `FOOD_BEVERAGE_DRINKS`: Food and beverage - drinks\n- `FOOD_BEVERAGE_HEALTH_FOOD`: Food and beverage - health food\n- `FOOD_BEVERAGE_DAIRY`: Food and beverage - dairy\n- `FOOD_BEVERAGE_ALCOHOL`: Food and beverage - alcohol\n- `FOOD_BEVERAGE_GRAINS_OIL`: Food and beverage - grains and oil\n- `FOOD_BEVERAGE_CROSS_BORDER_FOOD`: Food and beverage - cross-border food\n- `FOOD_BEVERAGE_FRESH_FOOD`: Food and beverage - fresh food\n- `FOOD_BEVERAGE_MEAL_REPLACEMENT`: Food and beverage - meal replacement\n- `FOOD_BEVERAGE_TRADITIONAL_NOURISHMENT`: Food and beverage - traditional nourishment\n- `MOTHER_BABY_SUPPLIES`: Mother and baby - baby supplies\n- `MOTHER_BABY_FORMULA_FOOD`: Mother and baby - formula and baby food\n- `DIGITAL_APPLIANCES_HOME_APPLIANCES`: Digital and appliances - home appliances\n- `DIGITAL_APPLIANCES_DIGITAL_PRODUCTS`: Digital and appliances - digital products\n- `DAILY_GOODS_HOUSEHOLD_DAILY_USE`: Daily goods - household daily use\n- `DAILY_GOODS_PET_SUPPLIES_FOOD`: Daily goods - pet supplies and food\n- `DAILY_GOODS_OFFICE_SUPPLIES`: Daily goods - office supplies\n- `APPAREL_ACCESSORIES_CLOTHING_SHOES_HATS`: Apparel and accessories - clothing, shoes, and hats\n- `APPAREL_ACCESSORIES_JEWELRY`: Apparel and accessories - jewelry\n- `APPAREL_ACCESSORIES_BAGS_GLASSES`: Apparel and accessories - bags and glasses\n- `APPAREL_ACCESSORIES_SPORTS_OUTDOOR`: Apparel and accessories - sports and outdoor\n- `APPAREL_ACCESSORIES_WATCHES`: Apparel and accessories - watches\n- `APPAREL_ACCESSORIES_SECOND_HAND_LUXURY`: Apparel and accessories - second-hand luxury\n- `HOME_BUILDING_MATERIALS_HOME_DECOR`: Home and building materials - home decor\n- `HOME_BUILDING_MATERIALS_FURNITURE`: Home and building materials - furniture\n- `HOME_BUILDING_MATERIALS_MAIN_MATERIALS`: Home and building materials - main building materials\n- `AUTOMOTIVE`: Automotive\n- `INTERNET_ECOMMERCE`: Internet - e-commerce\n- `INTERNET_SOFTWARE_TOOLS`: Internet - software tools\n- `HEALTHCARE_MEDICAL_DEVICES`: Healthcare - medical devices\n- `HEALTHCARE_MEDICAL_BEAUTY`: Healthcare - medical beauty\n- `CULTURE_SPORTS_ENTERTAINMENT_SPORTS_GOODS`: Culture, sports, and entertainment - sports goods\n- `CULTURE_SPORTS_ENTERTAINMENT_STATIONERY_TOYS_GIFTS`: Culture, sports, and entertainment - stationery, toys, and gifts\n- `CULTURE_SPORTS_ENTERTAINMENT_OUTDOOR_PRODUCTS`: Culture, sports, and entertainment - outdoor products\n- `CULTURE_SPORTS_ENTERTAINMENT_ART_COLLECTIBLES`: Culture, sports, and entertainment - art collectibles\n- `LIFE_SERVICES_OFFLINE_RETAIL`: Life services - offline retail\n- `LIFE_SERVICES_BEAUTY_HAIR`: Life services - beauty and hair\n- `CATERING_RESTAURANTS`: Catering - restaurants\n- `CATERING_DRINKS_DESSERTS`: Catering - drinks and desserts\n- `BUSINESS_SERVICES`: Business services\n- `EDUCATION_TRAINING_LANGUAGE_STUDY_ABROAD`: Education and training - language and study abroad\n- `EDUCATION_TRAINING_VOCATIONAL_EDUCATION`: Education and training - vocational education\n- `EDUCATION_TRAINING_INTEREST_TRAINING`: Education and training - interest training\n- `EDUCATION_TRAINING_K12_EDUCATION`: Education and training - K-12 education\n- `EDUCATION_TRAINING_DEGREE_EDUCATION`: Education and training - degree education\n- `EDUCATION_TRAINING_CORPORATE_DEVELOPMENT`: Education and training - corporate and team development\n- `EDUCATION_TRAINING_OTHER`: Education and training - other\n- `GAMES`: Games\n- `TRAVEL_TOURISM`: Travel and tourism",
+            "in": "query",
+            "name": "industry",
+            "required": false,
+            "schema": {
+              "description": "Industry assistant creator recommendation industry",
+              "enum": [
+                "BEAUTY_PERSONAL_CARE_BEAUTY",
+                "BEAUTY_PERSONAL_CARE_SKINCARE",
+                "BEAUTY_PERSONAL_CARE_PERSONAL_CARE",
+                "BEAUTY_PERSONAL_CARE_FRAGRANCE",
+                "FOOD_BEVERAGE_SNACKS",
+                "FOOD_BEVERAGE_DRINKS",
+                "FOOD_BEVERAGE_HEALTH_FOOD",
+                "FOOD_BEVERAGE_DAIRY",
+                "FOOD_BEVERAGE_ALCOHOL",
+                "FOOD_BEVERAGE_GRAINS_OIL",
+                "FOOD_BEVERAGE_CROSS_BORDER_FOOD",
+                "FOOD_BEVERAGE_FRESH_FOOD",
+                "FOOD_BEVERAGE_MEAL_REPLACEMENT",
+                "FOOD_BEVERAGE_TRADITIONAL_NOURISHMENT",
+                "MOTHER_BABY_SUPPLIES",
+                "MOTHER_BABY_FORMULA_FOOD",
+                "DIGITAL_APPLIANCES_HOME_APPLIANCES",
+                "DIGITAL_APPLIANCES_DIGITAL_PRODUCTS",
+                "DAILY_GOODS_HOUSEHOLD_DAILY_USE",
+                "DAILY_GOODS_PET_SUPPLIES_FOOD",
+                "DAILY_GOODS_OFFICE_SUPPLIES",
+                "APPAREL_ACCESSORIES_CLOTHING_SHOES_HATS",
+                "APPAREL_ACCESSORIES_JEWELRY",
+                "APPAREL_ACCESSORIES_BAGS_GLASSES",
+                "APPAREL_ACCESSORIES_SPORTS_OUTDOOR",
+                "APPAREL_ACCESSORIES_WATCHES",
+                "APPAREL_ACCESSORIES_SECOND_HAND_LUXURY",
+                "HOME_BUILDING_MATERIALS_HOME_DECOR",
+                "HOME_BUILDING_MATERIALS_FURNITURE",
+                "HOME_BUILDING_MATERIALS_MAIN_MATERIALS",
+                "AUTOMOTIVE",
+                "INTERNET_ECOMMERCE",
+                "INTERNET_SOFTWARE_TOOLS",
+                "HEALTHCARE_MEDICAL_DEVICES",
+                "HEALTHCARE_MEDICAL_BEAUTY",
+                "CULTURE_SPORTS_ENTERTAINMENT_SPORTS_GOODS",
+                "CULTURE_SPORTS_ENTERTAINMENT_STATIONERY_TOYS_GIFTS",
+                "CULTURE_SPORTS_ENTERTAINMENT_OUTDOOR_PRODUCTS",
+                "CULTURE_SPORTS_ENTERTAINMENT_ART_COLLECTIBLES",
+                "LIFE_SERVICES_OFFLINE_RETAIL",
+                "LIFE_SERVICES_BEAUTY_HAIR",
+                "CATERING_RESTAURANTS",
+                "CATERING_DRINKS_DESSERTS",
+                "BUSINESS_SERVICES",
+                "EDUCATION_TRAINING_LANGUAGE_STUDY_ABROAD",
+                "EDUCATION_TRAINING_VOCATIONAL_EDUCATION",
+                "EDUCATION_TRAINING_INTEREST_TRAINING",
+                "EDUCATION_TRAINING_K12_EDUCATION",
+                "EDUCATION_TRAINING_DEGREE_EDUCATION",
+                "EDUCATION_TRAINING_CORPORATE_DEVELOPMENT",
+                "EDUCATION_TRAINING_OTHER",
+                "GAMES",
+                "TRAVEL_TOURISM"
+              ],
+              "type": "string"
             }
           }
         ],
@@ -11837,13 +15071,13 @@
             "description": "OK"
           }
         },
-        "summary": "User Published Notes",
+        "summary": "Creator Note List",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "13001800"
+        "x-order": "13002895"
       }
     },
     "/api/xiaohongshu-pgy/api/solar/kol/dataV3/dataSummary/v1": {
@@ -12266,6 +15500,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13003400"
       }
@@ -12312,6 +15547,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13003200"
       }
@@ -12372,6 +15608,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v2",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13003100"
       }
@@ -12418,6 +15655,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13002600"
       }
@@ -12464,6 +15702,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13002700"
       }
@@ -12538,6 +15777,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13002800"
       }
@@ -12584,6 +15824,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13002400"
       }
@@ -12681,7 +15922,7 @@
             "description": "OK"
           }
         },
-        "summary": "Creator Note List",
+        "summary": "Creator Note List Pro",
         "tags": [
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
@@ -12793,6 +16034,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13002500"
       }
@@ -12839,6 +16081,7 @@
           "Xiaohongshu Creator Marketplace (Pugongying)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "13003300"
       }
@@ -12876,16 +16119,17 @@
             }
           },
           {
-            "description": "Sort order for the result set.\n\nAvailable Values:\n- `normal`: Normal\n- `latest`: Latest",
+            "description": "Sort strategy for the result set.\n\nAvailable Values:\n- `normal`: Normal\n- `latest`: Latest\n- `like_count`: Like Count",
             "in": "query",
             "name": "sort",
             "required": false,
             "schema": {
               "default": "latest",
-              "description": "Xiaohongshu Comment Sort",
+              "description": "Xiaohongshu Comment Sort V3",
               "enum": [
                 "normal",
-                "latest"
+                "latest",
+                "like_count"
               ],
               "type": "string"
             }
@@ -12983,13 +16227,14 @@
           "Xiaohongshu (RedNote)"
         ],
         "x-api-version": "v3",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "12001505"
       }
     },
     "/api/xiaohongshu/get-note-comment/v4": {
       "get": {
-        "description": "Get Xiaohongshu (RedNote) note Comments data, including comment text, author profiles, and interaction data, for sentiment analysis and community monitoring.",
+        "description": "Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.",
         "operationId": "getApiXiaohongshuGetNoteCommentV4",
         "parameters": [
           {
@@ -13007,6 +16252,31 @@
             "name": "noteId",
             "required": true,
             "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination cursor from the previous page (use the cursor value returned by the last response).",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sort strategy for the result set.\n\nAvailable Values:\n- `normal`: Normal\n- `latest`: Latest\n- `like_count`: Like Count",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "latest",
+              "description": "Xiaohongshu Comment Sort V3",
+              "enum": [
+                "normal",
+                "latest",
+                "like_count"
+              ],
               "type": "string"
             }
           }
@@ -13028,7 +16298,13 @@
           "Xiaohongshu (RedNote)"
         ],
         "x-api-version": "v4",
-        "x-highlights": [],
+        "x-docs-hidden": true,
+        "x-highlights": [
+          {
+            "content": "We recommend using the `latest` sort by default. If comments cannot be retrieved for some notes with `latest`, try again using `normal`.",
+            "type": "tip"
+          }
+        ],
         "x-order": "12001510"
       }
     },
@@ -13138,6 +16414,7 @@
           "Xiaohongshu (RedNote)"
         ],
         "x-api-version": "v2",
+        "x-docs-hidden": true,
         "x-highlights": [
           {
             "content": "If you download videos, use `v5`.",
@@ -13149,7 +16426,6 @@
     },
     "/api/xiaohongshu/get-note-detail/v3": {
       "get": {
-        "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
         "operationId": "getApiXiaohongshuGetNoteDetailV3",
         "parameters": [
@@ -13189,6 +16465,7 @@
           "Xiaohongshu (RedNote)"
         ],
         "x-api-version": "v3",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "12001420"
       }
@@ -13234,6 +16511,7 @@
           "Xiaohongshu (RedNote)"
         ],
         "x-api-version": "v4",
+        "x-docs-hidden": true,
         "x-highlights": [
           {
             "content": "If you download videos, use `v5`.",
@@ -13334,6 +16612,7 @@
         "tags": [
           "Xiaohongshu (RedNote)"
         ],
+        "x-docs-hidden": true,
         "x-order": "12001450"
       }
     },
@@ -13469,6 +16748,61 @@
         "x-order": "12001900"
       }
     },
+    "/api/xiaohongshu/get-user-note-list/v1": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, publish times, pagination cursors, and engagement signals, for account monitoring, creator research, and content analysis.",
+        "operationId": "getApiXiaohongshuGetUserNoteListV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique user identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "userId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination cursor from the previous page.",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Published Notes",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-highlights": [],
+        "x-order": "12001290"
+      }
+    },
     "/api/xiaohongshu/get-user-note-list/v2": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.",
@@ -13518,7 +16852,61 @@
         "tags": [
           "Xiaohongshu (RedNote)"
         ],
+        "x-docs-hidden": true,
         "x-order": "12001300"
+      }
+    },
+    "/api/xiaohongshu/get-user-note-list/v3": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.",
+        "operationId": "getApiXiaohongshuGetUserNoteListV3",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique user identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "userId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination cursor from the previous page (the last note's cursor value).",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Published Notes",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-docs-hidden": true,
+        "x-order": "12001305"
       }
     },
     "/api/xiaohongshu/get-user-note-list/v4": {
@@ -13659,6 +17047,7 @@
           "Xiaohongshu (RedNote)"
         ],
         "x-api-version": "v4",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "12001710"
       }
@@ -13758,6 +17147,112 @@
         "x-order": "12001000"
       }
     },
+    "/api/xiaohongshu/search-note/v1": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Search data, including note snippets, authors, media, publish time, engagement signals, and pagination data, for topic discovery, trend monitoring, creator research, and content analysis.",
+        "operationId": "getApiXiaohongshuSearchNoteV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sort order for the result set.\n\nAvailable Values:\n- `general`: General\n- `popularity_descending`: Popularity Descending\n- `time_descending`: Time Descending\n- `comment_descending`: Comment Descending\n- `collect_descending`: Collect Descending",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "general",
+              "description": "Xiaohongshu Search Note Sort",
+              "enum": [
+                "general",
+                "popularity_descending",
+                "time_descending",
+                "comment_descending",
+                "collect_descending"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Note type filter.\n\nAvailable Values:\n- `_0`: General\n- `_1`: Video\n- `_2`: Normal",
+            "in": "query",
+            "name": "noteType",
+            "required": false,
+            "schema": {
+              "default": "_0",
+              "description": "Xiaohongshu Search Note Type",
+              "enum": [
+                "_0",
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Note publish time filter.\n\nAvailable Values:\n- `ONE_DAY`: Within one day\n- `ONE_WEEK`: Within a week\n- `HALF_YEAR`: Within half a year",
+            "in": "query",
+            "name": "noteTime",
+            "required": false,
+            "schema": {
+              "description": "Xiaohongshu Search Note Note Time",
+              "enum": [
+                "ONE_DAY",
+                "ONE_WEEK",
+                "HALF_YEAR"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Note Search",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-highlights": [],
+        "x-order": "12001090"
+      }
+    },
     "/api/xiaohongshu/search-note/v2": {
       "get": {
         "description": "Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.",
@@ -13827,16 +17322,16 @@
             }
           },
           {
-            "description": "Note publish time filter. This parameter is for reference only and does not have much effect.\n\nAvailable Values:\n- `一天内`: Within one day\n- `一周内`: Within a week\n- `半年内`: Within half a year",
+            "description": "Note publish time filter. This parameter is for reference only and does not have much effect.\n\nAvailable Values:\n- `ONE_DAY`: Within one day\n- `ONE_WEEK`: Within a week\n- `HALF_YEAR`: Within half a year",
             "in": "query",
             "name": "noteTime",
             "required": false,
             "schema": {
               "description": "Xiaohongshu Search Note Note Time",
               "enum": [
-                "一天内",
-                "一周内",
-                "半年内"
+                "ONE_DAY",
+                "ONE_WEEK",
+                "HALF_YEAR"
               ],
               "type": "string"
             }
@@ -13898,7 +17393,7 @@
             }
           },
           {
-            "description": "Sort order for the result set.\n\nAvailable Values:\n- `general`: General\n- `popularity_descending`: Hot\n- `time_descending`: New",
+            "description": "Sort order for the result set.\n\nAvailable Values:\n- `general`: General\n- `popularity_descending`: Popularity Descending\n- `time_descending`: Time Descending\n- `comment_descending`: Comment Descending\n- `collect_descending`: Collect Descending",
             "in": "query",
             "name": "sort",
             "required": false,
@@ -13908,7 +17403,9 @@
               "enum": [
                 "general",
                 "popularity_descending",
-                "time_descending"
+                "time_descending",
+                "comment_descending",
+                "collect_descending"
               ],
               "type": "string"
             }
@@ -13925,6 +17422,21 @@
                 "_0",
                 "_1",
                 "_2"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Note publish time filter. This parameter is for reference only and does not have much effect.\n\nAvailable Values:\n- `ONE_DAY`: Within one day\n- `ONE_WEEK`: Within a week\n- `HALF_YEAR`: Within half a year",
+            "in": "query",
+            "name": "noteTime",
+            "required": false,
+            "schema": {
+              "description": "Xiaohongshu Search Note Note Time",
+              "enum": [
+                "ONE_DAY",
+                "ONE_WEEK",
+                "HALF_YEAR"
               ],
               "type": "string"
             }
@@ -13947,6 +17459,7 @@
           "Xiaohongshu (RedNote)"
         ],
         "x-api-version": "v3",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "12001110"
       }
@@ -14024,34 +17537,34 @@
             }
           },
           {
-            "description": "Note type filter.\n\nAvailable Values:\n- `不限`: No Limit\n- `视频笔记`: Video Note\n- `普通笔记`: Normal Note",
+            "description": "Note type filter.\n\nAvailable Values:\n- `ALL`: No Limit\n- `VIDEO_NOTE`: Video Note\n- `NORMAL_NOTE`: Normal Note",
             "in": "query",
             "name": "noteType",
             "required": false,
             "schema": {
-              "default": "不限",
+              "default": "ALL",
               "description": "Xiaohongshu KANG Search Note Type",
               "enum": [
-                "不限",
-                "视频笔记",
-                "普通笔记"
+                "ALL",
+                "VIDEO_NOTE",
+                "NORMAL_NOTE"
               ],
               "type": "string"
             }
           },
           {
-            "description": "Publish time filter.\n\nAvailable Values:\n- `不限`: No Limit\n- `一天内`: Within one day\n- `一周内`: Within one week\n- `半年内`: Within half a year",
+            "description": "Publish time filter.\n\nAvailable Values:\n- `ALL`: No Limit\n- `ONE_DAY`: Within one day\n- `ONE_WEEK`: Within one week\n- `HALF_YEAR`: Within half a year",
             "in": "query",
             "name": "timeFilter",
             "required": false,
             "schema": {
-              "default": "不限",
+              "default": "ALL",
               "description": "Xiaohongshu KANG Search Note Time Filter",
               "enum": [
-                "不限",
-                "一天内",
-                "一周内",
-                "半年内"
+                "ALL",
+                "ONE_DAY",
+                "ONE_WEEK",
+                "HALF_YEAR"
               ],
               "type": "string"
             }
@@ -14428,6 +17941,78 @@
         "x-order": "25001001"
       }
     },
+    "/api/youtube/get-video-captions/v1": {
+      "get": {
+        "description": "Get YouTube video Captions data through TIKHUB, including available caption tracks or formatted content in SRT, XML, JSON3, or plain text for transcription, localization, accessibility review, and content analysis.",
+        "operationId": "getApiYoutubeGetVideoCaptionsV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique identifier for a YouTube video.",
+            "in": "query",
+            "name": "videoId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Caption language code, such as en, zh-Hans, or a.en. Leave it empty to retrieve available caption tracks.",
+            "in": "query",
+            "name": "languageCode",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Caption output format.\n\nAvailable Values:\n- `srt`: SubRip caption format with timeline cues\n- `xml`: Original XML caption format\n- `json3`: YouTube original JSON caption structure\n- `txt`: Plain text without timeline cues",
+            "in": "query",
+            "name": "format",
+            "required": false,
+            "schema": {
+              "default": "srt",
+              "description": "YouTube caption output format",
+              "enum": [
+                "srt",
+                "xml",
+                "json3",
+                "txt"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Video Captions",
+        "tags": [
+          "YouTube"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "25001002"
+      }
+    },
     "/api/youtube/get-video-comment/v1": {
       "get": {
         "description": "Get first-level video comments, author profiles, like counts, reply counts, and reply cursors for audience feedback and engagement analysis.",
@@ -14628,6 +18213,147 @@
         "x-order": "25001200"
       }
     },
+    "/api/youtube/search/v1": {
+      "get": {
+        "description": "Search YouTube through TIKHUB general search, returning mixed video, channel, playlist, and movie results with continuation tokens plus filters for upload date, type, duration, features, and sort order for discovery and monitoring.",
+        "operationId": "getApiYoutubeSearchV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword. Required on the first request; leave empty when using a continuation token.",
+            "in": "query",
+            "name": "keyword",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination token returned by the previous response.",
+            "in": "query",
+            "name": "continuationToken",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Filter results by upload date.\n\nAvailable Values:\n- `last_hour`: Uploaded within the last hour\n- `today`: Uploaded today\n- `this_week`: Uploaded this week\n- `this_month`: Uploaded this month\n- `this_year`: Uploaded this year",
+            "in": "query",
+            "name": "uploadDate",
+            "required": false,
+            "schema": {
+              "description": "YouTube search upload date filter",
+              "enum": [
+                "last_hour",
+                "today",
+                "this_week",
+                "this_month",
+                "this_year"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Filter results by result type.\n\nAvailable Values:\n- `video`: Video results\n- `channel`: Channel results\n- `playlist`: Playlist results\n- `movie`: Movie results",
+            "in": "query",
+            "name": "type",
+            "required": false,
+            "schema": {
+              "description": "YouTube search result type filter",
+              "enum": [
+                "video",
+                "channel",
+                "playlist",
+                "movie"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Filter video results by duration. Supported request values: short, medium, long.\n\nAvailable Values:\n- `SHORT`: Short videos under 4 minutes\n- `MEDIUM`: Medium videos from 4 to 20 minutes\n- `LONG`: Long videos over 20 minutes",
+            "in": "query",
+            "name": "duration",
+            "required": false,
+            "schema": {
+              "description": "YouTube search video duration filter",
+              "enum": [
+                "SHORT",
+                "MEDIUM",
+                "LONG"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Feature filters separated by commas. Supported values: live, 4k, hd, subtitles, creative_commons, 360, vr180, 3d, hdr.",
+            "in": "query",
+            "name": "features",
+            "required": false,
+            "schema": {
+              "description": "YouTube search feature filter",
+              "enum": [
+                "live",
+                "FOUR_K",
+                "hd",
+                "subtitles",
+                "creative_commons",
+                "THREE_SIXTY",
+                "vr180",
+                "THREE_D",
+                "hdr"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Sort order for search results.\n\nAvailable Values:\n- `relevance`: Sort by relevance\n- `upload_date`: Sort by upload date\n- `view_count`: Sort by view count\n- `rating`: Sort by rating",
+            "in": "query",
+            "name": "sortBy",
+            "required": false,
+            "schema": {
+              "description": "YouTube search sort order",
+              "enum": [
+                "relevance",
+                "upload_date",
+                "view_count",
+                "rating"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "General Search",
+        "tags": [
+          "YouTube"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "25000900"
+      }
+    },
     "/api/zhihu/get-answer-list/v1": {
       "get": {
         "description": "Get Zhihu answer List data, including answer content, author profiles, and interaction metrics, for question analysis and answer research.",
@@ -14818,6 +18544,514 @@
         "x-api-version": "v1",
         "x-highlights": [],
         "x-order": "28001300"
+      }
+    },
+    "/api/zhihu/get-user-articles/v1": {
+      "get": {
+        "description": "Get Zhihu user Articles data, including article identifiers, titles, author context, engagement signals, publish metadata, and pagination fields for creator research and content monitoring.",
+        "operationId": "getApiZhihuGetUserArticlesV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Start offset, begins with 0.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Sorting criteria for user articles.\n\nAvailable Values:\n- `created`: Sort by publish time.\n- `voteups`: Sort by upvote count.",
+            "in": "query",
+            "name": "sortType",
+            "required": false,
+            "schema": {
+              "default": "created",
+              "description": "Zhihu user article sorting type.",
+              "enum": [
+                "created",
+                "voteups"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Articles",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28001700"
+      }
+    },
+    "/api/zhihu/get-user-follow-collections/v1": {
+      "get": {
+        "description": "Get Zhihu user Follow Collections data, including followed collection identifiers, titles, creator context, item counts, follower signals, and pagination fields for collection tracking and content research.",
+        "operationId": "getApiZhihuGetUserFollowCollectionsV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Start offset, begins with 0.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Follow Collections",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28002100"
+      }
+    },
+    "/api/zhihu/get-user-follow-columns/v1": {
+      "get": {
+        "description": "Get Zhihu user Follow Columns data, including subscribed column identifiers, names, descriptions, creator context, follower signals, and pagination fields for creator research and topic monitoring.",
+        "operationId": "getApiZhihuGetUserFollowColumnsV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Start offset, begins with 0.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Follow Columns",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28001900"
+      }
+    },
+    "/api/zhihu/get-user-follow-questions/v1": {
+      "get": {
+        "description": "Get Zhihu user Follow Questions data, including followed question identifiers, titles, answer counts, follower signals, update metadata, and pagination fields for topic tracking and research workflows.",
+        "operationId": "getApiZhihuGetUserFollowQuestionsV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Start offset, begins with 0.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Follow Questions",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28002000"
+      }
+    },
+    "/api/zhihu/get-user-follow-topics/v1": {
+      "get": {
+        "description": "Get Zhihu user Follow Topics data, including followed topic identifiers, names, descriptions, follower signals, content counts, and pagination fields for topic monitoring and audience research.",
+        "operationId": "getApiZhihuGetUserFollowTopicsV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Start offset, begins with 0.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Follow Topics",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28002200"
+      }
+    },
+    "/api/zhihu/get-user-followees/v1": {
+      "get": {
+        "description": "Get Zhihu user Followees data, including followed account profiles, identifiers, headlines, avatar fields, and pagination metadata for network mapping, creator discovery, and relationship analysis.",
+        "operationId": "getApiZhihuGetUserFolloweesV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Start offset, begins with 0.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Followees",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28001500"
+      }
+    },
+    "/api/zhihu/get-user-followers/v1": {
+      "get": {
+        "description": "Get Zhihu user Followers data, including follower account profiles, identifiers, headlines, avatar fields, and pagination metadata for audience analysis, creator evaluation, and relationship mapping.",
+        "operationId": "getApiZhihuGetUserFollowersV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Start offset, begins with 0.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Followers",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28001600"
+      }
+    },
+    "/api/zhihu/get-user-included-articles/v1": {
+      "get": {
+        "description": "Get Zhihu user Included Articles data, including collected article identifiers, titles, author context, engagement signals, publish metadata, and pagination fields for content research and archive tracking.",
+        "operationId": "getApiZhihuGetUserIncludedArticlesV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Start offset, begins with 0.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Included Articles",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28001800"
+      }
+    },
+    "/api/zhihu/get-user-info/v1": {
+      "get": {
+        "description": "Get Zhihu user Info data, including profile identifiers, names, avatar information, headline details, follower signals, and account metadata for creator profiling, audience research, and account verification workflows.",
+        "operationId": "getApiZhihuGetUserInfoV1",
+        "parameters": [
+          {
+            "description": "TOKEN",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.",
+            "in": "query",
+            "name": "userUrlToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "User Info",
+        "tags": [
+          "Zhihu"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "28001400"
       }
     },
     "/api/zhihu/search/v1": {

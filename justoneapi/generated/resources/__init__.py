@@ -3,6 +3,7 @@ from __future__ import annotations
 from justoneapi.generated.resources.amazon import AmazonResource
 from justoneapi.generated.resources.beike import BeikeResource
 from justoneapi.generated.resources.bilibili import BilibiliResource
+from justoneapi.generated.resources.dewu import DewuResource
 from justoneapi.generated.resources.douban import DoubanResource
 from justoneapi.generated.resources.douyin import DouyinResource
 from justoneapi.generated.resources.douyin_ec import DouyinEcResource
@@ -24,6 +25,8 @@ from justoneapi.generated.resources.twitter import TwitterResource
 from justoneapi.generated.resources.web import WebResource
 from justoneapi.generated.resources.weibo import WeiboResource
 from justoneapi.generated.resources.weixin import WeixinResource
+from justoneapi.generated.resources.weixin_channels import WeixinChannelsResource
+from justoneapi.generated.resources.xianyu import XianyuResource
 from justoneapi.generated.resources.xiaohongshu import XiaohongshuResource
 from justoneapi.generated.resources.xiaohongshu_pgy import XiaohongshuPgyResource
 from justoneapi.generated.resources.youku import YoukuResource
@@ -34,6 +37,7 @@ RESOURCE_CLASSES = {
     "amazon": AmazonResource,
     "beike": BeikeResource,
     "bilibili": BilibiliResource,
+    "dewu": DewuResource,
     "douban": DoubanResource,
     "douyin": DouyinResource,
     "douyin_ec": DouyinEcResource,
@@ -55,6 +59,8 @@ RESOURCE_CLASSES = {
     "web": WebResource,
     "weibo": WeiboResource,
     "weixin": WeixinResource,
+    "weixin_channels": WeixinChannelsResource,
+    "xianyu": XianyuResource,
     "xiaohongshu": XiaohongshuResource,
     "xiaohongshu_pgy": XiaohongshuPgyResource,
     "youku": YoukuResource,
@@ -66,6 +72,7 @@ __all__ = [
     "AmazonResource",
     "BeikeResource",
     "BilibiliResource",
+    "DewuResource",
     "DoubanResource",
     "DouyinResource",
     "DouyinEcResource",
@@ -87,6 +94,8 @@ __all__ = [
     "WebResource",
     "WeiboResource",
     "WeixinResource",
+    "WeixinChannelsResource",
+    "XianyuResource",
     "XiaohongshuResource",
     "XiaohongshuPgyResource",
     "YoukuResource",

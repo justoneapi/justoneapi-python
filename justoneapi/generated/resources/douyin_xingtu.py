@@ -14,7 +14,6 @@ class DouyinXingtuResource(BaseResource):
         *,
         o_author_id: str,
         platform: str | None = "SHORT_VIDEO",
-        auto: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Creator Profile
@@ -24,14 +23,12 @@ class DouyinXingtuResource(BaseResource):
         Args:
             o_author_id: Author's unique ID.
             platform: Platform type.  Available Values: - `SHORT_VIDEO`: Short video - `LIVE_STREAMING`: Live streaming - `PICTURE_TEXT`: Picture and text - `SHORT_DRAMA`: Short drama
-            auto: Do not use unless confirmed by admin.
         """
         return self._get(
             "/api/douyin-xingtu/gw/api/author/get_author_base_info/v1",
             {
                 "oAuthorId": o_author_id,
                 "platform": platform,
-                "auto": auto,
             },
         )
 
@@ -463,7 +460,7 @@ class DouyinXingtuResource(BaseResource):
             page: Page number for pagination.
             search_type: Search criteria type.  Available Values: - `NICKNAME`: By Nickname - `CONTENT`: By Content
             follower_range: Follower range (e.g., 10-100).
-            kol_price_type: KOL price type.  Available Values: - `视频1_20s`: Video 1-20s - `视频21_60s`: Video 21-60s - `视频60s以上`: Video > 60s - `定制短剧单集`: Mini-drama episode - `千次自然播放量`: CPM naturally - `短直种草视频`: Short-live seeding video - `短直预热视频`: Short-live warm-up video - `短直明星种草`: Celebrity short-live seeding - `短直明星预热`: Celebrity short-live warm-up - `明星视频`: Celebrity video - `合集视频`: Collection video - `抖音短视频共创_主投稿达人`: Douyin short video co-creation - main creator - `抖音短视频共创_参与达人`: Douyin short video co-creation - participant
+            kol_price_type: KOL price type.  Available Values: - `VIDEO_1_20S`: Video 1-20s - `VIDEO_21_60S`: Video 21-60s - `VIDEO_OVER_60S`: Video > 60s - `CUSTOM_SHORT_DRAMA_EPISODE`: Mini-drama episode - `NATURAL_PLAY_CPM`: CPM naturally - `SHORT_LIVE_SEEDING_VIDEO`: Short-live seeding video - `SHORT_LIVE_WARMUP_VIDEO`: Short-live warm-up video - `CELEBRITY_SHORT_LIVE_SEEDING`: Celebrity short-live seeding - `CELEBRITY_SHORT_LIVE_WARMUP`: Celebrity short-live warm-up - `CELEBRITY_VIDEO`: Celebrity video - `COLLECTION_VIDEO`: Collection video - `DOUYIN_SHORT_VIDEO_CO_CREATION_MAIN_CREATOR`: Douyin short video co-creation - main creator - `DOUYIN_SHORT_VIDEO_CO_CREATION_PARTICIPANT`: Douyin short video co-creation - participant
             kol_price_range: KOL price range (e.g., 10000-50000).
             content_tag: Creator category filter. Pass category labels from the Xingtu page separated by commas. First-level labels map to tag, second-level labels map to tag_level_two. The old tag-1 and tag_level_two-7 ID formats are deprecated.
         """
@@ -477,6 +474,32 @@ class DouyinXingtuResource(BaseResource):
                 "kolPriceType": kol_price_type,
                 "kolPriceRange": kol_price_range,
                 "contentTag": content_tag,
+            },
+        )
+
+    def search_kol_simple_v1(
+        self,
+        *,
+        keyword: str,
+        platform_source: str,
+        page: int,
+    ) -> ApiResponse[Any]:
+        """
+        Creator Search Light
+
+        Get Douyin Creator Marketplace (Xingtu) kOL Keyword Search data, including matching creators and discovery data, for creator sourcing and shortlist building.
+
+        Args:
+            keyword: Search keywords.
+            platform_source: Platform source.  Available Values: - `_1`: Douyin - `_2`: Toutiao - `_3`: Xigua
+            page: Page number.
+        """
+        return self._get(
+            "/api/douyin-xingtu/search-kol-simple/v1",
+            {
+                "keyword": keyword,
+                "platformSource": platform_source,
+                "page": page,
             },
         )
 
@@ -506,7 +529,7 @@ class DouyinXingtuResource(BaseResource):
         item_id: str,
     ) -> ApiResponse[Any]:
         """
-        Item Report Details
+        Video Details
 
         Get Douyin Creator Marketplace (Xingtu) item Report Details data, including key metrics and report fields used, for item performance analysis.
 
@@ -546,7 +569,7 @@ class DouyinXingtuResource(BaseResource):
         o_author_id: str,
     ) -> ApiResponse[Any]:
         """
-        KOL Comment Keyword Analysis
+        Comment Keyword Analysis
 
         Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.
 
@@ -592,7 +615,7 @@ class DouyinXingtuResource(BaseResource):
         o_author_id: str,
     ) -> ApiResponse[Any]:
         """
-        KOL Content Keyword Analysis
+        Content Keyword Analysis
 
         Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.
 
@@ -632,7 +655,7 @@ class DouyinXingtuResource(BaseResource):
         o_author_id: str,
     ) -> ApiResponse[Any]:
         """
-        Author Commerce Spread Info
+        Creator Commerce Spread Info
 
         Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.
 
@@ -652,7 +675,7 @@ class DouyinXingtuResource(BaseResource):
         o_author_id: str,
     ) -> ApiResponse[Any]:
         """
-        Author Side Base Info
+        Creator Side Base Info
 
         Get Douyin Creator Marketplace (Xingtu) author Side Base Info data, including the 30-day follower growth rate displayed on the creator homepage side card.
 
@@ -666,6 +689,64 @@ class DouyinXingtuResource(BaseResource):
             },
         )
 
+    def gw_api_aggregator_get_author_live_statistics_v1(
+        self,
+        *,
+        o_author_id: str,
+        live_type: str | None = "1",
+        period: str | None = "30",
+        only_star_order: bool | None = False,
+        flow_type: str | None = "0",
+    ) -> ApiResponse[Any]:
+        """
+        Live Statistics
+
+        Get Douyin Creator Marketplace (Xingtu) live homepage Statistics data, including recent live room counts, average viewers, ACU, PCU, watch duration, fan watch rate, interaction rate, e-commerce ranges, and conversion indicators for live creator evaluation and campaign planning.
+
+        Args:
+            o_author_id: Author's unique ID.
+            live_type: Live room type filter.  Available Values: - `ALL`: All live rooms - `GAME`: Game live rooms - `ECOMMERCE`: E-commerce live rooms - `OTHER`: Other live rooms
+            period: Live data time period.  Available Values: - `DAY_30`: Last 30 days - `DAY_90`: Last 90 days
+            only_star_order: Whether to include only Xingtu marketplace orders.
+            flow_type: Flow type filter.  Available Values: - `EXCLUDE`: Exclude - `INCLUDE`: Include
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/aggregator/get_author_live_statistics/v1",
+            {
+                "oAuthorId": o_author_id,
+                "liveType": live_type,
+                "period": period,
+                "onlyStarOrder": only_star_order,
+                "flowType": flow_type,
+            },
+        )
+
+    def gw_api_aggregator_get_author_live_watch_distribution_v1(
+        self,
+        *,
+        o_author_id: str,
+        live_crowd_type: str | None = "2",
+        live_type: str | None = "1",
+    ) -> ApiResponse[Any]:
+        """
+        Live Watch Distribution
+
+        Get Douyin Creator Marketplace (Xingtu) live homepage Watch Distribution data, including follower or viewer profile breakdowns such as gender, age, city tier, province, device brand, interest tags, and crowd summaries for live audience analysis.
+
+        Args:
+            o_author_id: Author's unique ID.
+            live_crowd_type: Live audience profile type.  Available Values: - `AUDIENCE`: Viewer profile - `FANS`: Follower profile
+            live_type: Live room type filter.  Available Values: - `ALL`: All live rooms - `GAME`: Game live rooms - `ECOMMERCE`: E-commerce live rooms - `OTHER`: Other live rooms
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/aggregator/get_author_live_watch_distribution/v1",
+            {
+                "oAuthorId": o_author_id,
+                "liveCrowdType": live_crowd_type,
+                "liveType": live_type,
+            },
+        )
+
     def gw_api_aggregator_get_author_commerce_seed_base_info_v1(
         self,
         *,
@@ -673,7 +754,7 @@ class DouyinXingtuResource(BaseResource):
         range: str | None = "DAY_90",
     ) -> ApiResponse[Any]:
         """
-        Author Commerce Seeding Base Info
+        Commerce Seeding Base Info
 
         Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.
 
@@ -683,6 +764,29 @@ class DouyinXingtuResource(BaseResource):
         """
         return self._get(
             "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_seed_base_info/v1",
+            {
+                "oAuthorId": o_author_id,
+                "range": range,
+            },
+        )
+
+    def gw_api_aggregator_get_author_contract_base_info(
+        self,
+        *,
+        o_author_id: str,
+        range: str | None = "90",
+    ) -> ApiResponse[Any]:
+        """
+        Creator Contract Base Info
+
+        Get Douyin Creator Marketplace (Xingtu) author Contract Base Info data, including contract-related baseline metrics and recent cooperation signals for creator vetting, campaign planning, and marketplace research.
+
+        Args:
+            o_author_id: Author's unique ID.
+            range: Time range.  Available Values: - `DAY_30`: Last 30 days - `DAY_90`: Last 90 days
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/aggregator/get_author_contract_base_info",
             {
                 "oAuthorId": o_author_id,
                 "range": range,
@@ -745,7 +849,7 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            fans_type: Fans type.  Available Values: - `_1`: Fans Portrait - `_2`: Fans Group Portrait - `_5`: Iron Fans Portrait
+            fans_type: Fans type.  Available Values: - `_1`: Fans Portrait - `_5`: Iron Fans Portrait
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-fans-distribution/v1",
@@ -810,32 +914,6 @@ class DouyinXingtuResource(BaseResource):
             },
         )
 
-    def search_kol_simple_v1(
-        self,
-        *,
-        keyword: str,
-        platform_source: str,
-        page: int,
-    ) -> ApiResponse[Any]:
-        """
-        KOL Keyword Search
-
-        Get Douyin Creator Marketplace (Xingtu) kOL Keyword Search data, including matching creators and discovery data, for creator sourcing and shortlist building.
-
-        Args:
-            keyword: Search keywords.
-            platform_source: Platform source.  Available Values: - `_1`: Douyin - `_2`: Toutiao - `_3`: Xigua
-            page: Page number.
-        """
-        return self._get(
-            "/api/douyin-xingtu/search-kol-simple/v1",
-            {
-                "keyword": keyword,
-                "platformSource": platform_source,
-                "page": page,
-            },
-        )
-
     def get_kol_convert_ability_v1(
         self,
         *,
@@ -849,7 +927,7 @@ class DouyinXingtuResource(BaseResource):
 
         Args:
             kol_id: KOL ID.
-            range: Time range.  Available Values: - `_1`: Last 7 days - `_2`: Last 30 days - `_3`: Last 90 days
+            range: Time range.  Available Values: - `_2`: Last 30 days - `_3`: Last 90 days
         """
         return self._get(
             "/api/douyin-xingtu/get-kol-convert-ability/v1",
@@ -1043,7 +1121,7 @@ class DouyinXingtuResource(BaseResource):
         kol_id: str,
     ) -> ApiResponse[Any]:
         """
-        KOL Comment Keyword Analysis
+        Comment Keyword Analysis
 
         Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.
 
@@ -1061,22 +1139,19 @@ class DouyinXingtuResource(BaseResource):
         self,
         *,
         kol_id: str,
-        keyword_type: str | None = "0",
     ) -> ApiResponse[Any]:
         """
-        KOL Content Keyword Analysis
+        Content Keyword Analysis
 
         Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.
 
         Args:
             kol_id: KOL ID.
-            keyword_type: Type of keywords.
         """
         return self._get(
             "/api/douyin-xingtu/get-author-content-hot-keywords/v1",
             {
                 "kolId": kol_id,
-                "keywordType": keyword_type,
             },
         )
 
@@ -1086,7 +1161,7 @@ class DouyinXingtuResource(BaseResource):
         kol_id: str,
     ) -> ApiResponse[Any]:
         """
-        Author Commerce Spread Info
+        Creator Commerce Spread Info
 
         Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.
 
@@ -1107,7 +1182,7 @@ class DouyinXingtuResource(BaseResource):
         range: str,
     ) -> ApiResponse[Any]:
         """
-        Author Commerce Seeding Base Info
+        Commerce Seeding Base Info
 
         Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.
 

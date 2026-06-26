@@ -38,6 +38,38 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
+    def search_note_v1(
+        self,
+        *,
+        keyword: str,
+        page: int | None = 1,
+        sort: str | None = "general",
+        note_type: str | None = "_0",
+        note_time: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Note Search
+
+        Get Xiaohongshu (RedNote) note Search data, including note snippets, authors, media, publish time, engagement signals, and pagination data, for topic discovery, trend monitoring, creator research, and content analysis.
+
+        Args:
+            keyword: Search keyword.
+            page: Page number for pagination.
+            sort: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
+            note_type: Note type filter.  Available Values: - `_0`: General - `_1`: Video - `_2`: Normal
+            note_time: Note publish time filter.  Available Values: - `ONE_DAY`: Within one day - `ONE_WEEK`: Within a week - `HALF_YEAR`: Within half a year
+        """
+        return self._get(
+            "/api/xiaohongshu/search-note/v1",
+            {
+                "keyword": keyword,
+                "page": page,
+                "sort": sort,
+                "noteType": note_type,
+                "noteTime": note_time,
+            },
+        )
+
     def search_note_v2(
         self,
         *,
@@ -57,7 +89,7 @@ class XiaohongshuResource(BaseResource):
             page: Page number for pagination.
             sort: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
             note_type: Note type filter.  Available Values: - `_0`: General - `_1`: Video - `_2`: Normal
-            note_time: Note publish time filter. This parameter is for reference only and does not have much effect.  Available Values: - `一天内`: Within one day - `一周内`: Within a week - `半年内`: Within half a year
+            note_time: Note publish time filter. This parameter is for reference only and does not have much effect.  Available Values: - `ONE_DAY`: Within one day - `ONE_WEEK`: Within a week - `HALF_YEAR`: Within half a year
         """
         return self._get(
             "/api/xiaohongshu/search-note/v2",
@@ -77,6 +109,7 @@ class XiaohongshuResource(BaseResource):
         page: int | None = 1,
         sort: str | None = "general",
         note_type: str | None = "_0",
+        note_time: str | None = None,
     ) -> ApiResponse[Any]:
         """
         Note Search
@@ -86,8 +119,9 @@ class XiaohongshuResource(BaseResource):
         Args:
             keyword: Search keyword.
             page: Page number for pagination.
-            sort: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Hot - `time_descending`: New
+            sort: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
             note_type: Note type filter.  Available Values: - `_0`: General - `_1`: Video - `_2`: Normal
+            note_time: Note publish time filter. This parameter is for reference only and does not have much effect.  Available Values: - `ONE_DAY`: Within one day - `ONE_WEEK`: Within a week - `HALF_YEAR`: Within half a year
         """
         return self._get(
             "/api/xiaohongshu/search-note/v3",
@@ -96,6 +130,7 @@ class XiaohongshuResource(BaseResource):
                 "page": page,
                 "sort": sort,
                 "noteType": note_type,
+                "noteTime": note_time,
             },
         )
 
@@ -107,8 +142,8 @@ class XiaohongshuResource(BaseResource):
         search_id: str | None = "",
         session_id: str | None = "",
         sort_type: str | None = "general",
-        note_type: str | None = "不限",
-        time_filter: str | None = "不限",
+        note_type: str | None = "ALL",
+        time_filter: str | None = "ALL",
     ) -> ApiResponse[Any]:
         """
         Note Search
@@ -121,8 +156,8 @@ class XiaohongshuResource(BaseResource):
             search_id: Search session ID from the previous response data.api_info.search_id.
             session_id: Session ID from the previous response data.api_info.session_id.
             sort_type: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
-            note_type: Note type filter.  Available Values: - `不限`: No Limit - `视频笔记`: Video Note - `普通笔记`: Normal Note
-            time_filter: Publish time filter.  Available Values: - `不限`: No Limit - `一天内`: Within one day - `一周内`: Within one week - `半年内`: Within half a year
+            note_type: Note type filter.  Available Values: - `ALL`: No Limit - `VIDEO_NOTE`: Video Note - `NORMAL_NOTE`: Normal Note
+            time_filter: Publish time filter.  Available Values: - `ALL`: No Limit - `ONE_DAY`: Within one day - `ONE_WEEK`: Within one week - `HALF_YEAR`: Within half a year
         """
         return self._get(
             "/api/xiaohongshu/search-note/v4",
@@ -160,6 +195,29 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
+    def get_user_note_list_v1(
+        self,
+        *,
+        user_id: str,
+        last_cursor: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        User Published Notes
+
+        Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, publish times, pagination cursors, and engagement signals, for account monitoring, creator research, and content analysis.
+
+        Args:
+            user_id: Unique user identifier on Xiaohongshu.
+            last_cursor: Pagination cursor from the previous page.
+        """
+        return self._get(
+            "/api/xiaohongshu/get-user-note-list/v1",
+            {
+                "userId": user_id,
+                "lastCursor": last_cursor,
+            },
+        )
+
     def get_user_note_list_v2(
         self,
         *,
@@ -177,6 +235,29 @@ class XiaohongshuResource(BaseResource):
         """
         return self._get(
             "/api/xiaohongshu/get-user-note-list/v2",
+            {
+                "userId": user_id,
+                "lastCursor": last_cursor,
+            },
+        )
+
+    def get_user_note_list_v3(
+        self,
+        *,
+        user_id: str,
+        last_cursor: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        User Published Notes
+
+        Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.
+
+        Args:
+            user_id: Unique user identifier on Xiaohongshu.
+            last_cursor: Pagination cursor from the previous page (the last note's cursor value).
+        """
+        return self._get(
+            "/api/xiaohongshu/get-user-note-list/v3",
             {
                 "userId": user_id,
                 "lastCursor": last_cursor,
@@ -344,7 +425,7 @@ class XiaohongshuResource(BaseResource):
         Args:
             note_id: Unique note identifier on Xiaohongshu.
             last_cursor: Pagination cursor from the previous page (use the cursor value returned by the last response).
-            sort: Sort order for the result set.  Available Values: - `normal`: Normal - `latest`: Latest
+            sort: Sort strategy for the result set.  Available Values: - `normal`: Normal - `latest`: Latest - `like_count`: Like Count
         """
         return self._get(
             "/api/xiaohongshu/get-note-comment/v2",
@@ -385,19 +466,25 @@ class XiaohongshuResource(BaseResource):
         self,
         *,
         note_id: str,
+        last_cursor: str | None = None,
+        sort: str | None = "latest",
     ) -> ApiResponse[Any]:
         """
         Note Comments
 
-        Get Xiaohongshu (RedNote) note Comments data, including comment text, author profiles, and interaction data, for sentiment analysis and community monitoring.
+        Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
+            last_cursor: Pagination cursor from the previous page (use the cursor value returned by the last response).
+            sort: Sort strategy for the result set.  Available Values: - `normal`: Normal - `latest`: Latest - `like_count`: Like Count
         """
         return self._get(
             "/api/xiaohongshu/get-note-comment/v4",
             {
                 "noteId": note_id,
+                "lastCursor": last_cursor,
+                "sort": sort,
             },
         )
 

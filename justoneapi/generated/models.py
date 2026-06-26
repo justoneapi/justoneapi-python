@@ -19,9 +19,11 @@ class Code(Enum):
     field_302 = "302"
     field_303 = "303"
     field_400 = "400"
+    field_404 = "404"
     field_500 = "500"
     field_600 = "600"
     field_601 = "601"
+    field_602 = "602"
 
 
 class Result(BaseModel):
@@ -29,3 +31,4 @@ class Result(BaseModel):
     data: dict[str, Any] | None = None
     message: str | None = None
     recordTime: AwareDatetime | None = None
+    requestId: str | None = None

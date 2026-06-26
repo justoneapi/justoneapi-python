@@ -9,6 +9,44 @@ from justoneapi._response import ApiResponse
 class AmazonResource(BaseResource):
     """Generated resource for Amazon."""
 
+    def search_products_v1(
+        self,
+        *,
+        keyword: str,
+        country: str | None = "US",
+        sort_by: str | None = "RELEVANCE",
+        product_condition: str | None = "ALL",
+        is_prime: bool | None = False,
+        deals_and_discounts: str | None = "NONE",
+        page: int | None = 1,
+    ) -> ApiResponse[Any]:
+        """
+        Product Search
+
+        Search Amazon product listings by keyword or ASIN, including title, price, rating, Prime signals, product photos, delivery details, and pagination metadata for discovery, catalog enrichment, market research, price monitoring, and competitor analysis.
+
+        Args:
+            keyword: Search keyword or ASIN to find Amazon products.
+            country: Country code for the Amazon marketplace.  Available Values: - `US`: United States - `AU`: Australia - `BR`: Brazil - `CA`: Canada - `CN`: China - `FR`: France - `DE`: Germany - `IN`: India - `IT`: Italy - `MX`: Mexico - `NL`: Netherlands - `SG`: Singapore - `ES`: Spain - `TR`: Turkey - `AE`: United Arab Emirates - `GB`: United Kingdom - `JP`: Japan - `SA`: Saudi Arabia - `PL`: Poland - `SE`: Sweden - `BE`: Belgium - `EG`: Egypt - `ZA`: South Africa - `IE`: Ireland
+            sort_by: Sort order for Amazon product search results.  Available Values: - `RELEVANCE`: Relevance - `LOWEST_PRICE`: Lowest Price - `HIGHEST_PRICE`: Highest Price - `REVIEWS`: Reviews - `NEWEST`: Newest - `BEST_SELLERS`: Best Sellers
+            product_condition: Product condition filter for Amazon search results.  Available Values: - `ALL`: All product conditions - `NEW`: New products - `USED`: Used products - `RENEWED`: Renewed products - `COLLECTIBLE`: Collectible products
+            is_prime: Whether to return only Prime-eligible products.
+            deals_and_discounts: Deals and discounts filter for Amazon search results.  Available Values: - `NONE`: Do not filter by deals or discounts - `ALL_DISCOUNTS`: Return discounted products - `TODAYS_DEALS`: Return today's deals
+            page: Page number for pagination.
+        """
+        return self._get(
+            "/api/amazon/search-products/v1",
+            {
+                "keyword": keyword,
+                "country": country,
+                "sortBy": sort_by,
+                "productCondition": product_condition,
+                "isPrime": is_prime,
+                "dealsAndDiscounts": deals_and_discounts,
+                "page": page,
+            },
+        )
+
     def get_product_detail_v1(
         self,
         *,
@@ -68,7 +106,7 @@ class AmazonResource(BaseResource):
         Get Amazon best Sellers data, including rank positions, product metadata, and pricing, for identifying trending products in specific categories, market share analysis and category research, and tracking sales rank and popularity over time.
 
         Args:
-            category: Best sellers category to return products for (e.g. 'baby-products' or 'baby-products/166777011'). The value is derived from the URL path of the Amazon Best Sellers page, such as: https://www.amazon.com/Best-Sellers-Baby-Baby-Toddler-Feeding-Supplies/zgbs/baby-products/166777011
+            category: Best sellers category path, for example 'baby-products' or 'baby-products/166777011', from an Amazon Best Sellers URL.
             country: Country code for the Amazon product.  Available Values: - `US`: United States - `AU`: Australia - `BR`: Brazil - `CA`: Canada - `CN`: China - `FR`: France - `DE`: Germany - `IN`: India - `IT`: Italy - `MX`: Mexico - `NL`: Netherlands - `SG`: Singapore - `ES`: Spain - `TR`: Turkey - `AE`: United Arab Emirates - `GB`: United Kingdom - `JP`: Japan - `SA`: Saudi Arabia - `PL`: Poland - `SE`: Sweden - `BE`: Belgium - `EG`: Egypt - `ZA`: South Africa - `IE`: Ireland
             page: Page number for pagination.
         """

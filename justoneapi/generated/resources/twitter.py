@@ -9,6 +9,32 @@ from justoneapi._response import ApiResponse
 class TwitterResource(BaseResource):
     """Generated resource for Twitter."""
 
+    def search_v1(
+        self,
+        *,
+        keyword: str,
+        search_type: str | None = "Top",
+        cursor: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Search Timeline
+
+        Search Twitter timeline data through TIKHUB, including top, latest, media, people, and list results with cursor pagination for social listening, topic tracking, and account discovery.
+
+        Args:
+            keyword: Search keyword.
+            search_type: Search result type.  Available Values: - `TOP`: Top search results - `LATEST`: Latest search results - `MEDIA`: Media search results - `PEOPLE`: People search results - `LISTS`: List search results
+            cursor: Pagination cursor returned by the previous response.
+        """
+        return self._get(
+            "/api/twitter/search/v1",
+            {
+                "keyword": keyword,
+                "searchType": search_type,
+                "cursor": cursor,
+            },
+        )
+
     def get_user_detail_v1(
         self,
         *,
