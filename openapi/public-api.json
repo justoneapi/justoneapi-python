@@ -14638,6 +14638,256 @@
               ],
               "type": "string"
             }
+          },
+          {
+            "description": "Daily note exposure median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "accumCommonImpMedinNum30d",
+            "required": false,
+            "schema": {
+              "example": "50000,-1",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Daily note read median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "readMidNor30",
+            "required": false,
+            "schema": {
+              "example": "10000,50000",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Daily note interaction median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "interMidNor30",
+            "required": false,
+            "schema": {
+              "example": "1000,2000",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Thousand-like note ratio range. Pass fractional ratios such as 0.4,null or percentage values such as 40,null.",
+            "in": "query",
+            "name": "thousandLikePercent30",
+            "required": false,
+            "schema": {
+              "example": "0.4,null",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Photo-text cooperation quote range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "notePrice",
+            "required": false,
+            "schema": {
+              "example": "10000,50000",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Video cooperation quote range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "videoPrice",
+            "required": false,
+            "schema": {
+              "example": "10000,50000",
+              "type": "string"
+            }
+          },
+          {
+            "description": "48-hour invite reply ratio range. Pass fractional ratios such as 0.9,0.95 or percentage values such as 90,95.",
+            "in": "query",
+            "name": "inviteReply48hNumRatio",
+            "required": false,
+            "schema": {
+              "example": "0.9,0.95",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Current cooperation order count range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "progressOrderCnt",
+            "required": false,
+            "schema": {
+              "example": "1,10",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Recent cooperation industry filter from Pugongying.",
+            "in": "query",
+            "name": "tradeType",
+            "required": false,
+            "schema": {
+              "example": "美妆个护",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Recent cooperation brand IDs, separated by English or Chinese commas.",
+            "in": "query",
+            "name": "tradeReportBrandIds",
+            "required": false,
+            "schema": {
+              "example": "brandUserId1,brandUserId2",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Whether to exclude creators who cooperated with the selected recent cooperation brands.",
+            "in": "query",
+            "name": "excludeTradeReportBrandIds",
+            "required": false,
+            "schema": {
+              "example": true,
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "Cooperation note exposure median range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "accumCoopImpMedinNum30d",
+            "required": false,
+            "schema": {
+              "example": "50000,-1",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Cooperation note read median range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "readMidCoop30",
+            "required": false,
+            "schema": {
+              "example": "10000,50000",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Cooperation note interaction median range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "interMidCoop30",
+            "required": false,
+            "schema": {
+              "example": "1000,2000",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Cooperation note outer-store median range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "mCpuvNum30d",
+            "required": false,
+            "schema": {
+              "example": "5000,10000",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Estimated photo-text CPM range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimatePictureCpm",
+            "required": false,
+            "schema": {
+              "example": "50,100",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Estimated video CPM range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimateVideoCpm",
+            "required": false,
+            "schema": {
+              "example": "50,100",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Estimated photo-text read unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimatePicReadPrice",
+            "required": false,
+            "schema": {
+              "example": "0.5,1",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Estimated video read unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimateVideoReadPrice",
+            "required": false,
+            "schema": {
+              "example": "1.5,2",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Estimated photo-text engagement unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimatePictureEngageCost",
+            "required": false,
+            "schema": {
+              "example": "0.5,1",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Estimated video engagement unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimateVideoEngageCost",
+            "required": false,
+            "schema": {
+              "example": "1,2",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Estimated outer-store visit unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimateCpuv30d",
+            "required": false,
+            "schema": {
+              "example": "0,0.5",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Live count in the last 30 days range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "kliveCnt30d",
+            "required": false,
+            "schema": {
+              "example": "1,5",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Average live viewer count range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "avgLiveViewerNum",
+            "required": false,
+            "schema": {
+              "example": "5000,10000",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Average live sales amount range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "avgAgmv90d",
+            "required": false,
+            "schema": {
+              "example": "10000,100000",
+              "type": "string"
+            }
           }
         ],
         "responses": {

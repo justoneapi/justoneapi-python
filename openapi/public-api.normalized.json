@@ -15026,6 +15026,281 @@
               "type": "string"
             },
             "x-sdk-python-name": "industry"
+          },
+          {
+            "description": "Daily note exposure median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "accumCommonImpMedinNum30d",
+            "required": false,
+            "schema": {
+              "example": "50000,-1",
+              "type": "string"
+            },
+            "x-sdk-python-name": "accum_common_imp_medin_num30d"
+          },
+          {
+            "description": "Daily note read median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "readMidNor30",
+            "required": false,
+            "schema": {
+              "example": "10000,50000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "read_mid_nor30"
+          },
+          {
+            "description": "Daily note interaction median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "interMidNor30",
+            "required": false,
+            "schema": {
+              "example": "1000,2000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "inter_mid_nor30"
+          },
+          {
+            "description": "Thousand-like note ratio range. Pass fractional ratios such as 0.4,null or percentage values such as 40,null.",
+            "in": "query",
+            "name": "thousandLikePercent30",
+            "required": false,
+            "schema": {
+              "example": "0.4,null",
+              "type": "string"
+            },
+            "x-sdk-python-name": "thousand_like_percent30"
+          },
+          {
+            "description": "Photo-text cooperation quote range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "notePrice",
+            "required": false,
+            "schema": {
+              "example": "10000,50000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_price"
+          },
+          {
+            "description": "Video cooperation quote range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.",
+            "in": "query",
+            "name": "videoPrice",
+            "required": false,
+            "schema": {
+              "example": "10000,50000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "video_price"
+          },
+          {
+            "description": "48-hour invite reply ratio range. Pass fractional ratios such as 0.9,0.95 or percentage values such as 90,95.",
+            "in": "query",
+            "name": "inviteReply48hNumRatio",
+            "required": false,
+            "schema": {
+              "example": "0.9,0.95",
+              "type": "string"
+            },
+            "x-sdk-python-name": "invite_reply48h_num_ratio"
+          },
+          {
+            "description": "Current cooperation order count range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "progressOrderCnt",
+            "required": false,
+            "schema": {
+              "example": "1,10",
+              "type": "string"
+            },
+            "x-sdk-python-name": "progress_order_cnt"
+          },
+          {
+            "description": "Recent cooperation industry filter from Pugongying.",
+            "in": "query",
+            "name": "tradeType",
+            "required": false,
+            "schema": {
+              "example": "美妆个护",
+              "type": "string"
+            },
+            "x-sdk-python-name": "trade_type"
+          },
+          {
+            "description": "Recent cooperation brand IDs, separated by English or Chinese commas.",
+            "in": "query",
+            "name": "tradeReportBrandIds",
+            "required": false,
+            "schema": {
+              "example": "brandUserId1,brandUserId2",
+              "type": "string"
+            },
+            "x-sdk-python-name": "trade_report_brand_ids"
+          },
+          {
+            "description": "Whether to exclude creators who cooperated with the selected recent cooperation brands.",
+            "in": "query",
+            "name": "excludeTradeReportBrandIds",
+            "required": false,
+            "schema": {
+              "example": true,
+              "type": "boolean"
+            },
+            "x-sdk-python-name": "exclude_trade_report_brand_ids"
+          },
+          {
+            "description": "Cooperation note exposure median range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "accumCoopImpMedinNum30d",
+            "required": false,
+            "schema": {
+              "example": "50000,-1",
+              "type": "string"
+            },
+            "x-sdk-python-name": "accum_coop_imp_medin_num30d"
+          },
+          {
+            "description": "Cooperation note read median range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "readMidCoop30",
+            "required": false,
+            "schema": {
+              "example": "10000,50000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "read_mid_coop30"
+          },
+          {
+            "description": "Cooperation note interaction median range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "interMidCoop30",
+            "required": false,
+            "schema": {
+              "example": "1000,2000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "inter_mid_coop30"
+          },
+          {
+            "description": "Cooperation note outer-store median range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "mCpuvNum30d",
+            "required": false,
+            "schema": {
+              "example": "5000,10000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "m_cpuv_num30d"
+          },
+          {
+            "description": "Estimated photo-text CPM range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimatePictureCpm",
+            "required": false,
+            "schema": {
+              "example": "50,100",
+              "type": "string"
+            },
+            "x-sdk-python-name": "estimate_picture_cpm"
+          },
+          {
+            "description": "Estimated video CPM range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimateVideoCpm",
+            "required": false,
+            "schema": {
+              "example": "50,100",
+              "type": "string"
+            },
+            "x-sdk-python-name": "estimate_video_cpm"
+          },
+          {
+            "description": "Estimated photo-text read unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimatePicReadPrice",
+            "required": false,
+            "schema": {
+              "example": "0.5,1",
+              "type": "string"
+            },
+            "x-sdk-python-name": "estimate_pic_read_price"
+          },
+          {
+            "description": "Estimated video read unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimateVideoReadPrice",
+            "required": false,
+            "schema": {
+              "example": "1.5,2",
+              "type": "string"
+            },
+            "x-sdk-python-name": "estimate_video_read_price"
+          },
+          {
+            "description": "Estimated photo-text engagement unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimatePictureEngageCost",
+            "required": false,
+            "schema": {
+              "example": "0.5,1",
+              "type": "string"
+            },
+            "x-sdk-python-name": "estimate_picture_engage_cost"
+          },
+          {
+            "description": "Estimated video engagement unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimateVideoEngageCost",
+            "required": false,
+            "schema": {
+              "example": "1,2",
+              "type": "string"
+            },
+            "x-sdk-python-name": "estimate_video_engage_cost"
+          },
+          {
+            "description": "Estimated outer-store visit unit price range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "estimateCpuv30d",
+            "required": false,
+            "schema": {
+              "example": "0,0.5",
+              "type": "string"
+            },
+            "x-sdk-python-name": "estimate_cpuv30d"
+          },
+          {
+            "description": "Live count in the last 30 days range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "kliveCnt30d",
+            "required": false,
+            "schema": {
+              "example": "1,5",
+              "type": "string"
+            },
+            "x-sdk-python-name": "klive_cnt30d"
+          },
+          {
+            "description": "Average live viewer count range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "avgLiveViewerNum",
+            "required": false,
+            "schema": {
+              "example": "5000,10000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "avg_live_viewer_num"
+          },
+          {
+            "description": "Average live sales amount range. Pass two comma-separated numeric bounds.",
+            "in": "query",
+            "name": "avgAgmv90d",
+            "required": false,
+            "schema": {
+              "example": "10000,100000",
+              "type": "string"
+            },
+            "x-sdk-python-name": "avg_agmv90d"
           }
         ],
         "responses": {

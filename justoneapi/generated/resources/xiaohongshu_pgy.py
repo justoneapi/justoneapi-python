@@ -274,6 +274,31 @@ class XiaohongshuPgyResource(BaseResource):
         fans_num_up: bool | None = None,
         note_type: str | None = "ALL",
         industry: str | None = None,
+        accum_common_imp_medin_num30d: str | None = None,
+        read_mid_nor30: str | None = None,
+        inter_mid_nor30: str | None = None,
+        thousand_like_percent30: str | None = None,
+        note_price: str | None = None,
+        video_price: str | None = None,
+        invite_reply48h_num_ratio: str | None = None,
+        progress_order_cnt: str | None = None,
+        trade_type: str | None = None,
+        trade_report_brand_ids: str | None = None,
+        exclude_trade_report_brand_ids: bool | None = None,
+        accum_coop_imp_medin_num30d: str | None = None,
+        read_mid_coop30: str | None = None,
+        inter_mid_coop30: str | None = None,
+        m_cpuv_num30d: str | None = None,
+        estimate_picture_cpm: str | None = None,
+        estimate_video_cpm: str | None = None,
+        estimate_pic_read_price: str | None = None,
+        estimate_video_read_price: str | None = None,
+        estimate_picture_engage_cost: str | None = None,
+        estimate_video_engage_cost: str | None = None,
+        estimate_cpuv30d: str | None = None,
+        klive_cnt30d: str | None = None,
+        avg_live_viewer_num: str | None = None,
+        avg_agmv90d: str | None = None,
     ) -> ApiResponse[Any]:
         """
         Creator Search
@@ -299,6 +324,31 @@ class XiaohongshuPgyResource(BaseResource):
             fans_num_up: Whether to exclude bloggers whose fan count is dropping.
             note_type: Note type filter. Values: ALL=all note types, PHOTO_TEXT=mainly photo-text notes, VIDEO=mainly video notes.  Available Values: - `ALL`: All note types - `PHOTO_TEXT`: Mainly photo-text notes - `VIDEO`: Mainly video notes
             industry: Pugongying industry preset for industry assistant style creator recommendations.  Available Values: - `BEAUTY_PERSONAL_CARE_BEAUTY`: Beauty and personal care - beauty - `BEAUTY_PERSONAL_CARE_SKINCARE`: Beauty and personal care - skincare - `BEAUTY_PERSONAL_CARE_PERSONAL_CARE`: Beauty and personal care - personal care - `BEAUTY_PERSONAL_CARE_FRAGRANCE`: Beauty and personal care - fragrance - `FOOD_BEVERAGE_SNACKS`: Food and beverage - snacks - `FOOD_BEVERAGE_DRINKS`: Food and beverage - drinks - `FOOD_BEVERAGE_HEALTH_FOOD`: Food and beverage - health food - `FOOD_BEVERAGE_DAIRY`: Food and beverage - dairy - `FOOD_BEVERAGE_ALCOHOL`: Food and beverage - alcohol - `FOOD_BEVERAGE_GRAINS_OIL`: Food and beverage - grains and oil - `FOOD_BEVERAGE_CROSS_BORDER_FOOD`: Food and beverage - cross-border food - `FOOD_BEVERAGE_FRESH_FOOD`: Food and beverage - fresh food - `FOOD_BEVERAGE_MEAL_REPLACEMENT`: Food and beverage - meal replacement - `FOOD_BEVERAGE_TRADITIONAL_NOURISHMENT`: Food and beverage - traditional nourishment - `MOTHER_BABY_SUPPLIES`: Mother and baby - baby supplies - `MOTHER_BABY_FORMULA_FOOD`: Mother and baby - formula and baby food - `DIGITAL_APPLIANCES_HOME_APPLIANCES`: Digital and appliances - home appliances - `DIGITAL_APPLIANCES_DIGITAL_PRODUCTS`: Digital and appliances - digital products - `DAILY_GOODS_HOUSEHOLD_DAILY_USE`: Daily goods - household daily use - `DAILY_GOODS_PET_SUPPLIES_FOOD`: Daily goods - pet supplies and food - `DAILY_GOODS_OFFICE_SUPPLIES`: Daily goods - office supplies - `APPAREL_ACCESSORIES_CLOTHING_SHOES_HATS`: Apparel and accessories - clothing, shoes, and hats - `APPAREL_ACCESSORIES_JEWELRY`: Apparel and accessories - jewelry - `APPAREL_ACCESSORIES_BAGS_GLASSES`: Apparel and accessories - bags and glasses - `APPAREL_ACCESSORIES_SPORTS_OUTDOOR`: Apparel and accessories - sports and outdoor - `APPAREL_ACCESSORIES_WATCHES`: Apparel and accessories - watches - `APPAREL_ACCESSORIES_SECOND_HAND_LUXURY`: Apparel and accessories - second-hand luxury - `HOME_BUILDING_MATERIALS_HOME_DECOR`: Home and building materials - home decor - `HOME_BUILDING_MATERIALS_FURNITURE`: Home and building materials - furniture - `HOME_BUILDING_MATERIALS_MAIN_MATERIALS`: Home and building materials - main building materials - `AUTOMOTIVE`: Automotive - `INTERNET_ECOMMERCE`: Internet - e-commerce - `INTERNET_SOFTWARE_TOOLS`: Internet - software tools - `HEALTHCARE_MEDICAL_DEVICES`: Healthcare - medical devices - `HEALTHCARE_MEDICAL_BEAUTY`: Healthcare - medical beauty - `CULTURE_SPORTS_ENTERTAINMENT_SPORTS_GOODS`: Culture, sports, and entertainment - sports goods - `CULTURE_SPORTS_ENTERTAINMENT_STATIONERY_TOYS_GIFTS`: Culture, sports, and entertainment - stationery, toys, and gifts - `CULTURE_SPORTS_ENTERTAINMENT_OUTDOOR_PRODUCTS`: Culture, sports, and entertainment - outdoor products - `CULTURE_SPORTS_ENTERTAINMENT_ART_COLLECTIBLES`: Culture, sports, and entertainment - art collectibles - `LIFE_SERVICES_OFFLINE_RETAIL`: Life services - offline retail - `LIFE_SERVICES_BEAUTY_HAIR`: Life services - beauty and hair - `CATERING_RESTAURANTS`: Catering - restaurants - `CATERING_DRINKS_DESSERTS`: Catering - drinks and desserts - `BUSINESS_SERVICES`: Business services - `EDUCATION_TRAINING_LANGUAGE_STUDY_ABROAD`: Education and training - language and study abroad - `EDUCATION_TRAINING_VOCATIONAL_EDUCATION`: Education and training - vocational education - `EDUCATION_TRAINING_INTEREST_TRAINING`: Education and training - interest training - `EDUCATION_TRAINING_K12_EDUCATION`: Education and training - K-12 education - `EDUCATION_TRAINING_DEGREE_EDUCATION`: Education and training - degree education - `EDUCATION_TRAINING_CORPORATE_DEVELOPMENT`: Education and training - corporate and team development - `EDUCATION_TRAINING_OTHER`: Education and training - other - `GAMES`: Games - `TRAVEL_TOURISM`: Travel and tourism
+            accum_common_imp_medin_num30d: Daily note exposure median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.
+            read_mid_nor30: Daily note read median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.
+            inter_mid_nor30: Daily note interaction median range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.
+            thousand_like_percent30: Thousand-like note ratio range. Pass fractional ratios such as 0.4,null or percentage values such as 40,null.
+            note_price: Photo-text cooperation quote range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.
+            video_price: Video cooperation quote range. Pass two comma-separated numeric bounds; use -1 or null for an open upper bound.
+            invite_reply48h_num_ratio: 48-hour invite reply ratio range. Pass fractional ratios such as 0.9,0.95 or percentage values such as 90,95.
+            progress_order_cnt: Current cooperation order count range. Pass two comma-separated numeric bounds.
+            trade_type: Recent cooperation industry filter from Pugongying.
+            trade_report_brand_ids: Recent cooperation brand IDs, separated by English or Chinese commas.
+            exclude_trade_report_brand_ids: Whether to exclude creators who cooperated with the selected recent cooperation brands.
+            accum_coop_imp_medin_num30d: Cooperation note exposure median range. Pass two comma-separated numeric bounds.
+            read_mid_coop30: Cooperation note read median range. Pass two comma-separated numeric bounds.
+            inter_mid_coop30: Cooperation note interaction median range. Pass two comma-separated numeric bounds.
+            m_cpuv_num30d: Cooperation note outer-store median range. Pass two comma-separated numeric bounds.
+            estimate_picture_cpm: Estimated photo-text CPM range. Pass two comma-separated numeric bounds.
+            estimate_video_cpm: Estimated video CPM range. Pass two comma-separated numeric bounds.
+            estimate_pic_read_price: Estimated photo-text read unit price range. Pass two comma-separated numeric bounds.
+            estimate_video_read_price: Estimated video read unit price range. Pass two comma-separated numeric bounds.
+            estimate_picture_engage_cost: Estimated photo-text engagement unit price range. Pass two comma-separated numeric bounds.
+            estimate_video_engage_cost: Estimated video engagement unit price range. Pass two comma-separated numeric bounds.
+            estimate_cpuv30d: Estimated outer-store visit unit price range. Pass two comma-separated numeric bounds.
+            klive_cnt30d: Live count in the last 30 days range. Pass two comma-separated numeric bounds.
+            avg_live_viewer_num: Average live viewer count range. Pass two comma-separated numeric bounds.
+            avg_agmv90d: Average live sales amount range. Pass two comma-separated numeric bounds.
         """
         return self._get(
             "/api/xiaohongshu-pgy/api/solar/cooperator/blogger/v2/v1",
@@ -321,6 +371,31 @@ class XiaohongshuPgyResource(BaseResource):
                 "fansNumUp": fans_num_up,
                 "noteType": note_type,
                 "industry": industry,
+                "accumCommonImpMedinNum30d": accum_common_imp_medin_num30d,
+                "readMidNor30": read_mid_nor30,
+                "interMidNor30": inter_mid_nor30,
+                "thousandLikePercent30": thousand_like_percent30,
+                "notePrice": note_price,
+                "videoPrice": video_price,
+                "inviteReply48hNumRatio": invite_reply48h_num_ratio,
+                "progressOrderCnt": progress_order_cnt,
+                "tradeType": trade_type,
+                "tradeReportBrandIds": trade_report_brand_ids,
+                "excludeTradeReportBrandIds": exclude_trade_report_brand_ids,
+                "accumCoopImpMedinNum30d": accum_coop_imp_medin_num30d,
+                "readMidCoop30": read_mid_coop30,
+                "interMidCoop30": inter_mid_coop30,
+                "mCpuvNum30d": m_cpuv_num30d,
+                "estimatePictureCpm": estimate_picture_cpm,
+                "estimateVideoCpm": estimate_video_cpm,
+                "estimatePicReadPrice": estimate_pic_read_price,
+                "estimateVideoReadPrice": estimate_video_read_price,
+                "estimatePictureEngageCost": estimate_picture_engage_cost,
+                "estimateVideoEngageCost": estimate_video_engage_cost,
+                "estimateCpuv30d": estimate_cpuv30d,
+                "kliveCnt30d": klive_cnt30d,
+                "avgLiveViewerNum": avg_live_viewer_num,
+                "avgAgmv90d": avg_agmv90d,
             },
         )
 
