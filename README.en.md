@@ -501,12 +501,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Chart Rankings (V1)](https://docs.justoneapi.com/en/api/imdb/chart-rankings-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Countries of Origin (V1)](https://docs.justoneapi.com/en/api/imdb/countries-of-origin-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
-### Web Page
-
-- [HTML Content (V1)](https://docs.justoneapi.com/en/api/web-page/html-content-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Rendered HTML Content (V1)](https://docs.justoneapi.com/en/api/web-page/rendered-html-content-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Markdown Content (V1)](https://docs.justoneapi.com/en/api/web-page/markdown-content-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-
 ### LLM
 
 - [Doubao Answer (V1)](https://docs.justoneapi.com/en/api/llm/doubao-answer-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
