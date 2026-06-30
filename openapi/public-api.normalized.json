@@ -9284,26 +9284,20 @@
             "x-sdk-python-name": "app_id"
           },
           {
-            "description": "Tencent Huxuan show type filter.",
-            "in": "query",
-            "name": "showType",
-            "required": false,
-            "schema": {
-              "default": 0,
-              "format": "int32",
-              "type": "integer"
-            },
-            "x-sdk-python-name": "show_type"
-          },
-          {
-            "description": "Tencent Huxuan video type filter.",
+            "description": "Tencent Huxuan video type filter.\n\nAvailable Values:\n- `ALL`: All videos\n- `ORDER`: QQ Huxuan order videos\n- `HOT`: Hot videos\n- `PERSON`: Personal videos",
             "in": "query",
             "name": "videoType",
             "required": false,
             "schema": {
-              "default": 0,
-              "format": "int32",
-              "type": "integer"
+              "default": "ALL",
+              "description": "QQ Huxuan Video Account recent video type filter",
+              "enum": [
+                "ALL",
+                "ORDER",
+                "HOT",
+                "PERSON"
+              ],
+              "type": "string"
             },
             "x-sdk-python-name": "video_type"
           },
@@ -9328,16 +9322,16 @@
             "x-sdk-python-name": "end_date"
           },
           {
-            "description": "Zero-based page index.",
+            "description": "Page number. The first page is 1.",
             "in": "query",
-            "name": "pageIndex",
+            "name": "page",
             "required": false,
             "schema": {
-              "default": 0,
+              "default": 1,
               "format": "int32",
               "type": "integer"
             },
-            "x-sdk-python-name": "page_index"
+            "x-sdk-python-name": "page"
           }
         ],
         "responses": {
@@ -9499,14 +9493,18 @@
             "x-sdk-python-name": "keyword"
           },
           {
-            "description": "Tencent Huxuan article type filter.",
+            "description": "Tencent Huxuan article type filter.\n\nAvailable Values:\n- `ALL`: All articles\n- `ORDER`: QQ Huxuan order articles",
             "in": "query",
             "name": "articleType",
             "required": false,
             "schema": {
-              "default": 0,
-              "format": "int32",
-              "type": "integer"
+              "default": "ALL",
+              "description": "QQ Huxuan Official Account article type filter",
+              "enum": [
+                "ALL",
+                "ORDER"
+              ],
+              "type": "string"
             },
             "x-sdk-python-name": "article_type"
           },
@@ -9541,18 +9539,6 @@
               "type": "integer"
             },
             "x-sdk-python-name": "page"
-          },
-          {
-            "description": "Page size. Values from 1 to 100 are accepted.",
-            "in": "query",
-            "name": "pageSize",
-            "required": false,
-            "schema": {
-              "default": 9,
-              "format": "int32",
-              "type": "integer"
-            },
-            "x-sdk-python-name": "page_size"
           }
         ],
         "responses": {

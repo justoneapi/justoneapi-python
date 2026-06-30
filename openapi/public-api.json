@@ -9106,25 +9106,20 @@
             }
           },
           {
-            "description": "Tencent Huxuan show type filter.",
-            "in": "query",
-            "name": "showType",
-            "required": false,
-            "schema": {
-              "default": 0,
-              "format": "int32",
-              "type": "integer"
-            }
-          },
-          {
-            "description": "Tencent Huxuan video type filter.",
+            "description": "Tencent Huxuan video type filter.\n\nAvailable Values:\n- `ALL`: All videos\n- `ORDER`: QQ Huxuan order videos\n- `HOT`: Hot videos\n- `PERSON`: Personal videos",
             "in": "query",
             "name": "videoType",
             "required": false,
             "schema": {
-              "default": 0,
-              "format": "int32",
-              "type": "integer"
+              "default": "ALL",
+              "description": "QQ Huxuan Video Account recent video type filter",
+              "enum": [
+                "ALL",
+                "ORDER",
+                "HOT",
+                "PERSON"
+              ],
+              "type": "string"
             }
           },
           {
@@ -9146,12 +9141,12 @@
             }
           },
           {
-            "description": "Zero-based page index.",
+            "description": "Page number. The first page is 1.",
             "in": "query",
-            "name": "pageIndex",
+            "name": "page",
             "required": false,
             "schema": {
-              "default": 0,
+              "default": 1,
               "format": "int32",
               "type": "integer"
             }
@@ -9314,14 +9309,18 @@
             }
           },
           {
-            "description": "Tencent Huxuan article type filter.",
+            "description": "Tencent Huxuan article type filter.\n\nAvailable Values:\n- `ALL`: All articles\n- `ORDER`: QQ Huxuan order articles",
             "in": "query",
             "name": "articleType",
             "required": false,
             "schema": {
-              "default": 0,
-              "format": "int32",
-              "type": "integer"
+              "default": "ALL",
+              "description": "QQ Huxuan Official Account article type filter",
+              "enum": [
+                "ALL",
+                "ORDER"
+              ],
+              "type": "string"
             }
           },
           {
@@ -9349,17 +9348,6 @@
             "required": false,
             "schema": {
               "default": 1,
-              "format": "int32",
-              "type": "integer"
-            }
-          },
-          {
-            "description": "Page size. Values from 1 to 100 are accepted.",
-            "in": "query",
-            "name": "pageSize",
-            "required": false,
-            "schema": {
-              "default": 9,
               "format": "int32",
               "type": "integer"
             }

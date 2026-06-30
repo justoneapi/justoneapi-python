@@ -81,9 +81,8 @@ class QqHuxuanResource(BaseResource):
         app_id: str,
         begin_date: str,
         end_date: str,
-        show_type: int | None = 0,
-        video_type: int | None = 0,
-        page_index: int | None = 0,
+        video_type: str | None = "ALL",
+        page: int | None = 1,
     ) -> ApiResponse[Any]:
         """
         Video Account Recent Videos
@@ -94,9 +93,8 @@ class QqHuxuanResource(BaseResource):
             app_id: Video Account creator app ID.
             begin_date: Start date in yyyyMMdd format.
             end_date: End date in yyyyMMdd format.
-            show_type: Tencent Huxuan show type filter.
-            video_type: Tencent Huxuan video type filter.
-            page_index: Zero-based page index.
+            video_type: Tencent Huxuan video type filter.  Available Values: - `ALL`: All videos - `ORDER`: QQ Huxuan order videos - `HOT`: Hot videos - `PERSON`: Personal videos
+            page: Page number. The first page is 1.
         """
         return self._get(
             "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/get_finder_video_show/v1",
@@ -104,9 +102,8 @@ class QqHuxuanResource(BaseResource):
                 "appId": app_id,
                 "beginDate": begin_date,
                 "endDate": end_date,
-                "showType": show_type,
                 "videoType": video_type,
-                "pageIndex": page_index,
+                "page": page,
             },
         )
 
@@ -137,9 +134,8 @@ class QqHuxuanResource(BaseResource):
         start_date: str,
         end_date: str,
         keyword: str | None = "",
-        article_type: int | None = 0,
+        article_type: str | None = "ALL",
         page: int | None = 1,
-        page_size: int | None = 9,
     ) -> ApiResponse[Any]:
         """
         Official Account Article List
@@ -151,9 +147,8 @@ class QqHuxuanResource(BaseResource):
             start_date: Start date in yyyyMMdd format.
             end_date: End date in yyyyMMdd format.
             keyword: Article title keyword. Leave empty to return all matched articles.
-            article_type: Tencent Huxuan article type filter.
+            article_type: Tencent Huxuan article type filter.  Available Values: - `ALL`: All articles - `ORDER`: QQ Huxuan order articles
             page: Page number. The first page is 1.
-            page_size: Page size. Values from 1 to 100 are accepted.
         """
         return self._get(
             "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/get_user_articles/v1",
@@ -164,6 +159,5 @@ class QqHuxuanResource(BaseResource):
                 "keyword": keyword,
                 "articleType": article_type,
                 "page": page,
-                "pageSize": page_size,
             },
         )
