@@ -14328,6 +14328,16 @@
             }
           },
           {
+            "description": "Mother-and-baby audience stage filter. Pass Pugongying labels or numeric codes separated by English or Chinese commas.\n\nAvailable values:\n- 1: 备孕\n- 2: 0-6月\n- 3: 7-12月\n- 4: 1-3岁\n- 5: 4-6岁\n- 6: 7-12岁\n- 7: 孕早期\n- 8: 孕晚期\n",
+            "in": "query",
+            "name": "fansChildAgeInfo",
+            "required": false,
+            "schema": {
+              "example": "2,5",
+              "type": "string"
+            }
+          },
+          {
             "description": "KOL's gender.\n\nAvailable Values:\n- `ALL`: All genders\n- `MALE`: Male\n- `FEMALE`: Female",
             "in": "query",
             "name": "gender",
@@ -14364,7 +14374,7 @@
             }
           },
           {
-            "description": "Blogger persona tag filter covering family identity, profession identity, and special background labels. Pass Chinese label values separated by English or Chinese commas. Family identity values: 妈妈, 萌娃, 爸爸, 奶奶, 情侣, 夫妻, 家庭, 闺蜜, 兄弟, 备孕中, 孕期中, 0-6个月, 6-12个月, 1-3岁, 3-6岁, 6-12岁, 12岁以上. Profession identity values: 传统行业, 互联网, 教育科研, 金融法律, 企业创业, 时尚美妆, 食品饮料, 文化传媒, 医疗健康, 艺术设计, 影视娱乐, 运动健身, 专业服务, 工程师, 销售, HR, 教练, 运动员, 舞蹈老师. Special background values: 生活背景, 备考经验, 兴趣爱好, 留学背景, 海外华人, 铲屎官, 孕妈, 独居人群, 外国人, 混血儿.",
+            "description": "Blogger persona tag filter. Pass one or more Pugongying persona labels separated by English or Chinese commas.\n\nAvailable values:\n- 妈妈\n- 萌娃\n- 爸爸\n- 奶奶\n- 情侣\n- 夫妻\n- 家庭\n- 闺蜜\n- 兄弟\n- 备孕中\n- 孕期中\n- 12岁以上\n- 传统行业\n- 互联网\n- 教育科研\n- 金融法律\n- 企业创业\n- 时尚美妆\n- 食品饮料\n- 文化传媒\n- 医疗健康\n- 艺术设计\n- 影视娱乐\n- 运动健身\n- 专业服务\n- 工程师\n- 销售\n- HR\n- 教练\n- 运动员\n- 舞蹈老师\n- 生活背景\n- 备考经验\n- 兴趣爱好\n- 留学背景\n- 海外华人\n- 铲屎官\n- 孕妈\n- 独居人群\n- 外国人\n- 混血儿\n\nExample:\n- 妈妈,教练,运动员,舞蹈老师,留学背景\n",
             "in": "query",
             "name": "personalTags",
             "required": false,
