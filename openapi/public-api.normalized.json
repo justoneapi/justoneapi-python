@@ -9223,6 +9223,515 @@
         "x-sdk-resource": "llm"
       }
     },
+    "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/detail/v1": {
+      "get": {
+        "description": "Get QQ Huxuan Video Account creator profile details, including core profile, pricing, recent content, and audience profile fields returned by Tencent Huxuan.",
+        "operationId": "getApiQqHuxuanCgiBinAdvertiserFinderPublisherDetailV1",
+        "parameters": [
+          {
+            "description": "Video Account creator app ID.",
+            "in": "query",
+            "name": "appId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "app_id"
+          },
+          {
+            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
+            "in": "query",
+            "name": "accountId",
+            "required": false,
+            "schema": {
+              "default": "73448116",
+              "type": "string"
+            },
+            "x-sdk-python-name": "account_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Video Account Creator Details",
+        "tags": [
+          "QQ Huxuan Creator Marketplace"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15500300",
+        "x-sdk-class-name": "QqHuxuanResource",
+        "x-sdk-method-name": "cgi_bin_advertiser_finder_publisher_detail_v1",
+        "x-sdk-resource": "qq_huxuan"
+      }
+    },
+    "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/get_finder_video_show/v1": {
+      "get": {
+        "description": "Get recent QQ Huxuan Video Account creator videos and display metrics from the Tencent Huxuan detail page.",
+        "operationId": "getApiQqHuxuanCgiBinAdvertiserFinderPublisherGetFinderVideoShowV1",
+        "parameters": [
+          {
+            "description": "Video Account creator app ID.",
+            "in": "query",
+            "name": "appId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "app_id"
+          },
+          {
+            "description": "Tencent Huxuan show type filter.",
+            "in": "query",
+            "name": "showType",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "show_type"
+          },
+          {
+            "description": "Tencent Huxuan video type filter.",
+            "in": "query",
+            "name": "videoType",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "video_type"
+          },
+          {
+            "description": "Start date in yyyyMMdd format.",
+            "in": "query",
+            "name": "beginDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "begin_date"
+          },
+          {
+            "description": "End date in yyyyMMdd format.",
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "end_date"
+          },
+          {
+            "description": "Zero-based page index.",
+            "in": "query",
+            "name": "pageIndex",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page_index"
+          },
+          {
+            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
+            "in": "query",
+            "name": "accountId",
+            "required": false,
+            "schema": {
+              "default": "73448116",
+              "type": "string"
+            },
+            "x-sdk-python-name": "account_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Video Account Recent Videos",
+        "tags": [
+          "QQ Huxuan Creator Marketplace"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15500400",
+        "x-sdk-class-name": "QqHuxuanResource",
+        "x-sdk-method-name": "cgi_bin_advertiser_finder_publisher_get_finder_video_show_v1",
+        "x-sdk-resource": "qq_huxuan"
+      }
+    },
+    "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/search/v1": {
+      "get": {
+        "description": "Search QQ Huxuan Video Account creators from the Tencent Huxuan marketplace for creator discovery, audience screening, and campaign planning.",
+        "operationId": "getApiQqHuxuanCgiBinAdvertiserFinderPublisherSearchV1",
+        "parameters": [
+          {
+            "description": "Creator nickname keyword. Leave empty to browse the default marketplace list.",
+            "in": "query",
+            "name": "keyword",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Page number. The first page is 1.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          },
+          {
+            "description": "Page size. QQ Huxuan requires values from 3 to 1000.",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 30,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page_size"
+          },
+          {
+            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
+            "in": "query",
+            "name": "accountId",
+            "required": false,
+            "schema": {
+              "default": "73448116",
+              "type": "string"
+            },
+            "x-sdk-python-name": "account_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Video Account Creator Search",
+        "tags": [
+          "QQ Huxuan Creator Marketplace"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15500100",
+        "x-sdk-class-name": "QqHuxuanResource",
+        "x-sdk-method-name": "cgi_bin_advertiser_finder_publisher_search_v1",
+        "x-sdk-resource": "qq_huxuan"
+      }
+    },
+    "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/detail/v1": {
+      "get": {
+        "description": "Get QQ Huxuan Official Account creator profile details, including profile, pricing, read metrics, reader profile, and recent article fields returned by Tencent Huxuan.",
+        "operationId": "getApiQqHuxuanCgiBinAdvertiserMpPublisherDetailV1",
+        "parameters": [
+          {
+            "description": "Official Account creator app ID.",
+            "in": "query",
+            "name": "appId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "app_id"
+          },
+          {
+            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
+            "in": "query",
+            "name": "accountId",
+            "required": false,
+            "schema": {
+              "default": "73448116",
+              "type": "string"
+            },
+            "x-sdk-python-name": "account_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Official Account Creator Details",
+        "tags": [
+          "QQ Huxuan Creator Marketplace"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15500500",
+        "x-sdk-class-name": "QqHuxuanResource",
+        "x-sdk-method-name": "cgi_bin_advertiser_mp_publisher_detail_v1",
+        "x-sdk-resource": "qq_huxuan"
+      }
+    },
+    "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/get_user_articles/v1": {
+      "get": {
+        "description": "Get QQ Huxuan Official Account creator articles and read metrics from the Tencent Huxuan detail page.",
+        "operationId": "getApiQqHuxuanCgiBinAdvertiserMpPublisherGetUserArticlesV1",
+        "parameters": [
+          {
+            "description": "Official Account creator app ID.",
+            "in": "query",
+            "name": "appId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "app_id"
+          },
+          {
+            "description": "Article title keyword. Leave empty to return all matched articles.",
+            "in": "query",
+            "name": "keyword",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Tencent Huxuan article type filter.",
+            "in": "query",
+            "name": "articleType",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "article_type"
+          },
+          {
+            "description": "Start date in yyyyMMdd format.",
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "start_date"
+          },
+          {
+            "description": "End date in yyyyMMdd format.",
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "end_date"
+          },
+          {
+            "description": "Page number. The first page is 1.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          },
+          {
+            "description": "Page size. Values from 1 to 100 are accepted.",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 9,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page_size"
+          },
+          {
+            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
+            "in": "query",
+            "name": "accountId",
+            "required": false,
+            "schema": {
+              "default": "73448116",
+              "type": "string"
+            },
+            "x-sdk-python-name": "account_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Official Account Article List",
+        "tags": [
+          "QQ Huxuan Creator Marketplace"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15500600",
+        "x-sdk-class-name": "QqHuxuanResource",
+        "x-sdk-method-name": "cgi_bin_advertiser_mp_publisher_get_user_articles_v1",
+        "x-sdk-resource": "qq_huxuan"
+      }
+    },
+    "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/search/v1": {
+      "get": {
+        "description": "Search QQ Huxuan Official Account creators from the Tencent Huxuan marketplace for creator discovery, audience screening, and campaign planning.",
+        "operationId": "getApiQqHuxuanCgiBinAdvertiserMpPublisherSearchV1",
+        "parameters": [
+          {
+            "description": "Creator nickname or account keyword. Leave empty to browse the default marketplace list.",
+            "in": "query",
+            "name": "keyword",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Page number. The first page is 1.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          },
+          {
+            "description": "Page size. QQ Huxuan requires values from 3 to 1000.",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "default": 30,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page_size"
+          },
+          {
+            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
+            "in": "query",
+            "name": "accountId",
+            "required": false,
+            "schema": {
+              "default": "73448116",
+              "type": "string"
+            },
+            "x-sdk-python-name": "account_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Official Account Creator Search",
+        "tags": [
+          "QQ Huxuan Creator Marketplace"
+        ],
+        "x-api-version": "v1",
+        "x-highlights": [],
+        "x-order": "15500200",
+        "x-sdk-class-name": "QqHuxuanResource",
+        "x-sdk-method-name": "cgi_bin_advertiser_mp_publisher_search_v1",
+        "x-sdk-resource": "qq_huxuan"
+      }
+    },
     "/api/reddit/get-post-comments/v1": {
       "get": {
         "description": "Get Reddit post Comments data, including text, authors, and timestamps, for discussion analysis and moderation research.",

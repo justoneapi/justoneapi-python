@@ -15,6 +15,7 @@ from justoneapi.generated.resources.instagram import InstagramResource
 from justoneapi.generated.resources.jd import JdResource
 from justoneapi.generated.resources.kuaishou import KuaishouResource
 from justoneapi.generated.resources.llm import LlmResource
+from justoneapi.generated.resources.qq_huxuan import QqHuxuanResource
 from justoneapi.generated.resources.reddit import RedditResource
 from justoneapi.generated.resources.search import SearchResource
 from justoneapi.generated.resources.taobao import TaobaoResource
@@ -48,6 +49,7 @@ RESOURCE_CLASSES = {
     "jd": JdResource,
     "kuaishou": KuaishouResource,
     "llm": LlmResource,
+    "qq_huxuan": QqHuxuanResource,
     "reddit": RedditResource,
     "search": SearchResource,
     "taobao": TaobaoResource,
@@ -82,6 +84,7 @@ __all__ = [
     "JdResource",
     "KuaishouResource",
     "LlmResource",
+    "QqHuxuanResource",
     "RedditResource",
     "SearchResource",
     "TaobaoResource",
