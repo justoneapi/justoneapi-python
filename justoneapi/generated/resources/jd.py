@@ -37,7 +37,7 @@ class JdResource(BaseResource):
         """
         Product Details
 
-        JD.com product Details v2 is available through the Just One API dashboard Task Management page. Direct API calls return an instruction message instead of fetching product data. Use the dashboard to submit product detail tasks, wait for completion, and download results.
+        JD.com product Details v2 is available in the Just One API dashboard Task Management page. Direct API calls return setup instructions instead of product data.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).

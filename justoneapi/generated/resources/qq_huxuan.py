@@ -14,8 +14,6 @@ class QqHuxuanResource(BaseResource):
         *,
         keyword: str | None = "",
         page: int | None = 1,
-        page_size: int | None = 30,
-        account_id: str | None = "73448116",
     ) -> ApiResponse[Any]:
         """
         Video Account Creator Search
@@ -25,16 +23,12 @@ class QqHuxuanResource(BaseResource):
         Args:
             keyword: Creator nickname keyword. Leave empty to browse the default marketplace list.
             page: Page number. The first page is 1.
-            page_size: Page size. QQ Huxuan requires values from 3 to 1000.
-            account_id: QQ Huxuan advertiser account ID used by the logged-in browser session.
         """
         return self._get(
             "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/search/v1",
             {
                 "keyword": keyword,
                 "page": page,
-                "pageSize": page_size,
-                "accountId": account_id,
             },
         )
 
@@ -43,8 +37,6 @@ class QqHuxuanResource(BaseResource):
         *,
         keyword: str | None = "",
         page: int | None = 1,
-        page_size: int | None = 30,
-        account_id: str | None = "73448116",
     ) -> ApiResponse[Any]:
         """
         Official Account Creator Search
@@ -54,16 +46,12 @@ class QqHuxuanResource(BaseResource):
         Args:
             keyword: Creator nickname or account keyword. Leave empty to browse the default marketplace list.
             page: Page number. The first page is 1.
-            page_size: Page size. QQ Huxuan requires values from 3 to 1000.
-            account_id: QQ Huxuan advertiser account ID used by the logged-in browser session.
         """
         return self._get(
             "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/search/v1",
             {
                 "keyword": keyword,
                 "page": page,
-                "pageSize": page_size,
-                "accountId": account_id,
             },
         )
 
@@ -71,7 +59,6 @@ class QqHuxuanResource(BaseResource):
         self,
         *,
         app_id: str,
-        account_id: str | None = "73448116",
     ) -> ApiResponse[Any]:
         """
         Video Account Creator Details
@@ -80,13 +67,11 @@ class QqHuxuanResource(BaseResource):
 
         Args:
             app_id: Video Account creator app ID.
-            account_id: QQ Huxuan advertiser account ID used by the logged-in browser session.
         """
         return self._get(
             "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/detail/v1",
             {
                 "appId": app_id,
-                "accountId": account_id,
             },
         )
 
@@ -99,7 +84,6 @@ class QqHuxuanResource(BaseResource):
         show_type: int | None = 0,
         video_type: int | None = 0,
         page_index: int | None = 0,
-        account_id: str | None = "73448116",
     ) -> ApiResponse[Any]:
         """
         Video Account Recent Videos
@@ -113,7 +97,6 @@ class QqHuxuanResource(BaseResource):
             show_type: Tencent Huxuan show type filter.
             video_type: Tencent Huxuan video type filter.
             page_index: Zero-based page index.
-            account_id: QQ Huxuan advertiser account ID used by the logged-in browser session.
         """
         return self._get(
             "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/get_finder_video_show/v1",
@@ -124,7 +107,6 @@ class QqHuxuanResource(BaseResource):
                 "showType": show_type,
                 "videoType": video_type,
                 "pageIndex": page_index,
-                "accountId": account_id,
             },
         )
 
@@ -132,7 +114,6 @@ class QqHuxuanResource(BaseResource):
         self,
         *,
         app_id: str,
-        account_id: str | None = "73448116",
     ) -> ApiResponse[Any]:
         """
         Official Account Creator Details
@@ -141,13 +122,11 @@ class QqHuxuanResource(BaseResource):
 
         Args:
             app_id: Official Account creator app ID.
-            account_id: QQ Huxuan advertiser account ID used by the logged-in browser session.
         """
         return self._get(
             "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/detail/v1",
             {
                 "appId": app_id,
-                "accountId": account_id,
             },
         )
 
@@ -161,7 +140,6 @@ class QqHuxuanResource(BaseResource):
         article_type: int | None = 0,
         page: int | None = 1,
         page_size: int | None = 9,
-        account_id: str | None = "73448116",
     ) -> ApiResponse[Any]:
         """
         Official Account Article List
@@ -176,7 +154,6 @@ class QqHuxuanResource(BaseResource):
             article_type: Tencent Huxuan article type filter.
             page: Page number. The first page is 1.
             page_size: Page size. Values from 1 to 100 are accepted.
-            account_id: QQ Huxuan advertiser account ID used by the logged-in browser session.
         """
         return self._get(
             "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/get_user_articles/v1",
@@ -188,6 +165,5 @@ class QqHuxuanResource(BaseResource):
                 "articleType": article_type,
                 "page": page,
                 "pageSize": page_size,
-                "accountId": account_id,
             },
         )

@@ -749,7 +749,7 @@ class DouyinXingtuResource(BaseResource):
         """
         Live Statistics
 
-        Get Douyin Creator Marketplace (Xingtu) live homepage Statistics data, including recent live room counts, average viewers, ACU, PCU, watch duration, fan watch rate, interaction rate, e-commerce ranges, and conversion indicators for live creator evaluation and campaign planning.
+        Get Douyin Creator Marketplace (Xingtu) live Statistics data, including room counts, viewers, watch duration, interaction rate, commerce ranges, and conversion indicators for creator evaluation.
 
         Args:
             o_author_id: Author's unique ID.

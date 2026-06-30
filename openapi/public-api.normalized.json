@@ -3328,7 +3328,7 @@
     },
     "/api/douyin-xingtu/gw/api/aggregator/get_author_live_statistics/v1": {
       "get": {
-        "description": "Get Douyin Creator Marketplace (Xingtu) live homepage Statistics data, including recent live room counts, average viewers, ACU, PCU, watch duration, fan watch rate, interaction rate, e-commerce ranges, and conversion indicators for live creator evaluation and campaign planning.",
+        "description": "Get Douyin Creator Marketplace (Xingtu) live Statistics data, including room counts, viewers, watch duration, interaction rate, commerce ranges, and conversion indicators for creator evaluation.",
         "operationId": "getApiDouyinXingtuGwApiAggregatorGetAuthorLiveStatisticsV1",
         "parameters": [
           {
@@ -8504,7 +8504,7 @@
     },
     "/api/jd/get-item-detail/v2": {
       "get": {
-        "description": "JD.com product Details v2 is available through the Just One API dashboard Task Management page. Direct API calls return an instruction message instead of fetching product data. Use the dashboard to submit product detail tasks, wait for completion, and download results.",
+        "description": "JD.com product Details v2 is available in the Just One API dashboard Task Management page. Direct API calls return setup instructions instead of product data.",
         "operationId": "getApiJdGetItemDetailV2",
         "parameters": [
           {
@@ -9237,17 +9237,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "app_id"
-          },
-          {
-            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
-            "in": "query",
-            "name": "accountId",
-            "required": false,
-            "schema": {
-              "default": "73448116",
-              "type": "string"
-            },
-            "x-sdk-python-name": "account_id"
           }
         ],
         "responses": {
@@ -9349,17 +9338,6 @@
               "type": "integer"
             },
             "x-sdk-python-name": "page_index"
-          },
-          {
-            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
-            "in": "query",
-            "name": "accountId",
-            "required": false,
-            "schema": {
-              "default": "73448116",
-              "type": "string"
-            },
-            "x-sdk-python-name": "account_id"
           }
         ],
         "responses": {
@@ -9418,29 +9396,6 @@
               "type": "integer"
             },
             "x-sdk-python-name": "page"
-          },
-          {
-            "description": "Page size. QQ Huxuan requires values from 3 to 1000.",
-            "in": "query",
-            "name": "pageSize",
-            "required": false,
-            "schema": {
-              "default": 30,
-              "format": "int32",
-              "type": "integer"
-            },
-            "x-sdk-python-name": "page_size"
-          },
-          {
-            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
-            "in": "query",
-            "name": "accountId",
-            "required": false,
-            "schema": {
-              "default": "73448116",
-              "type": "string"
-            },
-            "x-sdk-python-name": "account_id"
           }
         ],
         "responses": {
@@ -9486,17 +9441,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "app_id"
-          },
-          {
-            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
-            "in": "query",
-            "name": "accountId",
-            "required": false,
-            "schema": {
-              "default": "73448116",
-              "type": "string"
-            },
-            "x-sdk-python-name": "account_id"
           }
         ],
         "responses": {
@@ -9609,17 +9553,6 @@
               "type": "integer"
             },
             "x-sdk-python-name": "page_size"
-          },
-          {
-            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
-            "in": "query",
-            "name": "accountId",
-            "required": false,
-            "schema": {
-              "default": "73448116",
-              "type": "string"
-            },
-            "x-sdk-python-name": "account_id"
           }
         ],
         "responses": {
@@ -9678,29 +9611,6 @@
               "type": "integer"
             },
             "x-sdk-python-name": "page"
-          },
-          {
-            "description": "Page size. QQ Huxuan requires values from 3 to 1000.",
-            "in": "query",
-            "name": "pageSize",
-            "required": false,
-            "schema": {
-              "default": 30,
-              "format": "int32",
-              "type": "integer"
-            },
-            "x-sdk-python-name": "page_size"
-          },
-          {
-            "description": "QQ Huxuan advertiser account ID used by the logged-in browser session.",
-            "in": "query",
-            "name": "accountId",
-            "required": false,
-            "schema": {
-              "default": "73448116",
-              "type": "string"
-            },
-            "x-sdk-python-name": "account_id"
           }
         ],
         "responses": {
@@ -10112,7 +10022,7 @@
     },
     "/api/taobao/get-item-detail/v2": {
       "get": {
-        "description": "Taobao and Tmall product Details v2 is available through the Just One API dashboard Task Management page. Direct API calls return an instruction message instead of fetching product data. Use the dashboard to submit product detail tasks, wait for completion, and download results.",
+        "description": "Taobao and Tmall product Details v2 is available in the Just One API dashboard Task Management page. Direct API calls return setup instructions instead of product data.",
         "operationId": "getApiTaobaoGetItemDetailV2",
         "parameters": [
           {
