@@ -139,7 +139,7 @@ class DouyinXingtuResource(BaseResource):
         Args:
             o_author_id: Author's unique ID.
             platform: Platform type.  Available Values: - `SHORT_VIDEO`: Short video - `LIVE_STREAMING`: Live streaming - `PICTURE_TEXT`: Picture and text - `SHORT_DRAMA`: Short drama
-            industry_tag: Industry tag.  Available Values: - `ALL`: All - `ELECTRONICS_AND_APPLIANCES`: Electronics and Appliances - `FOOD_AND_BEVERAGE`: Food and Beverage - `CLOTHING_AND_ACCESSORIES`: Clothing and Accessories - `HEALTHCARE_AND_MEDICAL`: Healthcare and Medical - `BUSINESS_SERVICES`: Business Services - `LOCAL_SERVICES`: Local Services - `REAL_ESTATE`: Real Estate - `HOME_AND_BUILDING_MATERIALS`: Home and Building Materials - `EDUCATION_AND_TRAINING`: Education and Training - `TRAVEL_AND_TOURISM`: Travel and Tourism - `PUBLIC_SERVICES`: Public Services - `GAMES`: Games - `RETAIL`: Retail - `TRANSPORTATION_EQUIPMENT`: Transportation Equipment - `AUTOMOTIVE`: Automotive - `AGRICULTURE_FORESTRY_FISHERY`: Agriculture Forestry Fishery - `CHEMICAL_AND_ENERGY`: Chemical and Energy - `ELECTRONICS_AND_ELECTRICAL`: Electronics and Electrical - `MACHINERY_EQUIPMENT`: Machinery Equipment - `CULTURE_SPORTS_ENTERTAINMENT`: Culture Sports Entertainment - `MEDIA_AND_INFORMATION`: Media and Information - `LOGISTICS`: Logistics - `TELECOMMUNICATIONS`: Telecommunications - `FINANCIAL_SERVICES`: Financial Services - `CATERING_SERVICES`: Catering Services - `SOFTWARE_TOOLS`: Software Tools - `FRANCHISING_AND_INVESTMENT`: Franchising and Investment - `BEAUTY_AND_COSMETICS`: Beauty and Cosmetics - `MOTHER_BABY_AND_PET`: Mother Baby and Pet - `DAILY_CHEMICALS`: Daily Chemicals - `PHYSICAL_BOOKS`: Physical Books - `SOCIAL_AND_COMMUNICATION`: Social and Communication - `MEDICAL_INSTITUTIONS`: Medical Institutions
+            industry_tag: Industry tag.  Available Values: - `ALL`: All - `ELECTRONICS_AND_APPLIANCES`: Electronics and Appliances - `SHOPPING`: Shopping - `FOOD_AND_BEVERAGE`: Food and Beverage - `CLOTHING_AND_ACCESSORIES`: Clothing and Accessories - `HEALTHCARE_AND_MEDICAL`: Healthcare and Medical - `MEDICAL_INSTITUTIONS`: Medical Institutions - `HOME_AND_BUILDING_MATERIALS`: Home and Building Materials - `LOCAL_SERVICES`: Local Services - `BUSINESS_SERVICES`: Business Services - `CULTURE_SPORTS_ENTERTAINMENT`: Leisure and Entertainment - `BEAUTY_SERVICES`: Beauty Services - `REAL_ESTATE`: Real Estate - `EDUCATION_AND_TRAINING`: Education and Training - `TRAVEL_AND_TOURISM`: Travel and Tourism - `PUBLIC_SERVICES`: Public Services - `GAMES`: Games - `RETAIL`: Internet E-commerce Services - `TRANSPORTATION_EQUIPMENT`: Transportation Equipment - `AUTOMOTIVE`: Automotive - `AGRICULTURE_FORESTRY_FISHERY`: Agriculture Forestry Fishery - `CHEMICAL_AND_ENERGY`: Chemical and Energy - `ELECTRONICS_AND_ELECTRICAL`: Electronics and Electrical - `MACHINERY_EQUIPMENT`: Machinery Equipment - `MEDIA_AND_INFORMATION`: Media and Information - `LOGISTICS`: Logistics - `TELECOMMUNICATIONS`: Telecommunications - `FINANCIAL_SERVICES`: Financial Services - `CATERING_SERVICES`: Catering Services - `SOFTWARE_TOOLS`: Software Tools - `FRANCHISING_AND_INVESTMENT`: Franchising and Investment - `BEAUTY_AND_COSMETICS`: Beauty and Cosmetics - `MOTHER_BABY_AND_PET`: Mother Baby and Pet - `DAILY_CHEMICALS`: Daily Chemicals - `PHYSICAL_BOOKS`: Physical Books - `SOCIAL_AND_COMMUNICATION`: Social and Communication - `CULTURAL_SUPPLIES`: Cultural Supplies - `SPORTS_OUTDOOR`: Sports and Outdoors
         """
         return self._get(
             "/api/douyin-xingtu/gw/api/data_sp/get_author_link_info/v1",
@@ -330,7 +330,7 @@ class DouyinXingtuResource(BaseResource):
         Args:
             o_author_id: Author's unique ID.
             platform: Platform type.  Available Values: - `SHORT_VIDEO`: Short video - `LIVE_STREAMING`: Live streaming - `PICTURE_TEXT`: Picture and text - `SHORT_DRAMA`: Short drama
-            industry_id: Industry category.  Available Values: - `ALL`: All - `ELECTRONICS_AND_APPLIANCES`: Electronics and Appliances - `FOOD_AND_BEVERAGE`: Food and Beverage - `CLOTHING_AND_ACCESSORIES`: Clothing and Accessories - `HEALTHCARE_AND_MEDICAL`: Healthcare and Medical - `BUSINESS_SERVICES`: Business Services - `LOCAL_SERVICES`: Local Services - `REAL_ESTATE`: Real Estate - `HOME_AND_BUILDING_MATERIALS`: Home and Building Materials - `EDUCATION_AND_TRAINING`: Education and Training - `TRAVEL_AND_TOURISM`: Travel and Tourism - `PUBLIC_SERVICES`: Public Services - `GAMES`: Games - `RETAIL`: Retail - `TRANSPORTATION_EQUIPMENT`: Transportation Equipment - `AUTOMOTIVE`: Automotive - `AGRICULTURE_FORESTRY_FISHERY`: Agriculture Forestry Fishery - `CHEMICAL_AND_ENERGY`: Chemical and Energy - `ELECTRONICS_AND_ELECTRICAL`: Electronics and Electrical - `MACHINERY_EQUIPMENT`: Machinery Equipment - `CULTURE_SPORTS_ENTERTAINMENT`: Culture Sports Entertainment - `MEDIA_AND_INFORMATION`: Media and Information - `LOGISTICS`: Logistics - `TELECOMMUNICATIONS`: Telecommunications - `FINANCIAL_SERVICES`: Financial Services - `CATERING_SERVICES`: Catering Services - `SOFTWARE_TOOLS`: Software Tools - `FRANCHISING_AND_INVESTMENT`: Franchising and Investment - `BEAUTY_AND_COSMETICS`: Beauty and Cosmetics - `MOTHER_BABY_AND_PET`: Mother Baby and Pet - `DAILY_CHEMICALS`: Daily Chemicals - `PHYSICAL_BOOKS`: Physical Books - `SOCIAL_AND_COMMUNICATION`: Social and Communication - `MEDICAL_INSTITUTIONS`: Medical Institutions
+            industry_id: Industry category.  Available Values: - `ALL`: All - `ELECTRONICS_AND_APPLIANCES`: Electronics and Appliances - `SHOPPING`: Shopping - `FOOD_AND_BEVERAGE`: Food and Beverage - `CLOTHING_AND_ACCESSORIES`: Clothing and Accessories - `HEALTHCARE_AND_MEDICAL`: Healthcare and Medical - `MEDICAL_INSTITUTIONS`: Medical Institutions - `HOME_AND_BUILDING_MATERIALS`: Home and Building Materials - `LOCAL_SERVICES`: Local Services - `BUSINESS_SERVICES`: Business Services - `CULTURE_SPORTS_ENTERTAINMENT`: Leisure and Entertainment - `BEAUTY_SERVICES`: Beauty Services - `REAL_ESTATE`: Real Estate - `EDUCATION_AND_TRAINING`: Education and Training - `TRAVEL_AND_TOURISM`: Travel and Tourism - `PUBLIC_SERVICES`: Public Services - `GAMES`: Games - `RETAIL`: Internet E-commerce Services - `TRANSPORTATION_EQUIPMENT`: Transportation Equipment - `AUTOMOTIVE`: Automotive - `AGRICULTURE_FORESTRY_FISHERY`: Agriculture Forestry Fishery - `CHEMICAL_AND_ENERGY`: Chemical and Energy - `ELECTRONICS_AND_ELECTRICAL`: Electronics and Electrical - `MACHINERY_EQUIPMENT`: Machinery Equipment - `MEDIA_AND_INFORMATION`: Media and Information - `LOGISTICS`: Logistics - `TELECOMMUNICATIONS`: Telecommunications - `FINANCIAL_SERVICES`: Financial Services - `CATERING_SERVICES`: Catering Services - `SOFTWARE_TOOLS`: Software Tools - `FRANCHISING_AND_INVESTMENT`: Franchising and Investment - `BEAUTY_AND_COSMETICS`: Beauty and Cosmetics - `MOTHER_BABY_AND_PET`: Mother Baby and Pet - `DAILY_CHEMICALS`: Daily Chemicals - `PHYSICAL_BOOKS`: Physical Books - `SOCIAL_AND_COMMUNICATION`: Social and Communication - `CULTURAL_SUPPLIES`: Cultural Supplies - `SPORTS_OUTDOOR`: Sports and Outdoors
             range: Time range.  Available Values: - `DAY_30`: Last 30 days - `DAY_90`: Last 90 days
             detail_type: Resource type.  Available Values: - `VIDEO`: Video - `PRODUCT`: Product
             page: Page number.
@@ -445,10 +445,26 @@ class DouyinXingtuResource(BaseResource):
         keyword: str | None = "",
         page: int | None = 1,
         search_type: str | None = "NICKNAME",
+        marketing_target: str | None = None,
+        industry: str | None = "ALL",
+        is_superstar: bool | None = False,
         follower_range: str | None = None,
         kol_price_type: str | None = None,
         kol_price_range: str | None = None,
         content_tag: str | None = None,
+        content_theme: str | None = None,
+        persona_tag: str | None = None,
+        gender: str | None = None,
+        location: str | None = None,
+        tonality_tag: str | None = None,
+        connected_user_range: str | None = None,
+        expected_play_range: str | None = None,
+        expected_cpm_range: str | None = None,
+        expected_cpe_range: str | None = None,
+        interaction_rate_range: str | None = None,
+        completion_rate_range: str | None = None,
+        viral_rate_range: str | None = None,
+        progress_task_range: str | None = None,
     ) -> ApiResponse[Any]:
         """
         Creator Search
@@ -459,10 +475,26 @@ class DouyinXingtuResource(BaseResource):
             keyword: Search keyword.
             page: Page number for pagination.
             search_type: Search criteria type.  Available Values: - `NICKNAME`: By Nickname - `CONTENT`: By Content
+            marketing_target: Marketing goal. Available values: BRAND_EXPOSURE/1/品牌曝光, CIRCLE_SEEDING/2/破圈种草, ACTION_CONVERSION/3/行动转化.  Available Values: - `BRAND_EXPOSURE`: Brand exposure - `CIRCLE_SEEDING`: Out-of-circle seeding - `ACTION_CONVERSION`: Action conversion
+            industry: Recommended industry filter. Pass enum name, numeric industry ID, or Chinese industry label. Available values: - ALL/0/不限; - 1901: 3C及电器; - 1938: 购物; - 1903: 食品饮料; - 1904: 服装配饰; - 1905: 医药健康; - 1936: 医疗机构; - 1909: 家居建材; - 1907: 生活服务; - 1906: 商务服务; - 1921: 休闲娱乐; - 1937: 丽人; - 1908: 房地产; - 1910: 教育培训; - 1911: 出行旅游; - 1912: 社会公共; - 1913: 游戏; - 1914: 互联网电商服务; - 1915: 交通工具; - 1916: 汽车; - 1917: 农资园艺; - 1920: 机械设备; - 1939: 文化用品; - 1940: 运动户外; - 1922: 传媒资讯; - 1924: 通信; - 1925: 金融业; - 1927: 餐饮服务; - 1928: 工具类软件; - 1929: 招商加盟; - 1930: 美妆; - 1931: 母婴宠物; - 1933: 日化; - 1934: 实体书籍; - 1935: 社交通讯. Example: 美妆  Available Values: - `ALL`: All - `ELECTRONICS_AND_APPLIANCES`: Electronics and Appliances - `SHOPPING`: Shopping - `FOOD_AND_BEVERAGE`: Food and Beverage - `CLOTHING_AND_ACCESSORIES`: Clothing and Accessories - `HEALTHCARE_AND_MEDICAL`: Healthcare and Medical - `MEDICAL_INSTITUTIONS`: Medical Institutions - `HOME_AND_BUILDING_MATERIALS`: Home and Building Materials - `LOCAL_SERVICES`: Local Services - `BUSINESS_SERVICES`: Business Services - `CULTURE_SPORTS_ENTERTAINMENT`: Leisure and Entertainment - `BEAUTY_SERVICES`: Beauty Services - `REAL_ESTATE`: Real Estate - `EDUCATION_AND_TRAINING`: Education and Training - `TRAVEL_AND_TOURISM`: Travel and Tourism - `PUBLIC_SERVICES`: Public Services - `GAMES`: Games - `RETAIL`: Internet E-commerce Services - `TRANSPORTATION_EQUIPMENT`: Transportation Equipment - `AUTOMOTIVE`: Automotive - `AGRICULTURE_FORESTRY_FISHERY`: Agriculture Forestry Fishery - `CHEMICAL_AND_ENERGY`: Chemical and Energy - `ELECTRONICS_AND_ELECTRICAL`: Electronics and Electrical - `MACHINERY_EQUIPMENT`: Machinery Equipment - `MEDIA_AND_INFORMATION`: Media and Information - `LOGISTICS`: Logistics - `TELECOMMUNICATIONS`: Telecommunications - `FINANCIAL_SERVICES`: Financial Services - `CATERING_SERVICES`: Catering Services - `SOFTWARE_TOOLS`: Software Tools - `FRANCHISING_AND_INVESTMENT`: Franchising and Investment - `BEAUTY_AND_COSMETICS`: Beauty and Cosmetics - `MOTHER_BABY_AND_PET`: Mother Baby and Pet - `DAILY_CHEMICALS`: Daily Chemicals - `PHYSICAL_BOOKS`: Physical Books - `SOCIAL_AND_COMMUNICATION`: Social and Communication - `CULTURAL_SUPPLIES`: Cultural Supplies - `SPORTS_OUTDOOR`: Sports and Outdoors
+            is_superstar: Whether to filter celebrity creators.
             follower_range: Follower range (e.g., 10-100).
             kol_price_type: KOL price type.  Available Values: - `VIDEO_1_20S`: Video 1-20s - `VIDEO_21_60S`: Video 21-60s - `VIDEO_OVER_60S`: Video > 60s - `CUSTOM_SHORT_DRAMA_EPISODE`: Mini-drama episode - `NATURAL_PLAY_CPM`: CPM naturally - `SHORT_LIVE_SEEDING_VIDEO`: Short-live seeding video - `SHORT_LIVE_WARMUP_VIDEO`: Short-live warm-up video - `CELEBRITY_SHORT_LIVE_SEEDING`: Celebrity short-live seeding - `CELEBRITY_SHORT_LIVE_WARMUP`: Celebrity short-live warm-up - `CELEBRITY_VIDEO`: Celebrity video - `COLLECTION_VIDEO`: Collection video - `DOUYIN_SHORT_VIDEO_CO_CREATION_MAIN_CREATOR`: Douyin short video co-creation - main creator - `DOUYIN_SHORT_VIDEO_CO_CREATION_PARTICIPANT`: Douyin short video co-creation - participant
             kol_price_range: KOL price range (e.g., 10000-50000).
-            content_tag: Creator category filter. Pass category labels from the Xingtu page separated by commas. First-level labels map to tag, second-level labels map to tag_level_two. The old tag-1 and tag_level_two-7 ID formats are deprecated.
+            content_tag: Creator category filter. Pass Xingtu first-level or second-level category labels separated by commas. Available values: - 美妆: 美妆教程, 妆容展示, 护肤保养, 美妆测评种草; - 时尚: 穿搭, 街拍, 造型, 时尚媒体; - 萌宠: 日常宠物, 特别宠物, 宠物周边; - 测评: 美妆测评, 3C数码测评, 汽车测评, 美食产品测评, 母婴产品测评, 综合测评, 酒店测评; - 游戏: 游戏剧情, 游戏解说, 游戏资讯, 游戏其他, 游戏录屏, 游戏集锦; - 二次元: 二次元真人, 动画漫画, 配音声优, 宅物手办; - 旅行: 旅行记录, 旅行攻略, 旅行推荐, 户外生活; - 汽车: 汽车测评, 汽车知识, 汽车周边; - 生活: 生活记录, 生活小窍门, 好物推荐, 健康养生, 婚恋; - 音乐: 歌曲演唱, 乐器演奏, 音乐教学, 音乐其他, 音乐剪辑; - 舞蹈; - 美食: 美食教程, 美食探店, 美食产品测评, 乡村野食, 美食其他, 酒类; - 母婴亲子: 育儿科普, 萌娃日常, 亲子互动, 测评种草; - 运动健身: 健身, 极限运动, 体育资讯, 冰雪, 垂钓, 格斗, 球类项目, 综合体育; - 科技数码: 3C数码, 家居电器, 科技; - 教育培训: 考学培训, 语言教学, 个人管理, 职业教育; - 颜值达人: 美女, 帅哥; - 生活家居: 硬装, 软装, 生活技巧, 家居氛围; - 才艺技能: 创意才能, 手工, 摄影, 绘画, 其他才艺; - 影视娱乐: 影视解说, 影视混剪, 明星资讯, 综艺解说, 综艺混剪; - 艺术文化: 传统文化, 人文科普, 自然科学; - 财经投资: 传统金融, 互联网金融, 财经知识; - 三农; - 剧情搞笑: 剧情, 搞笑; - 情感; - 园艺; - 房产: 其他房产, 房产知识, 房产及投资, 楼盘评测, 楼市资讯, 租房; - 随拍; - 媒体号. Example: 美妆,穿搭,剧情搞笑
+            content_theme: Content theme filter. Pass Xingtu second-level content theme labels separated by commas. Available values include: - 妆容妆造: 淡妆教程, 变装造型, 韩系妆容, 甜美妆容, 清透妆容, 复古妆容, 男性妆容; - 穿搭指南: 日常穿搭, 简约气质穿搭, 国风穿搭, 运动穿搭, 通勤穿搭, 旅行穿搭, 职业穿搭, 约会穿搭; - 亲子育儿: 亲子活动, 亲子沟通, 学前训练, 新手爸妈指导, 儿童护理, 宝宝辅食, 奶粉测评, 孕产饮食; - 美食教程与测评: 地方美食, 家常菜谱, 美食探店, 零食测评, 酒水品鉴, 厨房用品, 海鲜烹饪, 减脂美食; - 精彩车生活: 汽车行业资讯, 用车知识, 车辆保养, 自驾旅行, 新能源汽车资讯, 汽车用品测评, SUV测评; - 手机/数码/家电分享: 科技科普, 电子产品测评, 家电推荐, 手机评测, 智能家居, AI应用, 数码开箱; - 剧情演绎: 搞笑剧情, 剧情反转, 情感演绎, 家庭幽默演绎, 职场趣闻, 古风剧情, 生存挑战; - 萌宠养护: 宠物狗故事, 动物萌态, 宠物养护, 猫咪萌态, 宠物健康, 宠物护理, 宠物救助; - 旅行攻略: 国内旅行, 海外旅行, 城市旅行攻略, 酒店体验, 露营体验, 亲子旅行, 网红景点种草; - 家居好物: 清洁技巧, 生活好物评测, 家居选购, 家居装修, 家居收纳, 家装避坑, 房间布置; - 运动户外: 户外运动, 健身塑形, 赛事回顾, 体重管理, 极限运动, 跑步健身, 户外露营. Example: 亲子活动,宝宝辅食
+            persona_tag: Creator persona or background labels. Pass Xingtu labels or numeric tag IDs separated by commas. Available values: - 人群属性: Z世代, 新锐白领, 精致妈妈, 都市蓝领, 资深中产, 小镇青年, 小镇中老年, 都市银发; - 社会身份: 音乐人, 非遗传人, 画家; - 主要出镜人物: 海外华人, 外国友人, 情侣, 夫妻, 家庭, 朋友, 同事, 亲子, 个人; - 肤质肤色: 混油皮, 干皮, 油皮, 敏感肌, 痘痘肌, 黄皮, 白皮, 瑕疵皮; - 皮肤养护: 美白, 抗老, 祛皱, 抗炎, 修复, 控油, 眼部护理, 补水保湿, 祛斑, 祛痘祛闭口, 隔离防晒; - 母婴阶段: 孕期, 0-6月, 7-12月, 1-3岁, 3-6岁, 6-12岁, 12-15岁, 15-18岁; - 爱好: 摄影, 时尚穿搭, 美食制作, 科普, 星座, 绘画; - 职业: 法律从业者, 航空业从业者, 健身/舞蹈教练, 专业美食从业者, 室内设计师; - 学历: 大学生, 硕士生, 博士, 留学生; - 黄v认证: 美妆创作者, 体育创作者, 媒体人/主持人, 科技创作者, 运动员; - Other labels: 潮流运动, 球类, 非球类, 室内健身, 城市运动, 户外运动, 数码潮流玩家, 户外爱好者, 室内设计师, 品酒家/调酒师, 美食评论人, 母婴行业专家, 奶爸, 旧屋改造, 装修设计, 收纳, 新生儿妈妈, 孕妈, 时尚妈妈, 二三胎妈妈, 西餐, 火锅, 国风爱好者, 成分党. Example: 大学生,美妆创作者
+            gender: Creator gender. Available values: MALE/1/男性, FEMALE/2/女性.  Available Values: - `MALE`: Male - `FEMALE`: Female
+            location: Creator location filter. Pass Chinese province or city names separated by commas. Available province values include: 北京市, 天津市, 河北省, 山西省, 内蒙古自治区, 辽宁省, 吉林省, 黑龙江省, 上海市, 江苏省, 浙江省, 安徽省, 福建省, 江西省, 山东省, 河南省, 湖北省, 湖南省, 广东省, 广西壮族自治区, 海南省, 重庆市, 四川省, 贵州省, 云南省, 西藏自治区, 陕西省, 甘肃省, 青海省, 宁夏回族自治区, 新疆维吾尔自治区, 台湾省, 香港特别行政区, 澳门特别行政区. Example: 广东省,深圳市
+            tonality_tag: Creator tonality labels. Pass Xingtu first-level or second-level tonality labels separated by commas. Available values: - 身份/爱好: 马术, 高尔夫, 橄榄球, 时尚爱好者, 企业高管, 汽车爱好者, 学者专家, 古玩收藏; - 精致达人: 设计师, 高阶潮玩, 职业模特, 造型顾问, 独立设计师, 美术/画廊/展览, 歌剧舞台剧, 流行, 潮流买手, 电影; - 潮流酷: 冲浪, 浮潜, 说唱, 滑雪, 普拉提, 网球. Example: 精致达人,设计师
+            connected_user_range: Connected user count range. Pass raw user counts in min-max format. Example: 1000000-3000000
+            expected_play_range: Expected play count range. Use raw counts in min-max format. Page presets include 10000000 or above, 5000000-10000000, 3000000-5000000, 1000000-3000000, 100000-1000000, and 0-100000. For open-ended presets, pass a high upper bound such as 10000000-1000000000. Example: 1000000-3000000.
+            expected_cpm_range: Expected CPM range in min-max format. Example values matching Xingtu packs: 0-10, 0-20, 0-30, 0-50, 0-100, 100-1000000.
+            expected_cpe_range: Expected CPE range in min-max format. Example values matching Xingtu packs: 0-1, 0-2, 0-3, 0-5, 0-10, 10-1000000.
+            interaction_rate_range: Interaction rate range in decimal min-max format. Example values: 0.01-1 for 1% or above, 0.02-1 for 2% or above.
+            completion_rate_range: Completion rate range in decimal min-max format. Example values: 0.1-1 for 10% or above, 0.2-1 for 20% or above.
+            viral_rate_range: Viral content rate range in decimal min-max format. Page presets include 0-0.1, 0.1-0.25, 0.25-0.5, 0.5-0.99, and 0.99 or above. For open-ended presets, pass a high upper bound such as 0.99-1. Example: 0.1-0.25.
+            progress_task_range: In-progress task count range. Format is days:min-max. Use open-ended ranges as days:min- or days:-max. Example: 30:8-
         """
         return self._get(
             "/api/douyin-xingtu/gw/api/gsearch/search_for_author_square/v1",
@@ -470,10 +502,26 @@ class DouyinXingtuResource(BaseResource):
                 "keyword": keyword,
                 "page": page,
                 "searchType": search_type,
+                "marketingTarget": marketing_target,
+                "industry": industry,
+                "isSuperstar": is_superstar,
                 "followerRange": follower_range,
                 "kolPriceType": kol_price_type,
                 "kolPriceRange": kol_price_range,
                 "contentTag": content_tag,
+                "contentTheme": content_theme,
+                "personaTag": persona_tag,
+                "gender": gender,
+                "location": location,
+                "tonalityTag": tonality_tag,
+                "connectedUserRange": connected_user_range,
+                "expectedPlayRange": expected_play_range,
+                "expectedCpmRange": expected_cpm_range,
+                "expectedCpeRange": expected_cpe_range,
+                "interactionRateRange": interaction_rate_range,
+                "completionRateRange": completion_rate_range,
+                "viralRateRange": viral_rate_range,
+                "progressTaskRange": progress_task_range,
             },
         )
 
