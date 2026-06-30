@@ -14766,6 +14766,28 @@
             "x-sdk-python-name": "personal_tags"
           },
           {
+            "description": "Marketing target filter. Pass one Pugongying marketing target value.\n\nAvailable values:\n- estimateAllCpm: Exposure - exposure performance - cost\n- mAccumImpNum: Exposure - exposure performance - scale\n- readCost: Exposure - read performance - cost\n- mValidRawReadFeedNum: Exposure - read performance - scale\n- estimateEngageCost: Seeding - engagement performance - cost\n- mEngagementNum90d: Seeding - engagement performance - scale\n- estimateCpuv: Conversion - outer-store visit performance - cost\n- mCpuvNum: Conversion - outer-store visit performance - scale\n\nExample:\n- estimateAllCpm\n",
+            "in": "query",
+            "name": "marketTarget",
+            "required": false,
+            "schema": {
+              "example": "estimateAllCpm",
+              "type": "string"
+            },
+            "x-sdk-python-name": "market_target"
+          },
+          {
+            "description": "Audience target filter. Pass Pugongying audience group IDs (`dmpGroupId`) separated by English or Chinese commas. These IDs are dynamic and account-specific, so there is no fixed global value list. Use the audience group name shown in Pugongying Audience Management to identify what each ID means.\n\nExample:\n- 123456,789012\n",
+            "in": "query",
+            "name": "audienceGroup",
+            "required": false,
+            "schema": {
+              "example": "123456,789012",
+              "type": "string"
+            },
+            "x-sdk-python-name": "audience_group"
+          },
+          {
             "description": "Top-20 audience filter. Pass top-level or child audience labels separated by commas; child labels are converted to Pugongying request values.",
             "in": "query",
             "name": "top20CrowdsLabel",
