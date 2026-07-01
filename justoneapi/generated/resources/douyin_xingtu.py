@@ -458,6 +458,8 @@ class DouyinXingtuResource(BaseResource):
         location: str | None = None,
         tonality_tag: str | None = None,
         connected_user_range: str | None = None,
+        audience_image: str | None = None,
+        fans_image: str | None = None,
         expected_play_range: str | None = None,
         expected_cpm_range: str | None = None,
         expected_cpe_range: str | None = None,
@@ -488,6 +490,8 @@ class DouyinXingtuResource(BaseResource):
             location: Creator location filter. Pass Chinese province or city names separated by commas. Available province values include: 北京市, 天津市, 河北省, 山西省, 内蒙古自治区, 辽宁省, 吉林省, 黑龙江省, 上海市, 江苏省, 浙江省, 安徽省, 福建省, 江西省, 山东省, 河南省, 湖北省, 湖南省, 广东省, 广西壮族自治区, 海南省, 重庆市, 四川省, 贵州省, 云南省, 西藏自治区, 陕西省, 甘肃省, 青海省, 宁夏回族自治区, 新疆维吾尔自治区, 台湾省, 香港特别行政区, 澳门特别行政区. Example: 广东省,深圳市
             tonality_tag: Creator tonality labels. Pass Xingtu first-level or second-level tonality labels separated by commas. Available values: - 身份/爱好: 马术, 高尔夫, 橄榄球, 时尚爱好者, 企业高管, 汽车爱好者, 学者专家, 古玩收藏; - 精致达人: 设计师, 高阶潮玩, 职业模特, 造型顾问, 独立设计师, 美术/画廊/展览, 歌剧舞台剧, 流行, 潮流买手, 电影; - 潮流酷: 冲浪, 浮潜, 说唱, 滑雪, 普拉提, 网球. Example: 精致达人,设计师
             connected_user_range: Connected user count range. Pass raw user counts in min-max format. Example: 1000000-3000000
+            audience_image: Audience profile filter from Xingtu Audience Image. Pass one or more shortcut values separated by commas. Available values: - Gender: GENDER_MALE_50, GENDER_MALE_60, GENDER_MALE_70, GENDER_MALE_80, GENDER_FEMALE_50, GENDER_FEMALE_60, GENDER_FEMALE_70, GENDER_FEMALE_80; - Age: AGE_18_23, AGE_24_30, AGE_31_40, AGE_41_50, AGE_GT_50; - Device: DEVICE_IPHONE, DEVICE_HUAWEI, DEVICE_XIAOMI, DEVICE_VIVO, DEVICE_OPPO; - City tier: CITY_TIER_1, CITY_TIER_2, CITY_TIER_3, CITY_TIER_4, CITY_TIER_5; - Average order amount: SPEND_0_50, SPEND_50_100, SPEND_100_200, SPEND_200_500, SPEND_GT_500. Example: GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE
+            fans_image: Fan profile filter from Xingtu Fan Image. Pass one or more shortcut values separated by commas. Available values: - Gender: GENDER_MALE_50, GENDER_MALE_60, GENDER_MALE_70, GENDER_MALE_80, GENDER_FEMALE_50, GENDER_FEMALE_60, GENDER_FEMALE_70, GENDER_FEMALE_80; - Age: AGE_18_23, AGE_24_30, AGE_31_40, AGE_41_50, AGE_GT_50; - Device: DEVICE_IPHONE, DEVICE_HUAWEI, DEVICE_XIAOMI, DEVICE_VIVO, DEVICE_OPPO; - City tier: CITY_TIER_1, CITY_TIER_2, CITY_TIER_3, CITY_TIER_4, CITY_TIER_5; - Average order amount: SPEND_0_50, SPEND_50_100, SPEND_100_200, SPEND_200_500, SPEND_GT_500. Example: GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE
             expected_play_range: Expected play count range. Use raw counts in min-max format. Page presets include 10000000 or above, 5000000-10000000, 3000000-5000000, 1000000-3000000, 100000-1000000, and 0-100000. For open-ended presets, pass a high upper bound such as 10000000-1000000000. Example: 1000000-3000000.
             expected_cpm_range: Expected CPM range in min-max format. Example values matching Xingtu packs: 0-10, 0-20, 0-30, 0-50, 0-100, 100-1000000.
             expected_cpe_range: Expected CPE range in min-max format. Example values matching Xingtu packs: 0-1, 0-2, 0-3, 0-5, 0-10, 10-1000000.
@@ -515,6 +519,8 @@ class DouyinXingtuResource(BaseResource):
                 "location": location,
                 "tonalityTag": tonality_tag,
                 "connectedUserRange": connected_user_range,
+                "audienceImage": audience_image,
+                "fansImage": fans_image,
                 "expectedPlayRange": expected_play_range,
                 "expectedCpmRange": expected_cpm_range,
                 "expectedCpeRange": expected_cpe_range,

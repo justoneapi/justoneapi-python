@@ -5374,6 +5374,26 @@
             }
           },
           {
+            "description": "Audience profile filter from Xingtu Audience Image. Pass one or more shortcut values separated by commas. Available values: - Gender: GENDER_MALE_50, GENDER_MALE_60, GENDER_MALE_70, GENDER_MALE_80, GENDER_FEMALE_50, GENDER_FEMALE_60, GENDER_FEMALE_70, GENDER_FEMALE_80; - Age: AGE_18_23, AGE_24_30, AGE_31_40, AGE_41_50, AGE_GT_50; - Device: DEVICE_IPHONE, DEVICE_HUAWEI, DEVICE_XIAOMI, DEVICE_VIVO, DEVICE_OPPO; - City tier: CITY_TIER_1, CITY_TIER_2, CITY_TIER_3, CITY_TIER_4, CITY_TIER_5; - Average order amount: SPEND_0_50, SPEND_50_100, SPEND_100_200, SPEND_200_500, SPEND_GT_500. Example: GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE",
+            "in": "query",
+            "name": "audienceImage",
+            "required": false,
+            "schema": {
+              "example": "GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Fan profile filter from Xingtu Fan Image. Pass one or more shortcut values separated by commas. Available values: - Gender: GENDER_MALE_50, GENDER_MALE_60, GENDER_MALE_70, GENDER_MALE_80, GENDER_FEMALE_50, GENDER_FEMALE_60, GENDER_FEMALE_70, GENDER_FEMALE_80; - Age: AGE_18_23, AGE_24_30, AGE_31_40, AGE_41_50, AGE_GT_50; - Device: DEVICE_IPHONE, DEVICE_HUAWEI, DEVICE_XIAOMI, DEVICE_VIVO, DEVICE_OPPO; - City tier: CITY_TIER_1, CITY_TIER_2, CITY_TIER_3, CITY_TIER_4, CITY_TIER_5; - Average order amount: SPEND_0_50, SPEND_50_100, SPEND_100_200, SPEND_200_500, SPEND_GT_500. Example: GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE",
+            "in": "query",
+            "name": "fansImage",
+            "required": false,
+            "schema": {
+              "example": "GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE",
+              "type": "string"
+            }
+          },
+          {
             "description": "Expected play count range. Use raw counts in min-max format. Page presets include 10000000 or above, 5000000-10000000, 3000000-5000000, 1000000-3000000, 100000-1000000, and 0-100000. For open-ended presets, pass a high upper bound such as 10000000-1000000000. Example: 1000000-3000000.",
             "in": "query",
             "name": "expectedPlayRange",
@@ -9079,7 +9099,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "15500300"
+        "x-order": "16250300"
       }
     },
     "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/get_finder_video_show/v1": {
@@ -9170,7 +9190,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "15500400"
+        "x-order": "16250400"
       }
     },
     "/api/qq-huxuan/cgi-bin/advertiser/finder_publisher/search/v1": {
@@ -9227,7 +9247,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "15500100"
+        "x-order": "16250100"
       }
     },
     "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/detail/v1": {
@@ -9272,7 +9292,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "15500500"
+        "x-order": "16250500"
       }
     },
     "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/get_user_articles/v1": {
@@ -9371,7 +9391,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "15500600"
+        "x-order": "16250600"
       }
     },
     "/api/qq-huxuan/cgi-bin/advertiser/mp_publisher/search/v1": {
@@ -9428,7 +9448,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "15500200"
+        "x-order": "16250200"
       }
     },
     "/api/reddit/get-post-comments/v1": {
@@ -17330,7 +17350,6 @@
     },
     "/api/xiaohongshu/get-note-detail/v7": {
       "get": {
-        "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
         "operationId": "getApiXiaohongshuGetNoteDetailV7",
         "parameters": [
@@ -17369,7 +17388,6 @@
         "tags": [
           "Xiaohongshu (RedNote)"
         ],
-        "x-docs-hidden": true,
         "x-order": "12001450"
       }
     },
