@@ -17575,17 +17575,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "note_id"
-          },
-          {
-            "description": "Do not use unless confirmed by admin.",
-            "in": "query",
-            "name": "format",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "format"
           }
         ],
         "responses": {

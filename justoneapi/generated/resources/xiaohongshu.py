@@ -291,7 +291,6 @@ class XiaohongshuResource(BaseResource):
         self,
         *,
         note_id: str,
-        format: bool | None = False,
     ) -> ApiResponse[Any]:
         """
         Note Details
@@ -300,13 +299,11 @@ class XiaohongshuResource(BaseResource):
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
-            format: Do not use unless confirmed by admin.
         """
         return self._get(
             "/api/xiaohongshu/get-note-detail/v1",
             {
                 "noteId": note_id,
-                "format": format,
             },
         )
 

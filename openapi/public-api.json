@@ -17097,16 +17097,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "description": "Do not use unless confirmed by admin.",
-            "in": "query",
-            "name": "format",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
