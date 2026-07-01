@@ -154,7 +154,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Note Details (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Details (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Details (V5)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v5?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Details (V7) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v7-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
+- [Note Details (V7)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v7?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Comments (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-comments-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Comments (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-comments-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Comments (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-comments-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -268,15 +268,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Commerce Seeding Base Info (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/commerce-seeding-base-info-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Video Details (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/video-details-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 
-### QQ Huxuan Creator Marketplace
-
-- [Video Account Creator Search (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/video-account-creator-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Official Account Creator Search (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/official-account-creator-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Video Account Creator Details (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/video-account-creator-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Video Account Recent Videos (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/video-account-recent-videos-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Official Account Creator Details (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/official-account-creator-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Official Account Article List (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/official-account-article-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-
 ### Kuaishou
 
 - [Video Search (V2)](https://docs.justoneapi.com/en/api/kuaishou/video-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -330,6 +321,15 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Video Metrics (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-metrics-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Comments (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Sub Comments (V1)](https://docs.justoneapi.com/en/api/wechat-channels/video-sub-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+
+### QQ Huxuan Creator Marketplace
+
+- [Video Account Creator Search (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/video-account-creator-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Official Account Creator Search (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/official-account-creator-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Account Creator Details (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/video-account-creator-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Account Recent Videos (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/video-account-recent-videos-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Official Account Creator Details (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/official-account-creator-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Official Account Article List (V1)](https://docs.justoneapi.com/en/api/qq-huxuan-creator-marketplace/official-account-article-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Weibo
 
