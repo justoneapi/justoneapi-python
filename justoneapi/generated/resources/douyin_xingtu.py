@@ -723,6 +723,41 @@ class DouyinXingtuResource(BaseResource):
             },
         )
 
+    def gw_api_aggregator_get_author_homepage_videos_v1(
+        self,
+        *,
+        o_author_id: str,
+        page: int | None = 1,
+        keyword: str | None = None,
+        video_type: str | None = "ALL",
+        start_date: str | None = None,
+        end_date: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Creator Homepage Videos
+
+        Get Douyin Creator Marketplace (Xingtu) creator homepage video list data, including titles, video IDs, playback, engagement, publish time, and content theme labels for content analysis.
+
+        Args:
+            o_author_id: Author's unique Xingtu ID.
+            page: Page number, starting from 1.
+            keyword: Keyword used to search creator homepage videos.
+            video_type: Homepage video type filter.  Available Values: - `ALL`: All videos - `PERSONAL`: Personal videos - `XINGTU`: Xingtu videos
+            start_date: Start publish date in yyyyMMdd format. The filter starts at 00:00:00 in Asia/Shanghai.
+            end_date: End publish date in yyyyMMdd format. The filter ends at 23:59:59 in Asia/Shanghai.
+        """
+        return self._get(
+            "/api/douyin-xingtu/gw/api/aggregator/get_author_homepage_videos/v1",
+            {
+                "oAuthorId": o_author_id,
+                "page": page,
+                "keyword": keyword,
+                "videoType": video_type,
+                "startDate": start_date,
+                "endDate": end_date,
+            },
+        )
+
     def gw_api_aggregator_get_author_side_base_info_v1(
         self,
         *,
