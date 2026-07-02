@@ -3327,6 +3327,17 @@
             }
           },
           {
+            "description": "Whether to include only assigned videos. Xingtu usually shows this option when `videoType` is `XINGTU`.",
+            "in": "query",
+            "name": "onlyAssign",
+            "required": false,
+            "schema": {
+              "default": false,
+              "example": true,
+              "type": "boolean"
+            }
+          },
+          {
             "description": "Start publish date in yyyyMMdd format. The filter starts at 00:00:00 in Asia/Shanghai.",
             "in": "query",
             "name": "startDate",

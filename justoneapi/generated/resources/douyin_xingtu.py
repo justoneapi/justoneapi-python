@@ -730,6 +730,7 @@ class DouyinXingtuResource(BaseResource):
         page: int | None = 1,
         keyword: str | None = None,
         video_type: str | None = "ALL",
+        only_assign: bool | None = False,
         start_date: str | None = None,
         end_date: str | None = None,
     ) -> ApiResponse[Any]:
@@ -743,6 +744,7 @@ class DouyinXingtuResource(BaseResource):
             page: Page number, starting from 1.
             keyword: Keyword used to search creator homepage videos.
             video_type: Homepage video type filter.  Available Values: - `ALL`: All videos - `PERSONAL`: Personal videos - `XINGTU`: Xingtu videos
+            only_assign: Whether to include only assigned videos. Xingtu usually shows this option when `videoType` is `XINGTU`.
             start_date: Start publish date in yyyyMMdd format. The filter starts at 00:00:00 in Asia/Shanghai.
             end_date: End publish date in yyyyMMdd format. The filter ends at 23:59:59 in Asia/Shanghai.
         """
@@ -753,6 +755,7 @@ class DouyinXingtuResource(BaseResource):
                 "page": page,
                 "keyword": keyword,
                 "videoType": video_type,
+                "onlyAssign": only_assign,
                 "startDate": start_date,
                 "endDate": end_date,
             },
