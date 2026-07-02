@@ -5374,22 +5374,22 @@
             }
           },
           {
-            "description": "Audience profile filter from Xingtu Audience Image. Pass one or more shortcut values separated by commas. Available values: - Gender: GENDER_MALE_50, GENDER_MALE_60, GENDER_MALE_70, GENDER_MALE_80, GENDER_FEMALE_50, GENDER_FEMALE_60, GENDER_FEMALE_70, GENDER_FEMALE_80; - Age: AGE_18_23, AGE_24_30, AGE_31_40, AGE_41_50, AGE_GT_50; - Device: DEVICE_IPHONE, DEVICE_HUAWEI, DEVICE_XIAOMI, DEVICE_VIVO, DEVICE_OPPO; - City tier: CITY_TIER_1, CITY_TIER_2, CITY_TIER_3, CITY_TIER_4, CITY_TIER_5; - Average order amount: SPEND_0_50, SPEND_50_100, SPEND_100_200, SPEND_200_500, SPEND_GT_500. Example: GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE",
+            "description": "Audience profile filter from Xingtu Audience Image. Pass one or more shortcut values separated by commas. Available values: - Gender: GENDER_MALE_50, GENDER_MALE_60, GENDER_MALE_70, GENDER_MALE_80, GENDER_FEMALE_50, GENDER_FEMALE_60, GENDER_FEMALE_70, GENDER_FEMALE_80; - Age: AGE_18_23, AGE_24_30, AGE_31_40, AGE_41_50, AGE_GT_50; - Device: DEVICE_IPHONE, DEVICE_HUAWEI, DEVICE_XIAOMI, DEVICE_VIVO, DEVICE_OPPO; - City tier: CITY_TIER_1, CITY_TIER_2, CITY_TIER_3, CITY_TIER_4, CITY_TIER_5; - Average order amount: SPEND_0_50, SPEND_50_100, SPEND_100_200, SPEND_200_500, SPEND_GT_500; - Crowd profile: CROWD_REFINED_MOTHER(53 精致妈妈), CROWD_URBAN_SILVER(54 都市银发), CROWD_NEW_WHITE_COLLAR(55 新锐白领), CROWD_SENIOR_MIDDLE_CLASS(56 资深中产), CROWD_URBAN_BLUE_COLLAR(57 都市蓝领), CROWD_GEN_Z(58 Z世代), CROWD_TOWN_MIDDLE_AGED(59 小镇中老年), CROWD_TOWN_YOUTH(60 小镇青年). Example: GENDER_FEMALE_50,CROWD_REFINED_MOTHER",
             "in": "query",
             "name": "audienceImage",
             "required": false,
             "schema": {
-              "example": "GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE",
+              "example": "GENDER_FEMALE_50,CROWD_REFINED_MOTHER",
               "type": "string"
             }
           },
           {
-            "description": "Fan profile filter from Xingtu Fan Image. Pass one or more shortcut values separated by commas. Available values: - Gender: GENDER_MALE_50, GENDER_MALE_60, GENDER_MALE_70, GENDER_MALE_80, GENDER_FEMALE_50, GENDER_FEMALE_60, GENDER_FEMALE_70, GENDER_FEMALE_80; - Age: AGE_18_23, AGE_24_30, AGE_31_40, AGE_41_50, AGE_GT_50; - Device: DEVICE_IPHONE, DEVICE_HUAWEI, DEVICE_XIAOMI, DEVICE_VIVO, DEVICE_OPPO; - City tier: CITY_TIER_1, CITY_TIER_2, CITY_TIER_3, CITY_TIER_4, CITY_TIER_5; - Average order amount: SPEND_0_50, SPEND_50_100, SPEND_100_200, SPEND_200_500, SPEND_GT_500. Example: GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE",
+            "description": "Fan profile filter from Xingtu Fan Image. Pass one or more shortcut values separated by commas. Available values: - Gender: GENDER_MALE_50, GENDER_MALE_60, GENDER_MALE_70, GENDER_MALE_80, GENDER_FEMALE_50, GENDER_FEMALE_60, GENDER_FEMALE_70, GENDER_FEMALE_80; - Age: AGE_18_23, AGE_24_30, AGE_31_40, AGE_41_50, AGE_GT_50; - Device: DEVICE_IPHONE, DEVICE_HUAWEI, DEVICE_XIAOMI, DEVICE_VIVO, DEVICE_OPPO; - City tier: CITY_TIER_1, CITY_TIER_2, CITY_TIER_3, CITY_TIER_4, CITY_TIER_5; - Average order amount: SPEND_0_50, SPEND_50_100, SPEND_100_200, SPEND_200_500, SPEND_GT_500; - Crowd profile: CROWD_REFINED_MOTHER(53 精致妈妈), CROWD_URBAN_SILVER(54 都市银发), CROWD_NEW_WHITE_COLLAR(55 新锐白领), CROWD_SENIOR_MIDDLE_CLASS(56 资深中产), CROWD_URBAN_BLUE_COLLAR(57 都市蓝领), CROWD_GEN_Z(58 Z世代), CROWD_TOWN_MIDDLE_AGED(59 小镇中老年), CROWD_TOWN_YOUTH(60 小镇青年). Example: GENDER_FEMALE_50,CROWD_REFINED_MOTHER",
             "in": "query",
             "name": "fansImage",
             "required": false,
             "schema": {
-              "example": "GENDER_FEMALE_50,AGE_24_30,DEVICE_IPHONE",
+              "example": "GENDER_FEMALE_50,CROWD_REFINED_MOTHER",
               "type": "string"
             }
           },
