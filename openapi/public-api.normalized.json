@@ -5374,6 +5374,22 @@
             "x-sdk-python-name": "page"
           },
           {
+            "description": "Creator search sorting. Values: FANS sorts by follower count descending, DEFAULT uses Xingtu score ranking.\n\nAvailable Values:\n- `DEFAULT`: Platform default score ranking\n- `FANS`: Sort by follower count descending",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "FANS",
+              "description": "Creator search sorting",
+              "enum": [
+                "DEFAULT",
+                "FANS"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort"
+          },
+          {
             "description": "Search criteria type.\n\nAvailable Values:\n- `NICKNAME`: By Nickname\n- `CONTENT`: By Content",
             "in": "query",
             "name": "searchType",
@@ -15425,6 +15441,22 @@
             "x-sdk-python-name": "page"
           },
           {
+            "description": "Creator search sorting. Values: FANS sorts by follower count descending, DEFAULT uses Pugongying intelligent ranking.\n\nAvailable Values:\n- `DEFAULT`: Platform default intelligent ranking\n- `FANS`: Sort by follower count descending",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "FANS",
+              "description": "Creator search sorting",
+              "enum": [
+                "DEFAULT",
+                "FANS"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort"
+          },
+          {
             "description": "Minimum number of fans.",
             "in": "query",
             "name": "fansNumberLower",
@@ -15510,6 +15542,17 @@
               "type": "string"
             },
             "x-sdk-python-name": "gender"
+          },
+          {
+            "description": "Blogger location filter. Pass full Pugongying location labels separated by English or Chinese commas.",
+            "in": "query",
+            "name": "location",
+            "required": false,
+            "schema": {
+              "example": "中国 广东,中国 上海",
+              "type": "string"
+            },
+            "x-sdk-python-name": "location"
           },
           {
             "description": "Content category filter. Pass first-level or second-level category labels from Pugongying, separated by commas.\n\nAvailable values:\n- 美妆: 整体妆容, 唇妆, 眼妆, 美甲, 底妆, 美妆合集, 香水, 美妆其他\n- 护肤: 面部保养, 面部清洁, 护肤合集, 护肤其他\n- 个人护理: 头发产品, 身体护理, 口腔护理, 护理其他\n- 母婴: 母婴日常, 早教, 婴童用品, 婴童洗护, 婴童食品, 婴童时尚, 孕期穿搭, 孕产经验, 产后恢复, 育儿经验, 宝宝才艺, 宝宝写真, 母婴其他\n- 时尚: 穿搭, 配饰, 发型, 箱包, 鞋靴, 时尚其他\n- 美食: 美食教程, 美食探店, 美食展示, 美食测评, 吃播, 美食其他\n- 家居家装: 装修, 家居用品, 家居装饰, 家具, 家电, 室内设计, 居家经验, 家居家装其他\n- 影视综资讯: 动漫, 电影, 电视, 娱乐资讯, 影视, 民生资讯, 综艺, 影视综其他\n- 运动健身: 健身减肥, 健身塑形, 滑雪, 滑板, 水上活动, 运动其他, 足球, 篮球, 跑步, 游泳\n- 宠物: 猫, 狗, 动物其他\n- 文化艺术: 社科, 文化, 艺术, 文化艺术其他\n- 兴趣爱好: 绘画, 手工, 阅读, 文具手账, 舞蹈, 益智玩具, 潮流玩具, 兴趣爱好其他\n- 生活记录: 接地气生活, 日常片段, 中外生活, 品质生活, 校园生活\n- 教育: 大学教育, k12教育, 家庭教育, 学习日常, 职场教育, 教育其他\n- 情感: 情感知识, 情感日常, 情感其他\n- 摄影: 人文风光摄影, 摄影技巧, 胶片摄影, 人像摄影, 摄影其他\n- 游戏: 手机游戏, 主机游戏, 游戏其他, 线下游戏\n- 科技数码: 数码, 玩机攻略, 数码科技其他\n- 出行: 城市出行, 户外, 旅行\n- 音乐\n- 搞笑\n- 健康养生\n- 汽车\n- 婚嫁: 婚礼造型, 婚礼记录, 婚礼经验, 婚礼用品\n- 商业财经\n- 素材\n- 其他\n",

@@ -444,6 +444,7 @@ class DouyinXingtuResource(BaseResource):
         *,
         keyword: str | None = "",
         page: int | None = 1,
+        sort: str | None = "FANS",
         search_type: str | None = "NICKNAME",
         marketing_target: str | None = None,
         industry: str | None = "ALL",
@@ -476,6 +477,7 @@ class DouyinXingtuResource(BaseResource):
         Args:
             keyword: Search keyword.
             page: Page number for pagination.
+            sort: Creator search sorting. Values: FANS sorts by follower count descending, DEFAULT uses Xingtu score ranking.  Available Values: - `DEFAULT`: Platform default score ranking - `FANS`: Sort by follower count descending
             search_type: Search criteria type.  Available Values: - `NICKNAME`: By Nickname - `CONTENT`: By Content
             marketing_target: Marketing goal. Available values: BRAND_EXPOSURE/1/品牌曝光, CIRCLE_SEEDING/2/破圈种草, ACTION_CONVERSION/3/行动转化.  Available Values: - `BRAND_EXPOSURE`: Brand exposure - `CIRCLE_SEEDING`: Out-of-circle seeding - `ACTION_CONVERSION`: Action conversion
             industry: Recommended industry filter. Pass enum name, numeric industry ID, or Chinese industry label. Available values: - ALL/0/不限; - 1901: 3C及电器; - 1938: 购物; - 1903: 食品饮料; - 1904: 服装配饰; - 1905: 医药健康; - 1936: 医疗机构; - 1909: 家居建材; - 1907: 生活服务; - 1906: 商务服务; - 1921: 休闲娱乐; - 1937: 丽人; - 1908: 房地产; - 1910: 教育培训; - 1911: 出行旅游; - 1912: 社会公共; - 1913: 游戏; - 1914: 互联网电商服务; - 1915: 交通工具; - 1916: 汽车; - 1917: 农资园艺; - 1920: 机械设备; - 1939: 文化用品; - 1940: 运动户外; - 1922: 传媒资讯; - 1924: 通信; - 1925: 金融业; - 1927: 餐饮服务; - 1928: 工具类软件; - 1929: 招商加盟; - 1930: 美妆; - 1931: 母婴宠物; - 1933: 日化; - 1934: 实体书籍; - 1935: 社交通讯. Example: 美妆  Available Values: - `ALL`: All - `ELECTRONICS_AND_APPLIANCES`: Electronics and Appliances - `SHOPPING`: Shopping - `FOOD_AND_BEVERAGE`: Food and Beverage - `CLOTHING_AND_ACCESSORIES`: Clothing and Accessories - `HEALTHCARE_AND_MEDICAL`: Healthcare and Medical - `MEDICAL_INSTITUTIONS`: Medical Institutions - `HOME_AND_BUILDING_MATERIALS`: Home and Building Materials - `LOCAL_SERVICES`: Local Services - `BUSINESS_SERVICES`: Business Services - `CULTURE_SPORTS_ENTERTAINMENT`: Leisure and Entertainment - `BEAUTY_SERVICES`: Beauty Services - `REAL_ESTATE`: Real Estate - `EDUCATION_AND_TRAINING`: Education and Training - `TRAVEL_AND_TOURISM`: Travel and Tourism - `PUBLIC_SERVICES`: Public Services - `GAMES`: Games - `RETAIL`: Internet E-commerce Services - `TRANSPORTATION_EQUIPMENT`: Transportation Equipment - `AUTOMOTIVE`: Automotive - `AGRICULTURE_FORESTRY_FISHERY`: Agriculture Forestry Fishery - `CHEMICAL_AND_ENERGY`: Chemical and Energy - `ELECTRONICS_AND_ELECTRICAL`: Electronics and Electrical - `MACHINERY_EQUIPMENT`: Machinery Equipment - `MEDIA_AND_INFORMATION`: Media and Information - `LOGISTICS`: Logistics - `TELECOMMUNICATIONS`: Telecommunications - `FINANCIAL_SERVICES`: Financial Services - `CATERING_SERVICES`: Catering Services - `SOFTWARE_TOOLS`: Software Tools - `FRANCHISING_AND_INVESTMENT`: Franchising and Investment - `BEAUTY_AND_COSMETICS`: Beauty and Cosmetics - `MOTHER_BABY_AND_PET`: Mother Baby and Pet - `DAILY_CHEMICALS`: Daily Chemicals - `PHYSICAL_BOOKS`: Physical Books - `SOCIAL_AND_COMMUNICATION`: Social and Communication - `CULTURAL_SUPPLIES`: Cultural Supplies - `SPORTS_OUTDOOR`: Sports and Outdoors
@@ -505,6 +507,7 @@ class DouyinXingtuResource(BaseResource):
             {
                 "keyword": keyword,
                 "page": page,
+                "sort": sort,
                 "searchType": search_type,
                 "marketingTarget": marketing_target,
                 "industry": industry,

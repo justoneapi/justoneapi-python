@@ -5278,6 +5278,21 @@
             }
           },
           {
+            "description": "Creator search sorting. Values: FANS sorts by follower count descending, DEFAULT uses Xingtu score ranking.\n\nAvailable Values:\n- `DEFAULT`: Platform default score ranking\n- `FANS`: Sort by follower count descending",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "FANS",
+              "description": "Creator search sorting",
+              "enum": [
+                "DEFAULT",
+                "FANS"
+              ],
+              "type": "string"
+            }
+          },
+          {
             "description": "Search criteria type.\n\nAvailable Values:\n- `NICKNAME`: By Nickname\n- `CONTENT`: By Content",
             "in": "query",
             "name": "searchType",
@@ -15017,6 +15032,21 @@
             }
           },
           {
+            "description": "Creator search sorting. Values: FANS sorts by follower count descending, DEFAULT uses Pugongying intelligent ranking.\n\nAvailable Values:\n- `DEFAULT`: Platform default intelligent ranking\n- `FANS`: Sort by follower count descending",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "FANS",
+              "description": "Creator search sorting",
+              "enum": [
+                "DEFAULT",
+                "FANS"
+              ],
+              "type": "string"
+            }
+          },
+          {
             "description": "Minimum number of fans.",
             "in": "query",
             "name": "fansNumberLower",
@@ -15094,6 +15124,16 @@
                 "MALE",
                 "FEMALE"
               ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Blogger location filter. Pass full Pugongying location labels separated by English or Chinese commas.",
+            "in": "query",
+            "name": "location",
+            "required": false,
+            "schema": {
+              "example": "中国 广东,中国 上海",
               "type": "string"
             }
           },
