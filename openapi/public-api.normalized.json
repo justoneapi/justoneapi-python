@@ -15544,12 +15544,12 @@
             "x-sdk-python-name": "gender"
           },
           {
-            "description": "Blogger location filter. Pass full Pugongying location labels separated by English or Chinese commas.",
+            "description": "Blogger location filter. Pass Pugongying location labels separated by English or Chinese commas. China province or region short labels are normalized to the full Pugongying value.\n\nAvailable values:\n- 中国\n- 美国\n- 日本\n- 澳大利亚\n- 英国\n- 加拿大\n- 韩国\n- 法国\n- 德国\n- 新加坡\n- 其他\n- 中国 北京\n- 中国 天津\n- 中国 河北\n- 中国 山西\n- 中国 内蒙古\n- 中国 辽宁\n- 中国 吉林\n- 中国 黑龙江\n- 中国 上海\n- 中国 江苏\n- 中国 浙江\n- 中国 安徽\n- 中国 福建\n- 中国 江西\n- 中国 山东\n- 中国 河南\n- 中国 湖北\n- 中国 湖南\n- 中国 广东\n- 中国 广西\n- 中国 海南\n- 中国 重庆\n- 中国 四川\n- 中国 贵州\n- 中国 云南\n- 中国 西藏\n- 中国 陕西\n- 中国 甘肃\n- 中国 青海\n- 中国 宁夏\n- 中国 新疆\n- 中国 澳门\n- 中国 台湾\n- 中国 香港\n\nExample:\n- 广东,中国 上海\n",
             "in": "query",
             "name": "location",
             "required": false,
             "schema": {
-              "example": "中国 广东,中国 上海",
+              "example": "广东,中国 上海",
               "type": "string"
             },
             "x-sdk-python-name": "location"
@@ -16032,6 +16032,28 @@
               "type": "string"
             },
             "x-sdk-python-name": "avg_agmv90d"
+          },
+          {
+            "description": "Similar creator user ID. `similarUserId` and `similarWord` must be provided together.",
+            "in": "query",
+            "name": "similarUserId",
+            "required": false,
+            "schema": {
+              "example": "5ff1a4160000000001008edc",
+              "type": "string"
+            },
+            "x-sdk-python-name": "similar_user_id"
+          },
+          {
+            "description": "Similar creator keyword shown by Pugongying. `similarUserId` and `similarWord` must be provided together.",
+            "in": "query",
+            "name": "similarWord",
+            "required": false,
+            "schema": {
+              "example": "小菜刀微服私访",
+              "type": "string"
+            },
+            "x-sdk-python-name": "similar_word"
           }
         ],
         "responses": {
