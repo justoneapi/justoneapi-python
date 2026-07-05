@@ -9141,6 +9141,7 @@
     },
     "/api/llm/doubao-answer/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get a Doubao web answer for a keyword or question, including extracted references when available.",
         "operationId": "getApiLlmDoubaoAnswerV1",
         "parameters": [
