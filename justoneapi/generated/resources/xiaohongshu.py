@@ -387,6 +387,26 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
+    def get_note_detail_v6(
+        self,
+        *,
+        note_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Note Details
+
+        Get Xiaohongshu (RedNote) note Details data, including media, author, and engagement fields for content analysis and campaign review. This KELE version returns `data` as a single-item array, preferring the record whose `id` matches `noteId`.
+
+        Args:
+            note_id: Unique note identifier on Xiaohongshu.
+        """
+        return self._get(
+            "/api/xiaohongshu/get-note-detail/v6",
+            {
+                "noteId": note_id,
+            },
+        )
+
     def get_note_detail_v7(
         self,
         *,
