@@ -154,6 +154,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Note Details (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Details (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Details (V5)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v5?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Note Details (V6)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v6?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Details (V7)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v7?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Comments (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-comments-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Comments (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-comments-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
