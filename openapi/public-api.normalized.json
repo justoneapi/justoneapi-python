@@ -1371,6 +1371,7 @@
     },
     "/api/dewu/search-item-list/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Dewu (Poizon) product search results by keyword, including matched product data and pagination results, for product discovery, catalog research, price monitoring, and ecommerce market analysis.",
         "operationId": "getApiDewuSearchItemListV1",
         "parameters": [
@@ -5742,6 +5743,7 @@
     },
     "/api/douyin-xingtu/search-kol-simple/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Douyin Creator Marketplace (Xingtu) kOL Keyword Search data, including matching creators and discovery data, for creator sourcing and shortlist building.",
         "operationId": "getApiDouyinXingtuSearchKolSimpleV1",
         "parameters": [
@@ -5805,6 +5807,7 @@
           "Douyin Creator Marketplace (Xingtu)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "15002750",
         "x-sdk-class-name": "DouyinXingtuResource",
@@ -6840,6 +6843,7 @@
           "IMDb"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": 34002400,
         "x-sdk-class-name": "ImdbResource",
@@ -10369,6 +10373,7 @@
     },
     "/api/taobao/get-item-sale/v1": {
       "get": {
+        "deprecated": true,
         "description": "Get Taobao and Tmall product sales data for sales tracking, product research, and ecommerce monitoring.",
         "operationId": "getApiTaobaoGetItemSaleV1",
         "parameters": [
@@ -10583,6 +10588,7 @@
     },
     "/api/taobao/get-shop-item-list/v3": {
       "get": {
+        "deprecated": true,
         "description": "Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.",
         "operationId": "getApiTaobaoGetShopItemListV3",
         "parameters": [
@@ -10660,6 +10666,7 @@
           "Taobao and Tmall"
         ],
         "x-api-version": "v3",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "11001800",
         "x-sdk-class-name": "TaobaoResource",
@@ -10963,6 +10970,7 @@
     },
     "/api/tiktok-shop/get-product-detail/v2": {
       "get": {
+        "deprecated": true,
         "description": "Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.",
         "operationId": "getApiTiktokShopGetProductDetailV2",
         "parameters": [
@@ -11014,6 +11022,7 @@
           "TikTok Shop"
         ],
         "x-api-version": "v2",
+        "x-docs-hidden": true,
         "x-highlights": [],
         "x-order": "22501150",
         "x-sdk-class-name": "TiktokShopResource",
@@ -18084,6 +18093,7 @@
     },
     "/api/xiaohongshu/get-note-detail/v7": {
       "get": {
+        "deprecated": true,
         "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
         "operationId": "getApiXiaohongshuGetNoteDetailV7",
         "parameters": [
