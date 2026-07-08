@@ -15138,7 +15138,7 @@
             }
           },
           {
-            "description": "Creator profile location filter. Pass Pugongying location labels separated by English or Chinese commas. Country, China province or region, and city-level paths are supported. China province or region short labels are normalized to the full Pugongying value. City paths such as `河北 秦皇岛`, `河北-秦皇岛`, or `中国 河北 秦皇岛` are normalized to values like `中国 河北 秦皇岛`.\n\nAvailable country/province base values:\n- 中国\n- 美国\n- 日本\n- 澳大利亚\n- 英国\n- 加拿大\n- 韩国\n- 法国\n- 德国\n- 新加坡\n- 其他\n- 中国 北京\n- 中国 天津\n- 中国 河北\n- 中国 山西\n- 中国 内蒙古\n- 中国 辽宁\n- 中国 吉林\n- 中国 黑龙江\n- 中国 上海\n- 中国 江苏\n- 中国 浙江\n- 中国 安徽\n- 中国 福建\n- 中国 江西\n- 中国 山东\n- 中国 河南\n- 中国 湖北\n- 中国 湖南\n- 中国 广东\n- 中国 广西\n- 中国 海南\n- 中国 重庆\n- 中国 四川\n- 中国 贵州\n- 中国 云南\n- 中国 西藏\n- 中国 陕西\n- 中国 甘肃\n- 中国 青海\n- 中国 宁夏\n- 中国 新疆\n- 中国 澳门\n- 中国 台湾\n- 中国 香港\n\nExample:\n- 广东,中国 上海,河北 秦皇岛\n",
+            "description": "Creator profile location filter. Pass Pugongying location labels separated by English or Chinese commas. Country, China province or region, city-level paths, and district/county-level paths are supported. China province or region short labels are normalized to the full Pugongying value. Only paths present in the Pugongying location tree are accepted. Paths such as `河北 秦皇岛`, `山西 长治 潞州区`, or `中国 山西 长治 潞州区` are normalized to values like `中国 山西 长治 潞州区`.\n\nAvailable country/province base values:\n- 中国\n- 美国\n- 日本\n- 澳大利亚\n- 英国\n- 加拿大\n- 韩国\n- 法国\n- 德国\n- 新加坡\n- 其他\n- 中国 北京\n- 中国 天津\n- 中国 河北\n- 中国 山西\n- 中国 内蒙古\n- 中国 辽宁\n- 中国 吉林\n- 中国 黑龙江\n- 中国 上海\n- 中国 江苏\n- 中国 浙江\n- 中国 安徽\n- 中国 福建\n- 中国 江西\n- 中国 山东\n- 中国 河南\n- 中国 湖北\n- 中国 湖南\n- 中国 广东\n- 中国 广西\n- 中国 海南\n- 中国 重庆\n- 中国 四川\n- 中国 贵州\n- 中国 云南\n- 中国 西藏\n- 中国 陕西\n- 中国 甘肃\n- 中国 青海\n- 中国 宁夏\n- 中国 新疆\n- 中国 澳门\n- 中国 台湾\n- 中国 香港\n\nExample:\n- 广东,中国 上海,河北 秦皇岛,山西 长治 潞州区\n",
             "in": "query",
             "name": "location",
             "required": false,
@@ -15609,7 +15609,7 @@
             }
           },
           {
-            "description": "Follower audience location filter. Pass Pugongying follower-region labels separated by English or Chinese commas. Country, China province, and city-level paths are supported. Use city paths such as `福建 南平`, `福建-南平`, or `中国 福建 南平`; they are normalized to values like `中国 福建 南平`.\n\nExamples:\n- 福建 南平\n- 中国 福建 南平,广东\n",
+            "description": "Follower audience location filter. Pass Pugongying follower-region labels separated by English or Chinese commas. Country, China province, and city-level paths are supported; district/county-level paths are not accepted. Only paths present in the Pugongying follower-region tree are accepted. Use city paths such as `福建 南平`, `福建-南平`, or `中国 福建 南平`; they are normalized to values like `中国 福建 南平`.\n\nExamples:\n- 福建 南平\n- 中国 福建 南平,广东\n",
             "in": "query",
             "name": "fansLocation",
             "required": false,
