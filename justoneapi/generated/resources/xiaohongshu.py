@@ -395,7 +395,7 @@ class XiaohongshuResource(BaseResource):
         """
         Note Details
 
-        Get Xiaohongshu (RedNote) note Details data, including media, author, and engagement fields for content analysis and campaign review. This KELE version returns `data` as a single-item array, preferring the record whose `id` matches `noteId`.
+        Get Xiaohongshu (RedNote) video note details with media, author, and engagement fields. This KELE version only supports video notes; image and text notes are not supported.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.

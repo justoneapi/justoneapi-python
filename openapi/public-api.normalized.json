@@ -17827,11 +17827,7 @@
         "x-api-version": "v1",
         "x-highlights": [
           {
-            "content": "If you download videos, use `v5`.",
-            "type": "tip"
-          },
-          {
-            "content": "If this version is unstable, try other versions with lower traffic and better success rates.",
+            "content": "If you download videos, use `v6`.",
             "type": "tip"
           }
         ],
@@ -18043,7 +18039,7 @@
     },
     "/api/xiaohongshu/get-note-detail/v6": {
       "get": {
-        "description": "Get Xiaohongshu (RedNote) note Details data, including media, author, and engagement fields for content analysis and campaign review. This KELE version returns `data` as a single-item array, preferring the record whose `id` matches `noteId`.",
+        "description": "Get Xiaohongshu (RedNote) video note details with media, author, and engagement fields. This KELE version only supports video notes; image and text notes are not supported.",
         "operationId": "getApiXiaohongshuGetNoteDetailV6",
         "parameters": [
           {
@@ -18081,7 +18077,7 @@
         "x-api-version": "v6",
         "x-highlights": [
           {
-            "content": "This version can be used to download videos when the note contains video media.",
+            "content": "This version only supports video notes. Image and text notes are not supported.",
             "type": "tip"
           }
         ],
