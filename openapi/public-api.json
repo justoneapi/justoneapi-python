@@ -18609,8 +18609,7 @@
             "type": "tip"
           }
         ],
-        "x-order": "12001120",
-        "x-recommended": true
+        "x-order": "12001120"
       }
     },
     "/api/xiaohongshu/search-recommend/v1": {

@@ -19136,7 +19136,6 @@
           }
         ],
         "x-order": "12001120",
-        "x-recommended": true,
         "x-sdk-class-name": "XiaohongshuResource",
         "x-sdk-method-name": "search_note_v4",
         "x-sdk-resource": "xiaohongshu"
