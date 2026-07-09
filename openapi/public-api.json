@@ -5385,7 +5385,7 @@
             }
           },
           {
-            "description": "Follower range (e.g., 10-100).",
+            "description": "Raw follower count range in min-max format. Example: 1000-2000 means 1,000 to 2,000 followers; 5000000-10000000 means 5 million to 10 million followers.",
             "in": "query",
             "name": "followerRange",
             "required": false,
@@ -5610,7 +5610,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "15002700"
+        "x-order": "15000010"
       }
     },
     "/api/douyin-xingtu/search-kol-simple/v1": {
@@ -15637,7 +15637,7 @@
         ],
         "x-api-version": "v1",
         "x-highlights": [],
-        "x-order": "13002200"
+        "x-order": "13000010"
       }
     },
     "/api/xiaohongshu-pgy/api/solar/cooperator/user/blogger/userId/v1": {
