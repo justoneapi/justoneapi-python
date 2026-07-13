@@ -445,6 +445,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 - [Article Details (V1)](https://docs.justoneapi.com/en/api/toutiao/article-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Profile (V1)](https://docs.justoneapi.com/en/api/toutiao/user-profile-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [User ID (V1)](https://docs.justoneapi.com/en/api/toutiao/user-id-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [App Keyword Search (V1) (Deprecated)](https://docs.justoneapi.com/en/api/toutiao/app-keyword-search-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Web Keyword Search (V2)](https://docs.justoneapi.com/en/api/toutiao/web-keyword-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
