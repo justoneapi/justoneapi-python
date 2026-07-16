@@ -132,7 +132,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Product Questions (V1)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-questions-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Shop Product List (V1)](https://docs.justoneapi.com/en/api/taobao-and-tmall/shop-product-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Shop Product List (V2)](https://docs.justoneapi.com/en/api/taobao-and-tmall/shop-product-list-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Shop Product List (V3) (Deprecated)](https://docs.justoneapi.com/en/api/taobao-and-tmall/shop-product-list-v3-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Shop Product List (V4)](https://docs.justoneapi.com/en/api/taobao-and-tmall/shop-product-list-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Sales (V1) (Deprecated)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-sales-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Product Search (V1)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -140,28 +139,15 @@ The API list below is generated from OpenAPI and shows the current public API ca
 ### Xiaohongshu (RedNote)
 
 - [Hot Search (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/hot-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Search (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Search (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Search (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Search (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Search (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [User Published Notes (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-published-notes-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [User Published Notes (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-published-notes-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [User Published Notes (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-published-notes-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Published Notes (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-published-notes-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Details (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Details (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Details (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Details (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Details (V5)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v5?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Details (V6)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v6?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Details (V7) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-details-v7-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Note Comments (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-comments-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Comments (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-comments-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Note Comments (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-comments-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Comment Replies (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/comment-replies-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Profile (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-profile-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [User Profile (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-profile-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Keyword Suggestions (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/keyword-suggestions-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Topic Note List (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/topic-note-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Share Link Resolution (V3)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/share-link-resolution-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -182,17 +168,8 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Note Details (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/note-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Creator Core Metrics (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/creator-core-metrics-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Content Square Notes (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/content-square-notes-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Creator Profile (V1) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/creator-profile-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Note Performance Metrics (V1) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/note-performance-metrics-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Follower Distribution (V1) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/follower-distribution-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Follower Summary (V1) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/follower-summary-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Follower Growth History (V1) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/follower-growth-history-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Creator Note List (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/creator-note-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Creator Note List Pro (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/creator-note-list-pro-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Data Summary (V2) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/data-summary-v2-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Cost Effectiveness Analysis (V1) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/cost-effectiveness-analysis-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Note Details (V1) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/note-details-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Creator Core Metrics (V1) (Deprecated)](https://docs.justoneapi.com/en/api/xiaohongshu-creator-marketplace-pugongying/creator-core-metrics-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 
 ### Douyin (TikTok China)
 
@@ -209,7 +186,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 ### Douyin E-commerce
 
-- [Item Details (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-e-commerce/item-details-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Item Details (V2)](https://docs.justoneapi.com/en/api/douyin-e-commerce/item-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product SKU Info (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/product-sku-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Search (V1)](https://docs.justoneapi.com/en/api/douyin-e-commerce/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -236,7 +212,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Audience Touchpoint Distribution (V1)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/audience-touchpoint-distribution-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Recommended Videos (V1)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/recommended-videos-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Follower Distribution (V1)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/follower-distribution-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Creator Search Light (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/creator-search-light-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Item Report Trends (V1)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/item-report-trends-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Details (V1)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/video-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Item Report Analysis (V1)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/item-report-analysis-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -252,25 +227,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Live Watch Distribution (V1)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/live-watch-distribution-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Commerce Seeding Base Info (V1)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/commerce-seeding-base-info-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Creator Contract Base Info](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/creator-contract-base-info?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Creator Profile (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/creator-profile-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Audience Distribution (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/audience-distribution-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Follower Distribution (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/follower-distribution-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Marketing Metrics (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/marketing-metrics-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Spread Metrics (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/spread-metrics-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Conversion Analysis (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/conversion-analysis-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Showcase Items (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/showcase-items-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Creator Link Metrics (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/creator-link-metrics-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Conversion Resources (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/conversion-resources-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Creator Link Structure (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/creator-link-structure-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Audience Touchpoint Distribution (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/audience-touchpoint-distribution-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Cost Performance Analysis (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/cost-performance-analysis-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Recommended Videos (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/recommended-videos-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Follower Growth Trend (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/follower-growth-trend-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Comment Keyword Analysis (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/comment-keyword-analysis-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Content Keyword Analysis (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/content-keyword-analysis-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Creator Commerce Spread Info (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/creator-commerce-spread-info-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Commerce Seeding Base Info (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/commerce-seeding-base-info-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
-- [Video Details (V1) (Deprecated)](https://docs.justoneapi.com/en/api/douyin-creator-marketplace-xingtu/video-details-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 
 ### Kuaishou
 
@@ -410,7 +366,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 - [Product Search (V1)](https://docs.justoneapi.com/en/api/tiktok-shop/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Details (V1)](https://docs.justoneapi.com/en/api/tiktok-shop/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Product Details (V2) (Deprecated)](https://docs.justoneapi.com/en/api/tiktok-shop/product-details-v2-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 
 ### YOUKU
 
@@ -448,7 +403,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Article Details (V1)](https://docs.justoneapi.com/en/api/toutiao/article-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Profile (V1)](https://docs.justoneapi.com/en/api/toutiao/user-profile-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User ID (V1)](https://docs.justoneapi.com/en/api/toutiao/user-id-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [App Keyword Search (V1) (Deprecated)](https://docs.justoneapi.com/en/api/toutiao/app-keyword-search-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Web Keyword Search (V2)](https://docs.justoneapi.com/en/api/toutiao/web-keyword-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Zhihu
@@ -509,7 +463,6 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Details (V1)](https://docs.justoneapi.com/en/api/imdb/details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Box Office Summary (V1)](https://docs.justoneapi.com/en/api/imdb/box-office-summary-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Recommendations (V1)](https://docs.justoneapi.com/en/api/imdb/recommendations-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Keyword Search (V1)](https://docs.justoneapi.com/en/api/imdb/keyword-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Streaming Picks (V1)](https://docs.justoneapi.com/en/api/imdb/streaming-picks-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [News by Category (V1)](https://docs.justoneapi.com/en/api/imdb/news-by-category-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Chart Rankings (V1)](https://docs.justoneapi.com/en/api/imdb/chart-rankings-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
