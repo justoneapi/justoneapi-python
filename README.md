@@ -141,6 +141,7 @@ except BusinessError as exc:
 ### 小红书
 
 - [热搜 (V1)](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/hot-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [热门榜单 (V1)](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/hot-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [笔记搜索 (V2)](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/note-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [笔记搜索 (V4)](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/note-search-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [用户搜索 (V2)](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/user-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -232,8 +233,8 @@ except BusinessError as exc:
 
 ### 快手
 
-- [视频搜索 (V2)](https://docs.justoneapi.com/zh/api/kuaishou/video-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [视频搜索 (V1)](https://docs.justoneapi.com/zh/api/kuaishou/video-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [视频搜索 (V2)](https://docs.justoneapi.com/zh/api/kuaishou/video-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [用户搜索 (V2)](https://docs.justoneapi.com/zh/api/kuaishou/user-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [用户发布视频 (V2)](https://docs.justoneapi.com/zh/api/kuaishou/user-published-videos-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [视频详情 (V2)](https://docs.justoneapi.com/zh/api/kuaishou/video-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)

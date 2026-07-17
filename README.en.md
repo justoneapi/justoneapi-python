@@ -139,6 +139,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 ### Xiaohongshu (RedNote)
 
 - [Hot Search (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/hot-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Hot List (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/hot-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Search (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Search (V4)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Search (V2)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/user-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -230,8 +231,8 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 ### Kuaishou
 
-- [Video Search (V2)](https://docs.justoneapi.com/en/api/kuaishou/video-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Search (V1)](https://docs.justoneapi.com/en/api/kuaishou/video-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Video Search (V2)](https://docs.justoneapi.com/en/api/kuaishou/video-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Search (V2)](https://docs.justoneapi.com/en/api/kuaishou/user-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Published Videos (V2)](https://docs.justoneapi.com/en/api/kuaishou/user-published-videos-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Details (V2)](https://docs.justoneapi.com/en/api/kuaishou/video-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
