@@ -422,6 +422,8 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [User Follow Questions (V1)](https://docs.justoneapi.com/en/api/zhihu/user-follow-questions-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Follow Collections (V1)](https://docs.justoneapi.com/en/api/zhihu/user-follow-collections-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Follow Topics (V1)](https://docs.justoneapi.com/en/api/zhihu/user-follow-topics-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Answer Comments (V1)](https://docs.justoneapi.com/en/api/zhihu/answer-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Comment Replies (V1)](https://docs.justoneapi.com/en/api/zhihu/comment-replies-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Amazon
 
@@ -436,12 +438,14 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Post Search (V1)](https://docs.justoneapi.com/en/api/facebook/post-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Get Profile ID (V1)](https://docs.justoneapi.com/en/api/facebook/get-profile-id-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Get Profile Posts (V1)](https://docs.justoneapi.com/en/api/facebook/get-profile-posts-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Post Comments (V1)](https://docs.justoneapi.com/en/api/facebook/post-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Twitter
 
 - [Search Timeline (V1)](https://docs.justoneapi.com/en/api/twitter/search-timeline-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Profile (V1)](https://docs.justoneapi.com/en/api/twitter/user-profile-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Published Posts (V1)](https://docs.justoneapi.com/en/api/twitter/user-published-posts-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Post Comments (V1)](https://docs.justoneapi.com/en/api/twitter/post-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Beike
 
