@@ -30,7 +30,7 @@ class DouyinResource(BaseResource):
             publish_time: Filter by video publish time range.  Available Values: - `_0`: No Limit - `_1`: Last 24 Hours - `_7`: Last 7 Days - `_180`: Last 6 Months
             duration: Filter by video duration.  Available Values: - `_0`: No Limit - `_1`: Under 1 Minute - `_2`: 1-5 Minutes - `_3`: Over 5 Minutes
             page: Page number (starting from 1).
-            search_id: Search ID; required for pages > 1 (use the search_id value returned by the last response).
+            search_id: Search ID; required for pages > 1. Use data.business_config.next_page.search_id from the previous response, and stop paging when data.business_config.has_more is 0.
         """
         return self._get(
             "/api/douyin/search-video/v4",

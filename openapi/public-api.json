@@ -7100,7 +7100,7 @@
             }
           },
           {
-            "description": "Search ID; required for pages > 1 (use the search_id value returned by the last response).",
+            "description": "Search ID; required for pages > 1. Use data.business_config.next_page.search_id from the previous response, and stop paging when data.business_config.has_more is 0.",
             "in": "query",
             "name": "searchId",
             "required": false,
@@ -25598,5 +25598,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "8eda819b26ce3855"
+  "x-openapi-release-id": "e3740db4de6ef3db"
 }
