@@ -17,10 +17,10 @@ class RedditResource(BaseResource):
         """
         Post Details
 
-        Get Reddit post Details data, including author details, subreddit info, and engagement counts, for content analysis, moderation research, and monitoring.
+        Retrieves details for a Reddit post identified by its full post ID. Use it to look up a known post before discussion review, content analysis, or subsequent comment retrieval.
 
         Args:
-            post_id: The unique identifier of the Reddit post (e.g., 't3_1q4aqti').
+            post_id: The Reddit post identifier in t3_<post-id> format.
         """
         return self._get(
             "/api/reddit/get-post-detail/v1",
@@ -38,7 +38,7 @@ class RedditResource(BaseResource):
         """
         Post Comments
 
-        Get Reddit post Comments data, including text, authors, and timestamps, for discussion analysis and moderation research.
+        Retrieves comments for a Reddit post with pagination-token support. Use it to review a thread's discussion or continue through additional comment results for a known post.
 
         Args:
             post_id: The unique identifier of the Reddit post.
@@ -61,7 +61,7 @@ class RedditResource(BaseResource):
         """
         Keyword Search
 
-        Get Reddit keyword Search data, including titles, authors, and subreddit context, for topic discovery and monitoring.
+        Searches Reddit posts by keyword with an optional continuation token. Use it to discover topic-related discussions or continue through additional search-result pages.
 
         Args:
             keyword: Search query keywords.

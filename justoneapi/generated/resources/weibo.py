@@ -24,7 +24,7 @@ class WeiboResource(BaseResource):
         """
         Keyword Search
 
-        Get Weibo keyword Search data, including authors, publish times, and engagement signals, for trend monitoring.
+        Searches Weibo posts by keyword within a required day-and-hour time range, with page-based pagination, hot or time sorting, and filters for pictures, video, music, or links. Use it to find time-bounded posts for topic research or monitoring.
 
         Args:
             q: Search Keywords.
@@ -58,7 +58,7 @@ class WeiboResource(BaseResource):
         """
         Post Details
 
-        Get Weibo post Details data, including media, author metadata, and engagement counts, for post analysis, archiving, and campaign monitoring.
+        Retrieves details for a Weibo post identified by its post ID. Use it to look up a known post for content review, archiving, or related engagement analysis.
 
         Args:
             id_: Weibo post ID.
@@ -78,7 +78,7 @@ class WeiboResource(BaseResource):
         """
         User Profile
 
-        Get Weibo user Profile data, including follower counts, verification status, and bio details, for creator research and account analysis.
+        Retrieves a Weibo user profile identified by UID. Use it to look up a known account for creator research, profile review, or subsequent retrieval of that user's posts and videos.
 
         Args:
             uid: Weibo User ID (UID).
@@ -99,7 +99,7 @@ class WeiboResource(BaseResource):
         """
         User Fans
 
-        Get Weibo user Fans data, including profile metadata and verification signals, for audience analysis and influencer research.
+        Retrieves a page of fan accounts that follow a Weibo user identified by UID. Use it to browse the account's follower audience or continue through its fan list.
 
         Args:
             uid: Weibo User ID (UID).
@@ -122,7 +122,7 @@ class WeiboResource(BaseResource):
         """
         User Followers
 
-        Get Weibo user Followers data, including profile metadata and verification signals, for network analysis and creator research.
+        Retrieves a page of accounts followed by a Weibo user identified by UID. Use it to examine the account's outgoing follow network or continue through its following list.
 
         Args:
             uid: Weibo User ID (UID).
@@ -146,7 +146,7 @@ class WeiboResource(BaseResource):
         """
         User Published Posts
 
-        Get Weibo user Published Posts data, including text, media, and publish times, for account monitoring.
+        Retrieves posts published by a Weibo user identified by UID, using page numbers and a required sinceId cursor after the first page. Use it to browse an account's posting history or continue through its post feed.
 
         Args:
             uid: Weibo User ID (UID).
@@ -171,7 +171,7 @@ class WeiboResource(BaseResource):
         """
         User Video List
 
-        Get Weibo user Video list data (waterfall), including pagination cursor for next page.
+        Retrieves a Weibo user's video waterfall feed by UID, with an optional cursor from a prior response. Use it to browse videos published by a known account or continue through its video feed.
 
         Args:
             uid: Weibo User ID (UID).
@@ -193,7 +193,7 @@ class WeiboResource(BaseResource):
         """
         TV Video Details
 
-        Get Weibo tV Video Details data, including media URLs, author details, and engagement counts, for video research, archiving, and performance analysis.
+        Retrieves Weibo TV video details for a colon-delimited object ID (OID). Use it to look up a known TV video for content review, cataloging, or downstream processing.
 
         Args:
             oid: Weibo video/object ID.
@@ -211,7 +211,7 @@ class WeiboResource(BaseResource):
         """
         Hot Search
 
-        Get Weibo hot Search data, including ranking data, for trend monitoring, newsroom workflows, and topic discovery.
+        Retrieves the current Weibo hot-search ranking. Use it to identify trending topics for newsroom monitoring, content planning, or timely topic discovery.
         """
         return self._get(
             "/api/weibo/hot-search/v1",
@@ -228,7 +228,7 @@ class WeiboResource(BaseResource):
         """
         Post Comments
 
-        Get Weibo post Comments data, including text, authors, and timestamps, for feedback analysis.
+        Retrieves comments for a Weibo post identified by MID, with optional maxId cursor pagination and time or hot sorting. Use it to review audience discussion, continue through comment pages, or support moderation and feedback analysis.
 
         Args:
             mid: Weibo post mid.
@@ -256,7 +256,7 @@ class WeiboResource(BaseResource):
         """
         Search User Published Posts
 
-        Get Weibo search User Published Posts data, including matched results, metadata, and ranking signals, for author research and historical content discovery.
+        Searches posts published by a specific Weibo user, using a keyword, optional date range, and page-based pagination. Use it to find historical posts from a known account for topic research or campaign review.
 
         Args:
             uid: Weibo User ID (UID).

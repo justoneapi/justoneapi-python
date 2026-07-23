@@ -19,7 +19,7 @@ class TwitterResource(BaseResource):
         """
         Search Timeline
 
-        Search Twitter timeline data through TIKHUB, including top, latest, media, people, and list results with cursor pagination for social listening, topic tracking, and account discovery.
+        Searches X (Twitter) by keyword across top, latest, media, people, or list result modes with cursor pagination. Use it to find public conversations, accounts, media, or lists related to a topic.
 
         Args:
             keyword: Search keyword.
@@ -43,7 +43,7 @@ class TwitterResource(BaseResource):
         """
         User Profile
 
-        Get Twitter user Profile data, including account metadata, audience metrics, and verification-related fields, for accessing user profile metadata (e.g., description, location, verification status) and collecting follower and following counts.
+        Retrieves an X (Twitter) user profile identified by its numeric Rest ID. Use it to review a known account before monitoring its posts or conducting creator and account research.
 
         Args:
             rest_id: The unique numeric identifier (Rest ID) for the X user.
@@ -64,7 +64,7 @@ class TwitterResource(BaseResource):
         """
         User Published Posts
 
-        Get Twitter user Published Posts data, including post content, timestamps, and engagement data, for account monitoring and content analysis.
+        Retrieves posts published by an X (Twitter) user identified by Rest ID, with cursor pagination. Use it to browse a known account's timeline or continue through its public post history.
 
         Args:
             rest_id: The unique numeric identifier (Rest ID) for the X user.
@@ -74,6 +74,29 @@ class TwitterResource(BaseResource):
             "/api/twitter/get-user-posts/v1",
             {
                 "restId": rest_id,
+                "cursor": cursor,
+            },
+        )
+
+    def get_post_comments_v1(
+        self,
+        *,
+        tweet_id: str,
+        cursor: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Post Comments
+
+        Retrieves the latest comments for an X (Twitter) post identified by tweet ID, with cursor pagination. Use it to review recent discussion on a known post and continue through additional comment pages.
+
+        Args:
+            tweet_id: The unique identifier of the X (Twitter) post.
+            cursor: Pagination cursor returned by the previous response.
+        """
+        return self._get(
+            "/api/twitter/get-post-comments/v1",
+            {
+                "tweetId": tweet_id,
                 "cursor": cursor,
             },
         )

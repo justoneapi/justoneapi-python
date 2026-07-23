@@ -22,7 +22,7 @@ class DouyinResource(BaseResource):
         """
         Video Search
 
-        Get Douyin (TikTok China) video Search data, including metadata and engagement signals, for content discovery, trend research, and competitive monitoring.
+        Searches Douyin (TikTok China) videos by keyword with sort, publish-time, duration, and page filters; later pages require the previous search ID. Use it to support content discovery and trend research.
 
         Args:
             keyword: The search keyword.
@@ -66,7 +66,7 @@ class DouyinResource(BaseResource):
         """
         Hot Search
 
-        Get Douyin (TikTok China) hot content Search data, including ranked content items, creator signals, engagement metrics, enriched video metadata, and pagination, for trend discovery, content research, and campaign planning.
+        Searches Douyin (TikTok China) content with optional keyword, category, video-type, ranking, pagination, engagement, and creator-follower filters. Use it to support trend discovery and campaign research.
 
         Args:
             keyword: Optional search keyword.
@@ -106,6 +106,32 @@ class DouyinResource(BaseResource):
             },
         )
 
+    def get_user_video_list_v1(
+        self,
+        *,
+        sec_uid: str,
+        max_cursor: str | None = "0",
+        sort_type: str | None = "LATEST",
+    ) -> ApiResponse[Any]:
+        """
+        User Published Videos
+
+        Retrieves videos published by a Douyin (TikTok China) user, with cursor pagination and newest or most-popular sorting. Use it to browse or monitor a creator's public video output.
+
+        Args:
+            sec_uid: The unique user ID (sec_user_id) on Douyin.
+            max_cursor: Pagination cursor; use 0 for the first page, and the `max_cursor` from the previous response for subsequent pages.
+            sort_type: Sort order: `LATEST` for newest first (default), or `MOST_POPULAR` for most popular first.  Available Values: - `LATEST`: Newest first (default) - `MOST_POPULAR`: Most popular first
+        """
+        return self._get(
+            "/api/douyin/get-user-video-list/v1",
+            {
+                "secUid": sec_uid,
+                "maxCursor": max_cursor,
+                "sortType": sort_type,
+            },
+        )
+
     def search_user_v2(
         self,
         *,
@@ -116,7 +142,7 @@ class DouyinResource(BaseResource):
         """
         User Search
 
-        Get Douyin (TikTok China) user Search data, including profile metadata and follower signals, for creator discovery and account research.
+        Searches Douyin (TikTok China) users by keyword with page-based pagination and optional account-type filtering. Use it to discover creators, brands, or verified accounts for research.
 
         Args:
             keyword: The search keyword.
@@ -141,7 +167,7 @@ class DouyinResource(BaseResource):
         """
         User Published Videos
 
-        Get Douyin (TikTok China) user Published Videos data, including captions, covers, and publish times, for account monitoring.
+        Retrieves videos published by a Douyin (TikTok China) user with cursor pagination. Use it to browse a known creator's public video history or continue through video pages.
 
         Args:
             sec_uid: The unique user ID (sec_uid) on Douyin.
@@ -163,7 +189,7 @@ class DouyinResource(BaseResource):
         """
         Video Details
 
-        Get Douyin (TikTok China) video Details data, including author details, publish time, and engagement counts, for video research, archiving, and performance analysis.
+        Retrieves details for a Douyin (TikTok China) video by video ID. Use it to look up a known video before content review, archiving, or related analysis.
 
         Args:
             video_id: The unique video identifier (aweme_id or model_id).
@@ -184,7 +210,7 @@ class DouyinResource(BaseResource):
         """
         Video Comments
 
-        Get Douyin (TikTok China) video Comments data, including authors, text, and likes, for sentiment analysis and engagement review.
+        Retrieves top-level comments for a Douyin (TikTok China) video by aweme ID with page-based pagination. Use it to review audience feedback or analyze discussion around a known video.
 
         Args:
             aweme_id: The unique video identifier (aweme_id).
@@ -207,7 +233,7 @@ class DouyinResource(BaseResource):
         """
         Comment Replies
 
-        Get Douyin (TikTok China) comment Replies data, including text, authors, and timestamps, for thread analysis and feedback research.
+        Retrieves replies to a top-level Douyin (TikTok China) video comment with page-based pagination. Use it to inspect threaded discussions and review feedback under a known comment.
 
         Args:
             comment_id: The unique identifier of the top-level comment.
@@ -229,7 +255,7 @@ class DouyinResource(BaseResource):
         """
         User Profile
 
-        Get Douyin (TikTok China) user Profile data, including follower counts, verification status, and bio details, for creator research and account analysis.
+        Retrieves a Douyin (TikTok China) user profile by secUid. Use it to review a known creator or account before monitoring related content or conducting account research.
 
         Args:
             sec_uid: The unique user ID (sec_uid) on Douyin.
@@ -249,10 +275,10 @@ class DouyinResource(BaseResource):
         """
         Share Link Resolution
 
-        Get Douyin (TikTok China) share Link Resolution data, including helping extract canonical IDs, for downstream video and comment workflows.
+        Resolve a supported Douyin (TikTok China) short share link that targets a video and return its public redirect URL. Use it to expand video links before subsequent Douyin content lookup or processing.
 
         Args:
-            share_url: The Douyin short share URL.
+            share_url: A Douyin short share URL beginning with https://v.douyin.com/.
         """
         return self._get(
             "/api/douyin/share-url-transfer/v1",

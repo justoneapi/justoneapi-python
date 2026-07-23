@@ -15,7 +15,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Video Search
 
-        Searches WeChat Channels videos through the real-time WeChat web search flow. Version 1 supports publish time filtering, sort order, offset, and cookies_buffer pagination for finding recent or high-engagement Channel videos.
+        Searches WeChat Channels videos by keyword with publish-time, sort, page, offset, and continuation-state controls. Use it to find recent or ordered video results and continue web-search pages.
         """
         return self._get(
             "/api/weixin-channels/search-video/v1",
@@ -28,7 +28,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Video Search
 
-        Searches WeChat Channels videos through the categorized WeChat web search flow. Version 2 focuses on the Channels video category and keeps offset plus cookies_buffer state for continuous result collection.
+        Searches the WeChat Channels video category by keyword with page, offset, and continuation-state controls. Use it to retrieve categorized video results and continue additional pages.
         """
         return self._get(
             "/api/weixin-channels/search-video/v2",
@@ -41,7 +41,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Account Search
 
-        Searches WeChat Channels accounts through the categorized WeChat web search flow. Version 1 returns account-oriented search cards and pagination metadata, which helps discover Channel creators by keyword.
+        Searches the WeChat Channels account category by keyword with page, offset, and continuation-state controls. Use it to discover creator accounts through paginated web-search results.
         """
         return self._get(
             "/api/weixin-channels/search-account/v1",
@@ -56,7 +56,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Account Search
 
-        Searches WeChat Channels accounts and related encrypted video objects through the wxvideo keyword endpoint. Version 2 is useful when a broader account and video object result set is needed from one keyword.
+        Searches WeChat Channels account-related records by keyword using the direct Channels lookup. Use it to discover creator accounts and related channel objects without pagination input.
 
         Args:
             keyword: Search keyword used to find WeChat Channels accounts and related video objects.
@@ -76,7 +76,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Account Search
 
-        Searches for a specific WeChat Channels account id by keyword through the wxvideo account lookup endpoint. Version 3 is optimized for resolving a creator name into a v2Name identifier and account profile fields.
+        Looks up a specific WeChat Channels account identity by keyword. Use it to resolve a creator name or account term to the identifier required by account-video queries.
 
         Args:
             keyword: Search keyword used to resolve a WeChat Channels account id.
@@ -94,7 +94,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Account Videos
 
-        Returns a paginated real-time list of videos, images, and live entries from a WeChat Channels account by v2Name. The response keeps last_buffer and continue_flag fields for paging through the account feed.
+        Retrieves a paginated WeChat Channels account feed by v2Name with continuation-buffer support. Use it to browse videos and other feed entries published by a known creator account.
         """
         return self._get(
             "/api/weixin-channels/get-account-videos/v1",
@@ -110,7 +110,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Get Bound Channel
 
-        Returns the WeChat Channels account bound to a WeChat Official Account by ghid or article URL. It is useful for connecting Official Account publishing data with its related Channels creator identity.
+        Finds the WeChat Channels account bound to a WeChat Official Account using either its original ID or an article URL. Use it to connect an official account with its Channels identity.
 
         Args:
             ghid: WeChat Official Account original id used to find the bound WeChat Channels account. Use either ghid or url.
@@ -132,7 +132,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Video Basic Info
 
-        Resolves a copied WeChat Channels video link or short feed id into basic video and account fields. The response includes object id, object nonce id, title, cover, account v2Name, and interaction counts when available.
+        Resolves a copied WeChat Channels video link, preview URL, or short feed ID to basic video information. Use it to identify a shared Channels video before further lookups.
 
         Args:
             feed_info: WeChat Channels copied video link, finder-preview URL, or short feed id.
@@ -153,7 +153,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Video Title
 
-        Returns lightweight WeChat Channels video title and account fields by object id. It is suitable when only the title, media type, and account identity are needed without requesting downloadable media links.
+        Retrieves lightweight title information for a WeChat Channels video by object ID and optional nonce ID. Use it to identify known video content without requesting downloadable media.
 
         Args:
             object_id: WeChat Channels video object id.
@@ -175,7 +175,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Export Id Conversion
 
-        Converts an encrypted WeChat Channels exportId from search results into the video object id and account identity fields. Use it before calling video detail, metrics, or comment endpoints that require objectId.
+        Converts an encrypted WeChat Channels export ID from search results into a usable video object identity. Use it to prepare the identifier required by video lookup endpoints.
 
         Args:
             export_id: Encrypted WeChat Channels exportId returned by video search results.
@@ -196,7 +196,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Video Download URL
 
-        Returns downloadable and playable media links for a WeChat Channels video by object id. The endpoint also keeps video metadata such as counts, cover image, publish time, media type, and account fields when available.
+        Retrieves a downloadable media URL for a WeChat Channels video by object ID and optional nonce ID. Use it to download or play media from a known Channels video.
 
         Args:
             object_id: WeChat Channels video object id used to fetch downloadable media links.
@@ -216,7 +216,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Video Metrics
 
-        Returns WeChat Channels video interaction metrics by object id, including comment, forward, like, and favorite counts. It also preserves last_buffer and continuation flags returned by the upstream metrics flow.
+        Retrieves interaction metrics for a WeChat Channels video by object ID with optional continuation-buffer input. Use it to review engagement for known video content.
         """
         return self._get(
             "/api/weixin-channels/get-video-metrics/v1",
@@ -229,7 +229,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Video Comments
 
-        Returns first-level comments for a WeChat Channels video by object id. The response includes comment ids, author fields, like counts, reply signals, last_buffer, and continuation status for comment pagination.
+        Retrieves first-level comments for a WeChat Channels video by object ID with continuation-buffer pagination. Use it to review audience discussion on known video content.
         """
         return self._get(
             "/api/weixin-channels/get-video-comment/v1",
@@ -242,7 +242,7 @@ class WeixinChannelsResource(BaseResource):
         """
         Video Sub Comments
 
-        Returns second-level replies under a WeChat Channels video comment. Provide the video object id and root comment id from the first-level comments endpoint, and keep last_buffer for reply pagination.
+        Retrieves replies under a first-level WeChat Channels video comment using the video and root-comment IDs. Use it to continue a threaded comment discussion with buffer pagination.
         """
         return self._get(
             "/api/weixin-channels/get-video-sub-comment/v1",

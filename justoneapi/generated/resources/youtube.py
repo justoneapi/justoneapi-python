@@ -23,7 +23,7 @@ class YoutubeResource(BaseResource):
         """
         General Search
 
-        Search YouTube through TIKHUB general search, returning mixed video, channel, playlist, and movie results with continuation tokens plus filters for upload date, type, duration, features, and sort order for discovery and monitoring.
+        Search YouTube by keyword with optional type, upload-date, duration, feature, and sort filters, or continue with a token. Use it to discover videos, channels, playlists, or movies.
 
         Args:
             keyword: Search keyword. Required on the first request; leave empty when using a continuation token.
@@ -55,7 +55,7 @@ class YoutubeResource(BaseResource):
         """
         Video Details
 
-        Get YouTube video Details data, including its title, description, and view counts, for tracking video engagement and statistics, extracting video metadata for content analysis, and verifying video availability and status.
+        Retrieve public details for a YouTube video identified by video ID. Use it to inspect a known video before further content or comment analysis.
 
         Args:
             video_id: The unique identifier for a YouTube video.
@@ -76,7 +76,7 @@ class YoutubeResource(BaseResource):
         """
         Channel Videos
 
-        Retrieve a list of videos from a specific YouTube channel, providing detailed insights into content performance and upload history.
+        Retrieve public videos from a YouTube channel, with optional cursor-based pagination. Use it to browse a channel's uploads and continue through additional result pages.
 
         Args:
             channel_id: The unique identifier for a YouTube channel.
@@ -100,7 +100,7 @@ class YoutubeResource(BaseResource):
         """
         Video Captions
 
-        Get YouTube video Captions data through TIKHUB, including available caption tracks or formatted content in SRT, XML, JSON3, or plain text for transcription, localization, accessibility review, and content analysis.
+        Retrieve available caption tracks for a YouTube video or request captions in SRT, XML, JSON3, or plain-text format. Use it to support transcription, accessibility, localization, or text analysis.
 
         Args:
             video_id: The unique identifier for a YouTube video.
@@ -128,7 +128,7 @@ class YoutubeResource(BaseResource):
         """
         Video Comment List
 
-        Get first-level video comments, author profiles, like counts, reply counts, and reply cursors for audience feedback and engagement analysis.
+        Retrieve first-level comments for a YouTube video with sorting, locale options, and cursor pagination. Use it to review audience discussion or continue through additional comment pages.
 
         Args:
             video_id: The unique identifier for a YouTube video.
@@ -158,7 +158,7 @@ class YoutubeResource(BaseResource):
         """
         Video Sub Comment List
 
-        Get second-level video comment replies, reply authors, like counts, and pagination cursors for threaded discussion analysis.
+        Retrieve replies associated with a YouTube comment continuation cursor, with optional locale settings. Use it to follow threaded discussion beyond first-level comments.
 
         Args:
             cursor: Reply cursor from a first-level comment response.

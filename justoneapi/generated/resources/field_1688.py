@@ -17,7 +17,7 @@ class Field1688Resource(BaseResource):
         """
         Product Details
 
-        Get 1688 product details, including product metadata and offer information, for sourcing research and catalog analysis.
+        Retrieves the public product detail for a 1688 wholesale listing by item ID. Use it to review a known offer during product sourcing or catalog research.
 
         Args:
             item_id: A unique product identifier on 1688.
@@ -37,7 +37,7 @@ class Field1688Resource(BaseResource):
         """
         Product Search
 
-        Get 1688 product search results by keyword for sourcing discovery, supplier research, and market monitoring.
+        Searches 1688 wholesale product listings by keyword. Use it to discover candidate products or suppliers during sourcing and market research.
 
         Args:
             keyword: Search keyword.

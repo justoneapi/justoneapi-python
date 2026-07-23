@@ -9,6 +9,29 @@ from justoneapi._response import ApiResponse
 class KuaishouResource(BaseResource):
     """Generated resource for Kuaishou."""
 
+    def search_video_v1(
+        self,
+        *,
+        keyword: str,
+        cursor: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Video Search
+
+        Search public Kuaishou videos by keyword with cursor-based pagination. Use it to discover relevant videos and continue through additional result pages.
+
+        Args:
+            keyword: The search keyword to find videos.
+            cursor: Pagination cursor returned by the previous response. Omit or leave blank for the first page; maximum 256 characters.
+        """
+        return self._get(
+            "/api/kuaishou/search-video/v1",
+            {
+                "keyword": keyword,
+                "cursor": cursor,
+            },
+        )
+
     def search_video_v2(
         self,
         *,
@@ -18,7 +41,7 @@ class KuaishouResource(BaseResource):
         """
         Video Search
 
-        Get Kuaishou video Search data, including video ID, cover image, and description, for competitive analysis and market trends and keywords monitoring and brand tracking.
+        Search public Kuaishou videos by keyword with page-number pagination. Use it to discover relevant videos and browse results by page.
 
         Args:
             keyword: The search keyword to find videos.
@@ -41,7 +64,7 @@ class KuaishouResource(BaseResource):
         """
         User Search
 
-        Get Kuaishou user Search data, including profile names, avatars, and follower counts, for creator discovery and account research.
+        Search public Kuaishou user accounts by keyword with page-number pagination. Use it to discover relevant creators or accounts before requesting profile and published-video data.
 
         Args:
             keyword: The search keyword to find users.
@@ -64,7 +87,7 @@ class KuaishouResource(BaseResource):
         """
         User Published Videos
 
-        Get Kuaishou user Published Videos data, including covers, publish times, and engagement metrics, for creator monitoring and content performance analysis.
+        Retrieve public videos published by a Kuaishou user, with optional cursor-based pagination. Use it to review a creator's content history or select videos for detail and comment requests.
 
         Args:
             user_id: The unique user ID on Kuaishou.
@@ -86,10 +109,10 @@ class KuaishouResource(BaseResource):
         """
         Video Details
 
-        Get Kuaishou video Details data, including video URL, caption, and author info, for in-depth content performance analysis and building databases of viral videos.
+        Retrieve public details for a Kuaishou video identified by its video ID. Use it to inspect a selected video after search or user-published-video discovery.
 
         Args:
-            video_id: The unique ID of the Kuaishou video, e.g. `3xg9avuebhtfcku`
+            video_id: The unique video identifier returned by Kuaishou.
         """
         return self._get(
             "/api/kuaishou/get-video-detail/v2",
@@ -107,15 +130,10 @@ class KuaishouResource(BaseResource):
         """
         Video Comments
 
-        Retrieves public comments of a Kuaishou video, including comment content,
-        author info, like count, and reply count.
-
-        Typical use cases:
-        - Sentiment analysis and community feedback monitoring
-        - Gathering engagement data for specific videos
+        Retrieve public comments for a Kuaishou video, with optional cursor-based pagination. Use it to review audience discussion and continue through additional comment pages.
 
         Args:
-            video_id: The unique ID of the Kuaishou video, e.g. `3xbknvct79h46h9` or refer_photo_id `177012131237`
+            video_id: The Kuaishou video identifier or numeric refer_photo_id returned by a related response.
             pcursor: Pagination cursor for subsequent pages.
         """
         return self._get(
@@ -134,7 +152,7 @@ class KuaishouResource(BaseResource):
         """
         User Profile
 
-        Get Kuaishou user Profile data, including account metadata, audience metrics, and verification-related fields, for creator research and building creator profiles and monitoring audience growth and account status.
+        Retrieve the public profile for a Kuaishou user identified by user ID. Use it to inspect an account found through user or video results.
 
         Args:
             user_id: The unique user ID on Kuaishou.
@@ -154,10 +172,10 @@ class KuaishouResource(BaseResource):
         """
         Share Link Resolution
 
-        Get Kuaishou share Link Resolution data, including resolved content identifier and target object data, for resolving shared links for automated content processing.
+        Resolve a supported Kuaishou short share link and return its public redirect URL. Use it to expand shared links before subsequent Kuaishou content lookup or processing.
 
         Args:
-            share_url: Kuaishou share URL (must start with 'https://v.kuaishou.com/').
+            share_url: A Kuaishou short share URL beginning with https://v.kuaishou.com/.
         """
         return self._get(
             "/api/kuaishou/share-url-transfer/v1",

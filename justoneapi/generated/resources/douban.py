@@ -19,7 +19,7 @@ class DoubanResource(BaseResource):
         """
         Movie Reviews
 
-        Get Douban movie Reviews data, including review titles, ratings, and snippets, for audience sentiment analysis and review research.
+        Retrieves paginated Douban long-form reviews for a movie or TV subject, ordered by time or popularity. Use it to browse in-depth audience reviews for a known subject.
 
         Args:
             subject_id: The unique ID for a movie or TV subject on Douban.
@@ -43,7 +43,7 @@ class DoubanResource(BaseResource):
         """
         Review Details
 
-        Get Douban movie Review Details data, including metadata, content fields, and engagement signals, for review archiving and detailed opinion analysis.
+        Retrieves a single Douban long-form review by its review ID. Use it to inspect a known review after discovering it in a subject's review list.
 
         Args:
             review_id: The unique ID for a specific review on Douban.
@@ -65,7 +65,7 @@ class DoubanResource(BaseResource):
         """
         Comments
 
-        Get Douban movie Comments data, including ratings, snippets, and interaction counts, for quick sentiment sampling and review monitoring.
+        Retrieves paginated Douban short comments for a movie or TV subject, ordered by time or newest rating. Use it to review concise audience feedback for a known subject.
 
         Args:
             subject_id: The unique ID for a movie or TV subject on Douban.
@@ -89,7 +89,7 @@ class DoubanResource(BaseResource):
         """
         Subject Details
 
-        Get Douban subject Details data, including title, rating, and cast, for title enrichment and catalog research.
+        Retrieves the public detail page data for a Douban movie or TV subject by subject ID. Use it to inspect a known title before requesting its reviews or comments.
 
         Args:
             subject_id: The unique ID for a movie or TV subject on Douban.
@@ -109,7 +109,7 @@ class DoubanResource(BaseResource):
         """
         Recent Hot Movie
 
-        Get Douban recent Hot Movie data, including ratings, posters, and subject metadata, for movie discovery and trend monitoring.
+        Retrieves a paginated list of movies currently featured in Douban's recent-hot collection. Use it to discover popular movie titles and continue through result pages.
 
         Args:
             page: Page number for pagination.
@@ -129,7 +129,7 @@ class DoubanResource(BaseResource):
         """
         Recent Hot Tv
 
-        Get Douban recent Hot Tv data, including ratings, posters, and subject metadata, for series discovery and trend monitoring.
+        Retrieves a paginated list of TV titles currently featured in Douban's recent-hot collection. Use it to discover popular series and continue through result pages.
 
         Args:
             page: Page number for pagination.

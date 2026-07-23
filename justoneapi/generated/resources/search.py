@@ -21,7 +21,7 @@ class SearchResource(BaseResource):
         """
         Cross-Platform Search
 
-        Get cross-platform social media search data, including Xiaohongshu, Douyin, Kuaishou, WeChat, Bilibili, Weibo and Zhihu results, for trend research and monitoring.
+        Searches recent content across news, Weibo, WeChat, Zhihu, Douyin, Xiaohongshu, Bilibili, and Kuaishou with source and time filters. Use it to monitor a topic across multiple platforms.
 
         Args:
             keyword: Search query string. Supports: - Multiple keywords (AND): keyword1 keyword2 - Multiple keywords (OR): keyword1~keyword2 - Excluded keywords (NOT): required_keyword -excluded_keyword

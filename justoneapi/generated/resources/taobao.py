@@ -17,10 +17,10 @@ class TaobaoResource(BaseResource):
         """
         Product Details
 
-        Get Taobao and Tmall product Details data, including pricing, images, and shop details, for product research, catalog monitoring, and ecommerce analysis.
+        Retrieves Taobao or Tmall product details by item ID through the V1 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.
 
         Args:
-            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
         """
         return self._get(
             "/api/taobao/get-item-detail/v1",
@@ -37,10 +37,10 @@ class TaobaoResource(BaseResource):
         """
         Product Details
 
-        Taobao and Tmall product Details v2 is available in the Just One API dashboard Task Management page. Direct API calls return setup instructions instead of product data.
+        Access the asynchronous Taobao and Tmall product detail workflow from the Just One API dashboard Task Management page. Use it to submit and download product detail research tasks.
 
         Args:
-            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
         """
         return self._get(
             "/api/taobao/get-item-detail/v2",
@@ -57,10 +57,10 @@ class TaobaoResource(BaseResource):
         """
         Product Details
 
-        Get Taobao and Tmall product Details data, including pricing, images, and shop details, for product research, catalog monitoring, and ecommerce analysis.
+        Retrieves Taobao or Tmall product details by item ID through the V4 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.
 
         Args:
-            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
         """
         return self._get(
             "/api/taobao/get-item-detail/v4",
@@ -77,10 +77,10 @@ class TaobaoResource(BaseResource):
         """
         Product Details
 
-        Get Taobao and Tmall product Details data, including pricing, images, and shop details, for product research, catalog monitoring, and ecommerce analysis.
+        Retrieves Taobao or Tmall product details by item ID through the V5 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.
 
         Args:
-            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
         """
         return self._get(
             "/api/taobao/get-item-detail/v5",
@@ -97,10 +97,10 @@ class TaobaoResource(BaseResource):
         """
         Product Details
 
-        Get Taobao and Tmall product Details data, including pricing, images, and shop details, for product research, catalog monitoring, and ecommerce analysis.
+        Retrieves Taobao or Tmall product details by item ID through the V9 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.
 
         Args:
-            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
         """
         return self._get(
             "/api/taobao/get-item-detail/v9",
@@ -115,16 +115,18 @@ class TaobaoResource(BaseResource):
         item_id: str,
         order_type: str | None = "feedbackdate",
         page: int | None = 1,
+        content: str | None = "SHOW_DEFAULT_POSITIVE_REVIEWS",
     ) -> ApiResponse[Any]:
         """
         Product Reviews
 
-        Get Taobao and Tmall product Reviews data, including ratings, timestamps, and reviewer signals, for feedback analysis and product research.
+        Retrieves Taobao and Tmall product reviews by item ID with page-based pagination, configurable sorting, and optional exclusion of default positive reviews. Use it to analyze customer feedback.
 
         Args:
-            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
             order_type: Sort order for the result set.  Available Values: - `feedbackdate`: Sort by feedback date - `general`: General sorting
             page: Page number for pagination.
+            content: Controls default positive reviews. Use `1` to hide them; omit this parameter to include them (default).  Available Values: - `SHOW_DEFAULT_POSITIVE_REVIEWS`: Include default positive reviews (default) - `HIDE_DEFAULT_POSITIVE_REVIEWS`: Hide default positive reviews
         """
         return self._get(
             "/api/taobao/get-item-comment/v3",
@@ -132,6 +134,7 @@ class TaobaoResource(BaseResource):
                 "itemId": item_id,
                 "orderType": order_type,
                 "page": page,
+                "content": content,
             },
         )
 
@@ -144,7 +147,7 @@ class TaobaoResource(BaseResource):
         """
         Product Questions
 
-        Get Taobao and Tmall product question feed data, including buyer questions and related social content, for product research, customer concern analysis, and ecommerce monitoring.
+        Retrieves the Taobao or Tmall product social feed by item ID with page-based pagination. Use it to review product questions and related discussion during customer-concern or product research.
 
         Args:
             item_id: Unique product identifier on Taobao/Tmall (item ID).
@@ -168,7 +171,7 @@ class TaobaoResource(BaseResource):
         """
         Shop Product List
 
-        Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.
+        Retrieves products from a Taobao or Tmall shop by seller or user ID, with page-based pagination and default or sales sorting. Use it to browse or monitor a seller catalog.
 
         Args:
             user_id: Shop identifier. Also known as Seller ID or User ID (they refer to the same value).
@@ -195,7 +198,7 @@ class TaobaoResource(BaseResource):
         """
         Shop Product List
 
-        Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.
+        Retrieves products from a Taobao or Tmall shop using both seller or user ID and shop ID, with page-based pagination and configurable sorting. Use it to browse a known shop catalog.
 
         Args:
             user_id: Shop identifier. Also known as Seller ID or User ID (they refer to the same value).
@@ -213,35 +216,6 @@ class TaobaoResource(BaseResource):
             },
         )
 
-    def get_shop_item_list_v3(
-        self,
-        *,
-        user_id: str,
-        shop_id: str,
-        sort: str | None = "coefp",
-        page: int | None = 1,
-    ) -> ApiResponse[Any]:
-        """
-        Shop Product List
-
-        Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.
-
-        Args:
-            user_id: Shop identifier. Also known as Seller ID or User ID (they refer to the same value).
-            shop_id: Unique shop identifier on Taobao/Tmall (shop ID).
-            sort: Sort order for the result set.  Available Values: - `coefp`: Comprehensive sorting - `hotsell`: Hot selling / Sales volume - `oldstarts`: New arrivals / Old starts - `bid`: Price: Low to High - `_bid`: Price: High to Low
-            page: Page number for pagination.
-        """
-        return self._get(
-            "/api/taobao/get-shop-item-list/v3",
-            {
-                "userId": user_id,
-                "shopId": shop_id,
-                "sort": sort,
-                "page": page,
-            },
-        )
-
     def get_shop_item_list_v4(
         self,
         *,
@@ -251,10 +225,10 @@ class TaobaoResource(BaseResource):
         """
         Shop Product List
 
-        Get Taobao and Tmall shop Product List data from a seller ID, including product titles, prices, images, pagination data, and shop item attributes, for seller catalog monitoring, product research, assortment tracking, and ecommerce analysis.
+        Retrieves products from a Taobao or Tmall shop by seller ID with page-based pagination. Use it to browse or monitor a known seller's catalog across result pages.
 
         Args:
-            seller_id: Seller identifier on Taobao/Tmall. This value is sent to the supplier as `userId`.
+            seller_id: Taobao/Tmall seller user ID used to identify the shop.
             page: Page number for pagination.
         """
         return self._get(
@@ -273,10 +247,10 @@ class TaobaoResource(BaseResource):
         """
         Product Sales
 
-        Get Taobao and Tmall product sales data for sales tracking, product research, and ecommerce monitoring.
+        Retrieves the 30-day sales count for a Taobao or Tmall product by item ID. Use it to compare recent product sales or support ecommerce monitoring and product research.
 
         Args:
-            item_id: AUnique product identifier on Taobao/Tmall (item ID).
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
         """
         return self._get(
             "/api/taobao/get-item-sale/v1",
@@ -298,7 +272,7 @@ class TaobaoResource(BaseResource):
         """
         Product Search
 
-        Get Taobao and Tmall product Search data, including titles, prices, and images, for product discovery.
+        Searches Taobao and Tmall products by keyword with page, sort, optional Tmall-only, and inclusive price-range filters. Use it to discover products and narrow ecommerce research.
 
         Args:
             keyword: Search keyword.

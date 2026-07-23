@@ -17,7 +17,7 @@ class JdResource(BaseResource):
         """
         Product Details
 
-        Get JD.com product Details data, including pricing, images, and shop information, for catalog analysis, product monitoring, and ecommerce research.
+        Retrieve JD.com product details for a known item ID. Use it to inspect an individual product after finding its identifier.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
@@ -37,7 +37,7 @@ class JdResource(BaseResource):
         """
         Product Details
 
-        JD.com product Details v2 is available in the Just One API dashboard Task Management page. Direct API calls return setup instructions instead of product data.
+        Access the asynchronous JD.com product detail workflow from the Just One API dashboard Task Management page. Use it to submit and download product detail research tasks.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
@@ -57,7 +57,7 @@ class JdResource(BaseResource):
         """
         Product Details
 
-        Get JD.com product Details data, including product metadata, current price, available coupon and promotion information, and the price after applying coupons, for catalog analysis, price monitoring, deal tracking, and ecommerce research.
+        Retrieves JD.com product details for a known item ID. Use it to review a known listing during product research or offer comparison.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
@@ -77,7 +77,7 @@ class JdResource(BaseResource):
         """
         Product Price
 
-        Get JD.com product Price data for price monitoring, catalog checks, repricing workflows, and ecommerce research.
+        Retrieve the current JD.com product price for a known item ID. Use it to check a product's price before catalog comparison or purchase analysis.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
@@ -98,7 +98,7 @@ class JdResource(BaseResource):
         """
         Product Search
 
-        Get JD.com product Search data, including matched items and product metadata, for product discovery, catalog research, and market monitoring.
+        Search JD.com products by keyword with page-based pagination. Use it to discover products and collect item IDs for follow-up lookups.
 
         Args:
             keyword: Search keyword.
@@ -121,7 +121,7 @@ class JdResource(BaseResource):
         """
         Product Search
 
-        Get JD.com product Search data sorted by sales volume, including matched items and product metadata, for product discovery, catalog research, and market monitoring.
+        Search JD.com products by keyword with page-based pagination and sales-volume ordering. Use it to discover popular products and collect item IDs for follow-up lookups.
 
         Args:
             keyword: Search keyword.
@@ -144,7 +144,7 @@ class JdResource(BaseResource):
         """
         Product Comments
 
-        Get JD.com product Comments data, including ratings, timestamps, and reviewer signals, for customer feedback analysis and product research.
+        Retrieve paginated customer comments for a JD.com product identified by item ID. Use it to review buyer feedback for a known product.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
@@ -168,7 +168,7 @@ class JdResource(BaseResource):
         """
         Product Comments
 
-        Get JD.com product Comments data, including comment text, ratings, timestamps, images, and SKU or SPU comment scope, for customer feedback analysis and product research.
+        Retrieve paginated JD.com product comments with selectable SKU- or SPU-level scope. Use it to review buyer feedback at the requested product scope.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
@@ -193,11 +193,11 @@ class JdResource(BaseResource):
         """
         Shop Product List
 
-        Get JD.com shop Product List data, including item titles, prices, and images, for catalog tracking and seller research.
+        Retrieve a page of products from a JD.com shop identified by shop ID. Use it to browse a seller's catalog and collect item IDs for follow-up lookups.
 
         Args:
             shop_id: A unique shop identifier on JD.com (Shop ID).
-            page: Page number for paginated comments.
+            page: Page number for the paginated shop product list.
         """
         return self._get(
             "/api/jd/get-shop-item-list/v1",

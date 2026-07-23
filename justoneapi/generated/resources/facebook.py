@@ -20,7 +20,7 @@ class FacebookResource(BaseResource):
         """
         Post Search
 
-        Get Facebook post Search data, including matched results, metadata, and ranking signals, for discovering relevant public posts for specific keywords and analyzing engagement and reach of public content on facebook.
+        Searches public Facebook posts by keyword with optional inclusive date-range filters and cursor pagination. Use it to find topic-related posts or continue a time-bounded public-content search.
 
         Args:
             keyword: Keyword to search for in public posts. Supports basic text matching.
@@ -46,10 +46,10 @@ class FacebookResource(BaseResource):
         """
         Get Profile ID
 
-        Retrieve the unique Facebook profile ID from a given profile URL.
+        Resolves the Facebook profile ID associated with a submitted profile-path value. Use it to obtain the identifier required before retrieving posts for a known public profile.
 
         Args:
-            url: The path part of the Facebook profile URL. Do not include `https://www.facebook.com`. Example: `/people/To-Bite/pfbid021XLeDjjZjsoWse1H43VEgb3i1uCLTpBvXSvrnL2n118YPtMF5AZkBrZobhWWdHTHl/`
+            url: The path portion of the Facebook profile URL, such as /<profile-path>. Do not include the scheme or host.
         """
         return self._get(
             "/api/facebook/get-profile-id/v1",
@@ -67,7 +67,7 @@ class FacebookResource(BaseResource):
         """
         Get Profile Posts
 
-        Get public posts from a specific Facebook profile using its profile ID.
+        Retrieves public posts for a Facebook profile ID with cursor pagination. Use it to browse a known profile's public posting history or continue through subsequent post pages.
 
         Args:
             profile_id: The unique Facebook profile ID.
@@ -77,6 +77,29 @@ class FacebookResource(BaseResource):
             "/api/facebook/get-profile-posts/v1",
             {
                 "profileId": profile_id,
+                "cursor": cursor,
+            },
+        )
+
+    def get_post_comments_v1(
+        self,
+        *,
+        post_id: str,
+        cursor: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Post Comments
+
+        Retrieves comments for a Facebook post ID with cursor pagination. Use it to review discussion associated with a known public post or continue through subsequent comment pages.
+
+        Args:
+            post_id: The unique identifier of the Facebook post.
+            cursor: Pagination cursor for fetching the next set of comments.
+        """
+        return self._get(
+            "/api/facebook/get-post-comments/v1",
+            {
+                "postId": post_id,
                 "cursor": cursor,
             },
         )

@@ -19,12 +19,12 @@ class WeixinResource(BaseResource):
         """
         Account Today Articles
 
-        Returns articles published today by a WeChat Official Account. The account can be identified by biz id, article URL, account name, or wxid, making this endpoint useful for monitoring same-day account publishing activity.
+        Retrieves articles published today by a WeChat Official Account identified by biz ID, article URL, account name, or wxid. Use it to monitor same-day publishing activity for a known account.
 
         Args:
             biz: WeChat Official Account biz id. You can read it from the __biz query parameter in an article URL. Use one of biz, url, or name.
             url: WeChat Official Account article URL used to identify the account. Use one of biz, url, or name.
-            name: WeChat Official Account name or wxid, for example People's Daily. Use one of biz, url, or name.
+            name: WeChat Official Account name or wxid. Use one of biz, url, or name.
         """
         return self._get(
             "/api/weixin/get-account-today-articles/v1",
@@ -46,12 +46,12 @@ class WeixinResource(BaseResource):
         """
         Account Historical Articles
 
-        Returns paginated historical articles for a WeChat Official Account identified by biz id, article URL, account name, or wxid. This version uses page-number pagination for browsing an account's article archive.
+        Retrieves page-number-paginated historical articles for a WeChat Official Account identified by biz ID, article URL, account name, or wxid. Use it to browse an account's article archive one page at a time.
 
         Args:
             biz: WeChat Official Account biz id. You can read it from the __biz query parameter in an article URL. Use one of biz, url, or name.
             url: WeChat Official Account article URL used to identify the account. Use one of biz, url, or name.
-            name: WeChat Official Account name or wxid, for example People's Daily. Use one of biz, url, or name.
+            name: WeChat Official Account name or wxid. Use one of biz, url, or name.
             page: Page number starting from 1 for paginated WeChat Official Account historical articles.
         """
         return self._get(
@@ -70,7 +70,7 @@ class WeixinResource(BaseResource):
         """
         Account Historical Articles
 
-        Returns historical articles for a WeChat Official Account identified by ghid or article URL. This version uses the PagingInfo.Offset string cursor returned by the upstream response, which is better for stable continuous pagination.
+        Retrieves historical articles for a WeChat Official Account identified by ghid or article URL, with an offset cursor from the previous page. Use it to continue through an account's article archive with cursor pagination.
         """
         return self._get(
             "/api/weixin/get-account-history-articles/v2",
@@ -85,7 +85,7 @@ class WeixinResource(BaseResource):
         """
         Article Metrics
 
-        Returns basic interaction metrics for a WeChat Official Account article by article URL, including core signals such as reads and likes. Use it for lightweight article popularity checks.
+        Retrieves basic interaction metrics for a WeChat Official Account article URL that ends with #rd or #wechat_redirect. Use it to perform a lightweight popularity check for a known article.
 
         Args:
             article_url: WeChat Official Account article URL used to fetch basic interaction metrics such as reads and likes. It must end with #rd or #wechat_redirect.
@@ -105,7 +105,7 @@ class WeixinResource(BaseResource):
         """
         Article Metrics
 
-        Returns extended interaction metrics for a WeChat Official Account article by article URL, covering a richer set of read, like, and related engagement fields for article performance analysis.
+        Retrieves extended interaction metrics for a WeChat Official Account article by URL. Use it to compare article performance or support deeper engagement analysis for known content.
 
         Args:
             article_url: WeChat Official Account article URL used to fetch extended interaction and article performance metrics.
@@ -126,7 +126,7 @@ class WeixinResource(BaseResource):
         """
         Article Details
 
-        Returns WeChat Official Account article details by article URL. Version 1 supports the mode enum to choose plain text or rich text content when supported, and is suitable for collecting article body content with basic metadata.
+        Retrieves a WeChat Official Account article by URL with selectable plain-text or rich-text content mode. Use it to collect a known article in the preferred representation for reading, extraction, or storage.
 
         Args:
             article_url: WeChat Official Account article URL used to fetch article detail content and metadata.
@@ -148,7 +148,7 @@ class WeixinResource(BaseResource):
         """
         Article Details
 
-        Returns structured WeChat Official Account article details by article URL. Version 2 focuses on fields such as title, cover image, author, publish time, original link, and content HTML fragment for parsing and storage.
+        Retrieves structured details for a WeChat Official Account article by URL. Use it to collect a known article for parsing, indexing, or structured content archiving.
 
         Args:
             article_url: WeChat Official Account article URL used to fetch structured article detail fields and an HTML content fragment.
@@ -169,7 +169,7 @@ class WeixinResource(BaseResource):
         """
         Article Details
 
-        Returns WeChat Official Account article details with additional video-related fields when available. Version 3 is useful for articles that contain video material or Channel-related media references.
+        Retrieves details for a WeChat Official Account article that may include video content, with selectable plain-text or rich-text mode. Use it to process known articles containing video material.
 
         Args:
             article_url: WeChat Official Account article URL used to fetch article details with video-related fields when available.
@@ -191,7 +191,7 @@ class WeixinResource(BaseResource):
         """
         Article Details
 
-        Returns a full HTML document for a WeChat Official Account article, including html, head, body, and article styles. Version 4 is suitable for rendering previews, archival storage, or page-level preservation.
+        Retrieves an HTML representation of a WeChat Official Account article by URL. Use it to preserve, render, or archive a known article as a web document.
 
         Args:
             article_url: WeChat Official Account article URL used to fetch a full HTML document for rendering or archiving.
@@ -211,7 +211,7 @@ class WeixinResource(BaseResource):
         """
         Article Details
 
-        Returns lightweight WeChat Official Account article information by article URL. Version 5 focuses on base metadata and status fields such as title, cover image, publish time, and account information.
+        Retrieves lightweight information for a WeChat Official Account article by URL. Use it to perform a quick article lookup before deeper content, metric, or comment retrieval.
 
         Args:
             article_url: WeChat Official Account article URL used to fetch lightweight article metadata and status information.
@@ -229,7 +229,7 @@ class WeixinResource(BaseResource):
         """
         Article Comments
 
-        Returns top-level comments for a WeChat Official Account article by article URL. The response keeps comment data, total count, and buffer pagination fields for continuous comment collection.
+        Retrieves top-level comments for a WeChat Official Account article by URL, with an optional buffer cursor for pagination. Use it to review reader discussion or continue through comment pages for a known article.
         """
         return self._get(
             "/api/weixin/get-article-comment/v1",
@@ -245,7 +245,7 @@ class WeixinResource(BaseResource):
         """
         Article Comment Replies
 
-        Returns nested replies for a WeChat Official Account article comment. Use the article URL and top-level contentId to collect reply threads and complete the article comment conversation chain.
+        Retrieves replies under a top-level comment for a WeChat Official Account article, identified by article URL and contentId. Use it to inspect threaded discussion beneath a known comment.
 
         Args:
             article_url: WeChat Official Account article URL used to fetch replies under a top-level comment.
@@ -272,7 +272,7 @@ class WeixinResource(BaseResource):
         """
         Hot Article Search
 
-        Searches hot and viral WeChat Official Account articles within a date range. It supports keyword, publish type, category, and page parameters for discovering high-performing account content.
+        Searches hot WeChat Official Account articles within a required date range, with optional keyword plus publication-format, category, and page filters. Use it to identify high-interest content for trend research or editorial benchmarking.
 
         Args:
             start_day: Start date for hot article search in yyyy-MM-dd format.
@@ -300,7 +300,7 @@ class WeixinResource(BaseResource):
         """
         Article Search
 
-        Searches WeChat Official Account articles through the WeChat web search flow. Version 1 supports publish time filtering, sort type, offset, and cookies_buffer pagination for retrieving fresh web-side article results.
+        Searches WeChat Official Account articles by keyword with publish-time and sort filters plus page, offset, and continuation-state pagination. Use it to discover recent or high-interest articles for topic research and content monitoring.
         """
         return self._get(
             "/api/weixin/search-article/v1",
@@ -313,7 +313,7 @@ class WeixinResource(BaseResource):
         """
         Article Search
 
-        Searches WeChat Official Account articles through the categorized WeChat web search flow. Version 2 uses subSearchType for focused result categories and keeps offset and cookies_buffer for continuous pagination.
+        Searches WeChat Official Account articles by keyword within a selected category such as followed accounts, latest, recently read, or hot, with continuation pagination. Use it to focus article discovery on a particular result stream.
         """
         return self._get(
             "/api/weixin/search-article/v2",
@@ -326,7 +326,7 @@ class WeixinResource(BaseResource):
         """
         Mini Program Search
 
-        Searches WeChat mini programs through the WeChat web search flow. It complements WeChat Official Account analysis by finding mini program entry points and related brand ecosystem signals.
+        Searches WeChat Mini Programs by keyword with page, offset, and continuation-state pagination. Use it to discover mini programs related to a brand, service, topic, or product.
         """
         return self._get(
             "/api/weixin/search-miniprogram/v1",
@@ -341,7 +341,7 @@ class WeixinResource(BaseResource):
         """
         WeChat Index Search
 
-        Returns WeChat Index keyword search results. Use it with WeChat Official Account article and account analysis to observe keyword trend signals inside the WeChat ecosystem.
+        Queries WeChat Index for a keyword. Use it to examine trend interest within WeChat before planning content, campaigns, or further article research.
 
         Args:
             keyword: Keyword used to query WeChat Index trend signals.
@@ -362,7 +362,7 @@ class WeixinResource(BaseResource):
         """
         Search Suggestions
 
-        Returns WeChat search suggestions for a keyword. It is useful for autocomplete and query expansion in WeChat Official Account article search, account search, and content discovery workflows.
+        Retrieves WeChat search suggestions for a keyword, optionally scoped by a supported business type. Use it to expand or refine a query before a targeted WeChat search.
 
         Args:
             keyword: Keyword used to fetch WeChat search suggestions.
@@ -385,7 +385,7 @@ class WeixinResource(BaseResource):
         """
         Account Search
 
-        Searches WeChat Official Account profiles by keyword. Version 1 returns one account result per page with server-side fixed page size, which is useful for discovering accounts by name and basic identity signals.
+        Searches WeChat Official Accounts by keyword with page-number pagination and one result per page. Use it to find an account by name or related term before profile or article lookup.
 
         Args:
             keyword: Search keyword for WeChat Official Account profiles.
@@ -405,7 +405,7 @@ class WeixinResource(BaseResource):
         """
         Account Search
 
-        Searches WeChat Official Account profiles through the WeChat web search flow. Version 2 keeps offset and cookies_buffer pagination state for continuously retrieving broader account result sets.
+        Searches WeChat Official Accounts by keyword with page, offset, and continuation-state pagination. Use it to browse broader account results for creator, brand, or publisher discovery.
         """
         return self._get(
             "/api/weixin/search-account/v2",
@@ -421,10 +421,10 @@ class WeixinResource(BaseResource):
         """
         Account Original Article Count
 
-        Returns the original article count for a WeChat Official Account identified by ghid or article URL. Use it to evaluate account originality and long-term content quality.
+        Retrieves the original-article count for a WeChat Official Account identified by ghid or article URL. Use it to compare original publishing activity across known accounts.
 
         Args:
-            ghid: WeChat Official Account original id, for example gh_363b924965e9. Use either ghid or url.
+            ghid: WeChat Official Account original identifier, using the gh_ prefix returned by WeChat. Use either ghid or url.
             url: WeChat Official Account article URL used to identify the account. Use either ghid or url.
         """
         return self._get(
@@ -445,7 +445,7 @@ class WeixinResource(BaseResource):
         """
         Account Principal Info
 
-        Returns principal and registration information for a WeChat Official Account. The account can be identified by biz id, article URL, or wxid, which helps verify ownership and operating entity details.
+        Retrieves principal information for a WeChat Official Account identified by biz ID, article URL, or wxid. Use it to review the ownership or operating entity behind a known account.
 
         Args:
             biz: WeChat Official Account biz id. Use one of biz, url, or wxid.
@@ -469,7 +469,7 @@ class WeixinResource(BaseResource):
         """
         Account Basic Info
 
-        Returns basic profile information for a WeChat Official Account by account name, including fields such as avatar and account type when available. Use it for quick account profile enrichment.
+        Retrieves basic profile information for a WeChat Official Account by account name. Use it to identify or enrich a known account before article, ownership, or publishing research.
 
         Args:
             name: WeChat Official Account name used to fetch basic profile information.
@@ -489,7 +489,7 @@ class WeixinResource(BaseResource):
         """
         Article Link Conversion
 
-        Converts a WeChat Official Account article link into a normalized destination URL. It is useful for resolving short links or intermediate links before article collection.
+        Expands a WeChat Official Account article link to its resolved long-form destination. Use it to normalize a short or intermediate link before article lookup or collection.
 
         Args:
             link: WeChat Official Account article short link or intermediate link to convert.

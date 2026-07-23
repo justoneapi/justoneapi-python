@@ -17,7 +17,7 @@ class InstagramResource(BaseResource):
         """
         User Profile
 
-        Get Instagram user Profile data, including follower count, following count, and post count, for obtaining basic account metadata for influencer vetting, tracking follower growth and audience reach over time, and mapping user handles to specific profile stats.
+        Retrieves an Instagram user profile by username. Use it to review a known account before creator research, brand monitoring, or related post analysis.
 
         Args:
             username: The Instagram username whose profile details are to be retrieved.
@@ -37,10 +37,10 @@ class InstagramResource(BaseResource):
         """
         Post Details
 
-        Get Instagram post Details data, including post caption, media content (images/videos), and publish time, for analyzing engagement metrics (likes/comments) for a specific post and archiving post content and media assets for content analysis.
+        Retrieves an Instagram post by its shortcode. Use it to look up a known post before content review, archiving, comment analysis, or related workflows.
 
         Args:
-            code: The unique shortcode (slug) for the Instagram post (e.g., 'DRhvwVLAHAG').
+            code: The unique shortcode from the Instagram post URL.
         """
         return self._get(
             "/api/instagram/get-post-detail/v1",
@@ -58,7 +58,7 @@ class InstagramResource(BaseResource):
         """
         User Published Posts
 
-        Get Instagram user Published Posts data, including post code, caption, and media type, for monitoring recent publishing activity of a specific user and building a historical record of content for auditing or analysis.
+        Retrieves posts published by an Instagram user with token-based pagination. Use it to browse a known account's post history or continue through subsequent result pages.
 
         Args:
             username: The Instagram username whose published posts are to be retrieved.
@@ -81,7 +81,7 @@ class InstagramResource(BaseResource):
         """
         Reels Search
 
-        Get Instagram reels Search data, including post ID, caption, and author profile, for tracking trends and viral content via specific keywords or hashtags and discovering high-engagement reels within a particular niche.
+        Searches Instagram Reels by keyword or hashtag with token-based pagination. Use it to discover short-form videos, monitor topics, and continue through matching results.
 
         Args:
             keyword: The search keyword or hashtag to filter Reels.
@@ -104,7 +104,7 @@ class InstagramResource(BaseResource):
         """
         Hashtag Posts Search
 
-        Get Instagram hashtag Posts Search data, including caption, author profile, and publish time, for competitive analysis of trending topics and hashtags and monitoring community discussions and public opinion on specific tags.
+        Searches Instagram posts by hashtag with cursor pagination. Use it to explore tagged content, monitor topics, and continue through subsequent result pages.
 
         Args:
             hashtag: The hashtag or keyword to search for.
@@ -128,7 +128,7 @@ class InstagramResource(BaseResource):
         """
         Post Comment List
 
-        Get post comments, commenter profiles, text, like counts, reply counts, and pagination cursors for sentiment review and engagement analysis.
+        Retrieves top-level comments for an Instagram post by shortcode, with cursor pagination and popular or newest sorting. Use it to review audience feedback or analyze discussion around a known post.
 
         Args:
             code: The unique shortcode for the Instagram post.
@@ -154,7 +154,7 @@ class InstagramResource(BaseResource):
         """
         Comment Reply List
 
-        Get replies under a parent comment, including reply text, author details, like counts, IDs, and pagination cursors for threaded discussion analysis.
+        Retrieves replies to a specific Instagram post comment by media and comment IDs, with cursor pagination. Use it to inspect threaded discussion and continue through reply pages.
 
         Args:
             media_id: The numeric media ID of the Instagram post.

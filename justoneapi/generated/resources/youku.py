@@ -18,7 +18,7 @@ class YoukuResource(BaseResource):
         """
         Video Search
 
-        Get YOUKU video Search data, including video ID, title, and cover image, for keyword-based video discovery, monitoring specific topics or trends on youku, and analyzing search results for market research.
+        Searches Youku videos by keyword with page-based pagination. Use it to discover videos related to a topic, title, creator, or other search term.
 
         Args:
             keyword: Keyword to search for.
@@ -40,7 +40,7 @@ class YoukuResource(BaseResource):
         """
         Video Details
 
-        Get YOUKU video Details data, including video ID, title, and description, for fetching comprehensive metadata for a single video, tracking engagement metrics like play counts and likes, and integrating detailed video info into third-party dashboards.
+        Retrieves details for a Youku video identified by video ID. Use it to look up a known video for content review, cataloging, or subsequent video analysis.
 
         Args:
             video_id: The unique identifier for the video.
@@ -60,7 +60,7 @@ class YoukuResource(BaseResource):
         """
         User Profile
 
-        Get YOUKU user Profile data, including user ID, username, and avatar, for analyzing creator influence and audience size, monitoring account growth and verification status, and fetching basic user info for social crm.
+        Retrieves a Youku user profile identified by UID. Use it to look up a known account for creator research, profile review, or related video discovery.
 
         Args:
             uid: The unique identifier for the user.

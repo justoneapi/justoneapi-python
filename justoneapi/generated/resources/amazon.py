@@ -23,7 +23,7 @@ class AmazonResource(BaseResource):
         """
         Product Search
 
-        Search Amazon product listings by keyword or ASIN, including title, price, rating, Prime signals, product photos, delivery details, and pagination metadata for discovery, catalog enrichment, market research, price monitoring, and competitor analysis.
+        Searches Amazon marketplace products by keyword or ASIN with country, sort, condition, Prime-only, deals, and page controls. Use it to discover products for catalog research, price comparison, or competitive assortment analysis.
 
         Args:
             keyword: Search keyword or ASIN to find Amazon products.
@@ -56,7 +56,7 @@ class AmazonResource(BaseResource):
         """
         Product Details
 
-        Get Amazon product Details data, including title, brand, and price, for building product catalogs and enriching item content (e.g., images), price monitoring and availability tracking, and e-commerce analytics and competitor tracking.
+        Retrieves details for an Amazon product identified by ASIN in a selected country marketplace. Use it to look up a known listing for catalog review, product comparison, or downstream commerce analysis.
 
         Args:
             asin: ASIN (Amazon Standard Identification Number).
@@ -79,7 +79,7 @@ class AmazonResource(BaseResource):
         """
         Product Top Reviews
 
-        Get Amazon product Top Reviews data, including most helpful) public reviews, for sentiment analysis and consumer feedback tracking, product research and quality assessment, and monitoring competitor customer experience.
+        Retrieves the top reviews for an Amazon product identified by ASIN in a selected country marketplace. Use it to review prominent customer feedback for product research, sentiment analysis, or quality assessment.
 
         Args:
             asin: ASIN (Amazon Standard Identification Number).
@@ -103,10 +103,10 @@ class AmazonResource(BaseResource):
         """
         Best Sellers
 
-        Get Amazon best Sellers data, including rank positions, product metadata, and pricing, for identifying trending products in specific categories, market share analysis and category research, and tracking sales rank and popularity over time.
+        Retrieves paginated Amazon Best Sellers for a category path in a selected country marketplace. Use it to study category leaders, discover popular products, or compare bestseller pages across marketplaces.
 
         Args:
-            category: Best sellers category path, for example 'baby-products' or 'baby-products/166777011', from an Amazon Best Sellers URL.
+            category: Best Sellers category path taken from an Amazon Best Sellers URL. It may be a category slug or a nested category path.
             country: Country code for the Amazon product.  Available Values: - `US`: United States - `AU`: Australia - `BR`: Brazil - `CA`: Canada - `CN`: China - `FR`: France - `DE`: Germany - `IN`: India - `IT`: Italy - `MX`: Mexico - `NL`: Netherlands - `SG`: Singapore - `ES`: Spain - `TR`: Turkey - `AE`: United Arab Emirates - `GB`: United Kingdom - `JP`: Japan - `SA`: Saudi Arabia - `PL`: Poland - `SE`: Sweden - `BE`: Belgium - `EG`: Egypt - `ZA`: South Africa - `IE`: Ireland
             page: Page number for pagination.
         """
@@ -130,10 +130,10 @@ class AmazonResource(BaseResource):
         """
         Products By Category
 
-        Get Amazon products By Category data, including title, price, and rating, for category-based product discovery and returns product information such as title, price, and rating.
+        Retrieves paginated Amazon products for a numeric category node in a selected country marketplace, with configurable result sorting. Use it to browse a category, compare assortments, or collect category-specific product candidates.
 
         Args:
-            category_id: For example: https://amazon.com/s?node=172282 - the Amazon Category ID is 172282
+            category_id: Numeric Amazon category node ID taken from the node query parameter of a category URL.
             country: Country code for the Amazon product.  Available Values: - `US`: United States - `AU`: Australia - `BR`: Brazil - `CA`: Canada - `CN`: China - `FR`: France - `DE`: Germany - `IN`: India - `IT`: Italy - `MX`: Mexico - `NL`: Netherlands - `SG`: Singapore - `ES`: Spain - `TR`: Turkey - `AE`: United Arab Emirates - `GB`: United Kingdom - `JP`: Japan - `SA`: Saudi Arabia - `PL`: Poland - `SE`: Sweden - `BE`: Belgium - `EG`: Egypt - `ZA`: South Africa - `IE`: Ireland
             sort_by: Sort by.  Available Values: - `RELEVANCE`: Relevance - `LOWEST_PRICE`: Lowest Price - `HIGHEST_PRICE`: Highest Price - `REVIEWS`: Reviews - `NEWEST`: Newest - `BEST_SELLERS`: Best Sellers
             page: Page number for pagination.

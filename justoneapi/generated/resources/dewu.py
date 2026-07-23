@@ -18,7 +18,7 @@ class DewuResource(BaseResource):
         """
         Product Search
 
-        Get Dewu (Poizon) product search results by keyword, including matched product data and pagination results, for product discovery, catalog research, price monitoring, and ecommerce market analysis.
+        Searches Dewu (Poizon) products by keyword with page-based pagination. Use it to discover marketplace products matching a title or product term.
 
         Args:
             keyword: Search keyword.

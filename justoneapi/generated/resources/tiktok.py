@@ -14,17 +14,17 @@ class TiktokResource(BaseResource):
         *,
         sec_uid: str,
         cursor: str | None = "0",
-        sort: str | None = "_0",
+        sort: str | None = "LATEST",
     ) -> ApiResponse[Any]:
         """
         User Published Posts
 
-        Get TikTok user Published Posts data, including video ID, description, and publish time, for user activity analysis and posting frequency tracking, influencer performance evaluation, and content trend monitoring for specific creators.
+        Retrieves posts published by a TikTok user identified by secUid, with cursor pagination and latest or popular sorting. Use it to browse a creator's posting history or continue through their public post feed.
 
         Args:
-            sec_uid: The unique security ID of the TikTok user (e.g., MS4wLjABAAAAonP2...).
-            cursor: Pagination cursor. Use '0' for the first page, then use the 'cursor' value returned in the previous response.
-            sort: Sorting criteria for the user's posts.  Available Values: - `_0`: Default (Mixed) - `_1`: Highest Liked - `_2`: Latest Published
+            sec_uid: The opaque security ID returned for the TikTok user.
+            cursor: Pagination cursor. Use '0' for the first page, then use the max_cursor value returned in the previous response.
+            sort: Sorting criteria for the user's posts.  Available Values: - `LATEST`: Newest posts first (default) - `MOST_POPULAR`: Most popular posts first
         """
         return self._get(
             "/api/tiktok/get-user-post/v1",
@@ -43,7 +43,7 @@ class TiktokResource(BaseResource):
         """
         Post Details
 
-        Get TikTok post Details data, including video ID, author information, and description text, for content performance analysis and metadata extraction and influencer evaluation via specific post metrics.
+        Retrieves details for a TikTok post identified by its post ID. Use it to look up a known TikTok video before content review, reporting, or related engagement analysis.
 
         Args:
             post_id: The unique ID of the TikTok post.
@@ -64,10 +64,10 @@ class TiktokResource(BaseResource):
         """
         User Profile
 
-        Get TikTok user Profile data, including nickname, unique ID, and avatar, for influencer profiling and audience analysis, account performance tracking and growth monitoring, and identifying verified status and official accounts.
+        Retrieves a TikTok user profile by public username or secUid. Use it to look up a known account for creator research, profile review, or subsequent user-post retrieval.
 
         Args:
-            unique_id: The unique handle/username of the user (e.g., 'tiktok').
+            unique_id: The public TikTok handle or username of the user.
             sec_uid: The unique security ID of the user.
         """
         return self._get(
@@ -87,7 +87,7 @@ class TiktokResource(BaseResource):
         """
         Post Comments
 
-        Get TikTok post Comments data, including comment ID, user information, and text content, for sentiment analysis of the audience's reaction to specific content and engagement measurement via comment volume and quality.
+        Retrieves comments for a TikTok post with cursor pagination. Use it to review audience discussion, continue through comment pages, or support comment analysis for a known post.
 
         Args:
             aweme_id: The unique ID of the TikTok post (awemeId).
@@ -111,7 +111,7 @@ class TiktokResource(BaseResource):
         """
         Comment Replies
 
-        Get TikTok comment Replies data, including reply ID, user information, and text content, for understanding detailed user interactions and threaded discussions and identifying influencers or active participants within a comment section.
+        Retrieves replies to a specific comment on a TikTok post with cursor pagination. Use it to inspect threaded discussions and continue through reply pages for a known post comment.
 
         Args:
             aweme_id: The unique ID of the TikTok post.
@@ -137,10 +137,10 @@ class TiktokResource(BaseResource):
         """
         User Search
 
-        Get TikTok user Search data, including basic profile information such as user ID, nickname, and unique handle, for discovering influencers in specific niches via keywords and identifying target audiences and conducting competitor research.
+        Searches TikTok users by keyword with cursor pagination and search-session continuity. Use it to discover accounts related to a creator name, topic, brand, or other search term.
 
         Args:
-            keyword: Search keywords (e.g., 'deepseek').
+            keyword: Search keywords.
             cursor: Pagination cursor. Start with '0'.
             search_id: The 'logid' returned from the previous request for consistent search results.
         """
@@ -165,10 +165,10 @@ class TiktokResource(BaseResource):
         """
         Post Search
 
-        Get TikTok post Search data, including key details such as video ID, description, and author information, for trend monitoring and content discovery and keyword-based market analysis and sentiment tracking.
+        Searches TikTok posts by keyword with offset pagination plus sorting, publish-time, and region controls. Use it to support regional content discovery, topic research, or monitoring keyword-related videos.
 
         Args:
-            keyword: Search keywords (e.g., 'deepseek').
+            keyword: Search keywords.
             offset: Pagination offset, starting from 0 and stepping by 20.
             sort_type: Sorting criteria for search results.  Available Values: - `RELEVANCE`: Relevance (Default) - `MOST_LIKED`: Most Liked
             publish_time: Filter posts by publishing time.  Available Values: - `ALL`: All Time - `ONE_DAY`: Last 24 Hours - `ONE_WEEK`: Last 7 Days - `ONE_MONTH`: Last 30 Days - `THREE_MONTHS`: Last 90 Days - `HALF_YEAR`: Last 180 Days

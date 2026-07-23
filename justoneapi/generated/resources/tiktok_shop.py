@@ -20,7 +20,7 @@ class TiktokShopResource(BaseResource):
         """
         Product Search
 
-        Get TikTok Shop product Search data, including title, price, and sales, for market research and trend analysis, competitor product discovery, and monitoring product popularity in specific regions.
+        Searches TikTok Shop products by keyword within a selected region, with offset and page-token pagination. Use it to discover regional products and continue through search results.
 
         Args:
             keyword: Search keyword.
@@ -47,7 +47,7 @@ class TiktokShopResource(BaseResource):
         """
         Product Details
 
-        Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.
+        Retrieves the public TikTok Shop product detail for a product ID in a selected region. Use it to inspect a known regional product after search or catalog discovery.
 
         Args:
             product_id: TikTok Shop Product ID.
@@ -55,29 +55,6 @@ class TiktokShopResource(BaseResource):
         """
         return self._get(
             "/api/tiktok-shop/get-product-detail/v1",
-            {
-                "productId": product_id,
-                "region": region,
-            },
-        )
-
-    def get_product_detail_v2(
-        self,
-        *,
-        product_id: str,
-        region: str | None = "FR",
-    ) -> ApiResponse[Any]:
-        """
-        Product Details
-
-        Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.
-
-        Args:
-            product_id: TikTok Shop Product ID.
-            region: Target region for product detail.  Available Values: - `FR`: France
-        """
-        return self._get(
-            "/api/tiktok-shop/get-product-detail/v2",
             {
                 "productId": product_id,
                 "region": region,

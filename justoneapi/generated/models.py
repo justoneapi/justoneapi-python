@@ -3,32 +3,32 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import IntEnum
 from typing import Any
 
-from pydantic import AwareDatetime, BaseModel
+from pydantic import BaseModel
 
 
-class Code(Enum):
-    field_0 = "0"
-    field_100 = "100"
-    field_101 = "101"
-    field_202 = "202"
-    field_300 = "300"
-    field_301 = "301"
-    field_302 = "302"
-    field_303 = "303"
-    field_400 = "400"
-    field_404 = "404"
-    field_500 = "500"
-    field_600 = "600"
-    field_601 = "601"
-    field_602 = "602"
+class Code(IntEnum):
+    integer_0 = 0
+    integer_100 = 100
+    integer_101 = 101
+    integer_202 = 202
+    integer_300 = 300
+    integer_301 = 301
+    integer_302 = 302
+    integer_303 = 303
+    integer_400 = 400
+    integer_404 = 404
+    integer_500 = 500
+    integer_600 = 600
+    integer_601 = 601
+    integer_602 = 602
 
 
 class Result(BaseModel):
-    code: Code | None = None
-    data: dict[str, Any] | None = None
-    message: str | None = None
-    recordTime: AwareDatetime | None = None
+    code: Code
+    data: Any
+    message: str | None
+    recordTime: str | None
     requestId: str | None = None

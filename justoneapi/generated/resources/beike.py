@@ -18,10 +18,10 @@ class BeikeResource(BaseResource):
         """
         Resale Housing Details
 
-        Get Beike resale Housing Details data, including - Pricing (total and unit price), Physical attributes (area, and layout, for displaying a full property profile to users and detailed price comparison between specific listings.
+        Retrieves a Beike resale-housing listing by city ID and house code. Use it to inspect a known second-hand property listing in a specific city.
 
         Args:
-            city_id: The ID of the city (e.g., '110000' for Beijing).
+            city_id: The numeric Beike city identifier.
             house_code: The unique identifier for the property listing.
         """
         return self._get(
@@ -42,10 +42,10 @@ class BeikeResource(BaseResource):
         """
         Resale Housing List
 
-        Get Beike resale Housing List data, including - Supports filtering by city/region, price range, and layout, for building search result pages for property portals and aggregating market data for regional housing trends.
+        Retrieves Beike resale-housing listings for a city with optional condition filters and offset pagination. Use it to browse second-hand properties in a selected market.
 
         Args:
-            city_id: The ID of the city (e.g., '110000' for Beijing).
+            city_id: The numeric Beike city identifier.
             condition: Filter conditions (e.g., region, price range, layout).
             offset: Pagination offset, starting from 0 (e.g., 0, 20, 40...).
         """
@@ -68,10 +68,10 @@ class BeikeResource(BaseResource):
         """
         Community List
 
-        Get Beike community List data, including - Community name and unique ID and Average listing price and historical price trends, for identifying popular residential areas in a city and comparing average housing prices across different communities.
+        Retrieves Beike residential communities for a city with optional condition filters and offset pagination. Use it to browse housing communities in a selected city.
 
         Args:
-            city_id: The ID of the city (e.g., '110000' for Beijing).
+            city_id: The numeric Beike city identifier.
             condition: Filter conditions for communities.
             limit_offset: Pagination offset, starting from 0 (e.g., 0, 20, 40...).
         """

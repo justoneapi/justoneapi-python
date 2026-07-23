@@ -20,7 +20,7 @@ class XiaohongshuResource(BaseResource):
         """
         Hot Search
 
-        Get Xiaohongshu (RedNote) hot Search data, including popular notes and engagement metrics, for content trend discovery.
+        Searches Xiaohongshu (RedNote) hot-content entries with optional keyword, pagination, ranking metric, and time-range controls. Use it to support trend discovery, topic monitoring, and content planning.
 
         Args:
             search_word: Search keyword.
@@ -38,36 +38,17 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
-    def search_note_v1(
+    def hot_list_v1(
         self,
-        *,
-        keyword: str,
-        page: int | None = 1,
-        sort: str | None = "general",
-        note_type: str | None = "_0",
-        note_time: str | None = None,
     ) -> ApiResponse[Any]:
         """
-        Note Search
+        Hot List
 
-        Get Xiaohongshu (RedNote) note Search data, including note snippets, authors, media, publish time, engagement signals, and pagination data, for topic discovery, trend monitoring, creator research, and content analysis.
-
-        Args:
-            keyword: Search keyword.
-            page: Page number for pagination.
-            sort: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
-            note_type: Note type filter.  Available Values: - `_0`: General - `_1`: Video - `_2`: Normal
-            note_time: Note publish time filter.  Available Values: - `ONE_DAY`: Within one day - `ONE_WEEK`: Within a week - `HALF_YEAR`: Within half a year
+        Retrieves the current Xiaohongshu (RedNote) hot list for platform trend monitoring and content research. Use it to review current hot-list entries before deeper analysis.
         """
         return self._get(
-            "/api/xiaohongshu/search-note/v1",
-            {
-                "keyword": keyword,
-                "page": page,
-                "sort": sort,
-                "noteType": note_type,
-                "noteTime": note_time,
-            },
+            "/api/xiaohongshu/hot-list/v1",
+            {},
         )
 
     def search_note_v2(
@@ -82,49 +63,17 @@ class XiaohongshuResource(BaseResource):
         """
         Note Search
 
-        Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.
+        Searches Xiaohongshu (RedNote) notes by keyword with pagination plus sort, note-type, and publish-time filters. Use it to support topic research, content discovery, and monitoring keyword-related posts.
 
         Args:
             keyword: Search keyword.
             page: Page number for pagination.
             sort: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
             note_type: Note type filter.  Available Values: - `_0`: General - `_1`: Video - `_2`: Normal
-            note_time: Note publish time filter. This parameter is for reference only and does not have much effect.  Available Values: - `ONE_DAY`: Within one day - `ONE_WEEK`: Within a week - `HALF_YEAR`: Within half a year
+            note_time: Note publish time filter. Results may include notes published outside the selected time range.  Available Values: - `ONE_DAY`: Within one day - `ONE_WEEK`: Within a week - `HALF_YEAR`: Within half a year
         """
         return self._get(
             "/api/xiaohongshu/search-note/v2",
-            {
-                "keyword": keyword,
-                "page": page,
-                "sort": sort,
-                "noteType": note_type,
-                "noteTime": note_time,
-            },
-        )
-
-    def search_note_v3(
-        self,
-        *,
-        keyword: str,
-        page: int | None = 1,
-        sort: str | None = "general",
-        note_type: str | None = "_0",
-        note_time: str | None = None,
-    ) -> ApiResponse[Any]:
-        """
-        Note Search
-
-        Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.
-
-        Args:
-            keyword: Search keyword.
-            page: Page number for pagination.
-            sort: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
-            note_type: Note type filter.  Available Values: - `_0`: General - `_1`: Video - `_2`: Normal
-            note_time: Note publish time filter. This parameter is for reference only and does not have much effect.  Available Values: - `ONE_DAY`: Within one day - `ONE_WEEK`: Within a week - `HALF_YEAR`: Within half a year
-        """
-        return self._get(
-            "/api/xiaohongshu/search-note/v3",
             {
                 "keyword": keyword,
                 "page": page,
@@ -148,7 +97,7 @@ class XiaohongshuResource(BaseResource):
         """
         Note Search
 
-        Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.
+        Searches Xiaohongshu (RedNote) notes through the mobile-app search flow with pagination, session continuity, sorting, note-type, and time filters. Use it to support iterative topic research and filtered content discovery.
 
         Args:
             keyword: Search keyword.
@@ -181,7 +130,7 @@ class XiaohongshuResource(BaseResource):
         """
         User Search
 
-        Get Xiaohongshu (RedNote) user Search data, including profile metadata and public signals, for creator discovery and account research.
+        Searches Xiaohongshu (RedNote) users by keyword with page-based pagination. Use it to support creator discovery, account research, and finding profiles related to a topic, name, or brand term.
 
         Args:
             keyword: Search keyword.
@@ -195,75 +144,6 @@ class XiaohongshuResource(BaseResource):
             },
         )
 
-    def get_user_note_list_v1(
-        self,
-        *,
-        user_id: str,
-        last_cursor: str | None = None,
-    ) -> ApiResponse[Any]:
-        """
-        User Published Notes
-
-        Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, publish times, pagination cursors, and engagement signals, for account monitoring, creator research, and content analysis.
-
-        Args:
-            user_id: Unique user identifier on Xiaohongshu.
-            last_cursor: Pagination cursor from the previous page.
-        """
-        return self._get(
-            "/api/xiaohongshu/get-user-note-list/v1",
-            {
-                "userId": user_id,
-                "lastCursor": last_cursor,
-            },
-        )
-
-    def get_user_note_list_v2(
-        self,
-        *,
-        user_id: str,
-        last_cursor: str | None = None,
-    ) -> ApiResponse[Any]:
-        """
-        User Published Notes
-
-        Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.
-
-        Args:
-            user_id: Unique user identifier on Xiaohongshu.
-            last_cursor: Pagination cursor from the previous page (the last note's cursor value).
-        """
-        return self._get(
-            "/api/xiaohongshu/get-user-note-list/v2",
-            {
-                "userId": user_id,
-                "lastCursor": last_cursor,
-            },
-        )
-
-    def get_user_note_list_v3(
-        self,
-        *,
-        user_id: str,
-        last_cursor: str | None = None,
-    ) -> ApiResponse[Any]:
-        """
-        User Published Notes
-
-        Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.
-
-        Args:
-            user_id: Unique user identifier on Xiaohongshu.
-            last_cursor: Pagination cursor from the previous page (the last note's cursor value).
-        """
-        return self._get(
-            "/api/xiaohongshu/get-user-note-list/v3",
-            {
-                "userId": user_id,
-                "lastCursor": last_cursor,
-            },
-        )
-
     def get_user_note_list_v4(
         self,
         *,
@@ -273,10 +153,10 @@ class XiaohongshuResource(BaseResource):
         """
         User Published Notes
 
-        Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.
+        Retrieves notes published by a Xiaohongshu (RedNote) user, accepting a user ID or supported profile URL and a cursor for pagination. Use it to support creator content browsing, account monitoring, and reviewing a user's note history.
 
         Args:
-            user_id: Unique user identifier on Xiaohongshu.
+            user_id: A Xiaohongshu user ID or a profile URL containing /user/profile/.
             last_cursor: Pagination cursor from the previous page (the last note's cursor value).
         """
         return self._get(
@@ -295,93 +175,13 @@ class XiaohongshuResource(BaseResource):
         """
         Note Details
 
-        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
+        Retrieves Xiaohongshu (RedNote) details for a note identified by a note ID or supported explore URL. Use it to perform direct note lookup and content review from stored identifiers or shared explore links.
 
         Args:
-            note_id: Unique note identifier on Xiaohongshu.
+            note_id: A Xiaohongshu note ID or an explore URL containing /explore/.
         """
         return self._get(
             "/api/xiaohongshu/get-note-detail/v1",
-            {
-                "noteId": note_id,
-            },
-        )
-
-    def get_note_detail_v2(
-        self,
-        *,
-        note_id: str,
-    ) -> ApiResponse[Any]:
-        """
-        Note Details
-
-        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
-
-        Args:
-            note_id: Unique note identifier on Xiaohongshu.
-        """
-        return self._get(
-            "/api/xiaohongshu/get-note-detail/v2",
-            {
-                "noteId": note_id,
-            },
-        )
-
-    def get_note_detail_v3(
-        self,
-        *,
-        note_id: str,
-    ) -> ApiResponse[Any]:
-        """
-        Note Details
-
-        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
-
-        Args:
-            note_id: Unique note identifier on Xiaohongshu.
-        """
-        return self._get(
-            "/api/xiaohongshu/get-note-detail/v3",
-            {
-                "noteId": note_id,
-            },
-        )
-
-    def get_note_detail_v4(
-        self,
-        *,
-        note_id: str,
-    ) -> ApiResponse[Any]:
-        """
-        Note Details
-
-        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
-
-        Args:
-            note_id: Unique note identifier on Xiaohongshu.
-        """
-        return self._get(
-            "/api/xiaohongshu/get-note-detail/v4",
-            {
-                "noteId": note_id,
-            },
-        )
-
-    def get_note_detail_v5(
-        self,
-        *,
-        note_id: str,
-    ) -> ApiResponse[Any]:
-        """
-        Note Details
-
-        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
-
-        Args:
-            note_id: Unique note identifier on Xiaohongshu.
-        """
-        return self._get(
-            "/api/xiaohongshu/get-note-detail/v5",
             {
                 "noteId": note_id,
             },
@@ -395,33 +195,13 @@ class XiaohongshuResource(BaseResource):
         """
         Note Details
 
-        Get Xiaohongshu (RedNote) video note details with media, author, and engagement fields. This KELE version only supports video notes; image and text notes are not supported.
+        Retrieves Xiaohongshu (RedNote) video-note details by note ID. Use it to look up and process a known video note.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
         """
         return self._get(
             "/api/xiaohongshu/get-note-detail/v6",
-            {
-                "noteId": note_id,
-            },
-        )
-
-    def get_note_detail_v7(
-        self,
-        *,
-        note_id: str,
-    ) -> ApiResponse[Any]:
-        """
-        Note Details
-
-        Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.
-
-        Args:
-            note_id: Unique note identifier on Xiaohongshu.
-        """
-        return self._get(
-            "/api/xiaohongshu/get-note-detail/v7",
             {
                 "noteId": note_id,
             },
@@ -437,67 +217,15 @@ class XiaohongshuResource(BaseResource):
         """
         Note Comments
 
-        Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.
+        Retrieves comments for a Xiaohongshu (RedNote) note with cursor pagination and normal, latest, or like-count sorting. Use it to support feedback review, discussion analysis, and comment moderation workflows.
 
         Args:
-            note_id: Unique note identifier on Xiaohongshu.
+            note_id: A Xiaohongshu note ID or an explore URL containing /explore/.
             last_cursor: Pagination cursor from the previous page (use the cursor value returned by the last response).
             sort: Sort strategy for the result set.  Available Values: - `normal`: Normal - `latest`: Latest - `like_count`: Like Count
         """
         return self._get(
             "/api/xiaohongshu/get-note-comment/v2",
-            {
-                "noteId": note_id,
-                "lastCursor": last_cursor,
-                "sort": sort,
-            },
-        )
-
-    def get_note_comment_v3(
-        self,
-        *,
-        note_id: str,
-        last_cursor: str | None = None,
-        sort: str | None = "latest",
-    ) -> ApiResponse[Any]:
-        """
-        Note Comments
-
-        Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.
-
-        Args:
-            note_id: Unique note identifier on Xiaohongshu.
-            last_cursor: Pagination cursor from the previous page.
-            sort: Sort strategy for the result set.  Available Values: - `normal`: Normal - `latest`: Latest - `like_count`: Like Count
-        """
-        return self._get(
-            "/api/xiaohongshu/get-note-comment/v3",
-            {
-                "noteId": note_id,
-                "lastCursor": last_cursor,
-                "sort": sort,
-            },
-        )
-
-    def get_note_comment_v4(
-        self,
-        *,
-        note_id: str,
-        last_cursor: str | None = None,
-        sort: str | None = "latest",
-    ) -> ApiResponse[Any]:
-        """
-        Note Comments
-
-        Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.
-
-        Args:
-            note_id: Unique note identifier on Xiaohongshu.
-            last_cursor: Pagination cursor from the previous page (use the cursor value returned by the last response).
-            sort: Sort strategy for the result set.  Available Values: - `normal`: Normal - `latest`: Latest - `like_count`: Like Count
-        """
-        return self._get(
-            "/api/xiaohongshu/get-note-comment/v4",
             {
                 "noteId": note_id,
                 "lastCursor": last_cursor,
@@ -515,7 +243,7 @@ class XiaohongshuResource(BaseResource):
         """
         Comment Replies
 
-        Get Xiaohongshu (RedNote) comment Replies data, including text, authors, and timestamps, for thread analysis and feedback research.
+        Retrieves replies to a specific Xiaohongshu (RedNote) note comment with cursor pagination. Use it to inspect threaded discussions and continue through reply pages for feedback review or moderation.
 
         Args:
             note_id: Unique note identifier on Xiaohongshu.
@@ -539,33 +267,13 @@ class XiaohongshuResource(BaseResource):
         """
         User Profile
 
-        Get Xiaohongshu (RedNote) user Profile data, including follower counts and bio details, for creator research, account analysis, and competitor monitoring.
+        Retrieves a Xiaohongshu (RedNote) user profile from a user ID or supported profile URL. Use it to support creator discovery, account research, and reviewing a known profile before related content analysis.
 
         Args:
-            user_id: Unique user identifier on Xiaohongshu.
+            user_id: A Xiaohongshu user ID or a profile URL containing /user/profile/.
         """
         return self._get(
             "/api/xiaohongshu/get-user/v3",
-            {
-                "userId": user_id,
-            },
-        )
-
-    def get_user_v4(
-        self,
-        *,
-        user_id: str,
-    ) -> ApiResponse[Any]:
-        """
-        User Profile
-
-        Get Xiaohongshu (RedNote) user Profile data, including follower counts and bio details, for creator research, account analysis, and competitor monitoring.
-
-        Args:
-            user_id: Unique user identifier on Xiaohongshu.
-        """
-        return self._get(
-            "/api/xiaohongshu/get-user/v4",
             {
                 "userId": user_id,
             },
@@ -579,7 +287,7 @@ class XiaohongshuResource(BaseResource):
         """
         Keyword Suggestions
 
-        Get Xiaohongshu (RedNote) keyword Suggestions data, including suggested queries, keyword variants, and query metadata, for expanding keyword sets for content research and seo/pseo workflows and improving search coverage by using platform-recommended terms.
+        Returns Xiaohongshu (RedNote) search keyword suggestions for a submitted seed term. Use it to expand query sets, refine content-research searches, and plan SEO or programmatic SEO keyword coverage.
 
         Args:
             keyword: Search keyword.
@@ -601,7 +309,7 @@ class XiaohongshuResource(BaseResource):
         """
         Topic Note List
 
-        Get Xiaohongshu (RedNote) topic Note List data, including notes under a topic, for topic monitoring and content discovery.
+        Retrieves Xiaohongshu (RedNote) notes associated with a topic ID, with hot or latest sorting and cursor pagination. Use it to support topic content discovery, trend review, and continuing through topic result pages.
 
         Args:
             topic_id: Unique topic identifier on Xiaohongshu.
@@ -625,10 +333,10 @@ class XiaohongshuResource(BaseResource):
         """
         Share Link Resolution
 
-        Get Xiaohongshu (RedNote) share Link Resolution data, including helping extract note IDs, for downstream note and comment workflows.
+        Resolve a supported Xiaohongshu (RedNote) short share link and return its public redirect URL. Use it to expand shared links before subsequent Xiaohongshu content lookup or processing.
 
         Args:
-            share_url: RedNote share link URL to be resolved (short link or shared URL).
+            share_url: A Xiaohongshu (RedNote) short share URL beginning with http://xhslink.com/ or https://xhslink.com/.
         """
         return self._get(
             "/api/xiaohongshu/share-url-transfer/v1",

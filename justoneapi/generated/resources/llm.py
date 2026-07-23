@@ -17,7 +17,7 @@ class LlmResource(BaseResource):
         """
         Doubao Answer
 
-        Get a Doubao web answer for a keyword or question, including extracted references when available.
+        Requests a Doubao web answer for a submitted keyword or question. Use it to collect a generated answer for research and information-gathering workflows.
 
         Args:
             keyword: Keyword or question to ask Doubao.

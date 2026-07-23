@@ -19,7 +19,7 @@ class XianyuResource(BaseResource):
         """
         Product Search
 
-        Get Xianyu (GooFish) product Search data by keyword, including matched second-hand marketplace listings, seller signals, prices, images, filters, and pagination metadata, for resale-market discovery, catalog research, pricing analysis, and item monitoring.
+        Searches Xianyu (GooFish) second-hand listings by keyword with page and sort controls. Use it to discover resale items by activity, recency, seller credit, price, or listing time.
 
         Args:
             keyword: Search keyword.
@@ -43,7 +43,7 @@ class XianyuResource(BaseResource):
         """
         Product Details
 
-        Get Xianyu (GooFish) product Details data by item ID, including listing metadata, seller information, images, item status, pricing, and marketplace flow data, for second-hand item inspection, resale tracking, and ecommerce research.
+        Retrieves the public detail for a Xianyu (GooFish) second-hand listing by item ID. Use it to inspect a known resale item after search or link discovery.
 
         Args:
             item_id: A unique product identifier on Xianyu.

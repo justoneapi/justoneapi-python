@@ -17,7 +17,7 @@ class ZhihuResource(BaseResource):
         """
         Column Article Details
 
-        Get Zhihu column Article Details data, including title, author, and content, for article archiving and content research.
+        Retrieve details for a Zhihu column article identified by article ID. Use it to inspect a known article for reading, review, or archiving.
 
         Args:
             id_: Article ID
@@ -41,7 +41,7 @@ class ZhihuResource(BaseResource):
         """
         Answer List
 
-        Get Zhihu answer List data, including answer content, author profiles, and interaction metrics, for question analysis and answer research.
+        Retrieve answers for a Zhihu question with sorting and pagination controls. Use it to browse responses to a known question and continue through additional answer pages.
 
         Args:
             question_id: Question ID
@@ -74,7 +74,7 @@ class ZhihuResource(BaseResource):
         """
         Keyword Search
 
-        Get Zhihu keyword Search data, including matched results, metadata, and ranking signals, for topic discovery and content research.
+        Search Zhihu by keyword with optional result-type, sort, time-interval, topic-display, and offset controls. Use it to find relevant answers, articles, or videos.
 
         Args:
             keyword: Search keywords.
@@ -105,7 +105,7 @@ class ZhihuResource(BaseResource):
         """
         Column Article List
 
-        Get Zhihu column Article List data, including article metadata and list ordering, for column monitoring and content collection.
+        Retrieve articles from a Zhihu column with offset pagination. Use it to browse a known column's publication history and select articles for detail lookup.
 
         Args:
             column_id: Column ID
@@ -127,7 +127,7 @@ class ZhihuResource(BaseResource):
         """
         User Info
 
-        Get Zhihu user Info data, including profile identifiers, names, avatar information, headline details, follower signals, and account metadata for creator profiling, audience research, and account verification workflows.
+        Retrieve the public profile for a Zhihu user identified by URL token. Use it to inspect an account found through Zhihu content or relationship data.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -148,7 +148,7 @@ class ZhihuResource(BaseResource):
         """
         User Followees
 
-        Get Zhihu user Followees data, including followed account profiles, identifiers, headlines, avatar fields, and pagination metadata for network mapping, creator discovery, and relationship analysis.
+        Retrieve accounts followed by a Zhihu user, with offset pagination. Use it to explore the outgoing connections of a known account.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -171,7 +171,7 @@ class ZhihuResource(BaseResource):
         """
         User Followers
 
-        Get Zhihu user Followers data, including follower account profiles, identifiers, headlines, avatar fields, and pagination metadata for audience analysis, creator evaluation, and relationship mapping.
+        Retrieve accounts that follow a Zhihu user, with offset pagination. Use it to explore the audience connections of a known account.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -195,7 +195,7 @@ class ZhihuResource(BaseResource):
         """
         User Articles
 
-        Get Zhihu user Articles data, including article identifiers, titles, author context, engagement signals, publish metadata, and pagination fields for creator research and content monitoring.
+        Retrieve articles published by a Zhihu user with offset pagination and publish-time or upvote sorting. Use it to browse a creator's articles in the selected order.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -220,7 +220,7 @@ class ZhihuResource(BaseResource):
         """
         User Included Articles
 
-        Get Zhihu user Included Articles data, including collected article identifiers, titles, author context, engagement signals, publish metadata, and pagination fields for content research and archive tracking.
+        Retrieve the included-article records exposed for a Zhihu user, with offset pagination. Use it to browse that account's included-article list.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -243,7 +243,7 @@ class ZhihuResource(BaseResource):
         """
         User Follow Columns
 
-        Get Zhihu user Follow Columns data, including subscribed column identifiers, names, descriptions, creator context, follower signals, and pagination fields for creator research and topic monitoring.
+        Retrieve Zhihu columns followed by a user, with offset pagination. Use it to browse the columns associated with a known account's follow activity.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -266,7 +266,7 @@ class ZhihuResource(BaseResource):
         """
         User Follow Questions
 
-        Get Zhihu user Follow Questions data, including followed question identifiers, titles, answer counts, follower signals, update metadata, and pagination fields for topic tracking and research workflows.
+        Retrieve Zhihu questions followed by a user, with offset pagination. Use it to browse the questions associated with a known account's follow activity.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -289,7 +289,7 @@ class ZhihuResource(BaseResource):
         """
         User Follow Collections
 
-        Get Zhihu user Follow Collections data, including followed collection identifiers, titles, creator context, item counts, follower signals, and pagination fields for collection tracking and content research.
+        Retrieve Zhihu collections followed by a user, with offset pagination. Use it to browse the collections associated with a known account's follow activity.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -312,7 +312,7 @@ class ZhihuResource(BaseResource):
         """
         User Follow Topics
 
-        Get Zhihu user Follow Topics data, including followed topic identifiers, names, descriptions, follower signals, content counts, and pagination fields for topic monitoring and audience research.
+        Retrieve Zhihu topics followed by a user, with offset pagination. Use it to browse the topics associated with a known account's follow activity.
 
         Args:
             user_url_token: Zhihu user URL token, such as the value in `zhihu.com/people/{userUrlToken}`.
@@ -322,6 +322,58 @@ class ZhihuResource(BaseResource):
             "/api/zhihu/get-user-follow-topics/v1",
             {
                 "userUrlToken": user_url_token,
+                "offset": offset,
+            },
+        )
+
+    def get_answer_comments_v1(
+        self,
+        *,
+        answer_id: str,
+        order_by: str | None = "score",
+        offset: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Answer Comments
+
+        Retrieve comments for a Zhihu answer with hottest or latest sorting and offset pagination. Use it to review discussion around a known answer and continue through additional comment pages.
+
+        Args:
+            answer_id: Answer ID
+            order_by: Sorting order for comments.  Available Values: - `score`: Sort by highest score. - `ts`: Sort by latest time.
+            offset: Pagination offset from the previous result.
+        """
+        return self._get(
+            "/api/zhihu/get-answer-comments/v1",
+            {
+                "answerId": answer_id,
+                "orderBy": order_by,
+                "offset": offset,
+            },
+        )
+
+    def get_comment_replies_v1(
+        self,
+        *,
+        comment_id: str,
+        order_by: str | None = "score",
+        offset: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Comment Replies
+
+        Retrieve replies to a Zhihu comment with hottest or latest sorting and offset pagination. Use it to follow discussion under a known comment and continue through additional reply pages.
+
+        Args:
+            comment_id: Comment ID
+            order_by: Sorting order for replies.  Available Values: - `score`: Sort by highest score. - `ts`: Sort by latest time.
+            offset: Pagination offset from the previous result.
+        """
+        return self._get(
+            "/api/zhihu/get-comment-replies/v1",
+            {
+                "commentId": comment_id,
+                "orderBy": order_by,
                 "offset": offset,
             },
         )

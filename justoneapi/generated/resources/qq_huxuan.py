@@ -18,7 +18,7 @@ class QqHuxuanResource(BaseResource):
         """
         Video Account Creator Search
 
-        Search QQ Huxuan Video Account creators from the Tencent Huxuan marketplace for creator discovery, audience screening, and campaign planning.
+        Searches or browses QQ Huxuan Video Account creators by optional nickname keyword with page-number pagination. Use it to discover and shortlist video creators for Tencent Huxuan campaign planning.
 
         Args:
             keyword: Creator nickname keyword. Leave empty to browse the default marketplace list.
@@ -41,7 +41,7 @@ class QqHuxuanResource(BaseResource):
         """
         Official Account Creator Search
 
-        Search QQ Huxuan Official Account creators from the Tencent Huxuan marketplace for creator discovery, audience screening, and campaign planning.
+        Searches or browses QQ Huxuan Official Account creators by optional nickname or account keyword with page-number pagination. Use it to discover and shortlist publishers for Tencent Huxuan campaign planning.
 
         Args:
             keyword: Creator nickname or account keyword. Leave empty to browse the default marketplace list.
@@ -63,7 +63,7 @@ class QqHuxuanResource(BaseResource):
         """
         Video Account Creator Details
 
-        Get QQ Huxuan Video Account creator profile details, including core profile, pricing, recent content, and audience profile fields returned by Tencent Huxuan.
+        Retrieves QQ Huxuan Video Account creator details for a known creator app ID. Use it to review a shortlisted video creator before Tencent Huxuan campaign selection.
 
         Args:
             app_id: Video Account creator app ID.
@@ -87,7 +87,7 @@ class QqHuxuanResource(BaseResource):
         """
         Video Account Recent Videos
 
-        Get recent QQ Huxuan Video Account creator videos and display metrics from the Tencent Huxuan detail page.
+        Lists videos from a QQ Huxuan Video Account creator within a required date range, with a choice of all, Huxuan order, hot, or personal videos. Use it to review a shortlisted creator's content for campaign planning.
 
         Args:
             app_id: Video Account creator app ID.
@@ -115,7 +115,7 @@ class QqHuxuanResource(BaseResource):
         """
         Official Account Creator Details
 
-        Get QQ Huxuan Official Account creator profile details, including profile, pricing, read metrics, reader profile, and recent article fields returned by Tencent Huxuan.
+        Retrieves QQ Huxuan Official Account creator details for a known creator app ID. Use it to review a shortlisted publisher before Tencent Huxuan campaign selection.
 
         Args:
             app_id: Official Account creator app ID.
@@ -140,7 +140,7 @@ class QqHuxuanResource(BaseResource):
         """
         Official Account Article List
 
-        Get QQ Huxuan Official Account creator articles and read metrics from the Tencent Huxuan detail page.
+        Lists articles from a QQ Huxuan Official Account creator within a required date range, with an optional title keyword and a choice between all articles and Huxuan order articles. Use it to review a publisher's content for campaign planning.
 
         Args:
             app_id: Official Account creator app ID.

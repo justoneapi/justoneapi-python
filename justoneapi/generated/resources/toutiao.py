@@ -17,7 +17,7 @@ class ToutiaoResource(BaseResource):
         """
         Article Details
 
-        Get Toutiao article Details data, including article ID, title, and author information, for content performance analysis and media monitoring and verifying article authenticity and metadata retrieval.
+        Retrieves details for a Toutiao article identified by its article ID. Use it to look up a known article for content review, archiving, or related media analysis.
 
         Args:
             id_: The unique identifier of the Toutiao article.
@@ -37,7 +37,7 @@ class ToutiaoResource(BaseResource):
         """
         User Profile
 
-        Get Toutiao user Profile data, including user ID, nickname, and avatar, for influencer profiling and audience analysis and monitoring creator performance and growth.
+        Retrieves a Toutiao user profile identified by user ID. Use it to look up a known account for creator research, profile review, or related article analysis.
 
         Args:
             user_id: The unique identifier of the Toutiao user.
@@ -49,29 +49,23 @@ class ToutiaoResource(BaseResource):
             },
         )
 
-    def search_v1(
+    def get_user_id_v1(
         self,
         *,
-        keyword: str,
-        page: int | None = 1,
-        search_id: str | None = "",
+        user_profile_url: str,
     ) -> ApiResponse[Any]:
         """
-        App Keyword Search
+        User ID
 
-        Get Toutiao app Keyword Search data, including matching articles, videos, and authors, for topic discovery and monitoring.
+        Resolves the user ID associated with a Toutiao profile URL. Use it to convert a known profile link into the identifier required for subsequent user-profile lookups.
 
         Args:
-            keyword: Search keyword or query.
-            page: Page number for pagination.
-            search_id: Search session ID for consistent pagination (not required for the first page).
+            user_profile_url: The Toutiao user profile URL used to resolve the user ID.
         """
         return self._get(
-            "/api/toutiao/search/v1",
+            "/api/toutiao/get-user-id/v1",
             {
-                "keyword": keyword,
-                "page": page,
-                "searchId": search_id,
+                "userProfileUrl": user_profile_url,
             },
         )
 
@@ -83,7 +77,7 @@ class ToutiaoResource(BaseResource):
         """
         Web Keyword Search
 
-        Get Toutiao web Keyword Search data, including this is the PC version of the search API. Note that it currently only supports retrieving the first page of results, for first-page discovery of articles, videos, and authors for trend research and monitoring.
+        Searches Toutiao web articles by keyword. Use it to discover relevant articles for topic research, media monitoring, or source collection.
 
         Args:
             keyword: Search keyword or query.
