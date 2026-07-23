@@ -62,6 +62,8 @@ def test_client_exposes_generated_resources():
 
 
 def test_generated_result_model_accepts_generic_payload():
-    result = Result.model_validate({"code": "0", "message": "ok", "data": {"x": 1}})
+    result = Result.model_validate(
+        {"code": "0", "message": "ok", "data": {"x": 1}, "recordTime": None}
+    )
     assert result.message == "ok"
     assert result.data == {"x": 1}
