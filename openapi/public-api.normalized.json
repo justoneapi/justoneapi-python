@@ -10014,7 +10014,7 @@
     },
     "/api/jd/get-item-comments/v2": {
       "get": {
-        "description": "Retrieve paginated JD.com product comments with selectable SKU- or SPU-level scope. Use it to review buyer feedback at the requested product scope.",
+        "description": "Retrieve paginated JD.com product comments for a specific SKU. Use it to review buyer feedback for that product.",
         "operationId": "getApiJdGetItemCommentsV2",
         "parameters": [
           {
@@ -10036,22 +10036,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "page"
-          },
-          {
-            "description": "Comment scope. Use 1 for SKU-level comments and 0 for SPU-level comments.\n\nAvailable Values:\n- `SKU_LEVEL`: Return SKU-level comments\n- `SPU_LEVEL`: Return SPU-level comments",
-            "in": "query",
-            "name": "isSku",
-            "required": false,
-            "schema": {
-              "default": "1",
-              "description": "Comment scope",
-              "enum": [
-                "SKU_LEVEL",
-                "SPU_LEVEL"
-              ],
-              "type": "string"
-            },
-            "x-sdk-python-name": "is_sku"
           }
         ],
         "responses": {
@@ -10098,11 +10082,11 @@
         "x-sdk-method-name": "get_item_comments_v2",
         "x-sdk-resource": "jd",
         "x-search-aliases": [
-          "JD.com SKU SPU comments",
-          "JD scoped product comments",
+          "JD.com SKU comments",
+          "JD product comments",
           "JD item review list",
-          "京东SKU和SPU评论",
-          "京东商品范围评论",
+          "京东SKU评论",
+          "京东商品评论",
           "京东商品评价列表"
         ]
       }
@@ -26143,5 +26127,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "e3740db4de6ef3db"
+  "x-openapi-release-id": "298f3fc4dd156093"
 }

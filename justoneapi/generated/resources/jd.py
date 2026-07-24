@@ -163,24 +163,21 @@ class JdResource(BaseResource):
         *,
         item_id: str,
         page: str | None = None,
-        is_sku: str | None = "1",
     ) -> ApiResponse[Any]:
         """
         Product Comments
 
-        Retrieve paginated JD.com product comments with selectable SKU- or SPU-level scope. Use it to review buyer feedback at the requested product scope.
+        Retrieve paginated JD.com product comments for a specific SKU. Use it to review buyer feedback for that product.
 
         Args:
             item_id: A unique product identifier on JD.com (item ID).
             page: Page number for paginated comments.
-            is_sku: Comment scope. Use 1 for SKU-level comments and 0 for SPU-level comments.  Available Values: - `SKU_LEVEL`: Return SKU-level comments - `SPU_LEVEL`: Return SPU-level comments
         """
         return self._get(
             "/api/jd/get-item-comments/v2",
             {
                 "itemId": item_id,
                 "page": page,
-                "isSku": is_sku,
             },
         )
 
