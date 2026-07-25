@@ -378,6 +378,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 ### Instagram
 
 - [User Profile (V1)](https://docs.justoneapi.com/en/api/instagram/user-profile-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [User Profile (V2)](https://docs.justoneapi.com/en/api/instagram/user-profile-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Post Details (V1)](https://docs.justoneapi.com/en/api/instagram/post-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [User Published Posts (V1)](https://docs.justoneapi.com/en/api/instagram/user-published-posts-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Reels Search (V1)](https://docs.justoneapi.com/en/api/instagram/reels-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
