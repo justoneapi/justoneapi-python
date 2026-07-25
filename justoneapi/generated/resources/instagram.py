@@ -29,6 +29,26 @@ class InstagramResource(BaseResource):
             },
         )
 
+    def get_user_detail_v2(
+        self,
+        *,
+        username: str,
+    ) -> ApiResponse[Any]:
+        """
+        User Profile
+
+        Retrieves an Instagram user profile by username. Use it to review a known account before creator research, brand monitoring, or related post analysis.
+
+        Args:
+            username: The Instagram username whose profile details are to be retrieved.
+        """
+        return self._get(
+            "/api/instagram/get-user-detail/v2",
+            {
+                "username": username,
+            },
+        )
+
     def get_post_detail_v1(
         self,
         *,

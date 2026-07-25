@@ -9528,6 +9528,76 @@
         ]
       }
     },
+    "/api/instagram/get-user-detail/v2": {
+      "get": {
+        "description": "Retrieves an Instagram user profile by username. Use it to review a known account before creator research, brand monitoring, or related post analysis.",
+        "operationId": "getApiInstagramGetUserDetailV2",
+        "parameters": [
+          {
+            "description": "Access token for the API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The Instagram username whose profile details are to be retrieved.",
+            "in": "query",
+            "name": "username",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "summary": "User Profile",
+        "tags": [
+          "Instagram"
+        ],
+        "x-api-version": "v2",
+        "x-endpoint-family": "instagram_get_user_detail",
+        "x-highlights": [],
+        "x-order": "24001010",
+        "x-recommended": true,
+        "x-search-aliases": [
+          "Instagram user profile API",
+          "Instagram account lookup",
+          "Instagram profile by username",
+          "Instagram 用户资料接口",
+          "Instagram 用户信息查询",
+          "Instagram 用户名查主页"
+        ]
+      }
+    },
     "/api/instagram/get-user-posts/v1": {
       "get": {
         "description": "Retrieves posts published by an Instagram user with token-based pagination. Use it to browse a known account's post history or continue through subsequent result pages.",
@@ -25583,5 +25653,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "298f3fc4dd156093"
+  "x-openapi-release-id": "34b3803ea0b11120"
 }
