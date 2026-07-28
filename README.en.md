@@ -125,6 +125,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 - [Product Details (V1)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Details (V2)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Product Details (V3)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-details-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Details (V4)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-details-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Details (V5)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-details-v5?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Details (V9)](https://docs.justoneapi.com/en/api/taobao-and-tmall/product-details-v9?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
