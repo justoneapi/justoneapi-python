@@ -13034,6 +13034,100 @@
         ]
       }
     },
+    "/api/taobao/get-item-detail/v3": {
+      "get": {
+        "description": "Retrieves Taobao or Tmall product details by item ID through the V3 endpoint. Use it for product identification and page-level sales monitoring.",
+        "operationId": "getApiTaobaoGetItemDetailV3",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique product identifier on Taobao/Tmall (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "summary": "Product Details",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v3",
+        "x-endpoint-family": "taobao_get_item_detail",
+        "x-highlights": [
+          {
+            "aliases": [
+              "product price",
+              "price data",
+              "商品价格",
+              "价格数据"
+            ],
+            "concept": "product_price",
+            "content": "This endpoint does not return product price data.",
+            "kind": "LIMITATION",
+            "type": "warning"
+          },
+          {
+            "aliases": [
+              "page sales count",
+              "displayed sales",
+              "页面已售",
+              "页面销量"
+            ],
+            "concept": "product_sales_data",
+            "content": "This endpoint returns the sales count displayed on the product page.",
+            "kind": "CAPABILITY",
+            "type": "tip"
+          }
+        ],
+        "x-order": "11001150",
+        "x-search-aliases": [
+          "Taobao product details v3",
+          "Tmall item detail lookup v3",
+          "Taobao page sales lookup",
+          "淘宝商品详情 V3",
+          "天猫商品详情查询 V3",
+          "淘宝页面已售查询"
+        ]
+      }
+    },
     "/api/taobao/get-item-detail/v4": {
       "get": {
         "description": "Retrieves Taobao or Tmall product details by item ID through the V4 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.",
@@ -22644,7 +22738,7 @@
     },
     "/api/xiaohongshu/search-note/v4": {
       "get": {
-        "description": "Searches Xiaohongshu (RedNote) notes through the mobile-app search flow with pagination, session continuity, sorting, note-type, and time filters. Use it to support iterative topic research and filtered content discovery.",
+        "description": "Searches Xiaohongshu (RedNote) notes through the mobile-app search flow with pagination, sorting, note-type, and time filters. Use it to support iterative topic research and filtered content discovery.",
         "operationId": "getApiXiaohongshuSearchNoteV4",
         "parameters": [
           {
@@ -22674,26 +22768,6 @@
               "default": 1,
               "format": "int32",
               "type": "integer"
-            }
-          },
-          {
-            "description": "Search session ID from the previous response data.api_info.search_id.",
-            "in": "query",
-            "name": "searchId",
-            "required": false,
-            "schema": {
-              "default": "",
-              "type": "string"
-            }
-          },
-          {
-            "description": "Session ID from the previous response data.api_info.session_id.",
-            "in": "query",
-            "name": "sessionId",
-            "required": false,
-            "schema": {
-              "default": "",
-              "type": "string"
             }
           },
           {
@@ -25653,5 +25727,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "34b3803ea0b11120"
+  "x-openapi-release-id": "ffd6ee7ddfb6588c"
 }

@@ -88,8 +88,6 @@ class XiaohongshuResource(BaseResource):
         *,
         keyword: str,
         page: int | None = 1,
-        search_id: str | None = "",
-        session_id: str | None = "",
         sort_type: str | None = "general",
         note_type: str | None = "ALL",
         time_filter: str | None = "ALL",
@@ -97,13 +95,11 @@ class XiaohongshuResource(BaseResource):
         """
         Note Search
 
-        Searches Xiaohongshu (RedNote) notes through the mobile-app search flow with pagination, session continuity, sorting, note-type, and time filters. Use it to support iterative topic research and filtered content discovery.
+        Searches Xiaohongshu (RedNote) notes through the mobile-app search flow with pagination, sorting, note-type, and time filters. Use it to support iterative topic research and filtered content discovery.
 
         Args:
             keyword: Search keyword.
             page: Page number for pagination.
-            search_id: Search session ID from the previous response data.api_info.search_id.
-            session_id: Session ID from the previous response data.api_info.session_id.
             sort_type: Sort order for the result set.  Available Values: - `general`: General - `popularity_descending`: Popularity Descending - `time_descending`: Time Descending - `comment_descending`: Comment Descending - `collect_descending`: Collect Descending
             note_type: Note type filter.  Available Values: - `ALL`: No Limit - `VIDEO_NOTE`: Video Note - `NORMAL_NOTE`: Normal Note
             time_filter: Publish time filter.  Available Values: - `ALL`: No Limit - `ONE_DAY`: Within one day - `ONE_WEEK`: Within one week - `HALF_YEAR`: Within half a year
@@ -113,8 +109,6 @@ class XiaohongshuResource(BaseResource):
             {
                 "keyword": keyword,
                 "page": page,
-                "searchId": search_id,
-                "sessionId": session_id,
                 "sortType": sort_type,
                 "noteType": note_type,
                 "timeFilter": time_filter,

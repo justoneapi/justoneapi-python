@@ -49,6 +49,26 @@ class TaobaoResource(BaseResource):
             },
         )
 
+    def get_item_detail_v3(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Product Details
+
+        Retrieves Taobao or Tmall product details by item ID through the V3 endpoint. Use it for product identification and page-level sales monitoring.
+
+        Args:
+            item_id: Unique product identifier on Taobao/Tmall (item ID).
+        """
+        return self._get(
+            "/api/taobao/get-item-detail/v3",
+            {
+                "itemId": item_id,
+            },
+        )
+
     def get_item_detail_v4(
         self,
         *,
