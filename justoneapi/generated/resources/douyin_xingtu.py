@@ -534,6 +534,32 @@ class DouyinXingtuResource(BaseResource):
             },
         )
 
+    def search_kol_simple_v1(
+        self,
+        *,
+        keyword: str,
+        platform_source: str,
+        page: int,
+    ) -> ApiResponse[Any]:
+        """
+        Creator Search Light
+
+        Get Douyin Creator Marketplace (Xingtu) kOL Keyword Search data, including matching creators and discovery data, for creator sourcing and shortlist building.
+
+        Args:
+            keyword: Search keywords.
+            platform_source: Platform source.  Available Values: - `_1`: Douyin - `_2`: Toutiao - `_3`: Xigua
+            page: Page number.
+        """
+        return self._get(
+            "/api/douyin-xingtu/search-kol-simple/v1",
+            {
+                "keyword": keyword,
+                "platformSource": platform_source,
+                "page": page,
+            },
+        )
+
     def gw_api_data_sp_item_report_trend_v1(
         self,
         *,
@@ -879,5 +905,430 @@ class DouyinXingtuResource(BaseResource):
             {
                 "oAuthorId": o_author_id,
                 "range": range,
+            },
+        )
+
+    def get_kol_info_v1(
+        self,
+        *,
+        kol_id: str,
+        platform_channel: str | None = "_1",
+    ) -> ApiResponse[Any]:
+        """
+        Creator Profile
+
+        Get Douyin Creator Marketplace (Xingtu) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.
+
+        Args:
+            kol_id: KOL ID.
+            platform_channel: Platform channel.  Available Values: - `_1`: Short Video - `_10`: Live Streaming
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-info/v1",
+            {
+                "kolId": kol_id,
+                "platformChannel": platform_channel,
+            },
+        )
+
+    def get_kol_audience_distribution_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Audience Distribution
+
+        Get Douyin Creator Marketplace (Xingtu) audience Distribution data, including demographic and interest-based audience segmentation, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-audience-distribution/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_kol_fans_distribution_v1(
+        self,
+        *,
+        kol_id: str,
+        fans_type: str | None = "_1",
+    ) -> ApiResponse[Any]:
+        """
+        Follower Distribution
+
+        Get Douyin Creator Marketplace (Xingtu) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+            fans_type: Fans type.  Available Values: - `_1`: Fans Portrait - `_5`: Iron Fans Portrait
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-fans-distribution/v1",
+            {
+                "kolId": kol_id,
+                "fansType": fans_type,
+            },
+        )
+
+    def get_kol_marketing_info_v1(
+        self,
+        *,
+        kol_id: str,
+        platform_channel: str | None = "_1",
+    ) -> ApiResponse[Any]:
+        """
+        Marketing Metrics
+
+        Get Douyin Creator Marketplace (Xingtu) marketing metrics data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+            platform_channel: Platform channel.  Available Values: - `_1`: Short Video - `_10`: Live Streaming
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-marketing-info/v1",
+            {
+                "kolId": kol_id,
+                "platformChannel": platform_channel,
+            },
+        )
+
+    def get_kol_spread_info_v1(
+        self,
+        *,
+        kol_id: str,
+        type: str | None = "_1",
+        range: str | None = "_2",
+        flow_type: str | None = "1",
+        only_assign: bool | None = False,
+    ) -> ApiResponse[Any]:
+        """
+        Spread Metrics
+
+        Get Douyin Creator Marketplace (Xingtu) spread metrics data, including audience, content performance, and commercial indicators, for quick evaluation.
+
+        Args:
+            kol_id: KOL ID.
+            type: Spread info type.  Available Values: - `_1`: Personal Video - `_2`: Xingtu Video
+            range: Time range.  Available Values: - `_2`: Last 30 days - `_3`: Last 90 days
+            flow_type: Flow type.
+            only_assign: Only assigned notes.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-spread-info/v1",
+            {
+                "kolId": kol_id,
+                "type": type,
+                "range": range,
+                "flowType": flow_type,
+                "onlyAssign": only_assign,
+            },
+        )
+
+    def get_kol_convert_ability_v1(
+        self,
+        *,
+        kol_id: str,
+        range: str,
+    ) -> ApiResponse[Any]:
+        """
+        Conversion Analysis
+
+        Get Douyin Creator Marketplace (Xingtu) conversion Analysis data, including conversion efficiency and commercial performance indicators, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+            range: Time range.  Available Values: - `_2`: Last 30 days - `_3`: Last 90 days
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-convert-ability/v1",
+            {
+                "kolId": kol_id,
+                "range": range,
+            },
+        )
+
+    def get_kol_show_items_v2_v1(
+        self,
+        *,
+        kol_id: str,
+        only_assign: bool | None = False,
+    ) -> ApiResponse[Any]:
+        """
+        Showcase Items
+
+        Get Douyin Creator Marketplace (Xingtu) showcase items data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+            only_assign: Whether true is Xingtu video, false is personal video.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-show-items-v2/v1",
+            {
+                "kolId": kol_id,
+                "onlyAssign": only_assign,
+            },
+        )
+
+    def get_kol_link_info_v1(
+        self,
+        *,
+        kol_id: str,
+        industry_tag: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Creator Link Metrics
+
+        Get Douyin Creator Marketplace (Xingtu) creator Link Metrics data, including creator ranking, traffic structure, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+            industry_tag: Industry Tag.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-link-info/v1",
+            {
+                "kolId": kol_id,
+                "industryTag": industry_tag,
+            },
+        )
+
+    def get_kol_convert_videos_or_products_v1(
+        self,
+        *,
+        kol_id: str,
+        detail_type: str,
+        page: int,
+    ) -> ApiResponse[Any]:
+        """
+        Conversion Resources
+
+        Get Douyin Creator Marketplace (Xingtu) conversion Resources data, including products tied to a Douyin Xingtu creator's conversion activity, for commerce analysis and campaign optimization.
+
+        Args:
+            kol_id: KOL ID.
+            detail_type: Resource type.  Available Values: - `_1`: Video Data - `_2`: Product Data
+            page: Page number.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-convert-videos-or-products/v1",
+            {
+                "kolId": kol_id,
+                "detailType": detail_type,
+                "page": page,
+            },
+        )
+
+    def get_kol_link_struct_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Creator Link Structure
+
+        Get Douyin Creator Marketplace (Xingtu) creator Link Structure data, including engagement and conversion metrics, for creator performance analysis.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-link-struct/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_kol_touch_distribution_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Audience Touchpoint Distribution
+
+        Get Douyin Creator Marketplace (Xingtu) audience touchpoint distribution data, including segment breakdowns, audience composition, and distribution signals, for traffic analysis and existing integration compatibility.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-touch-distribution/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_kol_cp_info_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Cost Performance Analysis
+
+        Get Douyin Creator Marketplace (Xingtu) cost Performance Analysis data, including pricing, exposure, and engagement efficiency indicators, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-cp-info/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_kol_rec_videos_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Recommended Videos
+
+        Get Douyin Creator Marketplace (Xingtu) recommended videos data, including video performance metrics, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-rec-videos/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_kol_daily_fans_v1(
+        self,
+        *,
+        kol_id: str,
+        start_date: str,
+        end_date: str,
+    ) -> ApiResponse[Any]:
+        """
+        Follower Growth Trend
+
+        Get Douyin Creator Marketplace (Xingtu) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and marketplace research.
+
+        Args:
+            kol_id: KOL ID.
+            start_date: Start Date (yyyy-MM-dd).
+            end_date: End Date (yyyy-MM-dd).
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-kol-daily-fans/v1",
+            {
+                "kolId": kol_id,
+                "startDate": start_date,
+                "endDate": end_date,
+            },
+        )
+
+    def get_author_hot_comment_tokens_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Comment Keyword Analysis
+
+        Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-author-hot-comment-tokens/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_author_content_hot_keywords_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Content Keyword Analysis
+
+        Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-author-content-hot-keywords/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_author_commerce_spread_info_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Creator Commerce Spread Info
+
+        Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-author-commerce-spread-info/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_author_commerce_seed_base_info_v1(
+        self,
+        *,
+        kol_id: str,
+        range: str,
+    ) -> ApiResponse[Any]:
+        """
+        Commerce Seeding Base Info
+
+        Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.
+
+        Args:
+            kol_id: KOL ID.
+            range: Time range.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-author-commerce-seed-base-info/v1",
+            {
+                "kolId": kol_id,
+                "range": range,
+            },
+        )
+
+    def get_video_detail_v1(
+        self,
+        *,
+        detail_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Video Details
+
+        Get Douyin Creator Marketplace (Xingtu) video Details data, including performance fields from the legacy Douyin Xingtu endpoint, for content review and integration compatibility.
+
+        Args:
+            detail_id: Video detail ID.
+        """
+        return self._get(
+            "/api/douyin-xingtu/get-video-detail/v1",
+            {
+                "detailId": detail_id,
             },
         )

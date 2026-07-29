@@ -331,6 +331,35 @@ class ImdbResource(BaseResource):
             },
         )
 
+    def main_search_query_v1(
+        self,
+        *,
+        search_term: str,
+        type: str | None = "Top",
+        limit: int | None = 25,
+        language_country: str | None = "en_US",
+    ) -> ApiResponse[Any]:
+        """
+        Keyword Search
+
+        Get IMDb keyword Search data, including matched results, metadata, and ranking signals, for entity discovery and entertainment research.
+
+        Args:
+            search_term: The text to search for.
+            type: Category of results to include in search.  Available Values: - `Top`: Top Results - `Movies`: Movies - `Shows`: TV Shows - `People`: People - `Interests`: Interests - `Episodes`: Episodes - `Podcast`: Podcasts - `Video_games`: Video Games
+            limit: Maximum number of results to return (1-300).
+            language_country: Language and country preferences.  Available Values: - `en_US`: English (US) - `fr_CA`: French (Canada) - `fr_FR`: French (France) - `de_DE`: German (Germany) - `hi_IN`: Hindi (India) - `it_IT`: Italian (Italy) - `pt_BR`: Portuguese (Brazil) - `es_ES`: Spanish (Spain) - `es_US`: Spanish (US) - `es_MX`: Spanish (Mexico)
+        """
+        return self._get(
+            "/api/imdb/main-search-query/v1",
+            {
+                "searchTerm": search_term,
+                "type": type,
+                "limit": limit,
+                "languageCountry": language_country,
+            },
+        )
+
     def streaming_picks_query_v1(
         self,
         *,

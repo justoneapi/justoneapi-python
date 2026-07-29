@@ -69,6 +69,32 @@ class ToutiaoResource(BaseResource):
             },
         )
 
+    def search_v1(
+        self,
+        *,
+        keyword: str,
+        page: int | None = 1,
+        search_id: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        App Keyword Search
+
+        Get Toutiao app Keyword Search data, including matching articles, videos, and authors, for topic discovery and monitoring.
+
+        Args:
+            keyword: Search keyword or query.
+            page: Page number for pagination.
+            search_id: Search session ID for consistent pagination (not required for the first page).
+        """
+        return self._get(
+            "/api/toutiao/search/v1",
+            {
+                "keyword": keyword,
+                "page": page,
+                "searchId": search_id,
+            },
+        )
+
     def search_v2(
         self,
         *,

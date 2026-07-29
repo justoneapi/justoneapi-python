@@ -2549,6 +2549,69 @@
         ]
       }
     },
+    "/api/douyin-ec/get-item-detail/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin E-commerce item details, including price, title, and stock, for product monitoring and competitive analysis.",
+        "operationId": "getApiDouyinEcGetItemDetailV1",
+        "parameters": [
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Details",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_ec_get_item_detail",
+        "x-highlights": [],
+        "x-order": "14502000",
+        "x-sdk-class-name": "DouyinEcResource",
+        "x-sdk-method-name": "get_item_detail_v1",
+        "x-sdk-resource": "douyin_ec"
+      }
+    },
     "/api/douyin-ec/get-item-detail/v2": {
       "get": {
         "description": "Retrieves Douyin E-commerce product details by item ID. Use it to inspect a known marketplace item for catalog or product research.",
@@ -2867,6 +2930,1398 @@
           "抖店关键词商品查询",
           "抖音商城找商品"
         ]
+      }
+    },
+    "/api/douyin-xingtu/get-author-commerce-seed-base-info/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Seeding Base Info data, including baseline metrics, commercial signals, and seeding indicators, for product seeding analysis, creator vetting, and campaign planning.",
+        "operationId": "getApiDouyinXingtuGetAuthorCommerceSeedBaseInfoV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Time range.",
+            "in": "query",
+            "name": "range",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "range"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Commerce Seeding Base Info",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_author_commerce_seed_base_info",
+        "x-highlights": [],
+        "x-order": "15005100",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_author_commerce_seed_base_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-author-commerce-spread-info/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) author Commerce Spread Info data, including spread metrics, for creator evaluation for campaign planning and media buying.",
+        "operationId": "getApiDouyinXingtuGetAuthorCommerceSpreadInfoV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Commerce Spread Info",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_author_commerce_spread_info",
+        "x-highlights": [],
+        "x-order": "15005000",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_author_commerce_spread_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-author-content-hot-keywords/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) kOL Content Keyword Analysis data, including core metrics, trend signals, and performance indicators, for content theme analysis and creator positioning research.",
+        "operationId": "getApiDouyinXingtuGetAuthorContentHotKeywordsV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Content Keyword Analysis",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_author_content_hot_keywords",
+        "x-highlights": [],
+        "x-order": "15004900",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_author_content_hot_keywords_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-author-hot-comment-tokens/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) kOL Comment Keyword Analysis data, including core metrics, trend signals, and performance indicators, for audience language analysis and comment-topic research.",
+        "operationId": "getApiDouyinXingtuGetAuthorHotCommentTokensV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Comment Keyword Analysis",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_author_hot_comment_tokens",
+        "x-highlights": [],
+        "x-order": "15004800",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_author_hot_comment_tokens_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-audience-distribution/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) audience Distribution data, including demographic and interest-based audience segmentation, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolAudienceDistributionV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Audience Distribution",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_audience_distribution",
+        "x-highlights": [],
+        "x-order": "15003200",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_audience_distribution_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-convert-ability/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) conversion Analysis data, including conversion efficiency and commercial performance indicators, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolConvertAbilityV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Time range.\n\nAvailable Values:\n- `_2`: Last 30 days\n- `_3`: Last 90 days",
+            "in": "query",
+            "name": "range",
+            "required": true,
+            "schema": {
+              "description": "KOL convert ability time range",
+              "enum": [
+                "_2",
+                "_3"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "range"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Conversion Analysis",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_convert_ability",
+        "x-highlights": [],
+        "x-order": "15003800",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_convert_ability_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-convert-videos-or-products/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) conversion Resources data, including products tied to a Douyin Xingtu creator's conversion activity, for commerce analysis and campaign optimization.",
+        "operationId": "getApiDouyinXingtuGetKolConvertVideosOrProductsV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Resource type.\n\nAvailable Values:\n- `_1`: Video Data\n- `_2`: Product Data",
+            "in": "query",
+            "name": "detailType",
+            "required": true,
+            "schema": {
+              "description": "KOL convert details resource type",
+              "enum": [
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "detail_type"
+          },
+          {
+            "description": "Page number.",
+            "in": "query",
+            "name": "page",
+            "required": true,
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Conversion Resources",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_convert_videos_or_products",
+        "x-highlights": [],
+        "x-order": "15004100",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_convert_videos_or_products_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-cp-info/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) cost Performance Analysis data, including pricing, exposure, and engagement efficiency indicators, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolCpInfoV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Cost Performance Analysis",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_cp_info",
+        "x-highlights": [],
+        "x-order": "15004400",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_cp_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-daily-fans/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) follower Growth Trend data, including historical audience changes over time, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolDailyFansV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Start Date (yyyy-MM-dd).",
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "start_date"
+          },
+          {
+            "description": "End Date (yyyy-MM-dd).",
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "end_date"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Follower Growth Trend",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_daily_fans",
+        "x-highlights": [],
+        "x-order": "15004700",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_daily_fans_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-fans-distribution/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolFansDistributionV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Fans type.\n\nAvailable Values:\n- `_1`: Fans Portrait\n- `_5`: Iron Fans Portrait",
+            "in": "query",
+            "name": "fansType",
+            "required": false,
+            "schema": {
+              "default": "_1",
+              "description": "KOL fans relationship type",
+              "enum": [
+                "_1",
+                "_5"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "fans_type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Follower Distribution",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_fans_distribution",
+        "x-highlights": [],
+        "x-order": "15003300",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_fans_distribution_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-info/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.",
+        "operationId": "getApiDouyinXingtuGetKolInfoV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Platform channel.\n\nAvailable Values:\n- `_1`: Short Video\n- `_10`: Live Streaming",
+            "in": "query",
+            "name": "platformChannel",
+            "required": false,
+            "schema": {
+              "default": "_1",
+              "description": "Douyin platform channel",
+              "enum": [
+                "_1",
+                "_10"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "platform_channel"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Profile",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_info",
+        "x-highlights": [],
+        "x-order": "15003100",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-link-info/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) creator Link Metrics data, including creator ranking, traffic structure, and related performance indicators, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolLinkInfoV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Industry Tag.",
+            "in": "query",
+            "name": "industryTag",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "industry_tag"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Link Metrics",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_link_info",
+        "x-highlights": [],
+        "x-order": "15004000",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_link_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-link-struct/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) creator Link Structure data, including engagement and conversion metrics, for creator performance analysis.",
+        "operationId": "getApiDouyinXingtuGetKolLinkStructV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Link Structure",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_link_struct",
+        "x-highlights": [],
+        "x-order": "15004200",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_link_struct_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-marketing-info/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) marketing metrics data, including rate card details and commercial service metrics, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolMarketingInfoV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Platform channel.\n\nAvailable Values:\n- `_1`: Short Video\n- `_10`: Live Streaming",
+            "in": "query",
+            "name": "platformChannel",
+            "required": false,
+            "schema": {
+              "default": "_1",
+              "description": "Douyin marketing platform channel",
+              "enum": [
+                "_1",
+                "_10"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "platform_channel"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Marketing Metrics",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_marketing_info",
+        "x-highlights": [],
+        "x-order": "15003400",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_marketing_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-rec-videos/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) recommended videos data, including video performance metrics, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolRecVideosV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Recommended Videos",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_rec_videos",
+        "x-highlights": [],
+        "x-order": "15004500",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_rec_videos_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-show-items-v2/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) showcase items data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and marketplace research.",
+        "operationId": "getApiDouyinXingtuGetKolShowItemsV2V1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Whether true is Xingtu video, false is personal video.",
+            "in": "query",
+            "name": "onlyAssign",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            },
+            "x-sdk-python-name": "only_assign"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Showcase Items",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_show_items_v2",
+        "x-highlights": [],
+        "x-order": "15003900",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_show_items_v2_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-spread-info/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) spread metrics data, including audience, content performance, and commercial indicators, for quick evaluation.",
+        "operationId": "getApiDouyinXingtuGetKolSpreadInfoV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Spread info type.\n\nAvailable Values:\n- `_1`: Personal Video\n- `_2`: Xingtu Video",
+            "in": "query",
+            "name": "type",
+            "required": false,
+            "schema": {
+              "default": "_1",
+              "description": "KOL spread info type",
+              "enum": [
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "type"
+          },
+          {
+            "description": "Time range.\n\nAvailable Values:\n- `_2`: Last 30 days\n- `_3`: Last 90 days",
+            "in": "query",
+            "name": "range",
+            "required": false,
+            "schema": {
+              "default": "_2",
+              "description": "KOL spread info time range",
+              "enum": [
+                "_2",
+                "_3"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "range"
+          },
+          {
+            "description": "Flow type.",
+            "in": "query",
+            "name": "flowType",
+            "required": false,
+            "schema": {
+              "default": "1",
+              "type": "string"
+            },
+            "x-sdk-python-name": "flow_type"
+          },
+          {
+            "description": "Only assigned notes.",
+            "in": "query",
+            "name": "onlyAssign",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            },
+            "x-sdk-python-name": "only_assign"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Spread Metrics",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_spread_info",
+        "x-highlights": [],
+        "x-order": "15003500",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_spread_info_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-kol-touch-distribution/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) audience touchpoint distribution data, including segment breakdowns, audience composition, and distribution signals, for traffic analysis and existing integration compatibility.",
+        "operationId": "getApiDouyinXingtuGetKolTouchDistributionV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Audience Touchpoint Distribution",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_kol_touch_distribution",
+        "x-highlights": [],
+        "x-order": "15004300",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_kol_touch_distribution_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
+    "/api/douyin-xingtu/get-video-detail/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) video Details data, including performance fields from the legacy Douyin Xingtu endpoint, for content review and integration compatibility.",
+        "operationId": "getApiDouyinXingtuGetVideoDetailV1",
+        "parameters": [
+          {
+            "description": "Video detail ID.",
+            "in": "query",
+            "name": "detailId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "detail_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Video Details",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_get_video_detail",
+        "x-highlights": [],
+        "x-order": "15005200",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "get_video_detail_v1",
+        "x-sdk-resource": "douyin_xingtu"
       }
     },
     "/api/douyin-xingtu/gw/api/aggregator/get_author_commerce_seed_base_info/v1": {
@@ -6286,6 +7741,96 @@
         ]
       }
     },
+    "/api/douyin-xingtu/search-kol-simple/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Douyin Creator Marketplace (Xingtu) kOL Keyword Search data, including matching creators and discovery data, for creator sourcing and shortlist building.",
+        "operationId": "getApiDouyinXingtuSearchKolSimpleV1",
+        "parameters": [
+          {
+            "description": "Search keywords.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Platform source.\n\nAvailable Values:\n- `_1`: Douyin\n- `_2`: Toutiao\n- `_3`: Xigua",
+            "in": "query",
+            "name": "platformSource",
+            "required": true,
+            "schema": {
+              "description": "KOL search platform source",
+              "enum": [
+                "_1",
+                "_2",
+                "_3"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "platform_source"
+          },
+          {
+            "description": "Page number.",
+            "in": "query",
+            "name": "page",
+            "required": true,
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Search Light",
+        "tags": [
+          "Douyin Creator Marketplace (Xingtu)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_xingtu_search_kol_simple",
+        "x-highlights": [],
+        "x-order": "15002750",
+        "x-sdk-class-name": "DouyinXingtuResource",
+        "x-sdk-method-name": "search_kol_simple_v1",
+        "x-sdk-resource": "douyin_xingtu"
+      }
+    },
     "/api/douyin/get-user-detail/v3": {
       "get": {
         "description": "Retrieves a Douyin (TikTok China) user profile by secUid. Use it to review a known creator or account before monitoring related content or conducting account research.",
@@ -7149,6 +8694,141 @@
         ]
       }
     },
+    "/api/douyin/search-video/v1": {
+      "get": {
+        "description": "Searches Douyin (TikTok China) videos through the mobile-app flow. Start with a keyword and optional filters. Continue with only data.business_config.next_page.search_id from the preceding response; pagination state is retained for up to 24 hours.",
+        "operationId": "getApiDouyinSearchVideoV1",
+        "parameters": [
+          {
+            "description": "The search keyword. Required when starting a new search; omit it when continuing with searchId.",
+            "in": "query",
+            "name": "keyword",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Sorting criteria for a new search. Stored settings are reused when continuing.\n\nAvailable Values:\n- `_0`: General\n- `_1`: Most Likes\n- `_2`: Newest\n- `_3`: Most Comments\n- `_4`: Most Favorites",
+            "in": "query",
+            "name": "sortType",
+            "required": false,
+            "schema": {
+              "default": "_0",
+              "description": "Douyin App - Video Search Sort Type",
+              "enum": [
+                "_0",
+                "_1",
+                "_2",
+                "_3",
+                "_4"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort_type"
+          },
+          {
+            "description": "Publish-time filter for a new search. Stored settings are reused when continuing.\n\nAvailable Values:\n- `_0`: No Limit\n- `_1`: Last 24 Hours\n- `_7`: Last 7 Days\n- `_180`: Last 6 Months",
+            "in": "query",
+            "name": "publishTime",
+            "required": false,
+            "schema": {
+              "default": "_0",
+              "description": "Douyin - Video Search Publish Time Filter",
+              "enum": [
+                "_0",
+                "_1",
+                "_7",
+                "_180"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "publish_time"
+          },
+          {
+            "description": "Duration filter for a new search. Stored settings are reused when continuing.\n\nAvailable Values:\n- `_0`: No Limit\n- `_1`: Under 1 Minute\n- `_2`: 1-5 Minutes\n- `_3`: Over 5 Minutes",
+            "in": "query",
+            "name": "duration",
+            "required": false,
+            "schema": {
+              "default": "_0",
+              "description": "Douyin - Video Search Duration Filter",
+              "enum": [
+                "_0",
+                "_1",
+                "_2",
+                "_3"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "duration"
+          },
+          {
+            "description": "For continuation only. Use data.business_config.next_page.search_id from the previous response. The stored pagination state expires after 24 hours.",
+            "in": "query",
+            "name": "searchId",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "search_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Video Search",
+        "tags": [
+          "Douyin (TikTok China)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "douyin_search_video",
+        "x-highlights": [],
+        "x-order": "14000900",
+        "x-sdk-class-name": "DouyinResource",
+        "x-sdk-method-name": "search_video_v1",
+        "x-sdk-resource": "douyin",
+        "x-search-aliases": [
+          "Douyin App video search API",
+          "Douyin keyword video search",
+          "Douyin search session pagination",
+          "抖音 App 视频搜索接口",
+          "抖音关键词搜视频",
+          "抖音搜索会话翻页"
+        ]
+      }
+    },
     "/api/douyin/search-video/v4": {
       "get": {
         "description": "Searches Douyin (TikTok China) videos by keyword with sort, publish-time, duration, and page filters; later pages require the previous search ID. Use it to support content discovery and trend research.",
@@ -7691,6 +9371,126 @@
           "Facebook 关键词帖子查询",
           "Facebook 按日期搜索帖子"
         ]
+      }
+    },
+    "/api/imdb/main-search-query/v1": {
+      "get": {
+        "description": "Get IMDb keyword Search data, including matched results, metadata, and ranking signals, for entity discovery and entertainment research.",
+        "operationId": "getApiImdbMainSearchQueryV1",
+        "parameters": [
+          {
+            "description": "The text to search for.",
+            "in": "query",
+            "name": "searchTerm",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "search_term"
+          },
+          {
+            "description": "Category of results to include in search.\n\nAvailable Values:\n- `Top`: Top Results\n- `Movies`: Movies\n- `Shows`: TV Shows\n- `People`: People\n- `Interests`: Interests\n- `Episodes`: Episodes\n- `Podcast`: Podcasts\n- `Video_games`: Video Games",
+            "in": "query",
+            "name": "type",
+            "required": false,
+            "schema": {
+              "default": "Top",
+              "description": "Search query types for IMDb main search.",
+              "enum": [
+                "Top",
+                "Movies",
+                "Shows",
+                "People",
+                "Interests",
+                "Episodes",
+                "Podcast",
+                "Video_games"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "type"
+          },
+          {
+            "description": "Maximum number of results to return (1-300).",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 25,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "limit"
+          },
+          {
+            "description": "Language and country preferences.\n\nAvailable Values:\n- `en_US`: English (US)\n- `fr_CA`: French (Canada)\n- `fr_FR`: French (France)\n- `de_DE`: German (Germany)\n- `hi_IN`: Hindi (India)\n- `it_IT`: Italian (Italy)\n- `pt_BR`: Portuguese (Brazil)\n- `es_ES`: Spanish (Spain)\n- `es_US`: Spanish (US)\n- `es_MX`: Spanish (Mexico)",
+            "in": "query",
+            "name": "languageCountry",
+            "required": false,
+            "schema": {
+              "default": "en_US",
+              "description": "Language and country options for IMDb data.",
+              "enum": [
+                "en_US",
+                "fr_CA",
+                "fr_FR",
+                "de_DE",
+                "hi_IN",
+                "it_IT",
+                "pt_BR",
+                "es_ES",
+                "es_US",
+                "es_MX"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "language_country"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Keyword Search",
+        "tags": [
+          "IMDb"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "imdb_main_search_query",
+        "x-highlights": [],
+        "x-order": 34002400,
+        "x-sdk-class-name": "ImdbResource",
+        "x-sdk-method-name": "main_search_query_v1",
+        "x-sdk-resource": "imdb"
       }
     },
     "/api/imdb/news-by-category-query/v1": {
@@ -13988,6 +15788,110 @@
         ]
       }
     },
+    "/api/taobao/get-shop-item-list/v3": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.",
+        "operationId": "getApiTaobaoGetShopItemListV3",
+        "parameters": [
+          {
+            "description": "Shop identifier. Also known as Seller ID or User ID (they refer to the same value).",
+            "in": "query",
+            "name": "userId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "user_id"
+          },
+          {
+            "description": "Unique shop identifier on Taobao/Tmall (shop ID).",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Sort order for the result set.\n\nAvailable Values:\n- `coefp`: Comprehensive sorting\n- `hotsell`: Hot selling / Sales volume\n- `oldstarts`: New arrivals / Old starts\n- `bid`: Price: Low to High\n- `_bid`: Price: High to Low",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "coefp",
+              "description": "Sort types for product list (V5.0)",
+              "enum": [
+                "coefp",
+                "hotsell",
+                "oldstarts",
+                "bid",
+                "_bid"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort"
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Shop Product List",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v3",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "taobao_get_shop_item_list",
+        "x-highlights": [],
+        "x-order": "11001800",
+        "x-sdk-class-name": "TaobaoResource",
+        "x-sdk-method-name": "get_shop_item_list_v3",
+        "x-sdk-resource": "taobao"
+      }
+    },
     "/api/taobao/get-shop-item-list/v4": {
       "get": {
         "description": "Retrieves products from a Taobao or Tmall shop by seller ID with page-based pagination. Use it to browse or monitor a known seller's catalog across result pages.",
@@ -14376,6 +16280,84 @@
           "TikTok 商城商品 ID 查询",
           "TikTok 电商商品详情"
         ]
+      }
+    },
+    "/api/tiktok-shop/get-product-detail/v2": {
+      "get": {
+        "deprecated": true,
+        "description": "Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.",
+        "operationId": "getApiTiktokShopGetProductDetailV2",
+        "parameters": [
+          {
+            "description": "TikTok Shop Product ID.",
+            "in": "query",
+            "name": "productId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "product_id"
+          },
+          {
+            "description": "Target region for product detail.\n\nAvailable Values:\n- `FR`: France",
+            "in": "query",
+            "name": "region",
+            "required": false,
+            "schema": {
+              "default": "FR",
+              "description": "TikTok Shop Enum",
+              "enum": [
+                "FR"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "region"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Details",
+        "tags": [
+          "TikTok Shop"
+        ],
+        "x-api-version": "v2",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "tiktok_shop_get_product_detail",
+        "x-highlights": [],
+        "x-order": "22501150",
+        "x-sdk-class-name": "TiktokShopResource",
+        "x-sdk-method-name": "get_product_detail_v2",
+        "x-sdk-resource": "tiktok_shop"
       }
     },
     "/api/tiktok-shop/search-products/v1": {
@@ -15332,6 +17314,92 @@
           "头条主页链接转用户 ID",
           "头条用户链接解析"
         ]
+      }
+    },
+    "/api/toutiao/search/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Toutiao app Keyword Search data, including matching articles, videos, and authors, for topic discovery and monitoring.",
+        "operationId": "getApiToutiaoSearchV1",
+        "parameters": [
+          {
+            "description": "Search keyword or query.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          },
+          {
+            "description": "Search session ID for consistent pagination (not required for the first page).",
+            "in": "query",
+            "name": "searchId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "search_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "App Keyword Search",
+        "tags": [
+          "Toutiao"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "toutiao_search",
+        "x-highlights": [],
+        "x-order": "27001200",
+        "x-sdk-class-name": "ToutiaoResource",
+        "x-sdk-method-name": "search_v1",
+        "x-sdk-resource": "toutiao"
       }
     },
     "/api/toutiao/search/v2": {
@@ -22348,6 +24416,557 @@
         ]
       }
     },
+    "/api/xiaohongshu-pgy/get-kol-core-data/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Core Metrics data, including engagement and content metrics, for benchmarking, vetting, and campaign planning.",
+        "operationId": "getApiXiaohongshuPgyGetKolCoreDataV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Business type.\n\nAvailable Values:\n- `_0`: Normal notes\n- `_1`: Cooperation notes",
+            "in": "query",
+            "name": "business",
+            "required": false,
+            "schema": {
+              "default": "_0",
+              "description": "Note rate business type",
+              "enum": [
+                "_0",
+                "_1"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "business"
+          },
+          {
+            "description": "Note type.\n\nAvailable Values:\n- `_1`: Photo and Text\n- `_2`: Video\n- `_3`: Photo and Video",
+            "in": "query",
+            "name": "noteType",
+            "required": false,
+            "schema": {
+              "default": "_3",
+              "description": "Note rate note type filter",
+              "enum": [
+                "_1",
+                "_2",
+                "_3"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_type"
+          },
+          {
+            "description": "Date type.\n\nAvailable Values:\n- `_1`: Last 30 days\n- `_2`: Last 90 days",
+            "in": "query",
+            "name": "dateType",
+            "required": false,
+            "schema": {
+              "default": "_1",
+              "description": "Note rate date range type",
+              "enum": [
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "date_type"
+          },
+          {
+            "description": "Ad filter.\n\nAvailable Values:\n- `_1`: Full traffic (All notes)\n- `_0`: Natural traffic (Organic notes)",
+            "in": "query",
+            "name": "adSwitch",
+            "required": false,
+            "schema": {
+              "default": "_1",
+              "description": "Note rate advertisement filter",
+              "enum": [
+                "_1",
+                "_0"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "ad_switch"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Core Metrics",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_kol_core_data",
+        "x-highlights": [],
+        "x-order": "13003400",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_kol_core_data_v1",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
+    "/api/xiaohongshu-pgy/get-kol-cost-effective/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) cost Effectiveness Analysis data, including pricing, reach, and engagement efficiency indicators, for campaign evaluation.",
+        "operationId": "getApiXiaohongshuPgyGetKolCostEffectiveV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Cost Effectiveness Analysis",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_kol_cost_effective",
+        "x-highlights": [],
+        "x-order": "13003200",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_kol_cost_effective_v1",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
+    "/api/xiaohongshu-pgy/get-kol-data-summary/v2": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.",
+        "operationId": "getApiXiaohongshuPgyGetKolDataSummaryV2",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Business type.\n\nAvailable Values:\n- `_0`: Normal notes\n- `_1`: Cooperation notes",
+            "in": "query",
+            "name": "business",
+            "required": true,
+            "schema": {
+              "description": "KOL data summary business type",
+              "enum": [
+                "_0",
+                "_1"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "business"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Data Summary",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v2",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_kol_data_summary",
+        "x-highlights": [],
+        "x-order": "13003100",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_kol_data_summary_v2",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
+    "/api/xiaohongshu-pgy/get-kol-fans-portrait/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.",
+        "operationId": "getApiXiaohongshuPgyGetKolFansPortraitV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Follower Distribution",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_kol_fans_portrait",
+        "x-highlights": [],
+        "x-order": "13002600",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_kol_fans_portrait_v1",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
+    "/api/xiaohongshu-pgy/get-kol-fans-summary/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower summary data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and creator benchmarking.",
+        "operationId": "getApiXiaohongshuPgyGetKolFansSummaryV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Follower Summary",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_kol_fans_summary",
+        "x-highlights": [],
+        "x-order": "13002700",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_kol_fans_summary_v1",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
+    "/api/xiaohongshu-pgy/get-kol-fans-trend/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) follower growth history data, including historical audience changes over time, for creator evaluation, campaign planning, and creator benchmarking.",
+        "operationId": "getApiXiaohongshuPgyGetKolFansTrendV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Date type.\n\nAvailable Values:\n- `_1`: Last 30 days\n- `_2`: Last 60 days",
+            "in": "query",
+            "name": "dateType",
+            "required": true,
+            "schema": {
+              "description": "Fans trend date range type",
+              "enum": [
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "date_type"
+          },
+          {
+            "description": "Increase type.\n\nAvailable Values:\n- `_1`: Total fans\n- `_2`: New fans increase",
+            "in": "query",
+            "name": "increaseType",
+            "required": true,
+            "schema": {
+              "description": "Fans growth increase type",
+              "enum": [
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "increase_type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Follower Growth History",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_kol_fans_trend",
+        "x-highlights": [],
+        "x-order": "13002800",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_kol_fans_trend_v1",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
+    "/api/xiaohongshu-pgy/get-kol-info/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.",
+        "operationId": "getApiXiaohongshuPgyGetKolInfoV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Creator Profile",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_kol_info",
+        "x-highlights": [],
+        "x-order": "13002400",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_kol_info_v1",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
     "/api/xiaohongshu-pgy/get-kol-note-list/v1": {
       "get": {
         "description": "Retrieve a paginated Xiaohongshu Pugongying creator note list with advertisement, sort-order, and note-type controls. Use it to browse a creator's recent, most-read, or most-interacted notes.",
@@ -22478,6 +25097,197 @@
         ]
       }
     },
+    "/api/xiaohongshu-pgy/get-kol-note-rate/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note performance metrics data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.",
+        "operationId": "getApiXiaohongshuPgyGetKolNoteRateV1",
+        "parameters": [
+          {
+            "description": "KOL ID.",
+            "in": "query",
+            "name": "kolId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "kol_id"
+          },
+          {
+            "description": "Date type.\n\nAvailable Values:\n- `_1`: Last 30 days\n- `_2`: Last 90 days",
+            "in": "query",
+            "name": "dateType",
+            "required": false,
+            "schema": {
+              "default": "_1",
+              "description": "Note rate date range type",
+              "enum": [
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "date_type"
+          },
+          {
+            "description": "Note type.\n\nAvailable Values:\n- `_1`: Photo and Text\n- `_2`: Video\n- `_3`: Photo and Video",
+            "in": "query",
+            "name": "noteType",
+            "required": false,
+            "schema": {
+              "default": "_3",
+              "description": "Note rate note type filter",
+              "enum": [
+                "_1",
+                "_2",
+                "_3"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_type"
+          },
+          {
+            "description": "Ad filter.\n\nAvailable Values:\n- `_1`: Full traffic (All notes)\n- `_0`: Natural traffic (Organic notes)",
+            "in": "query",
+            "name": "adSwitch",
+            "required": false,
+            "schema": {
+              "default": "_1",
+              "description": "Note rate advertisement filter",
+              "enum": [
+                "_1",
+                "_0"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "ad_switch"
+          },
+          {
+            "description": "Business type.\n\nAvailable Values:\n- `_0`: Normal notes\n- `_1`: Cooperation notes",
+            "in": "query",
+            "name": "business",
+            "required": false,
+            "schema": {
+              "default": "_0",
+              "description": "Note rate business type",
+              "enum": [
+                "_0",
+                "_1"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "business"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Performance Metrics",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_kol_note_rate",
+        "x-highlights": [],
+        "x-order": "13002500",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_kol_note_rate_v1",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
+    "/api/xiaohongshu-pgy/get-note-detail/v1": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu Creator Marketplace (Pugongying) note Details data, including media and engagement signals, for content analysis, archiving, and campaign review.",
+        "operationId": "getApiXiaohongshuPgyGetNoteDetailV1",
+        "parameters": [
+          {
+            "description": "Note ID.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu Creator Marketplace (Pugongying)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_pgy_get_note_detail",
+        "x-highlights": [],
+        "x-order": "13003300",
+        "x-sdk-class-name": "XiaohongshuPgyResource",
+        "x-sdk-method-name": "get_note_detail_v1",
+        "x-sdk-resource": "xiaohongshu_pgy"
+      }
+    },
     "/api/xiaohongshu/get-note-comment/v2": {
       "get": {
         "description": "Retrieves comments for a Xiaohongshu (RedNote) note with cursor pagination and normal, latest, or like-count sorting. Use it to support feedback review, discussion analysis, and comment moderation workflows.",
@@ -22580,6 +25390,190 @@
         ]
       }
     },
+    "/api/xiaohongshu/get-note-comment/v3": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.",
+        "operationId": "getApiXiaohongshuGetNoteCommentV3",
+        "parameters": [
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_id"
+          },
+          {
+            "description": "Pagination cursor from the previous page.",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "last_cursor"
+          },
+          {
+            "description": "Sort strategy for the result set.\n\nAvailable Values:\n- `normal`: Normal\n- `latest`: Latest\n- `like_count`: Like Count",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "latest",
+              "description": "Xiaohongshu Comment Sort V3",
+              "enum": [
+                "normal",
+                "latest",
+                "like_count"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Comments",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v3",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_note_comment",
+        "x-highlights": [],
+        "x-order": "12001505",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_note_comment_v3",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
+    "/api/xiaohongshu/get-note-comment/v4": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Comments data, including text, authors, and timestamps, for feedback analysis.",
+        "operationId": "getApiXiaohongshuGetNoteCommentV4",
+        "parameters": [
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_id"
+          },
+          {
+            "description": "Pagination cursor from the previous page (use the cursor value returned by the last response).",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "last_cursor"
+          },
+          {
+            "description": "Sort strategy for the result set.\n\nAvailable Values:\n- `normal`: Normal\n- `latest`: Latest\n- `like_count`: Like Count",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "latest",
+              "description": "Xiaohongshu Comment Sort V3",
+              "enum": [
+                "normal",
+                "latest",
+                "like_count"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Comments",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v4",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_note_comment",
+        "x-highlights": [
+          {
+            "content": "We recommend using the `latest` sort by default. If comments cannot be retrieved for some notes with `latest`, try again using `normal`.",
+            "kind": "GUIDANCE",
+            "type": "tip"
+          }
+        ],
+        "x-order": "12001510",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_note_comment_v4",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
     "/api/xiaohongshu/get-note-detail/v1": {
       "get": {
         "description": "Retrieves Xiaohongshu (RedNote) details for a note identified by a note ID or supported explore URL. Use it to perform direct note lookup and content review from stored identifiers or shared explore links.",
@@ -22668,6 +25662,315 @@
         ]
       }
     },
+    "/api/xiaohongshu/get-note-detail/v2": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
+        "operationId": "getApiXiaohongshuGetNoteDetailV2",
+        "parameters": [
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v2",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_note_detail",
+        "x-highlights": [
+          {
+            "aliases": [
+              "video download",
+              "download video",
+              "视频下载",
+              "下载视频"
+            ],
+            "concept": "video_download",
+            "content": "This version does not support video downloads.",
+            "kind": "LIMITATION",
+            "type": "tip"
+          },
+          {
+            "content": "Use `v5` for video download workflows.",
+            "kind": "GUIDANCE",
+            "type": "info"
+          }
+        ],
+        "x-order": "12001410",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_note_detail_v2",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
+    "/api/xiaohongshu/get-note-detail/v3": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
+        "operationId": "getApiXiaohongshuGetNoteDetailV3",
+        "parameters": [
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v3",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_note_detail",
+        "x-highlights": [],
+        "x-order": "12001420",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_note_detail_v3",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
+    "/api/xiaohongshu/get-note-detail/v4": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
+        "operationId": "getApiXiaohongshuGetNoteDetailV4",
+        "parameters": [
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v4",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_note_detail",
+        "x-highlights": [
+          {
+            "aliases": [
+              "video download",
+              "download video",
+              "视频下载",
+              "下载视频"
+            ],
+            "concept": "video_download",
+            "content": "This version does not support video downloads.",
+            "kind": "LIMITATION",
+            "type": "tip"
+          },
+          {
+            "content": "Use `v5` for video download workflows.",
+            "kind": "GUIDANCE",
+            "type": "info"
+          }
+        ],
+        "x-order": "12001430",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_note_detail_v4",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
+    "/api/xiaohongshu/get-note-detail/v5": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
+        "operationId": "getApiXiaohongshuGetNoteDetailV5",
+        "parameters": [
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v5",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_note_detail",
+        "x-highlights": [
+          {
+            "aliases": [
+              "video download",
+              "download video",
+              "视频下载",
+              "下载视频"
+            ],
+            "concept": "video_download",
+            "content": "This version returns data that can be used to download supported note videos.",
+            "kind": "CAPABILITY",
+            "type": "tip"
+          },
+          {
+            "aliases": [
+              "engagement metrics",
+              "likes comments shares",
+              "互动指标",
+              "点赞评论收藏"
+            ],
+            "concept": "engagement_metrics",
+            "content": "This version does not include engagement metrics.",
+            "kind": "LIMITATION",
+            "type": "tip"
+          }
+        ],
+        "x-order": "12001440",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_note_detail_v5",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
     "/api/xiaohongshu/get-note-detail/v6": {
       "get": {
         "description": "Retrieves Xiaohongshu (RedNote) video-note details by note ID. Use it to look up and process a known video note.",
@@ -22748,6 +26051,68 @@
           "小红书视频笔记查找",
           "小红书视频笔记查询"
         ]
+      }
+    },
+    "/api/xiaohongshu/get-note-detail/v7": {
+      "get": {
+        "deprecated": true,
+        "description": "Get Xiaohongshu (RedNote) note Details data, including media and engagement metrics, for content analysis, archiving, and campaign research.",
+        "operationId": "getApiXiaohongshuGetNoteDetailV7",
+        "parameters": [
+          {
+            "description": "Unique note identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "noteId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Details",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_note_detail",
+        "x-highlights": [],
+        "x-order": "12001450",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_note_detail_v7",
+        "x-sdk-resource": "xiaohongshu"
       }
     },
     "/api/xiaohongshu/get-note-sub-comment/v2": {
@@ -22934,6 +26299,220 @@
         ]
       }
     },
+    "/api/xiaohongshu/get-user-note-list/v1": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, publish times, pagination cursors, and engagement signals, for account monitoring, creator research, and content analysis.",
+        "operationId": "getApiXiaohongshuGetUserNoteListV1",
+        "parameters": [
+          {
+            "description": "Unique user identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "userId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "user_id"
+          },
+          {
+            "description": "Pagination cursor from the previous page.",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "last_cursor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "User Published Notes",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_user_note_list",
+        "x-highlights": [],
+        "x-order": "12001290",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_user_note_list_v1",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
+    "/api/xiaohongshu/get-user-note-list/v2": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.",
+        "operationId": "getApiXiaohongshuGetUserNoteListV2",
+        "parameters": [
+          {
+            "description": "Unique user identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "userId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "user_id"
+          },
+          {
+            "description": "Pagination cursor from the previous page (the last note's cursor value).",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "last_cursor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "User Published Notes",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_user_note_list",
+        "x-highlights": [],
+        "x-order": "12001300",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_user_note_list_v2",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
+    "/api/xiaohongshu/get-user-note-list/v3": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) user Published Notes data, including note metadata, covers, and publish times, for account monitoring.",
+        "operationId": "getApiXiaohongshuGetUserNoteListV3",
+        "parameters": [
+          {
+            "description": "Unique user identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "userId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "user_id"
+          },
+          {
+            "description": "Pagination cursor from the previous page (the last note's cursor value).",
+            "in": "query",
+            "name": "lastCursor",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "last_cursor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "User Published Notes",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_user_note_list",
+        "x-highlights": [],
+        "x-order": "12001305",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_user_note_list_v3",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
     "/api/xiaohongshu/get-user-note-list/v4": {
       "get": {
         "description": "Retrieves notes published by a Xiaohongshu (RedNote) user, accepting a user ID or supported profile URL and a cursor for pagination. Use it to support creator content browsing, account monitoring, and reviewing a user's note history.",
@@ -23080,6 +26659,68 @@
           "小红书用户信息查询",
           "小红书用户主页链接查询"
         ]
+      }
+    },
+    "/api/xiaohongshu/get-user/v4": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) user Profile data, including follower counts and bio details, for creator research, account analysis, and competitor monitoring.",
+        "operationId": "getApiXiaohongshuGetUserV4",
+        "parameters": [
+          {
+            "description": "Unique user identifier on Xiaohongshu.",
+            "in": "query",
+            "name": "userId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "user_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "User Profile",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v4",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_get_user",
+        "x-highlights": [],
+        "x-order": "12001710",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "get_user_v4",
+        "x-sdk-resource": "xiaohongshu"
       }
     },
     "/api/xiaohongshu/hot-list/v1": {
@@ -23262,6 +26903,132 @@
         ]
       }
     },
+    "/api/xiaohongshu/search-note/v1": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Search data, including note snippets, authors, media, publish time, engagement signals, and pagination data, for topic discovery, trend monitoring, creator research, and content analysis.",
+        "operationId": "getApiXiaohongshuSearchNoteV1",
+        "parameters": [
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          },
+          {
+            "description": "Sort order for the result set.\n\nAvailable Values:\n- `general`: General\n- `popularity_descending`: Popularity Descending\n- `time_descending`: Time Descending\n- `comment_descending`: Comment Descending\n- `collect_descending`: Collect Descending",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "general",
+              "description": "Xiaohongshu Search Note Sort",
+              "enum": [
+                "general",
+                "popularity_descending",
+                "time_descending",
+                "comment_descending",
+                "collect_descending"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort"
+          },
+          {
+            "description": "Note type filter.\n\nAvailable Values:\n- `_0`: General\n- `_1`: Video\n- `_2`: Normal",
+            "in": "query",
+            "name": "noteType",
+            "required": false,
+            "schema": {
+              "default": "_0",
+              "description": "Xiaohongshu search note type",
+              "enum": [
+                "_0",
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_type"
+          },
+          {
+            "description": "Note publish time filter.\n\nAvailable Values:\n- `ONE_DAY`: Within one day\n- `ONE_WEEK`: Within a week\n- `HALF_YEAR`: Within half a year",
+            "in": "query",
+            "name": "noteTime",
+            "required": false,
+            "schema": {
+              "description": "Xiaohongshu search note publish time filter",
+              "enum": [
+                "ONE_DAY",
+                "ONE_WEEK",
+                "HALF_YEAR"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Search",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v1",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_search_note",
+        "x-highlights": [],
+        "x-order": "12001090",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "search_note_v1",
+        "x-sdk-resource": "xiaohongshu"
+      }
+    },
     "/api/xiaohongshu/search-note/v2": {
       "get": {
         "description": "Searches Xiaohongshu (RedNote) notes by keyword with pagination plus sort, note-type, and publish-time filters. Use it to support topic research, content discovery, and monitoring keyword-related posts.",
@@ -23399,6 +27166,132 @@
           "小红书关键词搜笔记",
           "小红书内容搜索 V2"
         ]
+      }
+    },
+    "/api/xiaohongshu/search-note/v3": {
+      "get": {
+        "description": "Get Xiaohongshu (RedNote) note Search data, including snippets, authors, and media, for topic discovery.",
+        "operationId": "getApiXiaohongshuSearchNoteV3",
+        "parameters": [
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          },
+          {
+            "description": "Sort order for the result set.\n\nAvailable Values:\n- `general`: General\n- `popularity_descending`: Popularity Descending\n- `time_descending`: Time Descending\n- `comment_descending`: Comment Descending\n- `collect_descending`: Collect Descending",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "general",
+              "description": "Xiaohongshu Search Note Sort",
+              "enum": [
+                "general",
+                "popularity_descending",
+                "time_descending",
+                "comment_descending",
+                "collect_descending"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort"
+          },
+          {
+            "description": "Note type filter.\n\nAvailable Values:\n- `_0`: General\n- `_1`: Video\n- `_2`: Normal",
+            "in": "query",
+            "name": "noteType",
+            "required": false,
+            "schema": {
+              "default": "_0",
+              "description": "Xiaohongshu search note type",
+              "enum": [
+                "_0",
+                "_1",
+                "_2"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_type"
+          },
+          {
+            "description": "Note publish time filter. This parameter is for reference only and does not have much effect.\n\nAvailable Values:\n- `ONE_DAY`: Within one day\n- `ONE_WEEK`: Within a week\n- `HALF_YEAR`: Within half a year",
+            "in": "query",
+            "name": "noteTime",
+            "required": false,
+            "schema": {
+              "description": "Xiaohongshu search note publish time filter",
+              "enum": [
+                "ONE_DAY",
+                "ONE_WEEK",
+                "HALF_YEAR"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "note_time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Note Search",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-api-version": "v3",
+        "x-docs-hidden": true,
+        "x-endpoint-family": "xiaohongshu_search_note",
+        "x-highlights": [],
+        "x-order": "12001110",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "search_note_v3",
+        "x-sdk-resource": "xiaohongshu"
       }
     },
     "/api/xiaohongshu/search-note/v4": {
@@ -26462,5 +30355,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "6fa69ce241e6a00e"
+  "x-openapi-release-id": "69e150d340304f05"
 }

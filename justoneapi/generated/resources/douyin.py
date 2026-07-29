@@ -9,6 +9,38 @@ from justoneapi._response import ApiResponse
 class DouyinResource(BaseResource):
     """Generated resource for Douyin (TikTok China)."""
 
+    def search_video_v1(
+        self,
+        *,
+        keyword: str | None = None,
+        sort_type: str | None = "_0",
+        publish_time: str | None = "_0",
+        duration: str | None = "_0",
+        search_id: str | None = None,
+    ) -> ApiResponse[Any]:
+        """
+        Video Search
+
+        Searches Douyin (TikTok China) videos through the mobile-app flow. Start with a keyword and optional filters. Continue with only data.business_config.next_page.search_id from the preceding response; pagination state is retained for up to 24 hours.
+
+        Args:
+            keyword: The search keyword. Required when starting a new search; omit it when continuing with searchId.
+            sort_type: Sorting criteria for a new search. Stored settings are reused when continuing.  Available Values: - `_0`: General - `_1`: Most Likes - `_2`: Newest - `_3`: Most Comments - `_4`: Most Favorites
+            publish_time: Publish-time filter for a new search. Stored settings are reused when continuing.  Available Values: - `_0`: No Limit - `_1`: Last 24 Hours - `_7`: Last 7 Days - `_180`: Last 6 Months
+            duration: Duration filter for a new search. Stored settings are reused when continuing.  Available Values: - `_0`: No Limit - `_1`: Under 1 Minute - `_2`: 1-5 Minutes - `_3`: Over 5 Minutes
+            search_id: For continuation only. Use data.business_config.next_page.search_id from the previous response. The stored pagination state expires after 24 hours.
+        """
+        return self._get(
+            "/api/douyin/search-video/v1",
+            {
+                "keyword": keyword,
+                "sortType": sort_type,
+                "publishTime": publish_time,
+                "duration": duration,
+                "searchId": search_id,
+            },
+        )
+
     def search_video_v4(
         self,
         *,

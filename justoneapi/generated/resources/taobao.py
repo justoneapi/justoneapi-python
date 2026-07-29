@@ -256,6 +256,35 @@ class TaobaoResource(BaseResource):
             },
         )
 
+    def get_shop_item_list_v3(
+        self,
+        *,
+        user_id: str,
+        shop_id: str,
+        sort: str | None = "coefp",
+        page: int | None = 1,
+    ) -> ApiResponse[Any]:
+        """
+        Shop Product List
+
+        Get Taobao and Tmall shop Product List data, including item titles, prices, and images, for seller research and catalog tracking.
+
+        Args:
+            user_id: Shop identifier. Also known as Seller ID or User ID (they refer to the same value).
+            shop_id: Unique shop identifier on Taobao/Tmall (shop ID).
+            sort: Sort order for the result set.  Available Values: - `coefp`: Comprehensive sorting - `hotsell`: Hot selling / Sales volume - `oldstarts`: New arrivals / Old starts - `bid`: Price: Low to High - `_bid`: Price: High to Low
+            page: Page number for pagination.
+        """
+        return self._get(
+            "/api/taobao/get-shop-item-list/v3",
+            {
+                "userId": user_id,
+                "shopId": shop_id,
+                "sort": sort,
+                "page": page,
+            },
+        )
+
     def get_shop_item_list_v4(
         self,
         *,

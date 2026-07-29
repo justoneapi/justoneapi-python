@@ -490,6 +490,124 @@ class XiaohongshuPgyResource(BaseResource):
             },
         )
 
+    def get_kol_info_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Creator Profile
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Profile data, including audience and pricing data, for influencer vetting, benchmark analysis, and campaign planning.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-kol-info/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_kol_note_rate_v1(
+        self,
+        *,
+        kol_id: str,
+        date_type: str | None = "_1",
+        note_type: str | None = "_3",
+        ad_switch: str | None = "_1",
+        business: str | None = "_0",
+    ) -> ApiResponse[Any]:
+        """
+        Note Performance Metrics
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) note performance metrics data, including core metrics, trend signals, and performance indicators, for content efficiency analysis, creator benchmarking, and campaign planning.
+
+        Args:
+            kol_id: KOL ID.
+            date_type: Date type.  Available Values: - `_1`: Last 30 days - `_2`: Last 90 days
+            note_type: Note type.  Available Values: - `_1`: Photo and Text - `_2`: Video - `_3`: Photo and Video
+            ad_switch: Ad filter.  Available Values: - `_1`: Full traffic (All notes) - `_0`: Natural traffic (Organic notes)
+            business: Business type.  Available Values: - `_0`: Normal notes - `_1`: Cooperation notes
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-kol-note-rate/v1",
+            {
+                "kolId": kol_id,
+                "dateType": date_type,
+                "noteType": note_type,
+                "adSwitch": ad_switch,
+                "business": business,
+            },
+        )
+
+    def get_kol_fans_portrait_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Follower Distribution
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower distribution data, including audience demographics, interests, and distribution metrics, for creator evaluation, campaign planning, and creator benchmarking.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-kol-fans-portrait/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_kol_fans_summary_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Follower Summary
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower summary data, including core metrics, trend signals, and performance indicators, for creator evaluation, campaign planning, and creator benchmarking.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-kol-fans-summary/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_kol_fans_trend_v1(
+        self,
+        *,
+        kol_id: str,
+        date_type: str,
+        increase_type: str,
+    ) -> ApiResponse[Any]:
+        """
+        Follower Growth History
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) follower growth history data, including historical audience changes over time, for creator evaluation, campaign planning, and creator benchmarking.
+
+        Args:
+            kol_id: KOL ID.
+            date_type: Date type.  Available Values: - `_1`: Last 30 days - `_2`: Last 60 days
+            increase_type: Increase type.  Available Values: - `_1`: Total fans - `_2`: New fans increase
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-kol-fans-trend/v1",
+            {
+                "kolId": kol_id,
+                "dateType": date_type,
+                "increaseType": increase_type,
+            },
+        )
+
     def api_solar_kol_data_v2_notes_detail_v1(
         self,
         *,
@@ -554,5 +672,100 @@ class XiaohongshuPgyResource(BaseResource):
                 "orderType": order_type,
                 "page": page,
                 "noteType": note_type,
+            },
+        )
+
+    def get_kol_data_summary_v2(
+        self,
+        *,
+        kol_id: str,
+        business: str,
+    ) -> ApiResponse[Any]:
+        """
+        Data Summary
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) summary data, including activity, engagement, and audience growth, for creator evaluation, campaign planning, and creator benchmarking.
+
+        Args:
+            kol_id: KOL ID.
+            business: Business type.  Available Values: - `_0`: Normal notes - `_1`: Cooperation notes
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-kol-data-summary/v2",
+            {
+                "kolId": kol_id,
+                "business": business,
+            },
+        )
+
+    def get_kol_cost_effective_v1(
+        self,
+        *,
+        kol_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Cost Effectiveness Analysis
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) cost Effectiveness Analysis data, including pricing, reach, and engagement efficiency indicators, for campaign evaluation.
+
+        Args:
+            kol_id: KOL ID.
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-kol-cost-effective/v1",
+            {
+                "kolId": kol_id,
+            },
+        )
+
+    def get_note_detail_v1(
+        self,
+        *,
+        note_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Note Details
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) note Details data, including media and engagement signals, for content analysis, archiving, and campaign review.
+
+        Args:
+            note_id: Note ID.
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-note-detail/v1",
+            {
+                "noteId": note_id,
+            },
+        )
+
+    def get_kol_core_data_v1(
+        self,
+        *,
+        kol_id: str,
+        business: str | None = "_0",
+        note_type: str | None = "_3",
+        date_type: str | None = "_1",
+        ad_switch: str | None = "_1",
+    ) -> ApiResponse[Any]:
+        """
+        Creator Core Metrics
+
+        Get Xiaohongshu Creator Marketplace (Pugongying) creator Core Metrics data, including engagement and content metrics, for benchmarking, vetting, and campaign planning.
+
+        Args:
+            kol_id: KOL ID.
+            business: Business type.  Available Values: - `_0`: Normal notes - `_1`: Cooperation notes
+            note_type: Note type.  Available Values: - `_1`: Photo and Text - `_2`: Video - `_3`: Photo and Video
+            date_type: Date type.  Available Values: - `_1`: Last 30 days - `_2`: Last 90 days
+            ad_switch: Ad filter.  Available Values: - `_1`: Full traffic (All notes) - `_0`: Natural traffic (Organic notes)
+        """
+        return self._get(
+            "/api/xiaohongshu-pgy/get-kol-core-data/v1",
+            {
+                "kolId": kol_id,
+                "business": business,
+                "noteType": note_type,
+                "dateType": date_type,
+                "adSwitch": ad_switch,
             },
         )

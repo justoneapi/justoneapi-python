@@ -60,3 +60,26 @@ class TiktokShopResource(BaseResource):
                 "region": region,
             },
         )
+
+    def get_product_detail_v2(
+        self,
+        *,
+        product_id: str,
+        region: str | None = "FR",
+    ) -> ApiResponse[Any]:
+        """
+        Product Details
+
+        Get TikTok Shop product Details data, including title, description, and price, for building product catalogs, price and stock monitoring, and in-depth product analysis.
+
+        Args:
+            product_id: TikTok Shop Product ID.
+            region: Target region for product detail.  Available Values: - `FR`: France
+        """
+        return self._get(
+            "/api/tiktok-shop/get-product-detail/v2",
+            {
+                "productId": product_id,
+                "region": region,
+            },
+        )
