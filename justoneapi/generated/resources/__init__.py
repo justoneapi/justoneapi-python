@@ -29,6 +29,7 @@ from justoneapi.generated.resources.weixin import WeixinResource
 from justoneapi.generated.resources.weixin_channels import WeixinChannelsResource
 from justoneapi.generated.resources.xianyu import XianyuResource
 from justoneapi.generated.resources.xiaohongshu import XiaohongshuResource
+from justoneapi.generated.resources.xiaohongshu_ec import XiaohongshuEcResource
 from justoneapi.generated.resources.xiaohongshu_pgy import XiaohongshuPgyResource
 from justoneapi.generated.resources.youku import YoukuResource
 from justoneapi.generated.resources.youtube import YoutubeResource
@@ -64,6 +65,7 @@ RESOURCE_CLASSES = {
     "weixin_channels": WeixinChannelsResource,
     "xianyu": XianyuResource,
     "xiaohongshu": XiaohongshuResource,
+    "xiaohongshu_ec": XiaohongshuEcResource,
     "xiaohongshu_pgy": XiaohongshuPgyResource,
     "youku": YoukuResource,
     "youtube": YoutubeResource,
@@ -100,6 +102,7 @@ __all__ = [
     "WeixinChannelsResource",
     "XianyuResource",
     "XiaohongshuResource",
+    "XiaohongshuEcResource",
     "XiaohongshuPgyResource",
     "YoukuResource",
     "YoutubeResource",

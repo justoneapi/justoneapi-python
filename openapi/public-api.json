@@ -13304,6 +13304,88 @@
         ]
       }
     },
+    "/api/taobao/get-item-detail/v6": {
+      "get": {
+        "description": "Retrieves Taobao or Tmall product details by item ID through the V6 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.",
+        "operationId": "getApiTaobaoGetItemDetailV6",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique product identifier on Taobao/Tmall (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "summary": "Product Details",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v6",
+        "x-endpoint-family": "taobao_get_item_detail",
+        "x-highlights": [
+          {
+            "aliases": [
+              "product coverage",
+              "supported products",
+              "商品覆盖",
+              "支持商品"
+            ],
+            "concept": "product_coverage",
+            "content": "Some products may not be available through this endpoint.",
+            "kind": "CONDITION",
+            "type": "tip"
+          }
+        ],
+        "x-order": "11001350",
+        "x-search-aliases": [
+          "Taobao product details v6",
+          "Tmall item detail lookup v6",
+          "Taobao item information API v6",
+          "淘宝商品详情 V6",
+          "天猫商品详情查询 V6",
+          "淘宝商品 ID 查询 V6"
+        ]
+      }
+    },
     "/api/taobao/get-item-detail/v9": {
       "get": {
         "description": "Retrieves Taobao or Tmall product details by item ID through the V9 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.",
@@ -19715,6 +19797,94 @@
         ]
       }
     },
+    "/api/xiaohongshu-ec/search-products/v1": {
+      "get": {
+        "description": "Searches Xiaohongshu E-commerce (RedNote) products by keyword with page and search-ID pagination; pages after the first require the search ID returned by the initial search. Use it to discover marketplace products and continue through multi-page results.",
+        "operationId": "getApiXiaohongshuEcSearchProductsV1",
+        "parameters": [
+          {
+            "description": "Authentication token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number, starting from 1.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Search ID returned by the first-page response; required when page is greater than 1.",
+            "in": "query",
+            "name": "searchId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "summary": "Product Search",
+        "tags": [
+          "Xiaohongshu E-commerce (RedNote)"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "xiaohongshu_ec_search_products",
+        "x-highlights": [],
+        "x-order": "12501000",
+        "x-search-aliases": [
+          "Xiaohongshu ecommerce product search",
+          "RedNote product search",
+          "Xiaohongshu marketplace keyword search",
+          "小红书电商商品搜索",
+          "小红书商城关键词搜索",
+          "小红书商品查询"
+        ]
+      }
+    },
     "/api/xiaohongshu-pgy/api/pgy/content_square/search_note_v2/v1": {
       "get": {
         "description": "Search Xiaohongshu Pugongying Content Square notes by keyword or browse all notes, with business-category, ranking, time-window, and page controls. Use it to discover high-performing campaign content.",
@@ -25356,6 +25526,27 @@
       "x-platform-id": "xiaohongshu-creator-marketplace-pugongying"
     },
     {
+      "description": "Xiaohongshu E-commerce product search for discovering marketplace products by keyword.",
+      "name": "Xiaohongshu E-commerce (RedNote)",
+      "x-platform-aliases": [
+        "Xiaohongshu E-commerce",
+        "RedNote E-commerce",
+        "Xiaohongshu product search",
+        "RedNote product search",
+        "小红书电商",
+        "小红书商品搜索"
+      ],
+      "x-platform-detection-aliases": [
+        "Xiaohongshu E-commerce",
+        "RedNote E-commerce",
+        "Xiaohongshu product search",
+        "RedNote product search",
+        "小红书电商",
+        "小红书商品搜索"
+      ],
+      "x-platform-id": "xiaohongshu-e-commerce-rednote"
+    },
+    {
       "description": "Xianyu second-hand marketplace listings and details for resale research, seller analysis, and price monitoring.",
       "name": "Xianyu (GooFish)",
       "x-platform-aliases": [
@@ -25727,5 +25918,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "ffd6ee7ddfb6588c"
+  "x-openapi-release-id": "6fa69ce241e6a00e"
 }
