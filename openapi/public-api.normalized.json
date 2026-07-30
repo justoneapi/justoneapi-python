@@ -20119,6 +20119,7 @@
     },
     "/api/weixin/get-account-history-articles/v1": {
       "post": {
+        "deprecated": true,
         "description": "Retrieves page-number-paginated historical articles for a WeChat Official Account identified by biz ID, article URL, account name, or wxid. Use it to browse an account's article archive one page at a time.",
         "operationId": "postApiWeixinGetAccountHistoryArticlesV1",
         "parameters": [
@@ -20488,6 +20489,7 @@
     },
     "/api/weixin/get-account-today-articles/v1": {
       "get": {
+        "deprecated": true,
         "description": "Retrieves articles published today by a WeChat Official Account identified by biz ID, article URL, account name, or wxid. Use it to monitor same-day publishing activity for a known account.",
         "operationId": "getApiWeixinGetAccountTodayArticlesV1",
         "parameters": [
@@ -30355,5 +30357,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "69e150d340304f05"
+  "x-openapi-release-id": "35c2d266dc93ab17"
 }
