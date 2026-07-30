@@ -293,8 +293,8 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 ### WeChat Official Accounts
 
-- [Account Today Articles (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-today-articles-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Account Historical Articles (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-historical-articles-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Account Today Articles (V1) (Deprecated)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-today-articles-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
+- [Account Historical Articles (V1) (Deprecated)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-historical-articles-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Account Historical Articles (V2)](https://docs.justoneapi.com/en/api/wechat-official-accounts/account-historical-articles-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Article Metrics (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-metrics-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Article Metrics (V2)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-metrics-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
