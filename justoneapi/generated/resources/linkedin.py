@@ -28,7 +28,7 @@ class LinkedinResource(BaseResource):
         """
         People Search
 
-        Searches LinkedIn people by name, title, company, school, location, language, industry, or service category with page-based pagination. Use it for recruiting, sales research, or workforce analysis.
+        This LinkedIn people-search endpoint is deprecated because the capability is no longer available. Existing integrations should stop sending requests.
 
         Args:
             name: Name or general keyword to search for.
@@ -91,7 +91,7 @@ class LinkedinResource(BaseResource):
         """
         Company Employees
 
-        Retrieves a page of LinkedIn people associated with a company ID. Use it to build company employee lists for workforce mapping, recruiting, or account research.
+        This LinkedIn company-employee endpoint is deprecated because the capability is no longer available. Existing integrations should stop sending requests.
 
         Args:
             company_id: LinkedIn company ID.
@@ -108,25 +108,28 @@ class LinkedinResource(BaseResource):
     def get_user_posts_v1(
         self,
         *,
-        urn: str,
-        page: int | None = 1,
+        url: str,
+        type: str | None = "posts",
+        start: int | None = 0,
         pagination_token: str | None = "",
     ) -> ApiResponse[Any]:
         """
         User Published Posts
 
-        Retrieves posts published by a LinkedIn user URN with page and pagination-token support. Use it to review public professional content and continue through additional result pages.
+        Retrieves posts published, commented on, or reacted to by a LinkedIn member using a profile URL, activity type, offset, and pagination token. Use it to review public professional activity and continue through additional result pages.
 
         Args:
-            urn: LinkedIn user URN returned by the User Profile endpoint.
-            page: Page number, starting from 1.
+            url: Full LinkedIn profile URL.
+            type: User activity type.  Available Values: - `POSTS`: Posts published by the user - `COMMENTS`: Posts commented on by the user - `REACTIONS`: Posts reacted to by the user
+            start: Pagination offset starting from 0, normally increasing by 50.
             pagination_token: Pagination token returned by a previous response.
         """
         return self._get(
             "/api/linkedin/get-user-posts/v1",
             {
-                "urn": urn,
-                "page": page,
+                "url": url,
+                "type": type,
+                "start": start,
                 "paginationToken": pagination_token,
             },
         )
@@ -141,7 +144,7 @@ class LinkedinResource(BaseResource):
         """
         Post Reactions
 
-        Retrieves LinkedIn reaction records for a post, optionally filtered by reaction type and page. Use it to review public engagement on known professional content.
+        This LinkedIn post-reaction-record endpoint is deprecated because the capability is no longer available. Existing integrations should stop sending requests.
 
         Args:
             post_id: LinkedIn post ID.
@@ -163,18 +166,20 @@ class LinkedinResource(BaseResource):
         post_id: str,
         page: int | None = 1,
         sort_order: str | None = "relevance",
-        post_type: str | None = "activity",
+        pagination_token: str | None = "",
+        share_urn: str | None = "",
     ) -> ApiResponse[Any]:
         """
         Post Comments
 
-        Retrieves a page of LinkedIn comments for a post with relevance or recent sorting and activity or UGC post types. Use it to review public discussion around known professional content.
+        Retrieves LinkedIn comments for an activity post with relevance or recent sorting, page-based navigation, a pagination token, and optional share URN. Use it to review public discussion around known professional content.
 
         Args:
             post_id: LinkedIn post ID.
             page: Page number, starting from 1.
             sort_order: Comment sort order.  Available Values: - `RELEVANCE`: Sort comments by relevance - `RECENT`: Sort comments from most recent
-            post_type: LinkedIn post identifier type.  Available Values: - `ACTIVITY`: LinkedIn activity post - `UGC`: LinkedIn user-generated content post
+            pagination_token: Pagination token returned by a previous response.
+            share_urn: Optional share URN for a shared post.
         """
         return self._get(
             "/api/linkedin/get-post-comments/v1",
@@ -182,6 +187,7 @@ class LinkedinResource(BaseResource):
                 "postId": post_id,
                 "page": page,
                 "sortOrder": sort_order,
-                "postType": post_type,
+                "paginationToken": pagination_token,
+                "shareUrn": share_urn,
             },
         )
