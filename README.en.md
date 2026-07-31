@@ -503,11 +503,11 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 ### LinkedIn
 
-- [People Search (V1)](https://docs.justoneapi.com/en/api/linkedin/people-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [People Search (V1) (Deprecated)](https://docs.justoneapi.com/en/api/linkedin/people-search-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [User Profile (V1)](https://docs.justoneapi.com/en/api/linkedin/user-profile-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Company Employees (V1)](https://docs.justoneapi.com/en/api/linkedin/company-employees-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Company Employees (V1) (Deprecated)](https://docs.justoneapi.com/en/api/linkedin/company-employees-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [User Published Posts (V1)](https://docs.justoneapi.com/en/api/linkedin/user-published-posts-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Post Reactions (V1)](https://docs.justoneapi.com/en/api/linkedin/post-reactions-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Post Reactions (V1) (Deprecated)](https://docs.justoneapi.com/en/api/linkedin/post-reactions-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Post Comments (V1)](https://docs.justoneapi.com/en/api/linkedin/post-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Beike
