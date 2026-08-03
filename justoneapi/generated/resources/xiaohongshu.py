@@ -9,6 +9,26 @@ from justoneapi._response import ApiResponse
 class XiaohongshuResource(BaseResource):
     """Generated resource for Xiaohongshu (RedNote)."""
 
+    def ask_dots(
+        self,
+        *,
+        keyword: str,
+    ) -> ApiResponse[Any]:
+        """
+        Ask Dots AI
+
+        Queries Xiaohongshu (RedNote) Ask Dots AI with a keyword question. Use it to retrieve an AI answer for topic research and question exploration.
+
+        Args:
+            keyword: Question or keyword to submit to Ask Dots AI.
+        """
+        return self._get(
+            "/api/xiaohongshu/ask-dots",
+            {
+                "keyword": keyword,
+            },
+        )
+
     def hot_search_v1(
         self,
         *,

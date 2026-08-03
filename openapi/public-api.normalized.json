@@ -25318,6 +25318,74 @@
         "x-sdk-resource": "xiaohongshu_pgy"
       }
     },
+    "/api/xiaohongshu/ask-dots": {
+      "get": {
+        "description": "Queries Xiaohongshu (RedNote) Ask Dots AI with a keyword question. Use it to retrieve an AI answer for topic research and question exploration.",
+        "operationId": "getApiXiaohongshuAskDots",
+        "parameters": [
+          {
+            "description": "Question or keyword to submit to Ask Dots AI.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Ask Dots AI",
+        "tags": [
+          "Xiaohongshu (RedNote)"
+        ],
+        "x-endpoint-family": "xiaohongshu_ask_dots",
+        "x-highlights": [],
+        "x-order": "12000000",
+        "x-sdk-class-name": "XiaohongshuResource",
+        "x-sdk-method-name": "ask_dots",
+        "x-sdk-resource": "xiaohongshu",
+        "x-search-aliases": [
+          "Xiaohongshu Ask Dots AI API",
+          "RedNote Ask Dots AI",
+          "Xiaohongshu AI question answering",
+          "小红书问点点AI接口",
+          "小红书点点AI问答",
+          "小红书AI问答"
+        ]
+      }
+    },
     "/api/xiaohongshu/get-note-comment/v2": {
       "get": {
         "description": "Retrieves comments for a Xiaohongshu (RedNote) note with cursor pagination and normal, latest, or like-count sorting. Use it to support feedback review, discussion analysis, and comment moderation workflows.",
@@ -30385,5 +30453,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "94dc0f526e5f641f"
+  "x-openapi-release-id": "d911484136a76293"
 }
