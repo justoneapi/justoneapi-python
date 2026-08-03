@@ -143,6 +143,7 @@ except BusinessError as exc:
 
 ### 小红书
 
+- [Ask Dots AI](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/ask-dots-ai?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [热搜 (V1)](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/hot-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [热门榜单 (V1)](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/hot-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [笔记搜索 (V1)](https://docs.justoneapi.com/zh/api/xiaohongshu-rednote/note-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)

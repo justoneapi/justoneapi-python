@@ -141,6 +141,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 ### Xiaohongshu (RedNote)
 
+- [Ask Dots AI](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/ask-dots-ai?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Hot Search (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/hot-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Hot List (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/hot-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Note Search (V1)](https://docs.justoneapi.com/en/api/xiaohongshu-rednote/note-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
