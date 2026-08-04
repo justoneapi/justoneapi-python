@@ -9042,6 +9042,95 @@
         ]
       }
     },
+    "/api/facebook/get-comment-replies/v1": {
+      "get": {
+        "description": "Retrieves replies to a specific Facebook post comment using the legacy post ID, comment ID, and expansion token. Use it to inspect a known comment's nested discussion.",
+        "operationId": "getApiFacebookGetCommentRepliesV1",
+        "parameters": [
+          {
+            "description": "The legacy numeric identifier of the Facebook post.",
+            "in": "query",
+            "name": "postId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "post_id"
+          },
+          {
+            "description": "The unique identifier of the parent Facebook comment.",
+            "in": "query",
+            "name": "commentId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "comment_id"
+          },
+          {
+            "description": "The expansion token associated with the parent Facebook comment.",
+            "in": "query",
+            "name": "expansionToken",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "expansion_token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Comment Replies",
+        "tags": [
+          "Facebook"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "facebook_get_comment_replies",
+        "x-highlights": [],
+        "x-order": "30001040",
+        "x-sdk-class-name": "FacebookResource",
+        "x-sdk-method-name": "get_comment_replies_v1",
+        "x-sdk-resource": "facebook",
+        "x-search-aliases": [
+          "Facebook comment replies API",
+          "Facebook nested comments",
+          "Facebook replies by comment ID",
+          "Facebook 评论回复",
+          "Facebook 二级评论",
+          "Facebook 按评论 ID 查询回复"
+        ]
+      }
+    },
     "/api/facebook/get-post-comments/v1": {
       "get": {
         "description": "Retrieves comments for a Facebook post ID with cursor pagination. Use it to review discussion associated with a known public post or continue through subsequent comment pages.",
@@ -30453,5 +30542,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "d911484136a76293"
+  "x-openapi-release-id": "11ecad97c23ac56c"
 }

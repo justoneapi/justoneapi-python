@@ -103,3 +103,29 @@ class FacebookResource(BaseResource):
                 "cursor": cursor,
             },
         )
+
+    def get_comment_replies_v1(
+        self,
+        *,
+        post_id: str,
+        comment_id: str,
+        expansion_token: str,
+    ) -> ApiResponse[Any]:
+        """
+        Comment Replies
+
+        Retrieves replies to a specific Facebook post comment using the legacy post ID, comment ID, and expansion token. Use it to inspect a known comment's nested discussion.
+
+        Args:
+            post_id: The legacy numeric identifier of the Facebook post.
+            comment_id: The unique identifier of the parent Facebook comment.
+            expansion_token: The expansion token associated with the parent Facebook comment.
+        """
+        return self._get(
+            "/api/facebook/get-comment-replies/v1",
+            {
+                "postId": post_id,
+                "commentId": comment_id,
+                "expansionToken": expansion_token,
+            },
+        )
