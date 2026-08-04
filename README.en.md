@@ -494,6 +494,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Get Profile ID (V1)](https://docs.justoneapi.com/en/api/facebook/get-profile-id-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Get Profile Posts (V1)](https://docs.justoneapi.com/en/api/facebook/get-profile-posts-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Post Comments (V1)](https://docs.justoneapi.com/en/api/facebook/post-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Comment Replies (V1)](https://docs.justoneapi.com/en/api/facebook/comment-replies-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Twitter
 
