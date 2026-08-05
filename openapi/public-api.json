@@ -31,6 +31,16 @@
         },
         "description": "Internal server error"
       },
+      "ResultServiceUnavailableResponse": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Result"
+            }
+          }
+        },
+        "description": "Service temporarily unavailable"
+      },
       "ResultTooManyRequestsResponse": {
         "content": {
           "application/json": {
@@ -68,6 +78,7 @@
               400,
               404,
               500,
+              503,
               600,
               601,
               602
@@ -157,6 +168,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -226,6 +240,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -343,6 +360,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Best Sellers",
@@ -479,6 +499,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Products By Category",
@@ -585,6 +608,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -691,6 +717,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Top Reviews",
@@ -871,6 +900,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -962,6 +994,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Community List",
@@ -1041,6 +1076,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Resale Housing Details",
@@ -1132,6 +1170,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Resale Housing List",
@@ -1201,6 +1242,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -1270,6 +1314,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Relation Stats",
@@ -1348,6 +1395,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Videos",
@@ -1435,6 +1485,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Captions",
@@ -1513,6 +1566,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Comments",
@@ -1600,6 +1656,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Danmaku",
@@ -1669,6 +1728,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Details",
@@ -1765,6 +1827,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Search",
@@ -1834,6 +1899,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Share Link Resolution",
@@ -1942,6 +2010,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -2037,6 +2108,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comments",
@@ -2106,6 +2180,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Review Details",
@@ -2201,6 +2278,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Movie Reviews",
@@ -2272,6 +2352,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Recent Hot Movie",
@@ -2343,6 +2426,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Recent Hot Tv",
@@ -2412,6 +2498,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Subject Details",
@@ -2490,6 +2579,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Item Comments",
@@ -2560,6 +2652,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Item Details",
@@ -2622,6 +2717,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Item Details",
@@ -2704,6 +2802,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product SKU Info",
@@ -2782,6 +2883,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Shop Product List",
@@ -2870,6 +2974,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -2949,6 +3056,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Commerce Seeding Base Info",
@@ -3012,6 +3122,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Commerce Spread Info",
@@ -3075,6 +3188,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Content Keyword Analysis",
@@ -3138,6 +3254,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comment Keyword Analysis",
@@ -3201,6 +3320,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Audience Distribution",
@@ -3278,6 +3400,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Conversion Analysis",
@@ -3365,6 +3490,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Conversion Resources",
@@ -3428,6 +3556,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Cost Performance Analysis",
@@ -3509,6 +3640,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Growth Trend",
@@ -3587,6 +3721,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Distribution",
@@ -3665,6 +3802,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Profile",
@@ -3738,6 +3878,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Link Metrics",
@@ -3801,6 +3944,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Link Structure",
@@ -3879,6 +4025,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Marketing Metrics",
@@ -3942,6 +4091,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Recommended Videos",
@@ -4015,6 +4167,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Showcase Items",
@@ -4128,6 +4283,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Spread Metrics",
@@ -4191,6 +4349,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Audience Touchpoint Distribution",
@@ -4254,6 +4415,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Details",
@@ -4331,6 +4495,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Commerce Seeding Base Info",
@@ -4400,6 +4567,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Commerce Spread Info",
@@ -4484,6 +4654,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Contract Base Info",
@@ -4619,6 +4792,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Homepage Videos",
@@ -4745,6 +4921,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Live Statistics",
@@ -4846,6 +5025,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Live Watch Distribution",
@@ -4930,6 +5112,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Order Experience",
@@ -4999,6 +5184,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Side Base Info",
@@ -5068,6 +5256,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Tags",
@@ -5154,6 +5345,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Profile",
@@ -5240,6 +5434,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Marketing Metrics",
@@ -5326,6 +5523,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Channel Metrics",
@@ -5437,6 +5637,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Showcase Items",
@@ -5506,6 +5709,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comment Keyword Analysis",
@@ -5610,6 +5816,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Audience Distribution",
@@ -5696,6 +5905,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Cost Performance Analysis",
@@ -5782,6 +5994,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Link Structure",
@@ -5868,6 +6083,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Recommended Videos",
@@ -5954,6 +6172,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Audience Touchpoint Distribution",
@@ -6040,6 +6261,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Distribution",
@@ -6126,6 +6350,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Visibility Status",
@@ -6227,6 +6454,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Conversion Analysis",
@@ -6405,6 +6635,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Conversion Resources",
@@ -6492,6 +6725,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Growth Trend",
@@ -6576,6 +6812,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Distribution",
@@ -6713,6 +6952,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Link Metrics",
@@ -6854,6 +7096,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Spread Metrics",
@@ -6923,6 +7168,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Details",
@@ -6992,6 +7240,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Item Report Analysis",
@@ -7061,6 +7312,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Item Report Trends",
@@ -7130,6 +7384,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Business Card",
@@ -7199,6 +7456,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Content Keyword Analysis",
@@ -7593,6 +7853,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Search",
@@ -7688,6 +7951,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Search Light",
@@ -7750,6 +8016,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -7844,6 +8113,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Videos",
@@ -7925,6 +8197,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Videos",
@@ -8018,6 +8293,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Comments",
@@ -8087,6 +8365,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Details",
@@ -8167,6 +8448,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comment Replies",
@@ -8428,6 +8712,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Hot Search",
@@ -8523,6 +8810,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Search",
@@ -8653,6 +8943,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Search",
@@ -8793,6 +9086,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Search",
@@ -8862,6 +9158,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Share Link Resolution",
@@ -8949,6 +9248,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comment Replies",
@@ -9028,6 +9330,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Comments",
@@ -9097,6 +9402,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Get Profile ID",
@@ -9176,6 +9484,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Get Profile Posts",
@@ -9275,6 +9586,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Search",
@@ -9399,6 +9713,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Keyword Search",
@@ -9491,6 +9808,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "News by Category",
@@ -9574,6 +9894,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Streaming Picks",
@@ -9666,6 +9989,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Awards Summary",
@@ -9758,6 +10084,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Base Info",
@@ -9850,6 +10179,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Box Office Summary",
@@ -9947,6 +10279,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Chart Rankings",
@@ -10039,6 +10374,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Contribution Questions",
@@ -10131,6 +10469,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Countries of Origin",
@@ -10223,6 +10564,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Critics Review Summary",
@@ -10315,6 +10659,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Details",
@@ -10407,6 +10754,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "'Did You Know' Insights",
@@ -10499,6 +10849,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Extended Details",
@@ -10591,6 +10944,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Recommendations",
@@ -10683,6 +11039,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Plot Summary",
@@ -10775,6 +11134,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Redux Overview",
@@ -10867,6 +11229,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Release Expectation",
@@ -10959,6 +11324,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Top Cast and Crew",
@@ -11051,6 +11419,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Reviews Summary",
@@ -11139,6 +11510,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comment Reply List",
@@ -11233,6 +11607,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Comment List",
@@ -11302,6 +11679,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Details",
@@ -11371,6 +11751,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -11440,6 +11823,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -11520,6 +11906,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Posts",
@@ -11599,6 +11988,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Hashtag Posts Search",
@@ -11678,6 +12070,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Reels Search",
@@ -11756,6 +12151,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Comments",
@@ -11834,6 +12232,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Comments",
@@ -11903,6 +12304,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -11972,6 +12376,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -12059,6 +12466,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -12165,6 +12575,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Price",
@@ -12243,6 +12656,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Shop Product List",
@@ -12321,6 +12737,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -12399,6 +12818,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -12468,6 +12890,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -12546,6 +12971,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Videos",
@@ -12624,6 +13052,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Comments",
@@ -12692,6 +13123,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Details",
@@ -12778,6 +13212,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Search",
@@ -12856,6 +13293,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Search",
@@ -12936,6 +13376,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Search",
@@ -13005,6 +13448,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Share Link Resolution",
@@ -13086,6 +13532,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Company Employees",
@@ -13201,6 +13650,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Comments",
@@ -13301,6 +13753,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Reactions",
@@ -13370,6 +13825,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -13476,6 +13934,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Posts",
@@ -13660,6 +14121,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "People Search",
@@ -13730,6 +14194,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Doubao Answer",
@@ -13799,6 +14266,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Account Creator Details",
@@ -13914,6 +14384,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Account Recent Videos",
@@ -13995,6 +14468,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Account Creator Search",
@@ -14064,6 +14540,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Official Account Creator Details",
@@ -14187,6 +14666,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Official Account Article List",
@@ -14268,6 +14750,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Official Account Creator Search",
@@ -14347,6 +14832,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Comments",
@@ -14416,6 +14904,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Details",
@@ -14495,6 +14986,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Keyword Search",
@@ -14613,6 +15107,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Cross-Platform Search",
@@ -14734,6 +15231,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Reviews",
@@ -14803,6 +15303,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -14885,6 +15388,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -14972,6 +15478,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -15066,6 +15575,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -15160,6 +15672,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -15242,6 +15757,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -15324,6 +15842,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -15407,6 +15928,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Sales",
@@ -15502,6 +16026,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Shop Product List",
@@ -15622,6 +16149,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Shop Product List",
@@ -15743,6 +16273,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Shop Product List",
@@ -15816,6 +16349,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Shop Product List",
@@ -15902,6 +16438,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Questions",
@@ -16027,6 +16566,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -16118,6 +16660,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -16202,6 +16747,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -16306,6 +16854,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -16385,6 +16936,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Comments",
@@ -16454,6 +17008,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Details",
@@ -16542,6 +17099,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comment Replies",
@@ -16622,6 +17182,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -16716,6 +17279,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Posts",
@@ -16840,6 +17406,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Search",
@@ -16929,6 +17498,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Search",
@@ -16998,6 +17570,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Details",
@@ -17067,6 +17642,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -17136,6 +17714,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User ID",
@@ -17227,6 +17808,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "App Keyword Search",
@@ -17289,6 +17873,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Web Keyword Search",
@@ -17381,6 +17968,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Comments",
@@ -17450,6 +18040,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -17529,6 +18122,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Posts",
@@ -17626,6 +18222,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Search Timeline",
@@ -17706,6 +18305,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Fans",
@@ -17786,6 +18388,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Followers",
@@ -17879,6 +18484,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Comments",
@@ -17948,6 +18556,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -18037,6 +18648,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Posts",
@@ -18115,6 +18729,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Video List",
@@ -18184,6 +18801,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Post Details",
@@ -18244,6 +18864,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Hot Search",
@@ -18390,6 +19013,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Keyword Search",
@@ -18497,6 +19123,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Search User Published Posts",
@@ -18566,6 +19195,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "TV Video Details",
@@ -18635,6 +19267,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Export Id Conversion",
@@ -18713,6 +19348,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Videos",
@@ -18793,6 +19431,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Get Bound Channel",
@@ -18862,6 +19503,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Basic Info",
@@ -18945,6 +19589,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Comments",
@@ -19024,6 +19671,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Download URL",
@@ -19107,6 +19757,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Metrics",
@@ -19190,6 +19843,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Sub Comments",
@@ -19269,6 +19925,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Title",
@@ -19372,6 +20031,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Search",
@@ -19441,6 +20103,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Search",
@@ -19510,6 +20175,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Search",
@@ -19621,6 +20289,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Search",
@@ -19711,6 +20382,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Search",
@@ -19780,6 +20454,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Link Conversion",
@@ -19849,6 +20526,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Basic Info",
@@ -19951,6 +20631,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Historical Articles",
@@ -20034,6 +20717,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Historical Articles",
@@ -20114,6 +20800,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Original Article Count",
@@ -20204,6 +20893,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Principal Info",
@@ -20295,6 +20987,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Today Articles",
@@ -20373,6 +21068,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Comments",
@@ -20457,6 +21155,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Details",
@@ -20526,6 +21227,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Details",
@@ -20610,6 +21314,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Details",
@@ -20679,6 +21386,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Details",
@@ -20748,6 +21458,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Details",
@@ -20817,6 +21530,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Metrics",
@@ -20886,6 +21602,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Metrics",
@@ -20964,6 +21683,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Comment Replies",
@@ -21044,6 +21766,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Search",
@@ -21134,6 +21859,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Account Search",
@@ -21296,6 +22024,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Hot Article Search",
@@ -21407,6 +22138,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Search",
@@ -21509,6 +22243,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Article Search",
@@ -21599,6 +22336,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Mini Program Search",
@@ -21694,6 +22434,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Search Suggestions",
@@ -21763,6 +22506,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "WeChat Index Search",
@@ -21832,6 +22578,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Details",
@@ -21930,6 +22679,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -22018,6 +22770,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Product Search",
@@ -22158,6 +22913,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Content Square Notes",
@@ -22288,6 +23046,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Core Metrics",
@@ -22958,6 +23719,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Search",
@@ -23027,6 +23791,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Profile",
@@ -23126,6 +23893,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Growth History",
@@ -23195,6 +23965,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Distribution",
@@ -23264,6 +24037,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Cost Effectiveness Analysis",
@@ -23333,6 +24109,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Content Tags",
@@ -23402,6 +24181,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Feature Tags",
@@ -23545,6 +24327,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Note List",
@@ -23629,6 +24414,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Data Summary",
@@ -23698,6 +24486,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Summary",
@@ -23828,6 +24619,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Performance Metrics",
@@ -23908,6 +24702,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Similar Creators",
@@ -23977,6 +24774,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -24133,6 +24933,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Core Metrics",
@@ -24196,6 +24999,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Cost Effectiveness Analysis",
@@ -24273,6 +25079,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Data Summary",
@@ -24336,6 +25145,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Distribution",
@@ -24399,6 +25211,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Summary",
@@ -24490,6 +25305,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Follower Growth History",
@@ -24553,6 +25371,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Profile",
@@ -24672,6 +25493,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Creator Note List Pro",
@@ -24803,6 +25627,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Performance Metrics",
@@ -24866,6 +25693,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -24928,6 +25758,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Ask Dots AI",
@@ -25021,6 +25854,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Comments",
@@ -25121,6 +25957,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Comments",
@@ -25208,6 +26047,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Comments",
@@ -25276,6 +26118,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -25364,6 +26209,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -25444,6 +26292,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -25506,6 +26357,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -25586,6 +26440,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -25673,6 +26530,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -25756,6 +26616,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Details",
@@ -25835,6 +26698,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comment Replies",
@@ -25928,6 +26794,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Topic Note List",
@@ -26006,6 +26875,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Notes",
@@ -26077,6 +26949,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Notes",
@@ -26147,6 +27022,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Notes",
@@ -26217,6 +27095,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Published Notes",
@@ -26286,6 +27167,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -26355,6 +27239,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -26408,6 +27295,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Hot List",
@@ -26527,6 +27417,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Hot Search",
@@ -26656,6 +27549,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Search",
@@ -26778,6 +27674,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Search",
@@ -26913,6 +27812,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Search",
@@ -27037,6 +27939,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Note Search",
@@ -27112,6 +28017,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Keyword Suggestions",
@@ -27192,6 +28100,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Search",
@@ -27261,6 +28172,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Share Link Resolution",
@@ -27330,6 +28244,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Profile",
@@ -27399,6 +28316,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Details",
@@ -27479,6 +28399,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Search",
@@ -27557,6 +28480,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Channel Videos",
@@ -27653,6 +28579,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Captions",
@@ -27767,6 +28696,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Comment List",
@@ -27836,6 +28768,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Details",
@@ -27925,6 +28860,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Video Sub Comment List",
@@ -28090,6 +29028,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "General Search",
@@ -28184,6 +29125,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Answer Comments",
@@ -28299,6 +29243,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Answer List",
@@ -28368,6 +29315,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Column Article Details",
@@ -28448,6 +29398,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Column Article List",
@@ -28542,6 +29495,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Comment Replies",
@@ -28637,6 +29593,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Articles",
@@ -28717,6 +29676,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Follow Collections",
@@ -28797,6 +29759,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Follow Columns",
@@ -28877,6 +29842,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Follow Questions",
@@ -28957,6 +29925,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Follow Topics",
@@ -29037,6 +30008,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Followees",
@@ -29117,6 +30091,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Followers",
@@ -29197,6 +30174,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Included Articles",
@@ -29266,6 +30246,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "User Info",
@@ -29408,6 +30391,9 @@
           },
           "500": {
             "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
           }
         },
         "summary": "Keyword Search",
@@ -29938,5 +30924,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "11ecad97c23ac56c"
+  "x-openapi-release-id": "751f48bb282610f9"
 }

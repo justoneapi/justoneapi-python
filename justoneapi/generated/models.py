@@ -21,6 +21,7 @@ class Code(IntEnum):
     integer_400 = 400
     integer_404 = 404
     integer_500 = 500
+    integer_503 = 503
     integer_600 = 600
     integer_601 = 601
     integer_602 = 602
