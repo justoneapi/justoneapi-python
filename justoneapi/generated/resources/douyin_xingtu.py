@@ -38,6 +38,8 @@ class DouyinXingtuResource(BaseResource):
         completion_rate_range: str | None = None,
         viral_rate_range: str | None = None,
         progress_task_range: str | None = None,
+        is_curated_author: bool | None = False,
+        author_list: str | None = None,
     ) -> ApiResponse[Any]:
         """
         Creator Search
@@ -71,6 +73,8 @@ class DouyinXingtuResource(BaseResource):
             completion_rate_range: Completion rate range in decimal min-max format. Example values: 0.1-1 for 10% or above, 0.2-1 for 20% or above.
             viral_rate_range: Viral content rate range in decimal min-max format. Page presets include 0-0.1, 0.1-0.25, 0.25-0.5, 0.5-0.99, and 0.99 or above. For open-ended presets, pass a high upper bound such as 0.99-1. Example: 0.1-0.25.
             progress_task_range: In-progress task count range. Place a colon between the day count and the min-max range; omit either bound for an open range. Example: 30:8-
+            is_curated_author: Whether to include only Xingtu curated creators under Topic Recommendations.
+            author_list: Activity-curated creator list under Xingtu Topic Recommendations. Select at most one value. Pass an enum name, numeric list ID, or Chinese label. Available values: SHORT_LIVE_ENTERTAINMENT_CREATORS/7540478044453486642/短直联动娱播达人; SHORT_DRAMA_ACTORS/7591708652957155378/短剧演员; WECHAT_QUICK_CONNECT_CREATORS/7644854622347100210/企微可快速建联达人; AI_STAR_PLAN_CREATORS/7658250094571814938/AI星企划达人; COMMERCE_ADVANTAGE_CREATORS/7648906835038568499/带货优势达人; HIGH_VALUE_CREATORS/7656639212045516826/高性价比达人; SEEDING_ADVANTAGE_CREATORS/7663404694186033202/种草优势达人; BASKETBALL_CREATORS/7501674900550238234/运动圈层达人-篮球; PREMIUM_CONTENT_MEDIA/7586629331582222374/精品内容型媒体推荐; TREND_SETTING_MEDIA/7586616213569781769/趋势造风型媒体推荐; FACTORY_TRACEABILITY_MEDIA/7586616269403832370/探厂溯源型媒体推荐; RUNNING_CREATORS/7501675026170281994/运动圈层达人-跑步; LIGHT_OUTDOOR_CREATORS/7501674458878181413/运动圈层达人-轻户外; FITNESS_CREATORS/7501674307430236197/运动圈层达人-运动健身; YOGA_CREATORS/7501678481074929674/运动圈层达人-瑜伽; STREET_SPORTS_CREATORS/7501677564604383259/运动圈层达人-街头运动; CYCLING_CREATORS/7501677556094042149/运动圈层达人-骑行; FOOTBALL_CREATORS/7501674900550483994/运动圈层达人-足球; FISHING_CREATORS/7501676465915215881/运动圈层达人-垂钓; BEAUTY_QUALITY_CREATORS/7460387606572875826/美妆质感达人.  Available Values: - `SHORT_LIVE_ENTERTAINMENT_CREATORS`: Short-video and livestream entertainment creators - `SHORT_DRAMA_ACTORS`: Short-drama actors - `WECHAT_QUICK_CONNECT_CREATORS`: Creators available for fast WeChat Work contact - `AI_STAR_PLAN_CREATORS`: AI Star Plan creators - `COMMERCE_ADVANTAGE_CREATORS`: Creators with commerce conversion advantages - `HIGH_VALUE_CREATORS`: High-value creators - `SEEDING_ADVANTAGE_CREATORS`: Creators with product-seeding advantages - `BASKETBALL_CREATORS`: Basketball creators - `PREMIUM_CONTENT_MEDIA`: Premium-content media recommendations - `TREND_SETTING_MEDIA`: Trend-setting media recommendations - `FACTORY_TRACEABILITY_MEDIA`: Factory and product-origin media recommendations - `RUNNING_CREATORS`: Running creators - `LIGHT_OUTDOOR_CREATORS`: Light-outdoor creators - `FITNESS_CREATORS`: Exercise and fitness creators - `YOGA_CREATORS`: Yoga creators - `STREET_SPORTS_CREATORS`: Street-sports creators - `CYCLING_CREATORS`: Cycling creators - `FOOTBALL_CREATORS`: Football creators - `FISHING_CREATORS`: Fishing creators - `BEAUTY_QUALITY_CREATORS`: Beauty creators with premium visual quality
         """
         return self._get(
             "/api/douyin-xingtu/gw/api/gsearch/search_for_author_square/v1",
@@ -101,6 +105,8 @@ class DouyinXingtuResource(BaseResource):
                 "completionRateRange": completion_rate_range,
                 "viralRateRange": viral_rate_range,
                 "progressTaskRange": progress_task_range,
+                "isCuratedAuthor": is_curated_author,
+                "authorList": author_list,
             },
         )
 

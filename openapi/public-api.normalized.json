@@ -7946,6 +7946,50 @@
               "type": "string"
             },
             "x-sdk-python-name": "progress_task_range"
+          },
+          {
+            "description": "Whether to include only Xingtu curated creators under Topic Recommendations.",
+            "in": "query",
+            "name": "isCuratedAuthor",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            },
+            "x-sdk-python-name": "is_curated_author"
+          },
+          {
+            "description": "Activity-curated creator list under Xingtu Topic Recommendations. Select at most one value. Pass an enum name, numeric list ID, or Chinese label. Available values: SHORT_LIVE_ENTERTAINMENT_CREATORS/7540478044453486642/短直联动娱播达人; SHORT_DRAMA_ACTORS/7591708652957155378/短剧演员; WECHAT_QUICK_CONNECT_CREATORS/7644854622347100210/企微可快速建联达人; AI_STAR_PLAN_CREATORS/7658250094571814938/AI星企划达人; COMMERCE_ADVANTAGE_CREATORS/7648906835038568499/带货优势达人; HIGH_VALUE_CREATORS/7656639212045516826/高性价比达人; SEEDING_ADVANTAGE_CREATORS/7663404694186033202/种草优势达人; BASKETBALL_CREATORS/7501674900550238234/运动圈层达人-篮球; PREMIUM_CONTENT_MEDIA/7586629331582222374/精品内容型媒体推荐; TREND_SETTING_MEDIA/7586616213569781769/趋势造风型媒体推荐; FACTORY_TRACEABILITY_MEDIA/7586616269403832370/探厂溯源型媒体推荐; RUNNING_CREATORS/7501675026170281994/运动圈层达人-跑步; LIGHT_OUTDOOR_CREATORS/7501674458878181413/运动圈层达人-轻户外; FITNESS_CREATORS/7501674307430236197/运动圈层达人-运动健身; YOGA_CREATORS/7501678481074929674/运动圈层达人-瑜伽; STREET_SPORTS_CREATORS/7501677564604383259/运动圈层达人-街头运动; CYCLING_CREATORS/7501677556094042149/运动圈层达人-骑行; FOOTBALL_CREATORS/7501674900550483994/运动圈层达人-足球; FISHING_CREATORS/7501676465915215881/运动圈层达人-垂钓; BEAUTY_QUALITY_CREATORS/7460387606572875826/美妆质感达人.\n\nAvailable Values:\n- `SHORT_LIVE_ENTERTAINMENT_CREATORS`: Short-video and livestream entertainment creators\n- `SHORT_DRAMA_ACTORS`: Short-drama actors\n- `WECHAT_QUICK_CONNECT_CREATORS`: Creators available for fast WeChat Work contact\n- `AI_STAR_PLAN_CREATORS`: AI Star Plan creators\n- `COMMERCE_ADVANTAGE_CREATORS`: Creators with commerce conversion advantages\n- `HIGH_VALUE_CREATORS`: High-value creators\n- `SEEDING_ADVANTAGE_CREATORS`: Creators with product-seeding advantages\n- `BASKETBALL_CREATORS`: Basketball creators\n- `PREMIUM_CONTENT_MEDIA`: Premium-content media recommendations\n- `TREND_SETTING_MEDIA`: Trend-setting media recommendations\n- `FACTORY_TRACEABILITY_MEDIA`: Factory and product-origin media recommendations\n- `RUNNING_CREATORS`: Running creators\n- `LIGHT_OUTDOOR_CREATORS`: Light-outdoor creators\n- `FITNESS_CREATORS`: Exercise and fitness creators\n- `YOGA_CREATORS`: Yoga creators\n- `STREET_SPORTS_CREATORS`: Street-sports creators\n- `CYCLING_CREATORS`: Cycling creators\n- `FOOTBALL_CREATORS`: Football creators\n- `FISHING_CREATORS`: Fishing creators\n- `BEAUTY_QUALITY_CREATORS`: Beauty creators with premium visual quality",
+            "in": "query",
+            "name": "authorList",
+            "required": false,
+            "schema": {
+              "description": "Xingtu activity-curated creator list",
+              "enum": [
+                "SHORT_LIVE_ENTERTAINMENT_CREATORS",
+                "SHORT_DRAMA_ACTORS",
+                "WECHAT_QUICK_CONNECT_CREATORS",
+                "AI_STAR_PLAN_CREATORS",
+                "COMMERCE_ADVANTAGE_CREATORS",
+                "HIGH_VALUE_CREATORS",
+                "SEEDING_ADVANTAGE_CREATORS",
+                "BASKETBALL_CREATORS",
+                "PREMIUM_CONTENT_MEDIA",
+                "TREND_SETTING_MEDIA",
+                "FACTORY_TRACEABILITY_MEDIA",
+                "RUNNING_CREATORS",
+                "LIGHT_OUTDOOR_CREATORS",
+                "FITNESS_CREATORS",
+                "YOGA_CREATORS",
+                "STREET_SPORTS_CREATORS",
+                "CYCLING_CREATORS",
+                "FOOTBALL_CREATORS",
+                "FISHING_CREATORS",
+                "BEAUTY_QUALITY_CREATORS"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "author_list"
           }
         ],
         "responses": {
@@ -16035,6 +16079,85 @@
           "淘宝商品详情 V6",
           "天猫商品详情查询 V6",
           "淘宝商品 ID 查询 V6"
+        ]
+      }
+    },
+    "/api/taobao/get-item-detail/v7": {
+      "get": {
+        "description": "Retrieves Taobao or Tmall product details by item ID through the V7 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.",
+        "operationId": "getApiTaobaoGetItemDetailV7",
+        "parameters": [
+          {
+            "description": "Unique product identifier on Taobao/Tmall (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Details",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v7",
+        "x-endpoint-family": "taobao_get_item_detail",
+        "x-highlights": [
+          {
+            "content": "This endpoint supports all Taobao and Tmall products.",
+            "kind": "GUIDANCE",
+            "type": "tip"
+          }
+        ],
+        "x-order": "11001375",
+        "x-recommended": true,
+        "x-sdk-class-name": "TaobaoResource",
+        "x-sdk-method-name": "get_item_detail_v7",
+        "x-sdk-resource": "taobao",
+        "x-search-aliases": [
+          "Taobao product details v7",
+          "Tmall item detail lookup v7",
+          "Taobao item information API v7",
+          "淘宝商品详情 V7",
+          "天猫商品详情查询 V7",
+          "淘宝商品 ID 查询 V7"
         ]
       }
     },
@@ -31528,5 +31651,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "751f48bb282610f9"
+  "x-openapi-release-id": "72cd16a35beec5f9"
 }
