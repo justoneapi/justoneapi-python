@@ -131,6 +131,7 @@ except BusinessError as exc:
 - [商品详情 (V4)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-details-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品详情 (V5)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-details-v5?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品详情 (V6)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-details-v6?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [商品详情 (V7)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-details-v7?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品详情 (V9)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-details-v9?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品评价 (V3)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-reviews-v3?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品问答 (V1)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-questions-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
