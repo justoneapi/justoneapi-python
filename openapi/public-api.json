@@ -22005,7 +22005,7 @@
     },
     "/api/weixin/search-article-hot/v1": {
       "get": {
-        "description": "Searches hot WeChat Official Account articles within a required date range, with optional keyword plus publication-format, category, and page filters. Use it to identify high-interest content for trend research or editorial benchmarking.",
+        "description": "Searches hot WeChat Official Account articles within a required date range of up to 7 days, with optional keyword plus publication-format, category, and page filters. Use it to identify high-interest content for trend research or editorial benchmarking.",
         "operationId": "getApiWeixinSearchArticleHotV1",
         "parameters": [
           {
@@ -22102,7 +22102,7 @@
             }
           },
           {
-            "description": "Start date for hot article search in yyyy-MM-dd format.",
+            "description": "Start date for hot article search in yyyy-MM-dd format. The range through endDay must not exceed 7 days.",
             "in": "query",
             "name": "startDay",
             "required": true,
@@ -22111,7 +22111,7 @@
             }
           },
           {
-            "description": "End date for hot article search in yyyy-MM-dd format.",
+            "description": "End date for hot article search in yyyy-MM-dd format. It must be on or after startDay and no more than 7 days later.",
             "in": "query",
             "name": "endDay",
             "required": true,
@@ -31045,5 +31045,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "72cd16a35beec5f9"
+  "x-openapi-release-id": "2561caebcdf6020e"
 }

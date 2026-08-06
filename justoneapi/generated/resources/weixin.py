@@ -272,11 +272,11 @@ class WeixinResource(BaseResource):
         """
         Hot Article Search
 
-        Searches hot WeChat Official Account articles within a required date range, with optional keyword plus publication-format, category, and page filters. Use it to identify high-interest content for trend research or editorial benchmarking.
+        Searches hot WeChat Official Account articles within a required date range of up to 7 days, with optional keyword plus publication-format, category, and page filters. Use it to identify high-interest content for trend research or editorial benchmarking.
 
         Args:
-            start_day: Start date for hot article search in yyyy-MM-dd format.
-            end_day: End date for hot article search in yyyy-MM-dd format.
+            start_day: Start date for hot article search in yyyy-MM-dd format. The range through endDay must not exceed 7 days.
+            end_day: End date for hot article search in yyyy-MM-dd format. It must be on or after startDay and no more than 7 days later.
             keyword: Optional keyword used to filter hot WeChat Official Account articles.
             publish_type: Publish type filter for hot WeChat Official Account article results.  Available Values: - `IMAGE_TEXT`: Image and text article - `VIDEO`: Pure video article - `AUDIO`: Pure audio or music article - `IMAGE`: Pure image article - `TEXT`: Pure text article - `REPRINT`: Reprinted article
             category: Category filter for hot WeChat Official Account article results.  Available Values: - `ALL`: All categories - `INTERNATIONAL`: International - `SPORTS`: Sports - `ENTERTAINMENT`: Entertainment - `SOCIETY`: Society - `FINANCE`: Finance - `CURRENT_AFFAIRS`: Current affairs - `TECHNOLOGY`: Technology - `EMOTION`: Emotion - `AUTOMOTIVE`: Automotive - `EDUCATION`: Education - `FASHION`: Fashion - `GAMES`: Games - `MILITARY`: Military - `TRAVEL`: Travel - `FOOD`: Food - `CULTURE`: Culture - `HEALTH`: Health - `HUMOR`: Humor - `HOME`: Home - `ANIMATION`: Animation - `PETS`: Pets - `PARENTING`: Parenting - `ASTROLOGY`: Astrology - `HISTORY`: History - `MUSIC`: Music - `UNCATEGORIZED`: Uncategorized - `COMPREHENSIVE`: Comprehensive - `WORKPLACE`: Workplace - `AGRICULTURE`: Agriculture - `ELDERLY_CARE`: Elderly care
