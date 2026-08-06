@@ -116,6 +116,29 @@ class YoutubeResource(BaseResource):
             },
         )
 
+    def get_channel_shorts_v1(
+        self,
+        *,
+        channel_id: str,
+        continuation_token: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Channel Shorts
+
+        Retrieve public Shorts from a YouTube channel ID with optional continuation-token pagination. Use it to browse a channel's short-form videos and continue through additional result pages.
+
+        Args:
+            channel_id: The UC-prefixed unique identifier for a YouTube channel. @username handles are not supported.
+            continuation_token: Pagination token returned by the previous response.
+        """
+        return self._get(
+            "/api/youtube/get-channel-shorts/v1",
+            {
+                "channelId": channel_id,
+                "continuationToken": continuation_token,
+            },
+        )
+
     def get_video_comment_v1(
         self,
         *,

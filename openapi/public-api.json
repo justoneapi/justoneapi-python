@@ -28543,6 +28543,88 @@
         ]
       }
     },
+    "/api/youtube/get-channel-shorts/v1": {
+      "get": {
+        "description": "Retrieve public Shorts from a YouTube channel ID with optional continuation-token pagination. Use it to browse a channel's short-form videos and continue through additional result pages.",
+        "operationId": "getApiYoutubeGetChannelShortsV1",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The UC-prefixed unique identifier for a YouTube channel. @username handles are not supported.",
+            "in": "query",
+            "name": "channelId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination token returned by the previous response.",
+            "in": "query",
+            "name": "continuationToken",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "summary": "Channel Shorts",
+        "tags": [
+          "YouTube"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "youtube_get_channel_shorts",
+        "x-highlights": [],
+        "x-order": "25001003",
+        "x-search-aliases": [
+          "YouTube channel Shorts",
+          "YouTube Shorts list",
+          "YouTube creator short videos",
+          "YouTube频道Shorts",
+          "YouTube短视频列表",
+          "YouTube频道短视频"
+        ]
+      }
+    },
     "/api/youtube/get-channel-videos/v1": {
       "get": {
         "description": "Retrieve public videos from a YouTube channel, with optional cursor-based pagination. Use it to browse a channel's uploads and continue through additional result pages.",
@@ -31045,5 +31127,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "2561caebcdf6020e"
+  "x-openapi-release-id": "6391df1ad053ce8c"
 }
