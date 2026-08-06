@@ -446,6 +446,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Video Details (V1)](https://docs.justoneapi.com/en/api/youtube/video-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Channel Videos (V1)](https://docs.justoneapi.com/en/api/youtube/channel-videos-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Captions (V1)](https://docs.justoneapi.com/en/api/youtube/video-captions-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Channel Shorts (V1)](https://docs.justoneapi.com/en/api/youtube/channel-shorts-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Comment List (V1)](https://docs.justoneapi.com/en/api/youtube/video-comment-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Video Sub Comment List (V1)](https://docs.justoneapi.com/en/api/youtube/video-sub-comment-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
