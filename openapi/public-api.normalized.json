@@ -15429,7 +15429,7 @@
     },
     "/api/taobao/get-item-comment/v3": {
       "get": {
-        "description": "Retrieves Taobao and Tmall product reviews by item ID with page-based pagination, configurable sorting, and optional exclusion of default positive reviews. Use it to analyze customer feedback.",
+        "description": "Retrieves Taobao and Tmall product reviews by item ID with page-based pagination and configurable sorting. Use it to analyze customer feedback.",
         "operationId": "getApiTaobaoGetItemCommentV3",
         "parameters": [
           {
@@ -15469,22 +15469,6 @@
               "type": "integer"
             },
             "x-sdk-python-name": "page"
-          },
-          {
-            "description": "Controls default positive reviews. Use `1` to hide them; omit this parameter to include them (default).\n\nAvailable Values:\n- `SHOW_DEFAULT_POSITIVE_REVIEWS`: Include default positive reviews (default)\n- `HIDE_DEFAULT_POSITIVE_REVIEWS`: Hide default positive reviews",
-            "in": "query",
-            "name": "content",
-            "required": false,
-            "schema": {
-              "default": "SHOW_DEFAULT_POSITIVE_REVIEWS",
-              "description": "Default positive review visibility",
-              "enum": [
-                "SHOW_DEFAULT_POSITIVE_REVIEWS",
-                "HIDE_DEFAULT_POSITIVE_REVIEWS"
-              ],
-              "type": "string"
-            },
-            "x-sdk-python-name": "content"
           }
         ],
         "responses": {
@@ -31734,5 +31718,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "6391df1ad053ce8c"
+  "x-openapi-release-id": "fed998d1ceac8848"
 }

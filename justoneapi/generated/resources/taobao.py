@@ -175,18 +175,16 @@ class TaobaoResource(BaseResource):
         item_id: str,
         order_type: str | None = "feedbackdate",
         page: int | None = 1,
-        content: str | None = "SHOW_DEFAULT_POSITIVE_REVIEWS",
     ) -> ApiResponse[Any]:
         """
         Product Reviews
 
-        Retrieves Taobao and Tmall product reviews by item ID with page-based pagination, configurable sorting, and optional exclusion of default positive reviews. Use it to analyze customer feedback.
+        Retrieves Taobao and Tmall product reviews by item ID with page-based pagination and configurable sorting. Use it to analyze customer feedback.
 
         Args:
             item_id: Unique product identifier on Taobao/Tmall (item ID).
             order_type: Sort order for the result set.  Available Values: - `feedbackdate`: Sort by feedback date - `general`: General sorting
             page: Page number for pagination.
-            content: Controls default positive reviews. Use `1` to hide them; omit this parameter to include them (default).  Available Values: - `SHOW_DEFAULT_POSITIVE_REVIEWS`: Include default positive reviews (default) - `HIDE_DEFAULT_POSITIVE_REVIEWS`: Hide default positive reviews
         """
         return self._get(
             "/api/taobao/get-item-comment/v3",
@@ -194,7 +192,6 @@ class TaobaoResource(BaseResource):
                 "itemId": item_id,
                 "orderType": order_type,
                 "page": page,
-                "content": content,
             },
         )
 
