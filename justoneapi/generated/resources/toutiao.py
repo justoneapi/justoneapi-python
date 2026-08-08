@@ -29,6 +29,26 @@ class ToutiaoResource(BaseResource):
             },
         )
 
+    def get_video_detail_v1(
+        self,
+        *,
+        video_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Video Details
+
+        Retrieves details for a Toutiao video identified by its video ID. Use it to look up a known video for content review, archiving, or related media analysis.
+
+        Args:
+            video_id: The unique identifier of the Toutiao video.
+        """
+        return self._get(
+            "/api/toutiao/get-video-detail/v1",
+            {
+                "videoId": video_id,
+            },
+        )
+
     def get_user_detail_v1(
         self,
         *,

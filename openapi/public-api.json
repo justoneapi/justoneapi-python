@@ -17843,6 +17843,78 @@
         ]
       }
     },
+    "/api/toutiao/get-video-detail/v1": {
+      "get": {
+        "description": "Retrieves details for a Toutiao video identified by its video ID. Use it to look up a known video for content review, archiving, or related media analysis.",
+        "operationId": "getApiToutiaoGetVideoDetailV1",
+        "parameters": [
+          {
+            "description": "Authentication token required to access the API.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique identifier of the Toutiao video.",
+            "in": "query",
+            "name": "videoId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "summary": "Video Details",
+        "tags": [
+          "Toutiao"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "toutiao_get_video_detail",
+        "x-highlights": [],
+        "x-order": "27001050",
+        "x-search-aliases": [
+          "Toutiao video details API",
+          "Toutiao video ID lookup",
+          "Toutiao video information",
+          "今日头条视频详情",
+          "头条视频 ID 查询",
+          "头条视频信息"
+        ]
+      }
+    },
     "/api/toutiao/search/v1": {
       "get": {
         "deprecated": true,
@@ -30781,7 +30853,7 @@
       "x-platform-id": "twitter"
     },
     {
-      "description": "Toutiao articles, profiles, and search data for news monitoring, publisher analysis, and topic research.",
+      "description": "Toutiao articles, videos, profiles, and search data for news monitoring, publisher analysis, and topic research.",
       "name": "Toutiao",
       "x-platform-aliases": [
         "Toutiao",
@@ -31112,5 +31184,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "fed998d1ceac8848"
+  "x-openapi-release-id": "f170666706affee2"
 }
