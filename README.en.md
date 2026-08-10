@@ -307,7 +307,7 @@ The API list below is generated from OpenAPI and shows the current public API ca
 - [Article Details (V5)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-details-v5?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Article Comments (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-comments-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Article Comment Replies (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-comment-replies-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
-- [Hot Article Search (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/hot-article-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Hot Article Search (V1) (Deprecated)](https://docs.justoneapi.com/en/api/wechat-official-accounts/hot-article-search-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [Article Search (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Article Search (V2)](https://docs.justoneapi.com/en/api/wechat-official-accounts/article-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Mini Program Search (V1)](https://docs.justoneapi.com/en/api/wechat-official-accounts/mini-program-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
@@ -397,6 +397,10 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 - [Product Details (V1)](https://docs.justoneapi.com/en/api/1688/product-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [Product Search (V1)](https://docs.justoneapi.com/en/api/1688/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+
+### Temu
+
+- [Homepage Product Feed (V1)](https://docs.justoneapi.com/en/api/temu/homepage-product-feed-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### Douban Movie
 
