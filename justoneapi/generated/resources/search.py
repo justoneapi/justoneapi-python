@@ -24,7 +24,7 @@ class SearchResource(BaseResource):
         Searches recent content across news, Weibo, WeChat, Zhihu, Douyin, Xiaohongshu, Bilibili, and Kuaishou with source and time filters. Use it to monitor a topic across multiple platforms.
 
         Args:
-            keyword: Search query string. Supports: - Multiple keywords (AND): keyword1 keyword2 - Multiple keywords (OR): keyword1~keyword2 - Excluded keywords (NOT): required_keyword -excluded_keyword
+            keyword: Search query string. Supports these five syntax forms: - AND (&&): A && B matches content containing both A and B. - OR (||): A || B matches content containing A or B. - Exclusion (-): -A matches content that does not contain A. - Parentheses (): (A && B) || C matches content containing C, or both A and B. - English double quotes (""): "A" disables tokenization and requires an exact match for A.
             source: Target social media platform for search filtering.  Available Values: - `ALL`: All platforms - `NEWS`: News - `WEIBO`: Sina Weibo - `WEIXIN`: Weixin (WeChat) - `ZHIHU`: Zhihu - `DOUYIN`: Douyin (TikTok China) - `XIAOHONGSHU`: Xiaohongshu (Little Red Book) - `BILIBILI`: Bilibili - `KUAISHOU`: Kuaishou
             start: Start time of the search period (yyyy-MM-dd HH:mm:ss). Required for initial request.
             end: End time of the search period (yyyy-MM-dd HH:mm:ss). Required for initial request.

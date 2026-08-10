@@ -15066,7 +15066,7 @@
             }
           },
           {
-            "description": "Search query string. Supports:\n- Multiple keywords (AND): keyword1 keyword2\n- Multiple keywords (OR): keyword1~keyword2\n- Excluded keywords (NOT): required_keyword -excluded_keyword\n",
+            "description": "Search query string. Supports these five syntax forms:\n- AND (&&): A && B matches content containing both A and B.\n- OR (||): A || B matches content containing A or B.\n- Exclusion (-): -A matches content that does not contain A.\n- Parentheses (): (A && B) || C matches content containing C, or both A and B.\n- English double quotes (\"\"): \"A\" disables tokenization and requires an exact match for A.\n",
             "in": "query",
             "name": "keyword",
             "required": false,
@@ -16692,6 +16692,95 @@
           "淘宝商品搜索接口",
           "天猫关键词商品查询",
           "淘宝商品价格筛选"
+        ]
+      }
+    },
+    "/api/temu/get-homepage-goods/v1": {
+      "get": {
+        "description": "Retrieves Temu homepage product feed cards for a selected site with offset pagination. Use it for product sourcing, catalog monitoring, and marketplace trend analysis.",
+        "operationId": "getApiTemuGetHomepageGoodsV1",
+        "parameters": [
+          {
+            "description": "Authentication token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Temu site used to select the regional homepage feed.\n\nAvailable Values:\n- `US`: United States\n- `EU`: Europe\n- `UK`: United Kingdom\n- `CA`: Canada\n- `AU`: Australia",
+            "in": "query",
+            "name": "site",
+            "required": true,
+            "schema": {
+              "description": "Temu site",
+              "enum": [
+                "US",
+                "EU",
+                "UK",
+                "CA",
+                "AU"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Zero-based offset for pagination.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "summary": "Homepage Product Feed",
+        "tags": [
+          "Temu"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "temu_get_homepage_goods",
+        "x-highlights": [],
+        "x-order": "20001000",
+        "x-search-aliases": [
+          "Temu homepage product feed",
+          "Temu homepage products by site",
+          "Temu marketplace trend feed",
+          "Temu 首页商品流",
+          "Temu 首页货盘",
+          "Temu 选品趋势监控"
         ]
       }
     },
@@ -22062,6 +22151,7 @@
     },
     "/api/weixin/search-article-hot/v1": {
       "get": {
+        "deprecated": true,
         "description": "Searches hot WeChat Official Account articles within a required date range of up to 7 days, with optional keyword plus publication-format, category, and page filters. Use it to identify high-interest content for trend research or editorial benchmarking.",
         "operationId": "getApiWeixinSearchArticleHotV1",
         "parameters": [
@@ -30894,6 +30984,21 @@
       "x-platform-id": "tiktok-shop"
     },
     {
+      "description": "Temu marketplace homepage product feeds for product sourcing, catalog monitoring, and trend research.",
+      "name": "Temu",
+      "x-platform-aliases": [
+        "Temu",
+        "Temu marketplace",
+        "Temu 电商"
+      ],
+      "x-platform-detection-aliases": [
+        "Temu",
+        "Temu marketplace",
+        "Temu 电商"
+      ],
+      "x-platform-id": "temu"
+    },
+    {
       "description": "Taobao and Tmall marketplace product, review, search, and shop catalog data for commerce intelligence workflows.",
       "name": "Taobao and Tmall",
       "x-platform-aliases": [
@@ -31184,5 +31289,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "f170666706affee2"
+  "x-openapi-release-id": "e32b060b4fc2d3de"
 }

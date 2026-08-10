@@ -20,6 +20,7 @@ from justoneapi.generated.resources.qq_huxuan import QqHuxuanResource
 from justoneapi.generated.resources.reddit import RedditResource
 from justoneapi.generated.resources.search import SearchResource
 from justoneapi.generated.resources.taobao import TaobaoResource
+from justoneapi.generated.resources.temu import TemuResource
 from justoneapi.generated.resources.tiktok import TiktokResource
 from justoneapi.generated.resources.tiktok_shop import TiktokShopResource
 from justoneapi.generated.resources.toutiao import ToutiaoResource
@@ -56,6 +57,7 @@ RESOURCE_CLASSES = {
     "reddit": RedditResource,
     "search": SearchResource,
     "taobao": TaobaoResource,
+    "temu": TemuResource,
     "tiktok": TiktokResource,
     "tiktok_shop": TiktokShopResource,
     "toutiao": ToutiaoResource,
@@ -93,6 +95,7 @@ __all__ = [
     "RedditResource",
     "SearchResource",
     "TaobaoResource",
+    "TemuResource",
     "TiktokResource",
     "TiktokShopResource",
     "ToutiaoResource",
