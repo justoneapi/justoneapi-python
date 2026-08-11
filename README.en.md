@@ -402,6 +402,29 @@ The API list below is generated from OpenAPI and shows the current public API ca
 
 - [Homepage Product Feed (V1)](https://docs.justoneapi.com/en/api/temu/homepage-product-feed-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
+### Shopee
+
+- [Item Details (V1)](https://docs.justoneapi.com/en/api/shopee/item-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Shop Profile and Rating Summary (V1)](https://docs.justoneapi.com/en/api/shopee/shop-profile-and-rating-summary-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Details (V2)](https://docs.justoneapi.com/en/api/shopee/item-details-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Shop Item List (V1)](https://docs.justoneapi.com/en/api/shopee/shop-item-list-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item SKU Matrix (V1)](https://docs.justoneapi.com/en/api/shopee/item-sku-matrix-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Shop Basic Profile (V1)](https://docs.justoneapi.com/en/api/shopee/shop-basic-profile-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Search (V1)](https://docs.justoneapi.com/en/api/shopee/item-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item SKU Models (V1)](https://docs.justoneapi.com/en/api/shopee/item-sku-models-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Shop Details (V1)](https://docs.justoneapi.com/en/api/shopee/shop-details-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Rich Shop Reviews (V1)](https://docs.justoneapi.com/en/api/shopee/rich-shop-reviews-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Display Snapshot (V1)](https://docs.justoneapi.com/en/api/shopee/item-display-snapshot-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Shop Reviews (V1)](https://docs.justoneapi.com/en/api/shopee/shop-reviews-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Reviews (V1)](https://docs.justoneapi.com/en/api/shopee/item-reviews-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Search Prefills (V1)](https://docs.justoneapi.com/en/api/shopee/search-prefills-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Search Filter Configuration (V1)](https://docs.justoneapi.com/en/api/shopee/search-filter-configuration-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Shop Categories (V1)](https://docs.justoneapi.com/en/api/shopee/shop-categories-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Review Model Distribution (V1)](https://docs.justoneapi.com/en/api/shopee/item-review-model-distribution-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Review Tags (V1)](https://docs.justoneapi.com/en/api/shopee/item-review-tags-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Search Category Facets (V1)](https://docs.justoneapi.com/en/api/shopee/search-category-facets-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [Item Installments and Amounts (V1)](https://docs.justoneapi.com/en/api/shopee/item-installments-and-amounts-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+
 ### Douban Movie
 
 - [Movie Reviews (V1)](https://docs.justoneapi.com/en/api/douban-movie/movie-reviews-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
