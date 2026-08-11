@@ -15427,6 +15427,1907 @@
         ]
       }
     },
+    "/api/shopee/get-item-detail/v1": {
+      "get": {
+        "description": "Retrieves Shopee item details by marketplace site and item ID.",
+        "operationId": "getApiShopeeGetItemDetailV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Details",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_item_detail",
+        "x-highlights": [],
+        "x-order": "20501000",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_detail_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee item details",
+          "Shopee product lookup",
+          "Shopee 商品详情"
+        ]
+      }
+    },
+    "/api/shopee/get-item-detail/v2": {
+      "get": {
+        "description": "Retrieves Shopee item details by marketplace site, shop ID, and item ID using the version 2 data source.",
+        "operationId": "getApiShopeeGetItemDetailV2",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Details",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v2",
+        "x-endpoint-family": "shopee_get_item_detail",
+        "x-highlights": [],
+        "x-order": "20501200",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_detail_v2",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee item details v2",
+          "Shopee product lookup v2",
+          "Shopee 商品详情 V2"
+        ]
+      }
+    },
+    "/api/shopee/get-item-installments/v1": {
+      "get": {
+        "description": "Retrieves installment and amount information for a Shopee item. This operation supports Taiwan and Indonesia but not Thailand.",
+        "operationId": "getApiShopeeGetItemInstallmentsV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site. Taiwan and Indonesia are supported for this operation.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          },
+          {
+            "description": "Detail level for the installment response.",
+            "in": "query",
+            "name": "detailLevel",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "detail_level"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Installments and Amounts",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_item_installments",
+        "x-highlights": [],
+        "x-order": "20502900",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_installments_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee installments",
+          "Shopee item payment amounts",
+          "Shopee 商品分期金额"
+        ]
+      }
+    },
+    "/api/shopee/get-item-review-models/v1": {
+      "get": {
+        "description": "Retrieves the review distribution across SKU models for a Shopee item.",
+        "operationId": "getApiShopeeGetItemReviewModelsV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Review Model Distribution",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_item_review_models",
+        "x-highlights": [],
+        "x-order": "20502600",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_review_models_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee review model distribution",
+          "Shopee variant review counts",
+          "Shopee 评论规格分布"
+        ]
+      }
+    },
+    "/api/shopee/get-item-review-tags/v1": {
+      "get": {
+        "description": "Retrieves review tags for a Shopee item in the selected marketplace site.",
+        "operationId": "getApiShopeeGetItemReviewTagsV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Review Tags",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_item_review_tags",
+        "x-highlights": [],
+        "x-order": "20502700",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_review_tags_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee review tags",
+          "Shopee item feedback tags",
+          "Shopee 商品评论标签"
+        ]
+      }
+    },
+    "/api/shopee/get-item-reviews/v1": {
+      "get": {
+        "description": "Retrieves reviews for a specified Shopee item with offset pagination and a rating filter.",
+        "operationId": "getApiShopeeGetItemReviewsV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          },
+          {
+            "description": "Zero-based result offset.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "offset"
+          },
+          {
+            "description": "Rating filter from 0 to 5, where 0 includes all ratings.",
+            "in": "query",
+            "name": "ratingType",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "rating_type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Reviews",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_item_reviews",
+        "x-highlights": [],
+        "x-order": "20502200",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_reviews_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee item reviews",
+          "Shopee product ratings",
+          "Shopee 商品评论"
+        ]
+      }
+    },
+    "/api/shopee/get-item-sku-matrix/v1": {
+      "get": {
+        "description": "Retrieves the SKU option matrix for a Shopee item in the selected marketplace site.",
+        "operationId": "getApiShopeeGetItemSkuMatrixV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item SKU Matrix",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_item_sku_matrix",
+        "x-highlights": [],
+        "x-order": "20501400",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_sku_matrix_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee SKU matrix",
+          "Shopee item variants",
+          "Shopee 商品规格"
+        ]
+      }
+    },
+    "/api/shopee/get-item-sku-models/v1": {
+      "get": {
+        "description": "Retrieves observed SKU models for a Shopee item with offset and rating filters.",
+        "operationId": "getApiShopeeGetItemSkuModelsV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          },
+          {
+            "description": "Zero-based result offset.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "offset"
+          },
+          {
+            "description": "Rating filter from 0 to 5, where 0 includes all ratings.",
+            "in": "query",
+            "name": "ratingType",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "rating_type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item SKU Models",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_item_sku_models",
+        "x-highlights": [],
+        "x-order": "20501700",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_sku_models_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee SKU models",
+          "Shopee variant ratings",
+          "Shopee SKU 型号"
+        ]
+      }
+    },
+    "/api/shopee/get-item-snapshot/v1": {
+      "get": {
+        "description": "Retrieves a display snapshot for a Shopee item in the selected marketplace site.",
+        "operationId": "getApiShopeeGetItemSnapshotV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Shopee item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Display Snapshot",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_item_snapshot",
+        "x-highlights": [],
+        "x-order": "20502000",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_item_snapshot_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee item snapshot",
+          "Shopee product display",
+          "Shopee 商品快照"
+        ]
+      }
+    },
+    "/api/shopee/get-search-facets/v1": {
+      "get": {
+        "description": "Retrieves category facets for a Shopee product search keyword.",
+        "operationId": "getApiShopeeGetSearchFacetsV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Product search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Search Category Facets",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_search_facets",
+        "x-highlights": [],
+        "x-order": "20502800",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_search_facets_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee search facets",
+          "Shopee category facets",
+          "Shopee 搜索类目分面"
+        ]
+      }
+    },
+    "/api/shopee/get-search-filters/v1": {
+      "get": {
+        "description": "Retrieves available Shopee search filters for a keyword in the selected marketplace site.",
+        "operationId": "getApiShopeeGetSearchFiltersV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Product search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Search Filter Configuration",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_search_filters",
+        "x-highlights": [],
+        "x-order": "20502400",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_search_filters_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee search filters",
+          "Shopee filter configuration",
+          "Shopee 搜索筛选"
+        ]
+      }
+    },
+    "/api/shopee/get-search-prefills/v1": {
+      "get": {
+        "description": "Retrieves Shopee search prefill suggestions for the selected marketplace site.",
+        "operationId": "getApiShopeeGetSearchPrefillsV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Search Prefills",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_search_prefills",
+        "x-highlights": [],
+        "x-order": "20502300",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_search_prefills_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee search suggestions",
+          "Shopee query prefills",
+          "Shopee 搜索推荐词"
+        ]
+      }
+    },
+    "/api/shopee/get-shop-base/v1": {
+      "get": {
+        "description": "Retrieves the basic Shopee shop profile by username and marketplace site.",
+        "operationId": "getApiShopeeGetShopBaseV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop username.",
+            "in": "query",
+            "name": "username",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "username"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Shop Basic Profile",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_shop_base",
+        "x-highlights": [],
+        "x-order": "20501500",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_shop_base_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee shop profile",
+          "Shopee seller basics",
+          "Shopee 店铺资料"
+        ]
+      }
+    },
+    "/api/shopee/get-shop-categories/v1": {
+      "get": {
+        "description": "Retrieves Shopee shop categories using a zero-based result offset.",
+        "operationId": "getApiShopeeGetShopCategoriesV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Zero-based result offset.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "offset"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Shop Categories",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_shop_categories",
+        "x-highlights": [],
+        "x-order": "20502500",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_shop_categories_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee shop categories",
+          "Shopee seller categories",
+          "Shopee 店铺分类"
+        ]
+      }
+    },
+    "/api/shopee/get-shop-detail/v1": {
+      "get": {
+        "description": "Retrieves detailed Shopee shop information by username and marketplace site.",
+        "operationId": "getApiShopeeGetShopDetailV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop username.",
+            "in": "query",
+            "name": "username",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "username"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Shop Details",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_shop_detail",
+        "x-highlights": [],
+        "x-order": "20501800",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_shop_detail_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee shop details",
+          "Shopee seller profile",
+          "Shopee 店铺详情"
+        ]
+      }
+    },
+    "/api/shopee/get-shop-item-list/v1": {
+      "get": {
+        "description": "Retrieves Shopee item cards for a shop username in the selected marketplace site.",
+        "operationId": "getApiShopeeGetShopItemListV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop username.",
+            "in": "query",
+            "name": "username",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "username"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Shop Item List",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_shop_item_list",
+        "x-highlights": [],
+        "x-order": "20501300",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_shop_item_list_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee shop items",
+          "Shopee seller products",
+          "Shopee 店铺商品"
+        ]
+      }
+    },
+    "/api/shopee/get-shop-reviews-rich/v1": {
+      "get": {
+        "description": "Retrieves enriched Shopee shop reviews using a zero-based result offset.",
+        "operationId": "getApiShopeeGetShopReviewsRichV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Zero-based result offset.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "offset"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Rich Shop Reviews",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_shop_reviews_rich",
+        "x-highlights": [],
+        "x-order": "20501900",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_shop_reviews_rich_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee rich shop reviews",
+          "Shopee seller reviews",
+          "Shopee 店铺评论丰富版"
+        ]
+      }
+    },
+    "/api/shopee/get-shop-reviews/v1": {
+      "get": {
+        "description": "Retrieves Shopee shop reviews with offset pagination and a rating filter.",
+        "operationId": "getApiShopeeGetShopReviewsV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          },
+          {
+            "description": "Zero-based result offset.",
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "offset"
+          },
+          {
+            "description": "Rating filter from 0 to 5, where 0 includes all ratings.",
+            "in": "query",
+            "name": "ratingType",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "rating_type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Shop Reviews",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_shop_reviews",
+        "x-highlights": [],
+        "x-order": "20502100",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_shop_reviews_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee shop reviews",
+          "Shopee seller ratings",
+          "Shopee 店铺评论"
+        ]
+      }
+    },
+    "/api/shopee/get-shop-seo/v1": {
+      "get": {
+        "description": "Retrieves a Shopee shop profile and rating summary by marketplace site and shop ID.",
+        "operationId": "getApiShopeeGetShopSeoV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Shopee shop ID.",
+            "in": "query",
+            "name": "shopId",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "shop_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Shop Profile and Rating Summary",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_get_shop_seo",
+        "x-highlights": [],
+        "x-order": "20501100",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "get_shop_seo_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee shop SEO",
+          "Shopee shop rating summary",
+          "Shopee 店铺评分摘要"
+        ]
+      }
+    },
+    "/api/shopee/search-item-list/v1": {
+      "get": {
+        "description": "Searches Shopee items by keyword in the selected marketplace site.",
+        "operationId": "getApiShopeeSearchItemListV1",
+        "parameters": [
+          {
+            "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
+            "in": "query",
+            "name": "site",
+            "required": false,
+            "schema": {
+              "default": "TW",
+              "description": "Shopee marketplace site",
+              "enum": [
+                "TW",
+                "ID",
+                "TH"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "site"
+          },
+          {
+            "description": "Product search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Item Search",
+        "tags": [
+          "Shopee"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "shopee_search_item_list",
+        "x-highlights": [],
+        "x-order": "20501600",
+        "x-sdk-class-name": "ShopeeResource",
+        "x-sdk-method-name": "search_item_list_v1",
+        "x-sdk-resource": "shopee",
+        "x-search-aliases": [
+          "Shopee product search",
+          "Shopee keyword items",
+          "Shopee 商品搜索"
+        ]
+      }
+    },
     "/api/taobao/get-item-comment/v3": {
       "get": {
         "description": "Retrieves Taobao and Tmall product reviews by item ID with page-based pagination and configurable sorting. Use it to analyze customer feedback.",
@@ -31623,6 +33524,21 @@
       "x-platform-id": "taobao-and-tmall"
     },
     {
+      "description": "Shopee marketplace product, shop, review, search, and category data across Taiwan, Indonesia, and Thailand, with installment data where supported.",
+      "name": "Shopee",
+      "x-platform-aliases": [
+        "Shopee",
+        "Shopee marketplace",
+        "虾皮"
+      ],
+      "x-platform-detection-aliases": [
+        "Shopee",
+        "Shopee marketplace",
+        "虾皮"
+      ],
+      "x-platform-id": "shopee"
+    },
+    {
       "description": "Cross-platform social media discovery, monitoring, and trend research across supported content platforms.",
       "name": "Social Media",
       "x-platform-aliases": [
@@ -31896,5 +33812,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "e32b060b4fc2d3de"
+  "x-openapi-release-id": "420e2aa5a22fa273"
 }
