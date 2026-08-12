@@ -344,49 +344,6 @@ class ShopeeResource(BaseResource):
             },
         )
 
-    def get_search_prefills_v1(
-        self,
-        *,
-        site: str,
-    ) -> ApiResponse[Any]:
-        """
-        Search Prefills
-
-        Retrieves Shopee search prefill suggestions for the selected marketplace site.
-
-        Args:
-            site: Shopee marketplace site.  Available Values: - `TW`: Taiwan - `ID`: Indonesia - `TH`: Thailand
-        """
-        return self._get(
-            "/api/shopee/get-search-prefills/v1",
-            {
-                "site": site,
-            },
-        )
-
-    def get_search_filters_v1(
-        self,
-        *,
-        site: str,
-        keyword: str,
-    ) -> ApiResponse[Any]:
-        """
-        Search Filter Configuration
-
-        Retrieves available Shopee search filters for a keyword in the selected marketplace site.
-
-        Args:
-            site: Shopee marketplace site.  Available Values: - `TW`: Taiwan - `ID`: Indonesia - `TH`: Thailand
-            keyword: Product search keyword.
-        """
-        return self._get(
-            "/api/shopee/get-search-filters/v1",
-            {
-                "site": site,
-                "keyword": keyword,
-            },
-        )
-
     def get_shop_categories_v1(
         self,
         *,
