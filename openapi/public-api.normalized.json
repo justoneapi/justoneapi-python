@@ -15436,9 +15436,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -15523,9 +15522,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -15621,9 +15619,8 @@
             "description": "Shopee marketplace site. Taiwan and Indonesia are supported for this operation.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -15729,9 +15726,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -15827,9 +15823,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -15925,9 +15920,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16043,9 +16037,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16141,9 +16134,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16259,9 +16251,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16357,9 +16348,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16443,9 +16433,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16529,9 +16518,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16605,9 +16593,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16691,9 +16678,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16788,9 +16774,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16874,9 +16859,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -16960,9 +16944,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -17057,9 +17040,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -17164,9 +17146,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -17251,9 +17232,8 @@
             "description": "Shopee marketplace site.\n\nAvailable Values:\n- `TW`: Taiwan\n- `ID`: Indonesia\n- `TH`: Thailand",
             "in": "query",
             "name": "site",
-            "required": false,
+            "required": true,
             "schema": {
-              "default": "TW",
               "description": "Shopee marketplace site",
               "enum": [
                 "TW",
@@ -33812,5 +33792,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "420e2aa5a22fa273"
+  "x-openapi-release-id": "9e5645f001f532af"
 }
