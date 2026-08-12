@@ -17479,6 +17479,7 @@
           "Taobao and Tmall"
         ],
         "x-api-version": "v3",
+        "x-docs-hidden": true,
         "x-endpoint-family": "taobao_get_item_detail",
         "x-highlights": [
           {
@@ -33632,5 +33633,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "7a05cd056fbad410"
+  "x-openapi-release-id": "7e3c22a72a418924"
 }
