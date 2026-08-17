@@ -2825,6 +2825,78 @@
         ]
       }
     },
+    "/api/douyin-ec/get-item-sku-info/v2": {
+      "get": {
+        "description": "Retrieves SKU information for a Douyin E-commerce product by item ID. Returns code 202 when the product is not supported.",
+        "operationId": "getApiDouyinEcGetItemSkuInfoV2",
+        "parameters": [
+          {
+            "description": "Access token for this API service.",
+            "in": "query",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique ID of the item on Douyin E-commerce.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "summary": "Product SKU Info",
+        "tags": [
+          "Douyin E-commerce"
+        ],
+        "x-api-version": "v2",
+        "x-endpoint-family": "douyin_ec_get_item_sku_info",
+        "x-highlights": [],
+        "x-order": "14502040",
+        "x-search-aliases": [
+          "Douyin ecommerce SKU info",
+          "Douyin product variants",
+          "Douyin shop item SKU lookup",
+          "抖音电商 SKU 信息",
+          "抖店商品规格查询",
+          "抖音商城商品变体"
+        ]
+      }
+    },
     "/api/douyin-ec/get-shop-item-list/v1": {
       "get": {
         "description": "Retrieves a paginated product list for a Douyin E-commerce shop by shop ID. Use it to browse a known seller's marketplace catalog page by page.",
@@ -17144,7 +17216,7 @@
     },
     "/api/taobao/get-item-detail/v3": {
       "get": {
-        "description": "Retrieves Taobao or Tmall product details by item ID through the V3 endpoint. Use it for product identification and page-level sales monitoring.",
+        "description": "Retrieves Taobao or Tmall product details by item ID through the V3 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.",
         "operationId": "getApiTaobaoGetItemDetailV3",
         "parameters": [
           {
@@ -17201,42 +17273,16 @@
           "Taobao and Tmall"
         ],
         "x-api-version": "v3",
-        "x-docs-hidden": true,
         "x-endpoint-family": "taobao_get_item_detail",
-        "x-highlights": [
-          {
-            "aliases": [
-              "product price",
-              "price data",
-              "商品价格",
-              "价格数据"
-            ],
-            "concept": "product_price",
-            "content": "This endpoint does not return product price data.",
-            "kind": "LIMITATION",
-            "type": "warning"
-          },
-          {
-            "aliases": [
-              "page sales count",
-              "displayed sales",
-              "页面已售",
-              "页面销量"
-            ],
-            "concept": "product_sales_data",
-            "content": "This endpoint returns the sales count displayed on the product page.",
-            "kind": "CAPABILITY",
-            "type": "tip"
-          }
-        ],
+        "x-highlights": [],
         "x-order": "11001150",
         "x-search-aliases": [
           "Taobao product details v3",
           "Tmall item detail lookup v3",
-          "Taobao page sales lookup",
+          "Taobao item information API v3",
           "淘宝商品详情 V3",
           "天猫商品详情查询 V3",
-          "淘宝页面已售查询"
+          "淘宝商品 ID 查询 V3"
         ]
       }
     },
@@ -32991,5 +33037,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "7e3c22a72a418924"
+  "x-openapi-release-id": "9cadcaf01a3448c4"
 }

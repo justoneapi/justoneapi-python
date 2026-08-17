@@ -69,6 +69,26 @@ class DouyinEcResource(BaseResource):
             },
         )
 
+    def get_item_sku_info_v2(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Product SKU Info
+
+        Retrieves SKU information for a Douyin E-commerce product by item ID. Returns code 202 when the product is not supported.
+
+        Args:
+            item_id: The unique ID of the item on Douyin E-commerce.
+        """
+        return self._get(
+            "/api/douyin-ec/get-item-sku-info/v2",
+            {
+                "itemId": item_id,
+            },
+        )
+
     def search_item_list_v1(
         self,
         *,

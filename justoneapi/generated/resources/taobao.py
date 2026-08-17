@@ -57,7 +57,7 @@ class TaobaoResource(BaseResource):
         """
         Product Details
 
-        Retrieves Taobao or Tmall product details by item ID through the V3 endpoint. Use it for product identification and page-level sales monitoring.
+        Retrieves Taobao or Tmall product details by item ID through the V3 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.
 
         Args:
             item_id: Unique product identifier on Taobao/Tmall (item ID).
