@@ -29307,6 +29307,7 @@
           "Xiaohongshu (RedNote)"
         ],
         "x-api-version": "v1",
+        "x-docs-hidden": true,
         "x-endpoint-family": "xiaohongshu_hot_list",
         "x-highlights": [],
         "x-order": "12001010",
@@ -33038,5 +33039,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "64516e94fea7a59d"
+  "x-openapi-release-id": "e96321753bd1dab6"
 }
