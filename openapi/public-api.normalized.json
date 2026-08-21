@@ -17901,7 +17901,6 @@
           }
         ],
         "x-order": "11001375",
-        "x-recommended": true,
         "x-sdk-class-name": "TaobaoResource",
         "x-sdk-method-name": "get_item_detail_v7",
         "x-sdk-resource": "taobao",
@@ -33694,5 +33693,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "a2902088287a5b57"
+  "x-openapi-release-id": "e0ede803fa64ee10"
 }

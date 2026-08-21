@@ -17623,7 +17623,6 @@
           }
         ],
         "x-order": "11001375",
-        "x-recommended": true,
         "x-search-aliases": [
           "Taobao product details v7",
           "Tmall item detail lookup v7",
@@ -33051,5 +33050,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "a2902088287a5b57"
+  "x-openapi-release-id": "e0ede803fa64ee10"
 }
