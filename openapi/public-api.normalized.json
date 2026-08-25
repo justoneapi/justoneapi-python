@@ -12838,6 +12838,78 @@
         ]
       }
     },
+    "/api/jd/get-item-detail/v4": {
+      "get": {
+        "description": "Retrieves JD.com product details by item ID through the V4 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.",
+        "operationId": "getApiJdGetItemDetailV4",
+        "parameters": [
+          {
+            "description": "A unique product identifier on JD.com (item ID).",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Details",
+        "tags": [
+          "JD.com"
+        ],
+        "x-api-version": "v4",
+        "x-endpoint-family": "jd_get_item_detail",
+        "x-highlights": [],
+        "x-order": "19001040",
+        "x-sdk-class-name": "JdResource",
+        "x-sdk-method-name": "get_item_detail_v4",
+        "x-sdk-resource": "jd",
+        "x-search-aliases": [
+          "JD.com product details v4",
+          "JD item detail lookup v4",
+          "JD product information API v4",
+          "京东商品详情 V4",
+          "京东商品 ID 查询 V4",
+          "京东商品查询 V4"
+        ]
+      }
+    },
     "/api/jd/get-item-price/v1": {
       "get": {
         "description": "Retrieve the current JD.com product price for a known item ID. Use it to check a product's price before catalog comparison or purchase analysis.",
@@ -33693,5 +33765,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "e0ede803fa64ee10"
+  "x-openapi-release-id": "dde3c8ee6986e71a"
 }

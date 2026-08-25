@@ -69,6 +69,26 @@ class JdResource(BaseResource):
             },
         )
 
+    def get_item_detail_v4(
+        self,
+        *,
+        item_id: str,
+    ) -> ApiResponse[Any]:
+        """
+        Product Details
+
+        Retrieves JD.com product details by item ID through the V4 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.
+
+        Args:
+            item_id: A unique product identifier on JD.com (item ID).
+        """
+        return self._get(
+            "/api/jd/get-item-detail/v4",
+            {
+                "itemId": item_id,
+            },
+        )
+
     def get_item_price_v1(
         self,
         *,
