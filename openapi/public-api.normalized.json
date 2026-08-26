@@ -9000,6 +9000,89 @@
         ]
       }
     },
+    "/api/douyin/search-image/v1": {
+      "get": {
+        "description": "Searches Douyin (TikTok China) image posts by keyword with search-session pagination. Omit searchId for the first page, then use the search ID from the previous response to continue. Use it for visual-content discovery and topic research.",
+        "operationId": "getApiDouyinSearchImageV1",
+        "parameters": [
+          {
+            "description": "The search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Search ID returned by the previous response. Leave it empty for the first page.",
+            "in": "query",
+            "name": "searchId",
+            "required": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "x-sdk-python-name": "search_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Image Post Search",
+        "tags": [
+          "Douyin (TikTok China)"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "douyin_search_image",
+        "x-highlights": [],
+        "x-order": "14001025",
+        "x-sdk-class-name": "DouyinResource",
+        "x-sdk-method-name": "search_image_v1",
+        "x-sdk-resource": "douyin",
+        "x-search-aliases": [
+          "Douyin image post search API",
+          "Douyin photo post keyword search",
+          "TikTok China image content search",
+          "抖音图文搜索接口",
+          "抖音关键词搜图文",
+          "抖音图片内容搜索"
+        ]
+      }
+    },
     "/api/douyin/search-user/v2": {
       "get": {
         "description": "Searches Douyin (TikTok China) users by keyword with page-based pagination and optional account-type filtering. Use it to discover creators, brands, or verified accounts for research.",
@@ -33765,5 +33848,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "dde3c8ee6986e71a"
+  "x-openapi-release-id": "e70e6a73c8724e55"
 }

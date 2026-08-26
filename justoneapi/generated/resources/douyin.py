@@ -76,6 +76,29 @@ class DouyinResource(BaseResource):
             },
         )
 
+    def search_image_v1(
+        self,
+        *,
+        keyword: str,
+        search_id: str | None = "",
+    ) -> ApiResponse[Any]:
+        """
+        Image Post Search
+
+        Searches Douyin (TikTok China) image posts by keyword with search-session pagination. Omit searchId for the first page, then use the search ID from the previous response to continue. Use it for visual-content discovery and topic research.
+
+        Args:
+            keyword: The search keyword.
+            search_id: Search ID returned by the previous response. Leave it empty for the first page.
+        """
+        return self._get(
+            "/api/douyin/search-image/v1",
+            {
+                "keyword": keyword,
+                "searchId": search_id,
+            },
+        )
+
     def hot_search_v1(
         self,
         *,
