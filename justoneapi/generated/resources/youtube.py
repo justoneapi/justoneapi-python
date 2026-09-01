@@ -13,37 +13,37 @@ class YoutubeResource(BaseResource):
         self,
         *,
         keyword: str | None = "",
-        continuation_token: str | None = "",
-        upload_date: str | None = None,
-        type: str | None = None,
-        duration: str | None = None,
-        features: str | None = None,
-        sort_by: str | None = None,
+        lang: str | None = None,
+        movie: bool | None = False,
+        upload_date: str | None = "all",
+        duration: str | None = "all",
+        sort_by: str | None = "relevance",
+        next_token: str | None = None,
     ) -> ApiResponse[Any]:
         """
         General Search
 
-        Search YouTube by keyword with optional type, upload-date, duration, feature, and sort filters, or continue with a token. Use it to discover videos, channels, playlists, or movies.
+        Search YouTube videos by keyword with optional language, movie-only, upload-date, duration, and sort filters, or continue with a pagination token. Use it to discover public videos and movies or browse additional result pages.
 
         Args:
-            keyword: Search keyword. Required on the first request; leave empty when using a continuation token.
-            continuation_token: Pagination token returned by the previous response.
-            upload_date: Filter results by upload date.  Available Values: - `last_hour`: Uploaded within the last hour - `today`: Uploaded today - `this_week`: Uploaded this week - `this_month`: Uploaded this month - `this_year`: Uploaded this year
-            type: Filter results by result type.  Available Values: - `video`: Video results - `channel`: Channel results - `playlist`: Playlist results - `movie`: Movie results
-            duration: Filter video results by duration. Supported request values: short, medium, long.  Available Values: - `SHORT`: Short videos under 4 minutes - `MEDIUM`: Medium videos from 4 to 20 minutes - `LONG`: Long videos over 20 minutes
-            features: Feature filters separated by commas. Supported values: live, 4k, hd, subtitles, creative_commons, 360, vr180, 3d, hdr.
-            sort_by: Sort order for search results.  Available Values: - `relevance`: Sort by relevance - `upload_date`: Sort by upload date - `view_count`: Sort by view count - `rating`: Sort by rating
+            keyword: Search term. Required for the first page; leave empty when using nextToken.
+            lang: Optional IETF language tag for localized results, such as en-US. Leave empty to use the default language.
+            movie: Whether to return movie results only.
+            upload_date: Upload-date filter.  Available Values: - `all`: No upload-date limit - `lastHour`: Uploaded within the last hour - `today`: Uploaded today - `thisWeek`: Uploaded this week - `thisMonth`: Uploaded this month - `thisYear`: Uploaded this year
+            duration: Video-duration filter.  Available Values: - `all`: No duration limit - `SHORT`: Short videos under 4 minutes - `medium`: Medium videos from 4 to 20 minutes - `LONG`: Long videos over 20 minutes
+            sort_by: Sort order for search results.  Available Values: - `relevance`: Sort by relevance - `uploadDate`: Sort by upload date - `viewCount`: Sort by view count - `rating`: Sort by rating
+            next_token: Pagination token returned by the previous response. When provided, the keyword and filter parameters are ignored; very long tokens may exceed GET URL limits.
         """
         return self._get(
             "/api/youtube/search/v1",
             {
                 "keyword": keyword,
-                "continuationToken": continuation_token,
+                "lang": lang,
+                "movie": movie,
                 "uploadDate": upload_date,
-                "type": type,
                 "duration": duration,
-                "features": features,
                 "sortBy": sort_by,
+                "nextToken": next_token,
             },
         )
 
@@ -51,6 +51,7 @@ class YoutubeResource(BaseResource):
         self,
         *,
         video_id: str,
+        lang: str | None = None,
     ) -> ApiResponse[Any]:
         """
         Video Details
@@ -59,11 +60,13 @@ class YoutubeResource(BaseResource):
 
         Args:
             video_id: The unique identifier for a YouTube video.
+            lang: Optional IETF language tag for localized video details, such as en-US. Leave empty to use the default language.
         """
         return self._get(
             "/api/youtube/get-video-detail/v1",
             {
                 "videoId": video_id,
+                "lang": lang,
             },
         )
 

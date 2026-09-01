@@ -30990,6 +30990,15 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "description": "Optional IETF language tag for localized video details, such as en-US. Leave empty to use the default language.",
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -31134,7 +31143,7 @@
     },
     "/api/youtube/search/v1": {
       "get": {
-        "description": "Search YouTube by keyword with optional type, upload-date, duration, feature, and sort filters, or continue with a token. Use it to discover videos, channels, playlists, or movies.",
+        "description": "Search YouTube videos by keyword with optional language, movie-only, upload-date, duration, and sort filters, or continue with a pagination token. Use it to discover public videos and movies or browse additional result pages.",
         "operationId": "getApiYoutubeSearchV1",
         "parameters": [
           {
@@ -31147,7 +31156,7 @@
             }
           },
           {
-            "description": "Search keyword. Required on the first request; leave empty when using a continuation token.",
+            "description": "Search term. Required for the first page; leave empty when using nextToken.",
             "in": "query",
             "name": "keyword",
             "required": false,
@@ -31157,97 +31166,87 @@
             }
           },
           {
-            "description": "Pagination token returned by the previous response.",
+            "description": "Optional IETF language tag for localized results, such as en-US. Leave empty to use the default language.",
             "in": "query",
-            "name": "continuationToken",
+            "name": "lang",
             "required": false,
             "schema": {
-              "default": "",
               "type": "string"
             }
           },
           {
-            "description": "Filter results by upload date.\n\nAvailable Values:\n- `last_hour`: Uploaded within the last hour\n- `today`: Uploaded today\n- `this_week`: Uploaded this week\n- `this_month`: Uploaded this month\n- `this_year`: Uploaded this year",
+            "description": "Whether to return movie results only.",
+            "in": "query",
+            "name": "movie",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "Upload-date filter.\n\nAvailable Values:\n- `all`: No upload-date limit\n- `lastHour`: Uploaded within the last hour\n- `today`: Uploaded today\n- `thisWeek`: Uploaded this week\n- `thisMonth`: Uploaded this month\n- `thisYear`: Uploaded this year",
             "in": "query",
             "name": "uploadDate",
             "required": false,
             "schema": {
+              "default": "all",
               "description": "YouTube search upload date filter",
               "enum": [
-                "last_hour",
+                "all",
+                "lastHour",
                 "today",
-                "this_week",
-                "this_month",
-                "this_year"
+                "thisWeek",
+                "thisMonth",
+                "thisYear"
               ],
               "type": "string"
             }
           },
           {
-            "description": "Filter results by result type.\n\nAvailable Values:\n- `video`: Video results\n- `channel`: Channel results\n- `playlist`: Playlist results\n- `movie`: Movie results",
-            "in": "query",
-            "name": "type",
-            "required": false,
-            "schema": {
-              "description": "YouTube search result type filter",
-              "enum": [
-                "video",
-                "channel",
-                "playlist",
-                "movie"
-              ],
-              "type": "string"
-            }
-          },
-          {
-            "description": "Filter video results by duration. Supported request values: short, medium, long.\n\nAvailable Values:\n- `SHORT`: Short videos under 4 minutes\n- `MEDIUM`: Medium videos from 4 to 20 minutes\n- `LONG`: Long videos over 20 minutes",
+            "description": "Video-duration filter.\n\nAvailable Values:\n- `all`: No duration limit\n- `SHORT`: Short videos under 4 minutes\n- `medium`: Medium videos from 4 to 20 minutes\n- `LONG`: Long videos over 20 minutes",
             "in": "query",
             "name": "duration",
             "required": false,
             "schema": {
+              "default": "all",
               "description": "YouTube search video duration filter",
               "enum": [
-                "SHORT",
-                "MEDIUM",
-                "LONG"
+                "all",
+                "short",
+                "medium",
+                "long",
+                "all",
+                "short",
+                "medium",
+                "long"
               ],
               "type": "string"
             }
           },
           {
-            "description": "Feature filters separated by commas. Supported values: live, 4k, hd, subtitles, creative_commons, 360, vr180, 3d, hdr.",
-            "in": "query",
-            "name": "features",
-            "required": false,
-            "schema": {
-              "description": "YouTube search feature filter",
-              "enum": [
-                "live",
-                "FOUR_K",
-                "hd",
-                "subtitles",
-                "creative_commons",
-                "THREE_SIXTY",
-                "vr180",
-                "THREE_D",
-                "hdr"
-              ],
-              "type": "string"
-            }
-          },
-          {
-            "description": "Sort order for search results.\n\nAvailable Values:\n- `relevance`: Sort by relevance\n- `upload_date`: Sort by upload date\n- `view_count`: Sort by view count\n- `rating`: Sort by rating",
+            "description": "Sort order for search results.\n\nAvailable Values:\n- `relevance`: Sort by relevance\n- `uploadDate`: Sort by upload date\n- `viewCount`: Sort by view count\n- `rating`: Sort by rating",
             "in": "query",
             "name": "sortBy",
             "required": false,
             "schema": {
+              "default": "relevance",
               "description": "YouTube search sort order",
               "enum": [
                 "relevance",
-                "upload_date",
-                "view_count",
+                "uploadDate",
+                "viewCount",
                 "rating"
               ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Pagination token returned by the previous response. When provided, the keyword and filter parameters are ignored; very long tokens may exceed GET URL limits.",
+            "in": "query",
+            "name": "nextToken",
+            "required": false,
+            "schema": {
               "type": "string"
             }
           }
@@ -31292,11 +31291,17 @@
         "x-order": "25000900",
         "x-search-aliases": [
           "YouTube search",
-          "YouTube video and channel search",
+          "YouTube video search",
+          "YouTube movie search",
           "YouTube filtered search",
+          "YouTube next token search",
+          "YouTube localized search",
           "YouTube搜索",
-          "YouTube视频频道搜索",
-          "YouTube筛选搜索"
+          "YouTube视频搜索",
+          "YouTube电影搜索",
+          "YouTube筛选搜索",
+          "YouTube翻页搜索",
+          "YouTube本地化搜索"
         ]
       }
     },
@@ -33204,5 +33209,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "e0c56eff5319de9d"
+  "x-openapi-release-id": "218b41683b348a0d"
 }
