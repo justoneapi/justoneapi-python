@@ -14,7 +14,6 @@ class YoutubeResource(BaseResource):
         *,
         keyword: str | None = "",
         lang: str | None = None,
-        movie: bool | None = False,
         upload_date: str | None = "all",
         duration: str | None = "all",
         sort_by: str | None = "relevance",
@@ -23,12 +22,11 @@ class YoutubeResource(BaseResource):
         """
         General Search
 
-        Search YouTube videos by keyword with optional language, movie-only, upload-date, duration, and sort filters, or continue with a pagination token. Use it to discover public videos and movies or browse additional result pages.
+        Search YouTube videos by keyword with optional language, upload-date, duration, and sort filters, or continue with a pagination token. Use it to discover public videos or browse additional result pages.
 
         Args:
             keyword: Search term. Required for the first page; leave empty when using nextToken.
             lang: Optional IETF language tag for localized results, such as en-US. Leave empty to use the default language.
-            movie: Whether to return movie results only.
             upload_date: Upload-date filter.  Available Values: - `all`: No upload-date limit - `lastHour`: Uploaded within the last hour - `today`: Uploaded today - `thisWeek`: Uploaded this week - `thisMonth`: Uploaded this month - `thisYear`: Uploaded this year
             duration: Video-duration filter.  Available Values: - `all`: No duration limit - `SHORT`: Short videos under 4 minutes - `medium`: Medium videos from 4 to 20 minutes - `LONG`: Long videos over 20 minutes
             sort_by: Sort order for search results.  Available Values: - `relevance`: Sort by relevance - `uploadDate`: Sort by upload date - `viewCount`: Sort by view count - `rating`: Sort by rating
@@ -39,7 +37,6 @@ class YoutubeResource(BaseResource):
             {
                 "keyword": keyword,
                 "lang": lang,
-                "movie": movie,
                 "uploadDate": upload_date,
                 "duration": duration,
                 "sortBy": sort_by,

@@ -31754,7 +31754,7 @@
     },
     "/api/youtube/search/v1": {
       "get": {
-        "description": "Search YouTube videos by keyword with optional language, movie-only, upload-date, duration, and sort filters, or continue with a pagination token. Use it to discover public videos and movies or browse additional result pages.",
+        "description": "Search YouTube videos by keyword with optional language, upload-date, duration, and sort filters, or continue with a pagination token. Use it to discover public videos or browse additional result pages.",
         "operationId": "getApiYoutubeSearchV1",
         "parameters": [
           {
@@ -31777,17 +31777,6 @@
               "type": "string"
             },
             "x-sdk-python-name": "lang"
-          },
-          {
-            "description": "Whether to return movie results only.",
-            "in": "query",
-            "name": "movie",
-            "required": false,
-            "schema": {
-              "default": false,
-              "type": "boolean"
-            },
-            "x-sdk-python-name": "movie"
           },
           {
             "description": "Upload-date filter.\n\nAvailable Values:\n- `all`: No upload-date limit\n- `lastHour`: Uploaded within the last hour\n- `today`: Uploaded today\n- `thisWeek`: Uploaded this week\n- `thisMonth`: Uploaded this month\n- `thisYear`: Uploaded this year",
@@ -31909,13 +31898,11 @@
         "x-search-aliases": [
           "YouTube search",
           "YouTube video search",
-          "YouTube movie search",
           "YouTube filtered search",
           "YouTube next token search",
           "YouTube localized search",
           "YouTube搜索",
           "YouTube视频搜索",
-          "YouTube电影搜索",
           "YouTube筛选搜索",
           "YouTube翻页搜索",
           "YouTube本地化搜索"
@@ -33854,5 +33841,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "218b41683b348a0d"
+  "x-openapi-release-id": "1694528b9c582440"
 }
