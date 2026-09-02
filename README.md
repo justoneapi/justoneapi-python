@@ -141,6 +141,7 @@ except BusinessError as exc:
 - [店铺商品列表 (V4)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/shop-product-list-v4?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 - [商品销量 (V1)（已弃用）](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-sales-v1-deprecated?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list#deprecated)
 - [商品搜索 (V1)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-search-v1?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
+- [商品搜索 (V2)](https://docs.justoneapi.com/zh/api/taobao-and-tmall/product-search-v2?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_justoneapi_python&utm_content=repo_readme_api_list)
 
 ### 小红书
 
