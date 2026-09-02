@@ -379,3 +379,26 @@ class TaobaoResource(BaseResource):
                 "page": page,
             },
         )
+
+    def search_item_list_v2(
+        self,
+        *,
+        keyword: str,
+        page: int | None = 1,
+    ) -> ApiResponse[Any]:
+        """
+        Product Search
+
+        Searches Taobao and Tmall products by keyword with page-based pagination and returns results sorted by sales. Use it to discover popular products for ecommerce research, catalog analysis, or product selection.
+
+        Args:
+            keyword: Search keyword.
+            page: Page number for pagination, starting from 1.
+        """
+        return self._get(
+            "/api/taobao/search-item-list/v2",
+            {
+                "keyword": keyword,
+                "page": page,
+            },
+        )

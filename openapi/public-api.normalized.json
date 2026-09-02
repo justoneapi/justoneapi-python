@@ -18880,6 +18880,91 @@
         ]
       }
     },
+    "/api/taobao/search-item-list/v2": {
+      "get": {
+        "description": "Searches Taobao and Tmall products by keyword with page-based pagination and returns results sorted by sales. Use it to discover popular products for ecommerce research, catalog analysis, or product selection.",
+        "operationId": "getApiTaobaoSearchItemListV2",
+        "parameters": [
+          {
+            "description": "Search keyword.",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "keyword"
+          },
+          {
+            "description": "Page number for pagination, starting from 1.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "x-sdk-python-name": "page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Search",
+        "tags": [
+          "Taobao and Tmall"
+        ],
+        "x-api-version": "v2",
+        "x-endpoint-family": "taobao_search_item_list",
+        "x-highlights": [],
+        "x-order": "11001910",
+        "x-recommended": true,
+        "x-sdk-class-name": "TaobaoResource",
+        "x-sdk-method-name": "search_item_list_v2",
+        "x-sdk-resource": "taobao",
+        "x-search-aliases": [
+          "Taobao product search V2",
+          "Tmall keyword product search",
+          "Taobao sales-ranked product search",
+          "淘宝商品搜索 V2",
+          "天猫关键词商品查询",
+          "淘宝按销量排序商品搜索"
+        ]
+      }
+    },
     "/api/temu/get-homepage-goods/v1": {
       "get": {
         "description": "Retrieves Temu homepage product feed cards for a selected site with offset pagination. Use it for product sourcing, catalog monitoring, and marketplace trend analysis.",
@@ -33841,5 +33926,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "1694528b9c582440"
+  "x-openapi-release-id": "9fd850499401657b"
 }
