@@ -7804,16 +7804,15 @@
             "x-sdk-python-name": "follower_range"
           },
           {
-            "description": "KOL price type.\n\nAvailable Values:\n- `VIDEO_1_20S`: Video 1-20s\n- `VIDEO_21_60S`: Video 21-60s\n- `VIDEO_OVER_60S`: Video > 60s\n- `CUSTOM_SHORT_DRAMA_EPISODE`: Mini-drama episode\n- `NATURAL_PLAY_CPM`: CPM naturally\n- `SHORT_LIVE_SEEDING_VIDEO`: Short-live seeding video\n- `SHORT_LIVE_WARMUP_VIDEO`: Short-live warm-up video\n- `CELEBRITY_SHORT_LIVE_SEEDING`: Celebrity short-live seeding\n- `CELEBRITY_SHORT_LIVE_WARMUP`: Celebrity short-live warm-up\n- `CELEBRITY_VIDEO`: Celebrity video\n- `COLLECTION_VIDEO`: Collection video\n- `DOUYIN_SHORT_VIDEO_CO_CREATION_MAIN_CREATOR`: Douyin short video co-creation - main creator\n- `DOUYIN_SHORT_VIDEO_CO_CREATION_PARTICIPANT`: Douyin short video co-creation - participant",
+            "description": "Creator quote type from the current Xingtu marketplace options.\n\nAvailable Values:\n- `PRODUCT_PLACEMENT_VIDEO`: Product-placement video\n- `CUSTOM_VIDEO`: Custom video\n- `CUSTOM_SHORT_DRAMA_EPISODE`: Mini-drama episode\n- `NATURAL_PLAY_CPM`: CPM naturally\n- `SHORT_LIVE_SEEDING_VIDEO`: Short-live seeding video\n- `SHORT_LIVE_WARMUP_VIDEO`: Short-live warm-up video\n- `CELEBRITY_SHORT_LIVE_SEEDING`: Celebrity short-live seeding\n- `CELEBRITY_SHORT_LIVE_WARMUP`: Celebrity short-live warm-up\n- `CELEBRITY_VIDEO`: Celebrity video\n- `COLLECTION_VIDEO`: Collection video\n- `DOUYIN_SHORT_VIDEO_CO_CREATION_MAIN_CREATOR`: Douyin short video co-creation - main creator\n- `DOUYIN_SHORT_VIDEO_CO_CREATION_PARTICIPANT`: Douyin short video co-creation - participant",
             "in": "query",
             "name": "kolPriceType",
             "required": false,
             "schema": {
               "description": "KOL price category",
               "enum": [
-                "VIDEO_1_20S",
-                "VIDEO_21_60S",
-                "VIDEO_OVER_60S",
+                "PRODUCT_PLACEMENT_VIDEO",
+                "CUSTOM_VIDEO",
                 "CUSTOM_SHORT_DRAMA_EPISODE",
                 "NATURAL_PLAY_CPM",
                 "SHORT_LIVE_SEEDING_VIDEO",
@@ -7830,7 +7829,7 @@
             "x-sdk-python-name": "kol_price_type"
           },
           {
-            "description": "KOL price range (e.g., 10000-50000).",
+            "description": "Creator quote range in min-max format (e.g., 10000-50000). Requires kolPriceType; omit kolPriceRange to use the full range for the selected quote type.",
             "in": "query",
             "name": "kolPriceRange",
             "required": false,
@@ -33926,5 +33925,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "9fd850499401657b"
+  "x-openapi-release-id": "7db49372696278a6"
 }
