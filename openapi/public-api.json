@@ -17624,7 +17624,7 @@
     },
     "/api/taobao/get-item-detail/v6": {
       "get": {
-        "description": "Retrieves Taobao or Tmall product details by item ID through the V6 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.",
+        "description": "Retrieves Taobao or Tmall product details by item ID through the recommended V6 endpoint, including approximate sales, shipping fees, free-shipping status, and coupon-adjusted prices for some products. Use it for product research and ecommerce monitoring.",
         "operationId": "getApiTaobaoGetItemDetailV6",
         "parameters": [
           {
@@ -17681,23 +17681,47 @@
           "Taobao and Tmall"
         ],
         "x-api-version": "v6",
-        "x-docs-hidden": true,
         "x-endpoint-family": "taobao_get_item_detail",
         "x-highlights": [
           {
             "aliases": [
-              "product coverage",
-              "supported products",
-              "商品覆盖",
-              "支持商品"
+              "approximate sales volume",
+              "estimated sales volume",
+              "模糊销量",
+              "预估销量"
             ],
-            "concept": "product_coverage",
-            "content": "Some products may not be available through this endpoint.",
+            "concept": "approximate_sales_volume",
+            "content": "This endpoint can retrieve approximate sales volume.",
+            "kind": "CAPABILITY",
+            "type": "tip"
+          },
+          {
+            "aliases": [
+              "shipping fee",
+              "free shipping",
+              "邮费",
+              "包邮"
+            ],
+            "concept": "shipping_fee",
+            "content": "This endpoint provides shipping fee information, including whether shipping is free.",
+            "kind": "CAPABILITY",
+            "type": "tip"
+          },
+          {
+            "aliases": [
+              "price after coupon",
+              "post-coupon price",
+              "券后价",
+              "优惠券后价格"
+            ],
+            "concept": "post_coupon_price",
+            "content": "For some products, this endpoint can retrieve the price after applying coupons.",
             "kind": "CONDITION",
             "type": "tip"
           }
         ],
         "x-order": "11001350",
+        "x-recommended": true,
         "x-search-aliases": [
           "Taobao product details v6",
           "Tmall item detail lookup v6",
@@ -33280,5 +33304,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "7db49372696278a6"
+  "x-openapi-release-id": "f455f8330745ebd9"
 }
