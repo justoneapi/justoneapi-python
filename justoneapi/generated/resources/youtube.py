@@ -28,7 +28,7 @@ class YoutubeResource(BaseResource):
             keyword: Search term. Required for the first page; leave empty when using nextToken.
             lang: Optional IETF language tag for localized results, such as en-US. Leave empty to use the default language.
             upload_date: Upload-date filter.  Available Values: - `all`: No upload-date limit - `lastHour`: Uploaded within the last hour - `today`: Uploaded today - `thisWeek`: Uploaded this week - `thisMonth`: Uploaded this month - `thisYear`: Uploaded this year
-            duration: Video-duration filter.  Available Values: - `all`: No duration limit - `SHORT`: Short videos under 4 minutes - `medium`: Medium videos from 4 to 20 minutes - `LONG`: Long videos over 20 minutes
+            duration: Video-duration filter.  Available Values: - `all`: No duration limit - `short`: Short videos under 4 minutes - `medium`: Medium videos from 4 to 20 minutes - `long`: Long videos over 20 minutes
             sort_by: Sort order for search results.  Available Values: - `relevance`: Sort by relevance - `uploadDate`: Sort by upload date - `viewCount`: Sort by view count - `rating`: Sort by rating
             next_token: Pagination token returned by the previous response. When provided, the keyword and filter parameters are ignored; very long tokens may exceed GET URL limits.
         """

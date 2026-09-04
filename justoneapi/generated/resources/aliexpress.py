@@ -34,7 +34,7 @@ class AliexpressResource(BaseResource):
         Args:
             q: Product search query.
             page: One-based page number for pagination.
-            sort: Sort order for product search results.  Available Values: - `DEFAULT`: Default result order - `SALES_DESC`: Sales volume, highest first - `PRICE_ASC`: Price, lowest first - `PRICE_DESC`: Price, highest first
+            sort: Sort order for product search results.  Available Values: - `default`: Default result order - `salesDesc`: Sales volume, highest first - `priceAsc`: Price, lowest first - `priceDesc`: Price, highest first
             cat_id: Category ID used to filter product search results.
             brand_id: Brand ID used to filter product search results.
             loc: Location filter for product search results.

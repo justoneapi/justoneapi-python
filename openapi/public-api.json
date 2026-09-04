@@ -395,7 +395,7 @@
             }
           },
           {
-            "description": "Sort order for product search results.\n\nAvailable Values:\n- `DEFAULT`: Default result order\n- `SALES_DESC`: Sales volume, highest first\n- `PRICE_ASC`: Price, lowest first\n- `PRICE_DESC`: Price, highest first",
+            "description": "Sort order for product search results.\n\nAvailable Values:\n- `default`: Default result order\n- `salesDesc`: Sales volume, highest first\n- `priceAsc`: Price, lowest first\n- `priceDesc`: Price, highest first",
             "in": "query",
             "name": "sort",
             "required": false,
@@ -403,10 +403,6 @@
               "default": "default",
               "description": "AliExpress product search sort order",
               "enum": [
-                "default",
-                "salesDesc",
-                "priceAsc",
-                "priceDesc",
                 "default",
                 "salesDesc",
                 "priceAsc",
@@ -31594,7 +31590,7 @@
             }
           },
           {
-            "description": "Video-duration filter.\n\nAvailable Values:\n- `all`: No duration limit\n- `SHORT`: Short videos under 4 minutes\n- `medium`: Medium videos from 4 to 20 minutes\n- `LONG`: Long videos over 20 minutes",
+            "description": "Video-duration filter.\n\nAvailable Values:\n- `all`: No duration limit\n- `short`: Short videos under 4 minutes\n- `medium`: Medium videos from 4 to 20 minutes\n- `long`: Long videos over 20 minutes",
             "in": "query",
             "name": "duration",
             "required": false,
@@ -31602,10 +31598,6 @@
               "default": "all",
               "description": "YouTube search video duration filter",
               "enum": [
-                "all",
-                "short",
-                "medium",
-                "long",
                 "all",
                 "short",
                 "medium",
@@ -33614,5 +33606,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "c0e1cb07f252c219"
+  "x-openapi-release-id": "2ed02c00d85af01b"
 }
