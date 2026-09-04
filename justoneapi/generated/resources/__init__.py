@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from justoneapi.generated.resources.aliexpress import AliexpressResource
 from justoneapi.generated.resources.amazon import AmazonResource
 from justoneapi.generated.resources.beike import BeikeResource
 from justoneapi.generated.resources.bilibili import BilibiliResource
@@ -38,6 +39,7 @@ from justoneapi.generated.resources.youtube import YoutubeResource
 from justoneapi.generated.resources.zhihu import ZhihuResource
 
 RESOURCE_CLASSES = {
+    "aliexpress": AliexpressResource,
     "amazon": AmazonResource,
     "beike": BeikeResource,
     "bilibili": BilibiliResource,
@@ -77,6 +79,7 @@ RESOURCE_CLASSES = {
 }
 
 __all__ = [
+    "AliexpressResource",
     "AmazonResource",
     "BeikeResource",
     "BilibiliResource",

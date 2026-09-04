@@ -270,6 +270,314 @@
         ]
       }
     },
+    "/api/aliexpress/get-product-detail/v1": {
+      "get": {
+        "description": "Retrieves an AliExpress product by item ID with optional currency, region, and locale controls. Use it to inspect a known listing for catalog review, product comparison, or downstream commerce analysis.",
+        "operationId": "getApiAliexpressGetProductDetailV1",
+        "parameters": [
+          {
+            "description": "Numeric AliExpress item ID.",
+            "in": "query",
+            "name": "itemId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "item_id"
+          },
+          {
+            "description": "Currency code used for product prices.",
+            "in": "query",
+            "name": "currency",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "currency"
+          },
+          {
+            "description": "AliExpress marketplace region.",
+            "in": "query",
+            "name": "region",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "region"
+          },
+          {
+            "description": "Locale used for the AliExpress response.",
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "locale"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Details",
+        "tags": [
+          "AliExpress"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "aliexpress_get_product_detail",
+        "x-highlights": [],
+        "x-order": "19501100",
+        "x-sdk-class-name": "AliexpressResource",
+        "x-sdk-method-name": "get_product_detail_v1",
+        "x-sdk-resource": "aliexpress",
+        "x-search-aliases": [
+          "AliExpress product details API",
+          "AliExpress item ID lookup",
+          "AliExpress listing details",
+          "速卖通商品详情",
+          "AliExpress 商品 ID 查询",
+          "速卖通商品信息"
+        ]
+      }
+    },
+    "/api/aliexpress/search-products/v1": {
+      "get": {
+        "description": "Searches AliExpress products with optional query, page, sort, category, brand, location, attribute, price, locale, region, and currency controls. Use it for product discovery, catalog research, and marketplace assortment analysis.",
+        "operationId": "getApiAliexpressSearchProductsV1",
+        "parameters": [
+          {
+            "description": "Product search query.",
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "q"
+          },
+          {
+            "description": "One-based page number for pagination.",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "page"
+          },
+          {
+            "description": "Sort order for product search results.\n\nAvailable Values:\n- `DEFAULT`: Default result order\n- `SALES_DESC`: Sales volume, highest first\n- `PRICE_ASC`: Price, lowest first\n- `PRICE_DESC`: Price, highest first",
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "default",
+              "description": "AliExpress product search sort order",
+              "enum": [
+                "default",
+                "salesDesc",
+                "priceAsc",
+                "priceDesc",
+                "default",
+                "salesDesc",
+                "priceAsc",
+                "priceDesc"
+              ],
+              "type": "string"
+            },
+            "x-sdk-python-name": "sort"
+          },
+          {
+            "description": "Category ID used to filter product search results.",
+            "in": "query",
+            "name": "catId",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "cat_id"
+          },
+          {
+            "description": "Brand ID used to filter product search results.",
+            "in": "query",
+            "name": "brandId",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "brand_id"
+          },
+          {
+            "description": "Location filter for product search results.",
+            "in": "query",
+            "name": "loc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "loc"
+          },
+          {
+            "description": "Search switches used to select optional result features.",
+            "in": "query",
+            "name": "switches",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "switches"
+          },
+          {
+            "description": "Product attribute filter for search results.",
+            "in": "query",
+            "name": "attr",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "attr"
+          },
+          {
+            "description": "Minimum product price filter, inclusive.",
+            "in": "query",
+            "name": "startPrice",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            },
+            "x-sdk-python-name": "start_price"
+          },
+          {
+            "description": "Maximum product price filter, inclusive.",
+            "in": "query",
+            "name": "endPrice",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            },
+            "x-sdk-python-name": "end_price"
+          },
+          {
+            "description": "Locale used for the AliExpress response.",
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "locale"
+          },
+          {
+            "description": "AliExpress marketplace region.",
+            "in": "query",
+            "name": "region",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "region"
+          },
+          {
+            "description": "Currency code used for product prices.",
+            "in": "query",
+            "name": "currency",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "x-sdk-python-name": "currency"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/ResultBadRequestResponse"
+          },
+          "401": {
+            "$ref": "#/components/responses/ResultUnauthorizedResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/ResultForbiddenResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ResultTooManyRequestsResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ResultInternalServerErrorResponse"
+          },
+          "503": {
+            "$ref": "#/components/responses/ResultServiceUnavailableResponse"
+          }
+        },
+        "security": [
+          {
+            "tokenAuth": []
+          }
+        ],
+        "summary": "Product Search",
+        "tags": [
+          "AliExpress"
+        ],
+        "x-api-version": "v1",
+        "x-endpoint-family": "aliexpress_search_products",
+        "x-highlights": [],
+        "x-order": "19501000",
+        "x-sdk-class-name": "AliexpressResource",
+        "x-sdk-method-name": "search_products_v1",
+        "x-sdk-resource": "aliexpress",
+        "x-search-aliases": [
+          "AliExpress product search API",
+          "AliExpress keyword product finder",
+          "AliExpress catalog search",
+          "速卖通商品搜索",
+          "AliExpress 关键词找商品",
+          "速卖通商品筛选"
+        ]
+      }
+    },
     "/api/amazon/get-best-sellers/v1": {
       "get": {
         "description": "Retrieves paginated Amazon Best Sellers for a category path in a selected country marketplace. Use it to study category leaders, discover popular products, or compare bestseller pages across marketplaces.",
@@ -33934,6 +34242,23 @@
       "x-platform-id": "amazon"
     },
     {
+      "description": "AliExpress marketplace product search and product detail data for commerce research and catalog analysis.",
+      "name": "AliExpress",
+      "x-platform-aliases": [
+        "AliExpress",
+        "AliExpress marketplace",
+        "全球速卖通",
+        "速卖通"
+      ],
+      "x-platform-detection-aliases": [
+        "AliExpress",
+        "AliExpress marketplace",
+        "全球速卖通",
+        "速卖通"
+      ],
+      "x-platform-id": "aliexpress"
+    },
+    {
       "description": "Alibaba 1688 wholesale marketplace product, shop, supplier, and catalog data for sourcing and commerce research.",
       "name": "1688",
       "x-platform-aliases": [
@@ -33949,5 +34274,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "f455f8330745ebd9"
+  "x-openapi-release-id": "c0e1cb07f252c219"
 }
