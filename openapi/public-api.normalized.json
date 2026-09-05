@@ -13226,6 +13226,7 @@
     },
     "/api/jd/get-item-detail/v4": {
       "get": {
+        "deprecated": true,
         "description": "Retrieves JD.com product details by item ID through the V4 endpoint. Use it to perform direct product lookup for catalog research, product monitoring, or ecommerce analysis.",
         "operationId": "getApiJdGetItemDetailV4",
         "parameters": [
@@ -13280,6 +13281,7 @@
           "JD.com"
         ],
         "x-api-version": "v4",
+        "x-docs-hidden": true,
         "x-endpoint-family": "jd_get_item_detail",
         "x-highlights": [],
         "x-order": "19001040",
@@ -34266,5 +34268,5 @@
       "x-platform-id": "1688"
     }
   ],
-  "x-openapi-release-id": "2ed02c00d85af01b"
+  "x-openapi-release-id": "96112a281e0298f1"
 }
